@@ -1,4 +1,4 @@
-"""Analyse stall-regulariser arms (scripts/stag_run.py) against AdaJEPA and K2P on the same episodes.
+"""Analyse stall-regulariser arms against their base planner (and optionally K2P) on the same episodes.
 
 Episodes not selected by scripts/stag_select.py keep the AdaJEPA reference outcome (identical by
 construction). Checks first that every rerun episode reproduces the reference exactly up to the
@@ -79,45 +79,53 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--stream", default="EVAL50")
     ap.add_argument("--root", default="eval_outputs/stag_EVAL50")
-    ap.add_argument("--ref", default="eval_outputs/escape_EVAL50/none")
-    ap.add_argument("--k2p", default="eval_outputs/escape_EVAL50_r30/K2P_short2")
+    ap.add_argument("--ref", default="eval_outputs/escape_EVAL50/none", help="the base planner's run on every episode")
+    ap.add_argument("--base-name", default="AdaJEPA")
+    ap.add_argument("--k2p", default="eval_outputs/escape_EVAL50_r30/K2P_short2", help="'' to skip the K2P comparison")
     ap.add_argument("--arms", nargs="+", default=["SP_lo", "SP_mid", "SP_hi", "SZ_lo", "SZ_mid", "SZ_hi"])
     ap.add_argument("--max-iter", type=int, default=30)
     ap.add_argument("--out", default="reports/stag_EVAL50/summary.json")
     a = ap.parse_args()
 
-    root = ROOT / a.root
-    touched = json.loads((root / "touched.json").read_text())
-    sel = {(r["chunk"], r["sample_idx"]) for r in touched["episodes"]}
+    root, B = ROOT / a.root, a.base_name
+    touched_file = root / "touched.json"  # offline selection (AdaJEPA reference): lets missing reruns show up
+    expected = ({(r["chunk"], r["sample_idx"]) for r in json.loads(touched_file.read_text())["episodes"]}
+                if touched_file.exists() else None)
     ref = ref_episodes(a.ref, a.max_iter)
-    k2p = ref_episodes(a.k2p, a.max_iter)
+    k2p = ref_episodes(a.k2p, a.max_iter) if a.k2p else None
     keys = sorted(ref)
     shapes, goals = {}, {}
     for ch, i in keys:
         if ch not in shapes:
             shapes[ch] = stream_targets(a.stream, ch)
-    for k in sel:
-        goals[k] = goal_state(shapes[k[0]][k[1]])[0]
     shape_of = {k: shapes[k[0]][k[1]]["shape"] for k in keys}
     ok_ref = {k: succ_step(ref[k]) is not None for k in keys}
-    ok_k2p = {k: succ_step(k2p[k]) is not None for k in keys}
-    res = {"n": len(keys), "selected": len(sel), "AdaJEPA": float(np.mean([ok_ref[k] for k in keys])),
-           "K2P_short2": float(np.mean([ok_k2p[k] for k in keys])), "arms": {}}
-    lines = [f"# 停滞正则（潜空间版）EVAL50 seed 100 结果", "",
-             f"350 个 episode，重跑其中 {len(sel)} 个（其余与 AdaJEPA 逐位相同，沿用其结果）。", "",
-             "| 组 | 成功率 | 与 AdaJEPA（仅该组/仅 AdaJEPA，p） | 与 K2P_short2（p） | 没见过/见过 | 触发 episode | 离开 | 物体改善 | 绕到背后 | 误伤 |",
-             "|---|---:|---|---|---|---:|---:|---:|---:|---:|"]
+    ok_k2p = {k: succ_step(k2p[k]) is not None for k in keys} if k2p else None
+    res = {"n": len(keys), "base": B, "base_success": float(np.mean([ok_ref[k] for k in keys])),
+           "base_unseen": float(np.mean([ok_ref[k] for k in keys if shape_of[k] in UNSEEN])),
+           "base_seen": float(np.mean([ok_ref[k] for k in keys if shape_of[k] not in UNSEEN])), "arms": {}}
+    if ok_k2p:
+        res["K2P_short2"] = float(np.mean([ok_k2p[k] for k in keys]))
+    head = f"| 组 | 成功率 | 与{B}（仅该组/仅{B}，p） |" + (" 与 K2P_short2（p） |" if ok_k2p else "") + \
+        " 没见过/见过 | 重跑 | 触发 | 离开 | 物体改善 | 绕到背后 | 误伤 |"
+    lines = [f"# 停滞正则（潜空间版）：{B} 基准，{a.stream}", "",
+             f"{len(keys)} 个 episode；每组只重跑它的触发窗口里会被碰到的 episode，其余与{B}逐位相同，沿用其结果。", "",
+             f"基准：{B} {res['base_success']:.1%}（没见过 {res['base_unseen']:.1%} / 见过 {res['base_seen']:.1%}）。", "",
+             head, "|" + "---|" * head.count("|")[:-1] if False else "|" + "|".join(["---"] * (head.count("|") - 1)) + "|"]
     for arm in a.arms:
         if not (root / arm).exists():
             continue
         eps, meta = load_arm(root / arm, a.max_iter)
-        missing = [k for k in sel if k not in eps]
+        sel = set(eps)
+        missing = sorted(expected - sel) if expected is not None else []
+        for k in sel:
+            if k not in goals:
+                goals[k] = goal_state(shapes[k[0]][k[1]])[0]
         ok = {k: (succ_step(eps[k]) is not None) if k in eps else ok_ref[k] for k in keys}
         # exactness: identical to the reference up to the replan the penalty switches on
         bad, trig = [], {}
-        for k in sel & set(eps):
-            m = meta.get(k, {})
-            t = m.get("first_trigger")  # planning replan (0-based) from which the penalty is on = its record step
+        for k in sel:
+            t = meta.get(k, {}).get("first_trigger")  # planning replan (0-based) from which the penalty is on = its record step
             trig[k] = t
             lim = t if t is not None else 10 ** 9  # records up to step t were planned without the penalty
             for r0, r1 in zip(ref[k], eps[k]):
@@ -128,7 +136,7 @@ def main():
                     break
             if t is None and len(ref[k]) != len(eps[k]):
                 bad.append(k)
-        fired = [k for k in sel & set(eps) if trig.get(k) is not None]
+        fired = [k for k in sel if trig.get(k) is not None]
         d_arm = {k: diag(eps[k], trig[k], goals[k]) for k in fired}
         d_ref = {k: diag(ref[k], trig[k], goals[k]) for k in fired}
         frac = lambda d, f: np.mean([v[f] for v in d.values() if v is not None]) if d else float("nan")
@@ -136,28 +144,32 @@ def main():
         gain = sum(1 for k in fired if ok[k] and not ok_ref[k])
         b = sum(ok[k] and not ok_ref[k] for k in keys)
         c = sum(ok_ref[k] and not ok[k] for k in keys)
-        b2 = sum(ok[k] and not ok_k2p[k] for k in keys)
-        c2 = sum(ok_k2p[k] and not ok[k] for k in keys)
         sr = float(np.mean([ok[k] for k in keys]))
         un = np.mean([ok[k] for k in keys if shape_of[k] in UNSEEN])
         se = np.mean([ok[k] for k in keys if shape_of[k] not in UNSEEN])
-        res["arms"][arm] = {"success": sr, "vs_AdaJEPA": [b, c, mcnemar(b, c)], "vs_K2P": [b2, c2, mcnemar(b2, c2)],
-                            "unseen": un, "seen": se, "missing": len(missing), "not_identical_before_trigger": len(bad),
-                            "fired": len(fired), "gain": gain, "harm": harm,
-                            "leave": [frac(d_arm, "leave"), frac(d_ref, "leave")],
-                            "obj_better": [frac(d_arm, "obj_better"), frac(d_ref, "obj_better")],
-                            "behind": [frac(d_arm, "behind"), frac(d_ref, "behind")],
-                            "obj_moved": [frac(d_arm, "obj_moved"), frac(d_ref, "obj_moved")]}
-        lines.append(f"| {arm} | {sr:.1%} | {sr - res['AdaJEPA']:+.1%}（{b}/{c}，p={mcnemar(b, c):.3g}） | "
-                     f"{sr - res['K2P_short2']:+.1%}（{b2}/{c2}，p={mcnemar(b2, c2):.3g}） | {un:.1%} / {se:.1%} | {len(fired)} | "
-                     f"{frac(d_arm, 'leave'):.0%}（{frac(d_ref, 'leave'):.0%}） | {frac(d_arm, 'obj_better'):.0%}（{frac(d_ref, 'obj_better'):.0%}） | "
-                     f"{frac(d_arm, 'behind'):.0%}（{frac(d_ref, 'behind'):.0%}） | {harm} |")
+        rec = {"success": sr, "vs_base": [b, c, mcnemar(b, c)], "unseen": un, "seen": se, "rerun": len(sel),
+               "missing": len(missing), "not_identical_before_trigger": len(bad), "fired": len(fired), "gain": gain,
+               "harm": harm, "leave": [frac(d_arm, "leave"), frac(d_ref, "leave")],
+               "obj_better": [frac(d_arm, "obj_better"), frac(d_ref, "obj_better")],
+               "behind": [frac(d_arm, "behind"), frac(d_ref, "behind")],
+               "obj_moved": [frac(d_arm, "obj_moved"), frac(d_ref, "obj_moved")]}
+        row = f"| {arm} | {sr:.1%} | {sr - res['base_success']:+.1%}（{b}/{c}，p={mcnemar(b, c):.3g}） |"
+        if ok_k2p:
+            b2 = sum(ok[k] and not ok_k2p[k] for k in keys)
+            c2 = sum(ok_k2p[k] and not ok[k] for k in keys)
+            rec["vs_K2P"] = [b2, c2, mcnemar(b2, c2)]
+            row += f" {sr - res['K2P_short2']:+.1%}（{b2}/{c2}，p={mcnemar(b2, c2):.3g}） |"
+        row += (f" {un:.1%} / {se:.1%} | {len(sel)} | {len(fired)} | {frac(d_arm, 'leave'):.0%}（{frac(d_ref, 'leave'):.0%}） | "
+                f"{frac(d_arm, 'obj_better'):.0%}（{frac(d_ref, 'obj_better'):.0%}） | "
+                f"{frac(d_arm, 'behind'):.0%}（{frac(d_ref, 'behind'):.0%}） | {harm} |")
+        res["arms"][arm] = rec
+        lines.append(row)
         if missing or bad:
-            lines.append(f"|  ⚠ {arm}: 缺 {len(missing)} 个 episode；{len(bad)} 个在开罚前与 AdaJEPA 不一致 |||||||||")
-    lines += ["", f"参照：AdaJEPA {res['AdaJEPA']:.1%}，K2P_short2 {res['K2P_short2']:.1%}。"
-              "括号里是 AdaJEPA 在同一批 episode、同一时刻之后的对应比例。",
+            lines.append(f"\n⚠ {arm}：缺 {len(missing)} 个 episode；{len(bad)} 个在开罚前与{B}不一致\n")
+    lines += ["", (f"参照：K2P_short2 {res['K2P_short2']:.1%}。" if ok_k2p else "") +
+              f"括号里是{B}在同一批 episode、同一时刻之后的对应比例。",
               "离开 = 触发后 3 次重规划内推杆离开卡住点 15 px 以上；物体改善 = 10 次重规划内物体误差下降超过 5 px（或成功）；"
-              "绕到背后 = 推杆到达物体背离目标的一侧；误伤 = AdaJEPA 能成功、该组失败。"]
+              f"绕到背后 = 推杆到达物体背离目标的一侧；误伤 = {B}能成功、该组失败。"]
     out = ROOT / a.out
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(res, indent=1))
