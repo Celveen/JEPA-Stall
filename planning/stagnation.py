@@ -98,6 +98,15 @@ class StagnationMPCPlanner(EscapeMPCPlanner):
             }) + "\n")
         return out
 
+    def _task_progress(self):
+        """PushObj logs object/pusher distances (inherited); other envs (e.g. the maze, state = position and
+        velocity) log the position distance to the goal and the state."""
+        s = np.asarray(self._last_eval[3][0, -1], dtype=np.float64)
+        if len(s) >= 7:
+            return super()._task_progress()
+        g = np.asarray(self.evaluator.state_g[0], dtype=np.float64)
+        return {"dist_pos": float(np.linalg.norm(g[:2] - s[:2])), "state": [round(float(x), 4) for x in s]}
+
     @torch.no_grad()
     def _encode(self, obs_list):
         """Encode single-frame observations with the current model: visual (N, P*D), proprio (N, Dp)."""

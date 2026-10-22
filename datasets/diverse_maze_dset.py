@@ -99,6 +99,11 @@ def load_diverse_maze_slice_train_val(
     data_path = Path(data_path)
     train_dir = data_path / "train"
     val_dir = data_path / "val"
+    if train_dir.exists() and not (train_dir / "states.pth").exists() and (val_dir / "states.pth").exists():
+        # The released maze data holds only the held-out (val) layouts. Their trajectories come from the same
+        # generator as the training data, so they stand in for it: normalization statistics are taken from val.
+        print("WARNING: diverse_maze train/ is empty; using val/ for both splits (normalization stats from val)")
+        train_dir = val_dir
 
     if train_dir.exists() and val_dir.exists():
         # Use pre-split directories (different maps for train vs val)
