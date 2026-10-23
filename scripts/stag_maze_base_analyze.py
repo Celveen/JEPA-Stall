@@ -10,11 +10,18 @@ budgets exactly). Paired exact McNemar against the reference of the same base.
 import argparse
 import collections
 import json
+from math import comb
 
 import numpy as np
 
-from escape_common import jsonl, mcnemar
+from escape_common import jsonl
 from stag_common import ROOT
+
+
+def mcnemar(b, c):
+    """Exact two-sided McNemar p-value from the discordant counts."""
+    n = b + c
+    return 1.0 if n == 0 else min(1.0, 2 * sum(comb(n, k) for k in range(min(b, c) + 1)) / 2 ** n)
 
 
 def load(d):
