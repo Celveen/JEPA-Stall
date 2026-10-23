@@ -17,6 +17,8 @@ steps they need to pass the env's own success test, checked every 5 env steps as
 
 Neither is a method: they use the simulator, the true state and (P2) the task's structure, only to tell
 whether the stalls can be solved within the episode's remaining replans and within `max_replans`.
+With --shift k the solvers start k replans before the first trigger (from the reference run's state then),
+which measures how much earlier detection would be worth.
 Both are deterministic and budget-independent, so one run with max_replans answers both budgets.
 
     python scripts/stag_ceiling.py --workers 48 --out eval_outputs/stag_EVAL50/ceiling.jsonl
@@ -273,7 +275,7 @@ def run_job(job):
     s = sim.state()
     rep = None if run.solved_at is None else run.solved_at // 5
     return {"chunk": ep["chunk"], "sample_idx": ep["sample_idx"], "shape": seg["shape"], "method": job["method"],
-            "kind": ep["kind"], "budget_R": ep["budget"], "solved_replans": rep,
+            "kind": ep["kind"], "start_step": ep.get("start_step"), "budget_R": ep["budget"], "solved_replans": rep,
             "within_R": rep is not None and rep <= ep["budget"], "within_max": rep is not None,
             "obj_err_end": round(float(np.linalg.norm(s[2:4] - g[2:4])), 2),
             "ang_end_deg": round(float(np.degrees(angdiff(s[4], g[4]))), 2),
@@ -300,16 +302,20 @@ def main():
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--workers", type=int, default=48)
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--shift", type=int, default=0, help="start this many replans before the first trigger")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
     ref = ref_episodes(a.ref, 30)
     eps = []
     for r in map(json.loads, (ROOT / a.oracle).open()):
-        st = next(x for x in ref[(r["chunk"], r["sample_idx"])] if x["step"] == r["start_step"])["state"]
+        s = r["start_step"] - a.shift  # restart that many replans before the first trigger (budget grows by as much)
+        if s < 1:
+            continue
+        st = next(x for x in ref[(r["chunk"], r["sample_idx"])] if x["step"] == s)["state"]
         kind = "pusher-only" if r["obj_err0"] < 20 and r["ang0_deg"] < 20 else "object-off"
-        eps.append({"chunk": r["chunk"], "sample_idx": r["sample_idx"], "state": st, "budget": r["budget"], "kind": kind,
-                    "key": int(r["chunk"].split("_")[1]) * 100 + r["sample_idx"]})
+        eps.append({"chunk": r["chunk"], "sample_idx": r["sample_idx"], "state": st, "budget": r["budget"] + a.shift,
+                    "kind": kind, "start_step": s, "key": int(r["chunk"].split("_")[1]) * 100 + r["sample_idx"]})
     if a.limit:
         eps = eps[: a.limit]
     out = ROOT / a.out
