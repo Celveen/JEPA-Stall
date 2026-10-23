@@ -43,10 +43,13 @@ BasePlanner (planning/base_planner.py)       freezes the WM, owns objective_fn a
        └─ AdaJEPAMPCPlanner (planning/adajepa_mpc.py)   per-sample planning with a test-time update each replan
             └─ ProbeMPCPlanner (planning/adajepa_probe.py)   per-replan logs and update probes (mode grad = baseline)
                  └─ EscapeMPCPlanner (planning/escape.py)    stall detection, escapes, per-episode seeding
-                      └─ StagnationMPCPlanner (planning/stagnation.py)   latent stall regulariser, only_samples
+                      └─ StagnationMPCPlanner (planning/stagnation.py)   latent stall regulariser, proprio boost, only_samples
+                           └─ LookaheadMPCPlanner (planning/lookahead.py)   macro moves + plan vs the usual plan
   sub_planner: GDPlanner (planning/gd.py) | CEMPlanner (planning/cem.py)
 ```
 
+- `probe.mode=none` turns the adaptive planner into the frozen per-sample planner (no update), which is the base
+  the regulariser arms pair with when the base is "frozen" (`scripts/stag_base_run.py`, `scripts/stag_maze_base_run.py`).
 - Adaptation and stall bookkeeping hang off `_post_env_feedback`; objective changes wrap `sub_planner.objective_fn`;
   plan-time changes wrap `sub_planner.plan` (`_sub_plan`).
 - `EscapeMPCPlanner._plan_single` seeds the global torch RNG per episode (`seed * 1000003 + episode seed`; dropout

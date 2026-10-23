@@ -125,7 +125,9 @@ def main():
         # exactness: identical to the reference up to the replan the penalty switches on
         bad, trig = [], {}
         for k in sel:
-            t = meta.get(k, {}).get("first_trigger")  # planning replan (0-based) from which the penalty is on = its record step
+            # planning replan (0-based) from which the penalty is on (or a lookahead macro ran) = its record step
+            t = min((x for x in (meta.get(k, {}).get("first_trigger"), meta.get(k, {}).get("la_first_macro"))
+                     if x is not None), default=None)
             trig[k] = t
             lim = t if t is not None else 10 ** 9  # records up to step t were planned without the penalty
             for r0, r1 in zip(ref[k], eps[k]):

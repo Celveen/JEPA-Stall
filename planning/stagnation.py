@@ -28,13 +28,23 @@ costs (1 + kappa) times its task objective. `space` decides D_sp:
     proprio  MSE of the proprio latent (where the agent is)
     latent   D itself (the whole scene)
 
+trigger = arrived (instead of the movement rate above) fires when the agent has reached its own goal but the
+scene has not: the proprio share of the remaining distance, alpha * MSE_proprio / D, is below q, and the visual
+part sqrt(MSE_visual(z, z_goal)) shrank by less than theta (relative) over the last W replans. It can fire
+before the agent starts to hover, e.g. when a pusher parks between the object and the object's goal.
+
+prop_boost > 1 multiplies the objective's proprio term by that factor on every replan from a trigger to
+boost_replans replans after it (re-armed by each trigger), so the planner also cares about where the agent
+ends up while it escapes.
+
 Until the first trigger the objective is untouched, so a run pairs with escape.mode=none (AdaJEPA)
 bit for bit up to that replan.
 
 only_samples (within-chunk indices) plans only those samples; the others are skipped (zero actions,
 no logs) but keep their position in the chunk, which fixes their episode seed (seed * i + 1).
 
-Per replan, per_iter_logs.json gets stag_r / stag_w / stag_mem_n while the trigger is armed and
+Per replan, per_iter_logs.json gets stag_r / stag_share / stag_vprog (both triggers' quantities) / stag_w /
+stag_mem_n while the trigger is armed and
 stag_task / stag_pen (objective and kappa * penalty of the executed plan) while the penalty is on;
 stag_episodes.jsonl gets one line per planned episode.
 """
@@ -64,6 +74,13 @@ class StagnationMPCPlanner(EscapeMPCPlanner):
         self.stag_gamma_lo = float(s.get("gamma_lo", 0.05))
         self.stag_gamma_hi = float(s.get("gamma_hi", 0.15))
         self.stag_beta = float(s.get("beta", 0.25))
+        self.stag_trigger = s.get("trigger", "movement")
+        if self.stag_trigger not in ("movement", "arrived"):
+            raise ValueError(f"stag.trigger must be movement or arrived, got {self.stag_trigger!r}")
+        self.stag_q = float(s.get("q", 0.2))
+        self.stag_theta = float(s.get("theta", 0.0))
+        self.stag_prop_boost = float(s.get("prop_boost", 1.0))
+        self.stag_boost_replans = int(s.get("boost_replans", 2))
         self.stag_alpha = float(s.get("alpha", 1.0))  # the objective's proprio weight
         self.stag_base = float(s.get("base", 2.0))  # the objective's frame-weight base
         only = s.get("only_samples")
@@ -74,14 +91,15 @@ class StagnationMPCPlanner(EscapeMPCPlanner):
         Path("stag_meta.json").write_text(json.dumps({
             "space": self.stag_space, "kappa": self.stag_kappa, "start": self.stag_start, "window": self.stag_window,
             "gamma_lo": self.stag_gamma_lo, "gamma_hi": self.stag_gamma_hi, "beta": self.stag_beta,
-            "alpha": self.stag_alpha, "base": self.stag_base,
+            "alpha": self.stag_alpha, "base": self.stag_base, "trigger": self.stag_trigger, "q": self.stag_q,
+            "theta": self.stag_theta, "prop_boost": self.stag_prop_boost, "boost_replans": self.stag_boost_replans,
             "only_samples": None if self.only_samples is None else sorted(self.only_samples),
         }, indent=1))
 
     def _reset_stag(self):
         self._hist, self._mem_obs, self._mem_w = [], [], []
         self._mem, self._obs_g = None, None
-        self._stag_first, self._stag_log = None, None
+        self._stag_first, self._stag_log, self._boost_until = None, None, None
 
     # ------------------------------------------------------------------ episode
     def _plan_single(self, **kw):
@@ -94,9 +112,13 @@ class StagnationMPCPlanner(EscapeMPCPlanner):
             f.write(json.dumps({
                 "sample_idx": self._sample_idx, "seed": self._ep_seed, "success": bool(self.is_success[0]),
                 "replans": self.iter, "first_trigger": self._stag_first, "mem_n": len(self._mem_w),
-                "mem_w_sum": round(float(sum(self._mem_w)), 4),
+                "mem_w_sum": round(float(sum(self._mem_w)), 4), **self._episode_extra(),
             }) + "\n")
         return out
+
+    def _episode_extra(self):
+        """Extra fields of this episode's stag_episodes.jsonl line (subclasses)."""
+        return {}
 
     def _task_progress(self):
         """PushObj logs object/pusher distances (inherited); other envs (e.g. the maze, state = position and
@@ -125,22 +147,32 @@ class StagnationMPCPlanner(EscapeMPCPlanner):
         if len(self._hist) > W and self.stag_start <= nxt < self.max_iter and not self.is_success[0]:
             zv, zp = self._encode([self._hist[-1], self._hist[0], self._obs_g])  # now, W replans ago, goal
 
-            def dist(i, j):
-                return float(((zv[i] - zv[j]) ** 2).mean() + self.stag_alpha * ((zp[i] - zp[j]) ** 2).mean()) ** 0.5
-
-            r = dist(0, 1) / max(dist(0, 2), 1e-12)
-            w = min(max((self.stag_gamma_hi - r) / (self.stag_gamma_hi - self.stag_gamma_lo), 0.0), 1.0)
-            rec["stag_r"], rec["stag_w"] = round(r, 5), round(w, 4)
+            mv = lambda i, j: float(((zv[i] - zv[j]) ** 2).mean())  # noqa: E731
+            mp = lambda i, j: float(((zp[i] - zp[j]) ** 2).mean())  # noqa: E731
+            # both triggers' quantities are logged (a reference run then selects episodes for either)
+            r = ((mv(0, 1) + self.stag_alpha * mp(0, 1)) / max(mv(0, 2) + self.stag_alpha * mp(0, 2), 1e-12)) ** 0.5
+            share = self.stag_alpha * mp(0, 2) / max(mv(0, 2) + self.stag_alpha * mp(0, 2), 1e-12)
+            v_now, v_then = mv(0, 2) ** 0.5, mv(1, 2) ** 0.5
+            vprog = (v_then - v_now) / max(v_then, 1e-12)
+            rec["stag_r"], rec["stag_share"], rec["stag_vprog"] = round(r, 5), round(share, 5), round(vprog, 5)
+            if self.stag_trigger == "movement":
+                w = min(max((self.stag_gamma_hi - r) / (self.stag_gamma_hi - self.stag_gamma_lo), 0.0), 1.0)
+            else:
+                w = 1.0 if (share < self.stag_q and vprog < self.stag_theta) else 0.0
+            rec["stag_w"] = round(w, 4)
             if w > 0:
                 self._mem_obs.append(self._hist[-1])
                 self._mem_w.append(w)
                 if self._stag_first is None:
                     self._stag_first = nxt
+                if self.stag_prop_boost != 1.0:
+                    self._boost_until = nxt + self.stag_boost_replans
             rec["stag_mem_n"] = len(self._mem_w)
         return out
 
     # ------------------------------------------------------------------ planning
-    def _sub_plan(self, obs_0, obs_g, actions=None, step=None):
+    def _build_mem(self):
+        """Encode the stall memory with the current model for this replan's penalty (None: penalty off)."""
         self._mem = None
         if self._mem_w and self.stag_kappa > 0:
             zv, zp = self._encode(self._mem_obs + [self._obs_g])
@@ -151,6 +183,9 @@ class StagnationMPCPlanner(EscapeMPCPlanner):
                          "w": torch.tensor(self._mem_w, device=self.device, dtype=zp.dtype),
                          "stay": d_goal,  # D(m_j, z_goal); / T in _penalty
                          "rho": self.stag_beta * (d_goal if self.stag_space == "latent" else d_goal_p)}
+
+    def _sub_plan(self, obs_0, obs_g, actions=None, step=None):
+        self._build_mem()
         acts, lens = super()._sub_plan(obs_0, obs_g, actions=actions, step=step)
         if self._mem is not None:
             with torch.no_grad():
@@ -159,11 +194,20 @@ class StagnationMPCPlanner(EscapeMPCPlanner):
                                        act=acts.to(self.device))
                 task = self._stag_inner(z, z_g, step=step)
                 pen = self.stag_kappa * self._penalty(z)
-            self._stag_log = {"stag_task": round(float(task[0]), 6), "stag_pen": round(float(pen[0]), 6)}
+            self._stag_log = {"stag_task": round(float(task[0]), 6), "stag_pen": round(float(pen[0]), 6),
+                              "stag_boost": self._boosting()}
         return acts, lens
 
+    def _boosting(self):
+        return self._boost_until is not None and self.iter <= self._boost_until
+
     def _stag_objective(self, z_obs_pred, z_obs_tgt, step=None):
-        loss = self._stag_inner(z_obs_pred, z_obs_tgt, step=step)
+        if self._boosting():
+            s = self.stag_prop_boost ** 0.5
+            loss = self._stag_inner({**z_obs_pred, "proprio": z_obs_pred["proprio"] * s},
+                                    {**z_obs_tgt, "proprio": z_obs_tgt["proprio"] * s}, step=step)
+        else:
+            loss = self._stag_inner(z_obs_pred, z_obs_tgt, step=step)
         if self._mem is None:
             return loss
         return loss + self.stag_kappa * self._penalty(z_obs_pred)
