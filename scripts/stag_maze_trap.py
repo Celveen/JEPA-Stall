@@ -16,8 +16,8 @@ points the disk fits on, and geodesic distances come from Dijkstra on that grid 
           (geodesic progress > 0.3 over the last 5 replans), or stuck in the open.
   sim     From the first stall trigger of every failure, and from every start as a check of the controller, a
           privileged scripted controller (pure pursuit along the geodesic path, PD on position, actions clipped to
-          the env's [-1, 1]) runs for the replans left x n_taken_actions env steps. Success (< 0.5) is checked at
-          replan boundaries, as in the runs.
+          the env's [-1, 1]) runs for the replans left x n_taken_actions actions, each held for --action-repeat env
+          steps as in the runs. Success (< 0.5) is checked at replan boundaries, as in the runs.
   latent  At the trigger and last states of the failures, and at the trigger states of later successes, the
           planner's own single-frame metric (MSE visual + alpha MSE proprio, initial model, zero velocity) is
           evaluated on rendered points of the same geodesic balls. Its argmin is tested for geodesic progress exactly
@@ -235,7 +235,8 @@ def stage_sim(a, eps, geos, fout):
     for base in BASES:
         for ep in eps[base]:
             if ep["layout"] not in envs:
-                envs[ep["layout"]] = gym.make("diverse_maze", maze_spec=ep["spec"]).unwrapped
+                envs[ep["layout"]] = gym.make("diverse_maze", maze_spec=ep["spec"],
+                                              action_repeat=a.action_repeat).unwrapped
             e, geo, g, T = envs[ep["layout"]], geos[ep["layout"]], ep["goal"][:2], a.max_iter
             rec = {"base": base, "i": ep["i"], "success": ep["t_succ"] is not None, "trig": ep["trig"]}
             t = pursue(e, geo, ep["states"][0], g, T * a.n_taken, a.n_taken, a.kp, a.kd)
@@ -425,7 +426,8 @@ def main():
     ap.add_argument("--seed", type=int, default=100)
     ap.add_argument("--gamma-hi", type=float, default=0.15)
     ap.add_argument("--max-iter", type=int, default=50)
-    ap.add_argument("--n-taken", type=int, default=5, help="env steps per replan (n_taken_actions)")
+    ap.add_argument("--n-taken", type=int, default=5, help="actions per replan (n_taken_actions)")
+    ap.add_argument("--action-repeat", type=int, default=1, help="env steps per action, as in the runs' env_kwargs_override")
     ap.add_argument("--kp", type=float, default=10.0)
     ap.add_argument("--kd", type=float, default=1.0)
     ap.add_argument("--alpha", type=float, default=1.0, help="objective.alpha of the plan config")

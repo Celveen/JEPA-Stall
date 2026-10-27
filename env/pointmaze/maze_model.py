@@ -174,6 +174,7 @@ class MazeEnv(mujoco_env.MujocoEnv, utils.EzPickle, offline_env.OfflineEnv):
                  with_target= False,
                  density_scale=1.0,
                  damping_scale=1.0,
+                 action_repeat=1,  # env steps per step() call; the diverse_maze data uses 4
                  **kwargs):
         # d4rl/gym variants differ in the kwargs accepted by OfflineEnv.
         # Forwarding unknown kwargs can hit object.__init__(**kwargs) and crash.
@@ -189,6 +190,7 @@ class MazeEnv(mujoco_env.MujocoEnv, utils.EzPickle, offline_env.OfflineEnv):
         except TypeError:
             offline_env.OfflineEnv.__init__(self)
         self.with_target = with_target
+        self.action_repeat = int(action_repeat)
         self.reset_target = reset_target
         self.str_maze_spec = maze_spec
         self.maze_arr = parse_maze(maze_spec)
@@ -230,8 +232,9 @@ class MazeEnv(mujoco_env.MujocoEnv, utils.EzPickle, offline_env.OfflineEnv):
             
     def step(self, action):
         action = np.clip(action, -1.0, 1.0)
-        self.clip_velocity()
-        self.do_simulation(action, self.frame_skip)
+        for _ in range(self.action_repeat):  # same as calling step() action_repeat times, rendering only the last
+            self.clip_velocity()
+            self.do_simulation(action, self.frame_skip)
         self.set_marker()
         state = self._get_obs()["proprio"]
         state = np.concatenate([state, self._target]) if self.with_target else state
