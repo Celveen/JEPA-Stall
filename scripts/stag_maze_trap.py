@@ -313,12 +313,16 @@ def summarize(a, out_dir, rep_dir):
     md += ["位置单位是迷宫格，成功要求离目标 < 0.5。r 陷阱：测地距离 r 以内欧氏距离最小的可达点，测地距离下降 < "
            f"{EPS}。屏障 > {EPS} 表示沿最短路径欧氏距离必须先升高。", ""]
     bmax = max((r["start"]["barrier"] for r in geom), default=0.0)
+    n_bar = len({r["i"] for r in geom if r["start"]["barrier"] > EPS})
+    intro = (f"起点最短路径上欧氏距离的最大升高只有 {bmax:.2f}（< {EPS}）：这一档没有一个起点需要先远离目标。"
+             "因此按起点分组改用两种量：" if n_bar == 0 else
+             f"{n_bar} 个起点的最短路径上欧氏距离要先升高 > {EPS}（最大 {bmax:.2f}）。按起点分组用三种量：屏障是否 > {EPS}；")
     md += ["## 1. 哪些 episode 更容易失败（按起点分组）", "",
-           f"起点最短路径上欧氏距离的最大升高只有 {bmax:.2f}（< {EPS}）：easy 档没有一个起点需要先远离目标。"
-           "因此按起点分组改用两种量：从起点做贪心欧氏下降（完美模型、可达半径 r，每次跳到 r 以内欧氏距离最小的点）"
+           intro + "从起点做贪心欧氏下降（完美模型、可达半径 r，每次跳到 r 以内欧氏距离最小的点）"
            "能否到达目标；最短路径比直线长多少。", "",
            "| 基准 | 分组 | 组内 episode | 组内失败 | 组外失败 | Fisher p |", "|---|---|---:|---:|---:|---:|"]
-    groups = [(f"贪心欧氏下降（r={r}）到不了目标", lambda x, r=r: not x["greedy"][str(r)][0]) for r in RS]
+    groups = [(f"起点屏障 > {EPS}", lambda x: x["start"]["barrier"] > EPS)] if n_bar else []
+    groups += [(f"贪心欧氏下降（r={r}）到不了目标", lambda x, r=r: not x["greedy"][str(r)][0]) for r in RS]
     groups.append(("最短路径比直线长 > 0.5", lambda x: x["start"]["geo"] - x["start"]["e"] > 0.5))
     for base in BASES:
         G = [r for r in geom if r["base"] == base]

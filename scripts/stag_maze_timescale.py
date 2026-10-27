@@ -1,10 +1,10 @@
-"""Maze easy with each planned action held for 4 env steps, the timescale of the diverse_maze data.
+"""The maze with each planned action held for 4 env steps, the timescale of the diverse_maze data.
 
 The data step is exactly 4 env steps (scripts/stag_maze_tempo.py, stage dyn), while the released config executes each
 action for 1 env step. `++env_kwargs_override.action_repeat=4` holds each action for 4 env steps inside step(), so
 the planner, the frames it sees, AdaJEPA's segments and the success checks are unchanged; only the time an action
 lasts is. Runs come from scripts/stag_maze_base_run.py (--root eval_outputs/stag_maze100_ar4); the originals are in
-eval_outputs/stag_maze100.
+eval_outputs/stag_maze100 (medium has no complete original AdaJEPA run; targets and summary skip missing runs).
 
   replay   checks through the planning env: from data states, one step() per data action with action_repeat 1 and 4
   compare  a short run against the reference run: per-replan actions and states of the same episodes
@@ -33,6 +33,11 @@ RUNS = {"old": "eval_outputs/stag_maze100", "new": "eval_outputs/stag_maze100_ar
 NAME = {("frozen", "old"): "冻结·原始", ("adajepa", "old"): "AdaJEPA·原始",
         ("frozen", "new"): "冻结·修正", ("adajepa", "new"): "AdaJEPA·修正"}
 BUDGETS = (5, 10, 12, 20, 30, 40, 50)
+SHORT = "eval_outputs/stag_maze"  # the earlier 50-episode, 20-replan AdaJEPA references (the first 50 episodes)
+
+
+def ref_dir(level, base, tag):
+    return ROOT / RUNS[tag] / level / base / "ref"
 
 
 def load_eps(run_dir):
@@ -99,16 +104,18 @@ def stage_compare(a, out_dir):
 def stage_targets(a, out_dir):
     res = {}
     for base in BASES:
+        if not all(ref_dir(a.level, base, tag).is_dir() for tag in RUNS):
+            continue
         t = {}
-        for tag, root in RUNS.items():
-            f = sorted((ROOT / root / a.level / base / "ref").glob("shard*/plan_targets.pkl"))[0]
+        for tag in RUNS:
+            f = sorted(ref_dir(a.level, base, tag).glob("shard*/plan_targets.pkl"))[0]
             t[tag] = pickle.load(f.open("rb"))
         res[base] = {k: float(np.abs(np.asarray(t["old"][k]) - np.asarray(t["new"][k])).max()) for k in ("state_0", "state_g")}
         for k in ("obs_0", "obs_g"):
             res[base][k] = float(np.abs(np.asarray(t["old"][k]["visual"], dtype=np.float64) -
                                         np.asarray(t["new"][k]["visual"], dtype=np.float64)).max())
-    res["identical"] = all(v == 0.0 for b in BASES for v in res[b].values())
-    (out_dir / "targets.json").write_text(json.dumps(res, indent=1))
+    res["identical"] = all(v == 0.0 for b in res for v in res[b].values())
+    (out_dir / f"targets_{a.level}.json").write_text(json.dumps(res, indent=1))
     print(json.dumps(res, indent=1))
 
 
@@ -121,7 +128,9 @@ def mcnemar(x, y):
 
 
 def summarize(a, out_dir, rep_dir):
-    E = {(base, tag): load_eps(ROOT / root / a.level / base / "ref") for base in BASES for tag, root in RUNS.items()}
+    E = {(base, tag): load_eps(ref_dir(a.level, base, tag)) for base in BASES for tag in RUNS
+         if ref_dir(a.level, base, tag).is_dir()}
+    missing = [NAME[(base, tag)] for base in BASES for tag in RUNS if (base, tag) not in E]
     idx = sorted(set.intersection(*(set(v) for v in E.values())))
     tsucc = {}
     for key, eps in E.items():
@@ -130,7 +139,8 @@ def summarize(a, out_dir, rep_dir):
     S = {"n": len(idx), "success": {}, "mcnemar": {}, "loss": {}, "move": {}, "trigger": {}}
     md = [f"# 迷宫 {a.level}：每个动作执行 4 个环境步（时间尺度修正）汇总", "",
           f"{len(idx)} 个 episode，四组运行在同样的起终点和 episode 种子上配对。预算按重规划次数计；"
-          "修正后每次重规划 = 5 个动作 × 4 个环境步 = 20 个环境步，原始为 5 个环境步。", "",
+          "修正后每次重规划 = 5 个动作 × 4 个环境步 = 20 个环境步，原始为 5 个环境步。"
+          + (f"没有完整运行、不参与比较：{'、'.join(missing)}。" if missing else ""), "",
           "## 1. 成功率随重规划预算", "",
           "| 运行 | " + " | ".join(f"≤{b}" for b in BUDGETS) + " | 成功所需重规划（中位数） |",
           "|---|" + "---:|" * (len(BUDGETS) + 1)]
@@ -147,12 +157,28 @@ def summarize(a, out_dir, rep_dir):
              (("frozen", "new"), 50, ("adajepa", "old"), 50), (("adajepa", "new"), 50, ("adajepa", "old"), 50),
              (("adajepa", "old"), 50, ("frozen", "old"), 50),
              (("frozen", "new"), 12, ("frozen", "old"), 50), (("adajepa", "new"), 12, ("adajepa", "old"), 50)]
-    for k1, b1, k2, b2 in comps:
+    for k1, b1, k2, b2 in (c for c in comps if c[0] in E and c[2] in E):
         x, y = ok(k1, b1), ok(k2, b2)
         b, c, p = mcnemar(x, y)
         lab = f"{NAME[k1]} vs {NAME[k2]}"
         S["mcnemar"][f"{lab} @{b1}/{b2}"] = {"succ": [int(x.sum()), int(y.sum())], "only_first": b, "only_second": c, "p": p}
         md.append(f"| {lab} | {b1} / {b2} | {int(x.sum())} / {int(y.sum())} | {b} | {c} | {p:.3g} |")
+    short = ROOT / SHORT / a.level / "ref"
+    if ("adajepa", "old") not in E and short.is_dir():
+        eps50 = load_eps(short)
+        pos = [j for j, i in enumerate(idx) if i in eps50]
+        t50 = np.array([next((r["step"] for r in eps50[idx[j]] if r["success"]), np.inf) for j in pos])
+        lab50 = f"AdaJEPA·原始（前 {len(pos)} 个）"
+        md += ["", f"{lab50}：原始设定的 AdaJEPA 只有前 {len(pos)} 个 episode、20 次重规划的运行（`{SHORT}/{a.level}/ref`；"
+               "easy 上同样的运行和 100 个 episode 的运行逐位相同）。修正后 5 次重规划 = 原始 20 次 = 100 个环境步。", "",
+               "| 比较 | 预算 | 成功 | 只有前者成功 | 只有后者成功 | p |", "|---|---|---|---:|---:|---:|"]
+        for key, b1, b2 in ((("adajepa", "new"), 20, 20), (("adajepa", "new"), 5, 20), (("frozen", "new"), 20, 20),
+                            (("frozen", "old"), 20, 20)):
+            x, y = tsucc[key][pos] <= b1, t50 <= b2
+            b, c, p = mcnemar(x, y)
+            lab = f"{NAME[key]} vs {lab50}"
+            S["mcnemar"][f"{lab} @{b1}/{b2}"] = {"succ": [int(x.sum()), int(y.sum())], "only_first": b, "only_second": c, "p": p}
+            md.append(f"| {lab} | {b1} / {b2} | {int(x.sum())} / {int(y.sum())} | {b} | {c} | {p:.3g} |")
     # per-element MSE over the 384 visual + 10 proprio channels (action channels dropped); split back into the two parts
     vis_d, prop_d = 384, 10
     part = {"总": lambda r, s: r[f"loss_new_{s}"], "视觉": lambda r, s: r[f"loss_new_vis_{s}"],
@@ -172,7 +198,7 @@ def summarize(a, out_dir, rep_dir):
                                            "cur_all": float(np.median(cur))}
             md.append(f"| {NAME[key]} | {pname} | {np.median(first):.4f} | {np.median(allr):.4f} | {np.median(cur):.4f} |")
     md.append("")
-    for base in BASES:
+    for base in (b for b in BASES if (b, "old") in E and (b, "new") in E):
         for pname, f in part.items():
             o = {i: f(rs[0], "init") for i, rs in E[(base, "old")].items() if rs[0]["step"] == 1}
             n_ = {i: f(rs[0], "init") for i, rs in E[(base, "new")].items() if rs[0]["step"] == 1}
