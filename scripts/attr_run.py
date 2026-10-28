@@ -15,6 +15,10 @@ bit (scripts/attr_d0.py --check verifies that); only the logs are new.
 
     python scripts/attr_run.py --runs A1 A2
     python scripts/attr_run.py --runs A1 B1 --smoke 2 --root eval_outputs/attr_d0_smoke
+
+Runs that finished, or that another runner is executing (console log written within the last minute), are skipped,
+so a second runner can take the remaining shards on other GPUs. Every run opens one rendering env per episode: more
+than two maze runs on one GPU fail with "Offscreen framebuffer is not complete".
 """
 import argparse
 import json
@@ -22,6 +26,7 @@ import os
 import queue
 import sys
 import threading
+import time
 from pathlib import Path
 
 from omegaconf import OmegaConf
@@ -44,6 +49,27 @@ PUSH = {"B1": ("EVAL50", "eval_outputs/stag_EVAL50/touched.json", "eval_outputs/
 REFS = {**{k: v[3] for k, v in MAZE.items()}, **{k: v[2] for k, v in PUSH.items()}}
 MAZE_N, MAZE_SEED, MAZE_ITER, MAZE_LOG_START = 100, 100, 50, 4  # as in the reference runs
 ATTR = ["planner._target_=planning.attribution.AttributionMPCPlanner"]
+
+
+def active(out, secs=60):
+    """A run another runner is executing right now (its console log is still being written)."""
+    f = out / "console.log"
+    return f.exists() and time.time() - f.stat().st_mtime < secs and not finished(out)
+
+
+def run_worker(gpu, jobs, a, results):
+    """escape_run.worker, skipping runs that finished or started elsewhere since the queue was built."""
+    while True:
+        try:
+            out, cmd = jobs.get_nowait()
+        except queue.Empty:
+            return
+        if finished(out) or active(out):
+            log(f"SKIP {out.relative_to(ROOT)}")
+            continue
+        one = queue.Queue()
+        one.put((out, cmd))
+        worker(gpu, one, a, results)
 
 
 def main():
@@ -84,7 +110,7 @@ def main():
             for s in range(0, len(idx), per):
                 part = idx[s:s + per]
                 out = root / run / f"shard{s // per:02d}"
-                if not finished(out):
+                if not finished(out) and not active(out):
                     jobs.put((out, common + [f"++planner.stag.only_samples=[{','.join(map(str, part))}]",
                                              f"hydra.run.dir={out}"]))
         else:
@@ -101,7 +127,7 @@ def main():
                 if not idx:
                     continue
                 out = root / run / b["chunk"]
-                if not finished(out):
+                if not finished(out) and not active(out):
                     jobs.put((out, [sys.executable, ROOT / "plan.py", "--config-name", "escape_plan_gd_pushobj",
                                     f"ckpt_base_path={(ROOT / a.push_ckpt).resolve()}", f"model_epoch={a.push_epoch}",
                                     f"eval_data_path={ROOT / 'data/targets' / stream / (b['chunk'] + '.pkl')}",
@@ -115,7 +141,7 @@ def main():
     gpus = a.gpus.split(",")
     log(f"{jobs.qsize()} runs ({' '.join(a.runs)}); {a.jobs} at a time on GPUs {gpus}")
     results = []
-    threads = [threading.Thread(target=worker, args=(gpus[i % len(gpus)], jobs, a, results)) for i in range(a.jobs)]
+    threads = [threading.Thread(target=run_worker, args=(gpus[i % len(gpus)], jobs, a, results)) for i in range(a.jobs)]
     for t in threads:
         t.start()
     for t in threads:
