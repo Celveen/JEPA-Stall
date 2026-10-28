@@ -24,7 +24,8 @@ conda env create -f environment.yaml && conda activate ts
 - Maze envs need MuJoCo 2.1: `LD_LIBRARY_PATH` must include `~/.mujoco/mujoco210/bin` and `/usr/lib/nvidia`
   (`scripts/stag_maze_run.py` adds both). PushObj needs neither.
 - `checkpoints/`, `eval_outputs/`, `reports/` and most of `data/` are not tracked; `data/targets/` (evaluation target
-  chunks) is.
+  chunks) is. They are real local folders, not links into another checkout: this repo must not depend on the CL-JEPA
+  (paper 1) working tree, and nothing here writes into it.
 
 ## Architecture
 
