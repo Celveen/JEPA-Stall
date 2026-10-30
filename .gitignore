@@ -16,5 +16,7 @@ checkpoints
 # experiment reports (write-ups, tables, json summaries, figures) are tracked; console logs and archives stay local
 reports/**/*.log
 reports/**/*.zip
+!reports/**/figures/
+!reports/**/*.sh
 dist
 worktrees
