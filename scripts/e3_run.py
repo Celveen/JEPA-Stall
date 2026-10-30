@@ -13,8 +13,16 @@ others never activate the ruler and are identical to the reference. Episodes kee
 
     eval_outputs/e3/<level>_s<seed>/<arm>/shardNN/
 
+PushObj (--env pushobj, S7, our weights, budget 50, trigger from replan 10 as in scripts/stag_base_run.py): the
+reference is the 30-replan AdaJEPA run with its failures rerun to 50 (scripts/s7_extend.py). An arm can change an
+episode only from the replan after its first possible trigger, so it reruns every episode with no success by replan
+10 (failures and late successes); the rest are identical to the reference.
+
+    eval_outputs/e3/pushobj_<stream>/<arm>/<chunk>/
+
     python scripts/e3_run.py --arms R-trig R-switch
     python scripts/e3_run.py --arms R-trig --smoke 2 --root eval_outputs/e3_smoke
+    python scripts/e3_run.py --env pushobj --arms R-trig R-switch --gpus 0,1,4,5,6,7 --jobs 12
 """
 import argparse
 import json
@@ -26,6 +34,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from attr_run import active, run_worker  # noqa: E402
+from e3_analyze import PUSH_REFS, first_success, reference  # noqa: E402
 from escape_run import ROOT, finished, log  # noqa: E402
 from stag_maze_base_run import LEVELS, MUJOCO_LIBS, STAG  # noqa: E402
 
@@ -44,6 +53,7 @@ ARMS = {
     "T0SP-stag": (T0SP, None),  # check arm: the same T0SP through StagnationMPCPlanner (must equal R-trig)
 }
 START, MAX_ITER, N = 4, 50, 100  # trigger from replan 4 (as the reference runs log it), budget 50
+PUSH_START, PUSH_CKPT, PUSH_EPOCH = 10, "checkpoints/pushobj_bias_16k_e3_seed0", "3"
 
 
 def triggered(ref):
@@ -58,8 +68,46 @@ def triggered(ref):
     return sorted(hit)
 
 
+def arm_overrides(arm, part, out):
+    stag, switch = ARMS[arm]
+    target = "planning.stagnation.StagnationMPCPlanner" if switch is None else "planning.switch.SwitchMPCPlanner"
+    return ([f"planner._target_={target}"] + [f"++planner.stag.{k}={v}" for k, v in stag.items()] +
+            [f"++planner.switch.{k}={v}" for k, v in (switch or {}).items()] +
+            [f"++planner.stag.only_samples=[{','.join(map(str, part))}]", f"hydra.run.dir={out}"])
+
+
+def pushobj_jobs(a, jobs):
+    """One run per chunk and arm, over the chunk's episodes with no success by replan PUSH_START."""
+    ref = reference("pushobj", PUSH_REFS[a.stream])
+    blocks = json.loads((ROOT / "data/targets" / a.stream / "manifest.json").read_text())["blocks"]
+    root = ROOT / a.root / f"pushobj_{a.stream}"
+    todo = {}
+    for (ch, i), st in sorted(ref.items()):
+        fs = first_success(st)
+        if (fs is None or fs > PUSH_START) and (not a.episodes or i in a.episodes):
+            todo.setdefault(ch, []).append(i)
+    if a.smoke:
+        todo = {ch: v[: a.smoke] for ch, v in list(todo.items())[:1]}
+    log(f"{sum(map(len, todo.values()))} episodes with no success by replan {PUSH_START} in {len(todo)} chunks")
+    common = ["+wandb_logging=false", f"planner.max_iter={MAX_ITER}"] + \
+        [f"++planner.stag.{k}={v}" for k, v in STAG.items()] + [f"++planner.stag.start={PUSH_START}"]
+    for arm in a.arms:
+        for b in blocks:
+            if b["chunk"] not in todo:
+                continue
+            out = root / arm / b["chunk"]
+            if finished(out) or active(out):
+                continue
+            cmd = [sys.executable, ROOT / "plan.py", "--config-name", "escape_plan_gd_pushobj",
+                   f"ckpt_base_path={(ROOT / PUSH_CKPT).resolve()}", f"model_epoch={PUSH_EPOCH}",
+                   f"eval_data_path={ROOT / 'data/targets' / a.stream / (b['chunk'] + '.pkl')}", f"n_evals={b['n']}"]
+            jobs.put((out, cmd + common + arm_overrides(arm, todo[b["chunk"]], out)))
+
+
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--env", default="maze", choices=("maze", "pushobj"))
+    ap.add_argument("--stream", default="S7", help="PushObj target set")
     ap.add_argument("--arms", nargs="+", required=True, choices=sorted(ARMS))
     ap.add_argument("--level", default="medium", choices=sorted(LEVELS))
     ap.add_argument("--seed", type=int, default=100)
@@ -76,6 +124,24 @@ def main():
     ap.add_argument("--stagger", type=float, default=10.0)
     a = ap.parse_args()
 
+    jobs = queue.Queue()
+    if a.env == "pushobj":
+        pushobj_jobs(a, jobs)
+    else:
+        maze_jobs(a, jobs)
+    gpus = a.gpus.split(",")
+    log(f"{jobs.qsize()} runs ({' '.join(a.arms)}); {a.jobs} at a time on GPUs {gpus}")
+    results = []
+    threads = [threading.Thread(target=run_worker, args=(gpus[i % len(gpus)], jobs, a, results)) for i in range(a.jobs)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    log(f"finished: {sum(results)} ok, {len(results) - sum(results)} failed")
+    sys.exit(0 if results and all(results) else 1)
+
+
+def maze_jobs(a, jobs):
     os.environ["LD_LIBRARY_PATH"] = ":".join([os.environ.get("LD_LIBRARY_PATH", "")] + MUJOCO_LIBS).strip(":")
     ref = ROOT / (a.ref or f"eval_outputs/stag_maze100_ar4/{a.level}/adajepa/ref")
     idx = triggered(ref)
@@ -90,30 +156,15 @@ def main():
               f"n_evals={N}", f"seed={a.seed}", f"min_block_radius={lo}", f"max_block_radius={hi}",
               "+wandb_logging=false", f"planner.max_iter={MAX_ITER}", "++env_kwargs_override.action_repeat=4"] + \
         [f"++planner.stag.{k}={v}" for k, v in STAG.items()] + [f"++planner.stag.start={START}"]
-    jobs = queue.Queue()
     root = ROOT / a.root / f"{a.level}_s{a.seed}"
     for arm in a.arms:
-        stag, switch = ARMS[arm]
         per = len(idx) if a.smoke else a.per_shard
         for s in range(0, len(idx), per):
             part = idx[s:s + per]
             out = root / arm / f"shard{s // per:02d}"
             if finished(out) or active(out):
                 continue
-            target = "planning.stagnation.StagnationMPCPlanner" if switch is None else "planning.switch.SwitchMPCPlanner"
-            jobs.put((out, common + [f"planner._target_={target}"] + [f"++planner.stag.{k}={v}" for k, v in stag.items()] +
-                      [f"++planner.switch.{k}={v}" for k, v in (switch or {}).items()] +
-                      [f"++planner.stag.only_samples=[{','.join(map(str, part))}]", f"hydra.run.dir={out}"]))
-    gpus = a.gpus.split(",")
-    log(f"{jobs.qsize()} runs ({' '.join(a.arms)}); {a.jobs} at a time on GPUs {gpus}")
-    results = []
-    threads = [threading.Thread(target=run_worker, args=(gpus[i % len(gpus)], jobs, a, results)) for i in range(a.jobs)]
-    for t in threads:
-        t.start()
-    for t in threads:
-        t.join()
-    log(f"finished: {sum(results)} ok, {len(results) - sum(results)} failed")
-    sys.exit(0 if results and all(results) else 1)
+            jobs.put((out, common + arm_overrides(arm, part, out)))
 
 
 if __name__ == "__main__":
