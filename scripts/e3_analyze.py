@@ -120,7 +120,9 @@ def analyze(a):
     ref_fs = {i: first_success(st) for i, st in ref.items()}
     cls = e0_class(a.level) if a.env == "maze" else {}
     L = [f"# E3：{a.tag}，{a.name}\n",
-         f"参照运行：{' + '.join(f'`{r}`' for r in a.ref)}（AdaJEPA，{n_all} 个 episode）。各组只重跑参照里触发过卡住的 episode，其余与参照相同。"
+         f"参照运行：{' + '.join(f'`{r}`' for r in a.ref)}（AdaJEPA，{n_all} 个 episode）。"
+         + ("各组只重跑参照里触发过卡住的 episode" if a.env == "maze" else "各组只重跑参照里第 10 次之前没成功的 episode")
+         + "，其余与参照相同。"
          "赢 = 参照失败、这一组成功；输 = 参照成功、这一组失败；p 为 McNemar 精确双侧检验。\n",
          "| 组 | 重跑 | 赢 | 输 | p | " + " | ".join(f"{b} 次：成功（参照）" for b in BUDGETS) + " | 切换的 episode | 切换步中位 |",
          "|---|---:|---:|---:|---:|" + "---|" * len(BUDGETS) + "---:|---:|"]
