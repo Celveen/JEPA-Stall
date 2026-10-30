@@ -28,6 +28,7 @@ shows the median loss (relative to the first trigger) and the privileged error a
     python scripts/e1_switch.py                      # maze medium (main), PushObj S7
     python scripts/e1_switch.py --maze-run eval_outputs/attr_d0/A2 --maze-labels eval_outputs/attr_d0/labels_A2.jsonl \
         --maze-name "迷宫 easy 修正设定 AdaJEPA" --out reports/e1_switch/easy
+    python scripts/e1_switch.py --push-ext eval_outputs/stag_S7_it50/S0 --push-budget 50 --out reports/e1_switch/s7_it50
 """
 import argparse
 import collections
@@ -76,6 +77,13 @@ def pushobj(a):
     for line in (ROOT / a.push_trace).open():
         x = json.loads(line)
         trace[(x["chunk"], x["sample_idx"])] = x
+    ext = collections.defaultdict(dict)  # episodes rerun with a longer budget (scripts/s7_extend.py) replace the reference's
+    if a.push_ext:
+        for f in sorted((ROOT / a.push_ext).glob("*/per_iter_logs.json")):
+            for line in f.open():
+                if line.strip():
+                    r = json.loads(line)
+                    ext[(f.parent.name, r["sample_idx"])][r["step"]] = r
     out = {}
     for f in sorted((ROOT / a.push_run).glob("*/per_iter_logs.json")):
         chunk = f.parent.name
@@ -84,9 +92,13 @@ def pushobj(a):
             r = json.loads(line)
             eps[r["sample_idx"]][r["step"]] = r
         for i, st in eps.items():
-            tr = trace[(chunk, i)]
-            armed = {x["s"] for x in tr["steps"]
-                     if a.push_start <= x["s"] < a.push_budget and "dW" in x and x["dW"] / max(x["dg"], 1e-12) < GAMMA_HI}
+            if (chunk, i) in ext:  # logged by StagnationMPCPlanner (kappa 0): the trigger as the planner computes it
+                st = ext[(chunk, i)]
+                armed = {s for s, r in st.items() if (r.get("stag_w") or 0) > 0}
+            else:
+                tr = trace[(chunk, i)]
+                armed = {x["s"] for x in tr["steps"]
+                         if a.push_start <= x["s"] < a.push_budget and "dW" in x and x["dW"] / max(x["dg"], 1e-12) < GAMMA_HI}
             succ = [s for s, r in st.items() if r["success"]]
             out[(chunk, i)] = {"steps": st, "succ": min(succ) if succ else None, "armed": armed, "err": {}}
     return out, a.push_budget
@@ -212,6 +224,8 @@ def main():
     ap.add_argument("--push-trace", default="eval_outputs/stag_S7/trace.jsonl")
     ap.add_argument("--push-start", type=int, default=10)
     ap.add_argument("--push-budget", type=int, default=30)
+    ap.add_argument("--push-ext", default="", help="rerun of the reference's failures with a longer budget "
+                    "(eval_outputs/stag_S7_it50/S0, with --push-budget 50)")
     ap.add_argument("--out", default="reports/e1_switch")
     a = ap.parse_args()
 
