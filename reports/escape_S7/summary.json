@@ -1,0 +1,245 @@
+{
+ "n": 280,
+ "arms": {
+  "none": {
+   "success": 77.5,
+   "diff": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "only_arm": 0,
+   "only_none": 0,
+   "p": 1.0,
+   "rescued": 0,
+   "n_fail": 63,
+   "broken_late": 0,
+   "n_late": 15,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 72.14285714285714,
+    "15": 75.71428571428571,
+    "20": 76.42857142857142,
+    "30": 77.5
+   },
+   "steps": 12.267857142857142,
+   "unseen": 60.0,
+   "seen": 90.625
+  },
+  "K2": {
+   "success": 79.28571428571428,
+   "diff": 1.7857142857142794,
+   "ci": [
+    0.3571428571428559,
+    3.57142857142857
+   ],
+   "only_arm": 5,
+   "only_none": 0,
+   "p": 0.0625,
+   "rescued": 5,
+   "n_fail": 63,
+   "broken_late": 0,
+   "n_late": 15,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 72.14285714285714,
+    "15": 77.5,
+    "20": 78.57142857142857,
+    "30": 79.28571428571428
+   },
+   "steps": 11.946428571428571,
+   "unseen": 61.66666666666667,
+   "seen": 92.5,
+   "n_triggered": 70,
+   "escapes_per_triggered": 3.3857142857142857,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 8.823882365489716,
+   "object_moved_frac": 0.16877637130801687,
+   "rescue_latency": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rescues_after_25": 2
+  },
+  "K2P": {
+   "success": 79.64285714285714,
+   "diff": 2.1428571428571352,
+   "ci": [
+    0.7142857142857117,
+    3.928571428571437
+   ],
+   "only_arm": 6,
+   "only_none": 0,
+   "p": 0.03125,
+   "rescued": 6,
+   "n_fail": 63,
+   "broken_late": 0,
+   "n_late": 15,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 72.14285714285714,
+    "15": 78.92857142857143,
+    "20": 79.64285714285714,
+    "30": 79.64285714285714
+   },
+   "steps": 11.7,
+   "unseen": 62.5,
+   "seen": 92.5,
+   "n_triggered": 70,
+   "escapes_per_triggered": 3.414285714285714,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 6.10550571206019,
+   "object_moved_frac": 0.12133891213389121,
+   "rescue_latency": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rescues_after_25": 0
+  },
+  "K2P7": {
+   "success": 79.64285714285714,
+   "diff": 2.1428571428571352,
+   "ci": [
+    0.7142857142857117,
+    3.928571428571437
+   ],
+   "only_arm": 6,
+   "only_none": 0,
+   "p": 0.03125,
+   "rescued": 6,
+   "n_fail": 63,
+   "broken_late": 0,
+   "n_late": 15,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 72.14285714285714,
+    "15": 78.92857142857143,
+    "20": 79.64285714285714,
+    "30": 79.64285714285714
+   },
+   "steps": 11.7,
+   "unseen": 62.5,
+   "seen": 92.5,
+   "n_triggered": 70,
+   "escapes_per_triggered": 4.3,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 6.212318407808814,
+   "object_moved_frac": 0.11627906976744186,
+   "rescue_latency": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rescues_after_25": 0
+  },
+  "KS": {
+   "success": 80.0,
+   "diff": 2.500000000000002,
+   "ci": [
+    0.7142857142857229,
+    4.642857142857137
+   ],
+   "only_arm": 7,
+   "only_none": 0,
+   "p": 0.015625,
+   "rescued": 7,
+   "n_fail": 63,
+   "broken_late": 0,
+   "n_late": 15,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 72.14285714285714,
+    "15": 76.78571428571429,
+    "20": 79.28571428571428,
+    "30": 80.0
+   },
+   "steps": 11.910714285714286,
+   "unseen": 63.33333333333333,
+   "seen": 92.5,
+   "n_triggered": 70,
+   "escapes_per_triggered": 3.442857142857143,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 6.1782926444123865,
+   "object_moved_frac": 0.14522821576763487,
+   "rescue_latency": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rescues_after_25": 0
+  },
+  "K3": {
+   "success": 77.5,
+   "diff": 0.0,
+   "ci": [
+    -1.0714285714285676,
+    1.0714285714285676
+   ],
+   "only_arm": 1,
+   "only_none": 1,
+   "p": 1.0,
+   "rescued": 1,
+   "n_fail": 63,
+   "broken_late": 1,
+   "n_late": 15,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 72.14285714285714,
+    "15": 75.35714285714286,
+    "20": 77.14285714285715,
+    "30": 77.5
+   },
+   "steps": 12.239285714285714,
+   "unseen": 60.83333333333333,
+   "seen": 90.0,
+   "n_triggered": 70,
+   "escapes_per_triggered": 3.6714285714285713,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 2.9039628096792107,
+   "object_moved_frac": 0.15953307392996108,
+   "rescue_latency": [
+    2.0
+   ],
+   "rescues_after_25": 0
+  },
+  "w0_old": {
+   "success": 77.5,
+   "diff": 0.0,
+   "ci": [
+    -2.857142857142858,
+    2.857142857142858
+   ],
+   "only_arm": 8,
+   "only_none": 8,
+   "p": 1.0,
+   "rescued": 8,
+   "n_fail": 63,
+   "broken_late": 3,
+   "n_late": 15,
+   "early_agree": 0.9752475247524752,
+   "budget": {
+    "10": 69.64285714285714,
+    "15": 74.28571428571429,
+    "20": 76.78571428571429,
+    "30": 77.5
+   },
+   "steps": 12.4,
+   "unseen": 59.166666666666664,
+   "seen": 91.25
+  }
+ }
+}

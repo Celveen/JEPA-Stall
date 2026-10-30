@@ -1,0 +1,38 @@
+{
+ "easy": {
+  "n": 50,
+  "ada": 0.68,
+  "frozen": 0.54,
+  "fail_kinds": {
+   "stall": 7,
+   "moving, no progress": 5,
+   "progressing": 4
+  },
+  "trigger_fail": 11,
+  "trigger_success": 2
+ },
+ "medium": {
+  "n": 50,
+  "ada": 0.18,
+  "frozen": 0.22,
+  "fail_kinds": {
+   "stall": 29,
+   "moving, no progress": 8,
+   "progressing": 4
+  },
+  "trigger_fail": 36,
+  "trigger_success": 0
+ },
+ "hard": {
+  "n": 50,
+  "ada": 0.04,
+  "frozen": 0.08,
+  "fail_kinds": {
+   "moving, no progress": 22,
+   "progressing": 3,
+   "stall": 23
+  },
+  "trigger_fail": 42,
+  "trigger_success": 0
+ }
+}

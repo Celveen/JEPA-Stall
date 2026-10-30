@@ -13,7 +13,8 @@ checkpoints
 !env/wall/data/
 !env/wall/data/*.py
 
-# experiment reports stay local
-reports
+# experiment reports (write-ups, tables, json summaries, figures) are tracked; console logs and archives stay local
+reports/**/*.log
+reports/**/*.zip
 dist
 worktrees

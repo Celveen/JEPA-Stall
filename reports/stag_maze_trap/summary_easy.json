@@ -1,0 +1,214 @@
+{
+ "frozen": {
+  "n": 100,
+  "fail": 37,
+  "groups": {
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=1\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 10,
+    "fail_in": 7,
+    "n_out": 90,
+    "fail_out": 30,
+    "fisher_p": 0.035830453315105336
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=2\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 6,
+    "fail_in": 5,
+    "n_out": 94,
+    "fail_out": 32,
+    "fisher_p": 0.024987404077203318
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=3\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 1,
+    "fail_in": 1,
+    "n_out": 99,
+    "fail_out": 36,
+    "fisher_p": 0.37
+   },
+   "\u6700\u77ed\u8def\u5f84\u6bd4\u76f4\u7ebf\u957f > 0.5": {
+    "n_in": 28,
+    "fail_in": 13,
+    "n_out": 72,
+    "fail_out": 24,
+    "fisher_p": 0.25381110813266433
+   }
+  },
+  "cls": {
+   "open": 19,
+   "near_miss": 8,
+   "trap": 6,
+   "progressing": 4
+  },
+  "trap_r1": 8,
+  "trap_r3": 3,
+  "end_wall_separated_pressed": 6,
+  "trig_fail": 29,
+  "trig_fail_trap2": 6,
+  "trig_succ": 11,
+  "trig_succ_trap2": 0,
+  "succ_visit_trap2": 17,
+  "fail_visit_trap2": 8,
+  "fail_trap2_frac_median": 0.0,
+  "sim": {
+   "from_start_ok": 100,
+   "n": 100,
+   "from_start_median": 4.0,
+   "from_trig": {
+    "open": [
+     17,
+     17
+    ],
+    "near_miss": [
+     3,
+     3
+    ],
+    "trap": [
+     6,
+     6
+    ],
+    "progressing": [
+     3,
+     3
+    ]
+   },
+   "from_trig_total": [
+    29,
+    29
+   ]
+  },
+  "trap_and_feasible": 6
+ },
+ "adajepa": {
+  "n": 100,
+  "fail": 17,
+  "groups": {
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=1\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 10,
+    "fail_in": 7,
+    "n_out": 90,
+    "fail_out": 10,
+    "fisher_p": 0.00010812434062544614
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=2\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 6,
+    "fail_in": 6,
+    "n_out": 94,
+    "fail_out": 11,
+    "fisher_p": 1.038209394150794e-05
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=3\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 1,
+    "fail_in": 1,
+    "n_out": 99,
+    "fail_out": 16,
+    "fisher_p": 0.17
+   },
+   "\u6700\u77ed\u8def\u5f84\u6bd4\u76f4\u7ebf\u957f > 0.5": {
+    "n_in": 28,
+    "fail_in": 12,
+    "n_out": 72,
+    "fail_out": 5,
+    "fisher_p": 7.017269880505576e-05
+   }
+  },
+  "cls": {
+   "open": 2,
+   "progressing": 3,
+   "trap": 9,
+   "near_miss": 3
+  },
+  "trap_r1": 10,
+  "trap_r3": 3,
+  "end_wall_separated_pressed": 8,
+  "trig_fail": 16,
+  "trig_fail_trap2": 8,
+  "trig_succ": 22,
+  "trig_succ_trap2": 0,
+  "succ_visit_trap2": 35,
+  "fail_visit_trap2": 11,
+  "fail_trap2_frac_median": 0.44,
+  "sim": {
+   "from_start_ok": 100,
+   "n": 100,
+   "from_start_median": 4.0,
+   "from_trig": {
+    "open": [
+     1,
+     1
+    ],
+    "progressing": [
+     3,
+     3
+    ],
+    "trap": [
+     9,
+     9
+    ],
+    "near_miss": [
+     3,
+     3
+    ]
+   },
+   "from_trig_total": [
+    16,
+    16
+   ]
+  },
+  "trap_and_feasible": 9
+ },
+ "latent": {
+  "frozen/\u5931\u8d25\u00b7\u89e6\u53d1\u65f6": {
+   "n": 29,
+   "euc_trap2": 6,
+   "lat_trap2": 5,
+   "agree2": 28,
+   "agree1": 23,
+   "agree3": 29,
+   "spearman2_median": 0.9155
+  },
+  "frozen/\u5931\u8d25\u00b7\u6700\u540e": {
+   "n": 37,
+   "euc_trap2": 4,
+   "lat_trap2": 4,
+   "agree2": 37,
+   "agree1": 30,
+   "agree3": 36,
+   "spearman2_median": 0.9212
+  },
+  "frozen/\u540e\u6765\u6210\u529f\u00b7\u89e6\u53d1\u65f6": {
+   "n": 11,
+   "euc_trap2": 0,
+   "lat_trap2": 2,
+   "agree2": 9,
+   "agree1": 6,
+   "agree3": 10,
+   "spearman2_median": 0.7817
+  },
+  "adajepa/\u5931\u8d25\u00b7\u89e6\u53d1\u65f6": {
+   "n": 16,
+   "euc_trap2": 8,
+   "lat_trap2": 6,
+   "agree2": 14,
+   "agree1": 14,
+   "agree3": 15,
+   "spearman2_median": 0.9175500000000001
+  },
+  "adajepa/\u5931\u8d25\u00b7\u6700\u540e": {
+   "n": 17,
+   "euc_trap2": 7,
+   "lat_trap2": 7,
+   "agree2": 15,
+   "agree1": 15,
+   "agree3": 16,
+   "spearman2_median": 0.8827
+  },
+  "adajepa/\u540e\u6765\u6210\u529f\u00b7\u89e6\u53d1\u65f6": {
+   "n": 22,
+   "euc_trap2": 0,
+   "lat_trap2": 0,
+   "agree2": 22,
+   "agree1": 20,
+   "agree3": 22,
+   "spearman2_median": 0.94625
+  }
+ }
+}

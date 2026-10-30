@@ -1,0 +1,227 @@
+{
+ "n": 120,
+ "arms": {
+  "none": {
+   "success": 76.66666666666667,
+   "diff": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "only_arm": 0,
+   "only_none": 0,
+   "p": 1.0,
+   "rescued": 0,
+   "n_fail": 28,
+   "broken_late": 0,
+   "n_late": 6,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 71.66666666666667,
+    "15": 76.66666666666667,
+    "20": 76.66666666666667,
+    "30": 76.66666666666667
+   },
+   "steps": 12.233333333333333,
+   "unseen": 60.0,
+   "seen": 93.33333333333333
+  },
+  "K1_5": {
+   "success": 76.66666666666667,
+   "diff": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "only_arm": 0,
+   "only_none": 0,
+   "p": 1.0,
+   "rescued": 0,
+   "n_fail": 28,
+   "broken_late": 0,
+   "n_late": 6,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 71.66666666666667,
+    "15": 76.66666666666667,
+    "20": 76.66666666666667,
+    "30": 76.66666666666667
+   },
+   "steps": 12.191666666666666,
+   "unseen": 60.0,
+   "seen": 93.33333333333333,
+   "n_triggered": 31,
+   "escapes_per_triggered": 3.3870967741935485,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 9.560271962658803,
+   "object_moved_frac": 0.26666666666666666,
+   "rescue_latency": [],
+   "rescues_after_25": 0
+  },
+  "K1_10": {
+   "success": 77.5,
+   "diff": 0.8333333333333304,
+   "ci": [
+    0.0,
+    2.500000000000002
+   ],
+   "only_arm": 1,
+   "only_none": 0,
+   "p": 1.0,
+   "rescued": 1,
+   "n_fail": 28,
+   "broken_late": 0,
+   "n_late": 6,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 71.66666666666667,
+    "15": 75.83333333333333,
+    "20": 76.66666666666667,
+    "30": 77.5
+   },
+   "steps": 12.2,
+   "unseen": 61.66666666666667,
+   "seen": 93.33333333333333,
+   "n_triggered": 31,
+   "escapes_per_triggered": 2.967741935483871,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 19.948953822664954,
+   "object_moved_frac": 0.31521739130434784,
+   "rescue_latency": [
+    0.0
+   ],
+   "rescues_after_25": 1
+  },
+  "K2": {
+   "success": 79.16666666666666,
+   "diff": 2.499999999999991,
+   "ci": [
+    0.0,
+    5.833333333333335
+   ],
+   "only_arm": 3,
+   "only_none": 0,
+   "p": 0.25,
+   "rescued": 3,
+   "n_fail": 28,
+   "broken_late": 0,
+   "n_late": 6,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 71.66666666666667,
+    "15": 77.5,
+    "20": 78.33333333333333,
+    "30": 79.16666666666666
+   },
+   "steps": 11.908333333333333,
+   "unseen": 63.33333333333333,
+   "seen": 95.0,
+   "n_triggered": 31,
+   "escapes_per_triggered": 3.225806451612903,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 8.211356231532672,
+   "object_moved_frac": 0.22,
+   "rescue_latency": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rescues_after_25": 1
+  },
+  "K2P": {
+   "success": 79.16666666666666,
+   "diff": 2.499999999999991,
+   "ci": [
+    0.0,
+    5.833333333333335
+   ],
+   "only_arm": 3,
+   "only_none": 0,
+   "p": 0.25,
+   "rescued": 3,
+   "n_fail": 28,
+   "broken_late": 0,
+   "n_late": 6,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 71.66666666666667,
+    "15": 79.16666666666666,
+    "20": 79.16666666666666,
+    "30": 79.16666666666666
+   },
+   "steps": 11.7,
+   "unseen": 63.33333333333333,
+   "seen": 95.0,
+   "n_triggered": 31,
+   "escapes_per_triggered": 3.3225806451612905,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 7.310109438305292,
+   "object_moved_frac": 0.13592233009708737,
+   "rescue_latency": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rescues_after_25": 0
+  },
+  "K3": {
+   "success": 77.5,
+   "diff": 0.8333333333333304,
+   "ci": [
+    0.0,
+    2.500000000000002
+   ],
+   "only_arm": 1,
+   "only_none": 0,
+   "p": 1.0,
+   "rescued": 1,
+   "n_fail": 28,
+   "broken_late": 0,
+   "n_late": 6,
+   "early_agree": 1.0,
+   "budget": {
+    "10": 71.66666666666667,
+    "15": 75.83333333333333,
+    "20": 77.5,
+    "30": 77.5
+   },
+   "steps": 12.133333333333333,
+   "unseen": 61.66666666666667,
+   "seen": 93.33333333333333,
+   "n_triggered": 31,
+   "escapes_per_triggered": 3.6129032258064515,
+   "first_escape_step_median": 13.0,
+   "pusher_moved_median": 2.6631659169140747,
+   "object_moved_frac": 0.19642857142857142,
+   "rescue_latency": [
+    2.0
+   ],
+   "rescues_after_25": 0
+  },
+  "w0_old": {
+   "success": 75.0,
+   "diff": -1.6666666666666718,
+   "ci": [
+    -5.000000000000004,
+    1.6666666666666607
+   ],
+   "only_arm": 1,
+   "only_none": 3,
+   "p": 0.625,
+   "rescued": 1,
+   "n_fail": 28,
+   "broken_late": 1,
+   "n_late": 6,
+   "early_agree": 0.9767441860465116,
+   "budget": {
+    "10": 70.83333333333334,
+    "15": 74.16666666666667,
+    "20": 75.0,
+    "30": 75.0
+   },
+   "steps": 12.491666666666667,
+   "unseen": 58.333333333333336,
+   "seen": 91.66666666666666
+  }
+ }
+}

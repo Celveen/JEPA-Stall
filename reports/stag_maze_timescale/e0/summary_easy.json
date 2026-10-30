@@ -1,0 +1,209 @@
+{
+ "frozen": {
+  "n": 100,
+  "fail": 20,
+  "groups": {
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=1\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 10,
+    "fail_in": 4,
+    "n_out": 90,
+    "fail_out": 16,
+    "fisher_p": 0.10957185095927661
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=2\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 6,
+    "fail_in": 3,
+    "n_out": 94,
+    "fail_out": 17,
+    "fisher_p": 0.09248895434462444
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=3\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 1,
+    "fail_in": 1,
+    "n_out": 99,
+    "fail_out": 19,
+    "fisher_p": 0.19999999999999996
+   },
+   "\u6700\u77ed\u8def\u5f84\u6bd4\u76f4\u7ebf\u957f > 0.5": {
+    "n_in": 28,
+    "fail_in": 6,
+    "n_out": 72,
+    "fail_out": 14,
+    "fisher_p": 0.7881314431558886
+   }
+  },
+  "cls": {
+   "trap": 5,
+   "near_miss": 4,
+   "open": 7,
+   "progressing": 4
+  },
+  "trap_r1": 6,
+  "trap_r3": 5,
+  "end_wall_separated_pressed": 3,
+  "trig_fail": 17,
+  "trig_fail_trap2": 3,
+  "trig_succ": 10,
+  "trig_succ_trap2": 2,
+  "succ_visit_trap2": 19,
+  "fail_visit_trap2": 8,
+  "fail_trap2_frac_median": 0.0,
+  "sim": {
+   "from_start_ok": 100,
+   "n": 100,
+   "from_start_median": 2.0,
+   "from_trig": {
+    "trap": [
+     4,
+     4
+    ],
+    "near_miss": [
+     3,
+     3
+    ],
+    "open": [
+     7,
+     7
+    ],
+    "progressing": [
+     3,
+     3
+    ]
+   },
+   "from_trig_total": [
+    17,
+    17
+   ]
+  },
+  "trap_and_feasible": 4
+ },
+ "adajepa": {
+  "n": 100,
+  "fail": 6,
+  "groups": {
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=1\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 10,
+    "fail_in": 3,
+    "n_out": 90,
+    "fail_out": 3,
+    "fisher_p": 0.012551075774856875
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=2\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 6,
+    "fail_in": 3,
+    "n_out": 94,
+    "fail_out": 3,
+    "fisher_p": 0.0023044372881594797
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=3\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 1,
+    "fail_in": 0,
+    "n_out": 99,
+    "fail_out": 6,
+    "fisher_p": 1.0
+   },
+   "\u6700\u77ed\u8def\u5f84\u6bd4\u76f4\u7ebf\u957f > 0.5": {
+    "n_in": 28,
+    "fail_in": 3,
+    "n_out": 72,
+    "fail_out": 3,
+    "fisher_p": 0.3451245498939476
+   }
+  },
+  "cls": {
+   "near_miss": 1,
+   "open": 2,
+   "trap": 3
+  },
+  "trap_r1": 2,
+  "trap_r3": 2,
+  "end_wall_separated_pressed": 2,
+  "trig_fail": 6,
+  "trig_fail_trap2": 3,
+  "trig_succ": 20,
+  "trig_succ_trap2": 0,
+  "succ_visit_trap2": 28,
+  "fail_visit_trap2": 4,
+  "fail_trap2_frac_median": 0.33,
+  "sim": {
+   "from_start_ok": 100,
+   "n": 100,
+   "from_start_median": 2.0,
+   "from_trig": {
+    "near_miss": [
+     1,
+     1
+    ],
+    "open": [
+     2,
+     2
+    ],
+    "trap": [
+     3,
+     3
+    ]
+   },
+   "from_trig_total": [
+    6,
+    6
+   ]
+  },
+  "trap_and_feasible": 3
+ },
+ "latent": {
+  "frozen/\u5931\u8d25\u00b7\u89e6\u53d1\u65f6": {
+   "n": 17,
+   "euc_trap2": 3,
+   "lat_trap2": 3,
+   "agree2": 17,
+   "agree1": 12,
+   "agree3": 17,
+   "spearman2_median": 0.9537
+  },
+  "frozen/\u5931\u8d25\u00b7\u6700\u540e": {
+   "n": 20,
+   "euc_trap2": 2,
+   "lat_trap2": 1,
+   "agree2": 19,
+   "agree1": 17,
+   "agree3": 19,
+   "spearman2_median": 0.9434
+  },
+  "frozen/\u540e\u6765\u6210\u529f\u00b7\u89e6\u53d1\u65f6": {
+   "n": 10,
+   "euc_trap2": 2,
+   "lat_trap2": 2,
+   "agree2": 10,
+   "agree1": 7,
+   "agree3": 9,
+   "spearman2_median": 0.9279999999999999
+  },
+  "adajepa/\u5931\u8d25\u00b7\u89e6\u53d1\u65f6": {
+   "n": 6,
+   "euc_trap2": 4,
+   "lat_trap2": 4,
+   "agree2": 6,
+   "agree1": 5,
+   "agree3": 6,
+   "spearman2_median": 0.8123
+  },
+  "adajepa/\u5931\u8d25\u00b7\u6700\u540e": {
+   "n": 6,
+   "euc_trap2": 2,
+   "lat_trap2": 2,
+   "agree2": 6,
+   "agree1": 6,
+   "agree3": 6,
+   "spearman2_median": 0.84915
+  },
+  "adajepa/\u540e\u6765\u6210\u529f\u00b7\u89e6\u53d1\u65f6": {
+   "n": 20,
+   "euc_trap2": 0,
+   "lat_trap2": 0,
+   "agree2": 20,
+   "agree1": 18,
+   "agree3": 20,
+   "spearman2_median": 0.92465
+  }
+ }
+}

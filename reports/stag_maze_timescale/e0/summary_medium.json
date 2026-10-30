@@ -1,0 +1,218 @@
+{
+ "frozen": {
+  "n": 100,
+  "fail": 45,
+  "groups": {
+   "\u8d77\u70b9\u5c4f\u969c > 0.25": {
+    "n_in": 17,
+    "fail_in": 7,
+    "n_out": 83,
+    "fail_out": 38,
+    "fisher_p": 0.7939028451062526
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=1\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 61,
+    "fail_in": 32,
+    "n_out": 39,
+    "fail_out": 13,
+    "fisher_p": 0.06757313532020955
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=2\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 51,
+    "fail_in": 31,
+    "n_out": 49,
+    "fail_out": 14,
+    "fisher_p": 0.0014125531447115452
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=3\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 31,
+    "fail_in": 23,
+    "n_out": 69,
+    "fail_out": 22,
+    "fisher_p": 0.00016369600911363984
+   },
+   "\u6700\u77ed\u8def\u5f84\u6bd4\u76f4\u7ebf\u957f > 0.5": {
+    "n_in": 82,
+    "fail_in": 38,
+    "n_out": 18,
+    "fail_out": 7,
+    "fisher_p": 0.6106501941284386
+   }
+  },
+  "cls": {
+   "near_miss": 5,
+   "open": 15,
+   "trap": 24,
+   "progressing": 1
+  },
+  "trap_r1": 26,
+  "trap_r3": 18,
+  "end_wall_separated_pressed": 25,
+  "trig_fail": 44,
+  "trig_fail_trap2": 22,
+  "trig_succ": 11,
+  "trig_succ_trap2": 6,
+  "succ_visit_trap2": 27,
+  "fail_visit_trap2": 35,
+  "fail_trap2_frac_median": 0.4,
+  "sim": {
+   "from_start_ok": 100,
+   "n": 100,
+   "from_start_median": 3.0,
+   "from_trig": {
+    "near_miss": [
+     5,
+     5
+    ],
+    "open": [
+     14,
+     14
+    ],
+    "trap": [
+     24,
+     24
+    ],
+    "progressing": [
+     1,
+     1
+    ]
+   },
+   "from_trig_total": [
+    44,
+    44
+   ]
+  },
+  "trap_and_feasible": 24
+ },
+ "adajepa": {
+  "n": 100,
+  "fail": 18,
+  "groups": {
+   "\u8d77\u70b9\u5c4f\u969c > 0.25": {
+    "n_in": 17,
+    "fail_in": 3,
+    "n_out": 83,
+    "fail_out": 15,
+    "fisher_p": 1.0
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=1\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 61,
+    "fail_in": 16,
+    "n_out": 39,
+    "fail_out": 2,
+    "fisher_p": 0.007490603178438801
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=2\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 51,
+    "fail_in": 15,
+    "n_out": 49,
+    "fail_out": 3,
+    "fisher_p": 0.0034359065840842847
+   },
+   "\u8d2a\u5fc3\u6b27\u6c0f\u4e0b\u964d\uff08r=3\uff09\u5230\u4e0d\u4e86\u76ee\u6807": {
+    "n_in": 31,
+    "fail_in": 9,
+    "n_out": 69,
+    "fail_out": 9,
+    "fisher_p": 0.08857068955504577
+   },
+   "\u6700\u77ed\u8def\u5f84\u6bd4\u76f4\u7ebf\u957f > 0.5": {
+    "n_in": 82,
+    "fail_in": 18,
+    "n_out": 18,
+    "fail_out": 0,
+    "fisher_p": 0.03718681986835121
+   }
+  },
+  "cls": {
+   "trap": 13,
+   "open": 5
+  },
+  "trap_r1": 13,
+  "trap_r3": 9,
+  "end_wall_separated_pressed": 13,
+  "trig_fail": 16,
+  "trig_fail_trap2": 11,
+  "trig_succ": 35,
+  "trig_succ_trap2": 16,
+  "succ_visit_trap2": 48,
+  "fail_visit_trap2": 17,
+  "fail_trap2_frac_median": 0.83,
+  "sim": {
+   "from_start_ok": 100,
+   "n": 100,
+   "from_start_median": 3.0,
+   "from_trig": {
+    "trap": [
+     13,
+     13
+    ],
+    "open": [
+     3,
+     3
+    ]
+   },
+   "from_trig_total": [
+    16,
+    16
+   ]
+  },
+  "trap_and_feasible": 13
+ },
+ "latent": {
+  "frozen/\u5931\u8d25\u00b7\u89e6\u53d1\u65f6": {
+   "n": 44,
+   "euc_trap2": 24,
+   "lat_trap2": 27,
+   "agree2": 37,
+   "agree1": 34,
+   "agree3": 32,
+   "spearman2_median": 0.9169499999999999
+  },
+  "frozen/\u5931\u8d25\u00b7\u6700\u540e": {
+   "n": 45,
+   "euc_trap2": 18,
+   "lat_trap2": 20,
+   "agree2": 39,
+   "agree1": 35,
+   "agree3": 36,
+   "spearman2_median": 0.9151
+  },
+  "frozen/\u540e\u6765\u6210\u529f\u00b7\u89e6\u53d1\u65f6": {
+   "n": 11,
+   "euc_trap2": 6,
+   "lat_trap2": 3,
+   "agree2": 8,
+   "agree1": 10,
+   "agree3": 10,
+   "spearman2_median": 0.9437
+  },
+  "adajepa/\u5931\u8d25\u00b7\u89e6\u53d1\u65f6": {
+   "n": 16,
+   "euc_trap2": 11,
+   "lat_trap2": 13,
+   "agree2": 12,
+   "agree1": 12,
+   "agree3": 12,
+   "spearman2_median": 0.92965
+  },
+  "adajepa/\u5931\u8d25\u00b7\u6700\u540e": {
+   "n": 18,
+   "euc_trap2": 10,
+   "lat_trap2": 12,
+   "agree2": 14,
+   "agree1": 15,
+   "agree3": 13,
+   "spearman2_median": 0.8391500000000001
+  },
+  "adajepa/\u540e\u6765\u6210\u529f\u00b7\u89e6\u53d1\u65f6": {
+   "n": 35,
+   "euc_trap2": 17,
+   "lat_trap2": 16,
+   "agree2": 30,
+   "agree1": 28,
+   "agree3": 28,
+   "spearman2_median": 0.9155
+  }
+ }
+}
