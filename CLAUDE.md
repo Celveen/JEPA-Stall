@@ -19,12 +19,13 @@ are bit-identical to the baseline until their first trigger, so a smoke test com
 conda env create -f environment.yaml && conda activate ts
 ```
 
-- The env `ts` is Python 3.9. `load_ckpt` warms the torch.hub DINOv2 cache inside a try/except; checkpoints with
-  SmallResNet encoders (all used here) load regardless.
+- The env `ts` is Python 3.9. dinov2@main needs Python >= 3.10, so `models/dino.py` pins the torch.hub repo to the
+  2025-05-19 commit (`DINOV2_HUB`); DINO-based checkpoints (the Wall line) load through it. SmallResNet checkpoints
+  (maze, PushObj) never need it.
 - Maze envs need MuJoCo 2.1: `LD_LIBRARY_PATH` must include `~/.mujoco/mujoco210/bin` and `/usr/lib/nvidia`
   (`scripts/stag_maze_run.py` adds both). PushObj needs neither.
-- `checkpoints/`, `eval_outputs/`, `reports/` and most of `data/` are not tracked; `data/targets/` (evaluation target
-  chunks) is. They are real local folders, not links into another checkout: this repo must not depend on the CL-JEPA
+- `checkpoints/`, `eval_outputs/` and most of `data/` are not tracked; `data/targets/` (evaluation target chunks) and
+  `reports/` (except `*.log`, `*.zip`) are. External assets and the order of commands: `REPRODUCE.md`. They are real local folders, not links into another checkout: this repo must not depend on the CL-JEPA
   (paper 1) working tree, and nothing here writes into it.
 
 ## Architecture

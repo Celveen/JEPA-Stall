@@ -27,6 +27,8 @@ conda env create -f environment.yaml && conda activate ts
   to `LD_LIBRARY_PATH`.
 - Runs write to `eval_outputs/` (ignored by git).
 
+Reproducing the paper-2 experiments on another server (assets, checksums, commands in order): [REPRODUCE.md](REPRODUCE.md).
+
 ## Typical commands
 
 ```bash
