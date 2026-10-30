@@ -1,3 +1,5 @@
+import os
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -5,6 +7,10 @@ import logging
 from pathlib import Path
 
 torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
+
+# dinov2@main uses PEP 604 annotations (Python >= 3.10) since 2025-06-11 (12592a9); this env is Python 3.9, so the hub
+# repo is pinned to the last commit before that (2025-05-19). Same weights and architecture; DINOV2_HUB overrides it.
+DINOV2_HUB = os.environ.get("DINOV2_HUB", "facebookresearch/dinov2:4d83ffd4f4b39df112cef7ed7833de7ebf3a202e")
 
 logger = logging.getLogger(__name__)
 class GlobalProjector(nn.Module):
@@ -118,7 +124,7 @@ class DinoV2Encoder(nn.Module):
     ):
         super().__init__()
         self.name = name
-        self.base_model = torch.hub.load("facebookresearch/dinov2", name)
+        self.base_model = torch.hub.load(DINOV2_HUB, name)
         self.feature_key = feature_key
         self.emb_dim = self.base_model.num_features
         self.projector_name = projector
