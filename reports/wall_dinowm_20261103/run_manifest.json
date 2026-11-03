@@ -1,0 +1,70 @@
+{
+  "started_at": "2026-11-03T12:54:00+0800",
+  "checkpoint_sha256": "8441971becdae934fe08de5b163398390a32f6fe1fb0a8df113290e2468e142b",
+  "training_config_sha256": "4ed3109219ed6820ce51fd19e4c97199552b3443ed58c502fddd6441784967e1",
+  "git_head": "6249e8e5e046a910304a3ca286c1ca66d2435b85",
+  "n_evals": 50,
+  "seed": 99,
+  "cem": {
+    "samples": 300,
+    "topk": 30,
+    "iterations": 10
+  },
+  "frameskip": 5,
+  "horizon_env_steps": 25,
+  "execute_env_steps": 25,
+  "jobs": {
+    "open_loop": {
+      "pid": 2145717,
+      "gpu": "0",
+      "max_replans": 1,
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/plan.py",
+        "--config-name",
+        "plan_wall_dinowm",
+        "ckpt_base_path=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_wall_single",
+        "+eval_data_path=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/wall_single_eval",
+        "+wandb_logging=false",
+        "seed=99",
+        "n_evals=50",
+        "n_plot_samples=0",
+        "decode_for_viz=false",
+        "planner.max_iter=1",
+        "planner.sub_planner.num_samples=300",
+        "planner.sub_planner.topk=30",
+        "planner.sub_planner.opt_steps=10",
+        "hydra.run.dir=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/wall_dinowm/20261103/open_loop"
+      ],
+      "returncode": 0,
+      "finished_at": "2026-11-03T13:06:26+0800"
+    },
+    "mpc10": {
+      "pid": 2145718,
+      "gpu": "1",
+      "max_replans": 10,
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/plan.py",
+        "--config-name",
+        "plan_wall_dinowm",
+        "ckpt_base_path=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_wall_single",
+        "+eval_data_path=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/wall_single_eval",
+        "+wandb_logging=false",
+        "seed=99",
+        "n_evals=50",
+        "n_plot_samples=0",
+        "decode_for_viz=false",
+        "planner.max_iter=10",
+        "planner.sub_planner.num_samples=300",
+        "planner.sub_planner.topk=30",
+        "planner.sub_planner.opt_steps=10",
+        "hydra.run.dir=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/wall_dinowm/20261103/mpc10"
+      ],
+      "returncode": 0,
+      "finished_at": "2026-11-03T14:58:33+0800"
+    }
+  }
+}

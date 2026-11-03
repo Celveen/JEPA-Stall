@@ -1,6 +1,30 @@
 # Wall 测试方案（v2）：基准按 DINO-WM，再把目前最好的方法原样搬过去
 
-截至 2026-10-30。这只是方案，没有写代码，也没有跑实验；`wall_single` 数据正在下载。
+2026-11-03 更新：G0 两组公开权重评测已完成：开环 26/50（52%），MPC 46/50（92%）。[结果与原始输出](../wall_dinowm_20261103/report.md)；[下一轮方法实验提案](wall_stall_proposal.md)等待用户确认。下方保留执行记录和 10-30 的后续实验方案。
+
+### G0 执行记录（2026-11-03）
+
+- 数据和公开权重归档完整。解包到 `data/wall_single_eval` 与 `checkpoints/dinowm_wall_single`。公开权重记录的 epoch 为 **65**。
+- 数据保留全部 1920 条轨迹的状态、动作和布局张量，归一化与原数据相同；只解包固定随机划分（seed 42，train_fraction 0.9）的 192 条验证轨迹图像，约 5.9 GB。这个目录仅供评测，不能直接当作完整训练集。归档校验值和验证集索引在 `data/wall_single_eval/eval_manifest.json`。
+- CPU 低预算检查（2 个任务、8 个候选、topk 2、1 轮 CEM、2 次 MPC）完成，验证了重规划路径；该检查不用于比较成功率。
+- GPU 正式预算检查（2 个任务、300 个候选、topk 30、最多 10 轮 CEM）通过，2/2 成功；只是运行检查，不能外推为正式成功率。
+- **2026-11-03 12:54 +08:00** 开始正式两组：GPU 0 开环 CEM、GPU 1 MPC。两组均为 50 个任务、seed 99、公开冻结模型；CEM 300/30/10、horizon 25 个环境步（5 个模型步）、每次执行 25 个环境步。MPC 上限预先固定为 **10 次 / 250 个环境步**，全部成功时按原实现提前退出；报告各次重规划的成功率曲线。
+- 已逐项验证两组的 50 个起点、目标、图像和 proprio 完全相同，起点目标都位于墙两侧。完成时脚本还会核对第一次规划的动作完全相同。
+- 正式输出：`eval_outputs/wall_dinowm/20261103/{open_loop,mpc10}/`。`run_manifest.json` 记录 PID、GPU、命令、权重/配置哈希与返回码，`summary.json` 已生成；两组正常退出，MPC 于 14:58:33 +08:00 完成。第一段动作配对核对通过。
+- 本次是 **G0 冻结基线**；AdaJEPA / R-switch 和 WallRandom 尚未启动。固定预算 MPC 与原文未明确预算的数字需要区别解释。
+- 执行环境：沙箱内看不到 NVIDIA 设备，但宿主机可直接使用 8 张 RTX 3090。运行 GPU 作业必须通过宿主执行权限；不需要 SSH。本次避开了实际有进程的 2、4、7 号卡。
+
+复现入口（先在仓库根目录使用 `ts` Python 环境，查询 GPU 占用）：
+
+```bash
+python scripts/wall_eval.py prepare
+python scripts/wall_eval.py run --gpus 0,1 --output eval_outputs/wall_dinowm/another_run
+python scripts/wall_eval.py summarize --output eval_outputs/wall_dinowm/20261103
+```
+
+`run` 要求两张不同的空闲 GPU；没有 CUDA 时明确失败，不会自动改用 CPU，也不会覆盖已有正式输出。`summarize` 可随时读取已完成的重规划曲线，只有最终结果文件和最终日志都存在才记为完成。
+
+以下为原方案及后续范围：
 - 你的要求（2026-10-30）：可以自己训模型，但基准要按 DINO-WM 来，训出来的模型不能比原文差很多。
 - v1 是自己生成数据、用 SmallResNet、GD 规划，已作废：GD 规划在 Wall 上明显比原文的 CEM 差，见第 1 节。
 

@@ -91,15 +91,23 @@ python scripts/e3_analyze.py --env pushobj --check --arms R-trig R-switch
 python scripts/e3_analyze.py --env pushobj --arms R-trig R-switch --name stage1
 ```
 
-### 3.5 Wall（进行中，方案见 [reports/paper2_positioning/wall_plan.md](reports/paper2_positioning/wall_plan.md)）
+### 3.5 Wall G0（已完成，结果见 [Wall 报告](reports/wall_dinowm_20261103/report.md)）
 
 ```bash
 python scripts/fetch_assets.py dinowm_wall dinowm_ckpt dinov2_vits14 --conn 8 --pieces 8
-# G0：DINO-WM 的 Wall 评测（开环 CEM；MPC 用 planner.max_iter=<上限>）。DATASET_DIR 指向解压后 wall_single 的上一级
-DATASET_DIR=$(pwd)/data python plan.py --config-name plan_wall_dinowm ckpt_base_path=<DINO-WM 的 wall 权重目录>
+python scripts/wall_eval.py prepare
+# 每次选择空闲 GPU 和全新的输出目录；同时运行开环与最多 10 次规划的 MPC
+python scripts/wall_eval.py run --gpus 0,1 --output eval_outputs/wall_dinowm/new_run
+python scripts/wall_eval.py summarize --output eval_outputs/wall_dinowm/new_run
 ```
 
-G1 训练、G2 生成 WallRandom 数据以及之后的步骤，做完后补到这里。
+原始运行的逐任务结果和配置已归档在 `reports/wall_dinowm_20261103/`。`prepare` 保留完整归一化张量，只解包固定验证集图像；该目录不能直接用于训练。GPU 作业须在能访问 NVIDIA 设备的执行环境运行。
+
+G1、WallRandom 及正则/判别器实验尚未启动；下一轮见 [待确认方案](reports/paper2_positioning/wall_stall_proposal.md)。
+
+### 3.6 切换参数闭环开发实验（已完成）
+
+复现入口为 `scripts/switch_calibration.py` 的 `replay`、`prepare`、`run`、`analyze` 子命令；详细依赖、命令及配对检查见 [协议](reports/switch_calibration_20261102/protocol.md)。本地原始轨迹就绪后可重新分析，最终结果见 [报告](reports/switch_calibration_20261102/results.md)。
 
 ## 4. 各分析读哪些运行
 

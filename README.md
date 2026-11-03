@@ -1,7 +1,7 @@
 # Stalls in latent world-model MPC
 
 Research code for studying why test-time-adapted latent world-model MPC gets stuck ("stalls") and how a
-planner can detect and escape it. Experiments run on PushObj (shape shift) and the multi-layout point maze.
+planner can detect and escape it. Experiments run on PushObj (shape shift), the multi-layout point maze, and the standard Wall baseline.
 
 ## What is here
 
@@ -14,6 +14,12 @@ planner can detect and escape it. Experiments run on PushObj (shape shift) and t
 | `planning/adajepa*.py`, `planning/mpc.py`, `planning/gd.py`, `planning/cem.py` | The baseline planners: MPC with gradient or CEM sub-planners, with and without test-time adaptation |
 | `models/`, `datasets/`, `env/`, `train.py`, `plan.py` | World-model training and planning infrastructure |
 | `data/targets/` | Evaluation target sets (ordered chunks of plan targets) used by the runners |
+
+## Latest results (2026-11-03)
+
+- [Wall public-checkpoint baseline](reports/wall_dinowm_20261103/report.md): open-loop CEM **26/50**, capped MPC **46/50**; paired episode outputs and complete success curves included. These runs do not use adaptation or stall regularisation.
+- [Switch calibration](reports/switch_calibration_20261102/results.md): lowering the threshold or widening the window did not improve the existing development results; all 387 new episode-arm runs are complete and pairing is verified.
+- [Current research narrative](reports/paper2_positioning/narrative.md): the stall regulariser is the core intervention; the gate controls its timing. [The proposed Wall method experiment](reports/paper2_positioning/wall_stall_proposal.md) is pending user confirmation and has not started.
 
 ## Setup
 

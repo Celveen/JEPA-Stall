@@ -1,0 +1,78 @@
+{
+  "protocol": "Wall G0, n=50, seed=99, CEM=300/30/10, frameskip=5",
+  "arms": {
+    "open_loop": {
+      "complete": true,
+      "curve": [
+        {
+          "replans": 1,
+          "env_steps": 25,
+          "success_rate": 0.52
+        }
+      ],
+      "successes": 26,
+      "n": 50,
+      "success_rate": 0.52
+    },
+    "mpc10": {
+      "complete": true,
+      "curve": [
+        {
+          "replans": 1,
+          "env_steps": 25,
+          "success_rate": 0.52
+        },
+        {
+          "replans": 2,
+          "env_steps": 50,
+          "success_rate": 0.88
+        },
+        {
+          "replans": 3,
+          "env_steps": 75,
+          "success_rate": 0.92
+        },
+        {
+          "replans": 4,
+          "env_steps": 100,
+          "success_rate": 0.92
+        },
+        {
+          "replans": 5,
+          "env_steps": 125,
+          "success_rate": 0.92
+        },
+        {
+          "replans": 6,
+          "env_steps": 150,
+          "success_rate": 0.92
+        },
+        {
+          "replans": 7,
+          "env_steps": 175,
+          "success_rate": 0.92
+        },
+        {
+          "replans": 8,
+          "env_steps": 200,
+          "success_rate": 0.92
+        },
+        {
+          "replans": 9,
+          "env_steps": 225,
+          "success_rate": 0.92
+        },
+        {
+          "replans": 10,
+          "env_steps": 250,
+          "success_rate": 0.92
+        }
+      ],
+      "successes": 46,
+      "n": 50,
+      "success_rate": 0.92
+    }
+  },
+  "same_tasks": true,
+  "same_first_plan_actions": true
+}

@@ -1,0 +1,235 @@
+{
+  "independent_test_complete": false,
+  "shared": "R-switch",
+  "per_environment": {
+    "maze": "R-switch",
+    "pushobj": "R-switch"
+  },
+  "metrics": {
+    "maze": {
+      "R-switch": {
+        "rerun": 51,
+        "wins": [
+          4,
+          10,
+          39,
+          80
+        ],
+        "losses": [
+          84
+        ],
+        "p": 0.375,
+        "budgets": {
+          "20": [
+            52,
+            51
+          ],
+          "30": [
+            65,
+            63
+          ],
+          "50": [
+            85,
+            82
+          ]
+        },
+        "switched": 23,
+        "switch_median": 6.0
+      },
+      "R-w5-t05": {
+        "rerun": 51,
+        "wins": [],
+        "losses": [],
+        "p": 1.0,
+        "budgets": {
+          "20": [
+            51,
+            51
+          ],
+          "30": [
+            62,
+            63
+          ],
+          "50": [
+            82,
+            82
+          ]
+        },
+        "switched": 13,
+        "switch_median": 38.0
+      },
+      "R-w3-t01": {
+        "rerun": 51,
+        "wins": [
+          4,
+          10,
+          39
+        ],
+        "losses": [
+          84
+        ],
+        "p": 0.625,
+        "budgets": {
+          "20": [
+            52,
+            51
+          ],
+          "30": [
+            64,
+            63
+          ],
+          "50": [
+            84,
+            82
+          ]
+        },
+        "switched": 22,
+        "switch_median": 13.0
+      },
+      "R-w5-t01": {
+        "rerun": 51,
+        "wins": [],
+        "losses": [],
+        "p": 1.0,
+        "budgets": {
+          "20": [
+            51,
+            51
+          ],
+          "30": [
+            62,
+            63
+          ],
+          "50": [
+            82,
+            82
+          ]
+        },
+        "switched": 12,
+        "switch_median": 39.5
+      }
+    },
+    "pushobj": {
+      "R-switch": {
+        "rerun": 78,
+        "wins": [
+          "chunk_00_I/3",
+          "chunk_00_I/7",
+          "chunk_04_small_tee/16",
+          "chunk_05_plus/9",
+          "chunk_06_T/1",
+          "chunk_08_T/12",
+          "chunk_09_I/13"
+        ],
+        "losses": [],
+        "p": 0.015625,
+        "budgets": {
+          "20": [
+            215,
+            214
+          ],
+          "30": [
+            220,
+            217
+          ],
+          "50": [
+            224,
+            217
+          ]
+        },
+        "switched": 61,
+        "switch_median": 25.0
+      },
+      "R-w5-t05": {
+        "rerun": 78,
+        "wins": [
+          "chunk_00_I/3",
+          "chunk_00_I/7",
+          "chunk_04_small_tee/16",
+          "chunk_05_plus/9",
+          "chunk_06_T/1",
+          "chunk_08_T/12",
+          "chunk_09_I/13"
+        ],
+        "losses": [],
+        "p": 0.015625,
+        "budgets": {
+          "20": [
+            215,
+            214
+          ],
+          "30": [
+            220,
+            217
+          ],
+          "50": [
+            224,
+            217
+          ]
+        },
+        "switched": 54,
+        "switch_median": 27.0
+      },
+      "R-w3-t01": {
+        "rerun": 78,
+        "wins": [
+          "chunk_00_I/3",
+          "chunk_00_I/7",
+          "chunk_04_small_tee/16",
+          "chunk_05_plus/9",
+          "chunk_06_T/1",
+          "chunk_08_T/12",
+          "chunk_09_I/13"
+        ],
+        "losses": [],
+        "p": 0.015625,
+        "budgets": {
+          "20": [
+            215,
+            214
+          ],
+          "30": [
+            220,
+            217
+          ],
+          "50": [
+            224,
+            217
+          ]
+        },
+        "switched": 59,
+        "switch_median": 25.0
+      },
+      "R-w5-t01": {
+        "rerun": 78,
+        "wins": [
+          "chunk_00_I/3",
+          "chunk_00_I/7",
+          "chunk_04_small_tee/16",
+          "chunk_05_plus/9",
+          "chunk_06_T/1",
+          "chunk_08_T/12",
+          "chunk_09_I/13"
+        ],
+        "losses": [],
+        "p": 0.015625,
+        "budgets": {
+          "20": [
+            214,
+            214
+          ],
+          "30": [
+            220,
+            217
+          ],
+          "50": [
+            224,
+            217
+          ]
+        },
+        "switched": 53,
+        "switch_median": 28.0
+      }
+    }
+  }
+}

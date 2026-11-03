@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "smoke": 0,
+  "environments": {
+    "maze": {
+      "complete": true,
+      "pre_switch_pairing": "passed"
+    },
+    "pushobj": {
+      "complete": true,
+      "pre_switch_pairing": "passed"
+    }
+  },
+  "variants": {
+    "R-w5-t05": {
+      "mode": "loss_new",
+      "W": 5,
+      "theta": 0.05,
+      "K": 1,
+      "freeze": false
+    },
+    "R-w3-t01": {
+      "mode": "loss_new",
+      "W": 3,
+      "theta": 0.01,
+      "K": 1,
+      "freeze": false
+    },
+    "R-w5-t01": {
+      "mode": "loss_new",
+      "W": 5,
+      "theta": 0.01,
+      "K": 1,
+      "freeze": false
+    }
+  },
+  "source_sha256": {
+    "planning/switch.py": "bcafc9b41566be8670d0a40749289e626887530901ffc7130aa78f8246ccdfc3",
+    "scripts/e3_run.py": "eeaed5af2cd83d1252fec5a5d1b73d21409ff243cf00699a7f6841b93deacbf0",
+    "reports/e3/medium_s100/stage2.json": "9be761b634c6d6651c3d36e1a6df2b2b8057c618abe909381a732626ce977331",
+    "reports/e3/pushobj_S7/stage1.json": "576fb160bd6f859cd8400d84bca50c9420d20d3426b7e08a83c1c1b911c02ad6"
+  }
+}

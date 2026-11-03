@@ -1,0 +1,92 @@
+{
+ "R-w5-t05": {
+  "rerun": 78,
+  "wins": [
+   "chunk_00_I/3",
+   "chunk_00_I/7",
+   "chunk_04_small_tee/16",
+   "chunk_05_plus/9",
+   "chunk_06_T/1",
+   "chunk_08_T/12",
+   "chunk_09_I/13"
+  ],
+  "losses": [],
+  "p": 0.015625,
+  "budgets": {
+   "20": [
+    215,
+    214
+   ],
+   "30": [
+    220,
+    217
+   ],
+   "50": [
+    224,
+    217
+   ]
+  },
+  "switched": 54,
+  "switch_median": 27.0
+ },
+ "R-w3-t01": {
+  "rerun": 78,
+  "wins": [
+   "chunk_00_I/3",
+   "chunk_00_I/7",
+   "chunk_04_small_tee/16",
+   "chunk_05_plus/9",
+   "chunk_06_T/1",
+   "chunk_08_T/12",
+   "chunk_09_I/13"
+  ],
+  "losses": [],
+  "p": 0.015625,
+  "budgets": {
+   "20": [
+    215,
+    214
+   ],
+   "30": [
+    220,
+    217
+   ],
+   "50": [
+    224,
+    217
+   ]
+  },
+  "switched": 59,
+  "switch_median": 25.0
+ },
+ "R-w5-t01": {
+  "rerun": 78,
+  "wins": [
+   "chunk_00_I/3",
+   "chunk_00_I/7",
+   "chunk_04_small_tee/16",
+   "chunk_05_plus/9",
+   "chunk_06_T/1",
+   "chunk_08_T/12",
+   "chunk_09_I/13"
+  ],
+  "losses": [],
+  "p": 0.015625,
+  "budgets": {
+   "20": [
+    214,
+    214
+   ],
+   "30": [
+    220,
+    217
+   ],
+   "50": [
+    224,
+    217
+   ]
+  },
+  "switched": 53,
+  "switch_median": 28.0
+ }
+}

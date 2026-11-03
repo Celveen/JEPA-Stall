@@ -1,0 +1,4983 @@
+{
+  "kind": "offline_reference_replay",
+  "budget": 50,
+  "model_updates": "continue",
+  "variants": {
+    "R-switch": {
+      "mode": "loss_new",
+      "W": 3,
+      "theta": 0.05,
+      "K": 1,
+      "freeze": false
+    },
+    "R-w5-t05": {
+      "mode": "loss_new",
+      "W": 5,
+      "theta": 0.05,
+      "K": 1,
+      "freeze": false
+    },
+    "R-w3-t01": {
+      "mode": "loss_new",
+      "W": 3,
+      "theta": 0.01,
+      "K": 1,
+      "freeze": false
+    },
+    "R-w5-t01": {
+      "mode": "loss_new",
+      "W": 5,
+      "theta": 0.01,
+      "K": 1,
+      "freeze": false
+    }
+  },
+  "datasets": {
+    "maze": {
+      "n_episodes": 100,
+      "results": {
+        "R-switch": {
+          "F": 0.875,
+          "F_k": 14,
+          "F_n": 16,
+          "S": 0.22857142857142856,
+          "S_k": 8,
+          "S_n": 35,
+          "hz_pre": 0.03580901856763926,
+          "hz_post": 0.01309328968903437,
+          "risk": {
+            "pre": [
+              754,
+              27
+            ],
+            "post": [
+              611,
+              8
+            ]
+          },
+          "sw_median": 6.0,
+          "rows": [
+            {
+              "key": [
+                "maze",
+                0
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 29,
+              "T": 29
+            },
+            {
+              "key": [
+                "maze",
+                1
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 18,
+              "T": 18
+            },
+            {
+              "key": [
+                "maze",
+                2
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 45,
+              "T": 45
+            },
+            {
+              "key": [
+                "maze",
+                4
+              ],
+              "first": 17,
+              "switch": 24,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                7
+              ],
+              "first": 7,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                8
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": 44,
+              "T": 44
+            },
+            {
+              "key": [
+                "maze",
+                10
+              ],
+              "first": 8,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                14
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 16,
+              "T": 16
+            },
+            {
+              "key": [
+                "maze",
+                15
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                16
+              ],
+              "first": 15,
+              "switch": 40,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                18
+              ],
+              "first": 10,
+              "switch": 34,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                19
+              ],
+              "first": 4,
+              "switch": 6,
+              "succ": 42,
+              "T": 42
+            },
+            {
+              "key": [
+                "maze",
+                24
+              ],
+              "first": 5,
+              "switch": 6,
+              "succ": 25,
+              "T": 25
+            },
+            {
+              "key": [
+                "maze",
+                28
+              ],
+              "first": 5,
+              "switch": 6,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                29
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 31,
+              "T": 31
+            },
+            {
+              "key": [
+                "maze",
+                30
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 46,
+              "T": 46
+            },
+            {
+              "key": [
+                "maze",
+                31
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 17,
+              "T": 17
+            },
+            {
+              "key": [
+                "maze",
+                33
+              ],
+              "first": 26,
+              "switch": 26,
+              "succ": 34,
+              "T": 34
+            },
+            {
+              "key": [
+                "maze",
+                34
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                35
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 36,
+              "T": 36
+            },
+            {
+              "key": [
+                "maze",
+                36
+              ],
+              "first": 11,
+              "switch": 38,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                39
+              ],
+              "first": 5,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                41
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 37,
+              "T": 37
+            },
+            {
+              "key": [
+                "maze",
+                44
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 13,
+              "T": 13
+            },
+            {
+              "key": [
+                "maze",
+                46
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                48
+              ],
+              "first": 15,
+              "switch": null,
+              "succ": 22,
+              "T": 22
+            },
+            {
+              "key": [
+                "maze",
+                49
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": 12,
+              "T": 12
+            },
+            {
+              "key": [
+                "maze",
+                50
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 24,
+              "T": 24
+            },
+            {
+              "key": [
+                "maze",
+                51
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 47,
+              "T": 47
+            },
+            {
+              "key": [
+                "maze",
+                54
+              ],
+              "first": 5,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                59
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 10,
+              "T": 10
+            },
+            {
+              "key": [
+                "maze",
+                63
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 36,
+              "T": 36
+            },
+            {
+              "key": [
+                "maze",
+                65
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 10,
+              "T": 10
+            },
+            {
+              "key": [
+                "maze",
+                66
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                67
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                68
+              ],
+              "first": 10,
+              "switch": 42,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                69
+              ],
+              "first": 4,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                70
+              ],
+              "first": 4,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                74
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": 26,
+              "T": 26
+            },
+            {
+              "key": [
+                "maze",
+                75
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                80
+              ],
+              "first": 4,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                81
+              ],
+              "first": 7,
+              "switch": 46,
+              "succ": 49,
+              "T": 49
+            },
+            {
+              "key": [
+                "maze",
+                84
+              ],
+              "first": 5,
+              "switch": 6,
+              "succ": 48,
+              "T": 48
+            },
+            {
+              "key": [
+                "maze",
+                85
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 34,
+              "T": 34
+            },
+            {
+              "key": [
+                "maze",
+                86
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                87
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                88
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 20,
+              "T": 20
+            },
+            {
+              "key": [
+                "maze",
+                90
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 43,
+              "T": 43
+            },
+            {
+              "key": [
+                "maze",
+                92
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 6,
+              "T": 6
+            },
+            {
+              "key": [
+                "maze",
+                97
+              ],
+              "first": 43,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                98
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 28,
+              "T": 28
+            }
+          ],
+          "F_wilson95": [
+            0.639771727342413,
+            0.9650225122567595
+          ],
+          "S_wilson95": [
+            0.12065879834191687,
+            0.3901731689199025
+          ],
+          "switches_before_success_or_timeout": 23
+        },
+        "R-w5-t05": {
+          "F": 0.375,
+          "F_k": 6,
+          "F_n": 16,
+          "S": 0.05714285714285714,
+          "S_k": 2,
+          "S_n": 35,
+          "hz_pre": 0.027138157894736843,
+          "hz_post": 0.013422818791946308,
+          "risk": {
+            "pre": [
+              1216,
+              33
+            ],
+            "post": [
+              149,
+              2
+            ]
+          },
+          "sw_median": 38.0,
+          "rows": [
+            {
+              "key": [
+                "maze",
+                0
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 29,
+              "T": 29
+            },
+            {
+              "key": [
+                "maze",
+                1
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 18,
+              "T": 18
+            },
+            {
+              "key": [
+                "maze",
+                2
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 45,
+              "T": 45
+            },
+            {
+              "key": [
+                "maze",
+                4
+              ],
+              "first": 17,
+              "switch": 43,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                7
+              ],
+              "first": 7,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                8
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 44,
+              "T": 44
+            },
+            {
+              "key": [
+                "maze",
+                10
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                14
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 16,
+              "T": 16
+            },
+            {
+              "key": [
+                "maze",
+                15
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                16
+              ],
+              "first": 15,
+              "switch": 37,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                18
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                19
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 42,
+              "T": 42
+            },
+            {
+              "key": [
+                "maze",
+                24
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 25,
+              "T": 25
+            },
+            {
+              "key": [
+                "maze",
+                28
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                29
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 31,
+              "T": 31
+            },
+            {
+              "key": [
+                "maze",
+                30
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 46,
+              "T": 46
+            },
+            {
+              "key": [
+                "maze",
+                31
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 17,
+              "T": 17
+            },
+            {
+              "key": [
+                "maze",
+                33
+              ],
+              "first": 26,
+              "switch": 26,
+              "succ": 34,
+              "T": 34
+            },
+            {
+              "key": [
+                "maze",
+                34
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                35
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 36,
+              "T": 36
+            },
+            {
+              "key": [
+                "maze",
+                36
+              ],
+              "first": 11,
+              "switch": 45,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                39
+              ],
+              "first": 5,
+              "switch": 38,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                41
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 37,
+              "T": 37
+            },
+            {
+              "key": [
+                "maze",
+                44
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 13,
+              "T": 13
+            },
+            {
+              "key": [
+                "maze",
+                46
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                48
+              ],
+              "first": 15,
+              "switch": null,
+              "succ": 22,
+              "T": 22
+            },
+            {
+              "key": [
+                "maze",
+                49
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": 12,
+              "T": 12
+            },
+            {
+              "key": [
+                "maze",
+                50
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 24,
+              "T": 24
+            },
+            {
+              "key": [
+                "maze",
+                51
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 47,
+              "T": 47
+            },
+            {
+              "key": [
+                "maze",
+                54
+              ],
+              "first": 5,
+              "switch": 44,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                59
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 10,
+              "T": 10
+            },
+            {
+              "key": [
+                "maze",
+                63
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 36,
+              "T": 36
+            },
+            {
+              "key": [
+                "maze",
+                65
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 10,
+              "T": 10
+            },
+            {
+              "key": [
+                "maze",
+                66
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                67
+              ],
+              "first": 6,
+              "switch": 45,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                68
+              ],
+              "first": 10,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                69
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                70
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                74
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 26,
+              "T": 26
+            },
+            {
+              "key": [
+                "maze",
+                75
+              ],
+              "first": 6,
+              "switch": 34,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                80
+              ],
+              "first": 4,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                81
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 49,
+              "T": 49
+            },
+            {
+              "key": [
+                "maze",
+                84
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 48,
+              "T": 48
+            },
+            {
+              "key": [
+                "maze",
+                85
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 34,
+              "T": 34
+            },
+            {
+              "key": [
+                "maze",
+                86
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                87
+              ],
+              "first": 6,
+              "switch": 44,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                88
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 20,
+              "T": 20
+            },
+            {
+              "key": [
+                "maze",
+                90
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 43,
+              "T": 43
+            },
+            {
+              "key": [
+                "maze",
+                92
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 6,
+              "T": 6
+            },
+            {
+              "key": [
+                "maze",
+                97
+              ],
+              "first": 43,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                98
+              ],
+              "first": 8,
+              "switch": 8,
+              "succ": 28,
+              "T": 28
+            }
+          ],
+          "F_wilson95": [
+            0.18481232558863633,
+            0.6135895945449727
+          ],
+          "S_wilson95": [
+            0.015813161857108654,
+            0.1860705742016492
+          ],
+          "switches_before_success_or_timeout": 13
+        },
+        "R-w3-t01": {
+          "F": 0.8125,
+          "F_k": 13,
+          "F_n": 16,
+          "S": 0.22857142857142856,
+          "S_k": 8,
+          "S_n": 35,
+          "hz_pre": 0.034220532319391636,
+          "hz_post": 0.013888888888888888,
+          "risk": {
+            "pre": [
+              789,
+              27
+            ],
+            "post": [
+              576,
+              8
+            ]
+          },
+          "sw_median": 13.0,
+          "rows": [
+            {
+              "key": [
+                "maze",
+                0
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 29,
+              "T": 29
+            },
+            {
+              "key": [
+                "maze",
+                1
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 18,
+              "T": 18
+            },
+            {
+              "key": [
+                "maze",
+                2
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 45,
+              "T": 45
+            },
+            {
+              "key": [
+                "maze",
+                4
+              ],
+              "first": 17,
+              "switch": 24,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                7
+              ],
+              "first": 7,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                8
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": 44,
+              "T": 44
+            },
+            {
+              "key": [
+                "maze",
+                10
+              ],
+              "first": 8,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                14
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 16,
+              "T": 16
+            },
+            {
+              "key": [
+                "maze",
+                15
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                16
+              ],
+              "first": 15,
+              "switch": 40,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                18
+              ],
+              "first": 10,
+              "switch": 34,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                19
+              ],
+              "first": 4,
+              "switch": 6,
+              "succ": 42,
+              "T": 42
+            },
+            {
+              "key": [
+                "maze",
+                24
+              ],
+              "first": 5,
+              "switch": 6,
+              "succ": 25,
+              "T": 25
+            },
+            {
+              "key": [
+                "maze",
+                28
+              ],
+              "first": 5,
+              "switch": 6,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                29
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 31,
+              "T": 31
+            },
+            {
+              "key": [
+                "maze",
+                30
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 46,
+              "T": 46
+            },
+            {
+              "key": [
+                "maze",
+                31
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 17,
+              "T": 17
+            },
+            {
+              "key": [
+                "maze",
+                33
+              ],
+              "first": 26,
+              "switch": 26,
+              "succ": 34,
+              "T": 34
+            },
+            {
+              "key": [
+                "maze",
+                34
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                35
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 36,
+              "T": 36
+            },
+            {
+              "key": [
+                "maze",
+                36
+              ],
+              "first": 11,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                39
+              ],
+              "first": 5,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                41
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 37,
+              "T": 37
+            },
+            {
+              "key": [
+                "maze",
+                44
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 13,
+              "T": 13
+            },
+            {
+              "key": [
+                "maze",
+                46
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                48
+              ],
+              "first": 15,
+              "switch": null,
+              "succ": 22,
+              "T": 22
+            },
+            {
+              "key": [
+                "maze",
+                49
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": 12,
+              "T": 12
+            },
+            {
+              "key": [
+                "maze",
+                50
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 24,
+              "T": 24
+            },
+            {
+              "key": [
+                "maze",
+                51
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 47,
+              "T": 47
+            },
+            {
+              "key": [
+                "maze",
+                54
+              ],
+              "first": 5,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                59
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 10,
+              "T": 10
+            },
+            {
+              "key": [
+                "maze",
+                63
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 36,
+              "T": 36
+            },
+            {
+              "key": [
+                "maze",
+                65
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 10,
+              "T": 10
+            },
+            {
+              "key": [
+                "maze",
+                66
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                67
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                68
+              ],
+              "first": 10,
+              "switch": 42,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                69
+              ],
+              "first": 4,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                70
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                74
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": 26,
+              "T": 26
+            },
+            {
+              "key": [
+                "maze",
+                75
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                80
+              ],
+              "first": 4,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                81
+              ],
+              "first": 7,
+              "switch": 46,
+              "succ": 49,
+              "T": 49
+            },
+            {
+              "key": [
+                "maze",
+                84
+              ],
+              "first": 5,
+              "switch": 6,
+              "succ": 48,
+              "T": 48
+            },
+            {
+              "key": [
+                "maze",
+                85
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 34,
+              "T": 34
+            },
+            {
+              "key": [
+                "maze",
+                86
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                87
+              ],
+              "first": 6,
+              "switch": 6,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                88
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 20,
+              "T": 20
+            },
+            {
+              "key": [
+                "maze",
+                90
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 43,
+              "T": 43
+            },
+            {
+              "key": [
+                "maze",
+                92
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 6,
+              "T": 6
+            },
+            {
+              "key": [
+                "maze",
+                97
+              ],
+              "first": 43,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                98
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 28,
+              "T": 28
+            }
+          ],
+          "F_wilson95": [
+            0.5699111903802586,
+            0.9340840092857187
+          ],
+          "S_wilson95": [
+            0.12065879834191687,
+            0.3901731689199025
+          ],
+          "switches_before_success_or_timeout": 22
+        },
+        "R-w5-t01": {
+          "F": 0.3125,
+          "F_k": 5,
+          "F_n": 16,
+          "S": 0.05714285714285714,
+          "S_k": 2,
+          "S_n": 35,
+          "hz_pre": 0.02667744543249798,
+          "hz_post": 0.015625,
+          "risk": {
+            "pre": [
+              1237,
+              33
+            ],
+            "post": [
+              128,
+              2
+            ]
+          },
+          "sw_median": 39.5,
+          "rows": [
+            {
+              "key": [
+                "maze",
+                0
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 29,
+              "T": 29
+            },
+            {
+              "key": [
+                "maze",
+                1
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 18,
+              "T": 18
+            },
+            {
+              "key": [
+                "maze",
+                2
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 45,
+              "T": 45
+            },
+            {
+              "key": [
+                "maze",
+                4
+              ],
+              "first": 17,
+              "switch": 43,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                7
+              ],
+              "first": 7,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                8
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 44,
+              "T": 44
+            },
+            {
+              "key": [
+                "maze",
+                10
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                14
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 16,
+              "T": 16
+            },
+            {
+              "key": [
+                "maze",
+                15
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                16
+              ],
+              "first": 15,
+              "switch": 37,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                18
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                19
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 42,
+              "T": 42
+            },
+            {
+              "key": [
+                "maze",
+                24
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 25,
+              "T": 25
+            },
+            {
+              "key": [
+                "maze",
+                28
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                29
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 31,
+              "T": 31
+            },
+            {
+              "key": [
+                "maze",
+                30
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 46,
+              "T": 46
+            },
+            {
+              "key": [
+                "maze",
+                31
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 17,
+              "T": 17
+            },
+            {
+              "key": [
+                "maze",
+                33
+              ],
+              "first": 26,
+              "switch": 26,
+              "succ": 34,
+              "T": 34
+            },
+            {
+              "key": [
+                "maze",
+                34
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 35,
+              "T": 35
+            },
+            {
+              "key": [
+                "maze",
+                35
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 36,
+              "T": 36
+            },
+            {
+              "key": [
+                "maze",
+                36
+              ],
+              "first": 11,
+              "switch": 45,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                39
+              ],
+              "first": 5,
+              "switch": 40,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                41
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 37,
+              "T": 37
+            },
+            {
+              "key": [
+                "maze",
+                44
+              ],
+              "first": 9,
+              "switch": null,
+              "succ": 13,
+              "T": 13
+            },
+            {
+              "key": [
+                "maze",
+                46
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                48
+              ],
+              "first": 15,
+              "switch": null,
+              "succ": 22,
+              "T": 22
+            },
+            {
+              "key": [
+                "maze",
+                49
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": 12,
+              "T": 12
+            },
+            {
+              "key": [
+                "maze",
+                50
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 24,
+              "T": 24
+            },
+            {
+              "key": [
+                "maze",
+                51
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 47,
+              "T": 47
+            },
+            {
+              "key": [
+                "maze",
+                54
+              ],
+              "first": 5,
+              "switch": 44,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                59
+              ],
+              "first": 8,
+              "switch": null,
+              "succ": 10,
+              "T": 10
+            },
+            {
+              "key": [
+                "maze",
+                63
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 36,
+              "T": 36
+            },
+            {
+              "key": [
+                "maze",
+                65
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 10,
+              "T": 10
+            },
+            {
+              "key": [
+                "maze",
+                66
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                67
+              ],
+              "first": 6,
+              "switch": 45,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                68
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                69
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                70
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                74
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 26,
+              "T": 26
+            },
+            {
+              "key": [
+                "maze",
+                75
+              ],
+              "first": 6,
+              "switch": 34,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                80
+              ],
+              "first": 4,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                81
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 49,
+              "T": 49
+            },
+            {
+              "key": [
+                "maze",
+                84
+              ],
+              "first": 5,
+              "switch": null,
+              "succ": 48,
+              "T": 48
+            },
+            {
+              "key": [
+                "maze",
+                85
+              ],
+              "first": 6,
+              "switch": null,
+              "succ": 34,
+              "T": 34
+            },
+            {
+              "key": [
+                "maze",
+                86
+              ],
+              "first": 7,
+              "switch": null,
+              "succ": 11,
+              "T": 11
+            },
+            {
+              "key": [
+                "maze",
+                87
+              ],
+              "first": 6,
+              "switch": 44,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                88
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 20,
+              "T": 20
+            },
+            {
+              "key": [
+                "maze",
+                90
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 43,
+              "T": 43
+            },
+            {
+              "key": [
+                "maze",
+                92
+              ],
+              "first": 4,
+              "switch": null,
+              "succ": 6,
+              "T": 6
+            },
+            {
+              "key": [
+                "maze",
+                97
+              ],
+              "first": 43,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "maze",
+                98
+              ],
+              "first": 8,
+              "switch": 8,
+              "succ": 28,
+              "T": 28
+            }
+          ],
+          "F_wilson95": [
+            0.14164643854782039,
+            0.5559564416525933
+          ],
+          "S_wilson95": [
+            0.015813161857108654,
+            0.1860705742016492
+          ],
+          "switches_before_success_or_timeout": 12
+        }
+      }
+    },
+    "pushobj": {
+      "n_episodes": 280,
+      "results": {
+        "R-switch": {
+          "F": 0.8852459016393442,
+          "F_k": 54,
+          "F_n": 61,
+          "S": 0.5,
+          "S_k": 2,
+          "S_n": 4,
+          "hz_pre": 0.0030441400304414,
+          "hz_post": 0.0014245014245014246,
+          "risk": {
+            "pre": [
+              657,
+              2
+            ],
+            "post": [
+              1404,
+              2
+            ]
+          },
+          "sw_median": 25.0,
+          "rows": [
+            {
+              "key": [
+                "chunk_00_I",
+                1
+              ],
+              "first": 27,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                2
+              ],
+              "first": 29,
+              "switch": 44,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                3
+              ],
+              "first": 23,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                4
+              ],
+              "first": 11,
+              "switch": 35,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                7
+              ],
+              "first": 14,
+              "switch": 22,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                13
+              ],
+              "first": 25,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                15
+              ],
+              "first": 25,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                17
+              ],
+              "first": 14,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                18
+              ],
+              "first": 12,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_01_L",
+                15
+              ],
+              "first": 12,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                0
+              ],
+              "first": 30,
+              "switch": 43,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                2
+              ],
+              "first": 11,
+              "switch": 22,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                4
+              ],
+              "first": 12,
+              "switch": 17,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                5
+              ],
+              "first": 14,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                6
+              ],
+              "first": 19,
+              "switch": 24,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                8
+              ],
+              "first": 13,
+              "switch": 13,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                9
+              ],
+              "first": 22,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                12
+              ],
+              "first": 32,
+              "switch": 32,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                14
+              ],
+              "first": 18,
+              "switch": 23,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                16
+              ],
+              "first": 16,
+              "switch": 22,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_03_Z",
+                2
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 15,
+              "T": 15
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                0
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": 12,
+              "T": 12
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                6
+              ],
+              "first": 15,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                9
+              ],
+              "first": 21,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                13
+              ],
+              "first": 11,
+              "switch": 37,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                16
+              ],
+              "first": 14,
+              "switch": 33,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                18
+              ],
+              "first": 10,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_05_plus",
+                5
+              ],
+              "first": 10,
+              "switch": 49,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_05_plus",
+                9
+              ],
+              "first": 18,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                0
+              ],
+              "first": 13,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                1
+              ],
+              "first": 17,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                10
+              ],
+              "first": 21,
+              "switch": 33,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                16
+              ],
+              "first": 18,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                0
+              ],
+              "first": 13,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                1
+              ],
+              "first": 19,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                3
+              ],
+              "first": 11,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                4
+              ],
+              "first": 14,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                11
+              ],
+              "first": 11,
+              "switch": 17,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                12
+              ],
+              "first": 16,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                13
+              ],
+              "first": 10,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                14
+              ],
+              "first": 10,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                16
+              ],
+              "first": 16,
+              "switch": 17,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                17
+              ],
+              "first": 19,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                19
+              ],
+              "first": 16,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_08_T",
+                12
+              ],
+              "first": 14,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_08_T",
+                13
+              ],
+              "first": 10,
+              "switch": 16,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                0
+              ],
+              "first": 14,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                1
+              ],
+              "first": 12,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                3
+              ],
+              "first": 13,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                5
+              ],
+              "first": 25,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                9
+              ],
+              "first": 11,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                13
+              ],
+              "first": 15,
+              "switch": 37,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                14
+              ],
+              "first": 19,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                16
+              ],
+              "first": 21,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                18
+              ],
+              "first": 21,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                19
+              ],
+              "first": 18,
+              "switch": 44,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                1
+              ],
+              "first": 14,
+              "switch": 15,
+              "succ": 23,
+              "T": 23
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                2
+              ],
+              "first": 24,
+              "switch": 36,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                7
+              ],
+              "first": 18,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                8
+              ],
+              "first": 13,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                15
+              ],
+              "first": 12,
+              "switch": 45,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                0
+              ],
+              "first": 22,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                12
+              ],
+              "first": 13,
+              "switch": 36,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                14
+              ],
+              "first": 12,
+              "switch": 16,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_13_Z",
+                2
+              ],
+              "first": 15,
+              "switch": 20,
+              "succ": 21,
+              "T": 21
+            }
+          ],
+          "F_wilson95": [
+            0.7815569152759893,
+            0.9432879733926779
+          ],
+          "S_wilson95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "switches_before_success_or_timeout": 61
+        },
+        "R-w5-t05": {
+          "F": 0.8360655737704918,
+          "F_k": 51,
+          "F_n": 61,
+          "S": 0.25,
+          "S_k": 1,
+          "S_n": 4,
+          "hz_pre": 0.0033407572383073497,
+          "hz_post": 0.0008598452278589854,
+          "risk": {
+            "pre": [
+              898,
+              3
+            ],
+            "post": [
+              1163,
+              1
+            ]
+          },
+          "sw_median": 27.0,
+          "rows": [
+            {
+              "key": [
+                "chunk_00_I",
+                1
+              ],
+              "first": 27,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                2
+              ],
+              "first": 29,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                3
+              ],
+              "first": 23,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                4
+              ],
+              "first": 11,
+              "switch": 35,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                7
+              ],
+              "first": 14,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                13
+              ],
+              "first": 25,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                15
+              ],
+              "first": 25,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                17
+              ],
+              "first": 14,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                18
+              ],
+              "first": 12,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_01_L",
+                15
+              ],
+              "first": 12,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                0
+              ],
+              "first": 30,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                2
+              ],
+              "first": 11,
+              "switch": 23,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                4
+              ],
+              "first": 12,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                5
+              ],
+              "first": 14,
+              "switch": 34,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                6
+              ],
+              "first": 19,
+              "switch": 34,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                8
+              ],
+              "first": 13,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                9
+              ],
+              "first": 22,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                12
+              ],
+              "first": 32,
+              "switch": 32,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                14
+              ],
+              "first": 18,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                16
+              ],
+              "first": 16,
+              "switch": 24,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_03_Z",
+                2
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 15,
+              "T": 15
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                0
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": 12,
+              "T": 12
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                6
+              ],
+              "first": 15,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                9
+              ],
+              "first": 21,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                13
+              ],
+              "first": 11,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                16
+              ],
+              "first": 14,
+              "switch": 49,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                18
+              ],
+              "first": 10,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_05_plus",
+                5
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_05_plus",
+                9
+              ],
+              "first": 18,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                0
+              ],
+              "first": 13,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                1
+              ],
+              "first": 17,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                10
+              ],
+              "first": 21,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                16
+              ],
+              "first": 18,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                0
+              ],
+              "first": 13,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                1
+              ],
+              "first": 19,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                3
+              ],
+              "first": 11,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                4
+              ],
+              "first": 14,
+              "switch": 33,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                11
+              ],
+              "first": 11,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                12
+              ],
+              "first": 16,
+              "switch": 23,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                13
+              ],
+              "first": 10,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                14
+              ],
+              "first": 10,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                16
+              ],
+              "first": 16,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                17
+              ],
+              "first": 19,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                19
+              ],
+              "first": 16,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_08_T",
+                12
+              ],
+              "first": 14,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_08_T",
+                13
+              ],
+              "first": 10,
+              "switch": 17,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                0
+              ],
+              "first": 14,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                1
+              ],
+              "first": 12,
+              "switch": 22,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                3
+              ],
+              "first": 13,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                5
+              ],
+              "first": 25,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                9
+              ],
+              "first": 11,
+              "switch": 33,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                13
+              ],
+              "first": 15,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                14
+              ],
+              "first": 19,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                16
+              ],
+              "first": 21,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                18
+              ],
+              "first": 21,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                19
+              ],
+              "first": 18,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                1
+              ],
+              "first": 14,
+              "switch": 19,
+              "succ": 23,
+              "T": 23
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                2
+              ],
+              "first": 24,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                7
+              ],
+              "first": 18,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                8
+              ],
+              "first": 13,
+              "switch": 24,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                15
+              ],
+              "first": 12,
+              "switch": 49,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                0
+              ],
+              "first": 22,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                12
+              ],
+              "first": 13,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                14
+              ],
+              "first": 12,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_13_Z",
+                2
+              ],
+              "first": 15,
+              "switch": null,
+              "succ": 21,
+              "T": 21
+            }
+          ],
+          "F_wilson95": [
+            0.7238716146826547,
+            0.908439883943204
+          ],
+          "S_wilson95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ],
+          "switches_before_success_or_timeout": 54
+        },
+        "R-w3-t01": {
+          "F": 0.8688524590163934,
+          "F_k": 53,
+          "F_n": 61,
+          "S": 0.5,
+          "S_k": 2,
+          "S_n": 4,
+          "hz_pre": 0.0028368794326241137,
+          "hz_post": 0.0014749262536873156,
+          "risk": {
+            "pre": [
+              705,
+              2
+            ],
+            "post": [
+              1356,
+              2
+            ]
+          },
+          "sw_median": 25.0,
+          "rows": [
+            {
+              "key": [
+                "chunk_00_I",
+                1
+              ],
+              "first": 27,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                2
+              ],
+              "first": 29,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                3
+              ],
+              "first": 23,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                4
+              ],
+              "first": 11,
+              "switch": 35,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                7
+              ],
+              "first": 14,
+              "switch": 24,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                13
+              ],
+              "first": 25,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                15
+              ],
+              "first": 25,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                17
+              ],
+              "first": 14,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                18
+              ],
+              "first": 12,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_01_L",
+                15
+              ],
+              "first": 12,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                0
+              ],
+              "first": 30,
+              "switch": 43,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                2
+              ],
+              "first": 11,
+              "switch": 23,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                4
+              ],
+              "first": 12,
+              "switch": 17,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                5
+              ],
+              "first": 14,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                6
+              ],
+              "first": 19,
+              "switch": 24,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                8
+              ],
+              "first": 13,
+              "switch": 13,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                9
+              ],
+              "first": 22,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                12
+              ],
+              "first": 32,
+              "switch": 32,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                14
+              ],
+              "first": 18,
+              "switch": 23,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                16
+              ],
+              "first": 16,
+              "switch": 22,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_03_Z",
+                2
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 15,
+              "T": 15
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                0
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": 12,
+              "T": 12
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                6
+              ],
+              "first": 15,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                9
+              ],
+              "first": 21,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                13
+              ],
+              "first": 11,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                16
+              ],
+              "first": 14,
+              "switch": 33,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                18
+              ],
+              "first": 10,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_05_plus",
+                5
+              ],
+              "first": 10,
+              "switch": 49,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_05_plus",
+                9
+              ],
+              "first": 18,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                0
+              ],
+              "first": 13,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                1
+              ],
+              "first": 17,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                10
+              ],
+              "first": 21,
+              "switch": 35,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                16
+              ],
+              "first": 18,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                0
+              ],
+              "first": 13,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                1
+              ],
+              "first": 19,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                3
+              ],
+              "first": 11,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                4
+              ],
+              "first": 14,
+              "switch": 33,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                11
+              ],
+              "first": 11,
+              "switch": 17,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                12
+              ],
+              "first": 16,
+              "switch": 23,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                13
+              ],
+              "first": 10,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                14
+              ],
+              "first": 10,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                16
+              ],
+              "first": 16,
+              "switch": 17,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                17
+              ],
+              "first": 19,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                19
+              ],
+              "first": 16,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_08_T",
+                12
+              ],
+              "first": 14,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_08_T",
+                13
+              ],
+              "first": 10,
+              "switch": 16,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                0
+              ],
+              "first": 14,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                1
+              ],
+              "first": 12,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                3
+              ],
+              "first": 13,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                5
+              ],
+              "first": 25,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                9
+              ],
+              "first": 11,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                13
+              ],
+              "first": 15,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                14
+              ],
+              "first": 19,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                16
+              ],
+              "first": 21,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                18
+              ],
+              "first": 21,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                19
+              ],
+              "first": 18,
+              "switch": 44,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                1
+              ],
+              "first": 14,
+              "switch": 17,
+              "succ": 23,
+              "T": 23
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                2
+              ],
+              "first": 24,
+              "switch": 36,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                7
+              ],
+              "first": 18,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                8
+              ],
+              "first": 13,
+              "switch": 22,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                15
+              ],
+              "first": 12,
+              "switch": 45,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                0
+              ],
+              "first": 22,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                12
+              ],
+              "first": 13,
+              "switch": 37,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                14
+              ],
+              "first": 12,
+              "switch": 16,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_13_Z",
+                2
+              ],
+              "first": 15,
+              "switch": 20,
+              "succ": 21,
+              "T": 21
+            }
+          ],
+          "F_wilson95": [
+            0.7619811980700654,
+            0.932019227250999
+          ],
+          "S_wilson95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "switches_before_success_or_timeout": 59
+        },
+        "R-w5-t01": {
+          "F": 0.8032786885245902,
+          "F_k": 49,
+          "F_n": 61,
+          "S": 0.0,
+          "S_k": 0,
+          "S_n": 4,
+          "hz_pre": 0.004197271773347324,
+          "hz_post": 0.0,
+          "risk": {
+            "pre": [
+              953,
+              4
+            ],
+            "post": [
+              1108,
+              0
+            ]
+          },
+          "sw_median": 28.0,
+          "rows": [
+            {
+              "key": [
+                "chunk_00_I",
+                1
+              ],
+              "first": 27,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                2
+              ],
+              "first": 29,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                3
+              ],
+              "first": 23,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                4
+              ],
+              "first": 11,
+              "switch": 35,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                7
+              ],
+              "first": 14,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                13
+              ],
+              "first": 25,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                15
+              ],
+              "first": 25,
+              "switch": 42,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                17
+              ],
+              "first": 14,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_00_I",
+                18
+              ],
+              "first": 12,
+              "switch": 33,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_01_L",
+                15
+              ],
+              "first": 12,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                0
+              ],
+              "first": 30,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                2
+              ],
+              "first": 11,
+              "switch": 23,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                4
+              ],
+              "first": 12,
+              "switch": 19,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                5
+              ],
+              "first": 14,
+              "switch": 34,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                6
+              ],
+              "first": 19,
+              "switch": 34,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                8
+              ],
+              "first": 13,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                9
+              ],
+              "first": 22,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                12
+              ],
+              "first": 32,
+              "switch": 32,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                14
+              ],
+              "first": 18,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_02_square",
+                16
+              ],
+              "first": 16,
+              "switch": 24,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_03_Z",
+                2
+              ],
+              "first": 12,
+              "switch": null,
+              "succ": 15,
+              "T": 15
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                0
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": 12,
+              "T": 12
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                6
+              ],
+              "first": 15,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                9
+              ],
+              "first": 21,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                13
+              ],
+              "first": 11,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                16
+              ],
+              "first": 14,
+              "switch": 49,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_04_small_tee",
+                18
+              ],
+              "first": 10,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_05_plus",
+                5
+              ],
+              "first": 10,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_05_plus",
+                9
+              ],
+              "first": 18,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                0
+              ],
+              "first": 13,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                1
+              ],
+              "first": 17,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                10
+              ],
+              "first": 21,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_06_T",
+                16
+              ],
+              "first": 18,
+              "switch": 29,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                0
+              ],
+              "first": 13,
+              "switch": 20,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                1
+              ],
+              "first": 19,
+              "switch": 32,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                3
+              ],
+              "first": 11,
+              "switch": 21,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                4
+              ],
+              "first": 14,
+              "switch": 36,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                11
+              ],
+              "first": 11,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                12
+              ],
+              "first": 16,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                13
+              ],
+              "first": 10,
+              "switch": 22,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                14
+              ],
+              "first": 10,
+              "switch": 28,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                16
+              ],
+              "first": 16,
+              "switch": 45,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                17
+              ],
+              "first": 19,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_07_square",
+                19
+              ],
+              "first": 16,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_08_T",
+                12
+              ],
+              "first": 14,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_08_T",
+                13
+              ],
+              "first": 10,
+              "switch": 18,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                0
+              ],
+              "first": 14,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                1
+              ],
+              "first": 12,
+              "switch": 22,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                3
+              ],
+              "first": 13,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                5
+              ],
+              "first": 25,
+              "switch": 30,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                9
+              ],
+              "first": 11,
+              "switch": 33,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                13
+              ],
+              "first": 15,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                14
+              ],
+              "first": 19,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                16
+              ],
+              "first": 21,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                18
+              ],
+              "first": 21,
+              "switch": null,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_09_I",
+                19
+              ],
+              "first": 18,
+              "switch": 27,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                1
+              ],
+              "first": 14,
+              "switch": null,
+              "succ": 23,
+              "T": 23
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                2
+              ],
+              "first": 24,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                7
+              ],
+              "first": 18,
+              "switch": 31,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                8
+              ],
+              "first": 13,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_11_L",
+                15
+              ],
+              "first": 12,
+              "switch": 49,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                0
+              ],
+              "first": 22,
+              "switch": 26,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                12
+              ],
+              "first": 13,
+              "switch": 39,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_12_small_tee",
+                14
+              ],
+              "first": 12,
+              "switch": 25,
+              "succ": null,
+              "T": 50
+            },
+            {
+              "key": [
+                "chunk_13_Z",
+                2
+              ],
+              "first": 15,
+              "switch": null,
+              "succ": 21,
+              "T": 21
+            }
+          ],
+          "F_wilson95": [
+            0.6869005942449246,
+            0.8837219776857282
+          ],
+          "S_wilson95": [
+            0,
+            0.4898908364545973
+          ],
+          "switches_before_success_or_timeout": 53
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "eval_outputs/stag_maze100_ar4/medium/adajepa/ref/shard00/per_iter_logs.json": "e5453af5de0dd299b21828f9deb747bb42eaa7579157abc189dd4d1fd32288b3",
+    "eval_outputs/stag_maze100_ar4/medium/adajepa/ref/shard01/per_iter_logs.json": "6cc5c15b19097722ed3b5db4e105f899e56407788593bc10641a083938dd1f35",
+    "eval_outputs/stag_maze100_ar4/medium/adajepa/ref/shard02/per_iter_logs.json": "37310eef917c7f7b992c7e4fd0304228110994dacd3370538aaeed7adabf0ec3",
+    "eval_outputs/stag_maze100_ar4/medium/adajepa/ref/shard03/per_iter_logs.json": "1deb835533c0e67b3f77ddf002ed3a865c92ea0799b2f896b1f1f6bda34ed6ed",
+    "eval_outputs/escape_S7/none/chunk_00_I/per_iter_logs.json": "4344df20801e0a294a78983ab409ad8ab4a3fa70c7b3be5c222702cd5f2fecaa",
+    "eval_outputs/escape_S7/none/chunk_01_L/per_iter_logs.json": "104f67c72b28682e4afc92074211bbe518cf07c6cdb390eb04c5fd3f6817f587",
+    "eval_outputs/escape_S7/none/chunk_02_square/per_iter_logs.json": "9d55428501f1d179d01d2dfc6d828f6f30df9af4a650edd2019e534b0b799b6c",
+    "eval_outputs/escape_S7/none/chunk_03_Z/per_iter_logs.json": "5fde8b7479a29c3c1de1088c817e1cd7f7c2cb610073b5dd82b3aea8f497fd06",
+    "eval_outputs/escape_S7/none/chunk_04_small_tee/per_iter_logs.json": "a10dff67a73c9c84eb1bb2bda5abb72c5c4e2d1fdfe6c00e75a4cbfb11c753c9",
+    "eval_outputs/escape_S7/none/chunk_05_plus/per_iter_logs.json": "8b00b69f70b6145dfd39c519a99158162feb95779e174d8067118c071c714710",
+    "eval_outputs/escape_S7/none/chunk_06_T/per_iter_logs.json": "8e81c820b576456701c21e3d098a4b99d37c8776b2249571112217cd50278ca8",
+    "eval_outputs/escape_S7/none/chunk_07_square/per_iter_logs.json": "691f22250debc365150238c77769f5caaaf0571d6adcf4c965130447134bfd79",
+    "eval_outputs/escape_S7/none/chunk_08_T/per_iter_logs.json": "4a63c6f06e62b20580d4bad6a35b97c2b2d483dd87926ec14d3d81f8701fc827",
+    "eval_outputs/escape_S7/none/chunk_09_I/per_iter_logs.json": "2301fb8ecb4143828a52368d8971019d77912677ebff173bbd6af47ece831504",
+    "eval_outputs/escape_S7/none/chunk_10_plus/per_iter_logs.json": "8c6a0c655b410f400e8332ee4912234eeb9caf5fcb5ccf104ab7ae94036f14f5",
+    "eval_outputs/escape_S7/none/chunk_11_L/per_iter_logs.json": "ac95af840f4c3a483b44ae9f088f8af3a90b2ee44c7c0f493956dc1e7d45498f",
+    "eval_outputs/escape_S7/none/chunk_12_small_tee/per_iter_logs.json": "d007a681fa6ce18035d7edd197d099bce42dcbd482cc822d9108ee64231c049d",
+    "eval_outputs/escape_S7/none/chunk_13_Z/per_iter_logs.json": "3026645b31e531fcce16d7b00c2ec0934c615142887e37fae1e48eee9daf59d7",
+    "eval_outputs/stag_S7_it50/S0/chunk_00_I/per_iter_logs.json": "e7c6866249eab6678b20674238ad8055384af7225b0aef91deae191e577d5641",
+    "eval_outputs/stag_S7_it50/S0/chunk_01_L/per_iter_logs.json": "105456325edb3da79e6d1476580fdbac63205c2687d1bb585aed635b1138a141",
+    "eval_outputs/stag_S7_it50/S0/chunk_02_square/per_iter_logs.json": "ef2df0628d75552c562c5468587fe592ca09a9280e18c083d8552796c1ec9a14",
+    "eval_outputs/stag_S7_it50/S0/chunk_04_small_tee/per_iter_logs.json": "010929e3b25180313f80370a730d9ca61614b74e5a1e6c5afeb76c33edce2aba",
+    "eval_outputs/stag_S7_it50/S0/chunk_05_plus/per_iter_logs.json": "92054f677ef707fd8911ab8d2d24b8fd61ee9a564e7e3beb17549d70c8bf62ed",
+    "eval_outputs/stag_S7_it50/S0/chunk_06_T/per_iter_logs.json": "948aa1ca94e2922e47bc39c4e2c52f1b32f0ef1eff643fe8cfacbc47dd239395",
+    "eval_outputs/stag_S7_it50/S0/chunk_07_square/per_iter_logs.json": "06b62d068c830a75b37fbce5b340f3c8cf228c80653e12dc0d8cc5e0ea543b3c",
+    "eval_outputs/stag_S7_it50/S0/chunk_08_T/per_iter_logs.json": "abd64a2b7418d3a2e777d3791e8bb25e59f199447f46118dea2ebb32f89d1eae",
+    "eval_outputs/stag_S7_it50/S0/chunk_09_I/per_iter_logs.json": "575e0ca6488d2793d37ea841749296df5bc306bcd7b4ea88a353d4adcfde1d36",
+    "eval_outputs/stag_S7_it50/S0/chunk_10_plus/per_iter_logs.json": "86502f0b84259d629d584d7c9a9080fda4dcb2d1e3c811ee80caf575abf5bda5",
+    "eval_outputs/stag_S7_it50/S0/chunk_11_L/per_iter_logs.json": "f9aa7e4733a3105e6556e9fd0cd4fd7885f9e983fa72247ec280dc5b0cf92993",
+    "eval_outputs/stag_S7_it50/S0/chunk_12_small_tee/per_iter_logs.json": "e0d0bf73aac543afa8004f6b1672f19fc353226d4e235bb479f19c5cfced304b",
+    "eval_outputs/stag_S7/trace.jsonl": "349399f17ceaaee73d52fa732339446ebb8579817808a329f549b20f643e8e56",
+    "scripts/e1_switch.py": "b8773fe79f6e640945a1506a3df9e7c160931cfbbf94a7fec93d78e0e4c72179",
+    "planning/switch.py": "bcafc9b41566be8670d0a40749289e626887530901ffc7130aa78f8246ccdfc3"
+  },
+  "online_gate_checks": {
+    "episode_parameter_pairs": 1520,
+    "mismatches": 0,
+    "scope": "Same trigger inputs; PushObj offline latent trigger approximation is not revalidated here"
+  }
+}
