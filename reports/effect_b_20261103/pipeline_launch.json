@@ -1,0 +1,14 @@
+{
+  "pid": 4106093,
+  "command": [
+    "scripts/run_effect_b.py"
+  ],
+  "training_gpus": [
+    0,
+    1,
+    3,
+    5
+  ],
+  "evaluation_gpu": 6,
+  "client_launch_date": "2026-11-04"
+}

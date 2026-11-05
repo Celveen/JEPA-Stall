@@ -1,0 +1,42 @@
+{
+  "client_date": "2026-11-05",
+  "cpu_unit_tests": {
+    "passed": 10,
+    "failed": 0,
+    "command": "python -m unittest discover -s tests -p 'test_effect_*.py'"
+  },
+  "artifact_checks": {
+    "passed": true,
+    "chunks_checked": 140,
+    "raw_successes_match_reports": true,
+    "all_initial_modules_and_sampler_hashes_match": true,
+    "paired_start_goal_states_identical": true,
+    "planner_configs_identical": true,
+    "candidate_archive_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f"
+  },
+  "archives": {
+    "count": 8,
+    "all_members_rehashed_after_decompression": true
+  },
+  "credential_scan": {
+    "files_scanned": 1917,
+    "detected_matches": 0,
+    "raw_values_in_report": false
+  },
+  "new_gpu_experiments_started": false,
+  "source_sha256": {
+    "scripts/archive_effect_results.py": "27179a77d9a3bac2355f4c9933fe9c433654d810c07c4df4da30b2115de9651a",
+    "scripts/build_effect_cache.py": "c27b190e202b190761d4ddbbcd6b0aedb509fca0fceb8eab3254b54cc06d8c97",
+    "scripts/calibrate_effect_b.py": "1602aa198a00cb41ecb5ff75815b0d0674d50d8c7312a8dc8ba3363afa910e43",
+    "scripts/effect_budget.py": "802ec8adfeafdb6853e319400cc4db94eed75c97de33a100196614025716709f",
+    "scripts/effect_candidates.py": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+    "scripts/effect_signal_audit.py": "16ff9428dc4671741d3853da4cadd4747354079abd5d3b4dc5dd019e07906f97",
+    "scripts/effect_training_utils.py": "f8a27db0d154c3fa12f6a89ded8af46a8d7a861f863f2ed7dff8f15b36cda5a3",
+    "scripts/evaluate_effect_b.py": "11bcd440a4f507444198303567838a15469a67e58ac2111e8e90595cace81cb3",
+    "scripts/run_effect_b.py": "a949ec70ca75dc265f7761baff481d0c32e1b032a0d02b2cdd5edc8f643d75ba",
+    "scripts/smoke_effect_b.py": "df419e0ea9a88215d91c908362d392a6005bd8993e4b84be93e51e7a24c95d43",
+    "scripts/smoke_effect_multigpu.py": "8f35a0ef3b2172adbd1cba191563d1b74adb8f67d775eaa848f96cbb9371debf",
+    "scripts/smoke_effect_plan.py": "bac7f56bf897eef324811d1cba300cd9e67ef6f99449c3e86269f66e892ae954",
+    "scripts/train_effect_ab.py": "5e04d74666d68fb83f4ffebf0854dfd922e5fec11e846cfb473636cd6d5a4e8a"
+  }
+}

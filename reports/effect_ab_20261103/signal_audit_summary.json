@@ -1,0 +1,555 @@
+{
+  "windows": 1000,
+  "physical_audited_windows": 1000,
+  "independent_source_episodes": 1000,
+  "visual": {
+    "5": {
+      "n": 3000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          61,
+          0,
+          19
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2920
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 0,
+        "true": 0,
+        "correct": 0,
+        "precision": null,
+        "recall": null,
+        "coverage": 0.0,
+        "truth_prevalence": 0.0
+      },
+      "effect": {
+        "predicted": 2939,
+        "true": 2920,
+        "correct": 2920,
+        "precision": 0.9935352160598843,
+        "recall": 1.0,
+        "coverage": 0.9796666666666667,
+        "truth_prevalence": 0.9733333333333334
+      },
+      "unknown_predictions": 61
+    },
+    "15": {
+      "n": 1000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          53,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          933
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 0,
+        "true": 0,
+        "correct": 0,
+        "precision": null,
+        "recall": null,
+        "coverage": 0.0,
+        "truth_prevalence": 0.0
+      },
+      "effect": {
+        "predicted": 939,
+        "true": 941,
+        "correct": 933,
+        "precision": 0.9936102236421726,
+        "recall": 0.9914984059511158,
+        "coverage": 0.939,
+        "truth_prevalence": 0.941
+      },
+      "unknown_predictions": 61
+    },
+    "all": {
+      "n": 4000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          114,
+          0,
+          25
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          3853
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 0,
+        "true": 0,
+        "correct": 0,
+        "precision": null,
+        "recall": null,
+        "coverage": 0.0,
+        "truth_prevalence": 0.0
+      },
+      "effect": {
+        "predicted": 3878,
+        "true": 3861,
+        "correct": 3853,
+        "precision": 0.9935533780299123,
+        "recall": 0.9979279979279979,
+        "coverage": 0.9695,
+        "truth_prevalence": 0.96525
+      },
+      "unknown_predictions": 122
+    }
+  },
+  "proprio": {
+    "5": {
+      "n": 3000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          133,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2867
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 0,
+        "true": 0,
+        "correct": 0,
+        "precision": null,
+        "recall": null,
+        "coverage": 0.0,
+        "truth_prevalence": 0.0
+      },
+      "effect": {
+        "predicted": 2867,
+        "true": 2867,
+        "correct": 2867,
+        "precision": 1.0,
+        "recall": 1.0,
+        "coverage": 0.9556666666666667,
+        "truth_prevalence": 0.9556666666666667
+      },
+      "unknown_predictions": 133
+    },
+    "15": {
+      "n": 1000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          196,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          804
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 0,
+        "true": 0,
+        "correct": 0,
+        "precision": null,
+        "recall": null,
+        "coverage": 0.0,
+        "truth_prevalence": 0.0
+      },
+      "effect": {
+        "predicted": 804,
+        "true": 804,
+        "correct": 804,
+        "precision": 1.0,
+        "recall": 1.0,
+        "coverage": 0.804,
+        "truth_prevalence": 0.804
+      },
+      "unknown_predictions": 196
+    },
+    "all": {
+      "n": 4000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          329,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3671
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 0,
+        "true": 0,
+        "correct": 0,
+        "precision": null,
+        "recall": null,
+        "coverage": 0.0,
+        "truth_prevalence": 0.0
+      },
+      "effect": {
+        "predicted": 3671,
+        "true": 3671,
+        "correct": 3671,
+        "precision": 1.0,
+        "recall": 1.0,
+        "coverage": 0.91775,
+        "truth_prevalence": 0.91775
+      },
+      "unknown_predictions": 329
+    }
+  },
+  "object_diagnostic": {
+    "5": {
+      "n": 3000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          5,
+          0,
+          156
+        ],
+        [
+          621,
+          625,
+          14
+        ],
+        [
+          60,
+          0,
+          1519
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 625,
+        "true": 1260,
+        "correct": 625,
+        "precision": 1.0,
+        "recall": 0.49603174603174605,
+        "coverage": 0.20833333333333334,
+        "truth_prevalence": 0.42
+      },
+      "effect": {
+        "predicted": 1689,
+        "true": 1579,
+        "correct": 1519,
+        "precision": 0.8993487270574304,
+        "recall": 0.9620012666244458,
+        "coverage": 0.563,
+        "truth_prevalence": 0.5263333333333333
+      },
+      "unknown_predictions": 686
+    },
+    "15": {
+      "n": 1000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          3,
+          0,
+          31
+        ],
+        [
+          145,
+          92,
+          1
+        ],
+        [
+          164,
+          0,
+          564
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 92,
+        "true": 238,
+        "correct": 92,
+        "precision": 1.0,
+        "recall": 0.3865546218487395,
+        "coverage": 0.092,
+        "truth_prevalence": 0.238
+      },
+      "effect": {
+        "predicted": 596,
+        "true": 728,
+        "correct": 564,
+        "precision": 0.9463087248322147,
+        "recall": 0.7747252747252747,
+        "coverage": 0.596,
+        "truth_prevalence": 0.728
+      },
+      "unknown_predictions": 312
+    },
+    "all": {
+      "n": 4000,
+      "confusion_rows_truth_cols_prediction": [
+        [
+          8,
+          0,
+          187
+        ],
+        [
+          766,
+          717,
+          15
+        ],
+        [
+          224,
+          0,
+          2083
+        ]
+      ],
+      "class_order": [
+        "unknown",
+        "ineffective_attempt",
+        "effect"
+      ],
+      "ineffective_attempt": {
+        "predicted": 717,
+        "true": 1498,
+        "correct": 717,
+        "precision": 1.0,
+        "recall": 0.4786381842456609,
+        "coverage": 0.17925,
+        "truth_prevalence": 0.3745
+      },
+      "effect": {
+        "predicted": 2285,
+        "true": 2307,
+        "correct": 2083,
+        "precision": 0.9115973741794311,
+        "recall": 0.9029042045947118,
+        "coverage": 0.57125,
+        "truth_prevalence": 0.57675
+      },
+      "unknown_predictions": 998
+    }
+  },
+  "pooled_training_branches": {
+    "n": 8000,
+    "confusion_rows_truth_cols_prediction": [
+      [
+        443,
+        0,
+        25
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        7524
+      ]
+    ],
+    "class_order": [
+      "unknown",
+      "ineffective_attempt",
+      "effect"
+    ],
+    "ineffective_attempt": {
+      "predicted": 0,
+      "true": 0,
+      "correct": 0,
+      "precision": null,
+      "recall": null,
+      "coverage": 0.0,
+      "truth_prevalence": 0.0
+    },
+    "effect": {
+      "predicted": 7549,
+      "true": 7532,
+      "correct": 7524,
+      "precision": 0.9966883030865015,
+      "recall": 0.9989378651088688,
+      "coverage": 0.943625,
+      "truth_prevalence": 0.9415
+    },
+    "unknown_predictions": 451
+  },
+  "stratum_windows": {
+    "body_effect": 999,
+    "object_effect": 732,
+    "global_ineffective": 0,
+    "preparation_proxy": 608,
+    "return_proxy": 26
+  },
+  "preparation_pairs": 1384,
+  "preparation_mislabeled_visual_static": 0,
+  "body_excursion_quantiles_world_px": {
+    "5": {
+      "min": 3.6505179405212402,
+      "q01": 8.85278377532959,
+      "q10": 20.835780715942384,
+      "median": 46.706295013427734,
+      "q90": 87.76033477783203,
+      "max": 181.94200134277344
+    },
+    "15": {
+      "min": 20.63463592529297,
+      "q01": 30.443856887817383,
+      "q10": 61.034528732299805,
+      "median": 115.90767669677734,
+      "q90": 188.72371826171874,
+      "max": 363.99163818359375
+    }
+  },
+  "body_excursion_leq_sensitivity": {
+    "5": {
+      "1": 0.0,
+      "2": 0.0,
+      "5": 0.0013333333333333333
+    },
+    "15": {
+      "1": 0.0,
+      "2": 0.0,
+      "5": 0.0
+    }
+  },
+  "gate": {
+    "passed": false,
+    "checks": {
+      "effect": {
+        "precision_pass": true,
+        "coverage_pass": true
+      },
+      "ineffective_attempt": {
+        "precision_pass": false,
+        "coverage_pass": false
+      }
+    },
+    "thresholds": {
+      "precision_each_class_min": 0.95,
+      "coverage_each_class_min": 0.1,
+      "classes": [
+        "effect",
+        "ineffective_attempt"
+      ],
+      "branches": [
+        "visual",
+        "proprio"
+      ],
+      "coverage_denominator": "all branch-pair decisions; also report each branch and each horizon separately",
+      "unknown_audit_truth": "count as incorrect for precision, not excluded",
+      "stop_on_failure": true,
+      "ordering": "signal audit gate before candidate diagnostics; candidate diagnostics and B skipped if the prerequisite fails"
+    },
+    "absent_class_precision_is_undefined": true
+  },
+  "caveats": [
+    "Physical audit is not human semantic annotation; object rigid-body state is privileged audit-only information.",
+    "Proprio audit shares the pusher sensor with the observer; its precision is a consistency check, not independent perception validation.",
+    "The 4 pairs from one source window are correlated; no binomial significance claims.",
+    "Preparation and return are kinematic proxies, not claims about intention or task usefulness.",
+    "Full-image visual labels cannot use object-only static evidence when the pusher moves."
+  ],
+  "observer_cache_before_truth_audit": {
+    "path": "reports/effect_ab_20261103/dev_observer.jsonl",
+    "bytes": 3062227,
+    "sha256": "0bb16993e7ab9cb470188d13108a98651a259dab24361a31a4641825a8d7a847"
+  },
+  "train_calibration": {
+    "windows": 4000,
+    "background_noise_quantile": 0.999,
+    "noise_value": 4,
+    "rgb_diff_floor": 12.0,
+    "fixed_floor_valid": true,
+    "train_label_counts": {
+      "visual": {
+        "1": 15541,
+        "-1": 459
+      },
+      "proprio": {
+        "1": 14730,
+        "-1": 1270
+      },
+      "object_diagnostic": {
+        "1": 8917,
+        "-1": 4075,
+        "0": 3008
+      }
+    },
+    "note": "Only training background RGB noise validates the predeclared floor; no object states or dev outcomes used to tune thresholds."
+  }
+}

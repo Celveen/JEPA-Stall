@@ -1,0 +1,78 @@
+{
+  "client_date": "2026-11-04",
+  "authorization": "User explicitly allowed GPU 4 and 6 to speed up the existing B experiments. Preserve the existing GPU 4 service.",
+  "training_gpus": [
+    "0",
+    "1",
+    "3",
+    "5"
+  ],
+  "evaluation_gpus": [
+    "4",
+    "6"
+  ],
+  "jobs_per_evaluation_gpu": 4,
+  "jobs": {
+    "eval_multigpu_smoke": {
+      "gpus": [
+        "4",
+        "6"
+      ],
+      "allowed_existing_processes": {
+        "4": [
+          {
+            "pid": 3958396,
+            "start_ticks": "881023475",
+            "cmdline_sha256": "a0deb226fc305c5c830a5615167e0af306eaa18f6bacf1e985e3f2afc4e374ce"
+          }
+        ]
+      }
+    },
+    "eval_B1": {
+      "gpus": [
+        "4",
+        "6"
+      ],
+      "allowed_existing_processes": {
+        "4": [
+          {
+            "pid": 3958396,
+            "start_ticks": "881023475",
+            "cmdline_sha256": "a0deb226fc305c5c830a5615167e0af306eaa18f6bacf1e985e3f2afc4e374ce"
+          }
+        ]
+      }
+    },
+    "eval_B2": {
+      "gpus": [
+        "4",
+        "6"
+      ],
+      "allowed_existing_processes": {
+        "4": [
+          {
+            "pid": 3958396,
+            "start_ticks": "881023475",
+            "cmdline_sha256": "a0deb226fc305c5c830a5615167e0af306eaa18f6bacf1e985e3f2afc4e374ce"
+          }
+        ]
+      }
+    },
+    "eval_B3": {
+      "gpus": [
+        "4",
+        "6"
+      ],
+      "allowed_existing_processes": {
+        "4": [
+          {
+            "pid": 3958396,
+            "start_ticks": "881023475",
+            "cmdline_sha256": "a0deb226fc305c5c830a5615167e0af306eaa18f6bacf1e985e3f2afc4e374ce"
+          }
+        ]
+      }
+    }
+  },
+  "status": "enabled_for_remaining_evaluations"
+}

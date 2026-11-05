@@ -1,0 +1,26 @@
+{
+  "focused_observer_tests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "hydra_compose": "passed; frozen/max_iter30/horizon25/execute5/kappa0/boost1",
+  "source_split_unique_and_disjoint": true,
+  "confusion_independently_recomputed": true,
+  "dev_cache_unchanged_since_truth_audit": true,
+  "frozen_hashes_verified": [
+    "reports/effect_ab_20261103/protocol.json",
+    "scripts/effect_signal_audit.py",
+    "datasets/effect_observer.py",
+    "reports/effect_ab_20261103/windows.json"
+  ],
+  "whole_window_effect_counts": {
+    "train": {
+      "effect": 3999,
+      "total": 4000
+    },
+    "dev": {
+      "effect": 1000,
+      "total": 1000
+    }
+  }
+}

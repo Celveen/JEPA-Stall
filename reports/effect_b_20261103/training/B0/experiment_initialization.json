@@ -1,0 +1,22 @@
+{
+  "epoch_at_start": 0,
+  "mode": "none",
+  "modules": {
+    "encoder": "c06afc3d0e38a360c21354a94f0261b5f03bd2f5f9210ccf275710729cfb2673",
+    "predictor": "60cf3f19dfdfc496af1b8eeb62e91e6d2ad04e6403ca28deed5697f070df2467",
+    "action_encoder": "08edb29d5582164322b78c39911cc8ee0d3701a36629b96fb097b883d705b611",
+    "proprio_encoder": "b978be12e05cf7532fdc1917930244f4201ef24a9f112a69674429d3f4adf391"
+  },
+  "samplers": {
+    "train": "bf7ebd89234e245c94531f6e2a011ab7038835ed8c21a8a3d801dee8b315cd71",
+    "valid": "42385981658cbf6ab05eab2a3980096db9f7332f5ed8156846f58e590f0c97a0"
+  },
+  "dataset_lengths": {
+    "train": 1630266,
+    "valid": 403951
+  },
+  "aux_parameters": 0,
+  "effect_lambda": 0.0,
+  "world_size": 4,
+  "effective_batch_size": 64
+}

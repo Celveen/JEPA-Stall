@@ -1,0 +1,6 @@
+defaults:
+  - train_effect_base
+  - _self_
+effect_arm: B1
+model:
+  effect_mode: reweight

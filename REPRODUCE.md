@@ -116,3 +116,10 @@ G1、WallRandom 及正则/判别器实验尚未启动；下一轮见 [待确认�
 | E3 / E2（迷宫） | `eval_outputs/stag_maze100_ar4/medium/adajepa/ref`、`eval_outputs/e3/medium_s100/<组>`、`eval_outputs/stag_maze_trap_ar4/medium_geom.jsonl` |
 | E3（PushObj） | `eval_outputs/escape_S7/none` + `eval_outputs/stag_S7_it50/S0`、`eval_outputs/e3/pushobj_S7/<组>` |
 | E1 | 迷宫参照、`eval_outputs/escape_S7/none`、`eval_outputs/stag_S7/trace.jsonl`，以及（50 次时）`eval_outputs/stag_S7_it50/S0` |
+
+
+## Reviewing the completed PushObj training A/B screen (2026-11-05)
+
+[Results and full archive index](reports/effect_b_20261103/results.md) cover 4 training runs and 1,400 frozen MPC tasks. The report includes the negative outcomes. `reports/effect_b_20261103/archives/manifest.json` lists every archived original path and SHA256; the 8 tar.gz bundles contain complete training/evaluation logs, Hydra configs, final arrays, target snapshots, W&B offline records and failed smoke logs. Candidate rollouts and scores are in `reports/effect_b_20261103/diagnostics/`. Final checkpoint paths and hashes are in `summary.json`; large model weights and the training dataset remain server-side.
+
+Extract bundles into a scratch directory before inspecting them. `scripts/archive_effect_results.py` validates the original 140 chunks and recreates these bundles on the experiment server without GPU work. The checked-in `pipeline_status.json` is a completed historical run: do not clear it or relaunch `run_effect_b.py` to inspect results. A new training run requires a separate output namespace and explicit experimental scope.

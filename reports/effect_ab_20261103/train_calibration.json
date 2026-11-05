@@ -1,0 +1,23 @@
+{
+  "windows": 4000,
+  "background_noise_quantile": 0.999,
+  "noise_value": 4,
+  "rgb_diff_floor": 12.0,
+  "fixed_floor_valid": true,
+  "train_label_counts": {
+    "visual": {
+      "1": 15541,
+      "-1": 459
+    },
+    "proprio": {
+      "1": 14730,
+      "-1": 1270
+    },
+    "object_diagnostic": {
+      "1": 8917,
+      "-1": 4075,
+      "0": 3008
+    }
+  },
+  "note": "Only training background RGB noise validates the predeclared floor; no object states or dev outcomes used to tune thresholds."
+}

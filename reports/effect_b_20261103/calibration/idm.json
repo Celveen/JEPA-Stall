@@ -1,0 +1,820 @@
+{
+  "mode": "idm",
+  "lambda": 0.418538541733931,
+  "batches": 100,
+  "batch_size": 64,
+  "microbatch": 16,
+  "gradient_parameters": "visual encoder only",
+  "mean_jepa_encoder_grad_norm": 2.7988127517700194,
+  "mean_aux_encoder_grad_norm": 0.6687108767032623,
+  "target_gradient_ratio": 0.1,
+  "state_unchanged": true,
+  "rng_restored": true,
+  "train_windows_sha256": "fac37355fc7e81996d43ef3d11378a7d3100d03633004fb179482d180366aa3d",
+  "unique_source_windows": 4000,
+  "window_draws": 6400,
+  "aux_parameters": 103690,
+  "idm_head_linear_forward_MACs_per_pair": 103424,
+  "records": [
+    {
+      "batch": 0,
+      "jepa_encoder_grad_norm": 2.85499906539917,
+      "aux_encoder_grad_norm": 0.7187548279762268,
+      "jepa_loss": 0.8395488858222961,
+      "aux_loss": 1.5126646161079407,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 1,
+      "jepa_encoder_grad_norm": 2.795323371887207,
+      "aux_encoder_grad_norm": 0.7067283391952515,
+      "jepa_loss": 0.8367548286914825,
+      "aux_loss": 1.560539186000824,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 2,
+      "jepa_encoder_grad_norm": 2.7901291847229004,
+      "aux_encoder_grad_norm": 0.7700952291488647,
+      "jepa_loss": 0.8402502089738846,
+      "aux_loss": 1.8245019614696503,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 3,
+      "jepa_encoder_grad_norm": 2.7940032482147217,
+      "aux_encoder_grad_norm": 0.5722594261169434,
+      "jepa_loss": 0.8346920013427734,
+      "aux_loss": 1.2743882089853287,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 4,
+      "jepa_encoder_grad_norm": 2.7718091011047363,
+      "aux_encoder_grad_norm": 0.6691789627075195,
+      "jepa_loss": 0.8326338082551956,
+      "aux_loss": 1.4100564122200012,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 5,
+      "jepa_encoder_grad_norm": 2.7817721366882324,
+      "aux_encoder_grad_norm": 0.7373674511909485,
+      "jepa_loss": 0.8429863452911377,
+      "aux_loss": 1.604812353849411,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 6,
+      "jepa_encoder_grad_norm": 2.7924559116363525,
+      "aux_encoder_grad_norm": 0.6369596719741821,
+      "jepa_loss": 0.8395999222993851,
+      "aux_loss": 1.4311090111732483,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 7,
+      "jepa_encoder_grad_norm": 2.790586471557617,
+      "aux_encoder_grad_norm": 0.6115649342536926,
+      "jepa_loss": 0.8407043665647507,
+      "aux_loss": 1.3062542378902435,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 8,
+      "jepa_encoder_grad_norm": 2.836996078491211,
+      "aux_encoder_grad_norm": 0.5887772440910339,
+      "jepa_loss": 0.8366752713918686,
+      "aux_loss": 1.345152348279953,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 9,
+      "jepa_encoder_grad_norm": 2.7612922191619873,
+      "aux_encoder_grad_norm": 0.7130534648895264,
+      "jepa_loss": 0.8338674455881119,
+      "aux_loss": 1.6723963916301727,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 10,
+      "jepa_encoder_grad_norm": 2.819213390350342,
+      "aux_encoder_grad_norm": 0.7144848108291626,
+      "jepa_loss": 0.8379485756158829,
+      "aux_loss": 1.562904268503189,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 11,
+      "jepa_encoder_grad_norm": 2.8260321617126465,
+      "aux_encoder_grad_norm": 0.6173946857452393,
+      "jepa_loss": 0.8425022959709167,
+      "aux_loss": 1.3855948150157928,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 12,
+      "jepa_encoder_grad_norm": 2.8064115047454834,
+      "aux_encoder_grad_norm": 0.5987454652786255,
+      "jepa_loss": 0.8364036828279495,
+      "aux_loss": 1.1801791042089462,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 13,
+      "jepa_encoder_grad_norm": 2.8122663497924805,
+      "aux_encoder_grad_norm": 0.6590657234191895,
+      "jepa_loss": 0.8378820866346359,
+      "aux_loss": 1.4132374227046967,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 14,
+      "jepa_encoder_grad_norm": 2.7918670177459717,
+      "aux_encoder_grad_norm": 0.6967574954032898,
+      "jepa_loss": 0.8323518335819244,
+      "aux_loss": 1.3871497213840485,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 15,
+      "jepa_encoder_grad_norm": 2.835247278213501,
+      "aux_encoder_grad_norm": 0.6617116332054138,
+      "jepa_loss": 0.8374722898006439,
+      "aux_loss": 1.3892314732074738,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 16,
+      "jepa_encoder_grad_norm": 2.8027467727661133,
+      "aux_encoder_grad_norm": 0.6547703146934509,
+      "jepa_loss": 0.8356465846300125,
+      "aux_loss": 1.3811541497707367,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 17,
+      "jepa_encoder_grad_norm": 2.8049018383026123,
+      "aux_encoder_grad_norm": 0.708106279373169,
+      "jepa_loss": 0.8393818587064743,
+      "aux_loss": 1.5595528185367584,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 18,
+      "jepa_encoder_grad_norm": 2.7888131141662598,
+      "aux_encoder_grad_norm": 0.6650540232658386,
+      "jepa_loss": 0.8387489020824432,
+      "aux_loss": 1.4511578977108002,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 19,
+      "jepa_encoder_grad_norm": 2.8195104598999023,
+      "aux_encoder_grad_norm": 0.6478092670440674,
+      "jepa_loss": 0.8349281549453735,
+      "aux_loss": 1.334781676530838,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 20,
+      "jepa_encoder_grad_norm": 2.762115001678467,
+      "aux_encoder_grad_norm": 0.6481922268867493,
+      "jepa_loss": 0.8361001461744308,
+      "aux_loss": 1.4542670845985413,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 21,
+      "jepa_encoder_grad_norm": 2.802128553390503,
+      "aux_encoder_grad_norm": 0.644474446773529,
+      "jepa_loss": 0.8358433395624161,
+      "aux_loss": 1.4387573897838593,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 22,
+      "jepa_encoder_grad_norm": 2.7974720001220703,
+      "aux_encoder_grad_norm": 0.7223552465438843,
+      "jepa_loss": 0.836988240480423,
+      "aux_loss": 1.6659572124481201,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 23,
+      "jepa_encoder_grad_norm": 2.8052401542663574,
+      "aux_encoder_grad_norm": 0.65862637758255,
+      "jepa_loss": 0.8356186598539352,
+      "aux_loss": 1.4517131745815277,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 24,
+      "jepa_encoder_grad_norm": 2.7982687950134277,
+      "aux_encoder_grad_norm": 0.6152923107147217,
+      "jepa_loss": 0.8371424973011017,
+      "aux_loss": 1.4637117087841034,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 25,
+      "jepa_encoder_grad_norm": 2.7650842666625977,
+      "aux_encoder_grad_norm": 0.6669158935546875,
+      "jepa_loss": 0.8377083390951157,
+      "aux_loss": 1.5533857941627502,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 26,
+      "jepa_encoder_grad_norm": 2.7931976318359375,
+      "aux_encoder_grad_norm": 0.6310598254203796,
+      "jepa_loss": 0.8353007137775421,
+      "aux_loss": 1.4417679607868195,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 27,
+      "jepa_encoder_grad_norm": 2.804400682449341,
+      "aux_encoder_grad_norm": 0.6884264945983887,
+      "jepa_loss": 0.8367163985967636,
+      "aux_loss": 1.56596040725708,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 28,
+      "jepa_encoder_grad_norm": 2.78244948387146,
+      "aux_encoder_grad_norm": 0.670251727104187,
+      "jepa_loss": 0.8385799676179886,
+      "aux_loss": 1.4005895256996155,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 29,
+      "jepa_encoder_grad_norm": 2.7866458892822266,
+      "aux_encoder_grad_norm": 0.6323487758636475,
+      "jepa_loss": 0.8377257138490677,
+      "aux_loss": 1.3470866680145264,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 30,
+      "jepa_encoder_grad_norm": 2.8021395206451416,
+      "aux_encoder_grad_norm": 0.6423494219779968,
+      "jepa_loss": 0.838277667760849,
+      "aux_loss": 1.283113420009613,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 31,
+      "jepa_encoder_grad_norm": 2.7771496772766113,
+      "aux_encoder_grad_norm": 0.68195641040802,
+      "jepa_loss": 0.8365332335233688,
+      "aux_loss": 1.3975038528442383,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 32,
+      "jepa_encoder_grad_norm": 2.7983570098876953,
+      "aux_encoder_grad_norm": 0.73683762550354,
+      "jepa_loss": 0.8388201147317886,
+      "aux_loss": 1.5001660883426666,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 33,
+      "jepa_encoder_grad_norm": 2.81315279006958,
+      "aux_encoder_grad_norm": 0.6045873165130615,
+      "jepa_loss": 0.8373248279094696,
+      "aux_loss": 1.340641126036644,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 34,
+      "jepa_encoder_grad_norm": 2.816457509994507,
+      "aux_encoder_grad_norm": 0.6699188351631165,
+      "jepa_loss": 0.8395021855831146,
+      "aux_loss": 1.628689020872116,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 35,
+      "jepa_encoder_grad_norm": 2.807781457901001,
+      "aux_encoder_grad_norm": 0.7711251974105835,
+      "jepa_loss": 0.8403876274824142,
+      "aux_loss": 1.3996909260749817,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 36,
+      "jepa_encoder_grad_norm": 2.7960479259490967,
+      "aux_encoder_grad_norm": 0.6798286437988281,
+      "jepa_loss": 0.8389442414045334,
+      "aux_loss": 1.5406446754932404,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 37,
+      "jepa_encoder_grad_norm": 2.808919906616211,
+      "aux_encoder_grad_norm": 0.592318594455719,
+      "jepa_loss": 0.8391759991645813,
+      "aux_loss": 1.1517193913459778,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 38,
+      "jepa_encoder_grad_norm": 2.7957205772399902,
+      "aux_encoder_grad_norm": 0.6531636714935303,
+      "jepa_loss": 0.8368628919124603,
+      "aux_loss": 1.4057870209217072,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 39,
+      "jepa_encoder_grad_norm": 2.8101987838745117,
+      "aux_encoder_grad_norm": 0.6408732533454895,
+      "jepa_loss": 0.832938015460968,
+      "aux_loss": 1.341349646449089,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 40,
+      "jepa_encoder_grad_norm": 2.804014205932617,
+      "aux_encoder_grad_norm": 0.6554355025291443,
+      "jepa_loss": 0.8404033184051514,
+      "aux_loss": 1.344077318906784,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 41,
+      "jepa_encoder_grad_norm": 2.7842695713043213,
+      "aux_encoder_grad_norm": 0.6467182636260986,
+      "jepa_loss": 0.8352915346622467,
+      "aux_loss": 1.188233107328415,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 42,
+      "jepa_encoder_grad_norm": 2.794093132019043,
+      "aux_encoder_grad_norm": 0.735877513885498,
+      "jepa_loss": 0.8394602984189987,
+      "aux_loss": 1.667781502008438,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 43,
+      "jepa_encoder_grad_norm": 2.791029453277588,
+      "aux_encoder_grad_norm": 0.6730426549911499,
+      "jepa_loss": 0.8363230377435684,
+      "aux_loss": 1.4535253643989563,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 44,
+      "jepa_encoder_grad_norm": 2.8099725246429443,
+      "aux_encoder_grad_norm": 0.7005488872528076,
+      "jepa_loss": 0.8426859378814697,
+      "aux_loss": 1.5250651836395264,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 45,
+      "jepa_encoder_grad_norm": 2.8359122276306152,
+      "aux_encoder_grad_norm": 0.7477967739105225,
+      "jepa_loss": 0.8414090573787689,
+      "aux_loss": 1.5991415679454803,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 46,
+      "jepa_encoder_grad_norm": 2.7845394611358643,
+      "aux_encoder_grad_norm": 0.7355087399482727,
+      "jepa_loss": 0.8373737037181854,
+      "aux_loss": 1.677642971277237,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 47,
+      "jepa_encoder_grad_norm": 2.7937684059143066,
+      "aux_encoder_grad_norm": 0.623149573802948,
+      "jepa_loss": 0.8343905359506607,
+      "aux_loss": 1.3467209190130234,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 48,
+      "jepa_encoder_grad_norm": 2.8169591426849365,
+      "aux_encoder_grad_norm": 0.7141987681388855,
+      "jepa_loss": 0.8365173786878586,
+      "aux_loss": 1.4779002964496613,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 49,
+      "jepa_encoder_grad_norm": 2.803344249725342,
+      "aux_encoder_grad_norm": 0.6284139752388,
+      "jepa_loss": 0.8337053060531616,
+      "aux_loss": 1.3570533990859985,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 50,
+      "jepa_encoder_grad_norm": 2.7793407440185547,
+      "aux_encoder_grad_norm": 0.6501007676124573,
+      "jepa_loss": 0.8352740108966827,
+      "aux_loss": 1.315093606710434,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 51,
+      "jepa_encoder_grad_norm": 2.791670322418213,
+      "aux_encoder_grad_norm": 0.7209004163742065,
+      "jepa_loss": 0.8394761681556702,
+      "aux_loss": 1.5707029402256012,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 52,
+      "jepa_encoder_grad_norm": 2.816197395324707,
+      "aux_encoder_grad_norm": 0.6542673707008362,
+      "jepa_loss": 0.8369412124156952,
+      "aux_loss": 1.4147986471652985,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 53,
+      "jepa_encoder_grad_norm": 2.810002326965332,
+      "aux_encoder_grad_norm": 0.714198648929596,
+      "jepa_loss": 0.841575488448143,
+      "aux_loss": 1.59466153383255,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 54,
+      "jepa_encoder_grad_norm": 2.8033077716827393,
+      "aux_encoder_grad_norm": 0.6584427356719971,
+      "jepa_loss": 0.8356901109218597,
+      "aux_loss": 1.4616689383983612,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 55,
+      "jepa_encoder_grad_norm": 2.8246989250183105,
+      "aux_encoder_grad_norm": 0.6870043277740479,
+      "jepa_loss": 0.8398406356573105,
+      "aux_loss": 1.36128368973732,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 56,
+      "jepa_encoder_grad_norm": 2.7955844402313232,
+      "aux_encoder_grad_norm": 0.64634770154953,
+      "jepa_loss": 0.8414974063634872,
+      "aux_loss": 1.4390501976013184,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 57,
+      "jepa_encoder_grad_norm": 2.832819700241089,
+      "aux_encoder_grad_norm": 0.6416617631912231,
+      "jepa_loss": 0.8360740840435028,
+      "aux_loss": 1.3576253950595856,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 58,
+      "jepa_encoder_grad_norm": 2.7953925132751465,
+      "aux_encoder_grad_norm": 0.6817423105239868,
+      "jepa_loss": 0.8374339938163757,
+      "aux_loss": 1.5924954116344452,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 59,
+      "jepa_encoder_grad_norm": 2.781656265258789,
+      "aux_encoder_grad_norm": 0.7067219018936157,
+      "jepa_loss": 0.8376312255859375,
+      "aux_loss": 1.6146782636642456,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 60,
+      "jepa_encoder_grad_norm": 2.78098201751709,
+      "aux_encoder_grad_norm": 0.6199488043785095,
+      "jepa_loss": 0.8371539264917374,
+      "aux_loss": 1.402170866727829,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 61,
+      "jepa_encoder_grad_norm": 2.7700583934783936,
+      "aux_encoder_grad_norm": 0.6176872253417969,
+      "jepa_loss": 0.8373001664876938,
+      "aux_loss": 1.2696349769830704,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 62,
+      "jepa_encoder_grad_norm": 2.7711517810821533,
+      "aux_encoder_grad_norm": 0.6989519596099854,
+      "jepa_loss": 0.8386329263448715,
+      "aux_loss": 1.5509606897830963,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 63,
+      "jepa_encoder_grad_norm": 2.784524917602539,
+      "aux_encoder_grad_norm": 0.6038854718208313,
+      "jepa_loss": 0.836996927857399,
+      "aux_loss": 1.1898033618927002,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 64,
+      "jepa_encoder_grad_norm": 2.800773859024048,
+      "aux_encoder_grad_norm": 0.6209282875061035,
+      "jepa_loss": 0.8386902511119843,
+      "aux_loss": 1.3780333995819092,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 65,
+      "jepa_encoder_grad_norm": 2.809413194656372,
+      "aux_encoder_grad_norm": 0.7031602263450623,
+      "jepa_loss": 0.8355045169591904,
+      "aux_loss": 1.6475004851818085,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 66,
+      "jepa_encoder_grad_norm": 2.829808473587036,
+      "aux_encoder_grad_norm": 0.5888020396232605,
+      "jepa_loss": 0.8386112600564957,
+      "aux_loss": 1.1582071781158447,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 67,
+      "jepa_encoder_grad_norm": 2.784071683883667,
+      "aux_encoder_grad_norm": 0.6808410286903381,
+      "jepa_loss": 0.8410381376743317,
+      "aux_loss": 1.5525490939617157,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 68,
+      "jepa_encoder_grad_norm": 2.792891263961792,
+      "aux_encoder_grad_norm": 0.7337578535079956,
+      "jepa_loss": 0.8402867317199707,
+      "aux_loss": 1.5939578711986542,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 69,
+      "jepa_encoder_grad_norm": 2.8328683376312256,
+      "aux_encoder_grad_norm": 0.7259560823440552,
+      "jepa_loss": 0.8362988829612732,
+      "aux_loss": 1.4599808156490326,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 70,
+      "jepa_encoder_grad_norm": 2.787050485610962,
+      "aux_encoder_grad_norm": 0.6534315347671509,
+      "jepa_loss": 0.8358667492866516,
+      "aux_loss": 1.5220698416233063,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 71,
+      "jepa_encoder_grad_norm": 2.7747581005096436,
+      "aux_encoder_grad_norm": 0.6881082057952881,
+      "jepa_loss": 0.8344271779060364,
+      "aux_loss": 1.533900797367096,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 72,
+      "jepa_encoder_grad_norm": 2.805731773376465,
+      "aux_encoder_grad_norm": 0.6541430354118347,
+      "jepa_loss": 0.8433225303888321,
+      "aux_loss": 1.4200083315372467,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 73,
+      "jepa_encoder_grad_norm": 2.8009462356567383,
+      "aux_encoder_grad_norm": 0.6570050716400146,
+      "jepa_loss": 0.8383023589849472,
+      "aux_loss": 1.4049990773200989,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 74,
+      "jepa_encoder_grad_norm": 2.78704833984375,
+      "aux_encoder_grad_norm": 0.7128998637199402,
+      "jepa_loss": 0.8351491242647171,
+      "aux_loss": 1.5125120282173157,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 75,
+      "jepa_encoder_grad_norm": 2.804267406463623,
+      "aux_encoder_grad_norm": 0.6596676707267761,
+      "jepa_loss": 0.8390137106180191,
+      "aux_loss": 1.3492489159107208,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 76,
+      "jepa_encoder_grad_norm": 2.8201632499694824,
+      "aux_encoder_grad_norm": 0.6554335355758667,
+      "jepa_loss": 0.8379971981048584,
+      "aux_loss": 1.3210146129131317,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 77,
+      "jepa_encoder_grad_norm": 2.7725539207458496,
+      "aux_encoder_grad_norm": 0.6752930283546448,
+      "jepa_loss": 0.8410583436489105,
+      "aux_loss": 1.5275009274482727,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 78,
+      "jepa_encoder_grad_norm": 2.8109934329986572,
+      "aux_encoder_grad_norm": 0.6469005346298218,
+      "jepa_loss": 0.8390364348888397,
+      "aux_loss": 1.499079406261444,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 79,
+      "jepa_encoder_grad_norm": 2.806317090988159,
+      "aux_encoder_grad_norm": 0.699091374874115,
+      "jepa_loss": 0.8379780203104019,
+      "aux_loss": 1.4448307156562805,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 80,
+      "jepa_encoder_grad_norm": 2.7985947132110596,
+      "aux_encoder_grad_norm": 0.6465640068054199,
+      "jepa_loss": 0.8405244201421738,
+      "aux_loss": 1.3171184360980988,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 81,
+      "jepa_encoder_grad_norm": 2.790090560913086,
+      "aux_encoder_grad_norm": 0.6900044679641724,
+      "jepa_loss": 0.8379608690738678,
+      "aux_loss": 1.4757208824157715,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 82,
+      "jepa_encoder_grad_norm": 2.8154265880584717,
+      "aux_encoder_grad_norm": 0.6568853855133057,
+      "jepa_loss": 0.8373837023973465,
+      "aux_loss": 1.369865745306015,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 83,
+      "jepa_encoder_grad_norm": 2.8052871227264404,
+      "aux_encoder_grad_norm": 0.6200641989707947,
+      "jepa_loss": 0.837465688586235,
+      "aux_loss": 1.2500032037496567,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 84,
+      "jepa_encoder_grad_norm": 2.7934305667877197,
+      "aux_encoder_grad_norm": 0.7654210925102234,
+      "jepa_loss": 0.8378258943557739,
+      "aux_loss": 1.6393416821956635,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 85,
+      "jepa_encoder_grad_norm": 2.798534393310547,
+      "aux_encoder_grad_norm": 0.6386101245880127,
+      "jepa_loss": 0.8363317400217056,
+      "aux_loss": 1.3628782331943512,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 86,
+      "jepa_encoder_grad_norm": 2.8164920806884766,
+      "aux_encoder_grad_norm": 0.5696306228637695,
+      "jepa_loss": 0.8330793678760529,
+      "aux_loss": 1.1266590058803558,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 87,
+      "jepa_encoder_grad_norm": 2.8070507049560547,
+      "aux_encoder_grad_norm": 0.6553264856338501,
+      "jepa_loss": 0.835631787776947,
+      "aux_loss": 1.5661201775074005,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 88,
+      "jepa_encoder_grad_norm": 2.775574207305908,
+      "aux_encoder_grad_norm": 0.7269368767738342,
+      "jepa_loss": 0.8358882665634155,
+      "aux_loss": 1.5875105559825897,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 89,
+      "jepa_encoder_grad_norm": 2.800276756286621,
+      "aux_encoder_grad_norm": 0.6831001043319702,
+      "jepa_loss": 0.836304247379303,
+      "aux_loss": 1.4531740248203278,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 90,
+      "jepa_encoder_grad_norm": 2.7846245765686035,
+      "aux_encoder_grad_norm": 0.6623972654342651,
+      "jepa_loss": 0.836807370185852,
+      "aux_loss": 1.3233802616596222,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 91,
+      "jepa_encoder_grad_norm": 2.78483247756958,
+      "aux_encoder_grad_norm": 0.6455870866775513,
+      "jepa_loss": 0.842913419008255,
+      "aux_loss": 1.3708107769489288,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 92,
+      "jepa_encoder_grad_norm": 2.800405979156494,
+      "aux_encoder_grad_norm": 0.6521768569946289,
+      "jepa_loss": 0.8410490602254868,
+      "aux_loss": 1.4692077040672302,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 93,
+      "jepa_encoder_grad_norm": 2.8118340969085693,
+      "aux_encoder_grad_norm": 0.7456743121147156,
+      "jepa_loss": 0.8379674702882767,
+      "aux_loss": 1.6065279841423035,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 94,
+      "jepa_encoder_grad_norm": 2.778933048248291,
+      "aux_encoder_grad_norm": 0.6836300492286682,
+      "jepa_loss": 0.8391093313694,
+      "aux_loss": 1.4881342351436615,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 95,
+      "jepa_encoder_grad_norm": 2.7764177322387695,
+      "aux_encoder_grad_norm": 0.7315187454223633,
+      "jepa_loss": 0.8387459963560104,
+      "aux_loss": 1.54606032371521,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 96,
+      "jepa_encoder_grad_norm": 2.7606887817382812,
+      "aux_encoder_grad_norm": 0.6769548654556274,
+      "jepa_loss": 0.8381241708993912,
+      "aux_loss": 1.4267885088920593,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 97,
+      "jepa_encoder_grad_norm": 2.808943033218384,
+      "aux_encoder_grad_norm": 0.6013683676719666,
+      "jepa_loss": 0.8365444093942642,
+      "aux_loss": 1.3494986146688461,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 98,
+      "jepa_encoder_grad_norm": 2.812378168106079,
+      "aux_encoder_grad_norm": 0.6028304696083069,
+      "jepa_loss": 0.8371191322803497,
+      "aux_loss": 1.172117367386818,
+      "margin_active_fraction": null
+    },
+    {
+      "batch": 99,
+      "jepa_encoder_grad_norm": 2.7872085571289062,
+      "aux_encoder_grad_norm": 0.6988933086395264,
+      "jepa_loss": 0.8381434828042984,
+      "aux_loss": 1.5561667680740356,
+      "margin_active_fraction": null
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "conf/effect_ab_frozen_pushobj.yaml": "ee875a65d4ca74070f300bd8d67344a5f5cf45e98f52f6112e8254dc56f1f322",
+  "conf/train_effect_b0.yaml": "e759966a018aa0da4587f54099bac565c17f81eeb38e4e202d1c8172f02098ca",
+  "conf/train_effect_b1.yaml": "678fa1bac328ec82b9069e62c066087f21555ad8cd628b6f94417222ccd70005",
+  "conf/train_effect_b2.yaml": "bb6a62e06599e9dc3462f9cd97e9a20e41a7dd13032dc2ef2a79db1088b079cf",
+  "conf/train_effect_b3.yaml": "2b2907244df97e514346539f274bdebafeb52c596a909131905de351bddcc3ac",
+  "conf/train_effect_base.yaml": "2ccaabc3e2c13846a29a1b745fa00be49a999ee7ed70075d4bfa228d8c4efcea",
+  "datasets/effect_dataset.py": "1aa30ceeb95a391cdee35fa79aa91d1bee22f4840dc6f5c3afbe237d6c8a6f3a",
+  "models/effect_world_model.py": "fdd7342c9c383ccda82c403190fc715d222e9c3452ca14e1716fb9b3587e23cf",
+  "scripts/build_effect_cache.py": "c27b190e202b190761d4ddbbcd6b0aedb509fca0fceb8eab3254b54cc06d8c97",
+  "scripts/calibrate_effect_b.py": "1602aa198a00cb41ecb5ff75815b0d0674d50d8c7312a8dc8ba3363afa910e43",
+  "scripts/effect_budget.py": "5e821c3126758e093d5786e2b7d207b0e90f9ee794e7d97af8609f7fd2d08dfd",
+  "scripts/effect_candidates.py": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+  "scripts/effect_signal_audit.py": "16ff9428dc4671741d3853da4cadd4747354079abd5d3b4dc5dd019e07906f97",
+  "scripts/effect_training_utils.py": "f8a27db0d154c3fa12f6a89ded8af46a8d7a861f863f2ed7dff8f15b36cda5a3",
+  "scripts/evaluate_effect_b.py": "d3d0a3b0cdc9bc339822b94970e13cb2e90f7f81e7806b7bd5530e569460a0c4",
+  "scripts/run_effect_b.py": "a949ec70ca75dc265f7761baff481d0c32e1b032a0d02b2cdd5edc8f643d75ba",
+  "scripts/smoke_effect_b.py": "df419e0ea9a88215d91c908362d392a6005bd8993e4b84be93e51e7a24c95d43",
+  "scripts/smoke_effect_plan.py": "bac7f56bf897eef324811d1cba300cd9e67ef6f99449c3e86269f66e892ae954",
+  "scripts/train_effect_ab.py": "5e04d74666d68fb83f4ffebf0854dfd922e5fec11e846cfb473636cd6d5a4e8a",
+  "tests/test_effect_observer.py": "748d8f55a22a190765fb90c54e358e39096b7abccfdff147aac120c3e0f0942a",
+  "tests/test_effect_training.py": "773cc5cb65f90a5a9ce92160cb7a1419173a9d2398cc1428f741030b8cc84b2e"
+}

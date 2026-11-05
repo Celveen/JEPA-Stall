@@ -1,0 +1,36 @@
+{
+  "mode": "effect",
+  "lambda": 2.4635687979903538,
+  "batches": 2,
+  "batch_size": 64,
+  "microbatch": 16,
+  "gradient_parameters": "visual encoder only",
+  "mean_jepa_encoder_grad_norm": 2.8251612186431885,
+  "mean_aux_encoder_grad_norm": 0.11467758566141129,
+  "target_gradient_ratio": 0.1,
+  "state_unchanged": true,
+  "rng_restored": true,
+  "train_windows_sha256": "4985a597dc3c45f9cb0ba8c1088116f3630732714a0d0c8d5f26896b1d95df0f",
+  "unique_source_windows": 128,
+  "window_draws": 128,
+  "aux_parameters": 0,
+  "idm_head_linear_forward_MACs_per_pair": 0,
+  "records": [
+    {
+      "batch": 0,
+      "jepa_encoder_grad_norm": 2.85499906539917,
+      "aux_encoder_grad_norm": 0.11399903893470764,
+      "jepa_loss": 0.8395488858222961,
+      "aux_loss": 0.01639386286575901,
+      "margin_active_fraction": 0.665987786231847
+    },
+    {
+      "batch": 1,
+      "jepa_encoder_grad_norm": 2.795323371887207,
+      "aux_encoder_grad_norm": 0.11535613238811493,
+      "jepa_loss": 0.8367548286914825,
+      "aux_loss": 0.015631093178896695,
+      "margin_active_fraction": 0.617586908408713
+    }
+  ]
+}

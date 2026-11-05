@@ -13,9 +13,10 @@ checkpoints
 !env/wall/data/
 !env/wall/data/*.py
 
-# experiment reports (write-ups, tables, json summaries, figures) are tracked; console logs and archives stay local
+# Experiment reports and lossless .tar.gz result/log bundles are tracked; raw console logs and .zip files stay local
 reports/**/*.log
 reports/**/*.zip
+reports/**/*.lock
 !reports/**/figures/
 !reports/**/*.sh
 dist

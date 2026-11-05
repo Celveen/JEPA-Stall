@@ -1,0 +1,6 @@
+defaults:
+  - train_effect_base
+  - _self_
+effect_arm: B0
+model:
+  effect_mode: none

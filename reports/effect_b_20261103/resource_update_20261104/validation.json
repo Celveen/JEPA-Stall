@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "client_date": "2026-11-04",
+  "cpu_checks": [
+    "8 concurrent chunks, at most 4 per GPU",
+    "one visible GPU per child",
+    "both GPU hours charged",
+    "only identified existing service permitted",
+    "unapproved process and PID reuse rejected",
+    "training allocation unchanged"
+  ],
+  "gpu_smoke": {
+    "passed": true,
+    "gpus": [
+      "4",
+      "6"
+    ],
+    "replans_per_gpu": 2,
+    "identical_actions_and_states": true,
+    "frozen_parameters": true,
+    "formal_result": false
+  },
+  "training_uninterrupted": true,
+  "budget_limit_GPU_hours": 100,
+  "source_sha256": {
+    "scripts/effect_budget.py": "802ec8adfeafdb6853e319400cc4db94eed75c97de33a100196614025716709f",
+    "scripts/evaluate_effect_b.py": "11bcd440a4f507444198303567838a15469a67e58ac2111e8e90595cace81cb3",
+    "scripts/smoke_effect_multigpu.py": "8f35a0ef3b2172adbd1cba191563d1b74adb8f67d775eaa848f96cbb9371debf"
+  }
+}

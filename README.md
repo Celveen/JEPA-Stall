@@ -15,8 +15,9 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 | `models/`, `datasets/`, `env/`, `train.py`, `plan.py` | World-model training and planning infrastructure |
 | `data/targets/` | Evaluation target sets (ordered chunks of plan targets) used by the runners |
 
-## Latest results (2026-11-03)
+## Latest results (2026-11-05)
 
+- [PushObj training A/B screen and complete logs](reports/effect_b_20261103/results.md): all four 3-epoch runs and 1,400 frozen MPC tasks completed. At 30 replans, B0 **220/350**, B1 **217/350**, B2 **116/350**, B3 **134/350**. None improved over B0; original logs, diagnostic data, configs, hashes and the **52.78 GPU-hour** ledger are archived.
 - [Wall public-checkpoint baseline](reports/wall_dinowm_20261103/report.md): open-loop CEM **26/50**, capped MPC **46/50**; paired episode outputs and complete success curves included. These runs do not use adaptation or stall regularisation.
 - [Switch calibration](reports/switch_calibration_20261102/results.md): lowering the threshold or widening the window did not improve the existing development results; all 387 new episode-arm runs are complete and pairing is verified.
 - [Current research narrative](reports/paper2_positioning/narrative.md): the stall regulariser is the core intervention; the gate controls its timing. [The proposed Wall method experiment](reports/paper2_positioning/wall_stall_proposal.md) is pending user confirmation and has not started.

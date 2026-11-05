@@ -1,0 +1,39 @@
+{
+  "idm": {
+    "mode": "idm",
+    "lambda": 0.418538541733931,
+    "batches": 100,
+    "batch_size": 64,
+    "microbatch": 16,
+    "gradient_parameters": "visual encoder only",
+    "mean_jepa_encoder_grad_norm": 2.7988127517700194,
+    "mean_aux_encoder_grad_norm": 0.6687108767032623,
+    "target_gradient_ratio": 0.1,
+    "state_unchanged": true,
+    "rng_restored": true,
+    "train_windows_sha256": "fac37355fc7e81996d43ef3d11378a7d3100d03633004fb179482d180366aa3d",
+    "unique_source_windows": 4000,
+    "window_draws": 6400,
+    "aux_parameters": 103690,
+    "idm_head_linear_forward_MACs_per_pair": 103424
+  },
+  "effect": {
+    "mode": "effect",
+    "lambda": 2.4677111194988774,
+    "batches": 100,
+    "batch_size": 64,
+    "microbatch": 16,
+    "gradient_parameters": "visual encoder only",
+    "mean_jepa_encoder_grad_norm": 2.7988127517700194,
+    "mean_aux_encoder_grad_norm": 0.11341735787689686,
+    "target_gradient_ratio": 0.1,
+    "state_unchanged": true,
+    "rng_restored": true,
+    "train_windows_sha256": "fac37355fc7e81996d43ef3d11378a7d3100d03633004fb179482d180366aa3d",
+    "unique_source_windows": 4000,
+    "window_draws": 6400,
+    "aux_parameters": 0,
+    "idm_head_linear_forward_MACs_per_pair": 0
+  },
+  "wall_seconds": 68.3601206522435
+}

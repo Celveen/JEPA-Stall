@@ -1,0 +1,32 @@
+# Approved revision: positive effect only, no static contraction.
+defaults:
+  - train_pushobj_bias16k_seeds
+  - _self_
+
+hydra:
+  run:
+    dir: ${hydra:runtime.cwd}/checkpoints/effect_b_20261103/${effect_arm}
+
+effect_arm: B0
+effect_expected_init: null
+effect_smoke_steps: 0
+
+env:
+  num_workers: 4
+  dataset:
+    _target_: datasets.effect_dataset.load_effect_pusht
+    effect_cache: ${hydra:runtime.cwd}/data/pushobj_bias_16k/effect_cache_v1
+
+model:
+  _target_: models.effect_world_model.EffectWorldModel
+  effect_mode: none
+  effect_lambda: 0.0
+  effect_margin: 0.2
+  idm_hidden: 256
+  idm_action_dim: 10
+
+training:
+  seed: 0
+  epochs: 3
+  batch_size: 64
+  save_every_x_iterations: 5000

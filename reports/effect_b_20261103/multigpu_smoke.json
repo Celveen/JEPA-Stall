@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "gpus": [
+    "4",
+    "6"
+  ],
+  "replans_per_gpu": 2,
+  "identical_actions_and_states": true,
+  "frozen_parameters": true,
+  "formal_result": false
+}

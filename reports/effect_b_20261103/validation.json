@@ -1,0 +1,16 @@
+{
+  "cpu_checks": {
+    "passed": 10,
+    "failed": 0
+  },
+  "cache_training_pair_comparison": {
+    "pairs": 16000,
+    "mismatches": 0
+  },
+  "distributed_four_arm_smoke": "passed",
+  "frozen_planning_four_arm_smoke": "passed",
+  "candidate_scoring_smoke": "passed",
+  "historical_350_task_aggregation": "passed; temporary output discarded; not counted as a B result",
+  "initialization_and_sampler_hashes_equal_all_arms": true,
+  "initial_failed_smoke": "Accelerate required NCCL_P2P_DISABLE=1 and NCCL_IB_DISABLE=1 on RTX3090; fixed and four-arm smoke repeated successfully. Failed GPU time retained in gpu_budget.json."
+}

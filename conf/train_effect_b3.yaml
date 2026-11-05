@@ -1,0 +1,7 @@
+defaults:
+  - train_effect_base
+  - _self_
+effect_arm: B3
+model:
+  effect_mode: effect
+  effect_lambda: ???  # fixed once by train-only gradient calibration

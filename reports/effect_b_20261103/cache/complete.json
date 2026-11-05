@@ -1,0 +1,73 @@
+{
+  "data_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/pushobj_bias_16k",
+  "observer_thresholds": {
+    "body_effect_px": 5.0,
+    "body_static_px": 1.0,
+    "body_static_speed": 10.0,
+    "min_action_rms_px": 2.0,
+    "min_net_path_ratio": 0.5,
+    "pusher_mask_radius_world": 22.0,
+    "rgb_diff_floor": 12.0,
+    "changed_component_pixels": 6,
+    "max_static_changed_pixels": 4,
+    "flow_effect_px": 0.8,
+    "flow_static_px": 0.25,
+    "min_tracked_corners": 4,
+    "min_moving_corners": 3,
+    "flow_fb_error_px": 0.75,
+    "background_noise_quantile": 0.999
+  },
+  "layout": "[episode,time,horizon(5,15),branch(visual,proprio)]",
+  "label": "positive evidence only; False means no auxiliary constraint, NOT static",
+  "rng": "OpenCV seed 0 per unique pair; positive OR condition short-circuited",
+  "input_hashes": {
+    "reports/effect_ab_20261103/protocol.json": "86de67629a7f07b0d28b2d3b247982cfcece7df28025c9fbb150999da0c49cfa",
+    "scripts/build_effect_cache.py": "c27b190e202b190761d4ddbbcd6b0aedb509fca0fceb8eab3254b54cc06d8c97",
+    "datasets/effect_observer.py": "41f5ec8992ce4d4710fa318913c8cd9e0347aa956a513623143dcb6f1e68897d",
+    "data/pushobj_bias_16k/train/states.pth": "8b63ccf5c3293c977124b2b58352e3908914bcd54bc0db664228ee302770d920",
+    "data/pushobj_bias_16k/train/velocities.pth": "39c490ca04200ee85a7b0ff99c1db37f74072f97b16a16f80a3715d2da1f5f4b",
+    "data/pushobj_bias_16k/train/rel_actions.pth": "b48b3526c03a0efc3195a23b9882a879f4ef17b106ca9b8983e3b77f95547780",
+    "data/pushobj_bias_16k/train/seq_lengths.pkl": "798d9a19edb2f4255a5db9d68eb5168418a341c47b664cce642e789571c005ba",
+    "data/pushobj_bias_16k/train/provenance.json": "d903ea92c809059287ff7e3f8ac41e15791984c3dd676312225d9cc608021373",
+    "data/pushobj_bias_16k/val/states.pth": "31733eeaeb8aebb8c9b0252269c4830ea9dce12fdc2fd51c33027dfd8fbaa5a0",
+    "data/pushobj_bias_16k/val/velocities.pth": "e33efd98f12fe8e669769d58818ed9c3e99daa4f97e180fa95804ebf676bd7c8",
+    "data/pushobj_bias_16k/val/rel_actions.pth": "44b5c70f680c64934f8c8aef5b46503bc8ec55cbcd9b2870f730be027a25ff81",
+    "data/pushobj_bias_16k/val/seq_lengths.pkl": "4b3523523ed144b1893022c5fc2130890904dbacff3781b686751affe6a4fa0c",
+    "data/pushobj_bias_16k/val/provenance.json": "d1362006cf07c5241b207b7f3a0a420aa3edb4235596e6e41034067c5b9e9bbf"
+  },
+  "splits": {
+    "train": {
+      "episodes": 16000,
+      "frames": 1934266,
+      "positive_counts_by_horizon_branch": [
+        [
+          1817968,
+          1773002
+        ],
+        [
+          1591763,
+          1382908
+        ]
+      ],
+      "sha256": "ec71e59735b364739f001b6b16c04da0ca23ddb1654d02c3526042d2f815d000"
+    },
+    "val": {
+      "episodes": 4000,
+      "frames": 479951,
+      "positive_counts_by_horizon_branch": [
+        [
+          449959,
+          439557
+        ],
+        [
+          392293,
+          341114
+        ]
+      ],
+      "sha256": "d472a56522f40fc1d672a51245208dd9249aea8f5678654eb663c3e7ff2d765e"
+    }
+  },
+  "wall_seconds": 1851.0985762998462,
+  "cpu_core_hours_including_parent": 2.0935028226619443,
+  "gpu_hours": 0
+}

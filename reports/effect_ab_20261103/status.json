@@ -1,0 +1,9 @@
+{
+  "status": "A_signal_gate_failed",
+  "A_signal_completed": true,
+  "A_candidate_diagnostic_completed": false,
+  "B_started": false,
+  "mpc_max_iter": 30,
+  "secondary_checkpoint_iter": 20,
+  "next": "Do not launch B under the registered stop rule; report signal support and proposed revision"
+}

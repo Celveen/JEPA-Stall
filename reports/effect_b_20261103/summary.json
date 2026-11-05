@@ -1,0 +1,658 @@
+{
+  "client_archive_date": "2026-11-05",
+  "environment": "PushObj",
+  "training_seed": 0,
+  "epochs": 3,
+  "tasks_per_arm": 350,
+  "total_tasks": 1400,
+  "max_replans": 30,
+  "gpu_hours": 52.780201638009814,
+  "arms": {
+    "B0": {
+      "groups": {
+        "all": {
+          "n": 350,
+          "success20": 217,
+          "success30": 220,
+          "rate20": 0.62,
+          "rate30": 0.6285714285714286,
+          "mean_first_success_replan_among_successes": 6.804545454545455,
+          "mean_physical_stall_env_steps": 33.84285714285714
+        },
+        "seen": {
+          "n": 200,
+          "success20": 147,
+          "success30": 149,
+          "rate20": 0.735,
+          "rate30": 0.745,
+          "mean_first_success_replan_among_successes": 6.543624161073826,
+          "mean_physical_stall_env_steps": 25.45
+        },
+        "unseen": {
+          "n": 150,
+          "success20": 70,
+          "success30": 71,
+          "rate20": 0.4666666666666667,
+          "rate30": 0.47333333333333333,
+          "mean_first_success_replan_among_successes": 7.352112676056338,
+          "mean_physical_stall_env_steps": 45.03333333333333
+        },
+        "+": {
+          "n": 50,
+          "success20": 36,
+          "success30": 36,
+          "rate20": 0.72,
+          "rate30": 0.72,
+          "mean_first_success_replan_among_successes": 6.0,
+          "mean_physical_stall_env_steps": 28.6
+        },
+        "I": {
+          "n": 50,
+          "success20": 20,
+          "success30": 20,
+          "rate20": 0.4,
+          "rate30": 0.4,
+          "mean_first_success_replan_among_successes": 6.95,
+          "mean_physical_stall_env_steps": 54.3
+        },
+        "L": {
+          "n": 50,
+          "success20": 37,
+          "success30": 37,
+          "rate20": 0.74,
+          "rate30": 0.74,
+          "mean_first_success_replan_among_successes": 6.513513513513513,
+          "mean_physical_stall_env_steps": 22.3
+        },
+        "T": {
+          "n": 50,
+          "success20": 35,
+          "success30": 36,
+          "rate20": 0.7,
+          "rate30": 0.72,
+          "mean_first_success_replan_among_successes": 6.5,
+          "mean_physical_stall_env_steps": 28.3
+        },
+        "Z": {
+          "n": 50,
+          "success20": 39,
+          "success30": 40,
+          "rate20": 0.78,
+          "rate30": 0.8,
+          "mean_first_success_replan_among_successes": 7.1,
+          "mean_physical_stall_env_steps": 22.6
+        },
+        "small_tee": {
+          "n": 50,
+          "success20": 30,
+          "success30": 31,
+          "rate20": 0.6,
+          "rate30": 0.62,
+          "mean_first_success_replan_among_successes": 7.580645161290323,
+          "mean_physical_stall_env_steps": 32.3
+        },
+        "square": {
+          "n": 50,
+          "success20": 20,
+          "success30": 20,
+          "rate20": 0.4,
+          "rate30": 0.4,
+          "mean_first_success_replan_among_successes": 7.4,
+          "mean_physical_stall_env_steps": 48.5
+        }
+      },
+      "paired_vs_B0": {},
+      "candidate_diagnostics": {
+        "model": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/effect_b_20261103/B0",
+        "epoch": "3",
+        "candidate_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f",
+        "latent_visual_mean_norm": 20.844514846801758,
+        "latent_visual_mean_variance": 1.0317126512527466,
+        "latent_visual_effective_rank": 56.17243576049805,
+        "decisions": 64,
+        "latent_proprio_mean_variance": 0.47802114486694336,
+        "scoring_code_sha256": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+        "scale_matching_reference": "B0",
+        "scale_matching_factors": {
+          "visual": 1.0,
+          "proprio": 1.0
+        },
+        "mean_standardized_prediction_MSE": {
+          "visual": 0.10368503630161285,
+          "proprio": 0.0032598948391751037
+        },
+        "mean_rank_pred_encoded": 0.7994944852941177,
+        "mean_rank_pred_physical": 0.7472426470588236,
+        "mean_rank_encoded_physical": 0.8963694852941176,
+        "selected_pred_success_end_count": 24,
+        "selected_encoded_success_end_count": 38,
+        "any_success_candidate_end_count": 42
+      },
+      "final_training_metrics": {
+        "train_z_loss": 0.014773636363224128,
+        "train_z_visual_loss": 0.014993685056218042,
+        "train_z_proprio_loss": 0.006323784415443818,
+        "train_curvature_loss_used_for_training": 0.5254517334961936,
+        "train_loss": 0.02002815358239539,
+        "train_z_visual_err_rollout": 0.5643472075462341,
+        "train_z_proprio_err_rollout": 0.003956231754273176,
+        "train_z_visual_err_rollout_1framestart": 0.5817630887031555,
+        "train_z_proprio_err_rollout_1framestart": 0.01296796090900898,
+        "val_z_visual_err_rollout": 0.2479713261127472,
+        "val_z_proprio_err_rollout": 0.007344603538513184,
+        "val_z_visual_err_rollout_1framestart": 0.05014805123209953,
+        "val_z_proprio_err_rollout_1framestart": 0.007193916477262974,
+        "val_z_loss": 0.012271750637203814,
+        "val_z_visual_loss": 0.01253801516061873,
+        "val_z_proprio_loss": 0.002047206731069761,
+        "val_curvature_loss_used_for_training": 0.5331556260897407,
+        "val_loss": 0.01760330676727932,
+        "epoch": 3,
+        "epoch_seconds": 3244.7208336051553
+      },
+      "checkpoint": {
+        "path": "checkpoints/effect_b_20261103/B0/checkpoints/model_3.pth",
+        "sha256": "eab0e3cce884a81664947ca954b22a0b502dad1517272bd60dddd9dbf9f0bb43"
+      }
+    },
+    "B1": {
+      "groups": {
+        "all": {
+          "n": 350,
+          "success20": 217,
+          "success30": 217,
+          "rate20": 0.62,
+          "rate30": 0.62,
+          "mean_first_success_replan_among_successes": 6.410138248847926,
+          "mean_physical_stall_env_steps": 32.3
+        },
+        "seen": {
+          "n": 200,
+          "success20": 152,
+          "success30": 152,
+          "rate20": 0.76,
+          "rate30": 0.76,
+          "mean_first_success_replan_among_successes": 6.342105263157895,
+          "mean_physical_stall_env_steps": 22.0
+        },
+        "unseen": {
+          "n": 150,
+          "success20": 65,
+          "success30": 65,
+          "rate20": 0.43333333333333335,
+          "rate30": 0.43333333333333335,
+          "mean_first_success_replan_among_successes": 6.569230769230769,
+          "mean_physical_stall_env_steps": 46.03333333333333
+        },
+        "+": {
+          "n": 50,
+          "success20": 36,
+          "success30": 36,
+          "rate20": 0.72,
+          "rate30": 0.72,
+          "mean_first_success_replan_among_successes": 6.111111111111111,
+          "mean_physical_stall_env_steps": 24.7
+        },
+        "I": {
+          "n": 50,
+          "success20": 21,
+          "success30": 21,
+          "rate20": 0.42,
+          "rate30": 0.42,
+          "mean_first_success_replan_among_successes": 7.285714285714286,
+          "mean_physical_stall_env_steps": 46.1
+        },
+        "L": {
+          "n": 50,
+          "success20": 38,
+          "success30": 38,
+          "rate20": 0.76,
+          "rate30": 0.76,
+          "mean_first_success_replan_among_successes": 6.2105263157894735,
+          "mean_physical_stall_env_steps": 19.8
+        },
+        "T": {
+          "n": 50,
+          "success20": 39,
+          "success30": 39,
+          "rate20": 0.78,
+          "rate30": 0.78,
+          "mean_first_success_replan_among_successes": 6.358974358974359,
+          "mean_physical_stall_env_steps": 22.2
+        },
+        "Z": {
+          "n": 50,
+          "success20": 39,
+          "success30": 39,
+          "rate20": 0.78,
+          "rate30": 0.78,
+          "mean_first_success_replan_among_successes": 6.666666666666667,
+          "mean_physical_stall_env_steps": 21.3
+        },
+        "small_tee": {
+          "n": 50,
+          "success20": 26,
+          "success30": 26,
+          "rate20": 0.52,
+          "rate30": 0.52,
+          "mean_first_success_replan_among_successes": 6.115384615384615,
+          "mean_physical_stall_env_steps": 45.9
+        },
+        "square": {
+          "n": 50,
+          "success20": 18,
+          "success30": 18,
+          "rate20": 0.36,
+          "rate30": 0.36,
+          "mean_first_success_replan_among_successes": 6.388888888888889,
+          "mean_physical_stall_env_steps": 46.1
+        }
+      },
+      "paired_vs_B0": {
+        "20": {
+          "rescued": 40,
+          "harmed": 40
+        },
+        "30": {
+          "rescued": 38,
+          "harmed": 41
+        }
+      },
+      "candidate_diagnostics": {
+        "model": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/effect_b_20261103/B1",
+        "epoch": "3",
+        "candidate_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f",
+        "latent_visual_mean_norm": 20.84885025024414,
+        "latent_visual_mean_variance": 1.0419331789016724,
+        "latent_visual_effective_rank": 55.99451446533203,
+        "decisions": 64,
+        "latent_proprio_mean_variance": 0.48213833570480347,
+        "scoring_code_sha256": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+        "scale_matching_reference": "B0",
+        "scale_matching_factors": {
+          "visual": 0.9901908031571665,
+          "proprio": 0.9914605611440511
+        },
+        "mean_standardized_prediction_MSE": {
+          "visual": 0.10624558488052571,
+          "proprio": 0.003727475910636713
+        },
+        "mean_rank_pred_encoded": 0.7965533088235295,
+        "mean_rank_pred_physical": 0.7506433823529411,
+        "mean_rank_encoded_physical": 0.8979319852941177,
+        "selected_pred_success_end_count": 29,
+        "selected_encoded_success_end_count": 38,
+        "any_success_candidate_end_count": 42
+      },
+      "final_training_metrics": {
+        "train_z_loss": 0.01474603596172125,
+        "train_z_visual_loss": 0.014909319403157102,
+        "train_z_proprio_loss": 0.006343269703910266,
+        "train_curvature_loss_used_for_training": 0.5250088414920587,
+        "train_loss": 0.01999612422887769,
+        "train_z_loss_unweighted": 0.014691906533295898,
+        "train_effect_pair_coverage": 0.9809612745002859,
+        "train_z_visual_err_rollout": 0.500867486000061,
+        "train_z_proprio_err_rollout": 0.007319789379835129,
+        "train_z_visual_err_rollout_1framestart": 0.5582147836685181,
+        "train_z_proprio_err_rollout_1framestart": 0.0193766038864851,
+        "val_z_visual_err_rollout": 0.020063482224941254,
+        "val_z_proprio_err_rollout": 0.0033636942971497774,
+        "val_z_visual_err_rollout_1framestart": 0.1187744066119194,
+        "val_z_proprio_err_rollout_1framestart": 0.0045288740657269955,
+        "val_z_loss": 0.013148423427339946,
+        "val_z_visual_loss": 0.013352502626322649,
+        "val_z_proprio_loss": 0.0023951089109495666,
+        "val_curvature_loss_used_for_training": 0.531920483281555,
+        "val_loss": 0.018467628084836086,
+        "val_z_loss_unweighted": 0.013074395802026646,
+        "val_effect_pair_coverage": 0.9796064904830755,
+        "epoch": 3,
+        "epoch_seconds": 3318.539115929976
+      },
+      "checkpoint": {
+        "path": "checkpoints/effect_b_20261103/B1/checkpoints/model_3.pth",
+        "sha256": "c9b4e1eecddece62ff8df8b2fc892868497b4d5b9690cf3e39210cf3a0a0fe37"
+      }
+    },
+    "B2": {
+      "groups": {
+        "all": {
+          "n": 350,
+          "success20": 116,
+          "success30": 116,
+          "rate20": 0.3314285714285714,
+          "rate30": 0.3314285714285714,
+          "mean_first_success_replan_among_successes": 6.112068965517241,
+          "mean_physical_stall_env_steps": 61.98571428571429
+        },
+        "seen": {
+          "n": 200,
+          "success20": 80,
+          "success30": 80,
+          "rate20": 0.4,
+          "rate30": 0.4,
+          "mean_first_success_replan_among_successes": 6.175,
+          "mean_physical_stall_env_steps": 57.475
+        },
+        "unseen": {
+          "n": 150,
+          "success20": 36,
+          "success30": 36,
+          "rate20": 0.24,
+          "rate30": 0.24,
+          "mean_first_success_replan_among_successes": 5.972222222222222,
+          "mean_physical_stall_env_steps": 68.0
+        },
+        "+": {
+          "n": 50,
+          "success20": 19,
+          "success30": 19,
+          "rate20": 0.38,
+          "rate30": 0.38,
+          "mean_first_success_replan_among_successes": 6.105263157894737,
+          "mean_physical_stall_env_steps": 58.3
+        },
+        "I": {
+          "n": 50,
+          "success20": 5,
+          "success30": 5,
+          "rate20": 0.1,
+          "rate30": 0.1,
+          "mean_first_success_replan_among_successes": 6.2,
+          "mean_physical_stall_env_steps": 81.3
+        },
+        "L": {
+          "n": 50,
+          "success20": 18,
+          "success30": 18,
+          "rate20": 0.36,
+          "rate30": 0.36,
+          "mean_first_success_replan_among_successes": 6.444444444444445,
+          "mean_physical_stall_env_steps": 60.4
+        },
+        "T": {
+          "n": 50,
+          "success20": 24,
+          "success30": 24,
+          "rate20": 0.48,
+          "rate30": 0.48,
+          "mean_first_success_replan_among_successes": 5.916666666666667,
+          "mean_physical_stall_env_steps": 51.2
+        },
+        "Z": {
+          "n": 50,
+          "success20": 19,
+          "success30": 19,
+          "rate20": 0.38,
+          "rate30": 0.38,
+          "mean_first_success_replan_among_successes": 6.315789473684211,
+          "mean_physical_stall_env_steps": 60.0
+        },
+        "small_tee": {
+          "n": 50,
+          "success20": 22,
+          "success30": 22,
+          "rate20": 0.44,
+          "rate30": 0.44,
+          "mean_first_success_replan_among_successes": 5.954545454545454,
+          "mean_physical_stall_env_steps": 51.3
+        },
+        "square": {
+          "n": 50,
+          "success20": 9,
+          "success30": 9,
+          "rate20": 0.18,
+          "rate30": 0.18,
+          "mean_first_success_replan_among_successes": 5.888888888888889,
+          "mean_physical_stall_env_steps": 71.4
+        }
+      },
+      "paired_vs_B0": {
+        "20": {
+          "rescued": 23,
+          "harmed": 124
+        },
+        "30": {
+          "rescued": 22,
+          "harmed": 126
+        }
+      },
+      "candidate_diagnostics": {
+        "model": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/effect_b_20261103/B2",
+        "epoch": "3",
+        "candidate_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f",
+        "latent_visual_mean_norm": 19.78005599975586,
+        "latent_visual_mean_variance": 0.16471454501152039,
+        "latent_visual_effective_rank": 16.05406951904297,
+        "decisions": 64,
+        "latent_proprio_mean_variance": 0.8408852815628052,
+        "scoring_code_sha256": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+        "scale_matching_reference": "B0",
+        "scale_matching_factors": {
+          "visual": 6.263640233961045,
+          "proprio": 0.5684736733392809
+        },
+        "mean_standardized_prediction_MSE": {
+          "visual": 0.0054951585889284615,
+          "proprio": 0.00042750178249661985
+        },
+        "mean_rank_pred_encoded": 0.9754595588235294,
+        "mean_rank_pred_physical": 0.6806525735294118,
+        "mean_rank_encoded_physical": 0.7020220588235293,
+        "selected_pred_success_end_count": 22,
+        "selected_encoded_success_end_count": 28,
+        "any_success_candidate_end_count": 42
+      },
+      "final_training_metrics": {
+        "train_z_loss": 0.0004200366849124936,
+        "train_z_visual_loss": 0.0004034763776282578,
+        "train_z_proprio_loss": 0.0010559530234571532,
+        "train_curvature_loss_used_for_training": 0.4280398863659531,
+        "train_loss": 0.11054693753737675,
+        "train_z_loss_unweighted": 0.0004200366849124936,
+        "train_aux_loss": 0.252895472760275,
+        "train_aux_loss_scaled": 0.10584650212259103,
+        "train_z_visual_err_rollout": 0.011293034069240093,
+        "train_z_proprio_err_rollout": 0.00944910105317831,
+        "train_z_visual_err_rollout_1framestart": 0.024036306887865067,
+        "train_z_proprio_err_rollout_1framestart": 0.011733626015484333,
+        "val_z_visual_err_rollout": 0.0036795397754758596,
+        "val_z_proprio_err_rollout": 0.007669416256248951,
+        "val_z_visual_err_rollout_1framestart": 0.00472588324919343,
+        "val_z_proprio_err_rollout_1framestart": 0.010495427064597607,
+        "val_z_loss": 0.00036706370644316963,
+        "val_z_visual_loss": 0.0003509530906647893,
+        "val_z_proprio_loss": 0.0009857118356769612,
+        "val_curvature_loss_used_for_training": 0.4542828895085514,
+        "val_loss": 0.11311155297475925,
+        "val_z_loss_unweighted": 0.00036706370644316963,
+        "val_aux_loss": 0.2585225727725467,
+        "val_aux_loss_scaled": 0.10820166039999447,
+        "epoch": 3,
+        "epoch_seconds": 3239.295767236501
+      },
+      "checkpoint": {
+        "path": "checkpoints/effect_b_20261103/B2/checkpoints/model_3.pth",
+        "sha256": "b3905a5cf4f043f9ba7dc13344fc5634ecea622d26789326a0e85454ba6eebf4"
+      }
+    },
+    "B3": {
+      "groups": {
+        "all": {
+          "n": 350,
+          "success20": 134,
+          "success30": 134,
+          "rate20": 0.38285714285714284,
+          "rate30": 0.38285714285714284,
+          "mean_first_success_replan_among_successes": 6.268656716417911,
+          "mean_physical_stall_env_steps": 52.91428571428571
+        },
+        "seen": {
+          "n": 200,
+          "success20": 100,
+          "success30": 100,
+          "rate20": 0.5,
+          "rate30": 0.5,
+          "mean_first_success_replan_among_successes": 6.12,
+          "mean_physical_stall_env_steps": 46.25
+        },
+        "unseen": {
+          "n": 150,
+          "success20": 34,
+          "success30": 34,
+          "rate20": 0.22666666666666666,
+          "rate30": 0.22666666666666666,
+          "mean_first_success_replan_among_successes": 6.705882352941177,
+          "mean_physical_stall_env_steps": 61.8
+        },
+        "+": {
+          "n": 50,
+          "success20": 17,
+          "success30": 17,
+          "rate20": 0.34,
+          "rate30": 0.34,
+          "mean_first_success_replan_among_successes": 5.588235294117647,
+          "mean_physical_stall_env_steps": 60.9
+        },
+        "I": {
+          "n": 50,
+          "success20": 8,
+          "success30": 8,
+          "rate20": 0.16,
+          "rate30": 0.16,
+          "mean_first_success_replan_among_successes": 7.375,
+          "mean_physical_stall_env_steps": 59.7
+        },
+        "L": {
+          "n": 50,
+          "success20": 30,
+          "success30": 30,
+          "rate20": 0.6,
+          "rate30": 0.6,
+          "mean_first_success_replan_among_successes": 6.133333333333334,
+          "mean_physical_stall_env_steps": 37.0
+        },
+        "T": {
+          "n": 50,
+          "success20": 32,
+          "success30": 32,
+          "rate20": 0.64,
+          "rate30": 0.64,
+          "mean_first_success_replan_among_successes": 5.84375,
+          "mean_physical_stall_env_steps": 26.2
+        },
+        "Z": {
+          "n": 50,
+          "success20": 21,
+          "success30": 21,
+          "rate20": 0.42,
+          "rate30": 0.42,
+          "mean_first_success_replan_among_successes": 6.9523809523809526,
+          "mean_physical_stall_env_steps": 60.9
+        },
+        "small_tee": {
+          "n": 50,
+          "success20": 20,
+          "success30": 20,
+          "rate20": 0.4,
+          "rate30": 0.4,
+          "mean_first_success_replan_among_successes": 6.65,
+          "mean_physical_stall_env_steps": 47.8
+        },
+        "square": {
+          "n": 50,
+          "success20": 6,
+          "success30": 6,
+          "rate20": 0.12,
+          "rate30": 0.12,
+          "mean_first_success_replan_among_successes": 6.0,
+          "mean_physical_stall_env_steps": 77.9
+        }
+      },
+      "paired_vs_B0": {
+        "20": {
+          "rescued": 26,
+          "harmed": 109
+        },
+        "30": {
+          "rescued": 25,
+          "harmed": 111
+        }
+      },
+      "candidate_diagnostics": {
+        "model": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/effect_b_20261103/B3",
+        "epoch": "3",
+        "candidate_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f",
+        "latent_visual_mean_norm": 20.616966247558594,
+        "latent_visual_mean_variance": 1.0407257080078125,
+        "latent_visual_effective_rank": 141.8238983154297,
+        "decisions": 64,
+        "latent_proprio_mean_variance": 0.046124786138534546,
+        "scoring_code_sha256": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+        "scale_matching_reference": "B0",
+        "scale_matching_factors": {
+          "visual": 0.9913396424382377,
+          "proprio": 10.36365010845188
+        },
+        "mean_standardized_prediction_MSE": {
+          "visual": 0.27244915114715695,
+          "proprio": 0.06226250377949327
+        },
+        "mean_rank_pred_encoded": 0.7577665441176471,
+        "mean_rank_pred_physical": 0.6955422794117647,
+        "mean_rank_encoded_physical": 0.85078125,
+        "selected_pred_success_end_count": 28,
+        "selected_encoded_success_end_count": 38,
+        "any_success_candidate_end_count": 42
+      },
+      "final_training_metrics": {
+        "train_z_loss": 0.06186145108652514,
+        "train_z_visual_loss": 0.06330617256405538,
+        "train_z_proprio_loss": 0.006384218706045687,
+        "train_curvature_loss_used_for_training": 0.8958653041318042,
+        "train_loss": 0.07387695826479793,
+        "train_z_loss_unweighted": 0.06186145108652514,
+        "train_effect_active_fraction": 0.1458438925943189,
+        "train_effect_distance_visual": 0.7013932900069736,
+        "train_effect_distance_proprio": 1.0228527531379366,
+        "train_aux_loss": 0.0012387407168888986,
+        "train_aux_loss_scaled": 0.003056854354087034,
+        "train_z_visual_err_rollout": 0.37875622510910034,
+        "train_z_proprio_err_rollout": 0.0043412442319095135,
+        "train_z_visual_err_rollout_1framestart": 0.3526378273963928,
+        "train_z_proprio_err_rollout_1framestart": 0.005116614513099194,
+        "val_z_visual_err_rollout": 0.30299124121665955,
+        "val_z_proprio_err_rollout": 0.0016907776007428765,
+        "val_z_visual_err_rollout_1framestart": 0.33166512846946716,
+        "val_z_proprio_err_rollout_1framestart": 0.0014693388948217034,
+        "val_z_loss": 0.0622622348457877,
+        "val_z_visual_loss": 0.0637939803683552,
+        "val_z_proprio_loss": 0.0034432803278880994,
+        "val_curvature_loss_used_for_training": 0.9108692032434943,
+        "val_loss": 0.07450842731768037,
+        "val_z_loss_unweighted": 0.0622622348457877,
+        "val_effect_active_fraction": 0.14175210392317428,
+        "val_effect_distance_visual": 0.7045452363685207,
+        "val_effect_distance_proprio": 1.0753129561288879,
+        "val_aux_loss": 0.0012714213183570501,
+        "val_aux_loss_scaled": 0.003137500642174566,
+        "epoch": 3,
+        "epoch_seconds": 3311.443189619109
+      },
+      "checkpoint": {
+        "path": "checkpoints/effect_b_20261103/B3/checkpoints/model_3.pth",
+        "sha256": "114fcdc3424971fff601163a5eb03dab24d4296b56331e2b40fe8a1f6378e5dd"
+      }
+    }
+  },
+  "verification": {
+    "passed": true,
+    "chunks_checked": 140,
+    "raw_successes_match_reports": true,
+    "all_initial_modules_and_sampler_hashes_match": true,
+    "paired_start_goal_states_identical": true,
+    "planner_configs_identical": true,
+    "candidate_archive_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f"
+  }
+}

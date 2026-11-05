@@ -1,0 +1,58 @@
+{
+  "authorization": "User approved revised B on PushObj, including B3 positive-only and B1 per-prediction-pair weighting; max 30 MPC replans.",
+  "client_date": "2026-11-04",
+  "environment": "PushObj",
+  "dataset": "data/pushobj_bias_16k",
+  "train_episodes": 16000,
+  "val_episodes": 4000,
+  "training_seed": 0,
+  "epochs": 3,
+  "effective_batch": 64,
+  "frameskip": 5,
+  "observation_frames": 4,
+  "ts_coefficient": 0.01,
+  "arms": {
+    "B0": "Original JEPA + TS",
+    "B1": "Per 5-step predicted pair: weight 2 if visual OR proprio positive evidence, otherwise 1; normalize over the GLOBAL batch; TS unchanged",
+    "B2": "IDM MLP (visual/proprio encoded differences -> corresponding 5 executed actions); no action embedding input",
+    "B3": "Positive-only standardized visual/proprio distance margin 0.2, pairs 0-5,5-10,10-15,0-15; mean over all globally valid branch-pairs; unknowns unconstrained"
+  },
+  "aux_lambdas": {
+    "B2": 0.418538541733931,
+    "B3": 2.4677111194988774
+  },
+  "calibration": "100 TRAIN minibatches of 64; 4000 independent source windows, 6400 deterministic draws (one full permutation plus part of a second); identical order in B2/B3; microbatch16; no updates; match auxiliary visual-encoder gradient norm to 10% of JEPA",
+  "idm_head": {
+    "hidden": 256,
+    "parameters": 103690,
+    "linear_forward_MACs_per_pair": 103424,
+    "seed": 1701,
+    "optimizer": "same AdamW group settings and lr5e-4 as action/proprio; separate parameter group"
+  },
+  "evaluation": {
+    "targets": "data/targets/EVAL50",
+    "tasks": 350,
+    "shapes": 7,
+    "seed": 100,
+    "max_replans": 30,
+    "secondary_replans": 20,
+    "horizon_env_steps": 25,
+    "execute_env_steps": 5,
+    "frozen": true,
+    "online_adaptation": false,
+    "planning_SR": false,
+    "prop_boost": false
+  },
+  "budget": {
+    "total_GPU_hours_hard_max": 100,
+    "training_per_arm_GPU_hours_cap": 18,
+    "evaluation_per_arm_GPU_hours_cap": 6,
+    "all_failed_attempts_charged": true
+  },
+  "limitations": [
+    "Training changes tested first; cannot claim a learned global-static or unsuccessful-action discriminator.",
+    "Old EVAL50 is a development set, not a fresh confirmatory test.",
+    "B1 positive coverage remains high; report its measured weighting contrast.",
+    "Original A failure remains archived; the user explicitly approved relaxing that requirement for positive-only B."
+  ]
+}

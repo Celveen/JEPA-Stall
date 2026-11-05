@@ -1,0 +1,42 @@
+# Approved Phase B evaluation protocol. Requires a B checkpoint and an explicit
+# target chunk; not launched automatically. Native GD objective is unchanged.
+defaults:
+  - escape_plan_gd_pushobj
+  - _self_
+
+seed: 100
+segments_order: file
+n_evals: 10  # EVAL50 has 35 fixed chunks of 10, covering 7 shapes x 50 tasks
+decode_for_viz: false
+n_plot_samples: 0
+wandb_logging: false
+
+hydra:
+  run:
+    dir: eval_outputs/effect_ab_20261103/${model_name}/frozen30_seed${seed}
+
+planner:
+  _target_: planning.stagnation.StagnationMPCPlanner
+  max_iter: 30  # primary endpoint; per_iter_logs retain the 20-replan endpoint
+  n_taken_actions: 5
+  probe:
+    mode: none
+  escape:
+    mode: none
+    proprio_boost: 1.0
+    workspace_clip: false
+    action_cap_px: 0.0
+  stag:
+    kappa: 0.0
+    prop_boost: 1.0
+    start: 4  # diagnostic logging only; zero penalty and no boost
+    window: 3
+    gamma_lo: 0.05
+    gamma_hi: 0.15
+    beta: 0.25
+    alpha: 1.0
+    base: 2.0
+  sub_planner:
+    horizon: 25
+    opt_steps: 100
+  name: effect_ab_frozen_pushobj

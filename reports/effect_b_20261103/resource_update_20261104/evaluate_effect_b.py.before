@@ -1,0 +1,97 @@
+"""Frozen 30-replan PushObj evaluation on the same 350 development targets."""
+import argparse
+import concurrent.futures
+import json
+import os
+import pickle
+import subprocess
+import sys
+import time
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+
+
+def summarize(arm,root,blocks):
+    episodes=[]
+    for block in blocks:
+        path=root/block["chunk"]
+        rows=[json.loads(l) for l in (path/"per_iter_logs.json").open() if l.strip()]
+        targets=pickle.load((path/"plan_targets.pkl").open("rb"))
+        for i in range(block["n"]):
+            history=sorted((r for r in rows if r["sample_idx"]==i and r["step"]<=30),key=lambda r:r["step"])
+            first=next((r["step"] for r in history if r["success"]),None)
+            st0=np.asarray(targets["state_0"])[i].reshape(-1,7)[0]
+            if not history:
+                goal=np.asarray(targets["state_g"])[i].reshape(-1,7)[0]
+                initial_success=np.linalg.norm(st0[:4]-goal[:4])<20 and abs((st0[4]-goal[4]+np.pi)%(2*np.pi)-np.pi)<np.pi/9
+                if not initial_success:raise RuntimeError(f"No records for {block['chunk']}/{i}")
+                first=0
+            elif first is None and len(history)!=30:
+                raise RuntimeError(f"Incomplete failed episode: {block['chunk']}/{i}: {len(history)} replans")
+            states=np.stack([st0]+[r["state"] for r in history])
+            stall=0
+            for j in range(3,len(states)):
+                recent=states[j-3:j+1]
+                agent=np.linalg.norm(recent[:,:2]-recent[0,:2],axis=1).max()
+                obj=np.linalg.norm(recent[:,2:4]-recent[0,2:4],axis=1).max()
+                angle=np.abs((recent[:,4]-recent[0,4]+np.pi)%(2*np.pi)-np.pi).max()
+                stall+=int(agent<10 and obj<5 and angle<np.deg2rad(5))
+            episodes.append({"key":f"{block['chunk']}:{i}","shape":block["shape"],
+                "success20":first is not None and first<=20,"success30":first is not None and first<=30,
+                "first_success_replan":first,"replans":len(history),
+                "physical_stall_window_count":stall,"physical_stall_env_steps":stall*5,
+                "planning_seconds":sum(r.get("t_plan_s",0) for r in history)})
+    if len(episodes)!=350:raise RuntimeError("Expected exactly 350 tasks")
+    out={"arm":arm,"tasks":len(episodes),"primary_max_replans":30,"secondary_max_replans":20,
+         "episodes":episodes,"groups":{},"physical_stall_definition":"4 consecutive replan boundary states; max pusher displacement<10px, object<5px, angle<5deg; endpoint-based diagnostic, not exact dense-time stall duration"}
+    for label,rows in [("all",episodes),("seen",[e for e in episodes if e["shape"] in ("T","L","Z","+")]),
+                       ("unseen",[e for e in episodes if e["shape"] not in ("T","L","Z","+")])]+[(s,[e for e in episodes if e["shape"]==s]) for s in sorted({e["shape"] for e in episodes})]:
+        successes=[e["first_success_replan"] for e in rows if e["success30"]]
+        out["groups"][label]={"n":len(rows),"success20":sum(e["success20"] for e in rows),
+            "success30":sum(e["success30"] for e in rows),
+            "rate20":sum(e["success20"] for e in rows)/len(rows),"rate30":sum(e["success30"] for e in rows)/len(rows),
+            "mean_first_success_replan_among_successes":float(np.mean(successes)) if successes else None,
+            "mean_physical_stall_env_steps":float(np.mean([e["physical_stall_env_steps"] for e in rows]))}
+    reports=ROOT/"reports/effect_b_20261103"
+    if arm!="B0" and (reports/"eval_B0.json").exists():
+        base={e["key"]:e for e in json.loads((reports/"eval_B0.json").read_text())["episodes"]}
+        out["paired_vs_B0"]={}
+        for budget in (20,30):
+            key=f"success{budget}"
+            out["paired_vs_B0"][str(budget)]={"rescued":[e["key"] for e in episodes if e[key] and not base[e["key"]][key]],
+                "harmed":[e["key"] for e in episodes if not e[key] and base[e["key"]][key]]}
+    (reports/f"eval_{arm}.json").write_text(json.dumps(out,indent=2)+"\n")
+    print(json.dumps(out["groups"],indent=2),flush=True)
+
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument("--arm",required=True,choices=["B0","B1","B2","B3"])
+    ap.add_argument("--jobs",type=int,default=4)
+    a=ap.parse_args()
+    ckpt=ROOT/"checkpoints/effect_b_20261103"/a.arm
+    if not (ckpt/"checkpoints/model_3.pth").exists():raise FileNotFoundError("Final epoch checkpoint missing")
+    blocks=json.loads((ROOT/"data/targets/EVAL50/manifest.json").read_text())["blocks"]
+    root=ROOT/"eval_outputs/effect_b_20261103"/a.arm/"frozen30"
+    root.mkdir(parents=True,exist_ok=True)
+    def one(b):
+        out=root/b["chunk"];out.mkdir(exist_ok=True)
+        if (out/"final_eval_results.npz").exists() and (out/"logs.json").exists() and "final_eval/success_rate" in (out/"logs.json").read_text():return True
+        cmd=[sys.executable,"plan.py","--config-name","effect_ab_frozen_pushobj",
+            f"ckpt_base_path={ckpt}",f"model_name={a.arm}","model_epoch=3",
+            f"eval_data_path={ROOT/'data/targets/EVAL50'/(b['chunk']+'.pkl')}",f"n_evals={b['n']}",
+            f"hydra.run.dir={out}"]
+        start=time.monotonic()
+        with (out/"console.log").open("w") as log:
+            result=subprocess.run(cmd,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
+        ok=result.returncode==0 and (out/"final_eval_results.npz").exists()
+        print(f"{a.arm} {b['chunk']} {'DONE' if ok else 'FAIL'} {time.monotonic()-start:.1f}s",flush=True)
+        if not ok:raise RuntimeError(f"Evaluation chunk failed: {out}")
+        return True
+    with concurrent.futures.ThreadPoolExecutor(max_workers=a.jobs) as pool:
+        list(pool.map(one,blocks))
+    summarize(a.arm,root,blocks)
+    subprocess.run([sys.executable,"scripts/effect_candidates.py","--ckpt",str(ckpt),"--epoch","3","--name",a.arm],cwd=ROOT,check=True)
+
+
+if __name__=="__main__":main()

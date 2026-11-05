@@ -1,0 +1,434 @@
+{
+  "limit_gpu_hours": 100.0,
+  "jobs": [
+    {
+      "name": "calibration_smoke",
+      "gpus": [
+        "6"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/calibrate_effect_b.py",
+        "--batches",
+        "2",
+        "--out",
+        "reports/effect_b_20261103/calibration_smoke"
+      ],
+      "started_at": 1793703474.6567385,
+      "guard_pid": 2623202,
+      "max_gpu_hours": 0.3,
+      "status": "completed",
+      "child_pid": 2623204,
+      "ended_at": 1793703484.6733954,
+      "exit_code": 0,
+      "gpu_hours": 0.002782404687669542
+    },
+    {
+      "name": "calibration_fixed100",
+      "gpus": [
+        "6"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/calibrate_effect_b.py"
+      ],
+      "started_at": 1793703495.7820811,
+      "guard_pid": 2624753,
+      "max_gpu_hours": 1.0,
+      "status": "completed",
+      "child_pid": 2624755,
+      "ended_at": 1793703567.88449,
+      "exit_code": 0,
+      "gpu_hours": 0.020028446912765504
+    },
+    {
+      "name": "common_candidates",
+      "gpus": [
+        "6"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/effect_candidates.py",
+        "--create"
+      ],
+      "started_at": 1793756777.1991806,
+      "guard_pid": 4074540,
+      "max_gpu_hours": 2.0,
+      "status": "completed",
+      "child_pid": 4074542,
+      "ended_at": 1793757574.438175,
+      "exit_code": 0,
+      "gpu_hours": 0.2214552762111028
+    },
+    {
+      "name": "distributed_smoke",
+      "gpus": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/smoke_effect_b.py"
+      ],
+      "started_at": 1793756900.310312,
+      "guard_pid": 4077897,
+      "max_gpu_hours": 0.5,
+      "status": "failed",
+      "child_pid": 4077899,
+      "ended_at": 1793756908.3255174,
+      "exit_code": 1,
+      "gpu_hours": 0.008905783759223091
+    },
+    {
+      "name": "distributed_smoke_v2",
+      "gpus": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/smoke_effect_b.py"
+      ],
+      "started_at": 1793756964.119633,
+      "guard_pid": 4079741,
+      "max_gpu_hours": 0.5,
+      "status": "completed",
+      "child_pid": 4079744,
+      "ended_at": 1793757132.3752608,
+      "exit_code": 0,
+      "gpu_hours": 0.18695069763395522
+    },
+    {
+      "name": "planning_smoke",
+      "gpus": [
+        "0"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/smoke_effect_plan.py"
+      ],
+      "started_at": 1793757238.1156282,
+      "guard_pid": 4094959,
+      "max_gpu_hours": 0.2,
+      "status": "completed",
+      "child_pid": 4094965,
+      "ended_at": 1793757290.1985915,
+      "exit_code": 0,
+      "gpu_hours": 0.014467489785618253
+    },
+    {
+      "name": "candidate_scoring_smoke",
+      "gpus": [
+        "0"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/effect_candidates.py",
+        "--ckpt",
+        "checkpoints/effect_b_20261103/smoke/B0",
+        "--epoch",
+        "smoke",
+        "--name",
+        "plumbing_smoke"
+      ],
+      "started_at": 1793757444.92697,
+      "guard_pid": 4100613,
+      "max_gpu_hours": 0.2,
+      "status": "completed",
+      "child_pid": 4100615,
+      "ended_at": 1793757464.959188,
+      "exit_code": 0,
+      "gpu_hours": 0.0055645049942864315
+    },
+    {
+      "name": "train_B0",
+      "gpus": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--nproc_per_node=4",
+        "--master_port=29641",
+        "scripts/train_effect_ab.py",
+        "--config-name",
+        "train_effect_b0",
+        "effect_expected_init=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/effect_b_20261103/calibration/initialization.json"
+      ],
+      "started_at": 1793757653.1800997,
+      "guard_pid": 4106100,
+      "max_gpu_hours": 18.0,
+      "status": "completed",
+      "child_pid": 4106102,
+      "ended_at": 1793767415.3435025,
+      "exit_code": 0,
+      "gpu_hours": 10.846848225328657
+    },
+    {
+      "name": "eval_B0",
+      "gpus": [
+        "6"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/evaluate_effect_b.py",
+        "--arm",
+        "B0"
+      ],
+      "started_at": 1793767415.5881903,
+      "guard_pid": 2032777,
+      "max_gpu_hours": 6.0,
+      "status": "completed",
+      "child_pid": 2032780,
+      "ended_at": 1793773227.9576619,
+      "exit_code": 0,
+      "gpu_hours": 1.6145470754305522
+    },
+    {
+      "name": "train_B1",
+      "gpus": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--nproc_per_node=4",
+        "--master_port=29641",
+        "scripts/train_effect_ab.py",
+        "--config-name",
+        "train_effect_b1",
+        "effect_expected_init=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/effect_b_20261103/calibration/initialization.json"
+      ],
+      "started_at": 1793767415.604447,
+      "guard_pid": 2032776,
+      "max_gpu_hours": 18.0,
+      "status": "completed",
+      "child_pid": 2032781,
+      "ended_at": 1793777467.976644,
+      "exit_code": 0,
+      "gpu_hours": 11.169302441279093
+    },
+    {
+      "name": "eval_multigpu_smoke",
+      "gpus": [
+        "4",
+        "6"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/smoke_effect_multigpu.py"
+      ],
+      "requested_gpus": "6",
+      "shared_existing_processes": {
+        "4": {
+          "memory_mib_before_launch": 2458,
+          "processes": [
+            {
+              "pid": 3958396,
+              "start_ticks": "881023475",
+              "cmdline_sha256": "a0deb226fc305c5c830a5615167e0af306eaa18f6bacf1e985e3f2afc4e374ce"
+            }
+          ]
+        }
+      },
+      "started_at": 1793776424.8406186,
+      "guard_pid": 3384216,
+      "max_gpu_hours": 0.2,
+      "status": "completed",
+      "child_pid": 3384406,
+      "ended_at": 1793776438.862643,
+      "exit_code": 0,
+      "gpu_hours": 0.0077900135517120364
+    },
+    {
+      "name": "eval_B1",
+      "gpus": [
+        "4",
+        "6"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/evaluate_effect_b.py",
+        "--arm",
+        "B1"
+      ],
+      "requested_gpus": "6",
+      "shared_existing_processes": {
+        "4": {
+          "memory_mib_before_launch": 2458,
+          "processes": [
+            {
+              "pid": 3958396,
+              "start_ticks": "881023475",
+              "cmdline_sha256": "a0deb226fc305c5c830a5615167e0af306eaa18f6bacf1e985e3f2afc4e374ce"
+            }
+          ]
+        }
+      },
+      "started_at": 1793777468.2858365,
+      "guard_pid": 4153601,
+      "max_gpu_hours": 6.0,
+      "status": "completed",
+      "child_pid": 4153607,
+      "ended_at": 1793780713.2466936,
+      "exit_code": 0,
+      "gpu_hours": 1.8027560317516327
+    },
+    {
+      "name": "train_B2",
+      "gpus": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--nproc_per_node=4",
+        "--master_port=29641",
+        "scripts/train_effect_ab.py",
+        "--config-name",
+        "train_effect_b2",
+        "effect_expected_init=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/effect_b_20261103/calibration/initialization.json",
+        "model.effect_lambda=0.418538541733931"
+      ],
+      "requested_gpus": "0,1,3,5",
+      "shared_existing_processes": {},
+      "started_at": 1793777468.3239536,
+      "guard_pid": 4153602,
+      "max_gpu_hours": 18.0,
+      "status": "completed",
+      "child_pid": 4153608,
+      "ended_at": 1793787205.3143117,
+      "exit_code": 0,
+      "gpu_hours": 10.818878175682492
+    },
+    {
+      "name": "train_B3",
+      "gpus": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--nproc_per_node=4",
+        "--master_port=29641",
+        "scripts/train_effect_ab.py",
+        "--config-name",
+        "train_effect_b3",
+        "effect_expected_init=/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/effect_b_20261103/calibration/initialization.json",
+        "model.effect_lambda=2.4677111194988774"
+      ],
+      "requested_gpus": "0,1,3,5",
+      "shared_existing_processes": {},
+      "started_at": 1793787205.6762335,
+      "guard_pid": 2070721,
+      "max_gpu_hours": 18.0,
+      "status": "completed",
+      "child_pid": 2070738,
+      "ended_at": 1793797181.3513365,
+      "exit_code": 0,
+      "gpu_hours": 11.08408344772127
+    },
+    {
+      "name": "eval_B2",
+      "gpus": [
+        "4",
+        "6"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/evaluate_effect_b.py",
+        "--arm",
+        "B2"
+      ],
+      "requested_gpus": "6",
+      "shared_existing_processes": {
+        "4": {
+          "memory_mib_before_launch": 2458,
+          "processes": [
+            {
+              "pid": 3958396,
+              "start_ticks": "881023475",
+              "cmdline_sha256": "a0deb226fc305c5c830a5615167e0af306eaa18f6bacf1e985e3f2afc4e374ce"
+            }
+          ]
+        }
+      },
+      "started_at": 1793787205.6980991,
+      "guard_pid": 2070733,
+      "max_gpu_hours": 6.0,
+      "status": "completed",
+      "child_pid": 2070739,
+      "ended_at": 1793792085.2321913,
+      "exit_code": 0,
+      "gpu_hours": 2.710852273437712
+    },
+    {
+      "name": "eval_B3",
+      "gpus": [
+        "4",
+        "6"
+      ],
+      "command": [
+        "/home/appuser/anaconda3/envs/ts/bin/python",
+        "-u",
+        "scripts/evaluate_effect_b.py",
+        "--arm",
+        "B3"
+      ],
+      "requested_gpus": "6",
+      "shared_existing_processes": {
+        "4": {
+          "memory_mib_before_launch": 2458,
+          "processes": [
+            {
+              "pid": 3958396,
+              "start_ticks": "881023475",
+              "cmdline_sha256": "a0deb226fc305c5c830a5615167e0af306eaa18f6bacf1e985e3f2afc4e374ce"
+            }
+          ]
+        }
+      },
+      "started_at": 1793797181.694062,
+      "guard_pid": 4185494,
+      "max_gpu_hours": 6.0,
+      "status": "completed",
+      "child_pid": 4185497,
+      "ended_at": 1793801258.6748917,
+      "exit_code": 0,
+      "gpu_hours": 2.2649893498420717
+    }
+  ],
+  "charged_gpu_hours_as_of_last_check": 52.780201638009814,
+  "last_check": 1793801256.670609
+}
