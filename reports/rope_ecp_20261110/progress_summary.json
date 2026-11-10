@@ -1,6 +1,6 @@
 {
   "status": "partial",
-  "paired_episodes": 10,
+  "paired_episodes": 40,
   "planned_paired_episodes": 50,
   "primary_metric": "final particle Chamfer distance; lower is better",
   "training_or_online_updates": false,
@@ -14,14 +14,14 @@
     "atol": 2e-05,
     "rtol": 2e-05
   },
-  "native_mean_cd": 1.857534881750152,
-  "S_mean_cd": 1.857534881750152,
+  "native_mean_cd": 1.8286075256788288,
+  "S_mean_cd": 1.8286075256788288,
   "mean_S_minus_native": 0.0,
   "relative_mean_cd_reduction_percent": 0.0,
   "improved_episodes": 0,
   "worsened_episodes": 0,
-  "unchanged_within_2e5": 10,
-  "triggered_episodes": 3,
+  "unchanged_within_2e5": 40,
+  "triggered_episodes": 10,
   "action_changed_episodes": 0,
   "exploratory_paired_mean_delta_ci95": [
     0.0,
@@ -29,6 +29,6 @@
   ],
   "all_pre_intervention_checks_passed": true,
   "positive_penalty_candidate_evaluations": 0,
-  "candidate_batches_with_memory": 40,
+  "candidate_batches_with_memory": 160,
   "maximum_added_cost": 0.0
 }
