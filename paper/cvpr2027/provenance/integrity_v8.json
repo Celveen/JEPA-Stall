@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-09",
+  "abstract_words": 181,
+  "original_math_environments_unchanged": 18,
+  "original_tables_unchanged": 15,
+  "added_tables": [
+    "tab:domains",
+    "tab:pusht-archived",
+    "tab:pusht-ecp-pending"
+  ],
+  "external_project_name_in_pdf": false,
+  "unsupported_sota_claim_added": false,
+  "new_model_evaluations_run": false,
+  "trajectory_source_verification": "trajectory_v8_manifest.json",
+  "baseline_source_verification": "../../../reports/pusht_visual_v8/baseline_audit.json"
+}

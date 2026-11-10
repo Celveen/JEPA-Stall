@@ -1,0 +1,68 @@
+{
+  "prepared_date": "2026-11-09",
+  "status": "complete",
+  "training_started": false,
+  "evaluations_started": true,
+  "primary_jobs": 56,
+  "primary_episode_runs": 2800,
+  "smoke_jobs": 16,
+  "smoke_episode_runs": 32,
+  "primary_target_profile": "external50",
+  "configuration_validation": "56 primary and16 smoke Hydra configurations passed",
+  "noise_validation": "passed CPU-only determinism/freshness checks",
+  "remaining": [],
+  "archived_native_runs_loaded": 42,
+  "new_ecp_results": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pusht_visual_v8/verification.json",
+  "smoke_status": "16 jobs complete; 16 paired episodes verified; maximum pre-trigger action difference 0",
+  "execution_host": "Ubuntu-2204-4 / 10.141.224.31",
+  "gpu_ids": [
+    0,
+    1,
+    3,
+    5,
+    6
+  ],
+  "launcher": {
+    "pid": 2993846,
+    "started_utc": "2026-11-09T06:37:24.420814+00:00",
+    "command": [
+      "/home/appuser/anaconda3/envs/ts/bin/python",
+      "-u",
+      "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/pusht_visual_v8/run_pusht_visual.py",
+      "--repo",
+      "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+      "--output",
+      "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pusht_visual_v8",
+      "--gpus",
+      "0,1,3,5,6",
+      "--execute"
+    ],
+    "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pusht_visual_v8/launcher.log",
+    "smoke_verification": "passed",
+    "gpus": [
+      0,
+      1,
+      3,
+      5,
+      6
+    ]
+  },
+  "prior_diagnosis": {
+    "host": "appuser@10.141.224.31",
+    "normal_attempt_exit": 255,
+    "explicit_existing_key_attempt_exit": 255,
+    "error": "Permission denied (publickey,password)",
+    "agent_socket_exists": false,
+    "local_private_key_exists": true,
+    "network_reachable": true,
+    "automatic_approval_rejected": false
+  },
+  "diagnosis_correction": "This task already runs on the GPU server. Sandbox blocked CUDA/NVML; redundant SSH to the same host failed. Escalated local execution has working CUDA on eight RTX3090 GPUs.",
+  "paper_revision": "v13",
+  "paper": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/paper/cvpr2027/paper_v13.pdf",
+  "postprocessing": "All complete primary results imported into reviewed v13 manuscript; v12 simulation figures retained.",
+  "updated_utc": "2026-11-10T03:23:43.501344+00:00",
+  "primary_jobs_complete": 56,
+  "primary_episode_runs_complete": 2800,
+  "pretrigger_pairs_verified": 1400
+}

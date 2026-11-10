@@ -1,0 +1,44 @@
+{
+  "status": "superseded_by_user_approved_budget_change",
+  "updated_utc": "2026-11-10T02:13:14.378758+00:00",
+  "reason": "200 candidates x 10 CEM iterations, top 30 elites; MPC cap 30 unchanged",
+  "archive": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/superseded_cem300x30/20261110T021312Z",
+  "old_outputs_preserved": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1",
+  "stopped": [
+    {
+      "pid": 4017586,
+      "process_group": 4017586,
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/pipeline_launcher.json",
+      "command": "/home/appuser/anaconda3/envs/ts/bin/python -u /home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/queue_evaluation.py ",
+      "state_after_sigterm": "exited"
+    },
+    {
+      "pid": 4291,
+      "process_group": 4291,
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1/ordinary_ecp/chunk_01_I/launcher.json",
+      "command": "/home/appuser/anaconda3/envs/ts/bin/python /home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/evaluate.py --repo /home/appuser/workspace/project/multimodal-test/JEPA-Stall --checkpoint /home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/ordinary --epoch 3 --n-evals 10 --targets /home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_01_I.pkl --output /home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1/ordinary_ecp/chunk_01_I --ecp ",
+      "state_after_sigterm": "exited"
+    },
+    {
+      "pid": 4190945,
+      "process_group": 4190945,
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1/augmented_native/chunk_01_I/launcher.json",
+      "command": "/home/appuser/anaconda3/envs/ts/bin/python /home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/evaluate.py --repo /home/appuser/workspace/project/multimodal-test/JEPA-Stall --checkpoint /home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented --epoch 3 --n-evals 10 --targets /home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_01_I.pkl --output /home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1/augmented_native/chunk_01_I ",
+      "state_after_sigterm": "exited"
+    },
+    {
+      "pid": 4187209,
+      "process_group": 4187209,
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1/augmented_ecp/chunk_01_I/launcher.json",
+      "command": "/home/appuser/anaconda3/envs/ts/bin/python /home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/evaluate.py --repo /home/appuser/workspace/project/multimodal-test/JEPA-Stall --checkpoint /home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented --epoch 3 --n-evals 10 --targets /home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_01_I.pkl --output /home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1/augmented_ecp/chunk_01_I --ecp ",
+      "state_after_sigterm": "exited"
+    },
+    {
+      "pid": 5397,
+      "process_group": 5397,
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1/ordinary_native/chunk_01_I/launcher.json",
+      "command": "/home/appuser/anaconda3/envs/ts/bin/python /home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/evaluate.py --repo /home/appuser/workspace/project/multimodal-test/JEPA-Stall --checkpoint /home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/ordinary --epoch 3 --n-evals 10 --targets /home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_01_I.pkl --output /home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v1/ordinary_native/chunk_01_I ",
+      "state_after_sigterm": "exited"
+    }
+  ]
+}

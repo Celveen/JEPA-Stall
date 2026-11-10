@@ -1,0 +1,24 @@
+{
+  "n": 100,
+  "successes_at30": 48,
+  "budget_replans": 30,
+  "action_repeat": 4,
+  "released_checkpoint": "checkpoints/diversemaze_layout_shift",
+  "online_updates": false,
+  "same_initial_and_goal_arrays_as_adajepa": true,
+  "sources": {
+    "eval_outputs/stag_maze100_ar4/medium/frozen/ref/shard01/per_iter_logs.json": "2144449a590c1d9f39261333adff8230543ac3552f8122f09f0d6abab974b42b",
+    "eval_outputs/stag_maze100_ar4/medium/frozen/ref/shard02/per_iter_logs.json": "fa1e04911d5641c53711914f3403aa036e31fb5128cd79a894de4c214184536d",
+    "eval_outputs/stag_maze100_ar4/medium/frozen/ref/shard03/per_iter_logs.json": "78ff874edbf8b70a2c8f3c3c930af6bd3db100a651d7ca548cce5c3cac26b394",
+    "eval_outputs/stag_maze100_ar4/medium/frozen/ref/shard00/per_iter_logs.json": "5cfcb5e605096efce649be48eab276a1e1e5e112fdafef236c2b0838d0f2ba0c",
+    "eval_outputs/stag_maze100_ar4/medium/frozen/ref/shard00/plan_targets.pkl": "238c2af78a8b14651412def0f6fb52ea25edb2964ac57afe8c4c6858873da73d",
+    "eval_outputs/stag_maze100_ar4/medium/frozen/ref/shard01/plan_targets.pkl": "238c2af78a8b14651412def0f6fb52ea25edb2964ac57afe8c4c6858873da73d",
+    "eval_outputs/stag_maze100_ar4/medium/frozen/ref/shard02/plan_targets.pkl": "238c2af78a8b14651412def0f6fb52ea25edb2964ac57afe8c4c6858873da73d",
+    "eval_outputs/stag_maze100_ar4/medium/frozen/ref/shard03/plan_targets.pkl": "238c2af78a8b14651412def0f6fb52ea25edb2964ac57afe8c4c6858873da73d"
+  },
+  "rerun_smoke": {
+    "status": "passed",
+    "episodes": 2
+  },
+  "frozen_correction_status": "running; primary S; secondary S+P"
+}

@@ -1,0 +1,42 @@
+{
+  "pid": 3108987,
+  "command": [
+    "/home/appuser/anaconda3/envs/ts/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=2",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/train_native.py",
+    "--repo",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+    "--data",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/pushobj_bias_16k",
+    "--output",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented",
+    "--epochs",
+    "100",
+    "--workers",
+    "6"
+  ],
+  "started_utc": "2026-11-09T08:01:48.534450+00:00",
+  "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented",
+  "status": "replaced_by_three_epoch_resume",
+  "gpus": [
+    3,
+    5
+  ],
+  "pytorch_memory_cap_gib_per_gpu": 4,
+  "measured_smoke_peak_gib_per_gpu": 1.247,
+  "free_memory_mib_at_start": {
+    "0": 23419,
+    "1": 23419,
+    "2": 15032,
+    "3": 23422,
+    "4": 21795,
+    "5": 23422,
+    "6": 23466,
+    "7": 23425
+  },
+  "stopped_utc": "2026-11-09T08:34:07.386764+00:00",
+  "checkpoint": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented/checkpoints/model_latest.pth"
+}

@@ -1,5 +1,10 @@
 # Stalls in latent world-model MPC
 
+## CVPR 2027 manuscript and results
+
+The current draft and reproducible result package are on this branch: [paper PDF](paper/cvpr2027/paper_v14.pdf), [editable source](paper/cvpr2027/README.md), and [evaluation data and logs](reports/publication_v14/README.md). The paper includes the completed Frozen/AdaJEPA evaluation and the random-data epoch-3 DINO-WM CEM PushT baseline. The new DINO-WM PushObj run is archived separately as an in-progress snapshot.
+
+
 Research code for studying why test-time-adapted latent world-model MPC gets stuck ("stalls") and how a
 planner can detect and escape it. Experiments run on PushObj (shape shift), the multi-layout point maze, and the standard Wall baseline.
 

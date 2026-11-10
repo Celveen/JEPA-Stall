@@ -1,0 +1,131 @@
+\subsection{Ablation studies}
+\label{sec:analysis}
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Data augmentation and planning correction contribute complementary gains.} PushObj success (\%) on the same 350 tasks. Each column fixes the update rule; ECP uses $S{+}P$.}
+\label{tab:data-recipe}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{llrr}
+\toprule
+Training data & Planner & Frozen & AdaJEPA\\
+\midrule
+Official released & Native &43.7&69.4\\
+Data augmentation & Native &61.1&74.9\\
+Data augmentation & ECP &\textbf{72.3}&\textbf{76.9}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Data augmentation and correction are complementary.}
+The augmentation recipe improves frozen success by 17.4 points and adaptive success by 5.4 points (\cref{tab:data-recipe}). ECP adds 11.1 and 2.0 points with the same respective checkpoints. These gains support improving both the interaction experience available during training and the action objective used during execution. Retained training trajectories average 60.6 contact steps; the collection procedure and training settings appear in \cref{sec:implementation}.
+
+
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig5_execution_recovery.pdf}
+\caption{\textbf{ECP recovers failures across additional object and navigation tasks.} All eight pairs use different tasks from \cref{fig:teaser}. Each pair shows native failure (left) and ECP success (right); numbers denote terminating replans. Six PushObj shapes complement the I-shaped example, and two further Maze tasks cover frozen and adaptive control. Solid paths use verified simulator replay, dots mark five-control intervals, arrows show direction, and stars mark agent goals. Start and goal views appear in \cref{fig:diverse-execution}.}
+\label{fig:execution-recovery}
+\end{figure*}
+
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Component ablation on PushObj.} Success (\%) on the same tasks and 30-replan budget. $S$ denotes memory-based stagnation regularization; $P$ denotes temporary proprioceptive reweighting. Each row fixes the checkpoint and update policy. The best result within each row is bold.}
+\label{tab:components}
+\small
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{llrrrr}
+\toprule
+Checkpoint & Updates & Native & $S$ & $P$ & $S{+}P$\\
+\midrule
+Official & Frozen &43.7&44.9&\textbf{60.0}&59.7\\
+Official & AdaJEPA &69.4&71.4&72.9&\textbf{73.1}\\
+Data aug. & Frozen &61.1&62.6&\textbf{72.3}&\textbf{72.3}\\
+Data aug. & AdaJEPA &74.9&76.0&\textbf{77.1}&76.9\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Both components improve native planning.}
+Across both checkpoints and update policies, stagnation regularization and temporary goal reweighting each improve native PushObj success (\cref{tab:components}). Reweighting supplies the largest manipulation gains: frozen success rises from 43.7\% to 60.0\% with the official model and from 61.1\% to 72.3\% with the augmented-data model. Combined correction improves the four native baselines by 16.0, 3.7, 11.1, and 2.0 points, respectively. Its result remains within one task of reweighting alone in every setting. The components therefore serve distinct recovery needs: goal-component emphasis dominates the measured PushObj gains, while the Maze controls below isolate the benefit of spatial stagnation memory.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Conditional activation preserves effective behavior.} Frozen PushObj planning with the interaction-biased checkpoint. Permanent and triggered weighting use the same $10\times$ multiplier. Rescue/harm counts are paired changes relative to native MPC.}
+\label{tab:timing}
+\small
+\begin{tabular}{lrr}
+\toprule
+Planning variant & Success (\%) & Rescue / harm\\
+\midrule
+Native MPC &61.1&---\\
+Permanent weighting &66.3&50 / 32\\
+Triggered regularization $S$ &62.6&5 / 0\\
+Triggered weighting $P$ &\textbf{72.3}&39 / 0\\
+Triggered $S{+}P$ &\textbf{72.3}&39 / 0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Conditional intervention preserves successful behavior.}
+Conditional reweighting recovers failed tasks while retaining successful executions. With the same $10\times$ multiplier, conditional activation solves 253 tasks versus 232 for permanent reweighting (\cref{tab:timing}). Permanent weighting recovers 50 failures but changes 32 native successes into failures. Conditional weighting instead retains all 214 native successes and recovers 39 failures. The 21-task advantage shows why execution feedback is useful: it applies the change after observed stagnation while preserving the native objective beforehand.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Joint latent memory improves success across the tested strengths.} Success (\%) with the interaction-biased PushObj model and AdaJEPA. Proprioceptive reweighting is disabled; the native baseline is 74.9\%. All settings share the same trigger and $\beta=0.25$.}
+\label{tab:memory-strength}
+\small
+\begin{tabular}{lrrr}
+\toprule
+Memory distance & $\kappa=0.5$ & $\kappa=2$ & $\kappa=8$\\
+\midrule
+Proprioceptive &75.1&74.9&75.1\\
+Joint latent &75.4&\textbf{76.0}&75.7\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Joint latent memory supports scene-aware correction.}
+Joint visual/proprioceptive memory improves on the native 74.9\% success rate at every tested strength, reaching 76.0\% at $\kappa=2$ (\cref{tab:memory-strength}). Proprioceptive-only memory reaches 75.1\%. Including the visual state allows the regularizer to distinguish scene configurations that share an agent position. All six variants retain every native success under the fixed checkpoint, update rule, and trigger. \Cref{sec:additional-controls} provides exact counts and settings.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Correction scheduling during adaptation on Maze.} Success (\%) on 100 tasks at 30 replans. Corrective variants continue online updates; the two freeze controls disable both $S$ and $P$. Rescue/harm is relative to native AdaJEPA.}
+\label{tab:maze}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrr}
+\toprule
+Intervention & Activation & Success & Rescue / harm\\
+\midrule
+None &---&63&---\\
+$S{+}P$ &First stall&66&7 / 4\\
+$S{+}P$ &Fixed delay&61&2 / 4\\
+$S{+}P$ &Loss gate&65&2 / 0\\
+$S$ only &Loss gate&66&3 / 0\\
+$P$ only &Loss gate&64&1 / 0\\
+\midrule
+Freeze, no $S/P$ &First stall&55&3 / 11\\
+Freeze, no $S/P$ &Loss gate&63&2 / 2\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Correction complements continued adaptation.}
+Gated memory achieves 66 Maze successes while retaining all 63 native successes (\cref{tab:maze}). Immediate $S{+}P$ correction also solves 66 tasks, with seven recoveries and four regressions; gated $S{+}P$ solves 65 with two recoveries and no regression. Thus the activation schedule changes which tasks benefit even when aggregate rates coincide. A fixed ten-replan delay gives 61 successes. Freezing adaptation gives 55 successes at the first stall and 63 at the loss gate, with both correction components disabled. These controls favor coordinating the planning objective with ongoing model learning. \Cref{sec:extended} reports extended budgets and paired statistics.
+
+Additional training-objective and action-space controls are reported in \cref{sec:training-screen,sec:replication}.
+
+
+
+\subsection{Qualitative analysis of recovery}
+\label{sec:qualitative}
+
+ECP converts repeated local motion into task completion in the matched executions of \cref{fig:teaser,fig:execution-recovery}. Over replans 15--30, the frozen PushObj pusher travels 505.4 pixels within an 11.8-by-17.1-pixel region, yet its net displacement is only 0.54 pixels. The enlarged trace in \cref{fig:teaser} reveals repeated excursions that are difficult to distinguish at scene scale. The object is already within 4.0 pixels of its goal, but the pusher remains 45.3 pixels away. Combined correction follows the same first 15 plans, then reduces pusher error to 10.2 pixels and succeeds at replan 17. The joint-error trace in \cref{fig:push-distance} shows this transition from stagnation to completion. Together, the two main figures cover all seven PushObj geometries using distinct task instances. The adaptive T-shaped case completes at replan 12, and the frozen small-T case completes at replan 14. Full-task success rates appear in \cref{tab:domains}.
+
+% End the final body-page columns at paragraph boundaries.
+\newpage
+In Maze, the AdaJEPA baseline travels 45.1 units over replans 7--30 while repeatedly traversing the same corridor; its final position differs from its position at replan seven by less than 0.001 units. Gated regularization redirects the subsequent trajectory and reaches the goal at replan 27. Both runs share the initial model and task and execute identical actions through replan six. These cases visualize the two recovery mechanisms measured in the ablations: completing the remaining goal component and leaving a repeatedly visited region. The frozen Maze case reaches the goal at replan 28 with memory regularization, after sharing the first 13 plans with the failed baseline. The solid trajectories follow replayed physics steps and preserve corridor turns; each replay matches every logged replan endpoint. Additional start and goal states appear in \cref{fig:diverse-execution}.

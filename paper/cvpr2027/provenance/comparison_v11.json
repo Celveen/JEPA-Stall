@@ -1,0 +1,159 @@
+{
+  "primary_jobs_complete": 12,
+  "primary_jobs_total": 56,
+  "conditions": [
+    "clean",
+    "blur",
+    "snp",
+    "dark",
+    "redAgent",
+    "redBlock",
+    "redAnchor"
+  ],
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "primary_results": [
+    {
+      "id": "released/clean/seed100/frozen",
+      "score_percent": 60.0,
+      "fingerprint": "507cfec6b89684bf1dff7a194d6cd2f02f3705706186aa7378208f3c8c9ea3f5",
+      "raw_sha256": "d3266eec8832aa8cc94d75cdadc549e474f91f87d79f7b852690f2c31d5a629d"
+    },
+    {
+      "id": "released/clean/seed100/frozen_ecp",
+      "score_percent": 68.0,
+      "fingerprint": "6f03ca268c15348fd8625be69a0a0089bc26d0245539e7cae9d9c70c92c0eb05",
+      "raw_sha256": "70ba4f7b2e2a8bac948f025f65b121a323cf26359093c3661ecb59e5c57d8858"
+    },
+    {
+      "id": "released/clean/seed100/adajepa",
+      "score_percent": 82.0,
+      "fingerprint": "65799b9973dd8470f16f0336af038755512863bba626f7880bdb8da7844618d9",
+      "raw_sha256": "61ca0cd67d7a4bcebbe7ad4e859f5dd0fa95a27d4ee29887c4b7bb3b0054f62d"
+    },
+    {
+      "id": "released/clean/seed100/adajepa_ecp",
+      "score_percent": 84.0,
+      "fingerprint": "98c92a0ae7c3897a831f25d1e167095eba7c4830116d2e25bcb4b1b9ab117069",
+      "raw_sha256": "b4357d82bc1b8d04148b845242fc9c8bd9fe175e5427a767f933e341e8ccb7d7"
+    },
+    {
+      "id": "augmented/clean/seed100/frozen",
+      "score_percent": 72.0,
+      "fingerprint": "015610c46652d9384da7d41f024462788eecb43476ddfbe9a11732fc81bc1138",
+      "raw_sha256": "f555b9a78715b44fde370c3af11d56053a9f17ca0ff7cfeebaa145eeb2dd241d"
+    },
+    {
+      "id": "augmented/clean/seed100/frozen_ecp",
+      "score_percent": 82.0,
+      "fingerprint": "eeb3a9974de6c6fcbe0372393a5655b948784a8e884bf8ae05f4572e9a43b805",
+      "raw_sha256": "8484c363c288f72a998b9d301fb8da19e79f548c10a815b2764ee388937fe0d2"
+    },
+    {
+      "id": "augmented/clean/seed100/adajepa",
+      "score_percent": 86.0,
+      "fingerprint": "87db2d2a88f87b7848760b846f7de9c31d7235edfe565111a290c83236693ff2",
+      "raw_sha256": "e7fd5720d9cdc2410084aa65b2b2aec161fe2f801f034e6fb4c5aaffd3ce3a4b"
+    },
+    {
+      "id": "augmented/clean/seed100/adajepa_ecp",
+      "score_percent": 86.0,
+      "fingerprint": "5c40b7205bf370db219f044b077535fe758c3adc7edbabad665f17d45f93d7cd",
+      "raw_sha256": "10ae0db3931dfdccbb215772110314b5bb59208665cd3f409c2d4a4d887607b7"
+    },
+    {
+      "id": "released/redBlock/seed100/frozen",
+      "score_percent": 10.0,
+      "fingerprint": "0812efd2a74473e53606ee6f4402345ea1485472146cb475e8a797962e0bd548",
+      "raw_sha256": "0ff9160aa01ec92316bd7f57c738cb435c2449db66ad1fcafd2a18206fb16385"
+    },
+    {
+      "id": "released/redBlock/seed100/frozen_ecp",
+      "score_percent": 10.0,
+      "fingerprint": "27dc5a28aedeb256ad618ef59c9a3d3a6c675d072cf31e7f6744a8d9af47cf42",
+      "raw_sha256": "8b2c04f91152acee827deb94fa91aeca83dbf87ff1207acf43e09055a0d3df60"
+    },
+    {
+      "id": "released/redBlock/seed100/adajepa",
+      "score_percent": 10.0,
+      "fingerprint": "81d43b947696b74b4f7fd640a62fb8029bfa2a9e3a91aa8469577a103eed1b52",
+      "raw_sha256": "d9b71b686a8ce1f23b10dc7aaff4d75a8c0b4076f1d15de8cdac55089cee5951"
+    },
+    {
+      "id": "augmented/redBlock/seed100/frozen",
+      "score_percent": 12.0,
+      "fingerprint": "a8fb185cb789389c1c50f7fd1fc0e1c48b589fba3572784d379f2e5a9e0b1e28",
+      "raw_sha256": "596c8dc40dd2419cb27deb530b1c9db73f1955b9b206cf02b5e5caa8c68ab44e"
+    }
+  ],
+  "baseline_rows": [
+    {
+      "method": "DINO-WM",
+      "planner": "GD",
+      "success_percent": [
+        50,
+        44,
+        8,
+        50,
+        44,
+        36,
+        46
+      ]
+    },
+    {
+      "method": "LeWM",
+      "planner": "GD",
+      "success_percent": [
+        64,
+        62,
+        62,
+        58,
+        4,
+        16,
+        34
+      ]
+    },
+    {
+      "method": "DINO-WM",
+      "planner": "CEM",
+      "success_percent": [
+        null,
+        66,
+        4,
+        76,
+        74,
+        46,
+        76
+      ]
+    },
+    {
+      "method": "LeWM",
+      "planner": "CEM",
+      "success_percent": [
+        null,
+        66,
+        64,
+        64,
+        2,
+        20,
+        26
+      ]
+    },
+    {
+      "method": "DDP-WM",
+      "planner": "CEM",
+      "success_percent": [
+        null,
+        56,
+        22,
+        66,
+        62,
+        42,
+        68
+      ]
+    }
+  ],
+  "smoke_used_as_primary": false,
+  "main_comparison": "PushObj two task sets in separate columns; PushT shared50; all at150 controls",
+  "pushobj_reference_scores_in_separate_column": true,
+  "pushobj_reference_provenance": "pushobj_baseline_data_v11.json"
+}

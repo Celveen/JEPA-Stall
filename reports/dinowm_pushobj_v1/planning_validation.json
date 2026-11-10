@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "rollout_and_cem_max_abs_errors": {
+    "history1/visual": 0.0,
+    "history1/proprio": 0.0,
+    "history3/visual": 0.0,
+    "history3/proprio": 0.0,
+    "cem_actions": 0.0
+  },
+  "positive_stay_penalty": 0.12712031602859497,
+  "goal_penalty": 0.0,
+  "paired_targets_equal": true,
+  "pre_trigger_actions_bitwise_equal": true,
+  "forced_smoke_first_trigger": 2,
+  "proprio_boost_exercised": true,
+  "no_online_weight_updates_in_smoke": true,
+  "smoke_scores_are_not_experiment_results": true
+}

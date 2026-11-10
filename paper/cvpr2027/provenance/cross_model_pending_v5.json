@@ -1,0 +1,46 @@
+{
+  "status": "pending matched evaluation; no new experiment run",
+  "benchmark": "PushObj, 350 tasks, maximum 30 replans",
+  "cross_method_rows": [
+    {
+      "method": "DINO-WM",
+      "success_percent": null,
+      "status": "not evaluated under shared local protocol"
+    },
+    {
+      "method": "LeWM",
+      "success_percent": null,
+      "status": "not evaluated under shared local protocol"
+    },
+    {
+      "method": "DDP-WM",
+      "success_percent": null,
+      "status": "not evaluated under shared local protocol"
+    },
+    {
+      "method": "Ours (final)",
+      "success_count": 269,
+      "task_count": 350,
+      "success_percent": 76.85714285714286,
+      "variant": "interaction-biased checkpoint + AdaJEPA + S+P",
+      "status": "existing development-suite result; reference only until matched evaluation"
+    }
+  ],
+  "portability_pairs": [
+    {
+      "model": "DINO-WM",
+      "native": null,
+      "plus_S": null
+    },
+    {
+      "model": "LeWM",
+      "native": null,
+      "plus_S": null
+    },
+    {
+      "model": "DDP-WM",
+      "native": null,
+      "plus_S": null
+    }
+  ]
+}

@@ -1,0 +1,550 @@
+{
+  "created_utc": "2026-11-09T05:41:43.057318+00:00",
+  "assets": {
+    "checkpoints/pusht_visual_shift/checkpoints/model_latest.pth": "9098082f1d40bfa7b4f4884571db30a0fed4a0aa26ad7dab8db11415437b8b32",
+    "checkpoints/pushobj_T16k_bias_e3_seed0/checkpoints/model_3.pth": "2aceb5a512b6d3b0f3e38507cdad35110734e1105d73a09bb7049b9f4e93ebe6"
+  },
+  "code": {
+    "plan.py": "2bbaad23ecd9cd067e164a4ddf0b633a3b524223257528bb73e2db93577b08bb",
+    "conf/escape_plan_gd_pushobj.yaml": "ce217699aa9fa60e3756544e1b96d44ce95706d71fe6237b527448d282c48653",
+    "planning/stagnation.py": "c237297896be7be77d9e8962bdf292d05cd1022bc8d527addd709827c0bcfce0",
+    "planning/escape.py": "61a0ae3d650330000f6b43e08b2553bcdd40610f5c79b61f2ed5bad71db4a2ae",
+    "planning/adajepa_probe.py": "25fd05354e1e818736d4641ccf66a9cf3da44bdeb5f20f336e9572f337b6ecd1",
+    "planning/adajepa.py": "c8f079a91df184d35cb20c5990e547473aa9694cd8c2b29661cc97a4895737ae",
+    "planning/adajepa_mpc.py": "c2d7130c6331414599f840e2eeacd7cf28d5fcf21a5758eab72c1d2db5a9a015",
+    "planning/mpc.py": "767bef7c35bffbcbafb3e6a30460d11dd18590785fc1c8470bc7bd3c042e5975",
+    "planning/gd.py": "c1815a91e27df9153ee845f3d1d9df3a02b9a0db7ba0c751ee0db0191911ca64",
+    "planning/evaluator.py": "275412752b4b0724ddca70165739861a29d4acc7d5da45e2c33ed1045a4905eb",
+    "planning/objectives.py": "3d45b48728cdded0ff4bc75cc28f57e9a8db71b7d49681069216967f6f64d0c1",
+    "planning/image_corruption.py": "eeab9dc0549f4c198fb9991d9b608ca6caecdd5ff50c86fd55717be70bb09afd",
+    "env/pusht/pusht_env.py": "e76a4cf6d1dd143156dcfa25076371c76a238f6d523415ae74a387b7b0919378",
+    "env/pusht/pusht_wrapper.py": "939dc7db9ac4f6f5da4ad550fafe96a91a28090e164d1053c4c02c02b57e4cb1",
+    "checkpoints/pusht_visual_shift/hydra.yaml": "453b201d220e362fcf5df85b116b0f369419b65fec49951f9678a6856db5053a",
+    "checkpoints/pushobj_T16k_bias_e3_seed0/hydra.yaml": "74478ebcae6677f6dbd3cb27c8f4b3f960e0ab2d4553a5c535af85c35ed3016b",
+    "runner": "69a950c6570108c8f89f6eccf1cbcb3facfe0be48fd367227fa6f3d74b2acfcd",
+    "evaluate_pusht_visual.py": "d78904da3abd37021031b96f7bf65c0a0717eebf6b1703b34dc7bf2c1a3bd937",
+    "paired_noise.py": "4a38a01a3d10afb51c988c74475dff35832ed3a37cddc1953e362ff188698f15"
+  },
+  "jobs": [
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/clean/seed100/frozen",
+      "fingerprint": "c0b2f2036ee5e9ed7715dbc827f3edb7248b2ec3e377127a53e01523b382d83c"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/clean/seed100/frozen_ecp",
+      "fingerprint": "4919e3884d7e3f9b575cbb37763ea27cb7f7ac7e18a0503b1c745e3cb9340fd3"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/clean/seed100/adajepa",
+      "fingerprint": "72ac26f21d14bd38f2a235cf76192569d82dd539604ade6da01ba41a9a4ffb59"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/clean/seed100/adajepa_ecp",
+      "fingerprint": "fff7d3f36a41087fd90b76950fafd416de47c8abcbcfa2d7f8dcae69f180a59c"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/clean/seed100/frozen",
+      "fingerprint": "fd71e09afaa96c89a4a8b1304c617710b4aaee541915db163f0d59f2ef56a7b5"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/clean/seed100/frozen_ecp",
+      "fingerprint": "f1f152a2b9ecaf43e8a484d40d8e811052a50111868e908dc338ad314a8b3a1e"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/clean/seed100/adajepa",
+      "fingerprint": "f74ef56f96dc087311880943595557a542b04c250bb684d9559d15a561f73e6e"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/clean/seed100/adajepa_ecp",
+      "fingerprint": "aaa63c75f7d894a75490301bf6d09c7ed0dc6b79a642a5f54b99738b102e73a0"
+    },
+    {
+      "condition": "redBlock",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/redBlock/seed100/frozen",
+      "fingerprint": "d9ec00b6de76af89431998dadd78aad1ac41b3a5b38e8417a49b64f1bc2b90f1"
+    },
+    {
+      "condition": "redBlock",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/redBlock/seed100/frozen_ecp",
+      "fingerprint": "afdb57fac3fd0abd90abe6f8b4998f6140d141a6c4298eb0d18fa3f556293acd"
+    },
+    {
+      "condition": "redBlock",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/redBlock/seed100/adajepa",
+      "fingerprint": "994cef84dcab15926d8c975e36ca210f3b5b42fb1b5386b0132bfc71a942e964"
+    },
+    {
+      "condition": "redBlock",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/redBlock/seed100/adajepa_ecp",
+      "fingerprint": "73169ed462e9a92e6100a57b081d261892797b8356cc2d740dca01a4a91b056f"
+    },
+    {
+      "condition": "redBlock",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/redBlock/seed100/frozen",
+      "fingerprint": "18a6bd7c932add0f1613c776a3a5f9681a030ec53a406fd89adc16be6f784706"
+    },
+    {
+      "condition": "redBlock",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/redBlock/seed100/frozen_ecp",
+      "fingerprint": "7957e5ff8cd5030e3c2116995693bda73bbab6552c83e9a6254a6e05422371dd"
+    },
+    {
+      "condition": "redBlock",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/redBlock/seed100/adajepa",
+      "fingerprint": "2c71f92ebc80503b540ddd381dd59c24178ca5bdecd0af098016a1a4e518061c"
+    },
+    {
+      "condition": "redBlock",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/redBlock/seed100/adajepa_ecp",
+      "fingerprint": "2a8290a9422721e204edfd896aaa271117dd00e591f332d738a06237854c9c6e"
+    },
+    {
+      "condition": "redAnchor",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/redAnchor/seed100/frozen",
+      "fingerprint": "869f922232de53d9d2c5302db875682d10f35d5e9e95704869c800bcf4142ea7"
+    },
+    {
+      "condition": "redAnchor",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/redAnchor/seed100/frozen_ecp",
+      "fingerprint": "63f3813a02856248c909fcf91b76a10c1f1c92ff20608ab1804c2ccfc6e0c8b9"
+    },
+    {
+      "condition": "redAnchor",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/redAnchor/seed100/adajepa",
+      "fingerprint": "1bd9aa6f2431edee798c09dfffe831009cd9c23536844ac2021407dd6245618d"
+    },
+    {
+      "condition": "redAnchor",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/redAnchor/seed100/adajepa_ecp",
+      "fingerprint": "4825d30f49859b6317006167f98b0e7eeb5eb8883f727ce88fba06796e10428a"
+    },
+    {
+      "condition": "redAnchor",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/redAnchor/seed100/frozen",
+      "fingerprint": "6c86cf7b746cd5c9a2b9141c46de4fad6acdbbb92d5be4ee2583ac1c3965e614"
+    },
+    {
+      "condition": "redAnchor",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/redAnchor/seed100/frozen_ecp",
+      "fingerprint": "0896510f553b8779d8645bd2aa4a3aad3093da98b4964a3ac96bee6ed2f2f998"
+    },
+    {
+      "condition": "redAnchor",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/redAnchor/seed100/adajepa",
+      "fingerprint": "85e25bfab9c26e56a4a37ff8cbb192759075705288ff4e4a1bfe5dec5a5f7b2b"
+    },
+    {
+      "condition": "redAnchor",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/redAnchor/seed100/adajepa_ecp",
+      "fingerprint": "09e002b0b0f78833eabcdcdcbca1295f1e82380421e733fda91cf78ecae6f6c4"
+    },
+    {
+      "condition": "redAgent",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/redAgent/seed100/frozen",
+      "fingerprint": "f4b4e0e09c62369c6ee7256cff79e143b84690dc6765ada726ef5e67bdfbe250"
+    },
+    {
+      "condition": "redAgent",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/redAgent/seed100/frozen_ecp",
+      "fingerprint": "c86648d7b24365af6d6dce4476750b5fd9f03c62286a008dc98dc163d7da646c"
+    },
+    {
+      "condition": "redAgent",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/redAgent/seed100/adajepa",
+      "fingerprint": "a8c58ca85ae8ade3df11f032c0037d5365a2c3306bf91aa84932758333e7c0c8"
+    },
+    {
+      "condition": "redAgent",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/redAgent/seed100/adajepa_ecp",
+      "fingerprint": "6878f7972b082283dbde3100fba5e8d0264ba330f116fe52a98d701d245e5e19"
+    },
+    {
+      "condition": "redAgent",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/redAgent/seed100/frozen",
+      "fingerprint": "96ff8b175d2fd9999bcbba4286d9fbcaa5711ebbb1555f31cbee2ef03c649109"
+    },
+    {
+      "condition": "redAgent",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/redAgent/seed100/frozen_ecp",
+      "fingerprint": "8f05860089a25df1e9bebcfeeb1b981b5ab86134a502cc4b9cc057598de627de"
+    },
+    {
+      "condition": "redAgent",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/redAgent/seed100/adajepa",
+      "fingerprint": "7023e4aeb15f04b61424aec593eacfd50474970314d2975cf0bdf403434d49a5"
+    },
+    {
+      "condition": "redAgent",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/redAgent/seed100/adajepa_ecp",
+      "fingerprint": "da5504c3d5d98a661727fbacf5eb3bab13c3f9af01f6fe0a10e1a64cb24568a7"
+    },
+    {
+      "condition": "blur",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/blur/seed100/frozen",
+      "fingerprint": "af0ea9720ec0b4bb0b0d6fc55ea4ae29b9382af97f8ed40cddc3fa726eb8e01d"
+    },
+    {
+      "condition": "blur",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/blur/seed100/frozen_ecp",
+      "fingerprint": "50333b6f6a3d76fceb711292918028b50d88c648625c8c69d52b75310c7b4069"
+    },
+    {
+      "condition": "blur",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/blur/seed100/adajepa",
+      "fingerprint": "93c6942de9361b402e6677adc6c958d2c0f0b441ba7e81362faad74b0e7bd14c"
+    },
+    {
+      "condition": "blur",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/blur/seed100/adajepa_ecp",
+      "fingerprint": "2bab791c219bb41e87c269a4c5a1bb5670fef8e73005c263a9931e79ba416c97"
+    },
+    {
+      "condition": "blur",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/blur/seed100/frozen",
+      "fingerprint": "708142fcb45b867291d144400e857a33c53955143860b6303c368f69b51f7b7b"
+    },
+    {
+      "condition": "blur",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/blur/seed100/frozen_ecp",
+      "fingerprint": "fa23990ece4e52b9500d52eda295190cd068b459af4c057e11b8bde0bd8dda7f"
+    },
+    {
+      "condition": "blur",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/blur/seed100/adajepa",
+      "fingerprint": "df5f203e64eb59831d554b11a68d89d7bb9972dc8333367d84743d5a7b1ee4e9"
+    },
+    {
+      "condition": "blur",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/blur/seed100/adajepa_ecp",
+      "fingerprint": "2bfcd8cc300f22781a4fe39c68e03e7a126bbc1adecd698fd2510e1235073846"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/snp/seed100/frozen",
+      "fingerprint": "3bdd26770017f59fbc4bff7f697efdf71b081399c672fc628ad20bf0ba59ea6f"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/snp/seed100/frozen_ecp",
+      "fingerprint": "54cf3c6200aceca7e86fc7c4c0da2e167385d749a8c1454a475b17bd4b755e73"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/snp/seed100/adajepa",
+      "fingerprint": "4e3620df0088d4ab47e7874ecced666855f1d15372975d9f8cae14db2255c4ff"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/snp/seed100/adajepa_ecp",
+      "fingerprint": "9559f575372990f4e86d44bd91db537ac9dbdd397a491d67cddc6222ca08891e"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/snp/seed100/frozen",
+      "fingerprint": "2df2715fa8df4389e781c16d0b366ff8ddd68c5e9f61d8d392a1bf8c56e9b84d"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/snp/seed100/frozen_ecp",
+      "fingerprint": "14fad79d9e0779072427df7022e8e1c5ae206e035d342edfd44743cb3b543346"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/snp/seed100/adajepa",
+      "fingerprint": "72326932f8c9f0488e0afab5fde06a87751413a9c043b3431411cd4829311e44"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/snp/seed100/adajepa_ecp",
+      "fingerprint": "0a6f1ccb988519da8f78bfa9da80be02c77de92053e413c2648546a0c48b1ae9"
+    },
+    {
+      "condition": "dark",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/dark/seed100/frozen",
+      "fingerprint": "eb304746aa366d6b511a09c711acb8c8b5ecb5f3acc1e1f54748d98424f2e7bd"
+    },
+    {
+      "condition": "dark",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/dark/seed100/frozen_ecp",
+      "fingerprint": "e7c5b1ea252bc5249661ef55b0c0a88da874bb1f5c1dda77189524b7f7c28105"
+    },
+    {
+      "condition": "dark",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/dark/seed100/adajepa",
+      "fingerprint": "4134ef4b342a93dccc702c218e9f76aabeb187d67128a02c7aefccbc2e5f6927"
+    },
+    {
+      "condition": "dark",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/dark/seed100/adajepa_ecp",
+      "fingerprint": "5a939c8cc5df3f2cbd004f5e013ccf05b75e4c22cf317fe54f8813d5da4a99d3"
+    },
+    {
+      "condition": "dark",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/dark/seed100/frozen",
+      "fingerprint": "2dcf5c904e4c08d8a315da8016156679529eacfb232d52670a97f57ed801e15d"
+    },
+    {
+      "condition": "dark",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/dark/seed100/frozen_ecp",
+      "fingerprint": "096f14096c92824d95ca61cfc9a0aee0b127a34bbd0568a75e2888c8a42d4850"
+    },
+    {
+      "condition": "dark",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/dark/seed100/adajepa",
+      "fingerprint": "07dc19b232ed7b9fef161634b89cf511528a954f587a492f121b0736cf095ce5"
+    },
+    {
+      "condition": "dark",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/dark/seed100/adajepa_ecp",
+      "fingerprint": "998b0f780ccd2b3b1f62c7c811adf418fd6bd588e2d11a66b07fdd3505948811"
+    }
+  ],
+  "n_jobs": 56,
+  "n_evals": 50,
+  "episode_runs": 2800,
+  "max_replans": 30,
+  "seeds": [
+    100
+  ],
+  "repo": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+  "target_profile": "external50",
+  "target_path": "/tmp/jepa_revision_v8/experiments/targets_T.pkl",
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "target_order": "file",
+  "baseline": "ECP-off control with identical per-episode RNG and logging",
+  "snp_noise": "Fresh noise keyed by episode IDs and evaluation call index; distribution and severity unchanged",
+  "training": false,
+  "executed": false
+}

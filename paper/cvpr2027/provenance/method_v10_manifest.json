@@ -1,0 +1,339 @@
+{
+  "version": 10,
+  "canvas_inches": [
+    6.5,
+    3.25
+  ],
+  "minimum_font_pt": 8,
+  "minimum_font_in_manuscript_pt": 8,
+  "changes": [
+    "single continuous path per arrow; no independently shrunk last segment",
+    "consistent arrow heads and1.5\u20131.9pt main strokes",
+    "three separated phases; five numbered online stages",
+    "online adaptation shown as a model regime, not as an ECP parameter update",
+    "independent action-offset ablation removed from the central method diagram"
+  ],
+  "arrows": [
+    {
+      "name": "",
+      "points": [
+        [
+          23.0,
+          203.0
+        ],
+        [
+          31.0,
+          203.0
+        ]
+      ],
+      "line_width_pt": 1.5,
+      "head_size": 6,
+      "continuous_path": true
+    },
+    {
+      "name": "augmented trajectories to training",
+      "points": [
+        [
+          144.0,
+          203.0
+        ],
+        [
+          162.0,
+          203.0
+        ]
+      ],
+      "line_width_pt": 1.65,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "trained parameters",
+      "points": [
+        [
+          294.0,
+          203.0
+        ],
+        [
+          312.0,
+          203.0
+        ]
+      ],
+      "line_width_pt": 1.65,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "initialize planning model",
+      "points": [
+        [
+          387.0,
+          191.0
+        ],
+        [
+          387.0,
+          181.0
+        ],
+        [
+          128.0,
+          181.0
+        ],
+        [
+          128.0,
+          150.0
+        ]
+      ],
+      "line_width_pt": 1.5,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "initialize predictor",
+      "points": [
+        [
+          256.0,
+          181.0
+        ],
+        [
+          256.0,
+          169.0
+        ]
+      ],
+      "line_width_pt": 1.5,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "observations to encoder",
+      "points": [
+        [
+          91.0,
+          131.0
+        ],
+        [
+          102.0,
+          131.0
+        ]
+      ],
+      "line_width_pt": 1.65,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "latent observations",
+      "points": [
+        [
+          153.0,
+          131.0
+        ],
+        [
+          166.0,
+          131.0
+        ]
+      ],
+      "line_width_pt": 1.65,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "latent rollouts",
+      "points": [
+        [
+          205.0,
+          136.0
+        ],
+        [
+          219.0,
+          136.0
+        ]
+      ],
+      "line_width_pt": 1.5,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "selected latent rollout",
+      "points": [
+        [
+          225.0,
+          124.0
+        ],
+        [
+          241.0,
+          130.0
+        ],
+        [
+          259.0,
+          132.0
+        ],
+        [
+          280.0,
+          138.0
+        ],
+        [
+          309.0,
+          145.0
+        ]
+      ],
+      "line_width_pt": 1.9,
+      "head_size": 7,
+      "continuous_path": true
+    },
+    {
+      "name": "execute optimized prefix",
+      "points": [
+        [
+          348.0,
+          131.0
+        ],
+        [
+          362.0,
+          131.0
+        ]
+      ],
+      "line_width_pt": 1.9,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "realized transition to feedback",
+      "points": [
+        [
+          415.0,
+          92.0
+        ],
+        [
+          415.0,
+          74.0
+        ]
+      ],
+      "line_width_pt": 1.8,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "observed motion",
+      "points": [
+        [
+          393.0,
+          37.0
+        ],
+        [
+          421.0,
+          37.0
+        ]
+      ],
+      "line_width_pt": 1.5,
+      "head_size": 7,
+      "continuous_path": true
+    },
+    {
+      "name": "feedback to stall detection",
+      "points": [
+        [
+          350.0,
+          40.0
+        ],
+        [
+          336.0,
+          40.0
+        ]
+      ],
+      "line_width_pt": 1.8,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "activation of ECP",
+      "points": [
+        [
+          221.0,
+          40.0
+        ],
+        [
+          209.0,
+          40.0
+        ]
+      ],
+      "line_width_pt": 1.8,
+      "head_size": 8,
+      "continuous_path": true
+    },
+    {
+      "name": "avoid stalled neighborhood schematic",
+      "points": [
+        [
+          13.0,
+          21.0
+        ],
+        [
+          19.0,
+          37.0
+        ],
+        [
+          35.0,
+          39.0
+        ],
+        [
+          50.0,
+          34.0
+        ],
+        [
+          64.0,
+          25.0
+        ]
+      ],
+      "line_width_pt": 1.4,
+      "head_size": 6,
+      "continuous_path": true
+    },
+    {
+      "name": "temporary proprioceptive reweighting",
+      "points": [
+        [
+          152.0,
+          26.0
+        ],
+        [
+          168.0,
+          26.0
+        ]
+      ],
+      "line_width_pt": 1.3,
+      "head_size": 6,
+      "continuous_path": true
+    },
+    {
+      "name": "ECP changes action objective",
+      "points": [
+        [
+          105.0,
+          75.0
+        ],
+        [
+          105.0,
+          84.0
+        ],
+        [
+          257.0,
+          84.0
+        ],
+        [
+          257.0,
+          93.0
+        ]
+      ],
+      "line_width_pt": 1.8,
+      "head_size": 8,
+      "continuous_path": true
+    }
+  ],
+  "text_overlap_candidates": [],
+  "native_frame_hashes": {
+    "push_start.png": "b98bae2461a974c3ceb03a1eb082a99b8a238b10035dd6dffbdb6b9ea85c04e6",
+    "push_goal.png": "bd5024669ef7488e3e279a61290b6318712ceccdc5e6a28784553e8dd911a425",
+    "push_before.png": "bfded051b51a491db5645a5b66655e0801cc3181e3982739260c15ec3284c6aa",
+    "maze_original_start.png": "b5ca8ac729307898e7ef95f41e3aba83a6297a08d0321e8c70423036f6f5c089",
+    "push_baseline_end.png": "bfded051b51a491db5645a5b66655e0801cc3181e3982739260c15ec3284c6aa"
+  },
+  "generator_sha256": "7b16ace1d2807676ba9ccb34fe588a8fcef6f7d84361c6dff2b2362aa26a54a0"
+}

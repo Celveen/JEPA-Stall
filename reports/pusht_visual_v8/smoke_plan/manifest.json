@@ -1,0 +1,190 @@
+{
+  "created_utc": "2026-11-09T05:41:49.670104+00:00",
+  "assets": {
+    "checkpoints/pusht_visual_shift/checkpoints/model_latest.pth": "9098082f1d40bfa7b4f4884571db30a0fed4a0aa26ad7dab8db11415437b8b32",
+    "checkpoints/pushobj_T16k_bias_e3_seed0/checkpoints/model_3.pth": "2aceb5a512b6d3b0f3e38507cdad35110734e1105d73a09bb7049b9f4e93ebe6"
+  },
+  "code": {
+    "plan.py": "2bbaad23ecd9cd067e164a4ddf0b633a3b524223257528bb73e2db93577b08bb",
+    "conf/escape_plan_gd_pushobj.yaml": "ce217699aa9fa60e3756544e1b96d44ce95706d71fe6237b527448d282c48653",
+    "planning/stagnation.py": "c237297896be7be77d9e8962bdf292d05cd1022bc8d527addd709827c0bcfce0",
+    "planning/escape.py": "61a0ae3d650330000f6b43e08b2553bcdd40610f5c79b61f2ed5bad71db4a2ae",
+    "planning/adajepa_probe.py": "25fd05354e1e818736d4641ccf66a9cf3da44bdeb5f20f336e9572f337b6ecd1",
+    "planning/adajepa.py": "c8f079a91df184d35cb20c5990e547473aa9694cd8c2b29661cc97a4895737ae",
+    "planning/adajepa_mpc.py": "c2d7130c6331414599f840e2eeacd7cf28d5fcf21a5758eab72c1d2db5a9a015",
+    "planning/mpc.py": "767bef7c35bffbcbafb3e6a30460d11dd18590785fc1c8470bc7bd3c042e5975",
+    "planning/gd.py": "c1815a91e27df9153ee845f3d1d9df3a02b9a0db7ba0c751ee0db0191911ca64",
+    "planning/evaluator.py": "275412752b4b0724ddca70165739861a29d4acc7d5da45e2c33ed1045a4905eb",
+    "planning/objectives.py": "3d45b48728cdded0ff4bc75cc28f57e9a8db71b7d49681069216967f6f64d0c1",
+    "planning/image_corruption.py": "eeab9dc0549f4c198fb9991d9b608ca6caecdd5ff50c86fd55717be70bb09afd",
+    "env/pusht/pusht_env.py": "e76a4cf6d1dd143156dcfa25076371c76a238f6d523415ae74a387b7b0919378",
+    "env/pusht/pusht_wrapper.py": "939dc7db9ac4f6f5da4ad550fafe96a91a28090e164d1053c4c02c02b57e4cb1",
+    "checkpoints/pusht_visual_shift/hydra.yaml": "453b201d220e362fcf5df85b116b0f369419b65fec49951f9678a6856db5053a",
+    "checkpoints/pushobj_T16k_bias_e3_seed0/hydra.yaml": "74478ebcae6677f6dbd3cb27c8f4b3f960e0ab2d4553a5c535af85c35ed3016b",
+    "runner": "69a950c6570108c8f89f6eccf1cbcb3facfe0be48fd367227fa6f3d74b2acfcd",
+    "evaluate_pusht_visual.py": "d78904da3abd37021031b96f7bf65c0a0717eebf6b1703b34dc7bf2c1a3bd937",
+    "paired_noise.py": "4a38a01a3d10afb51c988c74475dff35832ed3a37cddc1953e362ff188698f15"
+  },
+  "jobs": [
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/clean/seed100/frozen",
+      "fingerprint": "019703db290addf3c7522a2ad430326934434aac12f2471076157a495e63ea31"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/clean/seed100/frozen_ecp",
+      "fingerprint": "5ecc2f2facfdce11c99270d17b3cc43a805b9904fa2afaf911f084d0345475b4"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/clean/seed100/adajepa",
+      "fingerprint": "d079bfe391e83083c01b52842947c6d27b2a336e44ea19fb83d3a9847b541fec"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/clean/seed100/adajepa_ecp",
+      "fingerprint": "bd6739904dc817ba33f5703a28d9fc17f872a556ce689b78f029301a015e042c"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/clean/seed100/frozen",
+      "fingerprint": "b579eafde18b785dc5602bd418c123de529ab2afcd9ddb23a92cf51b8bdf381a"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/clean/seed100/frozen_ecp",
+      "fingerprint": "4c20e6911d23c3ecaeb919210e42d78afc05c7f4bf45592331441a7f7df2a4f8"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/clean/seed100/adajepa",
+      "fingerprint": "6453af847149694d3c8d5ced4c7c02b3023af23862f4982d6424ba33a82265ae"
+    },
+    {
+      "condition": "clean",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/clean/seed100/adajepa_ecp",
+      "fingerprint": "d9243e0f9dc7292454682089ad6c095784ad9995bda9c623f260d1e16ed9a295"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": false,
+      "id": "released/snp/seed100/frozen",
+      "fingerprint": "1c6c07a608d092e5b11802a48831743b76f6457f82fd0237e0fcf502973301c3"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "released",
+      "base": "frozen",
+      "ecp": true,
+      "id": "released/snp/seed100/frozen_ecp",
+      "fingerprint": "e7f065f1f448dd79157dd3cc9d72747e2a44d21f628031a330c9c96dce3806c8"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "released/snp/seed100/adajepa",
+      "fingerprint": "9f1beb01374e30804cc8bf81e56a30a72399c7e2aeffd941639f4659926bb61c"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "released",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "released/snp/seed100/adajepa_ecp",
+      "fingerprint": "ca597a6d5e35260df0aa54425212120d01030b7acc08f4fa3600e8350a7f630b"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "id": "augmented/snp/seed100/frozen",
+      "fingerprint": "10bd1795ac616fb2b5be5ba36a505558fd36a1a579e5b0f71a3c870e81fa7846"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": true,
+      "id": "augmented/snp/seed100/frozen_ecp",
+      "fingerprint": "96bf4e065171ad347e74861103c1e5c1f3ac4dfe5a9910d57848eab3414d146f"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "id": "augmented/snp/seed100/adajepa",
+      "fingerprint": "982c5e99bba81d55b199703ba89b3bdc4ee7f08e4f0fb09a31e1c369b0332773"
+    },
+    {
+      "condition": "snp",
+      "seed": 100,
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": true,
+      "id": "augmented/snp/seed100/adajepa_ecp",
+      "fingerprint": "9768c16eff982d0c2870541ac546208227291ad56726775a22be781e9d3317ca"
+    }
+  ],
+  "n_jobs": 16,
+  "n_evals": 2,
+  "episode_runs": 32,
+  "max_replans": 30,
+  "seeds": [
+    100
+  ],
+  "repo": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+  "target_profile": "external50",
+  "target_path": "/tmp/jepa_revision_v8/experiments/targets_T.pkl",
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "target_order": "file",
+  "baseline": "ECP-off control with identical per-episode RNG and logging",
+  "snp_noise": "Fresh noise keyed by episode IDs and evaluation call index; distribution and severity unchanged",
+  "training": false,
+  "executed": false
+}

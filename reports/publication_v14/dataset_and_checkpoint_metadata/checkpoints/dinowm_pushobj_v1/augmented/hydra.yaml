@@ -1,0 +1,42 @@
+env:
+  name: pushobj
+  args: []
+  kwargs:
+    with_velocity: true
+    with_target: true
+  dataset:
+    data_path: /home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/pushobj_bias_16k
+    transform:
+      _target_: datasets.img_transforms.default_transform
+      img_size: 224
+encoder:
+  _target_: native_models.dino.DinoV2Encoder
+  name: dinov2_vits14
+  feature_key: x_norm_patchtokens
+model:
+  _target_: native_models.visual_world_model.VWorldModel
+  image_size: 224
+  num_hist: 3
+  num_pred: 1
+  train_encoder: false
+  train_predictor: true
+  train_decoder: false
+img_size: 224
+frameskip: 5
+num_hist: 3
+num_pred: 1
+has_predictor: true
+has_decoder: false
+concat_dim: 1
+proprio_emb_dim: 10
+action_emb_dim: 10
+num_action_repeat: 1
+num_proprio_repeat: 1
+training:
+  epochs: 3
+  batch_size: 32
+  predictor_lr: 0.0005
+  action_encoder_lr: 0.0005
+  seed: 0
+  precision: bf16
+native_commit: 0a9492fa12044b852ae9e001cc74604b79c8bb0c

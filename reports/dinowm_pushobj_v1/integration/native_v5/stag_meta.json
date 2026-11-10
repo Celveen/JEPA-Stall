@@ -1,0 +1,17 @@
+{
+ "space": "latent",
+ "kappa": 0.0,
+ "start": 2,
+ "window": 1,
+ "gamma_lo": 1000.0,
+ "gamma_hi": 2000.0,
+ "beta": 0.25,
+ "alpha": 1.0,
+ "base": 2.0,
+ "trigger": "movement",
+ "q": 0.2,
+ "theta": 0.0,
+ "prop_boost": 1.0,
+ "boost_replans": 2,
+ "only_samples": null
+}

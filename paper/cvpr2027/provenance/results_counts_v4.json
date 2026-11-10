@@ -1,0 +1,343 @@
+{
+  "main": [
+    {
+      "checkpoint": "official",
+      "adapter": "frozen",
+      "ref_success": 153,
+      "S": {
+        "n": 350,
+        "base": 153,
+        "success": 157,
+        "gain_pp": 1.1428571428571428,
+        "rescued": 4,
+        "regressed": 0,
+        "rerun": 195
+      },
+      "P": {
+        "n": 350,
+        "base": 153,
+        "success": 210,
+        "gain_pp": 16.285714285714285,
+        "rescued": 57,
+        "regressed": 0,
+        "rerun": 195
+      },
+      "SP": {
+        "n": 350,
+        "base": 153,
+        "success": 209,
+        "gain_pp": 16.0,
+        "rescued": 56,
+        "regressed": 0,
+        "rerun": 195
+      }
+    },
+    {
+      "checkpoint": "official",
+      "adapter": "adajepa",
+      "ref_success": 243,
+      "S": {
+        "n": 350,
+        "base": 243,
+        "success": 250,
+        "gain_pp": 2.0,
+        "rescued": 7,
+        "regressed": 0,
+        "rerun": 109
+      },
+      "P": {
+        "n": 350,
+        "base": 243,
+        "success": 255,
+        "gain_pp": 3.4285714285714284,
+        "rescued": 13,
+        "regressed": 1,
+        "rerun": 109
+      },
+      "SP": {
+        "n": 350,
+        "base": 243,
+        "success": 256,
+        "gain_pp": 3.7142857142857144,
+        "rescued": 13,
+        "regressed": 0,
+        "rerun": 109
+      }
+    },
+    {
+      "checkpoint": "bias16k",
+      "adapter": "frozen",
+      "ref_success": 214,
+      "S": {
+        "n": 350,
+        "base": 214,
+        "success": 219,
+        "gain_pp": 1.4285714285714286,
+        "rescued": 5,
+        "regressed": 0,
+        "rerun": 134
+      },
+      "P": {
+        "n": 350,
+        "base": 214,
+        "success": 253,
+        "gain_pp": 11.142857142857142,
+        "rescued": 39,
+        "regressed": 0,
+        "rerun": 134
+      },
+      "SP": {
+        "n": 350,
+        "base": 214,
+        "success": 253,
+        "gain_pp": 11.142857142857142,
+        "rescued": 39,
+        "regressed": 0,
+        "rerun": 134
+      }
+    },
+    {
+      "checkpoint": "bias16k",
+      "adapter": "adajepa",
+      "ref_success": 262,
+      "S": {
+        "n": 350,
+        "base": 262,
+        "success": 266,
+        "gain_pp": 1.1428571428571428,
+        "rescued": 4,
+        "regressed": 0,
+        "rerun": 92
+      },
+      "P": {
+        "n": 350,
+        "base": 262,
+        "success": 270,
+        "gain_pp": 2.2857142857142856,
+        "rescued": 9,
+        "regressed": 1,
+        "rerun": 92
+      },
+      "SP": {
+        "n": 350,
+        "base": 262,
+        "success": 269,
+        "gain_pp": 2.0,
+        "rescued": 8,
+        "regressed": 1,
+        "rerun": 92
+      }
+    }
+  ],
+  "ablation": {
+    "SZ_early": {
+      "n": 350,
+      "base": 214,
+      "success": 219,
+      "gain_pp": 1.4285714285714286,
+      "rescued": 5,
+      "regressed": 0,
+      "rerun": 135
+    },
+    "SZ_mid": {
+      "n": 350,
+      "base": 214,
+      "success": 219,
+      "gain_pp": 1.4285714285714286,
+      "rescued": 5,
+      "regressed": 0,
+      "rerun": 134
+    },
+    "T0P": {
+      "n": 350,
+      "base": 214,
+      "success": 253,
+      "gain_pp": 11.142857142857142,
+      "rescued": 39,
+      "regressed": 0,
+      "rerun": 134
+    },
+    "T0SP": {
+      "n": 350,
+      "base": 214,
+      "success": 253,
+      "gain_pp": 11.142857142857142,
+      "rescued": 39,
+      "regressed": 0,
+      "rerun": 134
+    },
+    "D2S": {
+      "n": 350,
+      "base": 214,
+      "success": 215,
+      "gain_pp": 0.2857142857142857,
+      "rescued": 2,
+      "regressed": 1,
+      "rerun": 89
+    },
+    "D2SP": {
+      "n": 350,
+      "base": 214,
+      "success": 223,
+      "gain_pp": 2.5714285714285716,
+      "rescued": 10,
+      "regressed": 1,
+      "rerun": 89
+    },
+    "D2SPL": {
+      "n": 350,
+      "base": 214,
+      "success": 225,
+      "gain_pp": 3.142857142857143,
+      "rescued": 12,
+      "regressed": 1,
+      "rerun": 89
+    },
+    "T0SPL": {
+      "n": 350,
+      "base": 214,
+      "success": 243,
+      "gain_pp": 8.285714285714286,
+      "rescued": 29,
+      "regressed": 0,
+      "rerun": 134
+    },
+    "ALPHA10": {
+      "n": 350,
+      "base": 214,
+      "success": 232,
+      "gain_pp": 5.142857142857143,
+      "rescued": 50,
+      "regressed": 32,
+      "rerun": 350
+    },
+    "LA_start": {
+      "n": 350,
+      "base": 214,
+      "success": 221,
+      "gain_pp": 2.0,
+      "rescued": 34,
+      "regressed": 27,
+      "rerun": 350
+    }
+  },
+  "grid": {
+    "SP_lo": {
+      "n": 350,
+      "base": 262,
+      "success": 263,
+      "gain_pp": 0.2857142857142857,
+      "rescued": 1,
+      "regressed": 0,
+      "rerun": 97
+    },
+    "SP_mid": {
+      "n": 350,
+      "base": 262,
+      "success": 262,
+      "gain_pp": 0.0,
+      "rescued": 0,
+      "regressed": 0,
+      "rerun": 97
+    },
+    "SP_hi": {
+      "n": 350,
+      "base": 262,
+      "success": 263,
+      "gain_pp": 0.2857142857142857,
+      "rescued": 1,
+      "regressed": 0,
+      "rerun": 97
+    },
+    "SZ_lo": {
+      "n": 350,
+      "base": 262,
+      "success": 264,
+      "gain_pp": 0.5714285714285714,
+      "rescued": 2,
+      "regressed": 0,
+      "rerun": 97
+    },
+    "SZ_mid": {
+      "n": 350,
+      "base": 262,
+      "success": 266,
+      "gain_pp": 1.1428571428571428,
+      "rescued": 4,
+      "regressed": 0,
+      "rerun": 97
+    },
+    "SZ_hi": {
+      "n": 350,
+      "base": 262,
+      "success": 265,
+      "gain_pp": 0.8571428571428571,
+      "rescued": 3,
+      "regressed": 0,
+      "rerun": 97
+    }
+  },
+  "maze": {},
+  "stage_comparisons": {
+    "frozen": {
+      "data_vs_official": {
+        "n": 350,
+        "base": 153,
+        "success": 214,
+        "gain_pp": 17.428571428571427,
+        "rescued": 94,
+        "regressed": 33,
+        "rerun": 350
+      },
+      "all_vs_official": {
+        "n": 350,
+        "base": 153,
+        "success": 253,
+        "gain_pp": 28.571428571428573,
+        "rescued": 119,
+        "regressed": 19,
+        "rerun": 350
+      },
+      "planner_vs_data": {
+        "n": 350,
+        "base": 214,
+        "success": 253,
+        "gain_pp": 11.142857142857142,
+        "rescued": 39,
+        "regressed": 0,
+        "rerun": 134
+      }
+    },
+    "adajepa": {
+      "data_vs_official": {
+        "n": 350,
+        "base": 243,
+        "success": 262,
+        "gain_pp": 5.428571428571429,
+        "rescued": 49,
+        "regressed": 30,
+        "rerun": 350
+      },
+      "all_vs_official": {
+        "n": 350,
+        "base": 243,
+        "success": 269,
+        "gain_pp": 7.428571428571429,
+        "rescued": 51,
+        "regressed": 25,
+        "rerun": 350
+      },
+      "planner_vs_data": {
+        "n": 350,
+        "base": 262,
+        "success": 269,
+        "gain_pp": 2.0,
+        "rescued": 8,
+        "regressed": 1,
+        "rerun": 92
+      }
+    }
+  },
+  "grid_reference_identical_outcomes": true,
+  "grid_reference_action_mismatches_through30": 0
+}

@@ -1,0 +1,92 @@
+ckpt_base_path: /home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented
+model_name: null
+model_epoch: '3'
+seed: 100
+n_evals: 1
+segments_order: file
+goal_source: segments
+eval_data_path: /home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_20_small_tee/targets.pkl
+ood_corruption: null
+ood_level: null
+env_kwargs_override: null
+goal_H: 25
+n_plot_samples: 1
+decode_for_viz: false
+num_start_frames: 1
+debug_dset_init: false
+objective:
+  _target_: planning.objectives.create_objective_fn
+  alpha: 1
+  base: 2
+  mode: last
+planner:
+  _target_: physical_stagnation.PhysicalTimeStagnationMPCPlanner
+  max_iter: 6
+  n_taken_actions: 25
+  adapt:
+    lr: 0.0005
+    steps: 1
+    optimizer: adam
+    finetune_every: 1
+    replay_buffer: recent5
+    finetune_encoder: false
+    encoder_lr: 1.0e-05
+    last_layer_only: true
+    encoder_last_layer_only: true
+  probe:
+    seed: 0
+    mode: none
+  escape:
+    mode: none
+    start: 10
+    window: 3
+    stall_px: 10.0
+    max_n: 5
+    gap: null
+    kick_px: 10.0
+    restarts: 8
+    proprio_boost: 1.0
+    object_scale: 0.0
+    object_escapes: 1
+    boost_replans: 0
+    workspace_clip: false
+    ws_lo: 22.0
+    ws_hi: 489.0
+    action_cap_px: 0.0
+    seed: 0
+  reuse_actions: true
+  sub_planner:
+    target: cem_memory.ChunkedCEMPlanner
+    lr: 0.1
+    sample_type: zero
+    action_noise: 0
+    horizon: 25
+    var_scale: 1
+    opt_steps: 10
+    eval_every: -1
+    num_samples: 200
+    topk: 30
+    candidate_batch: 64
+    precision: fp32
+    timing_path: cem_timings.jsonl
+  name: dinowm_cem
+  control_timing:
+    executed_controls: 25
+    warmup_controls: 50
+    history_stride_controls: 5
+    boost_controls: 15
+  stag:
+    space: latent
+    kappa: 0.0
+    start: 2
+    window: 3
+    gamma_lo: 0.05
+    gamma_hi: 0.15
+    beta: 0.25
+    prop_boost: 1.0
+    boost_replans: 0
+    alpha: 1.0
+    base: 2.0
+protocol_id: dinowm_pushobj_cem200x10_mpc6x25_v1
+wandb_logging: false
+saved_folder: /home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_20_small_tee
