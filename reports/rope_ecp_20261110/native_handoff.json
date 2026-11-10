@@ -1,5 +1,5 @@
 {
-  "status": "waiting_for_unchanged_native_chunk",
+  "status": "resumed",
   "previous_pipeline_pid": 264851,
   "worker_pid": 265960,
   "native_generation_sources": {
@@ -19,5 +19,9 @@
   },
   "reason": "S-only unchanged-action replay guard; native control algorithm unchanged",
   "new_primary_episodes": 0,
-  "no_stopping_of_current_native_worker": true
+  "no_stopping_of_current_native_worker": true,
+  "resumed_utc": "2026-11-10T09:56:29.181948+00:00",
+  "completed_native_chunk_preserved": true,
+  "native_sampling_model_targets_and_objective_unchanged": true,
+  "new_pipeline_pid": 275464
 }

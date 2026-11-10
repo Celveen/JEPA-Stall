@@ -1,19 +1,19 @@
 {
   "status": "running",
   "stage": "evaluating",
-  "pid": 264851,
+  "pid": 275464,
   "gpu": 0,
-  "started_utc": "2026-11-10T09:19:09.939598+00:00",
+  "started_utc": "2026-11-10T09:56:29.308964+00:00",
   "planned_primary_episodes": 100,
   "planned_paired_tasks": 50,
   "integration_episodes": 2,
-  "paired_tasks_completed": 0,
+  "paired_tasks_completed": 10,
   "training": false,
   "online_updates": false,
   "active_arm": "native",
-  "active_chunk": 0,
-  "worker_pid": 265960,
-  "active_log": "/data/zjc/adaJEPA/JEPA-Stall/eval_outputs/rope_ecp_20261110/logs/native_chunk_00.log",
-  "active_output": "/data/zjc/adaJEPA/JEPA-Stall/eval_outputs/rope_ecp_20261110/native/chunk_00",
-  "updated_utc": "2026-11-10T09:30:40.856735+00:00"
+  "active_chunk": 1,
+  "worker_pid": 276917,
+  "active_log": "/data/zjc/adaJEPA/JEPA-Stall/eval_outputs/rope_ecp_20261110/logs/native_chunk_01.log",
+  "active_output": "/data/zjc/adaJEPA/JEPA-Stall/eval_outputs/rope_ecp_20261110/native/chunk_01",
+  "updated_utc": "2026-11-10T10:09:40.419741+00:00"
 }
