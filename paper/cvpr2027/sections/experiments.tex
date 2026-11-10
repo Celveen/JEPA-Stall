@@ -11,7 +11,7 @@ We compare with DINO-WM~\cite{zhou2025dinowm}, LeWM~\cite{maes2026lewm}, DDP-WM~
 
 \subsection{Comparison with recent world models}
 \input{tables/world_model_comparison}
-\Cref{tab:main} combines PushObj and PushT evaluations. PushObj distinguishes archived baseline tasks (Reference) from the paired ECP task list (Paired); both cover the same seven shapes. On the paired list, our approach reaches 72.3\% with frozen dynamics and 76.9\% with AdaJEPA. On PushT, the adaptive configuration reaches 86\% clean success and 63.7\% averaged over six visual shifts, the highest mean among the compared controllers. With the augmented frozen model, ECP raises clean success from 72\% to 82\% and the shift mean from 46.0\% to 55.7\%. These gains transfer the PushObj correction settings unchanged; \cref{tab:pusht-ecp} reports all checkpoint and intervention comparisons.
+\Cref{tab:main} reports PushObj by shape and PushT by visual condition. On the common intervention-study tasks, our PushObj approach averages 72.3\% with frozen dynamics and 76.9\% with AdaJEPA across the seven shapes. On PushT, the adaptive configuration reaches 86\% clean success and 63.7\% averaged over six visual shifts, the highest mean among the compared controllers. With the augmented frozen model, ECP raises clean success from 72\% to 82\% and the shift mean from 46.0\% to 55.7\%. These gains transfer the PushObj correction settings unchanged; \cref{tab:pusht-ecp} reports all checkpoint and intervention comparisons.
 
 \subsection{Manipulation and navigation}
 \begin{table}[t]

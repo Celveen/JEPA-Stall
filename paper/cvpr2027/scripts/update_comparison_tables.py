@@ -10,6 +10,8 @@ import json
 from pathlib import Path
 import numpy as np
 
+from pushobj_results import REPLANS, SHAPES, TASKS_PER_SHAPE, baseline_rows, paired_rows
+
 ROOT = Path(__file__).resolve().parents[1]
 CONDITIONS = ('clean', 'blur', 'snp', 'dark', 'redAgent', 'redBlock', 'redAnchor')
 TARGET_SHA = '1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b'
@@ -72,30 +74,47 @@ def main():
         return ' & '.join(r'\textbf{' + cell + '}' if highlight and numbers[i] == best[i] else cell
                           for i, cell in enumerate(formatted))
 
-    pushobj = json.loads((ROOT / 'provenance/pushobj_baseline_data_v11.json').read_text())
-    reference = {(x['method'], x['planner']): x['success_percent'] for x in pushobj['rows']}
+    repo, provenance = ROOT.parents[1], ROOT / 'provenance'
+    pushobj = {**baseline_rows(repo, provenance), **paired_rows(repo, provenance)}
+    shape_counts = {}
+    for key, row in pushobj.items():
+        counts = row['successes_by_shape']
+        shape_counts[key] = [counts[s] for s in SHAPES] + [sum(counts.values())]
+    best_pushobj = [max(column) for column in zip(*shape_counts.values())]
+
+    def shape_cells(method, planner):
+        counts = shape_counts[method, planner]
+        scores = [f'{100 * n / TASKS_PER_SHAPE:.0f}' for n in counts[:-1]]
+        scores.append(f'{100 * counts[-1] / (len(SHAPES) * TASKS_PER_SHAPE):.1f}')
+        return ' & '.join(r'\textbf{' + score + '}' if n == best else score
+                          for score, n, best in zip(scores, counts, best_pushobj))
+
     rows = []
     cites = {'DINO-WM': 'zhou2025dinowm', 'LeWM': 'maes2026lewm', 'DDP-WM': 'yin2026ddpwm'}
     for row in baseline['rows']:
-        rows.append(f"{row['method']}~\\cite{{{cites[row['method']]}}} & {row['planner']} & {reference[(row['method'],row['planner'])]:.1f} & --- & {cells(row['success_percent'], highlight=True)}\\\\")
+        method, planner = row['method'], row['planner']
+        rows.append(f'{method}~\\cite{{{cites[method]}}} & {planner} & {shape_cells(method, planner)}'
+                    f" & {cells(row['success_percent'], highlight=True)}" + r'\\')
     rows.append(r'\midrule')
     for label, w, b, e in [('Frozen (released)', 'released', 'frozen', False),
                            ('AdaJEPA (released)', 'released', 'adajepa', False)]:
-        rows.append(f'{label} & GD & --- & {43.7 if b=="frozen" else 69.4:.1f} & {cells(values(w,b,e), highlight=True)}'+r'\\')
+        rows.append(f'{label} & GD & {shape_cells(f"released_{b}", "GD")}'
+                    f' & {cells(values(w, b, e), highlight=True)}' + r'\\')
     rows.append(r'\midrule')
     for label, b in [(r'\textbf{Ours (frozen)}', 'frozen'), (r'\textbf{Ours (AdaJEPA)}', 'adajepa')]:
-        rows.append(f'{label} & GD & --- & {72.3 if b=="frozen" else 76.9:.1f} & {cells(values("augmented",b,True), highlight=True)}'+r'\\')
+        rows.append(f'{label} & GD & {shape_cells(f"ours_{b}", "GD")}'
+                    f' & {cells(values("augmented", b, True), highlight=True)}' + r'\\')
     table = r'''\begin{table*}[t]
 \centering
-\caption{\textbf{World-model control on PushObj and PushT.} Success (\%); higher is better. PushObj has two distinct 350-task lists: archived baseline tasks (Reference) and intervention-study tasks (Paired). Results are compared within each list. PushT uses 50 shared tasks per condition; bold marks its column best. All controllers have a 150-control budget. Agent, Object, and Goal denote red-color shifts; Avg. averages the six shifts. Ours combines data augmentation and ECP; dashes denote unavailable measurements. Protocols appear in \cref{sec:pushobj-comparison,sec:pusht-extension}.}
+\caption{\textbf{World-model control on PushObj and PushT.} Success (\%) at 150 controls. PushObj uses 50 tasks per shape; archived baselines and our study use distinct start--goal lists. Sq. and sT denote square and small-T. PushT shares 50 tasks per condition. Bold marks column maxima, including ties. Avg. covers all seven PushObj shapes or the six PushT shifts. Agent, Object, and Goal denote red-color shifts. Ours combines data augmentation and ECP; dashes mark unavailable results. See \cref{sec:pushobj-comparison,sec:pusht-extension}.}
 \label{tab:main}
 \small
-\setlength{\tabcolsep}{3pt}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrrrrrrr@{}}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll*{16}{r}@{}}
 \toprule
-& &\multicolumn{2}{c}{PushObj}&\multicolumn{8}{c}{PushT}\\
-\cmidrule(lr){3-4}\cmidrule(lr){5-12}
-Method & Opt. & Reference & Paired & Clean & Blur & S\&P & Dark & Agent & Object & Goal & Avg.\\
+& &\multicolumn{8}{c}{PushObj}&\multicolumn{8}{c}{PushT}\\
+\cmidrule(lr){3-10}\cmidrule(lr){11-18}
+Method & Opt. & I & L & Sq. & Z & sT & $+$ & T & Avg. & Clean & Blur & S\&P & Dark & Agent & Object & Goal & Avg.\\
 \midrule
 '''+ '\n'.join(rows) + r'''
 \bottomrule
@@ -118,8 +137,11 @@ Method & Opt. & Reference & Paired & Clean & Blur & S\&P & Dark & Agent & Object
     (ROOT / 'tables/pusht_checkpoint_matrix.tex').write_text('\n'.join(matrix)+'\n')
     out = {'primary_jobs_complete':len(evidence),'primary_jobs_total':56,'conditions':CONDITIONS,
            'target_sha256':TARGET_SHA,'primary_results':evidence,'baseline_rows':baseline['rows'],
-           'smoke_used_as_primary':False,'main_comparison':'PushObj reference/paired-ECP task lists in separate columns; PushT shared50; all at150 controls',
-           'pushobj_reference_scores_in_separate_column':True,'pushobj_reference_provenance':'pushobj_baseline_data_v11.json'}
+           'smoke_used_as_primary':False,
+           'main_comparison':'PushObj per-shape scores across two task lists; PushT uses shared tasks; all at 150 controls',
+           'pushobj': {'shapes': SHAPES, 'tasks_per_shape': TASKS_PER_SHAPE, 'max_replans': REPLANS,
+                       'rows': [dict(method=method, planner=planner, **row)
+                                for (method, planner), row in pushobj.items()]}}
     (ROOT / 'provenance/comparison_v14.json').write_text(json.dumps(out,indent=2)+'\n')
     print(f'Updated comparison tables: {len(evidence)}/56 primary jobs completed; unmeasured cells retained.')
 

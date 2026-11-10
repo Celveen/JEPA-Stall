@@ -533,7 +533,169 @@
     }
   ],
   "smoke_used_as_primary": false,
-  "main_comparison": "PushObj reference/paired-ECP task lists in separate columns; PushT shared50; all at150 controls",
-  "pushobj_reference_scores_in_separate_column": true,
-  "pushobj_reference_provenance": "pushobj_baseline_data_v11.json"
+  "main_comparison": "PushObj per-shape scores across two task lists; PushT uses shared tasks; all at 150 controls",
+  "pushobj": {
+    "shapes": [
+      "I",
+      "L",
+      "square",
+      "Z",
+      "small_tee",
+      "plus",
+      "T"
+    ],
+    "tasks_per_shape": 50,
+    "max_replans": 30,
+    "rows": [
+      {
+        "method": "DINO-WM",
+        "planner": "GD",
+        "task_seed": 2000,
+        "successes_by_shape": {
+          "I": 9,
+          "L": 36,
+          "square": 15,
+          "Z": 23,
+          "small_tee": 30,
+          "plus": 28,
+          "T": 31
+        },
+        "source": "provenance/pushobj_baseline_data_v11.json"
+      },
+      {
+        "method": "LeWM",
+        "planner": "GD",
+        "task_seed": 2000,
+        "successes_by_shape": {
+          "I": 9,
+          "L": 40,
+          "square": 20,
+          "Z": 37,
+          "small_tee": 36,
+          "plus": 34,
+          "T": 36
+        },
+        "source": "provenance/pushobj_baseline_data_v11.json"
+      },
+      {
+        "method": "DINO-WM",
+        "planner": "CEM",
+        "task_seed": 2000,
+        "successes_by_shape": {
+          "I": 16,
+          "L": 41,
+          "square": 17,
+          "Z": 31,
+          "small_tee": 36,
+          "plus": 39,
+          "T": 37
+        },
+        "source": "provenance/pushobj_baseline_data_v11.json"
+      },
+      {
+        "method": "LeWM",
+        "planner": "CEM",
+        "task_seed": 2000,
+        "successes_by_shape": {
+          "I": 14,
+          "L": 40,
+          "square": 23,
+          "Z": 36,
+          "small_tee": 38,
+          "plus": 36,
+          "T": 37
+        },
+        "source": "provenance/pushobj_baseline_data_v11.json"
+      },
+      {
+        "method": "DDP-WM",
+        "planner": "CEM",
+        "task_seed": 2000,
+        "successes_by_shape": {
+          "I": 14,
+          "L": 36,
+          "square": 16,
+          "Z": 28,
+          "small_tee": 35,
+          "plus": 35,
+          "T": 38
+        },
+        "source": "provenance/pushobj_baseline_data_v11.json"
+      },
+      {
+        "method": "released_frozen",
+        "planner": "GD",
+        "task_seed": 100,
+        "successes_by_shape": {
+          "I": 12,
+          "L": 28,
+          "square": 14,
+          "Z": 20,
+          "small_tee": 24,
+          "plus": 27,
+          "T": 28
+        },
+        "source": "reports/publication_v14/archives/main_pushobj_frozen.tar.gz",
+        "runs": [
+          "stag_frozen_official_it40/ref"
+        ]
+      },
+      {
+        "method": "ours_frozen",
+        "planner": "GD",
+        "task_seed": 100,
+        "successes_by_shape": {
+          "I": 24,
+          "L": 42,
+          "square": 23,
+          "Z": 46,
+          "small_tee": 32,
+          "plus": 42,
+          "T": 44
+        },
+        "source": "reports/publication_v14/archives/main_pushobj_frozen.tar.gz",
+        "runs": [
+          "stag_frozen_bias16k_it40/ref",
+          "stag_frozen_bias16k_it40/T0SP"
+        ]
+      },
+      {
+        "method": "released_adajepa",
+        "planner": "GD",
+        "task_seed": 100,
+        "successes_by_shape": {
+          "I": 20,
+          "L": 46,
+          "square": 20,
+          "Z": 39,
+          "small_tee": 35,
+          "plus": 42,
+          "T": 41
+        },
+        "source": "reports/publication_v14/archives/main_pushobj_adajepa.tar.gz",
+        "runs": [
+          "stag_adajepa_official_it40/ref"
+        ]
+      },
+      {
+        "method": "ours_adajepa",
+        "planner": "GD",
+        "task_seed": 100,
+        "successes_by_shape": {
+          "I": 28,
+          "L": 45,
+          "square": 25,
+          "Z": 48,
+          "small_tee": 36,
+          "plus": 43,
+          "T": 44
+        },
+        "source": "reports/publication_v14/archives/main_pushobj_adajepa.tar.gz",
+        "runs": [
+          "stag_adajepa_bias16k_it40/ref",
+          "stag_adajepa_bias16k_it40/T0SP"
+        ]
+      }
+    ]
+  }
 }

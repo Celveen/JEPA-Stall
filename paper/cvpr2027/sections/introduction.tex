@@ -13,7 +13,7 @@ Training data provide a second, complementary route to stronger control. Followi
 On PushObj, data augmentation raises success from 43.7\% to 61.1\% for frozen planning and from 69.4\% to 74.9\% with AdaJEPA. ECP increases these rates to 72.3\% and 76.9\%, respectively, under the same 30-replan budget (\cref{fig:headline}). With the augmented-data frozen model, conditional correction recovers 39 additional tasks while retaining all 214 native successes. On Maze, memory regularization improves frozen success from 48\% to 50\%; gated memory improves adaptive success from 63\% to 66\%, also preserving every native success. Controlled ablations identify the contributions of memory, goal weighting, and activation timing.
 
 Our contributions are:
-\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt,label=$\bullet$]
 \item An execution-conditioned objective that uses stalled observations to regularize predicted trajectories and temporarily reweight goal components.
 \item A training and planning approach that combines interaction-biased data augmentation with ECP to improve frozen and adaptive world-model control.
 \item Paired evaluations, component ablations, and verified simulator trajectories that connect improved task completion to stagnation-aware intervention.

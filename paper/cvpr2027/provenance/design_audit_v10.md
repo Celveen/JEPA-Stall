@@ -1,7 +1,0 @@
-# v10 design and evidence audit
-
-Figure 3 separates offline training, online action selection, and realized execution feedback. Continuous vector paths use consistent arrowheads and heavier strokes. Five numbered stages identify the traversal order. The S/P mechanisms explicitly return to the MPC objective. No competing method name appears in the diagram.
-
-Figures 2 and 4 have no decorative center dividers. Figure 4 has nine paired cases: seven native PushObj shapes, frozen Maze, and adaptive Maze. Titles and method labels occupy separate lines. All labels pass bounding-box overlap and clipping checks. Each case uses matched initial/goal states and recorded outcomes. Native Pymunk/MuJoCo renderings preserve simulator colors; dashed paths connect logged MPC endpoints without claiming unobserved substep motion. The appendix adds Start/Goal/Native/Ours views, inspired by DINO-WM qualitative presentation (https://arxiv.org/html/2411.04983v2, Appendix A.10).
-
-Visual inspection covered the method figure, gallery, full-state appendix panels, and compiled body pages. Eight body pages, 181-word abstract, first-page abstract with right-column result chart, Figure 2 on page 2. Appendix starts after references. All existing displayed equations and four component tables are unchanged. The Frozen Maze full-set result remains pending; one completed recovery is explicitly treated as a qualitative case.

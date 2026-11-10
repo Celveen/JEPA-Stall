@@ -1,0 +1,42 @@
+\section{Experiments}
+\label{sec:experiments}
+Our experiments examine whether execution feedback improves task completion, how data augmentation and planning correction interact, and which mechanisms account for the gains.
+
+\subsection{Experimental setup}
+\paragraph{Tasks and metrics.}
+PushObj comprises 350 image-goal tasks across seven object shapes; I, small-T, and square are unseen during training. Maze comprises 100 navigation tasks across five held-out layouts. PushT evaluates 50 matched start--goal tasks under clean observations and six visual shifts: blur, salt-and-pepper noise, darker lighting, and changes to the agent, object, or goal color. Manipulation success requires joint pusher/object position error below 20 pixels and object-angle error below $\pi/9$; Maze uses a 0.5-unit position threshold.
+
+\paragraph{Methods and planning budget.}
+We compare with DINO-WM~\cite{zhou2025dinowm}, LeWM~\cite{maes2026lewm}, DDP-WM~\cite{yin2026ddpwm}, and the released world model with frozen parameters or AdaJEPA updates~\cite{wang2026adajepa}. The main comparison reports PushObj and PushT together, using a 150-control execution budget and each method's gradient descent (GD) or cross-entropy (CEM) planner. Our evaluations allow 30 MPC replans, executing five controls per plan with a 25-control horizon; Maze uses action repeat four. The released and augmented-data checkpoints are evaluated separately. Within each checkpoint, ECP-on/off comparisons share tasks and action initialization. ECP uses $S{+}P$ for manipulation and gated $S$ for Maze. Planner schedules, checkpoint provenance, and task construction are specified in \cref{sec:implementation,sec:pusht-extension}.
+
+\subsection{Comparison with recent world models}
+\input{tables/world_model_comparison}
+\Cref{tab:main} reports PushObj by shape and PushT by visual condition. On the common intervention-study tasks, our PushObj approach averages 72.3\% with frozen dynamics and 76.9\% with AdaJEPA across the seven shapes. On PushT, the adaptive configuration reaches 86\% clean success and 63.7\% averaged over six visual shifts, the highest mean among the compared controllers. With the augmented frozen model, ECP raises clean success from 72\% to 82\% and the shift mean from 46.0\% to 55.7\%. These gains transfer the PushObj correction settings unchanged; \cref{tab:pusht-ecp} reports all checkpoint and intervention comparisons.
+
+\subsection{Manipulation and navigation}
+\begin{table}[t]
+\centering
+\caption{\textbf{ECP improves both manipulation and navigation.} Success (\%) with at most 30 MPC replans; each row fixes the checkpoint and update rule. PushObj uses $S{+}P$. Maze uses $S$: movement-triggered for Frozen and loss-gated for AdaJEPA.}
+\label{tab:domains}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lllrr}
+\toprule
+Task & Checkpoint & Updates & Native & + ECP\\
+\midrule
+PushObj & Released & Frozen &43.7&\textbf{59.7}\\
+& Released & AdaJEPA &69.4&\textbf{73.1}\\
+& Data aug. & Frozen &61.1&\textbf{72.3}\\
+& Data aug. & AdaJEPA &74.9&\textbf{76.9}\\
+\midrule
+Maze & Released & Frozen &48.0&\textbf{50.0}\\
+& Released & AdaJEPA &63.0&\textbf{66.0}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Improving both frozen and adaptive control.}
+With the augmented-data checkpoint, ECP reaches 72.3\% frozen success and 76.9\% with AdaJEPA on PushObj (\cref{tab:domains}). Relative to the released-model baselines, the combined training and planning recipe improves success by 28.6 and 7.4 points, respectively. ECP also applies directly to the released checkpoint, raising frozen success from 43.7\% to 59.7\% and adaptive success from 69.4\% to 73.1\%. These paired comparisons demonstrate that execution feedback improves action selection under both fixed and adapting dynamics.
+
+\paragraph{Recovering navigation with stagnation memory.}
+On Maze, movement-triggered memory raises frozen success from 48\% to 50\%, recovering two tasks without changing a native success. With continued AdaJEPA updates, gated memory raises success from 63\% to 66\% and retains all 63 native successes. These improvements use the released checkpoint without new offline navigation training. \Cref{tab:maze} isolates the effect of correction type and activation schedule.

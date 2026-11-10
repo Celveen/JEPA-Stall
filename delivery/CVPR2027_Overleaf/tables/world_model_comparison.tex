@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\caption{\textbf{World-model control on PushObj and PushT.} Success (\%) at 150 controls. PushObj uses 50 tasks per shape; archived baselines and our study use distinct start--goal lists. Sq. and sT denote square and small-T. PushT shares 50 tasks per condition. Bold marks column maxima, including ties. Avg. covers all seven PushObj shapes or the six PushT shifts. Agent, Object, and Goal denote red-color shifts. Ours combines data augmentation and ECP; dashes mark unavailable results. See \cref{sec:pushobj-comparison,sec:pusht-extension}.}
+\label{tab:main}
+\small
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll*{16}{r}@{}}
+\toprule
+& &\multicolumn{8}{c}{PushObj}&\multicolumn{8}{c}{PushT}\\
+\cmidrule(lr){3-10}\cmidrule(lr){11-18}
+Method & Opt. & I & L & Sq. & Z & sT & $+$ & T & Avg. & Clean & Blur & S\&P & Dark & Agent & Object & Goal & Avg.\\
+\midrule
+DINO-WM~\cite{zhou2025dinowm} & GD & 18 & 72 & 30 & 46 & 60 & 56 & 62 & 49.1 & 50 & 44 & 8 & 50 & 44 & 36 & 46 & 38.0\\
+LeWM~\cite{maes2026lewm} & GD & 18 & 80 & 40 & 74 & 72 & 68 & 72 & 60.6 & 64 & 62 & 62 & 58 & 4 & 16 & 34 & 39.3\\
+DINO-WM~\cite{zhou2025dinowm} & CEM & 32 & 82 & 34 & 62 & 72 & 78 & 74 & 62.0 & 48 & 40 & 2 & 44 & 40 & 24 & 48 & 33.0\\
+LeWM~\cite{maes2026lewm} & CEM & 28 & 80 & 46 & 72 & \textbf{76} & 72 & 74 & 64.0 & --- & 66 & 64 & 64 & 2 & 20 & 26 & 40.3\\
+DDP-WM~\cite{yin2026ddpwm} & CEM & 28 & 72 & 32 & 56 & 70 & 70 & 76 & 57.7 & --- & 56 & 22 & 66 & 62 & \textbf{42} & \textbf{68} & 52.7\\
+\midrule
+Frozen (released) & GD & 24 & 56 & 28 & 40 & 48 & 54 & 56 & 43.7 & 60 & 50 & 60 & 52 & 56 & 10 & 36 & 44.0\\
+AdaJEPA (released) & GD & 40 & \textbf{92} & 40 & 78 & 70 & 84 & 82 & 69.4 & 82 & 76 & 76 & 76 & 60 & 10 & 40 & 56.3\\
+\midrule
+\textbf{Ours (frozen)} & GD & 48 & 84 & 46 & 92 & 64 & 84 & \textbf{88} & 72.3 & 82 & 72 & 70 & 78 & \textbf{68} & 12 & 34 & 55.7\\
+\textbf{Ours (AdaJEPA)} & GD & \textbf{56} & 90 & \textbf{50} & \textbf{96} & 72 & \textbf{86} & \textbf{88} & \textbf{76.9} & \textbf{86} & \textbf{86} & \textbf{80} & \textbf{88} & \textbf{68} & 18 & 42 & \textbf{63.7}\\
+\bottomrule
+\end{tabular*}
+\end{table*}

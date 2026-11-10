@@ -1,0 +1,44 @@
+% Official CVPR 2027 author kit, tag CVPR2027-v1.
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[review]{cvpr}
+\input{preamble}
+\def\confName{CVPR}
+\def\confYear{2027}
+\title{When World Models Stall:\\Execution-Conditioned Priors for Latent Planning}
+\author{Anonymous CVPR submission}
+\begin{document}
+\maketitle
+\suppressfloats[t]
+
+\input{sections/abstract}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig0_headline.pdf}
+\caption{\textbf{Data augmentation and ECP provide complementary gains.} Success on 350 PushObj tasks with at most 30 MPC replans. Data augmentation denotes the interaction-biased collection recipe; ECP uses $S{+}P$. All configurations share the same evaluation protocol. Brackets show total gains over the corresponding released-model baseline.}
+\label{fig:headline}
+\end{figure}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_trajectory_cases.pdf}
+\caption{\textbf{Repeated local motion provides a signal for planning correction.} Eight simulator views compare native failure and ECP success with frozen and adaptive models. Each center plot enlarges the boxed native trajectory over its labelled replan interval; $\Delta x,\Delta y$ are displacement from that interval's start, in pixels (px) or world units (u), with equal axis scales. Solid paths follow saved-action simulator replay, dots mark five-control intervals, and arrows show direction. In scene views, circles mark starts, stars agent goals, crosses failures, and diamonds successes; counts give terminating replans.}
+\label{fig:teaser}
+\end{figure*}
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/analysis}
+\input{sections/conclusion}
+\clearpage
+\section*{LLM Usage Statement}
+OpenAI Codex (GPT-6) assisted with manuscript drafting and revision, literature retrieval, experiment implementation and log analysis, LaTeX preparation, and figure scripting. Numerical results in this draft are drawn from recorded experiments. Simulator images use the original environments; trajectory overlays replay saved controls and are verified against the execution logs. No generative image model was used. This statement covers assistance to the present research draft and its accompanying source materials.
+{\small
+\bibliographystyle{ieeenat_fullname}
+\bibliography{references}}
+\label{page:lastreferences}
+\ifdefined\NoAppendix\else
+\clearpage
+\appendix
+\input{sections/appendix}
+\fi
+\end{document}

@@ -1,0 +1,16 @@
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{multirow}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+\usepackage[capitalize,noabbrev]{cleveref}
+% Use one scalable outline for large math symbols at every text size.
+\DeclareFontShape{OMX}{cmex}{m}{n}{<-> cmex10}{}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\relu}[1]{\left[#1\right]_{+}}
+\newcommand{\method}{ECP\xspace}
+\newcommand{\pending}{\textemdash}
+\newcommand{\figref}[1]{\cref{#1}}
