@@ -29,15 +29,19 @@ Here $\mathcal R_t^{\rm stall}$ is our stagnation regularizer, $\kappa$ its stre
 
 \subsection{Detecting stagnation from execution}
 \label{sec:trigger}
-The trigger measures net displacement relative to the unfinished task, so repeated local motion can activate correction even when individual actions remain nonzero. Over $W$ completed replans, we compute
-\begin{align}
- r_t&=\sqrt{\frac{D_{\alpha_0}(z_t,z_{t-W})}
- {\max\{D_{\alpha_0}(z_t,z_g),\epsilon\}}},\label{eq:rate}\\
- w_t&=\operatorname{clip}_{[0,1]}\!\left(
+The trigger compares net movement with the distance still remaining to the goal. Over a window of $W$ completed replans, its normalized movement rate is
+\begin{equation}
+ r_t=\sqrt{\frac{D_{\alpha_0}(z_t,z_{t-W})}
+ {\max\{D_{\alpha_0}(z_t,z_g),\epsilon\}}}.
+ \label{eq:rate}
+\end{equation}
+Here $z_{t-W}$ is the observation from $W$ replans earlier, $\alpha_0=1$ is the base proprioceptive weight, and $\epsilon=10^{-12}$ prevents division by zero. A small $r_t$ indicates little net progress even if the intervening actions remain nonzero. We convert it into a continuous stall weight:
+\begin{equation}
+ w_t=\operatorname{clip}_{[0,1]}\!\left(
  \frac{\gamma_{\rm hi}-r_t}{\gamma_{\rm hi}-\gamma_{\rm lo}}\right).
  \label{eq:weight}
-\end{align}
-The base weight is $\alpha_0=1$, the history window $W=3$, and the numerical floor $\epsilon=10^{-12}$. Thresholds $\gamma_{\rm lo}=0.05$ and $\gamma_{\rm hi}=0.15$ assign full weight to small motion and zero weight above the upper threshold; $\operatorname{clip}_{[0,1]}$ clamps to that interval. A positive $w_t$ records $(o_t,w_t)$ in episode memory $\mathcal M_t$. All three observations are encoded with the current encoder, including under adaptation. Detection begins after a task-specific warm-up period (\cref{sec:parameters}). 
+\end{equation}
+The operator $\operatorname{clip}_{[0,1]}$ clamps to that interval. We use $W=3$, with thresholds $\gamma_{\rm lo}=0.05$ and $\gamma_{\rm hi}=0.15$: motion below the lower threshold receives full weight, and motion above the upper threshold receives zero. A positive $w_t$ stores $(o_t,w_t)$ in the episode memory $\mathcal M_t$. Current, historical, and goal observations all use the current encoder, including during adaptation. Detection begins after a task-specific warm-up (\cref{sec:parameters}).
 
 \subsection{A trajectory-level stagnation regularizer}
 \label{sec:memory}
@@ -52,29 +56,20 @@ A compact-support kernel penalizes a predicted state near that memory:
  K_j(z)=\left[1-\frac{D_{\alpha_0}(z,m_j)}{\rho_j}\right]_+^2.
  \label{eq:kernel}
 \end{equation}
-Here $[u]_+=\max(u,0)$. We apply the kernel to every predicted state, with larger weights toward the end of the horizon:
-\begin{align}
- \pi_h&=\frac{2^h}{\sum_{k=1}^{H}2^k},\qquad h=1,\ldots,H,\label{eq:timeweights}\\
+Here $[u]_+=\max(u,0)$, so a memory affects only predictions within its support radius. To favor corrections that persist toward the end of the plan, we assign each predicted frame the normalized weight $\pi_h=2^h/\sum_{k=1}^{H}2^k$, for $h=1,\ldots,H$. The trajectory penalty then sums these local costs:
+\begin{equation}
  \mathcal R_t^{\rm stall}(A)
- &=\sum_{h=1}^{H}\pi_h
+ =\sum_{h=1}^{H}\pi_h
  \sum_{j\in\mathcal M_t}w_js_jK_j(\hat z_{t,h}(A)).
  \label{eq:penalty}
-\end{align}
+\end{equation}
 The temporal weights $\pi_h$ sum to one. We use $\beta=0.25$ and $\kappa=2$; the $1/(H+1)$ scale follows the native all-frame objective. The initial context is excluded because it cannot be changed by the candidate actions. Memory persists throughout the episode, so previously stalled neighborhoods continue to influence subsequent plans.
 
 This term explicitly regularizes predicted trajectories against returning to execution-identified stalled neighborhoods. Its support radius is half the memory-to-goal distance in the norm induced by $D_{\alpha_0}$. Away from the numerical floor, the goal lies outside each kernel's support, and both the penalty and its first derivative vanish outside that support. The kernel therefore adds a local repulsive cost without penalizing the goal. \Cref{sec:properties} derives these properties and the action-gradient dependence on the learned dynamics.
 
 \subsection{Temporary goal reweighting}
 \label{sec:weighting}
-Memory discourages revisiting stalled configurations. Goal reweighting provides a complementary signal: it increases the importance of the agent's position during recovery. A positive trigger, with the correction gate open, sets
-\begin{equation}
- \alpha_t=\begin{cases}
- b\alpha_0,&\text{during an active boost interval},\\
- \alpha_0,&\text{otherwise},
- \end{cases}
- \label{eq:boost}
-\end{equation}
-with multiplier $b=10$. The interval covers the next three planning calls and is renewed by later triggers. In PushObj, success requires both object placement and pusher positioning. Increasing the proprioceptive contribution can complete the agent-position component after the scene is nearly aligned. The temporary schedule retains the native weighting before a trigger and restores it when the boost interval expires. Memory-only, weighting-only, and combined variants isolate these two mechanisms.
+Memory discourages revisiting stalled configurations. Goal reweighting instead emphasizes the agent's position during recovery. When a positive trigger occurs with the correction gate open, we set $\alpha_t=b\alpha_0$, with multiplier $b=10$, for the next three planning calls. A later trigger renews this interval; otherwise the weight returns to $\alpha_0$. In PushObj, success requires both object placement and pusher positioning. The boost can finish the agent-position component after the object is nearly aligned. Memory-only, weighting-only, and combined variants isolate the two mechanisms.
 
 \subsection{Scheduling correction during adaptation}
 \label{sec:gate}
@@ -89,11 +84,5 @@ Starting from $g_t=0$, the gate opens once $w_t>0$ and $q_t<\tau_g$, with relati
 
 \subsection{Interaction-biased data augmentation}
 \label{sec:data}
-Data augmentation enriches the interactions available to the predictive model before deployment. Following the contact-biased collection construction in AdaJEPA~\cite{wang2026adajepa}, source actions receive an object-directed bias and Gaussian noise:
-\begin{equation}
- u_i^{\rm exec}=u_i^{\rm source}
- +b_c\,\operatorname{unit}(c_i-p_i)+\sigma_c\eta_i.
- \label{eq:collection}
-\end{equation}
-The noise is $\eta_i\sim\mathcal N(0,I_2)$. The control-step index is $i$; $c_i,p_i\in\R^2$ are object center and pusher position. The operator $\operatorname{unit}(v)$ returns $v/\norm{v}$ when $\norm{v}>10^{-6}$ and zero otherwise; $I_2$ is the two-dimensional identity matrix. The bias magnitude is $b_c=9$ pixels and the per-axis noise standard deviation is $\sigma_c=10$ pixels. The augmented actions are executed in the simulator, and their resulting observations are stored with those actions. The full recipe includes source placement, retries, jitter, and quality filtering. We retain the original latent-prediction and trajectory-straightening training objective~\cite{wang2026straightening}; its exact form and the 16,000/4,000 training/validation episodes are specified in \cref{sec:implementation}.
+Data augmentation enriches the interactions available before deployment. Following AdaJEPA's contact-biased collection~\cite{wang2026adajepa}, we add an object-directed offset $b_c\operatorname{unit}(c_i-p_i)$ and Gaussian noise $\sigma_c\eta_i$ to the source action at control step $i$. Here $c_i,p_i\in\R^2$ are the object center and pusher position; $\eta_i\sim\mathcal N(0,I_2)$ is independent standard Gaussian noise, and $I_2$ is the two-dimensional identity. The operator $\operatorname{unit}(v)$ returns $v/\norm{v}$ when $\norm{v}>10^{-6}$ and zero otherwise. We use bias magnitude $b_c=9$ pixels and per-axis noise standard deviation $\sigma_c=10$ pixels. The resulting actions are executed in the simulator and stored with the observations they produce. The full recipe also includes source placement, retries, jitter, and quality filtering. We retain the original latent-prediction and trajectory-straightening training objective~\cite{wang2026straightening}; its exact form and the 16,000/4,000 training/validation episodes appear in \cref{sec:implementation}.
 

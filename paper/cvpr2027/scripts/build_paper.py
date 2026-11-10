@@ -23,10 +23,14 @@ def run(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--tectonic', default=os.environ.get('TECTONIC', 'tectonic'))
+    parser.add_argument('--web-bundle', help='Optional Tectonic resource mirror URL.')
     parser.add_argument('--skip-compile', action='store_true')
     args = parser.parse_args()
     if not args.skip_compile:
-        result = run([args.tectonic, '-X', 'compile', 'main.tex', '--keep-logs', '--keep-intermediates'])
+        command = [args.tectonic, '-X', 'compile', 'main.tex', '--keep-logs', '--keep-intermediates']
+        if args.web_bundle:
+            command += ['--web-bundle', args.web_bundle]
+        result = run(command)
         print(result.stdout)
         print(result.stderr)
     log = (ROOT / 'main.log').read_text(errors='replace')
@@ -34,8 +38,14 @@ def main():
                          log, flags=re.MULTILINE)
     if defects:
         raise RuntimeError('Resolve layout/reference warnings before export:\n' + '\n'.join(defects))
-    pages = run(['pdftotext', '-layout', 'main.pdf', '-']).stdout.split('\f')
-    pages = [p for p in pages if p.strip()]
+    poppler = all(shutil.which(tool) for tool in ('pdftotext', 'pdfseparate', 'pdfunite'))
+    if poppler:
+        pages = run(['pdftotext', '-layout', 'main.pdf', '-']).stdout.split('\f')
+        pages = [p for p in pages if p.strip()]
+    else:
+        from pypdf import PdfReader
+        reader = PdfReader(ROOT / 'main.pdf')
+        pages = [page.extract_text(extraction_mode='layout') for page in reader.pages]
     abstract = (ROOT / 'sections' / 'abstract.tex').read_text()
     abstract = re.sub(r'\\(?:begin|end)\{abstract\}', '', abstract).strip()
     abstract_words = len(abstract.split())
@@ -45,29 +55,52 @@ def main():
     trajectory_figure_page = next(i + 1 for i, p in enumerate(pages) if 'Figure 2.' in p)
     if 'Abstract' not in pages[0] or figure_one_page != 1 or trajectory_figure_page != 2:
         raise RuntimeError('Expected abstract and headline chart on page one, trajectory Figure 2 on page two.')
-    bbox = ET.fromstring(run(['pdftotext', '-f', '1', '-l', '1', '-bbox', 'main.pdf', '-']).stdout)
-    ns = {'pdf': 'http://www.w3.org/1999/xhtml'}
-    page = bbox.find('.//pdf:page', ns)
-    words = page.findall('pdf:word', ns)
-    figure_caption = next(w for i, w in enumerate(words[:-1])
-                          if w.text == 'Figure' and words[i + 1].text == '1.')
-    if float(figure_caption.attrib['xMin']) <= float(page.attrib['width']) / 2:
+    if poppler:
+        bbox = ET.fromstring(run(['pdftotext', '-f', '1', '-l', '1', '-bbox', 'main.pdf', '-']).stdout)
+        ns = {'pdf': 'http://www.w3.org/1999/xhtml'}
+        page = bbox.find('.//pdf:page', ns)
+        words = page.findall('pdf:word', ns)
+        figure_caption = next(w for i, w in enumerate(words[:-1])
+                              if w.text == 'Figure' and words[i + 1].text == '1.')
+        caption_x, page_width = float(figure_caption.attrib['xMin']), float(page.attrib['width'])
+    else:
+        import pypdfium2 as pdfium
+        document = pdfium.PdfDocument(ROOT / 'main.pdf')
+        page = document[0]
+        textpage = page.get_textpage()
+        search = textpage.search('Figure 1.')
+        found = search.get_next()
+        if found is None:
+            raise RuntimeError('First-page Figure 1 caption was not found.')
+        caption_x, page_width = textpage.get_charbox(found[0])[0], page.get_width()
+        search.close(); textpage.close(); page.close(); document.close()
+    if caption_x <= page_width / 2:
         raise RuntimeError('Headline figure must be in the right column of page one.')
     statement_page = next(i for i, p in enumerate(pages) if 'LLM Usage Statement' in p)
     appendix_page = next(i for i, p in enumerate(pages) if 'Supplementary Material' in p)
     if statement_page > 8:
         raise RuntimeError(f'Main body is {statement_page} pages, exceeding eight.')
     shutil.copyfile(ROOT / 'main.pdf', ROOT / 'paper.pdf')
-    with tempfile.TemporaryDirectory(prefix='jepa-paper-pages-') as directory:
-        pattern = str(Path(directory) / 'page-%d.pdf')
-        run(['pdfseparate', 'main.pdf', pattern])
-        numbered = [str(Path(directory) / f'page-{i+1}.pdf') for i in range(len(pages))]
-        for name, selected in [('paper_main.pdf', numbered[:appendix_page]),
-                               ('paper_appendix.pdf', numbered[appendix_page:])]:
-            destination = ROOT / name
-            if destination.exists():
-                destination.unlink()
-            run(['pdfunite', *selected, str(destination)])
+    shutil.copyfile(ROOT / 'main.pdf', ROOT / 'paper_v14.pdf')
+    if poppler:
+        with tempfile.TemporaryDirectory(prefix='jepa-paper-pages-') as directory:
+            pattern = str(Path(directory) / 'page-%d.pdf')
+            run(['pdfseparate', 'main.pdf', pattern])
+            numbered = [str(Path(directory) / f'page-{i+1}.pdf') for i in range(len(pages))]
+            for name, selected in [('paper_main.pdf', numbered[:appendix_page]),
+                                   ('paper_appendix.pdf', numbered[appendix_page:])]:
+                destination = ROOT / name
+                if destination.exists():
+                    destination.unlink()
+                run(['pdfunite', *selected, str(destination)])
+    else:
+        from pypdf import PdfWriter
+        for name, selected in [('paper_main.pdf', reader.pages[:appendix_page]),
+                               ('paper_appendix.pdf', reader.pages[appendix_page:])]:
+            writer = PdfWriter()
+            for page in selected:
+                writer.add_page(page)
+            writer.write(ROOT / name)
     report = {'abstract_words_whitespace': abstract_words,
               'abstract_page': 1, 'figure_one_page': figure_one_page,
               'headline_on_first_page_right_column': True,

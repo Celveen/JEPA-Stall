@@ -1,6 +1,8 @@
 # When World Models Stall — v14
 
-CVPR 2027 工作稿。正文 8 页，声明与 43 条参考文献共 2 页，附录 10 页。摘要 183 词。
+CVPR 2027 工作稿。正文 8 页，声明与 43 条参考文献共 2 页，附录 10 页。摘要 164 词。
+
+2026-11-10 修订：参考第一篇正式摘要精简行文，把结果和对已评测 SOTA 控制器的比较集中在最后两句；方法编号公式从 11 个减到 8 个，保留核心定义与符号解释；Figure 3 的反馈分支统一为上方灰色配色。可直接提交的[摘要文本](../../delivery/Abstract.txt)和原生可编辑的 [Figure 3 draw.io](../../delivery/Figure3.drawio)已随稿提供。具体改动见 [修订说明](REVISION_20261110.md)。
 
 [完整论文](paper_v14.pdf) · [主文](paper_main.pdf) · [附录](paper_appendix.pdf) · [源码包](paper_source_v14.zip) · [结果与日志](../../reports/publication_v14/README.md)
 
