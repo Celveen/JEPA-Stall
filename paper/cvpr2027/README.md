@@ -1,8 +1,8 @@
 # When World Models Stall — v14
 
-CVPR 2027 工作稿。正文 8 页，声明与 43 条参考文献共 2 页，附录 10 页。摘要 164 词。
+CVPR 2027 工作稿。正文 8 页，声明与 43 条参考文献共 2 页，附录 10 页。摘要 163 词。
 
-2026-11-10 修订：参考第一篇正式摘要精简行文，把结果和对已评测 SOTA 控制器的比较集中在最后两句；方法编号公式从 11 个减到 8 个，保留核心定义与符号解释；Figure 3 的反馈分支统一为上方灰色配色。可直接提交的[摘要文本](../../delivery/Abstract.txt)和原生可编辑的 [Figure 3 draw.io](../../delivery/Figure3.drawio)已随稿提供。具体改动见 [修订说明](REVISION_20261110.md)。
+2026-11-10 修订：摘要按“发现问题—方法与优势—结果”重写，去掉重规划预算等实验设置，突出多 backbone 兼容、无需额外学习参数及冻结/在线适应部署；最后两句直接报告完整方法在 AdaJEPA 上的提升与 PushT 视觉偏移新 SOTA。方法编号公式从 11 个减到 8 个，保留核心定义与符号解释；Figure 3 的反馈分支统一为上方灰色配色。可直接提交的[摘要文本](../../delivery/Abstract.txt)和原生可编辑的 [Figure 3 draw.io](../../delivery/Figure3.drawio)已随稿提供。具体改动见 [修订说明](REVISION_20261110.md)。
 
 [完整论文](paper_v14.pdf) · [主文](paper_main.pdf) · [附录](paper_appendix.pdf) · [源码包](paper_source_v14.zip) · [结果与日志](../../reports/publication_v14/README.md)
 
@@ -18,4 +18,4 @@ python scripts/build_method_figure.py
 python scripts/build_paper.py --tectonic /path/to/tectonic
 ```
 
-重算表格前，按结果包 README 解压 PushT 已完成评测。重生成 Figure 3 需要仓库原始提交 `2de77b4`、`pypdf` 和 `pypdfium2`。直接编译时可使用随稿的表格和插图。`provenance/comparison_v14.json` 记录每种形状的成功数，`provenance/method_figure.json` 记录 Figure 3 的输入和输出校验值。
+重算表格前，按结果包 README 解压 PushT 已完成评测。重生成 Figure 3 使用随稿 `figures/source/` 下的固定原图输入，需要 `pypdf`、`pypdfium2`、NumPy、SciPy 和 Pillow。直接编译时可使用随稿的表格和插图。`provenance/comparison_v14.json` 记录每种形状的成功数，`provenance/method_figure.json` 记录 Figure 3 的输入和输出校验值。

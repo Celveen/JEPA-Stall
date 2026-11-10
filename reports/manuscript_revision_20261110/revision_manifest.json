@@ -6,9 +6,9 @@
     "commit": "676c23a5161fd72d21a8d180c6b52feafb97faac",
     "file": "paper/SE_JEPA_CVPR2027_Overleaf/sec/0_abstract.tex"
   },
-  "abstract_words": 164,
+  "abstract_words": 163,
   "result_placement": "last two sentences",
-  "sota_scope": "outperforms the evaluated state-of-the-art world-model controllers on shared PushT conditions; no universal ranking on distinct PushObj lists",
+  "sota_scope": "new state of the art on the evaluated PushT visual-shift benchmark",
   "method_equations_before": 11,
   "method_equations_after": 8,
   "equations_converted_to_prose_or_inline": [
@@ -30,7 +30,7 @@
   },
   "figure3_pdf_page_1_based": 4,
   "build_report": {
-    "abstract_words_whitespace": 164,
+    "abstract_words_whitespace": 163,
     "abstract_page": 1,
     "figure_one_page": 1,
     "headline_on_first_page_right_column": true,
@@ -45,13 +45,23 @@
     "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
   },
   "outputs": {
-    "delivery/Abstract.txt": "5f60ad58f996ddbbd2745fcc920d7c0132b9b31b97c88514bd7e0148505cf6c7",
+    "delivery/Abstract.txt": "8862e224203b626ed579b0ca859b0e0a776697b0f16e834c9108e9c251cdb8d5",
     "delivery/Figure3.drawio": "cf43eb943b2a09cd7a0b03b4f37057a110d3dc39c2c25e70e3ef57dceba3eb6c",
-    "delivery/CVPR2027_Preview.pdf": "767de1b2753d8444f1e202ae8e279c0ff1d59de4f64acbdeb55b0b3ac4b05a78",
-    "delivery/CVPR2027_Overleaf.zip": "0c9ae452c4523c4291ce95e091e21dbb038c98e93ca0273f19582528201fb4e2",
-    "paper/cvpr2027/paper_v14.pdf": "767de1b2753d8444f1e202ae8e279c0ff1d59de4f64acbdeb55b0b3ac4b05a78",
-    "paper/cvpr2027/paper_source_v14.zip": "69fd07ecee21164b89039a3ba45308f6810374c50e4a061772f77bf647c8c6b6"
+    "delivery/CVPR2027_Preview.pdf": "8fb6d3c488d0f618239fade26d0e3d7e6166926be114e05ea492460702f60bbc",
+    "delivery/CVPR2027_Overleaf.zip": "a7363941b9a242050b2b4b7234886ca83bdbcd3bce93095585cf1c21d0722712",
+    "paper/cvpr2027/paper_v14.pdf": "8fb6d3c488d0f618239fade26d0e3d7e6166926be114e05ea492460702f60bbc",
+    "paper/cvpr2027/paper_source_v14.zip": "49c992ff64e0a773ddcd6f04077c778a74d289036442d366f5b084eead24f613"
   },
   "experiment_settings_changed_by_manuscript_revision": false,
-  "original_source_package_members_preserved": true
+  "original_source_package_members_preserved": true,
+  "abstract_revision": "problem, method and advantages, then results; no experiment-design detail",
+  "backbone_statement": "architecture/interface compatibility without additional learned parameters",
+  "reported_adajepa_gain": {
+    "task": "PushObj",
+    "gain_percentage_points": 7.4,
+    "baseline_successes": 243,
+    "full_method_successes": 269,
+    "tasks": 350,
+    "scope": "interaction-biased training plus ECP"
+  }
 }
