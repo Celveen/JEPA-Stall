@@ -1,0 +1,23 @@
+{
+  "status": "waiting_for_unchanged_native_chunk",
+  "previous_pipeline_pid": 264851,
+  "worker_pid": 265960,
+  "native_generation_sources": {
+    "/data/zjc/adaJEPA/JEPA-Stall/experiments/rope_ecp_20261110/rope_ecp.py": "5a3721d94aa1ca284333a2cf27ba3f8c310b05b5516f874e6b0fa9270522a42d",
+    "/data/zjc/adaJEPA/JEPA-Stall/experiments/rope_ecp_20261110/run_chunk.py": "ceaa34f4b1abaf605c09a3cbe80ddf377c1405deac17e0778a35df0342ef3e42",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/plan.py": "cd601abccce6c160b9614940793fd93dc91d0bf7b44d148ce4b4312eb414eb3d",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/planning/mpc.py": "50561b899e5ce65c5cad1aa0ff5738b6d24eff26fc6311b7f85969c13d4a4ee8",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/planning/cem.py": "c4791878354d33017934e071c85a3d51266963ab1a3bdc9607190332ed798d88",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/planning/objectives.py": "9e8fda56146c23b07184acbdd5f25eae872ad494d76dc7b44e3687747b20f864",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/planning/evaluator.py": "275412752b4b0724ddca70165739861a29d4acc7d5da45e2c33ed1045a4905eb",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/preprocessor.py": "c5ad3949628bec91ecdc6f8e011d4cc9f0c8cc9231f2291a77e5daf7e4fd27f3",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/models/visual_world_model.py": "3837a2feb6ef9654a075b24223a3f1116795c96b83ddc3b839edfa8e81abda94",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/models/dino.py": "559df99ad69fa4b56188ab683304276840abf7b8ce41b85756ac21bb23706cb1",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/env/deformable_env/FlexEnvWrapper.py": "1fcbda71f66a9022f43a2c47aa2810e28cb3ef5046cae76c3f9c15be698a2508",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/env/serial_vector_env.py": "b4b619c825ce512d0bdd66766754a5bcfae3fc7f9d2c901c9641eb7bc2d8d3f7",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/env/deformable_env/src/sim/sim_env/flex_env.py": "ea0bffe2c538c7c3d9c5cc25bbada229d604e9f8d5d97370b0b17149de61786b"
+  },
+  "reason": "S-only unchanged-action replay guard; native control algorithm unchanged",
+  "new_primary_episodes": 0,
+  "no_stopping_of_current_native_worker": true
+}

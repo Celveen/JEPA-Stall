@@ -104,6 +104,7 @@ def check():
     planner.iter, planner.n_taken_actions = 0, 5
     planner.prefix_reuse = []
     planner.memories = [[], [object()]]
+    planner.first_action_change, planner.diverged_from_native = [None, None], [False, False]
     calls = []
     def executed(seed, initial, actions):
         calls.append(seed)
@@ -113,17 +114,26 @@ def check():
                          'obs_visual': np.ones((2, 6, 1)),
                          'obs_proprio': np.zeros((2, 6, 1)),
                          'states': np.ones((2, 6, 2, 4))}
-    observations, states = planner._paired_env_rollout([1, 100], np.zeros((2, 8)), np.zeros((2, 5, 4)))
+    selected_actions = np.zeros((2, 5, 4))
+    selected_actions[1] = 1.
+    observations, states = planner._paired_env_rollout([1, 100], np.zeros((2, 8)), selected_actions)
     assert calls == [100]
     np.testing.assert_array_equal(observations['visual'][0], np.ones((6, 1)))
     np.testing.assert_array_equal(states[0], np.ones((6, 2, 4)))
     assert (states[1] == 7.).all() and planner.prefix_reuse[0]['reused_samples'] == [0]
+    planner.diverged_from_native = [False, False]
+    planner.first_action_change = [None, None]
+    observations, states = planner._paired_env_rollout([1, 100], np.zeros((2, 8)), np.zeros((2, 5, 4)))
+    assert calls == [100]  # No additional simulation when memory leaves actions unchanged.
+    assert planner.prefix_reuse[-1]['memory_active_but_identical_control_samples'] == [1]
+    assert planner.first_action_change == [None, None]
     return {'passed': True, 'native_cem_actions_bitwise_identical': True,
             'distance_matches_broadcast_reference': True, 'terminal_scale_matches_goal_cost': True,
             'goal_unpenalized': True, 'fixed_context_excluded': True,
             'episode_memories_isolated': True, 'zero_kappa_exact_native': True,
             'five_push_warmup_three_push_window': True,
             'native_prefix_reuse_and_intervention_branch_isolated': True,
+            'no_action_change_cannot_create_solver_noise_gain': True,
             'new_simulator_episodes': 0}
 
 

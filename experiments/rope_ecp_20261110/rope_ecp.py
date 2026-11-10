@@ -135,6 +135,8 @@ class RopeStagnationMPCPlanner(MPCPlanner):
         n = obs_0['visual'].shape[0]
         self.memories = [[] for _ in range(n)]
         self.first_intervention = [None] * n
+        self.first_action_change = [None] * n
+        self.diverged_from_native = [False] * n
         self.records = []
         self.cost_diagnostics = {}
         self.cd_by_replan = []
@@ -170,7 +172,9 @@ class RopeStagnationMPCPlanner(MPCPlanner):
                             cd_by_replan=np.stack(self.cd_by_replan, axis=1),
                             final_states=self.final_states,
                             first_intervention=np.asarray([
-                                -1 if x is None else x for x in self.first_intervention]))
+                                -1 if x is None else x for x in self.first_intervention]),
+                            first_action_change=np.asarray([
+                                -1 if x is None else x for x in self.first_action_change]))
         Path('ecp_records.json').write_text(json.dumps(self.records, indent=2) + '\n')
         Path('ecp_costs.json').write_text(json.dumps(self.cost_diagnostics, indent=2) + '\n')
         Path('prefix_reuse.json').write_text(json.dumps(self.prefix_reuse, indent=2) + '\n')
@@ -202,21 +206,30 @@ class RopeStagnationMPCPlanner(MPCPlanner):
         start = self.iter * self.n_taken_actions
         end = start + self.n_taken_actions + 1
         observations, states, reused = [], [], []
+        unchanged_controls = []
         for index, memory in enumerate(self.memories):
-            if not memory:
-                expected = self.reference['physical_actions'][index, start:end - 1]
-                np.testing.assert_allclose(actions[index], expected, atol=1e-5, rtol=1e-5)
+            expected = self.reference['physical_actions'][index, start:end - 1]
+            identical_actions = np.array_equal(actions[index], expected)
+            if not memory and (self.diverged_from_native[index] or not identical_actions):
+                raise RuntimeError('Unmodified native action prefix did not reproduce exactly.')
+            if not self.diverged_from_native[index] and identical_actions:
                 obs = {key: self.reference['obs_' + key][index, start:end].copy()
                        for key in ['visual', 'proprio']}
                 state = self.reference['states'][index, start:end].copy()
                 reused.append(index)
+                if memory:
+                    unchanged_controls.append(index)
             else:
+                if not self.diverged_from_native[index]:
+                    self.first_action_change[index] = self.iter
+                self.diverged_from_native[index] = True
                 obs, state = self.env.envs[index].rollout(seeds[index], initial_states[index], actions[index])
             observations.append(obs)
             states.append(state)
         self.prefix_reuse.append({'plan_zero_based': self.iter,
                                   'reused_samples': reused, 'reused_pushes_per_sample': self.n_taken_actions,
-                                  'selection': 'no observation-triggered memory yet; never selected by CD'})
+                                  'memory_active_but_identical_control_samples': unchanged_controls,
+                                  'selection': 'same action sequence and no prior divergence; never selected by CD'})
         return {key: np.stack([obs[key] for obs in observations])
                 for key in ['visual', 'proprio']}, np.stack(states)
 

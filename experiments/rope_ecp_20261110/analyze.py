@@ -25,10 +25,11 @@ def analyze_pair(native_dir, ecp_dir, chunk):
     am, bm = np.load(native_dir / 'rope_metrics.npz'), np.load(ecp_dir / 'rope_metrics.npz')
     rows = []
     for index, first in enumerate(bm['first_intervention']):
-        cutoff = a['actions'].shape[1] if first < 0 else int(first) * 5
+        change = bm['first_action_change'][index]
+        cutoff = a['actions'].shape[1] if change < 0 else int(change) * 5
         np.testing.assert_allclose(a['actions'][index, :cutoff], b['actions'][index, :cutoff],
                                    atol=1e-5, rtol=1e-5)
-        prefix_replans = am['cd_by_replan'].shape[1] if first < 0 else int(first)
+        prefix_replans = am['cd_by_replan'].shape[1] if change < 0 else int(change)
         np.testing.assert_allclose(am['cd_by_replan'][index, :prefix_replans],
                                    bm['cd_by_replan'][index, :prefix_replans],
                                    atol=2e-5, rtol=2e-5)
@@ -37,6 +38,7 @@ def analyze_pair(native_dir, ecp_dir, chunk):
         rows.append({'chunk': chunk, 'sample': index, 'native_cd': native_cd, 'S_cd': ecp_cd,
                      'S_minus_native': ecp_cd - native_cd,
                      'first_intervention_plan_zero_based': int(first),
+                     'first_action_change_plan_zero_based': int(change),
                      'pre_intervention_actions_checked': cutoff,
                      'maximum_prefix_action_difference': float(np.max(np.abs(
                          a['actions'][index, :cutoff] - b['actions'][index, :cutoff])))})
@@ -69,8 +71,18 @@ def summarize(root, report):
                        'worsened_episodes': int((difference > 2e-5).sum()),
                        'unchanged_within_2e5': int((np.abs(difference) <= 2e-5).sum()),
                        'triggered_episodes': sum(row['first_intervention_plan_zero_based'] >= 0 for row in rows),
+                       'action_changed_episodes': sum(row['first_action_change_plan_zero_based'] >= 0 for row in rows),
                        'exploratory_paired_mean_delta_ci95': np.quantile(bootstrap, [.025, .975]).tolist(),
                        'all_pre_intervention_checks_passed': True})
+        cost_rows = []
+        for chunk in range(5):
+            path = root / 'S' / f'chunk_{chunk:02d}' / 'ecp_costs.json'
+            if path.exists():
+                cost_rows.extend(json.loads(path.read_text()).values())
+        result.update({'positive_penalty_candidate_evaluations': sum(
+                           row['positive_candidates'] for row in cost_rows),
+                       'candidate_batches_with_memory': sum(row['candidate_batches'] for row in cost_rows),
+                       'maximum_added_cost': max([row['maximum_added_cost'] for row in cost_rows] or [0.])})
     report.mkdir(parents=True, exist_ok=True)
     name = 'summary.json' if result['status'] == 'complete' else 'progress_summary.json'
     (report / name).write_text(json.dumps(result, indent=2) + '\n')
@@ -89,7 +101,8 @@ def summarize(root, report):
                 f"平均 CD 相对降低 {result['relative_mean_cd_reduction_percent']:.2f}%。\n\n"
                 f"50 个任务中，改善 {result['improved_episodes']}，退步 {result['worsened_episodes']}，"
                 f"容差内不变 {result['unchanged_within_2e5']}；"
-                f"实际触发 {result['triggered_episodes']}。全部干预前动作与 CD 核验通过。\n\n"
+                f"实际触发 {result['triggered_episodes']}，改变执行动作 {result['action_changed_episodes']}。"
+                '触发但动作完全不变的前缀继续共享原生物理执行；全部干预前动作与 CD 核验通过。\n\n'
                 '这是固定旧目标集的一次冻结迁移试跑，不是三种子确认。'
                 '配对 bootstrap 区间仅作探索性任务重采样描述；未建立训练来源依赖模型。'
                 '没有按本次结果修改阈值或选择种子。粒子状态仅参与评测。\n')
