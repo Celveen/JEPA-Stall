@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "native_cem_actions_bitwise_identical": true,
+  "distance_matches_broadcast_reference": true,
+  "terminal_scale_matches_goal_cost": true,
+  "goal_unpenalized": true,
+  "fixed_context_excluded": true,
+  "episode_memories_isolated": true,
+  "zero_kappa_exact_native": true,
+  "five_push_warmup_three_push_window": true,
+  "native_prefix_reuse_and_intervention_branch_isolated": true,
+  "new_simulator_episodes": 0
+}
