@@ -1,0 +1,10 @@
+{
+  "snapshot_utc": "2026-11-11T02:13:26.436688+00:00",
+  "file": "complete_raw.tar.gz",
+  "bytes": 5019733,
+  "sha256": "3b5c136e66f9fcf6b02fce851da2639029d2b835a6e0a9ffd8718b5662956de7",
+  "files": 1922,
+  "verification": "Every archive member re-read and SHA-256 verified",
+  "scope": "Completed numerical results, full actions/states, per-iteration and episode logs, configs, execution receipts, CEM timing, source scripts, and separate integration/precision diagnostics.",
+  "omitted": "Checkpoint binaries, image corpora and redundant rendered observation pickle caches. Weights are identified by recorded SHA-256; simulation replay uses saved actions and states."
+}

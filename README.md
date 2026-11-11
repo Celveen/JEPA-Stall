@@ -2,7 +2,7 @@
 
 ## CVPR 2027 manuscript and results
 
-The current draft and reproducible result package are on this branch: [paper PDF](paper/cvpr2027/paper_v14.pdf), [editable source](paper/cvpr2027/README.md), and [evaluation data and logs](reports/publication_v14/README.md). The paper includes the completed Frozen/AdaJEPA evaluation and the random-data epoch-3 DINO-WM CEM PushT baseline. The new DINO-WM PushObj run is archived separately as an in-progress snapshot.
+The current draft and reproducible result package are on this branch: [paper PDF](paper/cvpr2027/paper_v14.pdf), [editable source](paper/cvpr2027/README.md), and [evaluation data and logs](reports/publication_v14/README.md). The paper includes the completed Frozen/AdaJEPA evaluation and the random-data epoch-3 DINO-WM CEM PushT baseline. The three-epoch DINO-WM PushObj evaluation is complete: [results, raw logs, and reproducible audit](reports/dinowm_pushobj_v3/completed_results/README.md).
 
 
 Research code for studying why test-time-adapted latent world-model MPC gets stuck ("stalls") and how a
@@ -20,7 +20,9 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 | `models/`, `datasets/`, `env/`, `train.py`, `plan.py` | World-model training and planning infrastructure |
 | `data/targets/` | Evaluation target sets (ordered chunks of plan targets) used by the runners |
 
-## Latest results (2026-11-05)
+## Latest results (2026-11-11)
+
+- [Completed DINO-WM PushObj evaluation](reports/dinowm_pushobj_v3/completed_results/README.md): all 1,400 task runs finished. Augmentation improves frozen CEM from **86/350 (24.6%)** to **171/350 (48.9%)**. ECP at the original threshold triggers in only 2 ordinary-data and 1 augmented-data tasks, with no changed success labels. Full logs, per-shape counts and independently verified action-prefix pairs are included.
 
 - [PushObj training A/B screen and complete logs](reports/effect_b_20261103/results.md): all four 3-epoch runs and 1,400 frozen MPC tasks completed. At 30 replans, B0 **220/350**, B1 **217/350**, B2 **116/350**, B3 **134/350**. None improved over B0; original logs, diagnostic data, configs, hashes and the **52.78 GPU-hour** ledger are archived.
 - [Wall public-checkpoint baseline](reports/wall_dinowm_20261103/report.md): open-loop CEM **26/50**, capped MPC **46/50**; paired episode outputs and complete success curves included. These runs do not use adaptation or stall regularisation.

@@ -1,13 +1,20 @@
-# Active DINO-WM PushObj evaluation
+# Completed DINO-WM PushObj evaluation
 
-Started 10 November 2026, 10:50 Beijing time. Both epoch-3 checkpoints are complete; this run evaluates ordinary and augmented training data, each with native planning and ECP.
+Completed 10 November 2026 at 13:11 Beijing time: **140/140 chunks, 1,400 task runs**. Both checkpoints were trained for three epochs and evaluated with frozen weights on the same 350 tasks.
 
-The shared protocol executes **25 environment controls after each plan, with at most 6 plans and 150 controls per task**. CEM remains 200 candidates x 10 iterations, with 30 elites. All four conditions and FP32 diagnostic controls use this cadence. `conf/dinowm_pushobj_official_cadence.yaml` is the common configuration for subsequent DINO-WM evaluations.
+| Training data | Native CEM | CEM + ECP | ECP-triggered tasks |
+|---|---:|---:|---:|
+| Matched ordinary actions | 24.6% (86/350) | 24.6% (86/350) | 2/350 |
+| Action-biased augmentation | 48.9% (171/350) | 48.9% (171/350) | 1/350 |
 
-Real-simulator integration passed: paired pre-intervention actions, physical execution limits, early success termination, ECP activation and unchanged checkpoint weights. ECP retains a 50-control warmup and 15-control movement window using observations already returned by the simulator; the temporary boost occupies one complete 25-control plan.
+[Full results, per-shape table, raw data and logs, and reproducible audit](completed_results/README.md).
 
-Five main workers run on GPUs 0, 1, 3, 5 and 6. GPU 4 runs 14 full-task FP32 precision checks. The initial live CEM time is approximately 6.4 seconds per plan, or about 38 seconds of search for a task that reaches all six plans. The initial full-queue estimate is **3–4 hours** for 1,400 condition-task evaluations, including overhead, subject to completed-chunk throughput. Relative to the immediately preceding 30-plan configuration, maximum search work per task is reduced by 80%.
+The protocol executes **25 environment controls after each plan, with at most 6 plans and 150 controls per task**. CEM uses 200 candidates x 10 iterations, 30 elites, BF16 candidate prediction and FP32 objective/search updates. The planning mean is approximately 6.30 seconds; the five-worker queue completed in 2 hours 21 minutes.
 
-See [PROTOCOL.md](PROTOCOL.md), [validation_summary.json](validation_summary.json), [initial_timing_estimate.json](initial_timing_estimate.json), [pipeline_status.json](pipeline_status.json), and [precision_confirmation/status.json](precision_confirmation/status.json). Status files refresh every 30 seconds. Precision comparisons remain diagnostic; no FP32/BF16 accuracy equivalence is claimed.
+ECP uses a 50-control warmup, 15-control movement window, threshold interval 0.05/0.15, penalty coefficient 2 and temporary proprioceptive multiplier 10. All 700 native/ECP pairs have identical targets and pre-intervention actions. Three tasks change their actions after intervention; their success labels remain unchanged.
 
-Old-frequency outputs are retained separately. Benchmark summaries are generated after completion, and partial results have not been added to the paper.
+Separate FP32 checks completed on 14 tasks, with six successes under each precision and no changed success labels. These diagnostic tasks are excluded from benchmark counts and do not establish population-level precision equivalence.
+
+See [PROTOCOL.md](PROTOCOL.md), [pipeline_status.json](pipeline_status.json), [validation_summary.json](validation_summary.json), and [precision_confirmation/summary.json](precision_confirmation/summary.json). Historical v1/v2 results use different deployment protocols and remain separate.
+
+A follow-up authorized on 11 November evaluates the 0.10/0.30 threshold interval and a denser execution cadence. It is ongoing and is not included in these completed results.

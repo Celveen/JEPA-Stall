@@ -4,6 +4,8 @@ The main manuscript is [paper_v14.pdf](../../paper/cvpr2027/paper_v14.pdf); edit
 
 ## Results included
 
+**Update, 11 November 2026:** the DINO-WM PushObj v3 run has completed. Its [complete results and logs](../dinowm_pushobj_v3/completed_results/README.md) supersede the partial snapshot below for that experiment. The original manifest and progress archive retain their historical snapshot dates.
+
 - **PushT and six visual shifts:** all 56 checkpoint/update/ECP/condition evaluations, 2,800 task runs; 1,400 pre-intervention pairs verified.
 - **Frozen Maze:** native 48/100, prespecified S 50/100, S+P component control 54/100; completed paired records and inactive-task reuse manifest.
 - **DINO-WM PushT CEM:** random T16k, fixed epoch 3, 300 candidates x 30 iterations, 6 x 25 environment controls. Seven scores are 48/40/2/44/40/24/48 percent (clean/blur/salt-pepper/dark/agent/object/goal); six-shift mean 33.0%. Five raw NPZ conditions and two completed-summary conditions are explicitly distinguished in `paper/cvpr2027/provenance/dinowm_pusht_cem_e3_v14.json`. The historical source folder name includes `e10`; checkpoint receipts identify epoch 3.
