@@ -26,6 +26,8 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 
 - [Completed AdaJEPA 0.45 threshold ablation](reports/ecp_threshold_v2/RESULTS_ADA045.md): **272/350 (77.7%)** on the same PushObj tasks, versus 271/350 (77.4%) at 0.30. The 350-task paired audit and complete raw logs are included; the planned DINO-WM follow-up was stopped before a full evaluation.
 
+- [Completed AdaJEPA 0.60 and in-house Frozen 0.45 follow-up](reports/ecp_threshold_v3/RESULTS.md): both 350-task runs finished and passed a 700-task paired audit. AdaJEPA 0.60 scores **271/350 (77.4%)**, one task below 0.45; Frozen 0.45 scores **253/350 (72.3%)**, 39 tasks above its matched native planner with no regressions. Full logs and configurations are included.
+
 - [Completed DINO-WM PushObj evaluation](reports/dinowm_pushobj_v3/completed_results/README.md): all 1,400 task runs finished. Augmentation improves frozen CEM from **86/350 (24.6%)** to **171/350 (48.9%)**. ECP at the original threshold triggers in only 2 ordinary-data and 1 augmented-data tasks, with no changed success labels. Full logs, per-shape counts and independently verified action-prefix pairs are included.
 
 - [PushObj training A/B screen and complete logs](reports/effect_b_20261103/results.md): all four 3-epoch runs and 1,400 frozen MPC tasks completed. At 30 replans, B0 **220/350**, B1 **217/350**, B2 **116/350**, B3 **134/350**. None improved over B0; original logs, diagnostic data, configs, hashes and the **52.78 GPU-hour** ledger are archived.
