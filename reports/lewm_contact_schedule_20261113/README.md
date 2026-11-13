@@ -1,6 +1,6 @@
 # LeWM PushObj contact-guidance experiments
 
-Latest completed experiment: **231/350 (66.0%)** with the contact waypoint included in action optimization, compared with 217/350 (62.0%) for a post-optimization 3–20 px offset. Both use the same enhanced LeWM epoch-10 checkpoint, 350 matched tasks, threshold 0.45, four-replan guidance bursts and at most 150 controls. The model remains frozen.
+Best completed contact-objective setting: **231/350 (66.0%)** with the contact waypoint included in action optimization, compared with 217/350 (62.0%) for a post-optimization 3–20 px offset. Both use the same enhanced LeWM epoch-10 checkpoint, 350 matched tasks, threshold 0.45, four-replan guidance bursts and at most 150 controls. The model remains frozen.
 
 | Planning condition | Success / 350 | Rate |
 |---|---:|---:|
@@ -9,6 +9,7 @@ Latest completed experiment: **231/350 (66.0%)** with the contact waypoint inclu
 | Four-replan offsets, cap 15 px | 218 | 62.29% |
 | Four-replan offsets, 3–20 px | 217 | 62.00% |
 | Contact objective in optimization, weight 10 | **231** | **66.00%** |
+| Contact objective in optimization, weight 20 | 227 | 64.86% |
 
 See [the full contact-objective report](lewm_ecp_045_contact_objective/RESULTS.md) for per-shape outcomes, paired rescues/regressions and actual physics contact diagnostics. This deployment uses observed simulator object pose and known shape geometry, as do the matched contact-guidance controls.
 
@@ -30,3 +31,5 @@ The original checkpoint and input dataset are external dependencies identified i
 新增 [3–20 像素幅度实验](lewm_ecp_045_contact_burst4_bias3_20/RESULTS.md)，以连续 4 次干预、上限 15 像素的一组作为匹配对照。新组完整代码、配置、日志与物理回放保存在对应目录。
 
 新增 [接触目标进入优化实验](lewm_ecp_045_contact_objective/RESULTS.md)，以连续 4 次干预、3–20 像素偏置组作为匹配对照。新组取消优化后偏置，在动作优化中加入执行前缀的接触目标代价，保留代码、配置、日志与物理回放。
+
+[The stronger contact-objective experiment](lewm_ecp_045_contact_objective_w20/RESULTS.md) changes only the objective weight from 10 to 20, with all 98 Python source files identical. It finishes at 227/350 (64.86%), with 6 rescues and 10 regressions relative to weight 10. All 350 saved-action physics replays reproduce the recorded outcomes. Weight 10 remains the best setting in this comparison.
