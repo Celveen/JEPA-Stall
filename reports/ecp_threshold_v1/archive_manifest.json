@@ -1,0 +1,9 @@
+{
+  "snapshot_utc": "2026-11-11T09:34:18.090400+00:00",
+  "archive": "completed_raw.tar.gz",
+  "bytes": 10233503,
+  "sha256": "773c4b6ce3a9367206b35a7603c9fe8db7d6a470b895f5f32416bd092c99483b",
+  "files": 1939,
+  "scope": "Complete outcomes, states/actions, logs, configurations, evaluation source, pairing checks and audit. Checkpoints and duplicate rendered-observation caches excluded.",
+  "invalid_preflight": "Excluded from outcomes; source version and reason preserved separately in invalid_preflight_record.json."
+}

@@ -22,6 +22,8 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 
 ## Latest results (2026-11-11)
 
+- [Completed ECP threshold and cadence follow-up](reports/ecp_threshold_v1/README.md): 1,400 task runs and complete logs. Raising the threshold to 0.30 gives **77.4%** for augmented AdaJEPA (previous ECP: 76.9%); DINO-WM remains **48.9%** at 6 x 25 and **20.6%** at 30 x 5, with a matched native control at each cadence.
+
 - [Completed DINO-WM PushObj evaluation](reports/dinowm_pushobj_v3/completed_results/README.md): all 1,400 task runs finished. Augmentation improves frozen CEM from **86/350 (24.6%)** to **171/350 (48.9%)**. ECP at the original threshold triggers in only 2 ordinary-data and 1 augmented-data tasks, with no changed success labels. Full logs, per-shape counts and independently verified action-prefix pairs are included.
 
 - [PushObj training A/B screen and complete logs](reports/effect_b_20261103/results.md): all four 3-epoch runs and 1,400 frozen MPC tasks completed. At 30 replans, B0 **220/350**, B1 **217/350**, B2 **116/350**, B3 **134/350**. None improved over B0; original logs, diagnostic data, configs, hashes and the **52.78 GPU-hour** ledger are archived.
