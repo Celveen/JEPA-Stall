@@ -1,5 +1,7 @@
 # LeWM PushObj contact-guidance experiments
 
+方法讨论与后续设计见 [从停滞反馈到持续恢复与训练数据增强](RECOVERY_METHOD_PLAN.md)：汇总已验证结果、ACT／DAgger 的借鉴思路、停滞正则的作用和分阶段实验方案。
+
 Best completed contact-objective setting: **231/350 (66.0%)** with the contact waypoint included in action optimization, compared with 217/350 (62.0%) for a post-optimization 3–20 px offset. Both use the same enhanced LeWM epoch-10 checkpoint, 350 matched tasks, threshold 0.45, four-replan guidance bursts and at most 150 controls. The model remains frozen.
 
 | Planning condition | Success / 350 | Rate |
