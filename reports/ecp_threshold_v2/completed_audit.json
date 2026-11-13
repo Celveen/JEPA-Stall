@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "chunks": 35,
+  "task_runs": 350,
+  "checkpoints": "augmented LeWM epoch 3",
+  "counts": {
+    "native": 262,
+    "gamma15": 269,
+    "gamma30": 271,
+    "gamma45": 272,
+    "triggered": 108
+  },
+  "comparisons": {
+    "native": {
+      "rescues": [
+        "chunk_02_I:2",
+        "chunk_06_L:0",
+        "chunk_06_L:1",
+        "chunk_15_Z:7",
+        "chunk_16_Z:3",
+        "chunk_16_Z:4",
+        "chunk_27_plus:3",
+        "chunk_28_plus:9",
+        "chunk_31_T:3",
+        "chunk_32_T:6",
+        "chunk_34_T:7"
+      ],
+      "regressions": [
+        "chunk_19_Z:0"
+      ]
+    },
+    "gamma15": {
+      "rescues": [
+        "chunk_06_L:0",
+        "chunk_16_Z:3",
+        "chunk_28_plus:9",
+        "chunk_31_T:3"
+      ],
+      "regressions": [
+        "chunk_04_I:4"
+      ]
+    },
+    "gamma30": {
+      "rescues": [
+        "chunk_16_Z:3",
+        "chunk_20_small_tee:1",
+        "chunk_28_plus:9"
+      ],
+      "regressions": [
+        "chunk_04_I:4",
+        "chunk_11_square:2"
+      ]
+    }
+  },
+  "median_first_trigger": 11.0,
+  "by_shape": {
+    "I": {
+      "n": 50,
+      "successes": 27
+    },
+    "L": {
+      "n": 50,
+      "successes": 46
+    },
+    "square": {
+      "n": 50,
+      "successes": 25
+    },
+    "Z": {
+      "n": 50,
+      "successes": 49
+    },
+    "small_tee": {
+      "n": 50,
+      "successes": 36
+    },
+    "plus": {
+      "n": 50,
+      "successes": 44
+    },
+    "T": {
+      "n": 50,
+      "successes": 45
+    }
+  },
+  "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v2_ada045",
+  "scope": "Exploratory threshold ablation on the same fixed task set"
+}
