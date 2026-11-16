@@ -25,11 +25,13 @@ from rope_ecp import chamfer_particles
 class ChunkTests(unittest.TestCase):
     def test_chunk_physics_and_mid_chunk_success(self):
         for chunk, limit, finish in ((3, 20, None), (5, 20, None), (3, 20, 2),
-                                     (3, 15, None), (3, 15, 14)):
+                                     (3, 15, None), (3, 15, 14), (3, 20, 4)):
             with self.subTest(chunk=chunk, limit=limit, finish=finish), tempfile.TemporaryDirectory() as directory:
                 settings = runner.build_config('native', 0, Path(directory))['planner']
                 settings['sub_planner']['horizon'] = chunk
                 settings['ecp']['warmup_pushes'] = 5
+                if finish == 4:
+                    settings['ecp'].update(kappa=2., independent_execution=True, warmup_pushes=0)
                 obs = {'visual': np.zeros((1, 1, 1)), 'proprio': np.zeros((1, 1, 1))}
                 # Archived targets are flat; the live simulator returns N x 4 particles.
                 state = np.ones((1, 8))

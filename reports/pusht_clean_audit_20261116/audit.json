@@ -1,0 +1,99 @@
+{
+  "status": "archive_search_complete",
+  "remote_refs": [
+    "origin/HEAD 1ac689926e1d9b3ddc40b398c4b36cdd963fbbee",
+    "origin/ablation/no-familiarity-read-write 3faad041417c6f2a22df2ad62822c34fd075c4bb",
+    "origin/baselines d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+    "origin/codex/paper-revision-2026-11-05 8dd9aa39db4e309ca01562940f9ae0bbd8c02889",
+    "origin/codex/results-dinowm-complete-20261110 8b5f9f6b3ccef3d7b2e356f8f15a2f6520f67fcd",
+    "origin/codex/results-dreamerv3-iris-pushobj-20261110 31f9b34a3b46ef287e9a764b6d1fbef20b9e24f0",
+    "origin/codex/results-rope-granular-crossdomain-20261111 02d1f525ff099addfcd03890ddfa94ce4bbb6315",
+    "origin/cudagraph-gd aa397f3f551a8fe5b8015e18514f78c2a2956a98",
+    "origin/main 1ac689926e1d9b3ddc40b398c4b36cdd963fbbee",
+    "origin/paper-ready b05d49ccf8817fd21b9cd1b5398aff8bbe1ae329",
+    "origin/reports-pack 8fee1af0de40fe912251655d7f91c30a3e3c0189",
+    "origin/results ef134eef56ec2143cd2fd96bbfdd51adac60a3ad",
+    "origin/results-shape-v6a 53c1dffc79362b247b5a2df2d39820270dd51846",
+    "origin/rope-cl 040ba0eb1fa7fe09960633aa09f3fac4ec09ac73"
+  ],
+  "results": {
+    "lewm_CEM": {
+      "clean_found": false,
+      "conditions": {
+        "blur": {
+          "n": 50,
+          "successes": 33
+        },
+        "dark": {
+          "n": 50,
+          "successes": 32
+        },
+        "red_agent": {
+          "n": 50,
+          "successes": 1
+        },
+        "red_goal": {
+          "n": 50,
+          "successes": 13
+        },
+        "red_object": {
+          "n": 50,
+          "successes": 10
+        },
+        "snp": {
+          "n": 50,
+          "successes": 32
+        }
+      },
+      "missing_conditions": [
+        "clean/default"
+      ]
+    },
+    "ddpwm_CEM": {
+      "clean_found": false,
+      "conditions": {
+        "blur": {
+          "n": 50,
+          "successes": 28
+        },
+        "dark": {
+          "n": 50,
+          "successes": 33
+        },
+        "red_agent": {
+          "n": 50,
+          "successes": 31
+        },
+        "red_goal": {
+          "n": 50,
+          "successes": 34
+        },
+        "red_object": {
+          "n": 50,
+          "successes": 21
+        },
+        "snp": {
+          "n": 50,
+          "successes": 11
+        }
+      },
+      "missing_conditions": [
+        "clean/default"
+      ]
+    },
+    "lewm_GD": {
+      "clean_found": true,
+      "n": 50,
+      "successes": 32,
+      "source": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/default/final_eval_results.npz",
+      "sha256": "bb6e478b2459d3c6b0968db2521d6347774fbe47ef73a3566a7123b8250eaf45"
+    }
+  },
+  "manuscript_reference_policy": "Internal data provenance only; no unpublished-paper citation added.",
+  "reports_zip_audit": {
+    "zip_bytes": 770345,
+    "members": 91,
+    "ddp_lewm_members": [],
+    "text_members_with_ddp_or_lewm": []
+  }
+}

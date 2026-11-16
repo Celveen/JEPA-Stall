@@ -154,7 +154,7 @@ class RopeStagnationMPCPlanner(MPCPlanner):
         self.goal_latents = self._encode(obs_g)
         self.reference = None
         original_rollout = self.env.rollout
-        if self.kappa > 0:
+        if self.kappa > 0 and not self.ecp.get('independent_execution', False):
             reference_dir = Path(self.ecp['reference_dir'])
             with np.load(reference_dir / 'native_execution_cache.npz') as cache:
                 self.reference = {key: cache[key] for key in cache.files}

@@ -22,6 +22,10 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 
 ## Latest results (2026-11-16)
 
+- [Completed Rope formal evaluation and real simulator images](reports/rope_formal20/README.md): four conditions × 20 targets, maximum 20 pushes, stopping at CD < 0.3. Native 5/5: **0.5809, 14/20**; fixed S 3/3: **0.6112, 13/20**; dynamic S 3/3: **0.5152, 12/20**; fixed S without extra warmup: **0.5834, 13/20**. Dynamic S lowers mean CD but no S condition improves success rate. Includes [complete three-push image sequences](reports/rope_formal20/visuals/README.md) from separately recorded executions, favorable and unfavorable examples, and the full raw evidence package.
+
+- [PushT clean-data audit](reports/pusht_clean_audit_20261116/README.md): LeWM-GD clean is **32/50 (64%)** and already populated. No matching LeWM-CEM or DDP-WM-CEM clean archive was found in the reference repository; those two table entries remain unmeasured.
+
 The [complete Rope follow-up summary and raw evidence](reports/rope_followup_20261116/README.md) collect all ten completed conditions, 100 episode-condition results, per-sample measurements, and the encoder/protocol audits.
 
 - [Completed Rope 15-push rerun](reports/rope_chunk3_cap15_20261116/BUDGET_COMPARISON.md): three groups of ten targets at 3/3 cadence give Native CD **0.4206**, fixed S **0.4117**, and dynamic S **0.4178**, all **7/10** successful. Each S arm triggers ten times and changes three tasks' controls; strengths again saturate, so this does not distinguish fixed from dynamic strength. Truncating the earlier 20-push trajectories at 15 yields **6/10**, versus **8/10** after 20: two successes require the extra budget. The independent rerun and same-trajectory budget comparison are reported separately because physics variation can change later plans.
