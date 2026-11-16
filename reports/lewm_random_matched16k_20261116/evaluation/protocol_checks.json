@@ -1,0 +1,136 @@
+{
+  "reference_success_counts": {
+    "native": 215,
+    "ecp": 231
+  },
+  "paired_augmented_start_goal_match": true,
+  "config_differences": [
+    {
+      "arm": "native",
+      "shape": "I",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "ecp",
+      "shape": "I",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "native",
+      "shape": "L",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "ecp",
+      "shape": "L",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "native",
+      "shape": "square",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "ecp",
+      "shape": "square",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "native",
+      "shape": "Z",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "ecp",
+      "shape": "Z",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "native",
+      "shape": "small_tee",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "ecp",
+      "shape": "small_tee",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "native",
+      "shape": "plus",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "ecp",
+      "shape": "plus",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "native",
+      "shape": "T",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    },
+    {
+      "arm": "ecp",
+      "shape": "T",
+      "only_changed_fields": [
+        "ckpt_base_path",
+        "eval_data_path",
+        "saved_folder"
+      ]
+    }
+  ],
+  "new_evaluation_started": false
+}

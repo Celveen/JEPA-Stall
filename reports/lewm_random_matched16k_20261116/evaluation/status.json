@@ -1,0 +1,123 @@
+{
+  "state": "complete",
+  "pid": 1772068,
+  "started_at": "2026-11-16T12:51:06.453815+08:00",
+  "training": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_8gpu_20261116",
+  "tasks_per_arm": 350,
+  "arms": [
+    "native",
+    "ecp"
+  ],
+  "jobs": [
+    {
+      "arm": "native",
+      "shape": "L",
+      "gpu": 1,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/native_L.log"
+    },
+    {
+      "arm": "native",
+      "shape": "Z",
+      "gpu": 3,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/native_Z.log"
+    },
+    {
+      "arm": "ecp",
+      "shape": "I",
+      "gpu": 7,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/ecp_I.log"
+    },
+    {
+      "arm": "native",
+      "shape": "small_tee",
+      "gpu": 4,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/native_small_tee.log"
+    },
+    {
+      "arm": "native",
+      "shape": "plus",
+      "gpu": 5,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/native_plus.log"
+    },
+    {
+      "arm": "native",
+      "shape": "I",
+      "gpu": 0,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/native_I.log"
+    },
+    {
+      "arm": "native",
+      "shape": "square",
+      "gpu": 2,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/native_square.log"
+    },
+    {
+      "arm": "native",
+      "shape": "T",
+      "gpu": 6,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/native_T.log"
+    },
+    {
+      "arm": "ecp",
+      "shape": "square",
+      "gpu": 3,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/ecp_square.log"
+    },
+    {
+      "arm": "ecp",
+      "shape": "L",
+      "gpu": 1,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/ecp_L.log"
+    },
+    {
+      "arm": "ecp",
+      "shape": "Z",
+      "gpu": 7,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/ecp_Z.log"
+    },
+    {
+      "arm": "ecp",
+      "shape": "T",
+      "gpu": 0,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/ecp_T.log"
+    },
+    {
+      "arm": "ecp",
+      "shape": "plus",
+      "gpu": 5,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/ecp_plus.log"
+    },
+    {
+      "arm": "ecp",
+      "shape": "small_tee",
+      "gpu": 4,
+      "returncode": 0,
+      "log": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/logs/ecp_small_tee.log"
+    }
+  ],
+  "training_progress": {
+    "completed_steps": 127360,
+    "target_steps": 127360,
+    "estimated_finish_at": "2026-11-16T17:15:48.599698+08:00",
+    "updated_at": "2026-11-16T17:15:48.599725+08:00"
+  },
+  "updated_at": "2026-11-16T17:24:01.749222+08:00",
+  "checkpoint_sha256": "13b8a6ce0b7a866db0e24ccba8cfe24e64ced5710f5d21ebac34eb0e22397b17",
+  "evaluation_started_at": "2026-11-16T17:16:21.071231+08:00",
+  "completed_jobs": 14,
+  "completed_at": "2026-11-16T17:24:01.749053+08:00",
+  "results": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_pushobj_20261116/RESULTS.md"
+}

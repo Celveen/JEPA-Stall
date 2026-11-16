@@ -1,0 +1,103 @@
+{
+  "purpose": "Matched random-data LeWM baseline for the enhanced-data LeWM epoch-10 checkpoint",
+  "initialization": "from scratch; seed 0; no enhanced checkpoint initialization",
+  "training_source_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "project_commit": "5ab1d1b7f76760d025b5bbb2b97615a573409604",
+  "reference_checkpoint": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/lewm_pushobj_bias16k_e10/checkpoints/model_10.pth",
+  "reference_checkpoint_sha256": "077d55daa795c627a9eca3d7e3a86ba7b98a843f6043a7e61b67a17bba8805a6",
+  "dataset": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/dinowm_pushobj_ordinary_matched16k_v1",
+  "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/checkpoints/lewm_pushobj_random_matched16k_e10_8gpu_20261116",
+  "allowed_config_changes": [
+    "saved_folder",
+    "env.dataset.data_path"
+  ],
+  "epochs": 10,
+  "batch_size": 128,
+  "expected_training_windows": 1630266,
+  "expected_steps_per_epoch": 12736,
+  "expected_total_steps": 127360,
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-46e54a30-c5f9-0d24-39a5-746dc07e390e",
+  "gpu_count": 8,
+  "source_files": {
+    "train_lewm.py": {
+      "sha256": "770e24c7bfea5560eb4be8294f68c17cf3d9b56b4a399017a419994f05a65132",
+      "git_blob": "27478ea32d6b57323d50e28db6f80e32a42fffe4"
+    },
+    "models/lewm.py": {
+      "sha256": "1f36bbf4411408be468b44dc20261969436256e168d0097b1b9b98aa75f05355",
+      "git_blob": "d8093a5765759a10ef316d1b7a3ebc9418dd26e8"
+    },
+    "datasets/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "datasets/window_stream.py": {
+      "sha256": "69f2a1390259eb15bc99a0bcd0c40875aa629e328703b980609d4282ae41bb1c",
+      "git_blob": "8f12bdecdee64b399d6aaf6493cf922767d6c826"
+    },
+    "datasets/pusht_dset.py": {
+      "sha256": "47f77f27e633d1e2eff069904788d8dd8b07e199a1b18599f57844a8d0ab11f5",
+      "git_blob": "42683d26c4776f7ba48fe541060b61d36bbf7ae1"
+    },
+    "datasets/traj_dset.py": {
+      "sha256": "01d1a914f93198c228917453dae8aae57af7b788c80bb01b84fb0fd1b1988f66",
+      "git_blob": "9427a2919f713893122833e5f29300f99001a4c1"
+    },
+    "datasets/img_transforms.py": {
+      "sha256": "973ab63f5ff29ef371bb4ec0a6bff81f903c8a8bea7eaac14d62c9dace477c57",
+      "git_blob": "abf51fc36e590650431bf4a234e73a33c50ee47f"
+    },
+    "datasets/deformable_env_dset.py": {
+      "sha256": "1380a909f5579a4eb69271ef98f16dfd0517829b219c9990ea61f82340035b3f",
+      "git_blob": "bb8b10b7d9ef26cedd7c0028d6a5d6b7f308d8cf"
+    }
+  },
+  "python": "/home/appuser/anaconda3/envs/ts/bin/python",
+  "gpu_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "gpu_uuids": [
+    "GPU-46e54a30-c5f9-0d24-39a5-746dc07e390e",
+    "GPU-759bf33a-347a-f48e-9967-094bef34ca14",
+    "GPU-f15e7c17-9fbd-9e83-163a-6e6b8065a65a",
+    "GPU-35eb1fdc-8b9e-2df5-5cc7-0799c8f77e18",
+    "GPU-c3ef23e1-9594-3fbf-52a7-66336dbb9504",
+    "GPU-fc48c836-1875-f27f-1afc-f42b783c153a",
+    "GPU-906821a0-511f-3f5c-de64-2cbe7d637cf9",
+    "GPU-c5e439ed-8b41-412d-f3ff-3beb5f20c67b"
+  ],
+  "parallelization": "Eight DDP processes, SyncBatchNorm over the global batch, and differentiable global SIGReg with shared random projections. Rank zero scatters batches from the unchanged reference WindowBatcher.",
+  "entrypoint": "runtime/train_lewm_distributed.py",
+  "additional_runtime_files": {
+    "distributed_training.py": "522f6d71f622a0a1f92a5d9b58ff4c8a3c6face4164a4f92c08e521107d6f866",
+    "train_lewm_distributed.py": "459982a6e9125618601bcaf7c9c4333b8e60a21fc5b557f21d8d85f0afb42be3"
+  },
+  "cuda_seed_policy": "Model initialization seed 0; training dropout streams use seed + rank; SIGReg projections are sampled on rank 0 and broadcast.",
+  "experiment_files_sha256": {
+    "preflight.json": "08748c5b8c5593b84f0ce89eca98f2e850055a5e2e9de4b4dcfa5eadeb25e0c6",
+    "reference_training_config.yaml": "2feb7943a714c6ef01b1b0d96aceb8fe869239870087bbb3c9619a54222f3985",
+    "data_manifest.json": "196c72773155c5a68392d7ce33fe811374bebe343c91e7c8264aa40a4882b9b5",
+    "encoder_parallel_preflight.log": "a54ab9248cc67832778afb226252fbd7261f9dfc52fa43da7d920e978c43a124",
+    "single_gpu_preflight.json": "1e47f87e51bbc4c66658fc910a9d326acc3e547fac50228b927e8075a8ceeae8",
+    "launch.py": "0f18f2fbf15cc4b0f85c80c2614015d46c4d814a9676e8fda709636f3431b54c",
+    "preflight.log": "08748c5b8c5593b84f0ce89eca98f2e850055a5e2e9de4b4dcfa5eadeb25e0c6",
+    "preflight_before_attention_rng_alignment.log": "b906d70a2edd3f582824d8b94e3e5aa558ff207154cade1d2a0246be24aa3209",
+    "run_training.py": "cfdd56dd5be34373420d9935ece52b8291dcdf30e6faa87fd965835a40a53b1b",
+    "config.yaml": "ef9683142c6cff3588c833143663cd2c54b1dda6e77c7aefe0de5404b337b1ad",
+    "README.md": "7f02ea712b927bba422b7bb6facd0dc7f883736ebabfa41bcfbbe616022633f2",
+    "preflight.py": "12e202b508f2510f5688316aab1a53d5837bcd7642c1b2e21edbdb0baabf8cbd",
+    "preflight_distributed.py": "d81f5f9fd337bce25770773fee88d9c2c8f9d564fce6c198a839536cfa23ac50",
+    "encoder_parallel_preflight.json": "1ff9310a37d3a88473b4629e36e388f4124b36ad007a6b9d63fc1382ffa76d88",
+    "single_gpu_preflight.py": "f0dee2600c8c0b4e2dd272dacbf9db957067e627b773af068e8ea1009e91140f",
+    "reference_checkpoint_manifest.json": "5aca43263906896d5867fd8419d8e0a741b36b18dbb2bc3f427768df760b0c28",
+    "single_gpu_preflight.log": "5a067c1a4ea90f2adca19a5d50b7f2dac524836a72def55f2cd298781e54442e"
+  }
+}
