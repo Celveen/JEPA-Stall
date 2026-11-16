@@ -1,33 +1,5 @@
 {
   "before": {
-    "total_reference_targets": 90,
-    "main_reference_targets": 40,
-    "main_to_appendix_targets": 20,
-    "main_to_appendix_labels": [
-      "sec:implementation",
-      "sec:parameters",
-      "sec:properties",
-      "sec:implementation",
-      "tab:dinowm-aug",
-      "sec:threshold-details",
-      "sec:additional-controls",
-      "tab:memory-strength",
-      "tab:maze-controls",
-      "sec:maze-details",
-      "fig:push-distance",
-      "fig:diverse-execution",
-      "sec:behavior",
-      "sec:backbone",
-      "sec:implementation",
-      "sec:pusht-extension",
-      "tab:extra-baselines",
-      "tab:pusht-ecp",
-      "sec:backbone",
-      "sec:rope-details"
-    ],
-    "missing_labels": []
-  },
-  "after": {
     "total_reference_targets": 54,
     "main_reference_targets": 22,
     "main_to_appendix_targets": 7,
@@ -42,11 +14,35 @@
     ],
     "missing_labels": []
   },
+  "after": {
+    "total_reference_targets": 48,
+    "main_reference_targets": 30,
+    "main_to_appendix_targets": 16,
+    "main_to_appendix_labels": [
+      "sec:properties",
+      "sec:implementation",
+      "tab:dinowm-aug",
+      "tab:training",
+      "tab:action",
+      "tab:threshold-shape",
+      "tab:memory-strength",
+      "tab:maze-controls",
+      "tab:maze-full",
+      "sec:behavior",
+      "fig:pusht-rollouts",
+      "fig:rope-rollouts",
+      "tab:pusht-ecp",
+      "tab:extra-baselines",
+      "tab:lewm-contact",
+      "tab:rope-ablation"
+    ],
+    "missing_labels": []
+  },
   "settings_table_figure_references": 0,
-  "pdf_internal_links_checked": 171,
+  "pdf_internal_links_checked": 166,
   "invalid_pdf_internal_links": 0,
   "named_destinations": 190,
-  "label_destinations_checked": 66,
-  "all_figure_assets_unchanged": true,
+  "label_destinations_checked": 68,
+  "all_main_figure_assets_unchanged": true,
   "bibliography_unchanged": true
 }

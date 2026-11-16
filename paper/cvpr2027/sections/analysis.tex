@@ -2,7 +2,7 @@
 \label{sec:analysis}
 
 \paragraph{Data augmentation and correction are complementary.}
-Augmentation improves fixed-parameter ResNet success on PushObj by 17.4 points and adaptive success by 5.4 points; ECP then adds a further 11.1 and 2.9 points on the same checkpoints. The gains stack because augmentation improves the experience available during training, while ECP improves the objective used during execution. The augmentation benefit is not specific to our backbone: under matched training, it raises DINO-WM with CEM from 24.6\% to 48.9\%, improving all seven shapes (\cref{tab:dinowm-aug}).
+Augmentation improves fixed-parameter ResNet success on PushObj by 17.4 points and adaptive success by 5.4 points; ECP then adds a further 11.1 and 2.9 points on the same checkpoints. Matched DINO-WM training likewise improves CEM success from 24.6\% to 48.9\%, improving all seven shapes (\cref{tab:dinowm-aug}). Across three ResNet training initializations, native success has a standard deviation of 2.2--3.5 points; the ECP component studies use one checkpoint per recipe (\cref{tab:training}).
 
 
 
@@ -25,7 +25,7 @@ Data aug. & AdaJEPA &74.9&76.0&\textbf{77.1}&76.9\\
 \end{table}
 
 \paragraph{Both components improve native planning.}
-Across both checkpoints and both update rules, stagnation regularization and temporary goal reweighting each improve native PushObj success (\cref{tab:components}). Reweighting supplies the largest manipulation gains: fixed-parameter ResNet success rises from 43.7\% to 60.0\% with the released model and from 61.1\% to 72.3\% with the augmented-data model. Combined correction improves the four native baselines by 16.0, 3.7, 11.1, and 2.0 points, respectively, and matches reweighting alone to within one task in every setting. The components serve distinct recovery needs: goal-component emphasis drives the PushObj gains, while spatial stagnation memory redirects navigation in Maze.
+Both stagnation memory and temporary goal reweighting improve native PushObj success across checkpoints and update rules (\cref{tab:components}). Reweighting contributes most of the manipulation gain; combined correction differs from it by at most one solved task. The components address complementary needs: unfinished goal components in PushObj and revisited regions in Maze. An action-space variant, using a physical-displacement trigger and bounded pusher-goal offset without latent memory, raises AdaJEPA success from 74.9\% to 77.4\% and from 74.3\% to 78.9\% on two task streams (\cref{tab:action}).
 
 \begin{table}[t]
 \centering
@@ -47,7 +47,7 @@ Native &74.9&---&---&---\\
 \end{table}
 
 \paragraph{ECP is robust to the trigger threshold.}
-\Cref{tab:threshold} sweeps the upper threshold over a fourfold range. A larger threshold detects stalls in more episodes (90 to 111) and earlier (median first trigger from replan 14 to 10), yet every setting improves on native planning by 7 to 10 tasks with at most two regressions. Success peaks at $\gamma_{\rm hi}=0.45$, which we adopt for the main PushObj results. With ResNet parameters fixed, $\gamma_{\rm hi}=0.15$ and $0.45$ both solve 253 of 350 tasks, each with 39 rescues and no regression. ECP therefore does not depend on a finely tuned threshold.
+\Cref{tab:threshold} sweeps the upper threshold over a fourfold range. A larger threshold detects stalls in more episodes (90 to 111) and earlier (median first trigger from replan 14 to 10), yet every setting improves on native planning by 7 to 10 tasks with at most two regressions. Success peaks at $\gamma_{\rm hi}=0.45$, which we adopt for the main PushObj results. The fixed ResNet model solves 253 of 350 tasks at both $0.15$ and $0.45$, with 39 rescues and no regression. At $0.45$, seen/unseen-shape gains are 14.0/7.3 points with fixed weights and 4.5/0.7 points with AdaJEPA, whose gains concentrate on seen shapes (\cref{tab:threshold-shape}).
 
 \begin{table}[t]
 \centering
@@ -109,11 +109,11 @@ DINO-WM (ours) &\textbf{0.515}&\textbf{60.0}\\
 \end{table}
 
 \paragraph{Correction complements continued adaptation.}
-Gated memory retains all 63 native Maze successes while solving three additional tasks. Immediate correction also reaches 66 successes but incurs four regressions; fixed delay reaches only 61. The loss gate coordinates correction with model learning (\cref{sec:maze-details}).
+Gated memory retains all 63 native Maze successes while solving three additional tasks. Immediate correction also reaches 66 successes but incurs four regressions; fixed delay reaches only 61. The loss gate coordinates correction with model learning (\cref{tab:maze-controls}). Its benefit persists at 50 replans: gated memory solves 87 tasks versus 82 for native AdaJEPA (\cref{tab:maze-full}).
 
 \subsection{Qualitative analysis of recovery}
 \label{sec:qualitative}
 
-In the PushObj example (\cref{fig:teaser}), the fixed-parameter ResNet controller repeatedly moves near the goal while leaving the pusher misplaced. ECP reduces pusher error from 45.3 to 10.2 pixels and succeeds at replan 17, after sharing the first 15 plans. \Cref{fig:execution-recovery} adds shifted PushT and Rope examples.
+In the PushObj example (\cref{fig:teaser}), the fixed-parameter ResNet controller repeatedly moves near the goal while leaving the pusher misplaced. ECP reduces pusher error from 45.3 to 10.2 pixels and succeeds at replan 17, after sharing the first 15 plans. Across triggered episodes, ECP moves the pusher more than 15 pixels from the stalled position within three replans in 38\% of cases, versus 11\% natively (\cref{sec:behavior}).
 
-In Maze, AdaJEPA travels 45.1 units while repeatedly traversing the same corridor. Gated memory redirects the trajectory and reaches the goal at replan 27; the runs share their first six plans. With the ResNet model held fixed, memory reaches the goal at replan 28 after sharing the first 13 plans with the failed baseline. These cases show goal-component completion and escape from revisited regions. All solid trajectories follow replayed physics steps that match the logged replan endpoints.
+In Maze, AdaJEPA travels 45.1 units while repeatedly traversing the same corridor. Gated memory redirects the trajectory and reaches the goal at replan 27; the runs share their first six plans. With the ResNet model held fixed, memory reaches the goal at replan 28 after sharing the first 13 plans with the failed baseline. These cases show goal-component completion and escape from revisited regions. Recorded PushT visual-shift and Rope rollouts extend the endpoint comparisons with intermediate simulator observations (\cref{fig:pusht-rollouts,fig:rope-rollouts}).

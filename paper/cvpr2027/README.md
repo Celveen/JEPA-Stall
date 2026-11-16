@@ -2,7 +2,7 @@
 
 LeWM 的 PushT clean CEM 已补齐为 **72%（36/50）**，方法标签保持 LeWM；配置、权重来源及原始结果见 [完整记录](../../reports/lewm_pusht_clean_20261116/README.md)。
 
-当前稿采用 Execution-Conditioned Planning（ECP）命名。本次仅修改摘要：使用 We propose；以 Inspired by DART and ACT 起句说明训练与推理启发；明确 Rope 基于 DINO-WM；补充代码将在补充材料中提供。正文 8 页，声明与 47 条参考文献 2 页，附录 11 页；摘要 196 词。Table 1 的 Ours 末尾分组保留。详见 [本次修订](REVISION_ABSTRACT_INSPIRATION.md)。
+当前稿采用 Execution-Conditioned Planning（ECP）命名。正文对附录证据的引用由 7 处补到 16 处，涵盖额外基线、LeWM 组件、分形状结果、训练种子、动作空间控制、Maze 预算和恢复行为。附录删减重复报数与说明，保留全部实验表格数值；Figure 6、7 共享重复状态并缩为单排，新增真实 PushT 视觉偏移和 Rope 运行序列。完整稿 21 页：正文 8 页，声明与 47 条参考文献 2 页，附录 11 页。摘要保持 196 词。审计见 `provenance/appendix_evidence_revision.json`。
 
 [完整论文](paper.pdf) · [主文](paper_main.pdf) · [附录](paper_appendix.pdf) · [完整源码](paper_source_v14.zip) · [摘要](Abstract.txt) · [可编辑 Figure 3](Figure3.drawio)
 
@@ -22,9 +22,9 @@ python scripts/build_method_figure.py
 
 原始输入保存在 `figures/source/fig2_method_v2_input.pdf` 和 `Figure3_v2_input.drawio`。当前输出为 `figures/fig2_method.pdf`、`figures/svg/fig2_method.svg`、`Figure3.drawio` 和 `delivery/Figure3.drawio`。`provenance/method_figure.json` 记录校验和。
 
-实验表以用户 v2 稿为基础，已合并远端 LeWM clean 和 Rope 正式运行结果；旧 `update_comparison_tables.py` 用于此前结果重算，不属于本次排版重建流程，以免覆盖 v2 图注及表格组织。历史审计和修订说明保留供追溯；当前构建信息以 `provenance/build_report.json` 和 `provenance/table1_abstract_revision.json 为准。
+实验表以用户 v2 稿为基础，已合并远端 LeWM clean 和 Rope 正式运行结果；旧 `update_comparison_tables.py` 用于此前结果重算，不属于本次排版重建流程，以免覆盖 v2 图注及表格组织。历史审计和修订说明保留供追溯；当前构建信息以 `provenance/build_report.json` 和 `provenance/appendix_evidence_revision.json` 为准。
 
-Figure 4 可用 `python scripts/build_domain_figure4.py --paper .` 重建；素材与两类图像来源的详细区别见本次修订说明。图像资产未改；Rope 主结果与已有固定强度可视化的区别见本次修订说明。
+Figure 4 可用 `python scripts/build_domain_figure4.py --paper .` 重建；素材来源见 `provenance/domain_figure4_manifest.json`；图中 Rope 固定强度可视化与正文动态强度主结果分别标注。
 
 Figure 4 当前为八组完整场景：PushObj · ResNet、PushT · LeWM、Maze · AdaJEPA、Rope · DINO-WM；顶部图例标注 Without ECP / With ECP，灰色边界线已去除。Rope 使用目标 15/24 的新配对截图。Figure 1 顺序为 Frozen、LeWM、AdaJEPA；LeWM 三柱为 47.4%、61.4%、66.0%；可用 `python scripts/build_headline.py --data provenance/headline_data_latest.json` 重建。
 
@@ -40,3 +40,9 @@ Figure 4 当前为八组完整场景：PushObj · ResNet、PushT · LeWM、Maze 
 - 摘要聚焦问题、方法与关键结果；阈值敏感性等消融细节留在正文，避免在摘要重复。
 
 - 摘要使用 “We propose”；启发关系以 “Inspired by DART and ACT, we …” 表述，说明具体训练与推理选择；报告 Rope 结果时注明 DINO-WM。
+
+附录 Figure 6、7、8、10 可用 `python scripts/build_appendix_figures.py` 从随稿的已核验图片重建；无需运行仿真。Rope 图来自固定强度 S 的独立可视化记录，不改标为动态 S 的正式统计轨迹。
+
+- 正文应引用能支持结论的附录实验，避免机械压低引用数量；本版有 16 处目标引用。
+- 完整稿不超过 22 页。图表按信息量设置尺寸，共享相同起点、目标，避免重复展示。
+- Overleaf 源码包只包含 CVPR 模板和编译依赖；修订 Markdown、审计文件、原始帧、draw.io 和生成缓存不放入该包。

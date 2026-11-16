@@ -5,38 +5,40 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "XeTeX via Tectonic",
-  "base_repository_commit": "512ac2d04dff8bfbcdb22698fb3786d779d0033a",
+  "base_repository_commit": "2d341cbfac96824bd57bfa29fbb6fe3fbcc4d758",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/abstract_inspiration_revision.json",
+  "audit": "provenance/appendix_evidence_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "92bed9c120ed3247f2eadb8a61e43ec70a71858303367ccb0cc24fc60c51dc71",
-    "paper_v14.pdf": "92bed9c120ed3247f2eadb8a61e43ec70a71858303367ccb0cc24fc60c51dc71",
-    "paper_main.pdf": "d3b6111db2b18fc98617ea3c6e4f01d33c7d52855992e2bc4c225f7de0b0296b",
-    "paper_appendix.pdf": "7cbcbd7a69ef61aba52f77259a29eb213d17c3896986fccd56fb58725507cf0b"
+    "paper.pdf": "e7b910d751d5eb1705e2817b752258f0d6e5f8d15aa02946405db5028d3211d1",
+    "paper_v14.pdf": "e7b910d751d5eb1705e2817b752258f0d6e5f8d15aa02946405db5028d3211d1",
+    "paper_main.pdf": "0efaec81eaf665f8292421a8ddca0e2b55674e1a4e37a39ad0ef54213f3f255e",
+    "paper_appendix.pdf": "21c0fa1dd3fc08d44a6e92944e3e35d0b2b95e07c36b0767630801920e739548"
   },
-  "figures": 8,
+  "figures": 10,
   "main_body_pages": 8,
   "combined_pages": 21,
-  "revision": "v2-planning-abstract-inspiration",
+  "revision": "v2-planning-appendix-evidence",
   "abstract_words_whitespace": 196,
   "figure_pages": {
     "fig:headline": 1,
     "fig:teaser": 2,
     "fig:method": 4,
     "fig:execution-recovery": 7,
-    "fig:push-distance": 19,
-    "fig:push-frames": 20,
-    "fig:maze-case": 20,
-    "fig:diverse-execution": 21
+    "fig:push-distance": 18,
+    "fig:push-frames": 19,
+    "fig:maze-case": 19,
+    "fig:rope-rollouts": 19,
+    "fig:diverse-execution": 20,
+    "fig:pusht-rollouts": 21
   },
-  "revision_description": "Refine abstract inspiration wording, identify the Rope backbone and add supplementary-code availability.",
+  "revision_description": "Restore appendix evidence, streamline supplementary text and add verified real PushT/Rope rollout sequences in 21 pages.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-16T15:53:50.214134+00:00",
+  "updated": "2026-11-16T16:30:43.467585+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 11,
   "table_pages": {
@@ -53,8 +55,8 @@
     "tab:dinowm-aug": 15,
     "tab:threshold-shape": 16,
     "tab:memory-strength": 16,
-    "tab:training": 17,
-    "tab:action": 17,
+    "tab:training": 16,
+    "tab:action": 16,
     "tab:maze-controls": 17,
     "tab:maze-full": 18,
     "tab:rope-ablation": 18
@@ -76,5 +78,5 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/abstract_inspiration_revision.json"
+  "current_revision_provenance": "provenance/appendix_evidence_revision.json"
 }
