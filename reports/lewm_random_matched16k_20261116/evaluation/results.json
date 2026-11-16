@@ -1,0 +1,106 @@
+{
+  "state": "complete",
+  "completed_at": "2026-11-16T17:24:01.729213+08:00",
+  "checkpoint_sha256": "13b8a6ce0b7a866db0e24ccba8cfe24e64ced5710f5d21ebac34eb0e22397b17",
+  "physics_replayed_episodes": 700,
+  "matched_tasks": true,
+  "first_ten_replans_match": true,
+  "rows": [
+    {
+      "shape": "I",
+      "tasks": 50,
+      "random_native": 8,
+      "random_ecp": 9,
+      "augmented_native": 10,
+      "augmented_ecp": 10,
+      "random_ecp_rescues": 1,
+      "random_ecp_regressions": 0,
+      "contact_guided_episodes": 40,
+      "contact_guided_replans": 244
+    },
+    {
+      "shape": "L",
+      "tasks": 50,
+      "random_native": 27,
+      "random_ecp": 33,
+      "augmented_native": 40,
+      "augmented_ecp": 41,
+      "random_ecp_rescues": 6,
+      "random_ecp_regressions": 0,
+      "contact_guided_episodes": 22,
+      "contact_guided_replans": 115
+    },
+    {
+      "shape": "square",
+      "tasks": 50,
+      "random_native": 18,
+      "random_ecp": 21,
+      "augmented_native": 20,
+      "augmented_ecp": 21,
+      "random_ecp_rescues": 3,
+      "random_ecp_regressions": 0,
+      "contact_guided_episodes": 31,
+      "contact_guided_replans": 189
+    },
+    {
+      "shape": "Z",
+      "tasks": 50,
+      "random_native": 25,
+      "random_ecp": 28,
+      "augmented_native": 37,
+      "augmented_ecp": 38,
+      "random_ecp_rescues": 4,
+      "random_ecp_regressions": 1,
+      "contact_guided_episodes": 27,
+      "contact_guided_replans": 151
+    },
+    {
+      "shape": "small_tee",
+      "tasks": 50,
+      "random_native": 29,
+      "random_ecp": 33,
+      "augmented_native": 36,
+      "augmented_ecp": 42,
+      "random_ecp_rescues": 4,
+      "random_ecp_regressions": 0,
+      "contact_guided_episodes": 22,
+      "contact_guided_replans": 116
+    },
+    {
+      "shape": "plus",
+      "tasks": 50,
+      "random_native": 28,
+      "random_ecp": 28,
+      "augmented_native": 35,
+      "augmented_ecp": 37,
+      "random_ecp_rescues": 0,
+      "random_ecp_regressions": 0,
+      "contact_guided_episodes": 22,
+      "contact_guided_replans": 143
+    },
+    {
+      "shape": "T",
+      "tasks": 50,
+      "random_native": 31,
+      "random_ecp": 34,
+      "augmented_native": 37,
+      "augmented_ecp": 42,
+      "random_ecp_rescues": 3,
+      "random_ecp_regressions": 0,
+      "contact_guided_episodes": 18,
+      "contact_guided_replans": 88
+    }
+  ],
+  "total": {
+    "shape": "All",
+    "tasks": 350,
+    "random_native": 166,
+    "random_ecp": 186,
+    "augmented_native": 215,
+    "augmented_ecp": 231,
+    "random_ecp_rescues": 21,
+    "random_ecp_regressions": 1,
+    "contact_guided_episodes": 182,
+    "contact_guided_replans": 1046
+  }
+}

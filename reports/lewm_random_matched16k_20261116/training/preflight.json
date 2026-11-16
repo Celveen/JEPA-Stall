@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "eight_gpu": true,
+  "implementation": "DDP + global SyncBatchNorm + differentiable global SIGReg",
+  "deterministic_equivalence_test_dropout_disabled": true,
+  "training_dropout_restored": true,
+  "reference_losses": [
+    0.6730636358261108,
+    0.253158837556839,
+    4.6656084060668945
+  ],
+  "distributed_losses": [
+    0.6730635762214661,
+    0.2531588077545166,
+    4.665607929229736
+  ],
+  "gradient_relative_l2_error": 9.243862918422277e-06,
+  "gradient_max_absolute_error": 4.810281097888947e-07,
+  "global_batchnorm_buffers_match": true,
+  "native_checkpoint_strict_load": true,
+  "global_batch": 128,
+  "local_batch": 16,
+  "bf16_forward_backward_finite_all_ranks": true,
+  "distributed_bn_recalibration_and_validation_smoke_passed": true,
+  "smoke_validation_losses": {
+    "loss": 1.808528184890747,
+    "pred_loss": 0.4374343156814575,
+    "sigreg_loss": 15.25
+  },
+  "step_seconds": [
+    0.41326451301574707,
+    0.10947537422180176,
+    0.10864830017089844,
+    0.10335946083068848,
+    0.10012340545654297,
+    0.10055732727050781,
+    0.09727001190185547,
+    0.10060310363769531,
+    0.11086797714233398,
+    0.12496161460876465,
+    0.1022493839263916,
+    0.09990859031677246,
+    0.1107175350189209,
+    0.1251082420349121,
+    0.10448050498962402,
+    0.10298538208007812,
+    0.0999751091003418,
+    0.10954689979553223,
+    0.12672209739685059,
+    0.1044318675994873
+  ],
+  "steady_step_seconds_median": 0.1044318675994873,
+  "peak_memory_gib_by_rank": [
+    1.8736348152160645,
+    1.8719072341918945,
+    1.8719072341918945,
+    1.8719072341918945,
+    1.8719072341918945,
+    1.8719072341918945,
+    1.8719072341918945,
+    1.8719072341918945
+  ],
+  "dataset_audit": {
+    "train": {
+      "episodes": 16000,
+      "shapes": {
+        "T": 4000,
+        "L": 4000,
+        "Z": 4000,
+        "+": 4000
+      },
+      "frames": 1934266,
+      "windows": 1630266,
+      "matched_lengths_shapes_initial_states_and_velocities": true
+    },
+    "val": {
+      "episodes": 4000,
+      "shapes": {
+        "T": 1000,
+        "L": 1000,
+        "Z": 1000,
+        "+": 1000
+      },
+      "frames": 479951,
+      "windows": 403951,
+      "matched_lengths_shapes_initial_states_and_velocities": true
+    }
+  }
+}
