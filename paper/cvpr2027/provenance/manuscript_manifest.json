@@ -5,25 +5,25 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "XeTeX via Tectonic",
-  "base_repository_commit": "6cd42f3ab8c8c76c5675d4bd992dccfcb7b97456",
+  "base_repository_commit": "512ac2d04dff8bfbcdb22698fb3786d779d0033a",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/clarity_revision.json",
+  "audit": "provenance/abstract_inspiration_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "e36a9f143bf89fd9b6458f018ac70835428e9215192baefc36e617567d705077",
-    "paper_v14.pdf": "e36a9f143bf89fd9b6458f018ac70835428e9215192baefc36e617567d705077",
-    "paper_main.pdf": "9bf1431b6d22d807006d87062ae9a858d40542b2e4947d1c3967426071d2c662",
-    "paper_appendix.pdf": "dddb40a11b91ab604f414cec89278631ad24f5cf91327a12e61e7b5ece29d541"
+    "paper.pdf": "92bed9c120ed3247f2eadb8a61e43ec70a71858303367ccb0cc24fc60c51dc71",
+    "paper_v14.pdf": "92bed9c120ed3247f2eadb8a61e43ec70a71858303367ccb0cc24fc60c51dc71",
+    "paper_main.pdf": "d3b6111db2b18fc98617ea3c6e4f01d33c7d52855992e2bc4c225f7de0b0296b",
+    "paper_appendix.pdf": "7cbcbd7a69ef61aba52f77259a29eb213d17c3896986fccd56fb58725507cf0b"
   },
   "figures": 8,
   "main_body_pages": 8,
   "combined_pages": 21,
-  "revision": "v2-planning-clarity-review",
-  "abstract_words_whitespace": 217,
+  "revision": "v2-planning-abstract-inspiration",
+  "abstract_words_whitespace": 196,
   "figure_pages": {
     "fig:headline": 1,
     "fig:teaser": 2,
@@ -34,9 +34,9 @@
     "fig:maze-case": 20,
     "fig:diverse-execution": 21
   },
-  "revision_description": "Define pretrained model/update labels; split Maze and Rope main tables; streamline settings and references; verify all retained links.",
+  "revision_description": "Refine abstract inspiration wording, identify the Rope backbone and add supplementary-code availability.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-16T15:27:06.272521+00:00",
+  "updated": "2026-11-16T15:53:50.214134+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 11,
   "table_pages": {
@@ -76,5 +76,5 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/clarity_revision.json"
+  "current_revision_provenance": "provenance/abstract_inspiration_revision.json"
 }
