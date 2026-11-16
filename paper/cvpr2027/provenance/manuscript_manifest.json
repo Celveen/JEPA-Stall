@@ -5,7 +5,7 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "Tectonic 0.17.0",
-  "base_repository_commit": "5ab1d1b7f76760d025b5bbb2b97615a573409604",
+  "base_repository_commit": "1ef0618cb9b6690ba1deea4f62200a784bd3b3c7",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
@@ -14,10 +14,10 @@
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
   "audit": "provenance/results_audit_v13.json, comparison_v14.json, followup_raw_verification.json and integrity_v14.json",
   "pdf_sha256": {
-    "paper.pdf": "45d657793331f32d1d7868bd11a3db100d91a7b0cab61687eae2e9f27cd745b8",
-    "paper_v14.pdf": "45d657793331f32d1d7868bd11a3db100d91a7b0cab61687eae2e9f27cd745b8",
-    "paper_main.pdf": "c3e233e23ba4dca99b5a420b79d967153e3633bf72e669979eae8ab4e11f5fd2",
-    "paper_appendix.pdf": "273f89cce03c218aeb0a067e23203a423d25ba1a69a0c9b1279dcc30784b4ebb"
+    "paper.pdf": "c25b742f943d85633946c0d001e0effec83ccb65a5c1675526fa8baf509fa915",
+    "paper_v14.pdf": "c25b742f943d85633946c0d001e0effec83ccb65a5c1675526fa8baf509fa915",
+    "paper_main.pdf": "7c1236900ac6022bc234c40323e9b802797997ed022c1c57c7b0d5cc9259820b",
+    "paper_appendix.pdf": "3a68ad8dc2ce7e7f6fd2a22521f2852a4d3482edd729132135ce41224aee7b98"
   },
   "figures": 8,
   "main_body_pages": 8,
@@ -34,9 +34,9 @@
     "fig:push-distance": 18,
     "fig:diverse-execution": 19
   },
-  "revision_description": "Remove Ours (LeWM) from Table 1; retain the three-model headline; connect training coverage to DAgger and temporal inference to ACT with verified primary citations and pending extensions distinguished.",
+  "revision_description": "Import advisor Figure 3 PDF, caption and editable draw.io source from Overleaf; replace the LLM usage statement verbatim and verify the DAgger/ACT citations.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-14T23:19:01.668911+00:00",
+  "updated": "2026-11-16T05:13:57.176219+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 11,
   "table_pages": {
@@ -73,5 +73,6 @@
     "ross2011dagger": "https://proceedings.mlr.press/v15/ross11a.html",
     "zhao2023act": "https://www.roboticsproceedings.org/rss19/p016.html"
   },
-  "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md"
+  "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
+  "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json"
 }

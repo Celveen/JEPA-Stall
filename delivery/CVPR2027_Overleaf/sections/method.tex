@@ -4,7 +4,7 @@ Our approach couples interaction-biased training with inference-time correction 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig2_method.pdf}
-\caption{\textbf{ECP closes the loop between execution and action optimization.} Offline interaction-biased data improve the training experience for the encoder and predictor. Online, steps 1--3 encode the current state and goal, optimize candidate actions, and execute the first block. Steps 4--5 detect low realized movement and modify the next planning objective: stagnation memory ($S$) discourages revisits, while temporary proprioceptive goal weighting ($P$) emphasizes the remaining agent-position component. Model parameters may be frozen or updated online; the feedback correction acts on the action objective. Native simulator thumbnails and schematic latent rollouts illustrate the two spaces.}
+\caption{\textbf{ECP closes the loop between execution and action optimization.} Offline interaction-biased data improve the training experience for the encoder and predictor. Online, steps 1--3 encode the current state and goal, optimize candidate actions, and execute the first block. Steps 4--5 detect low realized movement and modify the next planning objective: stagnation memory ($S$) discourages revisits, while temporary proprioceptive goal weighting ($P$) emphasizes the remaining agent-position component. Model parameters may be frozen or updated online; the feedback correction acts on the action objective. \mbox{Native simulator thumbnails and schematic latent rollouts illustrate the two spaces.}}
 \label{fig:method}
 \end{figure*}
 

@@ -1,6 +1,6 @@
 {
   "revision": "v14",
-  "checked_utc": "2026-11-14T23:19:01.668911+00:00",
+  "checked_utc": "2026-11-16T05:13:57.176219+00:00",
   "format": {
     "abstract_words_whitespace": 166,
     "abstract_page": 1,
@@ -45,7 +45,8 @@
   "visual_inspection": [
     "All pages rendered and reviewed; first chart, main comparison, conclusion and added appendix inspected in detail.",
     "Restored three-group headline and first PDF page inspected after figure correction.",
-    "Reviewed all 21 rendered pages after the DAgger/ACT revision, with detailed inspection of pages 1, 3, 6 and 8; Table 1 omits Ours (LeWM), and all figure PDFs and primary PushT records remain unchanged."
+    "Reviewed all 21 rendered pages after the DAgger/ACT revision, with detailed inspection of pages 1, 3, 6 and 8; Table 1 omits Ours (LeWM), and all figure PDFs and primary PushT records remain unchanged.",
+    "All 21 pages rendered and reviewed; Figure 3 on page 4, LLM usage on page 9, DAgger and ACT entries on page 10 inspected in detail."
   ],
   "pending_scores_not_fabricated": true,
   "pushobj_task_lists_not_pooled": true,
@@ -78,5 +79,22 @@
         21
       ]
     }
+  },
+  "advisor_revision_checks": {
+    "pages": 21,
+    "figure3_page": 4,
+    "llm_statement_page": 9,
+    "reference_numbers": {
+      "ross2011dagger": 31,
+      "zhao2023act": 44
+    },
+    "reference_count": 45,
+    "advisor_pdf_byte_identical": true,
+    "advisor_drawio_byte_identical": true,
+    "advisor_llm_text_identical": true,
+    "other_figure_pdfs_unchanged": true,
+    "results_tables_and_references_unchanged": true,
+    "all_fonts_embedded": true,
+    "type3_fonts": false
   }
 }

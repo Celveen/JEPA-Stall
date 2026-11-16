@@ -2,6 +2,8 @@
 
 CVPR 2027 工作稿。正文 8 页，声明与 45 条参考文献共 2 页，附录 11 页。摘要 166 词。
 
+2026-11-15 修订从导师 Overleaf 项目导入 Figure 3 的 PDF、图注及可编辑 draw.io 文件，并逐字替换 LLM Usage Statement。DAgger 与 ACT 在引言和相关工作中均有引用，最终文献编号为 [31] 与 [44]。详见 [导师修改同步说明](REVISION_20261115.md)。
+
 2026-11-14 修订保留首图的 Frozen、AdaJEPA、LeWM 三组及原三阶段结构，主表保留 Ours (Frozen) 与 Ours (AdaJEPA)，后者更新为 77.7%。LeWM 的 66.0% 接触优化结果保留在首图、正文与附录对照中。摘要、引言和相关工作加入 DAgger 对训练数据覆盖、ACT 对推理时间组织的启发，并区分现有实现与后续方向。详见 [本次修订说明](REVISION_20261114.md)。
 
 2026-11-10 历史修订：摘要按“发现问题—方法与优势—结果”重写，去掉重规划预算等实验设置，突出多 backbone 兼容、无需额外学习参数及冻结/在线适应部署；最后两句直接报告完整方法在 AdaJEPA 上的提升与 PushT 视觉偏移新 SOTA。方法编号公式从 11 个减到 8 个，保留核心定义与符号解释；Figure 3 的反馈分支统一为上方灰色配色。可直接提交的[摘要文本](../../delivery/Abstract.txt)和原生可编辑的 [Figure 3 draw.io](../../delivery/Figure3.drawio)已随稿提供。具体改动见 [修订说明](REVISION_20261110.md)。
@@ -12,7 +14,7 @@ CVPR 2027 工作稿。正文 8 页，声明与 45 条参考文献共 2 页，附
 
 首图由 `python scripts/build_headline.py` 从已完成配对结果重建。
 
-主表将 PushObj 按七种形状展示，每种形状 50 个任务，并加粗 PushObj 和 PushT 的各列最高分。归档基线与干预实验使用不同的起点和目标，任务清单与预算见附录。PushT 的 56 组评测和 Maze 的完成结果均已录入。Figure 3 采用原始的模块布局，使用低饱和配色和圆角 encoder。
+主表将 PushObj 按七种形状展示，每种形状 50 个任务，并加粗 PushObj 和 PushT 的各列最高分。归档基线与干预实验使用不同的起点和目标，任务清单与预算见附录。PushT 的 56 组评测和 Maze 的完成结果均已录入。Figure 3 使用导师 Overleaf 版本，在预测器处加入网络图标，并精简图底说明。
 
 ## 重建
 
@@ -22,4 +24,4 @@ python scripts/build_method_figure.py
 python scripts/build_paper.py --tectonic /path/to/tectonic
 ```
 
-重算表格前，按结果包 README 解压 PushT 已完成评测。重生成 Figure 3 使用随稿 `figures/source/` 下的固定原图输入，需要 `pypdf`、`pypdfium2`、NumPy、SciPy 和 Pillow。直接编译时可使用随稿的表格和插图。`provenance/comparison_v14.json` 记录每种形状的成功数，`provenance/method_figure.json` 记录 Figure 3 的输入和输出校验值。
+重算表格前，按结果包 README 解压 PushT 已完成评测。重建 Figure 3 使用随稿 `figures/source/fig2_method_overleaf_20261115.pdf` 与 `Figure3_overleaf_20261115.drawio`，逐字节恢复导师版本，并用 `pypdfium2` 和 Pillow 生成预览。`figures/svg/fig2_method.svg` 与 `prepare_method_gray.py` 是历史版本；当前图以导入的 PDF 和 draw.io 文件为准。直接编译时可使用随稿的表格和插图。`provenance/comparison_v14.json` 记录每种形状的成功数，`provenance/method_figure.json` 记录 Figure 3 的输入和输出校验值。

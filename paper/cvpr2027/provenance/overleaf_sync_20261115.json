@@ -1,0 +1,29 @@
+{
+  "source_project_url": "https://www.overleaf.com/project/6af32b3fec06b004344cce6c",
+  "retrieved_date": "2026-11-15",
+  "base_repository_commit": "1ef0618cb9b6690ba1deea4f62200a784bd3b3c7",
+  "source_archive_sha256": "f8b4106d295cfa8e1cd7a8871f17e64299acc5563f9ed64a028734330f8280a8",
+  "imported_files": {
+    "figures/fig2_method.pdf": "9a07263b7ce3b6daada3f8655d45c5e3ad87396237c88bff71d86ad8065bc1bf",
+    "Figure3.drawio": "dd3ddbd6866ed9a855c2a96fc921038e00628edd960447ff9543fd9f6d4b1ab6"
+  },
+  "llm_usage_statement": "ChatGPT assisted with manuscript revision, error checking, and language polishing, as well as the organization of experimental logs and code debugging.",
+  "checks": {
+    "pages": 21,
+    "figure3_page": 4,
+    "llm_statement_page": 9,
+    "reference_numbers": {
+      "ross2011dagger": 31,
+      "zhao2023act": 44
+    },
+    "reference_count": 45,
+    "advisor_pdf_byte_identical": true,
+    "advisor_drawio_byte_identical": true,
+    "advisor_llm_text_identical": true,
+    "other_figure_pdfs_unchanged": true,
+    "results_tables_and_references_unchanged": true,
+    "all_fonts_embedded": true,
+    "type3_fonts": false
+  },
+  "visual_review": "All 21 pages rendered and reviewed; Figure 3 on page 4, LLM usage on page 9, DAgger and ACT entries on page 10 inspected in detail."
+}

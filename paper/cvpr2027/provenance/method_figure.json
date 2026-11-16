@@ -3,40 +3,24 @@
     468,
     234
   ],
-  "base_commit": "adbd03b40b8361b41ae64067c76ce88407d77d18",
-  "base_pdf_sha256": "4ae358fd666a1f0b58d379470a5176e171770227cba1027d7cbc63b63b24adf5",
-  "base_svg_sha256": "b63358bbe4c90ea07efbe7f4a70771139b7bc73f560a515f5fa609ba73ec5c74",
-  "palette": {
-    "#4f6657": "#293640",
-    "#eef2ee": "#f6f5f2",
-    "#dae4db": "#d7d5cf"
+  "source_type": "advisor_reviewed_overleaf_assets",
+  "source_project_url": "https://www.overleaf.com/project/6af32b3fec06b004344cce6c",
+  "retrieved_date": "2026-11-15",
+  "archive_sha256": "f8b4106d295cfa8e1cd7a8871f17e64299acc5563f9ed64a028734330f8280a8",
+  "sources": {
+    "figures/source/fig2_method_overleaf_20261115.pdf": "9a07263b7ce3b6daada3f8655d45c5e3ad87396237c88bff71d86ad8065bc1bf",
+    "figures/source/Figure3_overleaf_20261115.drawio": "dd3ddbd6866ed9a855c2a96fc921038e00628edd960447ff9543fd9f6d4b1ab6"
   },
-  "pdf_color_operators_changed": 49,
-  "layout_and_text_preserved": true,
-  "native_simulator_image_payloads_unchanged": true,
-  "native_frame_hashes": {
-    "push_start.png": "b98bae2461a974c3ceb03a1eb082a99b8a238b10035dd6dffbdb6b9ea85c04e6",
-    "push_goal.png": "bd5024669ef7488e3e279a61290b6318712ceccdc5e6a28784553e8dd911a425",
-    "push_before.png": "bfded051b51a491db5645a5b66655e0801cc3181e3982739260c15ec3284c6aa",
-    "maze_original_start.png": "b5ca8ac729307898e7ef95f41e3aba83a6297a08d0321e8c70423036f6f5c089",
-    "push_baseline_end.png": "bfded051b51a491db5645a5b66655e0801cc3181e3982739260c15ec3284c6aa"
-  },
+  "imported_pdf_preserved_byte_for_byte": true,
   "drawio": {
     "path": "delivery/Figure3.drawio",
-    "native_editable_cells": {
-      "shapes": 28,
-      "edges": 20,
-      "text": 37,
-      "embedded_simulator_images": 6
-    },
-    "embedded_original_simulator_views": 6,
-    "external_images": false
+    "imported_byte_for_byte": true
   },
+  "historical_svg": "figures/svg/fig2_method.svg is the superseded 2026-11-10 rendering; the current figure is the imported PDF and draw.io asset.",
   "outputs": {
-    "paper/cvpr2027/figures/fig2_method.pdf": "f1bd278ffcdc871688a138172e2030c3f350a7cb294c2dca001e8008b57f8ae9",
-    "paper/cvpr2027/figures/svg/fig2_method.svg": "0bd13df265ccc5870f2bffb646a5995d375e970a96829c62cc24dc835d21f1af",
-    "paper/cvpr2027/figures/previews/fig2_method.png": "d0646b2fac9b86045a38653975fdb018e78a7ef55a0d53994ff2919980a9820f",
-    "delivery/Figure3.drawio": "cf43eb943b2a09cd7a0b03b4f37057a110d3dc39c2c25e70e3ef57dceba3eb6c"
+    "paper/cvpr2027/figures/fig2_method.pdf": "9a07263b7ce3b6daada3f8655d45c5e3ad87396237c88bff71d86ad8065bc1bf",
+    "paper/cvpr2027/figures/previews/fig2_method.png": "998f9b7bc4fb53e9db99bf4c3c0b05f5d3b074001015db024415abf7e8c9fa5a",
+    "delivery/Figure3.drawio": "dd3ddbd6866ed9a855c2a96fc921038e00628edd960447ff9543fd9f6d4b1ab6"
   },
-  "generator_sha256": "3760ca24c475216201c6eadc5c329a9d790750dc59782825850653ed138658a8"
+  "generator_sha256": "a3fb13cc1c2594c578cf0d4521b64eb5d7f26d44468487dd7646db8cddb320c1"
 }
