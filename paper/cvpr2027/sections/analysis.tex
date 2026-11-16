@@ -7,7 +7,7 @@ Augmentation improves frozen PushObj success by 17.4 points and adaptive success
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig5_execution_recovery.pdf}
-\caption{\textbf{Execution examples across four settings.} All panels show full scene views. PushObj (a--b, ResNet), shifted PushT (c--d, AdaJEPA), and Maze (e--f, frozen/adaptive) compare native/ECP outcomes; labels give terminating replans. Rope (g--h, DINO-WM) compares recorded Frozen/Ours runs with 5/5 versus 3/3 action cadence; CD is Chamfer distance (lower is better). Both Rope pairs reach success, with lower final CD for Ours. These separate visualization runs do not isolate $S$ or enter aggregate evaluation.}
+\caption{\textbf{Execution examples across four settings.} Brown and teal denote planning without and with ECP. Full-scene pairs show PushObj with ResNet (a--b), PushT with LeWM under red-agent/red-goal shifts (c--d), Maze with AdaJEPA (e--f), and Rope with DINO-WM (g--h). Labels report terminating replans or Chamfer distance (CD; lower is better).}
 \label{fig:execution-recovery}
 \end{figure*}
 

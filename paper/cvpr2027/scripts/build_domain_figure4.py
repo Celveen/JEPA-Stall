@@ -8,7 +8,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.patheffects as pe
-from matplotlib.patches import FancyArrowPatch,Rectangle
+from matplotlib.patches import FancyArrowPatch,Rectangle,Patch
 from matplotlib.ticker import MaxNLocator
 
 p=argparse.ArgumentParser();p.add_argument('--paper',type=Path,required=True);a=p.parse_args();O=a.paper;F=O/'figures';V=O/'provenance'
@@ -90,26 +90,30 @@ def save(fig,name,rows,panels):
 # Rope illustrates lower final CD under different action cadences, not S alone.
 domains=json.loads((V/'fullview_visuals_20261116.json').read_text())
 for key,value in domains['pushobj'].items():cases[key]['frames']=value['frames']
-fig=plt.figure(figsize=(6.875,2.62))
-items=[('old','Z'),('old','square'),('pusht',0),('pusht',1),('old','maze_frozen_alt'),('old','maze_ada_alt'),('rope',0),('rope',1)]
+domains['pusht']=json.loads((V/'lewm_figure4_visuals.json').read_text())['pusht']
+fig=plt.figure(figsize=(6.875,2.82))
+fig.legend(handles=[Patch(facecolor=FAIL,label='Without ECP'),Patch(facecolor=OURS,label='With ECP')],loc='upper center',bbox_to_anchor=(.5,1.008),ncol=2,frameon=False,fontsize=8.5,handlelength=1.4,handleheight=.8,columnspacing=2.1)
+items=[('old','Z'),('old','square'),('pusht',0),('pusht',1),('old','maze_ada'),('old','maze_ada_alt'),('rope',0),('rope',1)]
 for k,(kind,key) in enumerate(items):
- row,col=divmod(k,4);x=.009+col*.25;top=.985-row*.51;bottom=.58-row*.50
+ row,col=divmod(k,4);x=.009+col*.25;top=.895-row*.465;bottom=.535-row*.455
  if kind=='old':
   c=cases[key];title='PushObj · ResNet' if c['task']=='PushObj' else 'Maze · '+c['baseline']
  elif kind=='pusht':
-  c=domains['pusht'][key];title='PushT · '+('Red agent' if key==0 else 'Red goal')
+  c=domains['pusht'][key];title='PushT · LeWM'
  else:
   c=domains['rope'][key];title='Rope · DINO-WM'
  fig.text(x+.118,top,f'({chr(97+k)}) {title}',fontsize=8.1,weight='bold',color=INK,ha='center',va='top')
  for j,mode in enumerate(['base','ours']):
-  left=x+j*.121;ax=fig.add_axes([left,bottom,.114,.305])
+  left=x+j*.121;ax=fig.add_axes([left,bottom,.114,.285])
   if kind=='old':scene(ax,c,mode,small=True)
   else:
    im=Image.open(O/c['frames'][mode]['path']);ax.imshow(np.array(im))
    box=(0,0,im.width,im.height)
    if kind=='pusht':
-    # Agent goal marker is an annotation; underlying pixels remain the native render.
-    ax.scatter(*c['states']['goal'][:2],marker='*',s=23,fc=GOLD,ec=INK,lw=.4,zorder=5)
+    # Keep recorded pixels unchanged; hide only the static gray viewport frame.
+    b=c['hide_frame_pixels'];w,h=im.size
+    for rect in [(-.5,-.5,w,b),(-.5,h-b-.5,w,b),(-.5,-.5,b,h),(w-b-.5,-.5,b,h)]:ax.add_patch(Rectangle(rect[:2],rect[2],rect[3],facecolor='white',edgecolor='none',antialiased=False,zorder=3))
+    ax.scatter(*(np.array(c['states']['goal'][:2])*c['goal_scale']),marker='*',s=23,fc=GOLD,ec=INK,lw=.4,zorder=5)
    ax.set(xlim=box[::2],ylim=(box[3],box[1]));ax.set_xticks([]);ax.set_yticks([])
    for sp in ax.spines.values():sp.set_visible(False)
   if kind=='rope':
@@ -119,7 +123,7 @@ for k,(kind,key) in enumerate(items):
    n=len(c['states'][mode])-1 if kind=='old' else c['replans'][mode]
    label=('Fail' if mode=='base' else 'Success')+f' · {n}';color=FAIL if mode=='base' else OURS
   fig.text(left+.057,bottom-.023,label,fontsize=7.5,color=color,ha='center',va='top')
-manifest={'source':'fullview_visuals_20261116.json and replayed_paths_v12.json','case_order':items,'rope_excluded_from_formal_aggregate':True,'rope_labels':'Frozen CD / Ours CD: Chamfer distance, lower is better; native 5/5 versus fixed-S 3/3; targets 15 and 24 have 3 and 0 S activations','titles':'PushObj ResNet; PushT shift names and Maze Frozen/AdaJEPA restored; Rope DINO-WM','framing':'Full image bounds for all 16 panels; static Pymunk boundary debug lines hidden at rendering time','pusht_labels':'Terminating replan count; AdaJEPA with/without ECP','outputs':{}}
+manifest={'source':'fullview_visuals_20261116.json, lewm_figure4_visuals.json and replayed_paths_v12.json','case_order':items,'rope_excluded_from_formal_aggregate':True,'rope_labels':'Frozen CD / Ours CD: Chamfer distance, lower is better; native 5/5 versus fixed-S 3/3; targets 15 and 24 have 3 and 0 S activations','titles':'PushObj ResNet; PushT LeWM; Maze AdaJEPA; Rope DINO-WM','legend':{'Without ECP':FAIL,'With ECP':OURS},'maze_e':'Verified AdaJEPA target 75, also used in Figure 2; not a relabeled frozen run','framing':'Full image bounds for all 16 panels; PushObj boundary draw calls omitted; LeWM original PNG perimeter hidden by white vector strips','pusht_labels':'Terminating replan count; LeWM with/without ECP','outputs':{}}
 save(fig,'fig5_execution_recovery',2,16)
 (V/'domain_figure4_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print('Built Figure 4: 2 PushObj, 2 PushT, 2 Maze and 2 Rope cases (all full-view).')

@@ -33,7 +33,7 @@ def main() -> None:
         released_counts['LeWM'] = matched['total']['random_native']
         original['series'][0]['label'] = 'Base data'
         groups = []
-        for label, key in [('Frozen', 'ours_frozen'), ('AdaJEPA', 'ours_adajepa'), ('LeWM', 'ours_lewm')]:
+        for label, key in [('Frozen', 'ours_frozen'), ('LeWM', 'ours_lewm'), ('AdaJEPA', 'ours_adajepa')]:
             row = results[key, 'GD']
             groups.append({'label': label, 'denominator': 350,
                            'success_counts': [released_counts.get(label), row['native_successes'],
@@ -50,6 +50,7 @@ def main() -> None:
                             'Settings were explored on these task lists.'}
         args.data = root / 'provenance/headline_data_latest.json'
         args.data.write_text(json.dumps(data, indent=2) + '\n')
+    data['groups'].sort(key=lambda g: ['Frozen','LeWM','AdaJEPA'].index(g['label']))
     args.out.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({
         "font.family": "serif",

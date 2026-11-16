@@ -159,7 +159,7 @@ The PushT comparison uses a dedicated T-object checkpoint rather than the multis
 
 \section{Backbone transfer}
 \label{sec:backbone}
-\subsection{Frozen LeWM with a contact objective}
+\subsection{LeWM implementation}
 A matched random-data LeWM replays the same source episodes without added contact bias or noise, using the same architecture, 16k/4k trajectories, and ten-epoch budget. On the same 350 tasks, native/ECP success is 166/186 (47.4/53.1\%), with 21 rescues and one regression. All 700 outcomes were verified by physics replay. Augmentation plus ECP reaches 66.0\%, an 18.6-point total gain (\cref{fig:headline}).
 
 The LeWM study uses the augmented-data epoch-10 checkpoint, 350 H7t3 tasks (50 per shape, sampling seed 2000), and a frozen model. GD performs 100 iterations over a 25-control horizon, executes five controls per replan, and allows 30 replans. The trigger interval is 0.15/0.45 after a 50-control warm-up. Guidance persists for four replans per burst, with at most seven guided replans per task.
@@ -169,7 +169,7 @@ The contact extension uses observed simulator object pose and known shape geomet
  J_{\rm contact}(A)=10\operatorname{mean}_{k=1,\ldots,5;\,d=x,y}
  \left(\frac{\hat p_{k,d}(A)-q_d}{\sigma_{p,d}}\right)^2,
 \]
-where $q$ is the selected waypoint and $\hat p_k(A)$ is the pusher position predicted by differentiable PD dynamics from its observed position and velocity. The normalization uses dataset pusher-position standard deviations. This term acts jointly with the visual goal, stagnation regularizer, and conditional pusher-goal term during action optimization. The optimizer output is executed directly. This LeWM implementation uses an analytic pusher-position cost alongside its visual model. The headline figure and \cref{tab:lewm-contact} identify this geometry-assisted extension.
+where $q$ is the selected waypoint and $\hat p_k(A)$ is the pusher position predicted by differentiable PD dynamics from its observed position and velocity. The normalization uses dataset pusher-position standard deviations. This term acts jointly with the visual goal, stagnation regularizer, and conditional pusher-goal term during action optimization. The optimizer output is executed directly. Controls are compared in \cref{tab:lewm-contact}.
 
 \begin{table}[t]
 \centering
@@ -346,7 +346,7 @@ The released checkpoint achieves 48 successes on the same 100 medium tasks at 30
 \section{Simulator renderings}
 \label{sec:renderings}
 \paragraph{PushT and Rope views.}
-PushT panels render logged execution states with the original Pymunk renderer, evaluation color overrides, and fixed background anchor. They are state renders, not stored RGB; no physics step or model inference is added. The augmented-data AdaJEPA/ECP pairs use tasks 26 (red agent) and 23 (red goal), with identical initial and goal states. Rope panels (g--h) use full-frame RGB from separate visualization runs on targets 15/24. Frozen/Ours denotes native-5/5 versus fixed-$S$-3/3: CD is 0.236/0.169 and 0.219/0.147, with all four runs successful. The targets have 3/0 $S$ triggers and 15:18/11:7 pushes. These lower-error examples differ in action cadence and are excluded from aggregate evaluation. Figure 4 uses full views, with only the Pymunk boundary outline hidden.
+PushT panels use recorded LeWM executions on red-agent target 8 and red-goal target 6, with identical paired initial and goal states. Native planning fails after 30 replans; ECP succeeds after 28 and 13, respectively. In the red-agent baseline, the pusher exits the viewport. PNGs preserve recorded RGB; only the gray perimeter is hidden. The colored T is a fixed background anchor; stars mark the pusher goal. Maze panels (e--f) use verified AdaJEPA targets 75 and 28; target 75 also appears in \cref{fig:teaser}. Rope panels (g--h) use full-frame RGB from separate visualization runs on targets 15/24. Frozen/Ours denotes native-5/5 versus fixed-$S$-3/3: CD is 0.236/0.169 and 0.219/0.147, with all four runs successful. The targets have 3/0 $S$ triggers and 15:18/11:7 pushes. These lower-error examples differ in action cadence and are excluded from aggregate evaluation. Figure 4 uses full views.
 
 \begin{figure*}[t]
 \centering
@@ -391,10 +391,12 @@ The PushObj and Maze task lists were used during method development, and the tri
 Stagnation is detected in the learned representation, so a visual shift that obscures the object state can also degrade the progress signal. On PushT, red-object success remains at 12\% for the frozen augmented model and reaches 18\% with AdaJEPA (\cref{tab:pusht-ecp}).
 
 \paragraph{Search and backbone controls.}
-The lookahead controls in \cref{tab:timing} share the execution budget of ECP but not its per-replan computation; a compute-matched comparison would quantify the relative cost of recovery by search and by objective correction. On LeWM, the gain comes from the geometry-assisted contact objective, which uses the simulator object pose and known shape geometry; the stagnation regularizer and pusher weighting alone add one and two tasks (\cref{tab:lewm-contact}), and the extension is evaluated on PushObj only. On DINO-WM with CEM, augmentation gives a large gain but ECP leaves outcomes unchanged at the tested settings (\cref{sec:dinowm}).
+The lookahead controls in \cref{tab:timing} share the execution budget of ECP but not its per-replan computation; a compute-matched comparison would quantify the relative cost of recovery by search and by objective correction. LeWM component controls are reported in \cref{tab:lewm-contact}; the PushT examples are qualitative paired runs, separate from the aggregate benchmark. On DINO-WM with CEM, augmentation gives a large gain but ECP leaves outcomes unchanged at the tested settings (\cref{sec:dinowm}).
 
 \paragraph{Planned evaluations.}
 Planned studies, with hyperparameters and selection rules fixed beforehand, include: (i) a source-disjoint PushObj holdout and new Maze layouts and seeds; (ii) a matched collection factorial that varies directional bias and action noise separately under fixed source episodes, sample count, training schedule, and filters; (iii) the same $S$, $P$, and $S{+}P$ settings applied to three trained checkpoints, with paired success and across-seed uncertainty; (iv) a shared component matrix over trigger, loss gate, memory, temporary weight, and fixed-weight controls in both domains; and (v) a matched-budget analysis of object transport, residual agent positioning, and navigation recovery. Future work includes verified-recovery data aggregation and ACT-inspired temporally extended recovery.
 
+\noindent\begin{minipage}{\columnwidth}
 \section{Artifact provenance}
 The source package includes evidence manifests, hashes, figure scripts, assets, and CVPR styles. Results trace to archived records; large checkpoints are hashed separately.
+\end{minipage}

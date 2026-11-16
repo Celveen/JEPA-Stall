@@ -1,5 +1,5 @@
 {
-  "source": "fullview_visuals_20261116.json and replayed_paths_v12.json",
+  "source": "fullview_visuals_20261116.json, lewm_figure4_visuals.json and replayed_paths_v12.json",
   "case_order": [
     [
       "old",
@@ -19,7 +19,7 @@
     ],
     [
       "old",
-      "maze_frozen_alt"
+      "maze_ada"
     ],
     [
       "old",
@@ -36,35 +36,40 @@
   ],
   "rope_excluded_from_formal_aggregate": true,
   "rope_labels": "Frozen CD / Ours CD: Chamfer distance, lower is better; native 5/5 versus fixed-S 3/3; targets 15 and 24 have 3 and 0 S activations",
-  "titles": "PushObj ResNet; PushT shift names and Maze Frozen/AdaJEPA restored; Rope DINO-WM",
-  "framing": "Full image bounds for all 16 panels; static Pymunk boundary debug lines hidden at rendering time",
-  "pusht_labels": "Terminating replan count; AdaJEPA with/without ECP",
+  "titles": "PushObj ResNet; PushT LeWM; Maze AdaJEPA; Rope DINO-WM",
+  "legend": {
+    "Without ECP": "#B95B38",
+    "With ECP": "#087D83"
+  },
+  "maze_e": "Verified AdaJEPA target 75, also used in Figure 2; not a relabeled frozen run",
+  "framing": "Full image bounds for all 16 panels; PushObj boundary draw calls omitted; LeWM original PNG perimeter hidden by white vector strips",
+  "pusht_labels": "Terminating replan count; LeWM with/without ECP",
   "outputs": {
     "figures/fig5_execution_recovery.pdf": {
-      "sha256": "17f92c0fa68f2404f26a721f39c15649a3eaa65025ceec6cc850df394a108a2c",
+      "sha256": "b6350941d0c4f849c5d3cdfe29c898691e80a84548946a02ef70944e9dde4a96",
       "size_inches": [
         6.875,
-        2.62
+        2.82
       ],
       "rows": 2,
       "simulation_panels": 16,
       "text_collisions": 0
     },
     "figures/svg/fig5_execution_recovery.svg": {
-      "sha256": "68aa963e62e8df0ce267cfc98cd8240ad40c56523dffe3876e3062a7060c2c98",
+      "sha256": "11e1ef39dde4d02ad0eefeb66d542791543f1666a79957c679544deba1fd4335",
       "size_inches": [
         6.875,
-        2.62
+        2.82
       ],
       "rows": 2,
       "simulation_panels": 16,
       "text_collisions": 0
     },
     "figures/previews/fig5_execution_recovery.png": {
-      "sha256": "d63c299fc66c28d6449c627a8a28dda2b77d0d604d41abf18a7b33bba0154f19",
+      "sha256": "451941e38258561f7345ec68485f22dcec2fdbe63857d8453852a71d49cd9d27",
       "size_inches": [
         6.875,
-        2.62
+        2.82
       ],
       "rows": 2,
       "simulation_panels": 16,

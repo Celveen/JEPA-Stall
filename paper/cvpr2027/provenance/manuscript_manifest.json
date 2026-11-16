@@ -5,24 +5,24 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "pdfTeX (TeX Live 2022/Debian)",
-  "base_repository_commit": "63fcb7c",
+  "base_repository_commit": "c5aff729dccaac7752ed057fa5758df15fb71d43",
   "new_experiments_run": true,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/lewm_pusht_clean_20261116.json",
+  "audit": "provenance/lewm_legend_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "cc90f909a27b08d34c68011bf284b98064f6f9158c42c1b4f5920f72e64840d9",
-    "paper_v14.pdf": "cc90f909a27b08d34c68011bf284b98064f6f9158c42c1b4f5920f72e64840d9",
-    "paper_main.pdf": "b473b3eea4ca5f611a76903a8506757f93e53b00f210930ef08a5308cfcd1807",
-    "paper_appendix.pdf": "b41eefa5044453753c3a4f45838461cee6ff1535ab5f2546d46d35883cbe7335"
+    "paper.pdf": "198b839560aa4291d993cc933bf4bc67326efae3e6fc147dc2aa8dbc0297425f",
+    "paper_v14.pdf": "198b839560aa4291d993cc933bf4bc67326efae3e6fc147dc2aa8dbc0297425f",
+    "paper_main.pdf": "1268d4e7ec4da933e717425b464e8545d82947075ac19b79f84b2920a1b53875",
+    "paper_appendix.pdf": "e9fe8e5ff5498260c0f8c0bcccf015716feae70b8b5bd65b28f37801a11521a2"
   },
   "figures": 8,
   "main_body_pages": 8,
   "combined_pages": 20,
-  "revision": "lewm-clean-completed",
+  "revision": "v2-planning-lewm-legend",
   "abstract_words_whitespace": 205,
   "figure_pages": {
     "fig:headline": 1,
@@ -34,14 +34,14 @@
     "fig:push-distance": 19,
     "fig:diverse-execution": 20
   },
-  "revision_description": "Complete matched LeWM baseline in Figure 1; restore Figure 4 labels, add two new Rope pairs, use full scene views and remove Pymunk boundary lines.",
+  "revision_description": "Add Figure 4 ECP color legend, recorded LeWM PushT pairs and AdaJEPA e case; center LeWM in Figure 1; simplify captions and repeated implementation prose.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-16T10:33:44.673017+00:00",
+  "updated": "2026-11-16T13:59:33.834939+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 10,
   "table_pages": {
     "tab:main": 6,
-    "tab:components": 7,
+    "tab:components": 6,
     "tab:threshold": 7,
     "tab:timing": 7,
     "tab:maze": 8,
@@ -70,5 +70,5 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/fullview_revision_20261116.json"
+  "current_revision_provenance": "provenance/lewm_legend_revision.json"
 }

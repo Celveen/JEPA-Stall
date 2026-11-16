@@ -49,37 +49,6 @@
       }
     },
     {
-      "label": "AdaJEPA",
-      "denominator": 350,
-      "success_counts": [
-        243,
-        262,
-        272
-      ],
-      "evidence": {
-        "task_seed": 100,
-        "successes_by_shape": {
-          "I": 27,
-          "L": 46,
-          "square": 25,
-          "Z": 49,
-          "small_tee": 36,
-          "plus": 44,
-          "T": 45
-        },
-        "native_successes": 262,
-        "rescues": 11,
-        "regressions": 1,
-        "source": "reports/ecp_threshold_v2/paired_tasks.csv",
-        "source_sha256": "71a6b8c163fc7fe3773d418424603ce99b18205cc4792873813bcc611c6932ef",
-        "trigger_interval": [
-          0.15,
-          0.45
-        ],
-        "contact_objective_weight": null
-      }
-    },
-    {
       "label": "LeWM",
       "denominator": 350,
       "success_counts": [
@@ -111,6 +80,37 @@
         "random_baseline_source": "provenance/lewm_matched_paired_tasks.csv",
         "random_baseline_sha256": "17ed8487dafc14ab2d99fadc8e9562ee650d94076fb8828ab9cd670cdbc5ff2c",
         "random_ecp_successes": 186
+      }
+    },
+    {
+      "label": "AdaJEPA",
+      "denominator": 350,
+      "success_counts": [
+        243,
+        262,
+        272
+      ],
+      "evidence": {
+        "task_seed": 100,
+        "successes_by_shape": {
+          "I": 27,
+          "L": 46,
+          "square": 25,
+          "Z": 49,
+          "small_tee": 36,
+          "plus": 44,
+          "T": 45
+        },
+        "native_successes": 262,
+        "rescues": 11,
+        "regressions": 1,
+        "source": "reports/ecp_threshold_v2/paired_tasks.csv",
+        "source_sha256": "71a6b8c163fc7fe3773d418424603ce99b18205cc4792873813bcc611c6932ef",
+        "trigger_interval": [
+          0.15,
+          0.45
+        ],
+        "contact_objective_weight": null
       }
     }
   ],

@@ -1,0 +1,206 @@
+{
+  "source": "reports/lewm_shift_visuals_20261116",
+  "archive_sha256": "eb3c913c95ac20174f819650398613948fda8ad848ebb883278ad4bf0648fe2e",
+  "view": "Full 224x224 recorded viewport; no local crop",
+  "boundary": "Source RGB unchanged; plotting hides only the 6-pixel grayscale frame with white vector strips",
+  "pusht": [
+    {
+      "key": "lewm_red_agent",
+      "task": "PushT",
+      "baseline": "LeWM",
+      "condition": "red_agent",
+      "sample_idx": 8,
+      "frames": {
+        "base": {
+          "path": "figures/lewm_shift_20261116/red_agent_base.png",
+          "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
+          "original_source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/150.png",
+          "original_sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b"
+        },
+        "ours": {
+          "path": "figures/lewm_shift_20261116/red_agent_ours.png",
+          "sha256": "f174db837baf647212eaf22d9c4b2a2525224347d378176317dfb41e1077262b",
+          "original_source": "reports/lewm_shift_visuals_20261116/figures/red_agent/ours_frames/140.png",
+          "original_sha256": "f174db837baf647212eaf22d9c4b2a2525224347d378176317dfb41e1077262b"
+        }
+      },
+      "states": {
+        "goal": [
+          259.6345520019531,
+          377.79510498046875,
+          233.4805145263672,
+          335.5332336425781,
+          2.548027992248535,
+          6.977944850921631,
+          -118.69112396240234
+        ],
+        "start": [
+          297.84747314453125,
+          333.7942199707031,
+          254.61392211914062,
+          349.60601806640625,
+          2.3927628993988037,
+          0.0,
+          0.0
+        ]
+      },
+      "replans": {
+        "base": 30,
+        "ours": 28
+      },
+      "records": {
+        "base": {
+          "terminal_state": [
+            -92.59801483154297,
+            -420.9341735839844,
+            252.5312042236328,
+            336.2591857910156,
+            2.200913667678833,
+            -167.53392028808594,
+            -99.93236541748047
+          ],
+          "controls": 150,
+          "replans": 30
+        },
+        "ours": {
+          "terminal_state": [
+            251.69166564941406,
+            371.9135437011719,
+            225.8016357421875,
+            321.5534973144531,
+            2.4593846797943115,
+            -405.48016357421875,
+            -372.7136535644531
+          ],
+          "controls": 140,
+          "replans": 28
+        }
+      },
+      "recorded_result": {
+        "condition": "red_agent",
+        "target_index": 8,
+        "native_success": false,
+        "ours_success": true,
+        "first_trigger_replan": 10,
+        "trigger_count": 8,
+        "contact_guided_replans": 7,
+        "proprio_guided_replans": 5,
+        "first_changed_control": 51,
+        "changed_controls_in_common_prefix": 90,
+        "max_command_difference_px": 216.26080322265625,
+        "pretrigger_max_command_difference_px": 0.0,
+        "native_stop_controls": 150,
+        "native_joint_xy_px": 873.155029296875,
+        "native_object_xy_px": 19.064516067504883,
+        "native_angle_deg": 19.88818580637815,
+        "native_pusher_xy_px": 872.9468994140625,
+        "ours_stop_controls": 140,
+        "ours_joint_xy_px": 18.763805389404297,
+        "ours_object_xy_px": 15.949865341186523,
+        "ours_angle_deg": 5.078887685686461,
+        "ours_pusher_xy_px": 9.883430480957031
+      },
+      "goal_scale": 0.4375,
+      "hide_frame_pixels": 6
+    },
+    {
+      "key": "lewm_red_goal",
+      "task": "PushT",
+      "baseline": "LeWM",
+      "condition": "red_goal",
+      "sample_idx": 6,
+      "frames": {
+        "base": {
+          "path": "figures/lewm_shift_20261116/red_goal_base.png",
+          "sha256": "68cdacc46661ea0295b5c1bfa0f69b8092a7f604173a3dd39f5cb23bc23b30c2",
+          "original_source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/150.png",
+          "original_sha256": "68cdacc46661ea0295b5c1bfa0f69b8092a7f604173a3dd39f5cb23bc23b30c2"
+        },
+        "ours": {
+          "path": "figures/lewm_shift_20261116/red_goal_ours.png",
+          "sha256": "2b4c003eb0ef205ac5278990112173ad74017fa8459e18d350aa2f99641acbf7",
+          "original_source": "reports/lewm_shift_visuals_20261116/figures/red_goal/ours_frames/065.png",
+          "original_sha256": "2b4c003eb0ef205ac5278990112173ad74017fa8459e18d350aa2f99641acbf7"
+        }
+      },
+      "states": {
+        "goal": [
+          381.0792541503906,
+          102.2552261352539,
+          384.7137756347656,
+          162.8671112060547,
+          2.3415374755859375,
+          18.671438217163086,
+          63.63661193847656
+        ],
+        "start": [
+          193.78330993652344,
+          125.70648193359375,
+          251.16180419921875,
+          109.98870849609375,
+          0.5882323384284973,
+          0.0,
+          0.0
+        ]
+      },
+      "replans": {
+        "base": 30,
+        "ours": 13
+      },
+      "records": {
+        "base": {
+          "terminal_state": [
+            428.16510009765625,
+            96.56562805175781,
+            391.25396728515625,
+            167.5639190673828,
+            2.140216588973999,
+            -66.55191040039062,
+            75.56088256835938
+          ],
+          "controls": 150,
+          "replans": 30
+        },
+        "ours": {
+          "terminal_state": [
+            381.6012878417969,
+            100.5597152709961,
+            387.0091857910156,
+            177.93714904785156,
+            2.212007999420166,
+            67.89947509765625,
+            -49.04945373535156
+          ],
+          "controls": 65,
+          "replans": 13
+        }
+      },
+      "recorded_result": {
+        "condition": "red_goal",
+        "target_index": 6,
+        "native_success": false,
+        "ours_success": true,
+        "first_trigger_replan": 12,
+        "trigger_count": 1,
+        "contact_guided_replans": 1,
+        "proprio_guided_replans": 1,
+        "first_changed_control": 61,
+        "changed_controls_in_common_prefix": 5,
+        "max_command_difference_px": 89.7977523803711,
+        "pretrigger_max_command_difference_px": 0.0,
+        "native_stop_controls": 150,
+        "native_joint_xy_px": 48.106990814208984,
+        "native_object_xy_px": 8.051962852478027,
+        "native_angle_deg": 11.534837130695873,
+        "native_pusher_xy_px": 47.42835235595703,
+        "ours_stop_controls": 65,
+        "ours_joint_xy_px": 15.346733093261719,
+        "ours_object_xy_px": 15.24384880065918,
+        "ours_angle_deg": 7.421492306839095,
+        "ours_pusher_xy_px": 1.7740564346313477
+      },
+      "goal_scale": 0.4375,
+      "hide_frame_pixels": 6
+    }
+  ]
+}
