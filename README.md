@@ -22,6 +22,8 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 
 ## Latest results (2026-11-16)
 
+- [Real LeWM red-goal / red-agent comparisons](reports/lewm_shift_visuals_20261116/README.md): same frozen checkpoint with intervention off/on, ten fixed targets per condition. GD success counts are **4→5/10** for red goal and **0→1/10** for red agent, with no regressions. Includes one selected rescue per condition, unmodified simulator screenshots, full playback, every-three-control sequences and all 40 recorded trajectories. The LeWM contact intervention uses observed simulator object pose and known geometry.
+
 - [Completed LeWM PushT clean CEM evaluation](reports/lewm_pusht_clean_20261116/README.md): **36/50 (72%)**, now filled in the main table. T-only training and the 50-target evaluation are complete; raw outcomes, training logs, checkpoint identity and frozen-weight checks are included.
 
 - [Complete five-condition Rope comparison](reports/rope_formal20_native3/RESULTS.md): the matched **Native 3/3** control is now complete at **CD 0.7547, 10/20 successes**. Fixed S, dynamic S and fixed S without extra warmup reach **0.6112 / 13**, **0.5152 / 12** and **0.5834 / 13** successes out of 20, respectively. All three improve on Native 3/3 in this run; Native 5/5 retains the highest success count, **14/20**. Includes paired action comparisons, per-push CD, raw evidence and source compatibility checks.
