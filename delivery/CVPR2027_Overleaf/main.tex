@@ -4,7 +4,7 @@
 \input{preamble}
 \def\confName{CVPR}
 \def\confYear{2027}
-\title{When World Models Stall:\\Execution-Conditioned Priors for Latent Planning}
+\title{When World Models Stall:\\Execution-Conditioned Planning in Latent Space}
 \author{Anonymous CVPR submission}
 \begin{document}
 \maketitle
@@ -14,13 +14,13 @@
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig0_headline.pdf}
-\caption{\textbf{Data augmentation and ECP provide complementary gains.} Success on 350 PushObj tasks per model at 150 controls. Augmented ECP uses threshold 0.45. LeWM adds geometry-assisted contact optimization and lacks a matched released baseline (dash). Brackets span the first available bar to ECP, giving total gains for Frozen/AdaJEPA and the planning gain for LeWM.}
+\caption{\textbf{Data augmentation and ECP provide complementary gains.} Success on 350 PushObj tasks per model at 150 controls. Base data denotes the released Frozen/AdaJEPA checkpoints and a matched random-data LeWM checkpoint. Brackets show the total gain from base-data native planning to augmented ECP. LeWM uses the geometry-assisted contact objective.}
 \label{fig:headline}
 \end{figure}
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig1_trajectory_cases.pdf}
-\caption{\textbf{Repeated local motion provides a signal for planning correction.} Eight simulator views compare native failure and ECP success with frozen and adaptive models. Each center plot enlarges the boxed native trajectory over its labelled replan interval; $\Delta x,\Delta y$ are displacement from that interval's start, in pixels (px) or world units (u), with equal axis scales. Solid paths follow saved-action simulator replay, dots mark five-control intervals, and arrows show direction. In scene views, circles mark starts, stars agent goals, crosses failures, and diamonds successes; counts give terminating replans.}
+\caption{\textbf{Stalled execution is a signal for planning correction.} Eight simulator views compare native failure and ECP success with frozen and adaptive models. Each center plot enlarges the boxed native trajectory over its labelled replan interval; $\Delta x,\Delta y$ are displacement from that interval's start, in pixels (px) or world units (u), with equal axis scales. Solid paths follow saved-action simulator replay, dots mark five-control intervals, and arrows show direction. In scene views, circles mark starts, stars agent goals, crosses failures, and diamonds successes; counts give terminating replans.}
 \label{fig:teaser}
 \end{figure*}
 \input{sections/introduction}

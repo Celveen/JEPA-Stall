@@ -29,6 +29,9 @@ def main() -> None:
         results = followup_rows(root.parents[1])
         original = json.loads((root / 'provenance/headline_data_v6.json').read_text())
         released_counts = {group['label']: group['success_counts'][0] for group in original['groups']}
+        matched = json.loads((root / 'provenance/lewm_matched_results.json').read_text())
+        released_counts['LeWM'] = matched['total']['random_native']
+        original['series'][0]['label'] = 'Base data'
         groups = []
         for label, key in [('Frozen', 'ours_frozen'), ('AdaJEPA', 'ours_adajepa'), ('LeWM', 'ours_lewm')]:
             row = results[key, 'GD']
@@ -37,13 +40,13 @@ def main() -> None:
                                               sum(row['successes_by_shape'].values())],
                            'evidence': row})
         data = {'series': original['series'], 'groups': groups,
-                'released_count_source': 'provenance/headline_data_v6.json',
+                'released_count_source': 'Frozen/AdaJEPA: headline_data_v6.json; LeWM: lewm_matched_results.json',
                 'protocol': 'PushObj at 150 controls and threshold 0.45 for augmented ECP. '
                             'LeWM uses an epoch-10 frozen checkpoint and geometry-assisted contact objective, '
                             'weight 10. AdaJEPA uses an epoch-3 checkpoint with online updates and S+P. '
                             'Frozen and AdaJEPA use seed 100; LeWM uses seed 2000. '
-                            'LeWM has no matched released baseline in this archive. '
-                            'Brackets compare the first available bar with augmented ECP. '
+                            'LeWM base data is matched random/source-action replay, not a released checkpoint. '
+                            'Brackets compare base-data native planning with augmented ECP. '
                             'Settings were explored on these task lists.'}
         args.data = root / 'provenance/headline_data_latest.json'
         args.data.write_text(json.dumps(data, indent=2) + '\n')

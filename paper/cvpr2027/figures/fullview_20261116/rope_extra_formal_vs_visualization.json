@@ -1,0 +1,34 @@
+[
+  {
+    "arm": "native5",
+    "sample": 5,
+    "formal_final_cd": 1.6122814784178996,
+    "visualization_final_cd": 0.23593259105409728,
+    "same_goal_model_planner_and_seeds": true,
+    "implementation_audit": "Only worker CLI choice native3 added; all planner/model/runtime hashes unchanged"
+  },
+  {
+    "arm": "native5",
+    "sample": 14,
+    "formal_final_cd": 0.7453706716488252,
+    "visualization_final_cd": 0.21883843206470754,
+    "same_goal_model_planner_and_seeds": true,
+    "implementation_audit": "Only worker CLI choice native3 added; all planner/model/runtime hashes unchanged"
+  },
+  {
+    "arm": "fixed3",
+    "sample": 5,
+    "formal_final_cd": 0.24408015240994826,
+    "visualization_final_cd": 0.1694544086103108,
+    "same_goal_model_planner_and_seeds": true,
+    "implementation_audit": "Only worker CLI choice native3 added; all planner/model/runtime hashes unchanged"
+  },
+  {
+    "arm": "fixed3",
+    "sample": 14,
+    "formal_final_cd": 0.19083110350877147,
+    "visualization_final_cd": 0.14700044826035055,
+    "same_goal_model_planner_and_seeds": true,
+    "implementation_audit": "Only worker CLI choice native3 added; all planner/model/runtime hashes unchanged"
+  }
+]

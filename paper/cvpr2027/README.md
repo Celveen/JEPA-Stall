@@ -1,27 +1,27 @@
-# When World Models Stall — v14
+# When World Models Stall: Execution-Conditioned Planning in Latent Space
 
-CVPR 2027 工作稿。正文 8 页，声明与 45 条参考文献共 2 页，附录 11 页。摘要 166 词。
+当前稿以用户提供的 CVPR2027 revised_v2 / Overleaf_v2 为准，采用 inspired-by 措辞，并在 Figures 3/4 加入 PushT 视觉偏移和真实 Rope 仿真画面。正文 8 页，声明与 45 条参考文献 2 页，附录 10 页；摘要 205 词。训练端噪声注入的启发改为 DART [23]；DAgger [31] 保留作相关工作，ACT [44] 为时间组织启发，LLM Usage Statement 保留导师版本。表格沿用 v2；Figure 1 补入新发布的 LeWM 随机数据基线，未在本次编辑中运行新实验。详见 [本次修订](REVISION_FIGURES_FULLVIEW.md)。
 
-2026-11-15 修订从导师 Overleaf 项目导入 Figure 3 的 PDF、图注及可编辑 draw.io 文件，并逐字替换 LLM Usage Statement。DAgger 与 ACT 在引言和相关工作中均有引用，最终文献编号为 [31] 与 [44]。详见 [导师修改同步说明](REVISION_20261115.md)。
-
-2026-11-14 修订保留首图的 Frozen、AdaJEPA、LeWM 三组及原三阶段结构，主表保留 Ours (Frozen) 与 Ours (AdaJEPA)，后者更新为 77.7%。LeWM 的 66.0% 接触优化结果保留在首图、正文与附录对照中。摘要、引言和相关工作加入 DAgger 对训练数据覆盖、ACT 对推理时间组织的启发，并区分现有实现与后续方向。详见 [本次修订说明](REVISION_20261114.md)。
-
-2026-11-10 历史修订：摘要按“发现问题—方法与优势—结果”重写，去掉重规划预算等实验设置，突出多 backbone 兼容、无需额外学习参数及冻结/在线适应部署；最后两句直接报告完整方法在 AdaJEPA 上的提升与 PushT 视觉偏移新 SOTA。方法编号公式从 11 个减到 8 个，保留核心定义与符号解释；Figure 3 的反馈分支统一为上方灰色配色。可直接提交的[摘要文本](../../delivery/Abstract.txt)和原生可编辑的 [Figure 3 draw.io](../../delivery/Figure3.drawio)已随稿提供。具体改动见 [修订说明](REVISION_20261110.md)。
-
-[完整论文](paper_v14.pdf) · [主文](paper_main.pdf) · [附录](paper_appendix.pdf) · [源码包](paper_source_v14.zip) · [结果与日志](../../reports/publication_v14/README.md)
-
-主表 DINO-WM CEM 的 PushT 行已改为随机 T16k 数据、epoch 3 模型：48 / 40 / 2 / 44 / 40 / 24 / 48%，六偏移均值 33.0%。GD 和 CEM 使用相同模型；CEM 保留其已运行的 300×30 搜索预算和 6×25 环境控制步。证据见 `provenance/dinowm_pusht_cem_e3_v14.json`。
-
-首图由 `python scripts/build_headline.py` 从已完成配对结果重建。
-
-主表将 PushObj 按七种形状展示，每种形状 50 个任务，并加粗 PushObj 和 PushT 的各列最高分。归档基线与干预实验使用不同的起点和目标，任务清单与预算见附录。PushT 的 56 组评测和 Maze 的完成结果均已录入。Figure 3 使用导师 Overleaf 版本，在预测器处加入网络图标，并精简图底说明。
+[完整论文](paper.pdf) · [主文](paper_main.pdf) · [附录](paper_appendix.pdf) · [完整源码](paper_source_v14.zip) · [摘要](Abstract.txt) · [可编辑 Figure 3](Figure3.drawio)
 
 ## 重建
 
+直接编译使用随稿表格和插图：
+
 ```bash
-python scripts/update_comparison_tables.py --results /path/to/JEPA-Stall/eval_outputs/pusht_visual_v8 --require-complete
-python scripts/build_method_figure.py
 python scripts/build_paper.py --tectonic /path/to/tectonic
 ```
 
-重算表格前，按结果包 README 解压 PushT 已完成评测。重建 Figure 3 使用随稿 `figures/source/fig2_method_overleaf_20261115.pdf` 与 `Figure3_overleaf_20261115.drawio`，逐字节恢复导师版本，并用 `pypdfium2` 和 Pillow 生成预览。`figures/svg/fig2_method.svg` 与 `prepare_method_gray.py` 是历史版本；当前图以导入的 PDF 和 draw.io 文件为准。直接编译时可使用随稿的表格和插图。`provenance/comparison_v14.json` 记录每种形状的成功数，`provenance/method_figure.json` 记录 Figure 3 的输入和输出校验值。
+Figure 3 的矢量 PDF 与 draw.io 来自相同绘图元素，可通过以下命令重建。依赖 PyMuPDF、ReportLab、pypdfium2 和 Pillow；本次使用 Mac 系统 Times New Roman 字体，其他平台可安装相同字体以保持排版。
+
+```bash
+python scripts/build_method_figure.py
+```
+
+原始输入保存在 `figures/source/fig2_method_v2_input.pdf` 和 `Figure3_v2_input.drawio`。当前输出为 `figures/fig2_method.pdf`、`figures/svg/fig2_method.svg`、`Figure3.drawio` 和 `delivery/Figure3.drawio`。`provenance/method_figure.json` 记录校验和。
+
+实验表采用用户 v2 快照；旧 `update_comparison_tables.py` 用于此前结果重算，不属于本次排版重建流程，以免覆盖 v2 图注及表格组织。历史审计和修订说明保留供追溯；当前构建信息以 `provenance/build_report.json` 和 `provenance/fullview_revision_20261116.json` 为准。
+
+Figure 4 可用 `python scripts/build_domain_figure4.py --paper .` 重建；素材与两类图像来源的详细区别见本次修订说明。数据表格保持不变。
+
+Figure 4 当前为八组完整场景：PushObj · ResNet、PushT · Red agent/Red goal、Maze · Frozen/AdaJEPA、Rope · DINO-WM；灰色边界线已去除。Rope 使用目标 15/24 的新配对截图。Figure 1 LeWM 三柱为 47.4%、61.4%、66.0%；可用 `python scripts/build_headline.py --data provenance/headline_data_latest.json` 重建。

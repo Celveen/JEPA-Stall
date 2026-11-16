@@ -2,7 +2,7 @@
   "series": [
     {
       "key": "released",
-      "label": "Released",
+      "label": "Base data",
       "color": "#A8B9C8"
     },
     {
@@ -83,7 +83,7 @@
       "label": "LeWM",
       "denominator": 350,
       "success_counts": [
-        null,
+        166,
         215,
         231
       ],
@@ -107,10 +107,13 @@
           0.15,
           0.45
         ],
-        "contact_objective_weight": 10
+        "contact_objective_weight": 10,
+        "random_baseline_source": "provenance/lewm_matched_paired_tasks.csv",
+        "random_baseline_sha256": "17ed8487dafc14ab2d99fadc8e9562ee650d94076fb8828ab9cd670cdbc5ff2c",
+        "random_ecp_successes": 186
       }
     }
   ],
-  "released_count_source": "provenance/headline_data_v6.json",
-  "protocol": "PushObj at 150 controls and threshold 0.45 for augmented ECP. LeWM uses an epoch-10 frozen checkpoint and geometry-assisted contact objective, weight 10. AdaJEPA uses an epoch-3 checkpoint with online updates and S+P. Frozen and AdaJEPA use seed 100; LeWM uses seed 2000. LeWM has no matched released baseline in this archive. Brackets compare the first available bar with augmented ECP. Settings were explored on these task lists."
+  "released_count_source": "Frozen/AdaJEPA: headline_data_v6.json; LeWM: lewm_matched_paired_tasks.csv",
+  "protocol": "PushObj at 150 controls and threshold 0.45 for augmented ECP. LeWM uses an epoch-10 frozen checkpoint and geometry-assisted contact objective, weight 10. AdaJEPA uses an epoch-3 checkpoint with online updates and S+P. Frozen and AdaJEPA use seed 100; LeWM uses seed 2000. LeWM base data is newly trained matched random/source-action replay (166/350), not a released checkpoint. Brackets compare base-data native planning with augmented ECP for every model. Settings were explored on these task lists."
 }

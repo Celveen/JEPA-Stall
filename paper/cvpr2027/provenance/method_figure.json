@@ -1,26 +1,64 @@
 {
+  "source_type": "supplied_v2_with_vector_refinements",
   "canvas_pt": [
     468,
     234
   ],
-  "source_type": "advisor_reviewed_overleaf_assets",
-  "source_project_url": "https://www.overleaf.com/project/6af32b3fec06b004344cce6c",
-  "retrieved_date": "2026-11-15",
-  "archive_sha256": "f8b4106d295cfa8e1cd7a8871f17e64299acc5563f9ed64a028734330f8280a8",
   "sources": {
-    "figures/source/fig2_method_overleaf_20261115.pdf": "9a07263b7ce3b6daada3f8655d45c5e3ad87396237c88bff71d86ad8065bc1bf",
-    "figures/source/Figure3_overleaf_20261115.drawio": "dd3ddbd6866ed9a855c2a96fc921038e00628edd960447ff9543fd9f6d4b1ab6"
+    "figures/source/fig2_method_v2_input.pdf": "9a07263b7ce3b6daada3f8655d45c5e3ad87396237c88bff71d86ad8065bc1bf",
+    "figures/source/Figure3_v2_input.drawio": "dd3ddbd6866ed9a855c2a96fc921038e00628edd960447ff9543fd9f6d4b1ab6",
+    "figures/domains_20261116/diagram_pushobj.png": "83f482cf724ed8ddecf38c95865026e97bbfebe65e1ac86db03bacadeac97930",
+    "figures/domains_20261116/diagram_pusht.png": "11fbe177e62e2705e3e35488e998cc71583dce8786352a1e77e370003b2a167f",
+    "figures/domains_20261116/diagram_maze.png": "e7b953782af243d1e12f4f160775c326330948819495c261273d2b3cfabf6bf9",
+    "figures/domains_20261116/diagram_rope.png": "5040ace6a88843deff06e5286972af58feebd7d02b6a59d08247cea41bba7293"
   },
-  "imported_pdf_preserved_byte_for_byte": true,
-  "drawio": {
-    "path": "delivery/Figure3.drawio",
-    "imported_byte_for_byte": true
-  },
-  "historical_svg": "figures/svg/fig2_method.svg is the superseded 2026-11-10 rendering; the current figure is the imported PDF and draw.io asset.",
+  "changes": [
+    "Step 4: trajectory with Small / repeated move -> Activate correction explanation",
+    "Step 5: Avoid revisits and Boost goal weight with persistence timeline",
+    "Offline: contact-directed and perturbed action arrows with Contact bias + noise / Collect transitions; no algorithm tag",
+    "Step 3: PushObj, Maze, PushT color shift and recorded Rope simulation thumbnails"
+  ],
+  "removed_editable_cells": [
+    "execution",
+    "training_agent",
+    "training_object",
+    "memory_neighborhood",
+    "memory_point_0",
+    "memory_point_1",
+    "memory_point_2",
+    "component_bar_0",
+    "component_bar_1",
+    "component_bar_2",
+    "component_bar_3",
+    "vector_line2d_3",
+    "vector_patch_25",
+    "vector_patch_35",
+    "vector_patch_39",
+    "vector_patch_40",
+    "native_frame_4",
+    "native_frame_5",
+    "frame_border_2",
+    "frame_border_3",
+    "text_2_0",
+    "text_2_1",
+    "text_19_0",
+    "text_20_0",
+    "text_21_0",
+    "text_26_0",
+    "text_27_0",
+    "text_28_0",
+    "text_29_0",
+    "text_30_0",
+    "text_31_0",
+    "text_32_0",
+    "text_33_0"
+  ],
+  "new_editable_cells": 53,
   "outputs": {
-    "paper/cvpr2027/figures/fig2_method.pdf": "9a07263b7ce3b6daada3f8655d45c5e3ad87396237c88bff71d86ad8065bc1bf",
-    "paper/cvpr2027/figures/previews/fig2_method.png": "998f9b7bc4fb53e9db99bf4c3c0b05f5d3b074001015db024415abf7e8c9fa5a",
-    "delivery/Figure3.drawio": "dd3ddbd6866ed9a855c2a96fc921038e00628edd960447ff9543fd9f6d4b1ab6"
+    "paper/cvpr2027/figures/fig2_method.pdf": "25ce7fdc3fe3f8d9ad5caf6ca105adb9fcac3ec1ee6378d12069eac8a4977c11",
+    "paper/cvpr2027/figures/previews/fig2_method.png": "0c4a2df85d5a2dbd269f359629effdf657e5c9e89d683883530ae792f39a8d31",
+    "paper/cvpr2027/figures/svg/fig2_method.svg": "539bc82ee73082f664b9c938018aed4a2b0a3211411688f6ce473ce90f6158df",
+    "delivery/Figure3.drawio": "dfd263b49d47725c6a049f53651ef0c53eb1269490e176e726bfad991f1ebf9e"
   },
-  "generator_sha256": "a3fb13cc1c2594c578cf0d4521b64eb5d7f26d44468487dd7646db8cddb320c1"
+  "generator_sha256": "074bfbb351b49a96e12c59784b7bf21584800d45a4da3115f75db81c0329d74e"
 }
