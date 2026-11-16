@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "samples_per_condition": 10,
+  "conditions": {
+    "native3": {
+      "original_15_prefix_mean_cd": 0.5188597480108588,
+      "original_15_prefix_successes": 6,
+      "original_20_mean_cd": 0.3119033362901438,
+      "original_20_successes": 8,
+      "rerun_15_mean_cd": 0.42056266761543304,
+      "rerun_15_successes": 7,
+      "late_success_samples": [
+        1,
+        5
+      ]
+    },
+    "fixed3": {
+      "original_15_prefix_mean_cd": 0.5154250435579157,
+      "original_15_prefix_successes": 6,
+      "original_20_mean_cd": 0.24297992201669646,
+      "original_20_successes": 8,
+      "rerun_15_mean_cd": 0.41171489192177424,
+      "rerun_15_successes": 7,
+      "late_success_samples": [
+        1,
+        5
+      ]
+    },
+    "dynamic3": {
+      "original_15_prefix_mean_cd": 0.515368092656268,
+      "original_15_prefix_successes": 6,
+      "original_20_mean_cd": 0.31091158528548035,
+      "original_20_successes": 8,
+      "rerun_15_mean_cd": 0.4177724941217839,
+      "rerun_15_successes": 7,
+      "late_success_samples": [
+        1,
+        5
+      ]
+    }
+  },
+  "interpretation": "Original-15-prefix and original-20 share the same trajectories and isolate the stopping budget. The fresh 15-push rerun is an independent physics replicate; its difference from the original prefix is not a budget effect."
+}

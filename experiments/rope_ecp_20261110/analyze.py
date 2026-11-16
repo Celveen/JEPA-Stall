@@ -15,6 +15,8 @@ def analyze_pair(native_dir, ecp_dir, chunk):
     b_receipt = json.loads((ecp_dir / 'complete.json').read_text())
     assert a_receipt['checkpoint_sha256'] == b_receipt['checkpoint_sha256']
     assert a_receipt['target_sha256'] == b_receipt['target_sha256']
+    native_cadence = a_receipt['config']['planner']['n_taken_actions']
+    assert native_cadence == b_receipt['config']['planner']['n_taken_actions']
     a_audit = json.loads((native_dir / 'frozen_model_audit.json').read_text())
     b_audit = json.loads((ecp_dir / 'frozen_model_audit.json').read_text())
     assert a_audit['unchanged'] and b_audit['unchanged']
@@ -26,7 +28,7 @@ def analyze_pair(native_dir, ecp_dir, chunk):
     rows = []
     for index, first in enumerate(bm['first_intervention']):
         change = bm['first_action_change'][index]
-        cutoff = a['actions'].shape[1] if change < 0 else int(change) * 5
+        cutoff = a['actions'].shape[1] if change < 0 else int(change) * native_cadence
         np.testing.assert_allclose(a['actions'][index, :cutoff], b['actions'][index, :cutoff],
                                    atol=1e-5, rtol=1e-5)
         prefix_replans = am['cd_by_replan'].shape[1] if change < 0 else int(change)

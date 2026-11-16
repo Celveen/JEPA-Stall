@@ -1,0 +1,68 @@
+{
+  "status": "complete",
+  "warmup3_trigger_events_at_push3_or_4": 0,
+  "warmup_contrast_exercised_before_simulation_divergence": false,
+  "paired_samples": [
+    {
+      "sample": 0,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 1,
+      "first_control_difference_push": 16,
+      "first_cd_difference_push": 15,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 2,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 3,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 4,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 5,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 6,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 7,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 8,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    },
+    {
+      "sample": 9,
+      "first_control_difference_push": null,
+      "first_cd_difference_push": null,
+      "mean_rule_same_before_simulation_divergence": true
+    }
+  ],
+  "interpretation": "No early trigger occurs in the interval distinguished by warmup. Outcomes differ after the same control enters independent simulator branches; do not attribute their CD gap to warmup duration."
+}

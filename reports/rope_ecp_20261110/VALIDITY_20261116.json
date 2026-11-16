@@ -1,0 +1,6 @@
+{
+  "valid_as_dinowm_evaluation": false,
+  "reason": "Frozen encoder omitted from checkpoint but launcher forced pretrained=False.",
+  "raw_artifacts_preserved": true,
+  "audit": "../rope_encoder_audit_20261116/DIAGNOSIS.md"
+}

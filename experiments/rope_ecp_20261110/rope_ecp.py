@@ -49,7 +49,7 @@ def mean_square_distances(predictions, memories):
 
 
 def stall_penalty(predicted, memory, alpha=1.0, base=2.0):
-    # One immutable observed context, followed by the five predicted pushes.
+    # One immutable observed context, followed by the predicted push sequence.
     visual = predicted['visual'][:, 1:].flatten(2)
     proprio = predicted['proprio'][:, 1:].flatten(2)
     distance = (mean_square_distances(visual, memory['visual'])
@@ -78,6 +78,11 @@ class ContextCEMPlanner(CEMPlanner):
         for iteration in tqdm(range(self.opt_steps)):
             losses = []
             for trajectory in range(mu.shape[0]):
+                # Reserve the same random stream for every task even after early
+                # success, so another task's paired candidates do not change.
+                if getattr(self, 'finished_mask', np.zeros(mu.shape[0], bool))[trajectory]:
+                    torch.randn(self.num_samples, self.horizon, self.action_dim)
+                    continue
                 self.active_trajectory = trajectory
                 current = {key: repeat(value[trajectory].unsqueeze(0), '1 ... -> n ...',
                                        n=self.num_samples)
@@ -156,11 +161,11 @@ class RopeStagnationMPCPlanner(MPCPlanner):
             reference_targets = np.load(reference_dir / 'final_eval_results.npz')
             np.testing.assert_array_equal(reference_targets['state_0'], self.evaluator.state_0)
             np.testing.assert_array_equal(reference_targets['state_g'], self.evaluator.state_g)
-            self.env.rollout = self._paired_env_rollout
+        self.env.rollout = self._select_rollout(original_rollout)
         before = model_digest(self.wm)
         started = time.perf_counter()
         try:
-            result = super().plan(obs_0, obs_g, actions)
+            result = self._plan_actions(obs_0, obs_g, actions)
         finally:
             self.env.rollout = original_rollout
         after = model_digest(self.wm)
@@ -169,7 +174,10 @@ class RopeStagnationMPCPlanner(MPCPlanner):
         if any(module.training for module in self.wm.modules()):
             raise RuntimeError('A model module left evaluation mode.')
         np.savez_compressed('rope_metrics.npz',
-                            cd_by_replan=np.stack(self.cd_by_replan, axis=1),
+                            cd_by_replan=(np.stack(self.cd_by_replan, axis=1)
+                                          if self.cd_by_replan else np.empty((n, 0))),
+                            completed_pushes_by_replan=np.asarray([
+                                record['completed_pushes'] for record in self.records]),
                             final_states=self.final_states,
                             first_intervention=np.asarray([
                                 -1 if x is None else x for x in self.first_intervention]),
@@ -184,8 +192,10 @@ class RopeStagnationMPCPlanner(MPCPlanner):
                                 obs_visual=self.execution_observations['visual'],
                                 obs_proprio=self.execution_observations['proprio'],
                                 states=self.execution_states, physical_actions=physical_actions,
-                                cpu_rng=np.stack(self.cpu_rng_boundaries),
-                                cuda_rng=np.stack(self.cuda_rng_boundaries))
+                                cpu_rng=(np.stack(self.cpu_rng_boundaries) if self.cpu_rng_boundaries
+                                         else np.empty((0, 0), dtype=np.uint8)),
+                                cuda_rng=(np.stack(self.cuda_rng_boundaries) if self.cuda_rng_boundaries
+                                          else np.empty((0, 0), dtype=np.uint8)))
         Path('frozen_model_audit.json').write_text(json.dumps({
             'parameters_and_buffers_before': before,
             'parameters_and_buffers_after': after,
@@ -195,6 +205,12 @@ class RopeStagnationMPCPlanner(MPCPlanner):
             'native_prefix_reuse': self.kappa > 0,
         }, indent=2) + '\n')
         return result
+
+    def _select_rollout(self, original_rollout):
+        return self._paired_env_rollout if self.reference is not None else original_rollout
+
+    def _plan_actions(self, obs_0, obs_g, actions=None):
+        return super().plan(obs_0, obs_g, actions)
 
     def _paired_env_rollout(self, seeds, initial_states, actions):
         """Reuse actual native execution until this episode's first intervention.
@@ -285,6 +301,7 @@ class RopeStagnationMPCPlanner(MPCPlanner):
             if not torch.isfinite(rate).all():
                 raise RuntimeError('Non-finite movement trigger.')
             weights = ((self.gamma_hi - rate) / (self.gamma_hi - self.gamma_lo)).clamp(0, 1)
+            weights[torch.as_tensor(self.is_success, device=weights.device)] = 0
             for index in range(len(self.memories)):
                 if weights[index].item() > 0:
                     self.memories[index].append({
@@ -301,7 +318,7 @@ class RopeStagnationMPCPlanner(MPCPlanner):
                            'trigger_weight': weights.cpu().tolist(),
                            'memory_count': [len(memory) for memory in self.memories]})
         self.records.append(record)
-        if self.reference is not None:
+        if self.reference is not None and self.iter < len(self.reference['cpu_rng']):
             # Use the native candidate random stream at the same block boundary,
             # including when some tasks have already activated and others have not.
             torch.set_rng_state(torch.from_numpy(self.reference['cpu_rng'][self.iter]).clone())

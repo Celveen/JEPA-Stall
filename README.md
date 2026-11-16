@@ -20,7 +20,15 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 | `models/`, `datasets/`, `env/`, `train.py`, `plan.py` | World-model training and planning infrastructure |
 | `data/targets/` | Evaluation target sets (ordered chunks of plan targets) used by the runners |
 
-## Latest results (2026-11-11)
+## Latest results (2026-11-16)
+
+The [complete Rope follow-up summary and raw evidence](reports/rope_followup_20261116/README.md) collect all ten completed conditions, 100 episode-condition results, per-sample measurements, and the encoder/protocol audits.
+
+- [Completed Rope 15-push rerun](reports/rope_chunk3_cap15_20261116/BUDGET_COMPARISON.md): three groups of ten targets at 3/3 cadence give Native CD **0.4206**, fixed S **0.4117**, and dynamic S **0.4178**, all **7/10** successful. Each S arm triggers ten times and changes three tasks' controls; strengths again saturate, so this does not distinguish fixed from dynamic strength. Truncating the earlier 20-push trajectories at 15 yields **6/10**, versus **8/10** after 20: two successes require the extra budget. The independent rerun and same-trajectory budget comparison are reported separately because physics variation can change later plans.
+
+- [Completed Rope ten-target chunk and strength pilot](reports/rope_chunk3_strength_20261116/RESULTS.md): with observation after every push, a 20-push limit, and stopping at CD < 0.3, Native-3 reaches mean CD **0.3119 (8/10)**, fixed-strength S **0.2430 (8/10)**, dynamic-strength S **0.3109 (8/10)**, and Native-5 **0.6715 (7/10)**. Both S variants change actions in four tasks, but all trigger strengths saturate at the same value; their CD difference does **not** establish a fixed-versus-dynamic advantage. [The encoder audit](reports/rope_encoder_audit_20261116/DIAGNOSIS.md) invalidates the old Rope pilot that accidentally used a random DINO encoder. [Protocol and run instructions](experiments/rope_chunk3/README.md).
+
+- Completed Rope per-push replanning controls, ten targets each: Native CD **1.0046**, [S with three-push warmup](reports/rope_feedback_pretrained_20261116/warmup3/RESULTS.md) **1.0794**, and [S with five-push warmup](reports/rope_feedback_pretrained_20261116/warmup5/RESULTS.md) **1.0070**; all solve **4/10**. Each S arm changes one task's actions without improving its final CD. No trigger occurs during the interval distinguished by the warmup settings; their later CD difference follows independent physics branches and is not evidence of a warmup advantage.
 
 - [Completed ECP threshold and cadence follow-up](reports/ecp_threshold_v1/README.md): 1,400 task runs and complete logs. Raising the threshold to 0.30 gives **77.4%** for augmented AdaJEPA (previous ECP: 76.9%); DINO-WM remains **48.9%** at 6 x 25 and **20.6%** at 30 x 5, with a matched native control at each cadence.
 

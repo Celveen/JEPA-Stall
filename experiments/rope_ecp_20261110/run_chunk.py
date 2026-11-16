@@ -38,7 +38,8 @@ def main():
     sys.path.insert(0, str(RUNTIME))
     from omegaconf import OmegaConf
     import torch
-    # Cache-only hub registration: no pretrained model or data download.
+    # Frozen DINO encoders are NOT saved in this Rope checkpoint. They must
+    # load the official pretrained weights, including when using local hub code.
     original_hub_load = torch.hub.load
     cache = Path(torch.hub.get_dir()) / 'facebookresearch_dinov2_main'
     if not cache.is_dir():
@@ -47,7 +48,7 @@ def main():
         if repository == 'facebookresearch/dinov2':
             repository = str(cache)
             keywords['source'] = 'local'
-            keywords['pretrained'] = False  # registration only; checkpoint supplies all encoder weights
+            keywords['pretrained'] = True
         return original_hub_load(repository, *positional, **keywords)
     torch.hub.load = local_hub_load
     import plan
