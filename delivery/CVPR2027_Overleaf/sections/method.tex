@@ -1,6 +1,6 @@
 \section{Execution-conditioned planning}
 \label{sec:method}
-ECP augments goal-distance planning with an episode-local record of where execution has stalled. This record changes the cost of candidate trajectories, while temporary goal reweighting emphasizes unfinished task components. The memory identifies configurations to avoid; reweighting helps resolve the remaining goal component. Both corrections operate through the existing world model and planner (\cref{fig:method}).
+Our approach couples interaction-biased training with inference-time correction (\cref{fig:method}). Offline collection enriches experience for learning dynamics. During deployment, stalled-state memory changes candidate trajectory costs, and temporary weighting emphasizes unfinished goal components. Both carry corrective influence across replans.
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig2_method.pdf}
@@ -41,7 +41,7 @@ Here $z_{t-W}$ is the observation from $W$ replans earlier, $\alpha_0=1$ is the 
  \frac{\gamma_{\rm hi}-r_t}{\gamma_{\rm hi}-\gamma_{\rm lo}}\right).
  \label{eq:weight}
 \end{equation}
-The operator $\operatorname{clip}_{[0,1]}$ clamps to that interval. We use $W=3$, with thresholds $\gamma_{\rm lo}=0.05$ and $\gamma_{\rm hi}=0.15$: motion below the lower threshold receives full weight, and motion above the upper threshold receives zero. A positive $w_t$ stores $(o_t,w_t)$ in the episode memory $\mathcal M_t$. Current, historical, and goal observations all use the current encoder, including during adaptation. Detection begins after a task-specific warm-up (\cref{sec:parameters}).
+The operator $\operatorname{clip}_{[0,1]}$ clamps to that interval. We use $W=3$. Updated PushObj results use $(\gamma_{\rm lo},\gamma_{\rm hi})=(0.15,0.45)$, while the original component ablations, PushT, and Maze use $(0.05,0.15)$ (\cref{sec:completed-followups}). Motion below the lower threshold receives full weight, and motion above the upper threshold receives zero. A positive $w_t$ stores $(o_t,w_t)$ in the episode memory $\mathcal M_t$. Current, historical, and goal observations all use the current encoder, including during adaptation. Detection begins after a task-specific warm-up (\cref{sec:parameters}).
 
 \subsection{A trajectory-level stagnation regularizer}
 \label{sec:memory}

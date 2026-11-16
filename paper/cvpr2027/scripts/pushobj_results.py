@@ -1,6 +1,7 @@
 """Read per-shape PushObj outcomes from the archived evaluation records."""
 
 from collections import Counter
+import csv
 import hashlib
 import io
 import json
@@ -86,4 +87,56 @@ def paired_rows(repo, provenance):
                 'source': archive_path.as_posix(),
                 'runs': runs,
             }
+    return rows
+
+
+def followup_rows(repo):
+    """Read the completed threshold and LeWM contact-objective comparisons."""
+    conditions = [
+        ('ours_frozen', 'reports/ecp_threshold_v3/paired_tasks.csv',
+         'frozen_aug_g045', 'ecp_success', 'native_success', 100),
+        ('ours_adajepa', 'reports/ecp_threshold_v2/paired_tasks.csv',
+         None, 'gamma045_success', 'native_success', 100),
+        ('ours_lewm', 'reports/lewm_contact_schedule_20261113/'
+         'lewm_ecp_045_contact_objective/paired_tasks.csv',
+         None, 'objective', 'native', 2000),
+    ]
+    rows = {}
+    for label, source, condition, outcome_key, native_key, seed in conditions:
+        path = repo / source
+        with path.open() as file:
+            records = list(csv.DictReader(file))
+        if condition:
+            records = [r for r in records if r['condition'] == condition]
+        assert len(records) == 350
+        identifiers = [(r.get('chunk', r['shape']), r['sample_idx']) for r in records]
+        assert len(set(identifiers)) == 350
+        assert Counter(r['shape'] for r in records) == dict.fromkeys(SHAPES, 50)
+        assert all(r[k] in ('0', '1') for r in records for k in (outcome_key, native_key))
+        counts = {s: sum(int(r[outcome_key]) for r in records if r['shape'] == s) for s in SHAPES}
+        native = sum(int(r[native_key]) for r in records)
+        rescued = sum(r[native_key] == '0' and r[outcome_key] == '1' for r in records)
+        regressed = sum(r[native_key] == '1' and r[outcome_key] == '0' for r in records)
+        assert native + rescued - regressed == sum(counts.values())
+        if label == 'ours_lewm':
+            root = path.parent
+            hashes = json.loads((root.parent / 'SHA256SUMS.json').read_text())
+            for shape_name in SHAPES:
+                raw = root / 'full' / shape_name / 'final_eval_results.npz'
+                key = raw.relative_to(root.parent).as_posix()
+                assert hashlib.sha256(raw.read_bytes()).hexdigest() == hashes[key]
+                with np.load(raw) as result:
+                    expected = [int(r[outcome_key]) for r in records if r['shape'] == shape_name]
+                    np.testing.assert_array_equal(result['successes'], expected)
+            summary = json.loads((root / 'results.json').read_text())['total']
+            assert (native, sum(counts.values()), rescued, regressed) == (
+                summary['native'], summary['objective'],
+                summary['rescues_vs_native'], summary['regressions_vs_native'])
+        rows[label, 'GD'] = {
+            'task_seed': seed, 'successes_by_shape': counts,
+            'native_successes': native, 'rescues': rescued, 'regressions': regressed,
+            'source': source, 'source_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+            'trigger_interval': [0.15, 0.45],
+            'contact_objective_weight': 10 if label == 'ours_lewm' else None,
+        }
     return rows

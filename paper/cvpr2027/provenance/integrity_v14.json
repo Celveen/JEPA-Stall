@@ -1,16 +1,16 @@
 {
   "revision": "v14",
-  "checked_utc": "2026-11-10T07:08:33.222808+00:00",
+  "checked_utc": "2026-11-14T23:19:01.668911+00:00",
   "format": {
-    "abstract_words_whitespace": 183,
+    "abstract_words_whitespace": 166,
     "abstract_page": 1,
     "figure_one_page": 1,
     "headline_on_first_page_right_column": true,
     "trajectory_figure_page": 2,
     "body_pages": 8,
     "main_with_statement_and_references_pages": 10,
-    "appendix_pages": 10,
-    "combined_pages": 20,
+    "appendix_pages": 11,
+    "combined_pages": 21,
     "undefined_references_or_citations": false,
     "overfull_boxes": false,
     "build_runs_experiments": false,
@@ -43,12 +43,40 @@
   ],
   "figures_unchanged_from_v13": false,
   "visual_inspection": [
-    "Figure 3 on PDF page 4",
-    "main comparison table on PDF page 6",
-    "end of main body on PDF page 8",
-    "references on PDF pages 9 and 10"
+    "All pages rendered and reviewed; first chart, main comparison, conclusion and added appendix inspected in detail.",
+    "Restored three-group headline and first PDF page inspected after figure correction.",
+    "Reviewed all 21 rendered pages after the DAgger/ACT revision, with detailed inspection of pages 1, 3, 6 and 8; Table 1 omits Ours (LeWM), and all figure PDFs and primary PushT records remain unchanged."
   ],
   "pending_scores_not_fabricated": true,
   "pushobj_task_lists_not_pooled": true,
-  "reference_count": 43
+  "reference_count": 45,
+  "completed_followup_successes": {
+    "adajepa_045": 272,
+    "frozen_045": 253,
+    "lewm_contact_objective_w10": 231
+  },
+  "narrative_revision_checks": {
+    "pages": 21,
+    "references": 45,
+    "all_fonts_embedded": true,
+    "type3_fonts": false,
+    "figure_pdfs_preserved": true,
+    "pusht_primary_results_unchanged": true,
+    "ours_lewm_removed_from_table1": true,
+    "citation_pages": {
+      "DAgger": [
+        1,
+        3,
+        8,
+        21
+      ],
+      "ACT": [
+        1,
+        2,
+        3,
+        8,
+        21
+      ]
+    }
+  }
 }

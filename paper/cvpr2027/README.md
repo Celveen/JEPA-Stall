@@ -1,12 +1,16 @@
 # When World Models Stall — v14
 
-CVPR 2027 工作稿。正文 8 页，声明与 43 条参考文献共 2 页，附录 10 页。摘要 163 词。
+CVPR 2027 工作稿。正文 8 页，声明与 45 条参考文献共 2 页，附录 11 页。摘要 166 词。
 
-2026-11-10 修订：摘要按“发现问题—方法与优势—结果”重写，去掉重规划预算等实验设置，突出多 backbone 兼容、无需额外学习参数及冻结/在线适应部署；最后两句直接报告完整方法在 AdaJEPA 上的提升与 PushT 视觉偏移新 SOTA。方法编号公式从 11 个减到 8 个，保留核心定义与符号解释；Figure 3 的反馈分支统一为上方灰色配色。可直接提交的[摘要文本](../../delivery/Abstract.txt)和原生可编辑的 [Figure 3 draw.io](../../delivery/Figure3.drawio)已随稿提供。具体改动见 [修订说明](REVISION_20261110.md)。
+2026-11-14 修订保留首图的 Frozen、AdaJEPA、LeWM 三组及原三阶段结构，主表保留 Ours (Frozen) 与 Ours (AdaJEPA)，后者更新为 77.7%。LeWM 的 66.0% 接触优化结果保留在首图、正文与附录对照中。摘要、引言和相关工作加入 DAgger 对训练数据覆盖、ACT 对推理时间组织的启发，并区分现有实现与后续方向。详见 [本次修订说明](REVISION_20261114.md)。
+
+2026-11-10 历史修订：摘要按“发现问题—方法与优势—结果”重写，去掉重规划预算等实验设置，突出多 backbone 兼容、无需额外学习参数及冻结/在线适应部署；最后两句直接报告完整方法在 AdaJEPA 上的提升与 PushT 视觉偏移新 SOTA。方法编号公式从 11 个减到 8 个，保留核心定义与符号解释；Figure 3 的反馈分支统一为上方灰色配色。可直接提交的[摘要文本](../../delivery/Abstract.txt)和原生可编辑的 [Figure 3 draw.io](../../delivery/Figure3.drawio)已随稿提供。具体改动见 [修订说明](REVISION_20261110.md)。
 
 [完整论文](paper_v14.pdf) · [主文](paper_main.pdf) · [附录](paper_appendix.pdf) · [源码包](paper_source_v14.zip) · [结果与日志](../../reports/publication_v14/README.md)
 
 主表 DINO-WM CEM 的 PushT 行已改为随机 T16k 数据、epoch 3 模型：48 / 40 / 2 / 44 / 40 / 24 / 48%，六偏移均值 33.0%。GD 和 CEM 使用相同模型；CEM 保留其已运行的 300×30 搜索预算和 6×25 环境控制步。证据见 `provenance/dinowm_pusht_cem_e3_v14.json`。
+
+首图由 `python scripts/build_headline.py` 从已完成配对结果重建。
 
 主表将 PushObj 按七种形状展示，每种形状 50 个任务，并加粗 PushObj 和 PushT 的各列最高分。归档基线与干预实验使用不同的起点和目标，任务清单与预算见附录。PushT 的 56 组评测和 Maze 的完成结果均已录入。Figure 3 采用原始的模块布局，使用低饱和配色和圆角 encoder。
 

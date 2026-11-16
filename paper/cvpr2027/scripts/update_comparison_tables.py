@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import numpy as np
 
-from pushobj_results import REPLANS, SHAPES, TASKS_PER_SHAPE, baseline_rows, paired_rows
+from pushobj_results import REPLANS, SHAPES, TASKS_PER_SHAPE, baseline_rows, paired_rows, followup_rows
 
 ROOT = Path(__file__).resolve().parents[1]
 CONDITIONS = ('clean', 'blur', 'snp', 'dark', 'redAgent', 'redBlock', 'redAnchor')
@@ -76,6 +76,9 @@ def main():
 
     repo, provenance = ROOT.parents[1], ROOT / 'provenance'
     pushobj = {**baseline_rows(repo, provenance), **paired_rows(repo, provenance)}
+    completed = followup_rows(repo)
+    for method in ('ours_frozen', 'ours_adajepa'):
+        pushobj[method, 'GD'] = completed[method, 'GD']
     shape_counts = {}
     for key, row in pushobj.items():
         counts = row['successes_by_shape']
@@ -106,7 +109,7 @@ def main():
                     f' & {cells(values("augmented", b, True), highlight=True)}' + r'\\')
     table = r'''\begin{table*}[t]
 \centering
-\caption{\textbf{World-model control on PushObj and PushT.} Success (\%) at 150 controls. PushObj uses 50 tasks per shape; archived baselines and our study use distinct start--goal lists. Sq. and sT denote square and small-T. PushT shares 50 tasks per condition. Bold marks column maxima, including ties. Avg. covers all seven PushObj shapes or the six PushT shifts. Agent, Object, and Goal denote red-color shifts. Ours combines data augmentation and ECP; dashes mark unavailable results. See \cref{sec:pushobj-comparison,sec:pusht-extension}.}
+\caption{\textbf{World-model control on PushObj and PushT.} Success (\%) at 150 controls. PushObj uses 50 tasks per shape and different task lists across model families. Sq. and sT denote square and small-T. Avg. covers seven shapes or six visual shifts. Agent, Object, and Goal denote red-color shifts. Bold marks column maxima. Ours uses augmented data, threshold 0.45 on PushObj and 0.15 on PushT. Dashes mark unmeasured results. See \cref{sec:pushobj-comparison,sec:pusht-extension,sec:completed-followups}.}
 \label{tab:main}
 \small
 \setlength{\tabcolsep}{2pt}

@@ -3,7 +3,7 @@
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Data augmentation and planning correction contribute complementary gains.} PushObj success (\%) on the same 350 tasks. Each column fixes the update rule; ECP uses $S{+}P$.}
+\caption{\textbf{Data augmentation and planning correction contribute complementary gains.} PushObj success (\%) on the same 350 tasks. Each column fixes the update rule. ECP uses $S{+}P$ at upper threshold 0.45.}
 \label{tab:data-recipe}
 \small
 \setlength{\tabcolsep}{6pt}
@@ -13,13 +13,13 @@ Training data & Planner & Frozen & AdaJEPA\\
 \midrule
 Official released & Native &43.7&69.4\\
 Data augmentation & Native &61.1&74.9\\
-Data augmentation & ECP &\textbf{72.3}&\textbf{76.9}\\
+Data augmentation & ECP &\textbf{72.3}&\textbf{77.7}\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \paragraph{Data augmentation and correction are complementary.}
-The augmentation recipe improves frozen success by 17.4 points and adaptive success by 5.4 points (\cref{tab:data-recipe}). ECP adds 11.1 and 2.0 points with the same respective checkpoints. These gains support improving both the interaction experience available during training and the action objective used during execution. Retained training trajectories average 60.6 contact steps; the collection procedure and training settings appear in \cref{sec:implementation}.
+The augmentation recipe improves frozen success by 17.4 points and adaptive success by 5.4 points (\cref{tab:data-recipe}). ECP adds 11.1 and 2.9 points with the same respective checkpoints. These gains support improving both the interaction experience available during training and the action objective used during execution. Retained training trajectories average 60.6 contact steps; the collection procedure and training settings appear in \cref{sec:implementation}.
 
 
 
@@ -33,7 +33,7 @@ The augmentation recipe improves frozen success by 17.4 points and adaptive succ
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Component ablation on PushObj.} Success (\%) on the same tasks and 30-replan budget. $S$ denotes memory-based stagnation regularization; $P$ denotes temporary proprioceptive reweighting. Each row fixes the checkpoint and update policy. The best result within each row is bold.}
+\caption{\textbf{Original component ablation on PushObj (upper threshold 0.15).} Success (\%) on the same tasks and 30-replan budget. $S$ denotes memory-based stagnation regularization; $P$ denotes temporary proprioceptive reweighting. Each row fixes the checkpoint and update policy. The best result within each row is bold.}
 \label{tab:components}
 \small
 \setlength{\tabcolsep}{3.2pt}
@@ -50,11 +50,11 @@ Data aug. & AdaJEPA &74.9&76.0&\textbf{77.1}&76.9\\
 \end{table}
 
 \paragraph{Both components improve native planning.}
-Across both checkpoints and update policies, stagnation regularization and temporary goal reweighting each improve native PushObj success (\cref{tab:components}). Reweighting supplies the largest manipulation gains: frozen success rises from 43.7\% to 60.0\% with the official model and from 61.1\% to 72.3\% with the augmented-data model. Combined correction improves the four native baselines by 16.0, 3.7, 11.1, and 2.0 points, respectively. Its result remains within one task of reweighting alone in every setting. The components therefore serve distinct recovery needs: goal-component emphasis dominates the measured PushObj gains, while the Maze controls below isolate the benefit of spatial stagnation memory.
+At the original 0.15 threshold, across both checkpoints and update policies, stagnation regularization and temporary goal reweighting each improve native PushObj success (\cref{tab:components}). Reweighting supplies the largest manipulation gains: frozen success rises from 43.7\% to 60.0\% with the official model and from 61.1\% to 72.3\% with the augmented-data model. Combined correction improves the four native baselines by 16.0, 3.7, 11.1, and 2.0 points, respectively. Its result remains within one task of reweighting alone in every setting. The components therefore serve distinct recovery needs: goal-component emphasis dominates the measured PushObj gains, while the Maze controls below isolate the benefit of spatial stagnation memory.
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Conditional activation preserves effective behavior.} Frozen PushObj planning with the interaction-biased checkpoint. Permanent and triggered weighting use the same $10\times$ multiplier. Rescue/harm counts are paired changes relative to native MPC.}
+\caption{\textbf{Conditional activation at the original 0.15 threshold.} Frozen PushObj planning with the interaction-biased checkpoint. Permanent and triggered weighting use the same $10\times$ multiplier. Rescue/harm counts are paired changes relative to native MPC.}
 \label{tab:timing}
 \small
 \begin{tabular}{lrr}
@@ -117,7 +117,7 @@ Freeze, no $S/P$ &Loss gate&63&2 / 2\\
 \paragraph{Correction complements continued adaptation.}
 Gated memory achieves 66 Maze successes while retaining all 63 native successes (\cref{tab:maze}). Immediate $S{+}P$ correction also solves 66 tasks, with seven recoveries and four regressions; gated $S{+}P$ solves 65 with two recoveries and no regression. Thus the activation schedule changes which tasks benefit even when aggregate rates coincide. A fixed ten-replan delay gives 61 successes. Freezing adaptation gives 55 successes at the first stall and 63 at the loss gate, with both correction components disabled. These controls favor coordinating the planning objective with ongoing model learning. \Cref{sec:extended} reports extended budgets and paired statistics.
 
-Additional training-objective and action-space controls are reported in \cref{sec:training-screen,sec:replication}.
+The completed threshold sweep reaches 77.7\% for AdaJEPA at 0.45, with 11 rescues and one regression relative to native planning (\cref{sec:completed-followups}). Additional training-objective and action-space controls are reported in \cref{sec:training-screen,sec:replication}.
 
 
 

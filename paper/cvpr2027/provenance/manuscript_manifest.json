@@ -5,25 +5,25 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "Tectonic 0.17.0",
-  "base_repository_commit": "d8eccf00d3528a5a75160dae548ca2b542ba34a4",
+  "base_repository_commit": "5ab1d1b7f76760d025b5bbb2b97615a573409604",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/results_audit_v13.json, dinowm_pusht_cem_e3_v14.json and integrity_v14.json",
+  "audit": "provenance/results_audit_v13.json, comparison_v14.json, followup_raw_verification.json and integrity_v14.json",
   "pdf_sha256": {
-    "paper.pdf": "b49c147b470605dea64f4bcbe63f716c0e139cb6f237454e16b4e92d0e50eb35",
-    "paper_v14.pdf": "b49c147b470605dea64f4bcbe63f716c0e139cb6f237454e16b4e92d0e50eb35",
-    "paper_main.pdf": "15eaf6b5dfdb45e988a6dc00ed9ef23f5b7adeff847ee7a8b9ae938567a7d820",
-    "paper_appendix.pdf": "9833614548455f132243e892e998ffefb055e0530ef8d918758d06bd412c0073"
+    "paper.pdf": "45d657793331f32d1d7868bd11a3db100d91a7b0cab61687eae2e9f27cd745b8",
+    "paper_v14.pdf": "45d657793331f32d1d7868bd11a3db100d91a7b0cab61687eae2e9f27cd745b8",
+    "paper_main.pdf": "c3e233e23ba4dca99b5a420b79d967153e3633bf72e669979eae8ab4e11f5fd2",
+    "paper_appendix.pdf": "273f89cce03c218aeb0a067e23203a423d25ba1a69a0c9b1279dcc30784b4ebb"
   },
   "figures": 8,
   "main_body_pages": 8,
-  "combined_pages": 20,
+  "combined_pages": 21,
   "revision": "v14",
-  "abstract_words_whitespace": 183,
+  "abstract_words_whitespace": 166,
   "figure_pages": {
     "fig:headline": 1,
     "fig:teaser": 2,
@@ -34,11 +34,11 @@
     "fig:push-distance": 18,
     "fig:diverse-execution": 19
   },
-  "revision_description": "Highlight main-table column maxima, restyle the original ECP diagram, expand related work and add discussion and future work.",
+  "revision_description": "Remove Ours (LeWM) from Table 1; retain the three-model headline; connect training coverage to DAgger and temporal inference to ACT with verified primary citations and pending extensions distinguished.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-10T07:08:33.222808+00:00",
+  "updated": "2026-11-14T23:19:01.668911+00:00",
   "main_with_references_pages": 10,
-  "appendix_pages": 10,
+  "appendix_pages": 11,
   "table_pages": {
     "tab:main": 6,
     "tab:domains": 6,
@@ -57,7 +57,9 @@
     "tab:b": 15,
     "tab:diagnostics": 17,
     "tab:pusht-ecp": 20,
-    "tab:pending": 20
+    "tab:pending": 20,
+    "tab:threshold-followup": 21,
+    "tab:lewm-contact": 21
   },
   "abstract_sentences": null,
   "primary_evaluation_status": "complete",
@@ -66,5 +68,10 @@
   "figure_trajectory_replay_run": true,
   "primary_episode_runs": 2800,
   "primary_paired_episodes_verified": 1400,
-  "reference_count": 43
+  "reference_count": 45,
+  "new_primary_references": {
+    "ross2011dagger": "https://proceedings.mlr.press/v15/ross11a.html",
+    "zhao2023act": "https://www.roboticsproceedings.org/rss19/p016.html"
+  },
+  "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md"
 }

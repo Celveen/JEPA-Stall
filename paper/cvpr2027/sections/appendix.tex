@@ -61,7 +61,7 @@ $H,\hat z_{t,h}$ & Predicted latent horizon and its $h$-th state & $H=5$\\
 $D_\alpha,\alpha_0$ & Branch-normalized squared goal distance and base proprioceptive weight & \cref{eq:metric}; $\alpha_0=1$\\
 $J_{\rm goal}$ & Native terminal or all-frame goal cost & \cref{eq:baseexact}\\
 $W,r_t,w_t$ & Motion window, normalized displacement, and trigger weight & $W=3$; $w_t\in[0,1]$\\
-$\gamma_{\rm lo},\gamma_{\rm hi}$ & Full-weight and zero-weight motion thresholds & 0.05, 0.15\\
+$\gamma_{\rm lo},\gamma_{\rm hi}$ & Full-weight and zero-weight motion thresholds & 0.15, 0.45 (updated PushObj); 0.05, 0.15 (original)\\
 $\epsilon$ & Numerical floor for squared distances and loss ratios & $10^{-12}$\\
 $\mathcal M_t,m_j,w_j$ & Episode memory, current encoding of entry $j$, and its saved trigger weight & Reset each episode\\
 $s_j,\rho_j,K_j$ & Memory amplitude, squared support radius, and local kernel & \cref{eq:memoryscale,eq:kernel}\\
@@ -205,7 +205,7 @@ The directional action-space variant uses a physical-displacement trigger, a bou
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Counts underlying the staged main comparison.} Successful PushObj tasks out of 350 at 30 replans.}
+\caption{\textbf{Counts underlying the staged main comparison.} Successful PushObj tasks out of 350 at 30 replans. Released ECP uses threshold 0.15 and augmented ECP uses 0.45.}
 \label{tab:main-counts}
 \small
 \begin{tabular}{lrr}
@@ -215,7 +215,7 @@ Checkpoint / planner & Frozen & AdaJEPA\\
 Official / native &153&243\\
 Official / ECP ($S{+}P$)&209&256\\
 Interaction-biased / native&214&262\\
-Interaction-biased / ECP ($S{+}P$)&253&269\\
+Interaction-biased / ECP ($S{+}P$, 0.45)&253&272\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -263,7 +263,7 @@ Biased / adaptive &92&255&3\\
 \bottomrule
 \end{tabular}
 \end{table}
-The main PushObj logs originally allow 40 replans; all main-table results truncate those traces at 30. Episode selection reruns any task that triggers in the full original trace, so some rerun tasks have not yet activated by 30. Every unselected trajectory is reused, whether successful or unsuccessful. Permanent-weight controls change the first plan and therefore rerun all 350 tasks.
+The original PushObj component-ablation logs allow 40 replans and are truncated at 30. The updated 0.45-threshold main-table runs directly cap planning at 30. Episode selection reruns any task that triggers in the full original trace, so some rerun tasks have not yet activated by 30. Every unselected trajectory is reused, whether successful or unsuccessful. Permanent-weight controls change the first plan and therefore rerun all 350 tasks.
 
 Maze reruns 51 tasks that trigger in the 50-replan baseline and reuses the other 49, of which 45 are successful by 30 replans. Episode RNG, model reset, and original within-shard indices are preserved. Actions and states are checked to match before activation. The selected image pairs match through 15 replans in PushObj and six in Maze. B0--B3 each rerun all 350 tasks with their own trained model.
 
@@ -364,9 +364,9 @@ The released checkpoint achieves 48 successes on the same 100 medium tasks at 30
 
 \section{PushObj method comparison}
 \label{sec:pushobj-comparison}
-The PushObj columns in \cref{tab:main} report 50 tasks per shape. DINO-WM, LeWM, and DDP-WM use a common archived task list (sampling seed 2000). The released-model and ECP rows use a second common list (seed 100). The lists cover the same seven shapes with different initial and goal states. Shape scores are descriptive across lists; matched intervention gains use the seed-100 tasks. Avg. is the mean across all seven shapes.
+The PushObj columns in \cref{tab:main} report 50 tasks per shape. DINO-WM, LeWM, and DDP-WM use a common archived task list (sampling seed 2000). The released-model and in-house ECP rows use a second common list (seed 100). The lists cover the same seven shapes with different initial and goal states. Shape scores are descriptive across lists. Paired gains use each model's matched native control. Avg. is the mean across all seven shapes.
 
-On the archived list, both GD and CEM execute five controls per replan, allow 30 replans, use a 25-control horizon, and follow the terminal-to-all-frame objective schedule. GD uses 100 optimization iterations; CEM uses 200 candidates, 30 elites, and ten iterations. DINO-WM uses the archived three-epoch checkpoint and LeWM its ten-epoch checkpoint. Per-shape success rates are recomputed from the stored task outcomes. The ordinary-data and augmented-data DINO-WM models in the controlled study use the seed-100 list with 200 CEM candidates, ten iterations, and up to six plans executing 25 controls each. The main table uses the completed archived baselines.
+On the archived list, both GD and CEM execute five controls per replan, allow 30 replans, use a 25-control horizon, and follow the terminal-to-all-frame objective schedule. GD uses 100 optimization iterations; CEM uses 200 candidates, 30 elites, and ten iterations. DINO-WM uses the archived three-epoch checkpoint and LeWM its ten-epoch checkpoint. Per-shape success rates are recomputed from the stored task outcomes. The ordinary-data and augmented-data DINO-WM models in the controlled study use the seed-100 list with 200 CEM candidates, ten iterations, and up to six plans executing 25 controls each. The main table uses the completed archived baselines and updated 0.45-threshold in-house results. The LeWM contact-objective extension appears in \cref{fig:headline,tab:lewm-contact}. Updated threshold counts and LeWM deployment details appear in \cref{sec:completed-followups}.
 
 \section{PushT and visual-shift evaluation}
 \label{sec:pusht-extension}
@@ -409,3 +409,68 @@ The planned collection factorial will separate directional bias and action noise
 
 \section{Artifact provenance}
 The accompanying source package includes a machine-readable evidence manifest, figure-state provenance with SHA256 hashes, the figure scripts and rendered assets, and the official CVPR 2027 style files. Main numerical results are traced to per-episode records or preserved aggregate reports. The B-study archive contains the full training/evaluation logs and common-candidate records; large checkpoints remain separately stored with hashes.
+
+\section{Completed threshold and backbone follow-ups}
+\label{sec:completed-followups}
+These completed follow-ups use matched native controls and fixed checkpoints. Hyperparameters were explored on inspected task lists. Best settings describe development performance and await independent holdout and training-seed confirmation.
+
+\subsection{Updated PushObj threshold results}
+\begin{table}[h]
+\centering
+\caption{\textbf{Completed threshold sweep.} Exact successes on 350 in-house PushObj tasks. Lower thresholds equal one third of the displayed upper thresholds. Each run uses 30 replans, five controls per plan, and GD with 100 iterations.}
+\label{tab:threshold-followup}
+\small
+\begin{tabular}{llrr}
+\toprule
+Updates & Setting & Success / 350 & Rate (\%)\\
+\midrule
+Frozen & Native &214&61.1\\
+Frozen & ECP 0.45 &253&72.3\\
+AdaJEPA & Native &262&74.9\\
+AdaJEPA & ECP 0.15 &269&76.9\\
+AdaJEPA & ECP 0.30 &271&77.4\\
+AdaJEPA & ECP 0.45 &\textbf{272}&\textbf{77.7}\\
+AdaJEPA & ECP 0.60 &271&77.4\\
+\bottomrule
+\end{tabular}
+\end{table}
+AdaJEPA at 0.45 rescues 11 native failures and regresses one native success, for a 10-task gain (+2.9 percentage points). Relative to the released-model native baseline of 243/350, augmentation and correction add 29 tasks (+8.3 points). Successes by shape (I, L, square, Z, small-T, plus, T) are 27, 46, 25, 49, 36, 44, 45. The 0.60 setting rescues three and loses four tasks relative to 0.45. Its one-task difference and the one-task difference between 0.30 and 0.45 are exploratory.
+
+Frozen ECP at 0.45 rescues 39 tasks without regressions. Shape counts are 23, 42, 23, 46, 31, 44, 44. The original 0.15 run also solves 253 tasks at the 30-replan cutoff, exchanging two outcomes with the updated run. Main comparisons use directly capped 0.45 results. Component, memory, timing, PushT, and Maze studies retain their recorded settings.
+
+\subsection{Frozen LeWM with a contact objective}
+The LeWM follow-up uses the augmented-data epoch-10 checkpoint, 350 H7t3 tasks (50 per shape, sampling seed 2000), and a frozen model. GD performs 100 iterations over a 25-control horizon, executes five controls per replan, and allows 30 replans. The trigger interval is 0.15/0.45 after a 50-control warm-up. Guidance persists for four replans per burst, with at most seven guided replans per task.
+
+The contact extension uses observed simulator object pose and known shape geometry to select an approach waypoint, a pushing target, or the final pusher goal. These geometric inputs are shared across the matched contact-guidance controls. The added objective is
+\[
+ J_{\rm contact}(A)=10\operatorname{mean}_{k=1,\ldots,5;\,d=x,y}
+ \left(\frac{\hat p_{k,d}(A)-q_d}{\sigma_{p,d}}\right)^2,
+\]
+where $q$ is the selected waypoint and $\hat p_k(A)$ is the pusher position predicted by differentiable PD dynamics from its observed position and velocity. The normalization uses dataset pusher-position standard deviations. This term acts jointly with the visual goal, stagnation regularizer, and conditional pusher-goal term during action optimization. The optimizer output is executed directly. This LeWM implementation uses an analytic pusher-position cost alongside its visual model. The headline figure and \cref{tab:lewm-contact} identify this geometry-assisted extension.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Completed LeWM controls.} The same frozen checkpoint and 350 matched tasks are used throughout.}
+\label{tab:lewm-contact}
+\small
+\begin{tabular}{lrr}
+\toprule
+Planner & Success / 350 & Rate (\%)\\
+\midrule
+Native &215&61.4\\
+Stagnation regularizer &216&61.7\\
+Regularizer + pusher weighting &217&62.0\\
+Intermittent contact offset &215&61.4\\
+Four-replan offset, cap 15 px &218&62.3\\
+Four-replan offset, 3--20 px &217&62.0\\
+Contact objective, weight 10 &\textbf{231}&\textbf{66.0}\\
+Contact objective, weight 20 &227&64.9\\
+\bottomrule
+\end{tabular}
+\end{table}
+Weight 10 rescues 18 native failures and regresses two successes (+4.6 points). Shape counts are 10, 41, 21, 38, 42, 37, 42. Relative to the 3--20-pixel offset, it rescues 17 and regresses three. Among 134 triggered native failures, contact within 15 controls rises from 46 to 82 tasks, and object-position error decreases by over five pixels in 34 tasks versus 11. Weight 20 rescues six and loses ten relative to weight 10. All 350 physics replays reproduce weight-10 outcomes, with matched inputs and pre-trigger actions. Stored gradient and PD checks validate the implementation. This extension has no completed PushT evaluation.
+
+\subsection{Completed DINO-WM and Rope transfer controls}
+Frozen DINO-WM CEM improves from 86/350 (24.6\%) with ordinary-action data to 171/350 (48.9\%) with augmentation at epoch three and six plans of 25 controls. ECP at 0.15 triggers two and one tasks, respectively, with unchanged outcomes. At 0.30, augmented-model ECP triggers 28 tasks and still solves 171/350. At 30 plans of five controls, matched native and ECP runs both solve 72/350 (20.6\%), with one rescue and one regression. These controls show the training-recipe gain and sensitivity to cadence.
+
+The frozen Rope pilot uses 50 fixed targets, CEM, and memory regularization alone over 15 pushes. Native and corrected planning both have mean final particle Chamfer distance 1.83849134. Ten tasks trigger, while all executed action sequences remain identical. The paired execution cache preserves native physics and random streams until an action changes. This pilot records a zero-gain transfer result. Sustained recovery intent inspired by ACT and recovery-data aggregation inspired by DAgger are proposed extensions whose experiments remain pending.

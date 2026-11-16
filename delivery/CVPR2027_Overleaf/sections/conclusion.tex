@@ -1,5 +1,5 @@
 \section{Conclusion}
-ECP turns realized stagnation into a local cost on candidate rollouts and a temporary change in goal weighting. These corrections improve completion with frozen and adaptive dynamics and complement contact-rich training data. Matched executions and ablations illustrate two ways to recover: leaving a stalled region and completing the remaining goal component.
+Interaction-rich training data and execution-conditioned planning address complementary parts of closed-loop control. ECP uses observed stagnation to sustain correction with frozen or adaptive world models. Development results reach 77.7\% with AdaJEPA and 66.0\% with geometry-assisted contact optimization on frozen LeWM.
 
 \paragraph{Future work.}
-A trigger combining motion over several windows with model disagreement could distinguish stalls from useful low-displacement maneuvers. Factorial data ablations could vary contact bias and action noise under fixed data and training budgets. Evaluation on a shared holdout across independent training seeds would support uncertainty intervals for paired rescues and regressions~\cite{henderson2018matters,agarwal2021statistical}.
+DAgger-inspired recovery-data aggregation and ACT-inspired persistent recovery intent remain prospective extensions. Independent training tasks, source-disjoint holdouts, collection factorials, and multiple training seeds would clarify their effects and uncertainty in paired gains~\cite{henderson2018matters,agarwal2021statistical}.
