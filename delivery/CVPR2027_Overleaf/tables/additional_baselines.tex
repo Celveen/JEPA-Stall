@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{\textbf{Additional representation controls on PushT.} Success (\%) $\uparrow$ on the same 50 targets per shift, using CEM and a 150-control budget. All model weights are fixed at test time. Averages cover all six shifts.}
+\label{tab:extra-baselines}
+\small\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Method & Blur & S\&P & Dark & Agent & Object & Goal & Avg.\\
+\midrule
+R3M~\cite{nair2022r3m} &30&16&2&32&32&18&21.7\\
+DINO CLS~\cite{oquab2024dinov2} &30&16&56&42&22&42&34.7\\
+DDP-WM~\cite{yin2026ddpwm} &56&22&66&62&42&68&52.7\\
+\bottomrule
+\end{tabular}
+\end{table}

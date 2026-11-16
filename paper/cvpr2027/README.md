@@ -2,7 +2,7 @@
 
 LeWM 的 PushT clean CEM 已补齐为 **72%（36/50）**，方法标签保持 LeWM；配置、权重来源及原始结果见 [完整记录](../../reports/lewm_pusht_clean_20261116/README.md)。
 
-当前稿以用户提供的 CVPR2027 revised_v2 / Overleaf_v2 为准，采用 inspired-by 措辞，并在 Figures 3/4 加入 PushT 视觉偏移和真实 Rope 仿真画面。正文 8 页，声明与 45 条参考文献 2 页，附录 10 页；摘要 205 词。训练端噪声注入的启发改为 DART [23]；DAgger [31] 保留作相关工作，ACT [44] 为时间组织启发，LLM Usage Statement 保留导师版本。表格保留远端新增的 LeWM clean CEM 72% 结果；Figure 1 补入新发布的 LeWM 随机数据基线，未在本次编辑中运行新实验。详见 [本次修订](REVISION_LEWM_LEGEND.md)。
+当前稿采用 Execution-Conditioned Planning（ECP）命名与 inspired-by 措辞，保留 DART、DAgger、ACT 引用和导师版 LLM Usage Statement。本次补清 Frozen 等方法名称，拆分 Maze/Rope 主表，精简实验设置及交叉引用。正文 8 页，声明与 47 条参考文献 2 页，附录 11 页；摘要 217 词。实验数据和图像资产未变，未运行新实验。详见 [本次修订](REVISION_CLARITY.md)。
 
 [完整论文](paper.pdf) · [主文](paper_main.pdf) · [附录](paper_appendix.pdf) · [完整源码](paper_source_v14.zip) · [摘要](Abstract.txt) · [可编辑 Figure 3](Figure3.drawio)
 
@@ -22,8 +22,16 @@ python scripts/build_method_figure.py
 
 原始输入保存在 `figures/source/fig2_method_v2_input.pdf` 和 `Figure3_v2_input.drawio`。当前输出为 `figures/fig2_method.pdf`、`figures/svg/fig2_method.svg`、`Figure3.drawio` 和 `delivery/Figure3.drawio`。`provenance/method_figure.json` 记录校验和。
 
-实验表采用用户 v2 快照；旧 `update_comparison_tables.py` 用于此前结果重算，不属于本次排版重建流程，以免覆盖 v2 图注及表格组织。历史审计和修订说明保留供追溯；当前构建信息以 `provenance/build_report.json` 和 `provenance/lewm_legend_revision.json` 为准。
+实验表以用户 v2 稿为基础，已合并远端 LeWM clean 和 Rope 正式运行结果；旧 `update_comparison_tables.py` 用于此前结果重算，不属于本次排版重建流程，以免覆盖 v2 图注及表格组织。历史审计和修订说明保留供追溯；当前构建信息以 `provenance/build_report.json` 和 `provenance/clarity_revision.json` 为准。
 
-Figure 4 可用 `python scripts/build_domain_figure4.py --paper .` 重建；素材与两类图像来源的详细区别见本次修订说明。数据表格保持不变。
+Figure 4 可用 `python scripts/build_domain_figure4.py --paper .` 重建；素材与两类图像来源的详细区别见本次修订说明。图像资产未改；Rope 主结果与已有固定强度可视化的区别见本次修订说明。
 
 Figure 4 当前为八组完整场景：PushObj · ResNet、PushT · LeWM、Maze · AdaJEPA、Rope · DINO-WM；顶部图例标注 Without ECP / With ECP，灰色边界线已去除。Rope 使用目标 15/24 的新配对截图。Figure 1 顺序为 Frozen、LeWM、AdaJEPA；LeWM 三柱为 47.4%、61.4%、66.0%；可用 `python scripts/build_headline.py --data provenance/headline_data_latest.json` 重建。
+
+## 论文写作约定
+
+- 方法或配置名称首次出现时先解释含义。Frozen 需说明是离线预训练的 ResNet 世界模型、测试时不更新；使用冻结的 LeWM 或 DINO-WM 时明确其模型名称。独立图表注也要能单独读懂，避免把“冻结”误当作骨干网络。
+- 实验设置只交代如何开展实验：模型、训练、任务、预算、指标和成功标准，不引用结果表格，不在 Settings 中展示或分析实验结果。
+- 仅在帮助读者定位证据时引用图表或附录；相邻文字已引用的，不重复引用。修改后核对目标标签及完整 PDF 的链接，不能为了精简而留下无出处的关键结果。
+- 正文 Rope 方法写 DINO-WM (ours)，说明预测并执行三次推动、每推一次观测、五次推动预热；不使用内部的 3/3 简称，成功标准为 CD<0.3。
+- 保留数据和图像的实际实验来源；固定强度可视化不能改标为动态 S 主方法。重建时保持主文 8 页，并检查整份 PDF 的排版。

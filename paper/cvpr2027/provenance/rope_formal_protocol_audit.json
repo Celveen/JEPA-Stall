@@ -1,0 +1,32 @@
+{
+  "samples": 20,
+  "global_targets": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "reference_commit": "9b01e93ef0644e67bbb280efd7c69d528c830ad3",
+  "worker_before_sha256": "31162a4856e5a8debf9e36c489ba5010a142ffc7040e17ccaae10d07aee903c3",
+  "worker_native3_sha256": "fc4d8c3ebc7964d1b4e51e476a6079018514e40a03546ac215868340a0ff5758",
+  "only_worker_change": "Add native3 to CLI choices; existing native prefix and chunk selection logic unchanged",
+  "planner_core_sources_unchanged": true,
+  "planner_configuration_vs_dynamic3": "identical except kappa=0 instead of 2",
+  "physical_execution": "independent; no cached Native trajectory reuse"
+}

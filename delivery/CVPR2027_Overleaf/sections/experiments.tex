@@ -5,20 +5,32 @@ We test whether execution feedback improves task completion, how data augmentati
 
 \subsection{Experimental setup}
 \paragraph{Tasks and metrics.}
-PushObj comprises 350 image-goal tasks across seven object shapes; I, small-T, and square are unseen during training. Maze comprises 100 navigation tasks across five held-out layouts. PushT evaluates 50 matched start--goal tasks under clean observations and six visual shifts: blur, salt-and-pepper noise, darker lighting, and changes to the agent, object, or goal color. Manipulation success requires a joint pusher/object position error below 20 pixels and an object-angle error below $\pi/9$; Maze uses a 0.5-unit position threshold.
+PushObj comprises 350 image-goal tasks across seven object shapes; I, small-T, and square are unseen during training. Maze comprises 100 navigation tasks across five held-out layouts. PushT evaluates 50 matched start--goal tasks under clean observations and six visual shifts: blur, salt-and-pepper noise, darker lighting, and changes to the agent, object, or goal color. PushObj and PushT success requires a joint pusher/object position error below 20 pixels and an object-angle error below $\pi/9$; Maze uses a 0.5-unit position threshold. Rope evaluates 20 deformable-object targets, reporting final Chamfer distance (CD) and success at CD below 0.3, with at most 20 pushes.
 
-\paragraph{Methods and planning budget.}
-We compare with DINO-WM~\cite{zhou2025dinowm}, LeWM~\cite{maes2026lewm}, DDP-WM~\cite{yin2026ddpwm}, and the released world model with frozen parameters or AdaJEPA updates~\cite{wang2026adajepa}. All methods receive the same 150-control execution budget and use their own gradient-descent (GD) or cross-entropy (CEM) planner. Our evaluations allow 30 MPC replans, each executing five controls from a 25-control horizon; Maze uses action repeat four. Every ECP-on/off comparison is paired: both runs share the checkpoint, tasks, and action initialization, so each difference is attributable to the correction. ECP denotes $S{+}P$ for manipulation and $S$ for Maze. Planner schedules, checkpoint provenance, and task construction are specified in \cref{sec:implementation,sec:pusht-extension}.
+\paragraph{Controllers and training.}
+We compare with DINO-WM~\cite{zhou2025dinowm} and LeWM~\cite{maes2026lewm}. Our primary world model uses a ResNet visual encoder pretrained offline with a latent dynamics predictor. \emph{Frozen} keeps all world-model parameters fixed during execution; \emph{AdaJEPA} updates them from executed transitions~\cite{wang2026adajepa}. \emph{Released} denotes the published checkpoint; \emph{Data aug.} denotes offline training on our interaction-biased data. \emph{Native} uses the original planner without ECP. Ours combines augmented training with ECP on PushObj and PushT, and adds ECP to the released models on Maze and Rope. ECP uses $S{+}P$ on PushObj and PushT and memory-only $S$ on Maze and Rope.
+
+\paragraph{Planning and evaluation.}
+PushObj and PushT controllers receive 150 control calls and retain their gradient-descent (GD) or cross-entropy (CEM) planner. The ResNet controllers allow 30 replans, each executing five controls from a 25-control horizon; Maze repeats each control four times. Rope keeps DINO-WM fixed, predicts and executes three pushes before replanning, and observes after every push. Dynamic $S$ weights each stored memory by $2w_t$ and starts after five warm-up pushes. Each ECP-on/off comparison shares the checkpoint, tasks, initialization, and execution budget, with ECP as the intended configuration difference.
 
 \subsection{Comparison with recent world models}
-\Cref{tab:main} compares our approach with recent world-model controllers. Our AdaJEPA variant attains the best result in 13 of 16 columns, including both averages: 77.7\% on PushObj and 63.7\% across the six PushT visual shifts, exceeding the strongest baseline by 8.3 and 7.4 points, respectively. Our frozen variant reaches 72.3\% on PushObj and thereby surpasses released AdaJEPA (69.4\%) without any test-time gradient update. On PushT, frozen ECP raises clean success from 72\% to 82\% and the shift mean from 46.0\% to 55.7\%, and ECP never lowers success in any of the 28 checkpoint--condition pairs (\cref{tab:pusht-ecp}).
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig5_execution_recovery.pdf}
+\caption{\textbf{Execution examples across four settings.} Brown and teal denote planning without and with ECP. Full-scene pairs show PushObj with ResNet (a--b), PushT with LeWM under red-agent/red-goal shifts (c--d), Maze with AdaJEPA (e--f), and Rope with DINO-WM (g--h). In Rope, Frozen CD and Ours CD denote native and fixed-strength ECP planning; both keep DINO-WM parameters fixed. Labels report terminating replans or Chamfer distance (CD; lower is better).}
+\label{fig:execution-recovery}
+\end{figure*}
+\Cref{tab:main} compares our approach with recent world-model controllers. Our AdaJEPA variant attains the best result in 13 of 16 columns, including both averages: 77.7\% on PushObj and 63.7\% across the six PushT visual shifts, exceeding the strongest baseline by 8.3 and 7.4 points, respectively. Our fixed-parameter ResNet variant reaches 72.3\% on PushObj and thereby surpasses released AdaJEPA (69.4\%) without an online model update. On the augmented-data PushT checkpoint held fixed at test time, ECP raises clean success from 72\% to 82\% and the shift mean from 46.0\% to 55.7\%, and ECP never lowers success in any of the 28 checkpoint--condition pairs (\cref{tab:pusht-ecp}).
 
 \paragraph{Transfer to LeWM.}
-Execution-conditioned correction also extends to a different backbone. On a frozen augmented LeWM, ECP solves 231 of 350 tasks (66.0\%) versus 215 (61.4\%) for native planning (\cref{sec:backbone}).
+Execution-conditioned correction also extends to a different backbone. On an offline-trained, augmented-data LeWM with no online updates, ECP solves 231 of 350 tasks (66.0\%) versus 215 (61.4\%) for native planning (\cref{fig:headline}).
 
-\subsection{Manipulation and navigation}
-\paragraph{ECP improves every configuration.}
-ECP raises PushObj success for both checkpoints and both update rules (\cref{tab:components,tab:threshold}). With the released checkpoint, where no training is involved, ECP alone raises frozen success from 43.7\% to 59.7\% and adaptive success from 69.4\% to 73.1\%. With the augmented checkpoint, it raises frozen success from 61.1\% to 72.3\% and adaptive success from 74.9\% to 77.7\%. Together, augmentation and ECP gain 28.6 and 8.3 points over the released native baselines (\cref{fig:headline}).
+\subsection{Manipulation, navigation, and deformation}
+\paragraph{ECP improves both checkpoints and update rules.}
+ECP improves PushObj with either released or augmented-data ResNet weights, held fixed or updated by AdaJEPA (\cref{tab:components,tab:threshold}). With released weights and no additional offline training, ECP gains 16.0 points without online updates and 3.7 with AdaJEPA. Augmentation and ECP together gain 28.6 and 8.3 points over the respective released baselines.
 
 \paragraph{Recovering navigation with stagnation memory.}
-On Maze, movement-triggered memory raises frozen success from 48\% to 50\%, and gated memory raises AdaJEPA success from 63\% to 66\% (\cref{tab:maze}). Neither changes a single native success into a failure. Both use the released checkpoint without new navigation training, so the regularizer transfers directly from manipulation to navigation.
+On Maze, movement-triggered memory raises fixed-parameter ResNet success from 48\% to 50\%, and gated memory raises AdaJEPA success from 63\% to 66\% (\cref{tab:maze}). Neither changes a single native success into a failure. Both use the released checkpoint without new navigation training, so the regularizer transfers directly from manipulation to navigation.
+
+\paragraph{Deformable-object planning.}
+With the same three-push prediction and execution horizon, DINO-WM (ours) lowers mean final CD from 0.755 to 0.515 (31.7\%) and raises success from 50\% to 60\% over native DINO-WM (\cref{tab:rope}). Five-push horizons, fixed strength, and removal of the warm-up are ablated in \cref{sec:rope-details}.

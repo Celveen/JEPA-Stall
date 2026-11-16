@@ -4,7 +4,7 @@ Our approach couples interaction-biased training with inference-time correction 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig2_method.pdf}
-\caption{\textbf{ECP connects execution feedback to planning.} Offline actions combine contact bias with Gaussian noise before collection. Step 3 illustrates PushObj, Maze, shifted PushT, and Rope execution. Step 4 detects small net movement relative to goal distance. Step 5 retains stagnation memory ($S$) and boosts goal weighting ($P$) for three calls, renewed by new triggers. The timeline highlights sustained correction inspired by ACT. The model may remain frozen or adapt online.}
+\caption{\textbf{ECP connects execution feedback to planning.} Offline actions combine contact bias with Gaussian noise before collection. Step 3 illustrates PushObj, Maze, shifted PushT, and Rope execution. Step 4 detects small net movement relative to goal distance. Step 5 retains stagnation memory ($S$) and boosts goal weighting ($P$) for three calls, renewed by new triggers. The timeline highlights sustained correction inspired by ACT. Model parameters may remain fixed or adapt online.}
 \label{fig:method}
 \end{figure*}
 
@@ -18,30 +18,30 @@ The planning distance balances the two observation branches:
  +\alpha\frac{\norm{z^p-z'^p}^2}{d_p},
  \label{eq:metric}
 \end{equation}
-where $\norm{\cdot}$ is the Euclidean norm and $\alpha\geq0$ weights proprioception. The native goal objective $J_{\rm goal}(A;\alpha)$ aggregates this distance along the rollout with the planner's native terminal/all-frame schedule (\cref{sec:implementation}). ECP solves
+where $\norm{\cdot}$ is the Euclidean norm and $\alpha\geq0$ weights proprioception. The native goal objective $J_{\rm goal}(A;\alpha)$ aggregates this distance along the rollout using the original planner's terminal-frame or weighted all-frame schedule. We call this unmodified objective native planning. ECP solves
 \begin{equation}
  A_t^*=\argmin_A\left\{
  J_{\rm goal}(A;\alpha_t)
  +\kappa g_t\mathcal R_t^{\rm stall}(A)\right\}.
  \label{eq:objective}
 \end{equation}
-Here $\mathcal R_t^{\rm stall}$ is our stagnation regularizer, $\kappa$ its strength, $g_t\in\{0,1\}$ an activation gate, and $\alpha_t$ a temporary goal weight. Before any stall is detected, \cref{eq:objective} reduces exactly to native planning. ECP thus modifies only the action objective and leaves the predictive architecture untouched, so the model may remain frozen or receive AdaJEPA updates.
+Here $\mathcal R_t^{\rm stall}$ is our stagnation regularizer, $\kappa$ its strength, $g_t\in\{0,1\}$ an activation gate, and $\alpha_t$ a temporary goal weight. Before any stall is detected, \cref{eq:objective} reduces exactly to native planning. ECP thus modifies only the action objective and leaves the predictive architecture untouched, allowing either fixed parameters or AdaJEPA online updates.
 
 \subsection{Detecting stagnation from execution}
 \label{sec:trigger}
-The trigger compares net movement with the distance still remaining to the goal. Over a window of $W$ completed replans, the normalized movement rate is
+The trigger compares net movement with the distance still remaining to the goal. Over a window of $W$ observation-feedback steps, the normalized movement rate is
 \begin{equation}
  r_t=\sqrt{\frac{D_{\alpha_0}(z_t,z_{t-W})}
  {\max\{D_{\alpha_0}(z_t,z_g),\epsilon\}}}.
  \label{eq:rate}
 \end{equation}
-Here $z_{t-W}$ is the latent state from $W$ replans earlier, $\alpha_0=1$ is the base proprioceptive weight, and $\epsilon=10^{-12}$ prevents division by zero. A small $r_t$ indicates little net progress even when the intervening actions are large. Normalizing by the remaining distance makes the rate dimensionless and independent of the latent scale. We convert $r_t$ into a continuous stall weight:
+A feedback step is one completed replan on PushObj, PushT, and Maze, or one push on Rope. Here $z_{t-W}$ is the state $W$ feedback steps earlier, $\alpha_0=1$ is the base proprioceptive weight, and $\epsilon=10^{-12}$ prevents division by zero. A small $r_t$ indicates little net progress even when the intervening actions are large. Normalizing by the remaining distance makes the rate dimensionless and independent of the latent scale. We convert $r_t$ into a continuous stall weight:
 \begin{equation}
  w_t=\operatorname{clip}_{[0,1]}\!\left(
  \frac{\gamma_{\rm hi}-r_t}{\gamma_{\rm hi}-\gamma_{\rm lo}}\right),
  \label{eq:weight}
 \end{equation}
-where $\operatorname{clip}_{[0,1]}$ clamps its argument to $[0,1]$. Motion below $\gamma_{\rm lo}$ receives full weight, and motion above $\gamma_{\rm hi}$ receives zero. We use $W=3$ and tie $\gamma_{\rm lo}=\gamma_{\rm hi}/3$ throughout. The main PushObj results use $\gamma_{\rm hi}=0.45$; PushT, Maze, and the PushObj component studies use $\gamma_{\rm hi}=0.15$. \Cref{tab:threshold} ablates this choice. A positive $w_t$ stores $(o_t,w_t)$ in the episode memory $\mathcal M_t$. Current, historical, and goal observations are all encoded by the current encoder, so the trigger stays consistent during online adaptation. Detection begins after a short task-specific warm-up (\cref{sec:parameters}).
+where $\operatorname{clip}_{[0,1]}$ clamps its argument to $[0,1]$. Motion below $\gamma_{\rm lo}$ receives full weight, and motion above $\gamma_{\rm hi}$ receives zero. We use $W=3$ and tie $\gamma_{\rm lo}=\gamma_{\rm hi}/3$ throughout. The main PushObj results use $\gamma_{\rm hi}=0.45$; PushT, Maze, Rope, and the PushObj component studies use $\gamma_{\rm hi}=0.15$. A positive $w_t$ stores $(o_t,w_t)$ in the episode memory $\mathcal M_t$. Current, historical, and goal observations are all encoded by the current encoder, so the trigger stays consistent during online adaptation. Detection begins after a task-specific warm-up.
 
 \subsection{A trajectory-level stagnation regularizer}
 \label{sec:memory}
@@ -63,13 +63,13 @@ where $[u]_+=\max(u,0)$, so a memory affects only predictions within its support
  \sum_{j\in\mathcal M_t}w_js_jK_j(\hat z_{t,h}(A)).
  \label{eq:penalty}
 \end{equation}
-We use $\beta=0.25$ and $\kappa=2$; the $1/(H+1)$ scale matches the native all-frame objective. The initial context is excluded because candidate actions cannot change it. Memory persists throughout the episode, so every stalled neighborhood continues to shape all subsequent plans.
+We use $\beta=0.25$ and $\kappa=2$; the $1/(H+1)$ scale matches the ResNet all-frame objective. For the terminal-cost Rope planner, we omit this factor. The initial context is excluded because candidate actions cannot change it. Memory persists throughout the episode, so every stalled neighborhood continues to shape all subsequent plans.
 
 This construction has two properties that make it well suited to augmenting a goal objective. First, it never penalizes the goal: the support radius is half the memory-to-goal distance in the norm induced by $D_{\alpha_0}$, so, above the numerical floor $\epsilon$, the goal lies outside every kernel's support. Second, it is smooth and local: the penalty and its first derivative vanish at the support boundary and beyond, so trajectories away from stalled neighborhoods are unaffected. \Cref{sec:properties} derives these properties and the dependence of the action gradient on the learned dynamics.
 
 \subsection{Temporary goal reweighting}
 \label{sec:weighting}
-Memory specifies where not to return; goal reweighting specifies what to finish. When a positive trigger occurs with the correction gate open, we set $\alpha_t=b\alpha_0$, with multiplier $b=10$, for the next three planning calls. A later trigger renews this interval; otherwise the weight returns to $\alpha_0$. In PushObj, success requires both object placement and pusher positioning, and the boost completes the agent-position component once the object is nearly aligned. Because the boost is conditional and temporary, the native objective governs all planning that is not stalled; \cref{sec:analysis} shows that this conditioning is essential.
+Memory specifies where not to return; goal reweighting specifies what to finish. When a positive trigger occurs with the correction gate open, we set $\alpha_t=b\alpha_0$, with multiplier $b=10$, for the next three planning calls. A later trigger renews this interval; otherwise the weight returns to $\alpha_0$. In PushObj, success requires both object placement and pusher positioning, and the boost completes the agent-position component once the object is nearly aligned. Because the boost is conditional and temporary, the native objective governs planning until a stall calls for correction.
 
 \subsection{Scheduling correction during adaptation}
 \label{sec:gate}
@@ -84,4 +84,4 @@ Starting from $g_t=0$, the gate opens once $w_t>0$ and $q_t<\tau_g$, with relati
 
 \subsection{Interaction-biased data augmentation}
 \label{sec:data}
-Data augmentation enriches the interactions available before deployment. Following AdaJEPA's contact-biased collection~\cite{wang2026adajepa}, we add an object-directed offset $b_c\operatorname{unit}(c_i-p_i)$ and Gaussian noise $\sigma_c\eta_i$ to the source action at control step $i$. Here $c_i,p_i\in\R^2$ are the object center and pusher position, $\eta_i\sim\mathcal N(0,I_2)$ is standard Gaussian noise, and $\operatorname{unit}(v)$ returns $v/\norm{v}$ when $\norm{v}>10^{-6}$ and zero otherwise. We use bias magnitude $b_c=9$ pixels and per-axis noise standard deviation $\sigma_c=10$ pixels. The resulting actions are executed in the simulator and stored with the observations they produce, and every retained trajectory contains contact. We keep the latent-prediction and trajectory-straightening training objective unchanged~\cite{wang2026straightening}; the full recipe, the exact objective, and the 16,000/4,000 training/validation episodes appear in \cref{sec:implementation}.
+Data augmentation enriches the interactions available before deployment. Following AdaJEPA's contact-biased collection~\cite{wang2026adajepa}, we add an object-directed offset $b_c\operatorname{unit}(c_i-p_i)$ and Gaussian noise $\sigma_c\eta_i$ to the source action at control step $i$. Here $c_i,p_i\in\R^2$ are the object center and pusher position, $\eta_i\sim\mathcal N(0,I_2)$ is standard Gaussian noise, and $\operatorname{unit}(v)$ returns $v/\norm{v}$ when $\norm{v}>10^{-6}$ and zero otherwise. We use bias magnitude $b_c=9$ pixels and per-axis noise standard deviation $\sigma_c=10$ pixels. The resulting actions are executed in the simulator and stored with the observations they produce, and every retained trajectory contains contact. We keep the latent-prediction and trajectory-straightening training objective unchanged~\cite{wang2026straightening}. We collect 16,000 training and 4,000 validation episodes; \cref{sec:implementation} gives the complete training recipe.

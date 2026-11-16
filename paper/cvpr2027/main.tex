@@ -14,13 +14,13 @@
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig0_headline.pdf}
-\caption{\textbf{Data augmentation and ECP provide complementary gains.} Success on 350 PushObj tasks per model at 150 controls. Base data denotes the released Frozen/AdaJEPA checkpoints and a matched random-data LeWM checkpoint. Brackets show the total gain from base-data native planning to augmented ECP.}
+\caption{\textbf{Data augmentation and ECP provide complementary gains.} Success on 350 PushObj tasks per model at 150 controls. Frozen fixes an offline-pretrained ResNet world model; AdaJEPA updates that architecture online. Base data uses the released ResNet checkpoints or matched random-data LeWM training. Brackets show the total gain from base-data native planning to augmented ECP.}
 \label{fig:headline}
 \end{figure}
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig1_trajectory_cases.pdf}
-\caption{\textbf{Stalled execution is a signal for planning correction.} Eight simulator views compare native failure and ECP success with frozen and adaptive models. Each center plot enlarges the boxed native trajectory over its labelled replan interval; $\Delta x,\Delta y$ are displacement from that interval's start, in pixels (px) or world units (u), with equal axis scales. Solid paths follow saved-action simulator replay, dots mark five-control intervals, and arrows show direction. In scene views, circles mark starts, stars agent goals, crosses failures, and diamonds successes; counts give terminating replans.}
+\caption{\textbf{Stalled execution is a signal for planning correction.} Eight views compare native failure and ECP success. Frozen holds the offline-pretrained ResNet world model fixed; AdaJEPA updates it online. Each center plot enlarges the boxed native trajectory over its labelled replan interval; $\Delta x,\Delta y$ are displacement from that interval's start, in pixels (px) or world units (u), with equal axis scales. Solid paths follow saved-action simulator replay, dots mark five-control intervals, and arrows show direction. In scene views, circles mark starts, stars agent goals, crosses failures, and diamonds successes; counts give terminating replans.}
 \label{fig:teaser}
 \end{figure*}
 \input{sections/introduction}

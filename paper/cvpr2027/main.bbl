@@ -1,4 +1,4 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -200,6 +200,26 @@ Anusha Nagabandi, Gregory Kahn, Ronald~S. Fearing, and Sergey Levine.
   with model-free fine-tuning.
 \newblock In \emph{IEEE International Conference on Robotics and Automation},
   pages 7559--7566, 2018.
+
+\bibitem[Nair et~al.(2023)Nair, Rajeswaran, Kumar, Finn, and
+  Gupta]{nair2022r3m}
+Suraj Nair, Aravind Rajeswaran, Vikash Kumar, Chelsea Finn, and Abhinav Gupta.
+\newblock {R3M}: A universal visual representation for robot manipulation.
+\newblock In \emph{Proceedings of the 6th Conference on Robot Learning}, pages
+  892--909, 2023.
+
+\bibitem[Oquab et~al.(2024)Oquab, Darcet, Moutakanni, Vo, Szafraniec, Khalidov,
+  Fernandez, Haziza, Massa, El-Nouby, Assran, Ballas, Galuba, Howes, Huang, Li,
+  Misra, Rabbat, Sharma, Synnaeve, Xu, J{\'e}gou, Mairal, Labatut, Joulin, and
+  Bojanowski]{oquab2024dinov2}
+Maxime Oquab, Timoth{\'e}e Darcet, Th{\'e}o Moutakanni, Huy Vo, Marc
+  Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa,
+  Alaaeldin El-Nouby, Mahmoud Assran, Nicolas Ballas, Wojciech Galuba, Russell
+  Howes, Po-Yao Huang, Shang-Wen Li, Ishan Misra, Michael Rabbat, Vasu Sharma,
+  Gabriel Synnaeve, Hu Xu, Herv{\'e} J{\'e}gou, Julien Mairal, Patrick Labatut,
+  Armand Joulin, and Piotr Bojanowski.
+\newblock {DINOv2}: Learning robust visual features without supervision.
+\newblock \emph{Transactions on Machine Learning Research}, 2024.
 
 \bibitem[Pertsch et~al.(2021)Pertsch, Lee, and Lim]{pertsch2021spirl}
 Karl Pertsch, Youngwoon Lee, and Joseph Lim.
