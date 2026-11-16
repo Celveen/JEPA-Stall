@@ -1,3 +1,5 @@
+> 后续更新：LeWM clean CEM 已补测为 36/50（72%），见 [独立训练、配对目标与原始证据](../lewm_pusht_clean_20261116/README.md)。下文仍描述原始归档；新 clean 使用本次 T-only 权重，旧扰动条件保留归档权重。
+
 Archive note: downloaded reference files are bundled under `raw_baselines/` in this directory. Absolute /tmp paths below record the original audit location.
 
 # Internal baseline reuse audit (v8)

@@ -59,14 +59,16 @@
       "method": "LeWM",
       "planner": "CEM",
       "success_percent": [
-        null,
+        72,
         66,
         64,
         64,
         2,
         20,
         26
-      ]
+      ],
+      "clean_evidence": "lewm_pusht_clean_20261116.json",
+      "checkpoint_scope": "Clean uses newly trained T-only weights; six visual shifts retain the archived model."
     },
     {
       "method": "DDP-WM",

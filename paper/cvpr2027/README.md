@@ -1,5 +1,7 @@
 # When World Models Stall: Execution-Conditioned Planning in Latent Space
 
+LeWM 的 PushT clean CEM 已补齐为 **72%（36/50）**，方法标签保持 LeWM；配置、权重来源及原始结果见 [完整记录](../../reports/lewm_pusht_clean_20261116/README.md)。
+
 当前稿以用户提供的 CVPR2027 revised_v2 / Overleaf_v2 为准，采用 inspired-by 措辞，并在 Figures 3/4 加入 PushT 视觉偏移和真实 Rope 仿真画面。正文 8 页，声明与 45 条参考文献 2 页，附录 10 页；摘要 205 词。训练端噪声注入的启发改为 DART [23]；DAgger [31] 保留作相关工作，ACT [44] 为时间组织启发，LLM Usage Statement 保留导师版本。表格沿用 v2；Figure 1 补入新发布的 LeWM 随机数据基线，未在本次编辑中运行新实验。详见 [本次修订](REVISION_FIGURES_FULLVIEW.md)。
 
 [完整论文](paper.pdf) · [主文](paper_main.pdf) · [附录](paper_appendix.pdf) · [完整源码](paper_source_v14.zip) · [摘要](Abstract.txt) · [可编辑 Figure 3](Figure3.drawio)

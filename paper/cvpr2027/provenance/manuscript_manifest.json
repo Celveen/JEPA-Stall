@@ -4,25 +4,25 @@
   "template_url": "https://github.com/cvpr-org/author-kit/releases/tag/CVPR2027-v1",
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
-  "tex_engine": "Tectonic 0.17.0",
-  "base_repository_commit": "de78d6ec3c95dd999ad771f14ecf02d225683f70",
-  "new_experiments_run": false,
+  "tex_engine": "pdfTeX (TeX Live 2022/Debian)",
+  "base_repository_commit": "63fcb7c",
+  "new_experiments_run": true,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/fullview_revision_20261116.json",
+  "audit": "provenance/lewm_pusht_clean_20261116.json",
   "pdf_sha256": {
-    "paper.pdf": "483db08c7417ff3d03f1235aa9df71156ae326fae55569e5176f82865c827e20",
-    "paper_v14.pdf": "483db08c7417ff3d03f1235aa9df71156ae326fae55569e5176f82865c827e20",
-    "paper_main.pdf": "f5c1d216c52b268fc5fd87ba5ad01a2b0f4277c2cc674f5f0dbf348ca9ed49a5",
-    "paper_appendix.pdf": "d5d9dd19b85802993911aa6a362009a102a390c6bd4542a001da844210238e0c"
+    "paper.pdf": "cc90f909a27b08d34c68011bf284b98064f6f9158c42c1b4f5920f72e64840d9",
+    "paper_v14.pdf": "cc90f909a27b08d34c68011bf284b98064f6f9158c42c1b4f5920f72e64840d9",
+    "paper_main.pdf": "b473b3eea4ca5f611a76903a8506757f93e53b00f210930ef08a5308cfcd1807",
+    "paper_appendix.pdf": "b41eefa5044453753c3a4f45838461cee6ff1535ab5f2546d46d35883cbe7335"
   },
   "figures": 8,
   "main_body_pages": 8,
   "combined_pages": 20,
-  "revision": "v2-planning-lewm-fullview",
+  "revision": "lewm-clean-completed",
   "abstract_words_whitespace": 205,
   "figure_pages": {
     "fig:headline": 1,

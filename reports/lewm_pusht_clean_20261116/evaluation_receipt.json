@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "diagnostic_only": false,
+  "condition": "clean",
+  "model_epoch": 3,
+  "successes": 36,
+  "episodes": 50,
+  "success_rate": 0.72,
+  "checkpoint_sha256": "9e2b8afee10e46f3b7ae2bd5a9b67ebc28e86af0ccc0d0d293e2fd77471d2576",
+  "hydra_sha256": "10635ce01a5a84fc550a83b708a6ccf4dc4cfb0993c41836aa2e63b6ea8047eb",
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "source_sha256": {
+    "plan.py": "cd601abccce6c160b9614940793fd93dc91d0bf7b44d148ce4b4312eb414eb3d",
+    "models/lewm.py": "1f36bbf4411408be468b44dc20261969436256e168d0097b1b9b98aa75f05355",
+    "planning/cem.py": "c4791878354d33017934e071c85a3d51266963ab1a3bdc9607190332ed798d88",
+    "planning/mpc.py": "50561b899e5ce65c5cad1aa0ff5738b6d24eff26fc6311b7f85969c13d4a4ee8",
+    "planning/continual.py": "9482141707807c194219d5e189ae2a3e89f683142e371a3046eabd2c054d5dcd",
+    "planning/evaluator.py": "275412752b4b0724ddca70165739861a29d4acc7d5da45e2c33ed1045a4905eb",
+    "planning/objectives.py": "9e8fda56146c23b07184acbdd5f25eae872ad494d76dc7b44e3687747b20f864",
+    "env/pusht/pusht_env.py": "e76a4cf6d1dd143156dcfa25076371c76a238f6d523415ae74a387b7b0919378",
+    "env/pusht/pusht_wrapper.py": "939dc7db9ac4f6f5da4ad550fafe96a91a28090e164d1053c4c02c02b57e4cb1",
+    "datasets/pusht_dset.py": "47f77f27e633d1e2eff069904788d8dd8b07e199a1b18599f57844a8d0ab11f5"
+  },
+  "evaluation_runner_sha256": "fc6923efc8999cca167bdb5efebbc3c328c1ae69ff18c07b9b4618c185ec4b92",
+  "max_physical_steps": 150,
+  "success_rule": "joint agent/object xy distance < 20 px and shortest-angle error < pi/9",
+  "goal_construction": "replay stored segment actions; raw last state is not used as goal",
+  "historical_epoch10_results_not_replaced": true
+}

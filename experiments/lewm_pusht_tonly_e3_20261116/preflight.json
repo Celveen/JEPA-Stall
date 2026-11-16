@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "gpu_count": 4,
+  "implementation": "DDP + global SyncBatchNorm + differentiable global SIGReg",
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "nccl_compiled": [
+    2,
+    26,
+    2
+  ],
+  "nccl_runtime": 22707,
+  "deterministic_equivalence_test_dropout_disabled": true,
+  "training_dropout_restored": true,
+  "reference_losses": [
+    0.6730517148971558,
+    0.25315549969673157,
+    4.665513038635254
+  ],
+  "distributed_losses": [
+    0.6730517148971558,
+    0.2531554698944092,
+    4.665513038635254
+  ],
+  "gradient_relative_l2_error": 8.193163716667355e-06,
+  "gradient_max_absolute_error": 2.812594175338745e-07,
+  "global_batchnorm_buffers_match": true,
+  "native_checkpoint_strict_load": true,
+  "global_batch": 128,
+  "local_batch": 32,
+  "bf16_forward_backward_finite_all_ranks": true,
+  "distributed_bn_recalibration_and_validation_smoke_passed": true,
+  "smoke_validation_losses": {
+    "loss": 1.7441320419311523,
+    "pred_loss": 0.4277258515357971,
+    "sigreg_loss": 14.625
+  },
+  "step_seconds": [
+    0.38900208473205566,
+    0.0631101131439209,
+    0.058624267578125,
+    0.05875897407531738,
+    0.058495521545410156,
+    0.058508872985839844,
+    0.05917048454284668,
+    0.05956554412841797,
+    0.059716224670410156,
+    0.0635988712310791,
+    0.06051993370056152,
+    0.060787200927734375,
+    0.06140875816345215,
+    0.06147885322570801,
+    0.06217503547668457,
+    0.06235504150390625,
+    0.062447547912597656,
+    0.0635216236114502,
+    0.0644831657409668,
+    0.0654911994934082
+  ],
+  "steady_step_seconds_median": 0.06147885322570801,
+  "peak_memory_gib_by_rank": [
+    3.2258334159851074,
+    3.2258987426757812,
+    3.2258987426757812,
+    3.2258987426757812
+  ],
+  "input": "synthetic pixels/actions; dataset integrity audited separately"
+}

@@ -1,5 +1,7 @@
 # PushT clean 缺项核查
 
+**后续更新：LeWM clean CEM 已补测完成，36/50（72%），见 [新结果及证据](../lewm_pusht_clean_20261116/README.md)。以下保留原档案检索结论；DDP-WM clean 仍缺测。**
+
 同步并检查 SE-JEPA 的全部远端分支及历史 reports-pack 压缩包；该仓库仅作为内部数据来源，本次没有在论文中添加对未发表文章的引用。
 
 | 主表条件 | clean 原始记录 | 成绩 | 处理 |

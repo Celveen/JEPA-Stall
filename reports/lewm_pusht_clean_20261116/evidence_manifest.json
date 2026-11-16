@@ -1,0 +1,261 @@
+{
+  "archive": "evidence.tar.gz",
+  "sha256": "21ec37d8052671337977fcf390ccd3f68f25c930df10c1c30e9365618011812e",
+  "members": [
+    {
+      "path": "evaluation/complete.json",
+      "bytes": 1756,
+      "sha256": "3956c5804e781a60a8458e3c6f6e772a86cf39c15e099ed09be098c7174d9f4d"
+    },
+    {
+      "path": "evaluation/config.yaml",
+      "bytes": 1936,
+      "sha256": "2179c8c61ff9e22c9dc298db83193ffceac382665fa8be83575d1b757e483180"
+    },
+    {
+      "path": "evaluation/final_eval_results.npz",
+      "bytes": 33407,
+      "sha256": "ed78a34f53aaadb30167b3d5ec22837e6b712fbcf4e5fbbfdf76c132f7116b93"
+    },
+    {
+      "path": "evaluation/frozen_model_check.json",
+      "bytes": 111,
+      "sha256": "b5bc72b47fe9b0682b2a06340c41a3955a6101d18646adbeacc8560db53e1b71"
+    },
+    {
+      "path": "evaluation/logs.json",
+      "bytes": 7665,
+      "sha256": "cfb959e44af12b8c73d4b39d80f4c11b07feaeeb149591af95d1ed5b7a1b83b0"
+    },
+    {
+      "path": "evaluation/plan_targets.pkl",
+      "bytes": 15068088,
+      "sha256": "8075ad46b26123f5a22f54905f7c2258d927e15af0b9e1e331bd3012b79e3419"
+    },
+    {
+      "path": "evaluation/slow_applied.json",
+      "bytes": 22,
+      "sha256": "0073b5db434050702fbe39743aea0c5f1ce0b4bf289a254df5197fb230e9e3ee"
+    },
+    {
+      "path": "evaluation/source_snapshot/datasets/pusht_dset.py",
+      "bytes": 7094,
+      "sha256": "47f77f27e633d1e2eff069904788d8dd8b07e199a1b18599f57844a8d0ab11f5"
+    },
+    {
+      "path": "evaluation/source_snapshot/env/pusht/pusht_env.py",
+      "bytes": 44276,
+      "sha256": "e76a4cf6d1dd143156dcfa25076371c76a238f6d523415ae74a387b7b0919378"
+    },
+    {
+      "path": "evaluation/source_snapshot/env/pusht/pusht_wrapper.py",
+      "bytes": 4745,
+      "sha256": "939dc7db9ac4f6f5da4ad550fafe96a91a28090e164d1053c4c02c02b57e4cb1"
+    },
+    {
+      "path": "evaluation/source_snapshot/models/lewm.py",
+      "bytes": 16135,
+      "sha256": "1f36bbf4411408be468b44dc20261969436256e168d0097b1b9b98aa75f05355"
+    },
+    {
+      "path": "evaluation/source_snapshot/plan.py",
+      "bytes": 33199,
+      "sha256": "cd601abccce6c160b9614940793fd93dc91d0bf7b44d148ce4b4312eb414eb3d"
+    },
+    {
+      "path": "evaluation/source_snapshot/planning/cem.py",
+      "bytes": 4716,
+      "sha256": "c4791878354d33017934e071c85a3d51266963ab1a3bdc9607190332ed798d88"
+    },
+    {
+      "path": "evaluation/source_snapshot/planning/continual.py",
+      "bytes": 33163,
+      "sha256": "9482141707807c194219d5e189ae2a3e89f683142e371a3046eabd2c054d5dcd"
+    },
+    {
+      "path": "evaluation/source_snapshot/planning/evaluator.py",
+      "bytes": 12105,
+      "sha256": "275412752b4b0724ddca70165739861a29d4acc7d5da45e2c33ed1045a4905eb"
+    },
+    {
+      "path": "evaluation/source_snapshot/planning/mpc.py",
+      "bytes": 8104,
+      "sha256": "50561b899e5ce65c5cad1aa0ff5738b6d24eff26fc6311b7f85969c13d4a4ee8"
+    },
+    {
+      "path": "evaluation/source_snapshot/planning/objectives.py",
+      "bytes": 3180,
+      "sha256": "9e8fda56146c23b07184acbdd5f25eae872ad494d76dc7b44e3687747b20f864"
+    },
+    {
+      "path": "training_run/launch.json",
+      "bytes": 69,
+      "sha256": "678a9547757279a2ad8cfeb0d398030506117284cd8da3cac1687ebfd39c3827"
+    },
+    {
+      "path": "training_run/manifest.json",
+      "bytes": 8062,
+      "sha256": "a098394a2ab57ddbbc11c9329313b5f977656bcad632bc3c7714e923c21fbdb9"
+    },
+    {
+      "path": "training_run/status.json",
+      "bytes": 954,
+      "sha256": "84bb14481ce6a82137e7e7b3a7feb8e310a8dffa1b118d877c7c09adcf3722b0"
+    },
+    {
+      "path": "training_run/supervisor.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "training_run/train.log",
+      "bytes": 38299,
+      "sha256": "4e8e76eb7f35e13f066b69c6d0ff826a5c28b47edd8fd960aeddd7052086dc37"
+    },
+    {
+      "path": "training_run/training_result.json",
+      "bytes": 406,
+      "sha256": "dc933a9a6707a0cf7e03d1f54fefbba9a0063bbb5fb868cb1732dc181df69c98"
+    },
+    {
+      "path": "training/metrics.jsonl",
+      "bytes": 37067,
+      "sha256": "91fd62e2f58f4054092ca2d79893bc8384f1ff38fc98693051026c2e0e9e6408"
+    },
+    {
+      "path": "training/hydra.yaml",
+      "bytes": 1067,
+      "sha256": "10635ce01a5a84fc550a83b708a6ccf4dc4cfb0993c41836aa2e63b6ea8047eb"
+    },
+    {
+      "path": "evaluation_queue/status.json",
+      "bytes": 2311,
+      "sha256": "5d607accc17941e537b126a1dab1b6ccd5f26c55b5839c650800a0d8f8a24931"
+    },
+    {
+      "path": "evaluation_queue/evaluate.log",
+      "bytes": 71795,
+      "sha256": "22135fdc35bb622b0abf796dda77a22f7d9ac780580771ea4b1b05f8229f01e2"
+    },
+    {
+      "path": "implementation/README.md",
+      "bytes": 4715,
+      "sha256": "a610bea83fa2dd8b4f05b871206e75498a99ecbcf072a459c528a5493b13d2b7"
+    },
+    {
+      "path": "implementation/audit_data.py",
+      "bytes": 4889,
+      "sha256": "2fb08680cb4de1a5b15209010c5c73f62f29c4fc5614e33febd7bd241349a2aa"
+    },
+    {
+      "path": "implementation/config.yaml",
+      "bytes": 1050,
+      "sha256": "3a76c5913f797b2d3a07c787071a93a5774b78f8b98fdc58d3880f9bd4327943"
+    },
+    {
+      "path": "implementation/data_audit.json",
+      "bytes": 2891,
+      "sha256": "4c3fc0dfdc202925abfcf1444e01774c362943bf9b3e2d3ae7eb1861da396613"
+    },
+    {
+      "path": "implementation/download_data.py",
+      "bytes": 2504,
+      "sha256": "5b33b34a8f42eb6bd9ff4d0b6a6469892021e25d02734bd52c58aceeb54203e5"
+    },
+    {
+      "path": "implementation/evaluate_clean.py",
+      "bytes": 5887,
+      "sha256": "fc6923efc8999cca167bdb5efebbc3c328c1ae69ff18c07b9b4618c185ec4b92"
+    },
+    {
+      "path": "implementation/launch.py",
+      "bytes": 6757,
+      "sha256": "6359f3648637597dfd8503b03e1df8fc91d4ba18b0d71bbc74e839ed3b98bd22"
+    },
+    {
+      "path": "implementation/preflight.json",
+      "bytes": 1803,
+      "sha256": "fc3e8c52f852c32b0e1b76f25496b7b6cfa0e2545fcad8afcc122b10bb639e5d"
+    },
+    {
+      "path": "implementation/preflight_distributed.py",
+      "bytes": 6829,
+      "sha256": "7c5347d2fcac55a61ecc081d71a40ab9900b7c0fba2d532b131befbcc5f25af2"
+    },
+    {
+      "path": "implementation/queue_clean.py",
+      "bytes": 3790,
+      "sha256": "0d14a20552fef93cb9caf5ddc89b7795ffda8f685f24f583ebb7d11e2b1bd07f"
+    },
+    {
+      "path": "implementation/report.py",
+      "bytes": 6591,
+      "sha256": "bd9350396608e29200fe22c24d68166c5e2e34d7ca3124c25f6e0f9411c65afe"
+    },
+    {
+      "path": "implementation/runtime/LICENSE.LeWM",
+      "bytes": 1067,
+      "sha256": "4882021920cbd61e050e4dc2e02440e9bd36ea4cbc5803e738a2ee3d63502e07"
+    },
+    {
+      "path": "implementation/runtime/datasets/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "implementation/runtime/datasets/deformable_env_dset.py",
+      "bytes": 5166,
+      "sha256": "1380a909f5579a4eb69271ef98f16dfd0517829b219c9990ea61f82340035b3f"
+    },
+    {
+      "path": "implementation/runtime/datasets/img_transforms.py",
+      "bytes": 282,
+      "sha256": "973ab63f5ff29ef371bb4ec0a6bff81f903c8a8bea7eaac14d62c9dace477c57"
+    },
+    {
+      "path": "implementation/runtime/datasets/pusht_dset.py",
+      "bytes": 7094,
+      "sha256": "47f77f27e633d1e2eff069904788d8dd8b07e199a1b18599f57844a8d0ab11f5"
+    },
+    {
+      "path": "implementation/runtime/datasets/traj_dset.py",
+      "bytes": 6099,
+      "sha256": "01d1a914f93198c228917453dae8aae57af7b788c80bb01b84fb0fd1b1988f66"
+    },
+    {
+      "path": "implementation/runtime/datasets/window_stream.py",
+      "bytes": 5715,
+      "sha256": "69f2a1390259eb15bc99a0bcd0c40875aa629e328703b980609d4282ae41bb1c"
+    },
+    {
+      "path": "implementation/runtime/distributed_training.py",
+      "bytes": 2948,
+      "sha256": "522f6d71f622a0a1f92a5d9b58ff4c8a3c6face4164a4f92c08e521107d6f866"
+    },
+    {
+      "path": "implementation/runtime/models/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "implementation/runtime/models/lewm.py",
+      "bytes": 16135,
+      "sha256": "1f36bbf4411408be468b44dc20261969436256e168d0097b1b9b98aa75f05355"
+    },
+    {
+      "path": "implementation/runtime/train_lewm.py",
+      "bytes": 7516,
+      "sha256": "770e24c7bfea5560eb4be8294f68c17cf3d9b56b4a399017a419994f05a65132"
+    },
+    {
+      "path": "implementation/runtime/train_lewm_distributed.py",
+      "bytes": 6943,
+      "sha256": "ff36fd18d7b4c80299dbd9030c190ef1833746ffa821551326ca2ff722d52efa"
+    },
+    {
+      "path": "implementation/upstream_source_hashes.json",
+      "bytes": 1472,
+      "sha256": "66cd2f2bb75ce3704fd526d1371cee227db98862308834761634924b29dd2ec6"
+    }
+  ]
+}
