@@ -47,3 +47,17 @@ python3 experiments/rope_formal20/bundle.py
 ```
 
 核查缓存复用时以 `prefix_reuse.json` 的逐推动作记录为准，本轮所有条目均要求 `reused=false`。历史 `frozen_model_audit.json` 中 `native_prefix_reuse` 字段只按 κ>0 标记，不能据此推断实际复用了 Native 轨迹；正式报告额外逐项检查真实复用记录。
+
+## 补充同样本 Native 3/3
+
+新增 `native3` 条件，采用与上述四组完全相同的 20 个目标（原编号 10–29），一张 GPU 顺序运行整组。原四组不重跑、不覆盖。Native-3 与 dynamic3 的规划配置只差 κ=0/2；模型、核心实现、种子、CEM 和停止规则一致。与固定 S 的 strength_mode 标志也不同，但 κ=0 时没有任何 S 惩罚。原入口已有 Native 判定和三步块的实现，本次仅增加命令行选项；差异及源文件快照保存在补充输出目录的 source_snapshot。
+
+```bash
+python3 experiments/rope_formal20/launch.py \
+  --root eval_outputs/rope_formal20_native3 --gpu-map native3=1 --max-pushes 20
+python3 experiments/rope_formal20/status.py --root eval_outputs/rope_formal20_native3
+eval_outputs/rope_local/venv/bin/python experiments/rope_formal20/native3_report.py
+python3 experiments/rope_formal20/native3_bundle.py
+```
+
+补充报告对五组做同目标核验，并保留 Native-3 每一推的真实观测缓存。五组汇总在 `reports/rope_formal20_native3/`，原四组报告作为历史记录保留。全部为独立物理执行，不把新 Native-3 的缓存回填为旧 S 组的执行前缀。

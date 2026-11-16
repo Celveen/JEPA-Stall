@@ -146,7 +146,25 @@ def comparison(data, i, out):
     return dict(x=x0, y=y0, width=side, height=side)
 
 
-def main(root, output, formal):
+def verify_implementation(current, prior, compatibility):
+    if current == prior:
+        return 'Identical implementation hashes'
+    assert compatibility is not None, 'Implementation changed; explicit source compatibility evidence required'
+    folder = Path(compatibility)
+    before = (folder / 'worker_before.py').read_bytes()
+    after = (folder / 'worker_native3.py').read_bytes()
+    option = b"choices=('native5', 'native3', 'fixed3',"
+    assert after.count(option) == 1
+    assert after.replace(option, b"choices=('native5', 'fixed3',", 1) == before
+    key = 'experiments/rope_formal20/worker.py'
+    assert set(current) == set(prior)
+    assert hashlib.sha256(before).hexdigest() == prior[key]
+    assert hashlib.sha256(after).hexdigest() == current[key]
+    assert all(current[k] == prior[k] for k in current if k != key)
+    return 'Only worker CLI choice native3 added; all planner/model/runtime hashes unchanged'
+
+
+def main(root, output, formal, compatibility=None):
     root, output = Path(root), Path(output)
     queue = json.loads((root/'queue.json').read_text())
     assert queue['status'] == 'complete'
@@ -159,15 +177,18 @@ def main(root, output, formal):
         original = Path(formal) / arm / f'sample_{i:02d}'
         current = json.loads((d['path']/'complete.json').read_text())
         prior = json.loads((original/'complete.json').read_text())
-        for key in ('checkpoint_sha256','encoder_sha256','implementation_sha256','full_target_sha256','action_mean','action_std'):
+        implementation_audit = verify_implementation(current['implementation_sha256'], prior['implementation_sha256'], compatibility)
+        for key in ('checkpoint_sha256','encoder_sha256','full_target_sha256','action_mean','action_std'):
             assert current[key] == prior[key], key
         assert current['config']['planner'] == prior['config']['planner']
+        assert current['config']['seed'] == prior['config']['seed']
         with np.load(original/'final_eval_results.npz') as a, np.load(d['path']/'final_eval_results.npz') as b:
             for key in ('state_0', 'state_g'):
                 np.testing.assert_array_equal(a[key], b[key])
         with np.load(original/'rope_metrics.npz') as m:
             replicate_audit.append(dict(arm=arm, sample=i, formal_final_cd=float(m['final_cd'][0]),
-                visualization_final_cd=float(d['cd'][-1]), same_goal_model_planner_source_and_seeds=True))
+                visualization_final_cd=float(d['cd'][-1]), same_goal_model_planner_and_seeds=True,
+                implementation_audit=implementation_audit))
         dest = output / 'raw_frames' / f'sample_{i:02d}' / arm
         dest.mkdir(parents=True, exist_ok=True)
         Image.fromarray(d['goal']).save(dest.parent / 'goal.png')
@@ -208,7 +229,7 @@ def main(root, output, formal):
         '画面直接取自本次实际执行时保存的仿真 RGB 观测，不重放动作、不使用世界模型预测画面。浮点 RGB 转 PNG 前逐像素检查为无损转换。图中 CD 为复跑自身的粒子状态指标。', '',
         'Ours 指定为 `fixed3`：3/3、固定 S、预热 5 推。对照为 DINO-WM Native 5/5。目标、模型、种子和控制配置与正式运行一致；物理仿真存在波动，复跑指标可能不同。', '',
         '## 预先选定的两对案例', '',
-        '开始画面记录前，选定正式试验中改善的 sample 03 和退步的 sample 07；两组各独立执行一次，不重复试跑到有利结果为止。保留两对的全部结果。', '',
+        '开始画面记录前选定案例，每个目标的两组各独立执行一次，保留全部结果。选例规则：' + queue['selection'], '',
         '| 原目标 | Native CD / 推数 | Ours CD / 推数 | Ours S 触发 | Native CD − Ours CD |',
         '|---|---:|---:|---:|---:|']
     for s in selections:
@@ -230,5 +251,6 @@ if __name__ == '__main__':
     parser.add_argument('--root', type=Path, default=Path('eval_outputs/rope_qualitative20'))
     parser.add_argument('--output', type=Path, default=Path('reports/rope_formal20/visuals'))
     parser.add_argument('--formal-root', type=Path, default=Path('eval_outputs/rope_formal20'))
+    parser.add_argument('--worker-compatibility', type=Path, help='Directory containing verified before/after worker source snapshots')
     args = parser.parse_args()
-    main(args.root, args.output, args.formal_root)
+    main(args.root, args.output, args.formal_root, args.worker_compatibility)

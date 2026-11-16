@@ -6,7 +6,9 @@ from pathlib import Path
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--root', type=Path, default=Path('eval_outputs/rope_formal20'))
 args = parser.parse_args()
-for arm in ('native5', 'fixed3', 'dynamic3', 'fixed3_nowarm'):
+for arm in ('native5', 'native3', 'fixed3', 'dynamic3', 'fixed3_nowarm'):
+    if not (args.root / arm).exists():
+        continue
     paths = list((args.root / arm).glob('sample_*/complete.json'))
     active = []
     for path in (args.root / arm).glob('sample_*/ecp_progress.json'):

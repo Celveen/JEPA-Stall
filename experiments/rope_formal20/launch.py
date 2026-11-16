@@ -18,12 +18,14 @@ def main():
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--gpu-map', default='native5=1,fixed3=2,dynamic3=3,fixed3_nowarm=4')
     parser.add_argument('--max-pushes', type=int, choices=(15, 20), default=20)
+    parser.add_argument('--reference-root', type=Path, default=REPO / 'eval_outputs/rope_formal20',
+                        help='Original formal results used to audit a Native-3 supplement.')
     args = parser.parse_args()
     root = args.root.resolve()
     (root / 'logs').mkdir(parents=True, exist_ok=True)
     assignments = {item.split('=')[0]: int(item.split('=')[1]) for item in args.gpu_map.split(',')}
-    if set(assignments) != {'native5','fixed3','dynamic3','fixed3_nowarm'}:
-        raise ValueError('Assign the four requested formal conditions.')
+    if not assignments or not set(assignments) <= {'native5','native3','fixed3','dynamic3','fixed3_nowarm'}:
+        raise ValueError('Assign one or more supported formal conditions.')
     gpus = list(assignments.values())
     if len(set(gpus)) != len(gpus):
         raise ValueError('Each experiment needs its own GPU.')
@@ -33,6 +35,9 @@ def main():
                for row in inventory.splitlines()}
     if any(devices[gpu][1] > 500 for gpu in gpus):
         raise RuntimeError('A requested GPU is occupied; refusing to share it silently.')
+    if 'native3' in assignments:
+        from native3_provenance import snapshot
+        snapshot(root, args.reference_root.resolve(), REPO)
     manifest = dict(started=time.time(), gpu_assignments=assignments, samples=20,
                     arms=list(assignments), maximum_pushes=args.max_pushes, completed=[], target_chunks=[1, 2], protocol='independent physics; no Native-3 reference')
     (root / 'queue.json').write_text(json.dumps(manifest, indent=2) + '\n')

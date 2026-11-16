@@ -22,6 +22,9 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 
 ## Latest results (2026-11-16)
 
+- [Complete five-condition Rope comparison](reports/rope_formal20_native3/RESULTS.md): the matched **Native 3/3** control is now complete at **CD 0.7547, 10/20 successes**. Fixed S, dynamic S and fixed S without extra warmup reach **0.6112 / 13**, **0.5152 / 12** and **0.5834 / 13** successes out of 20, respectively. All three improve on Native 3/3 in this run; Native 5/5 retains the highest success count, **14/20**. Includes paired action comparisons, per-push CD, raw evidence and source compatibility checks.
+- [Additional real Rope comparisons](reports/rope_formal20/visuals_extra/README.md): two preselected targets, four independently recorded executions, with every-three-push sequences and all raw frames. Ours has lower final CD in both reruns; target 15 uses S but takes more pushes, while target 24 finishes earlier without an S trigger. These illustrative runs are excluded from formal statistics.
+
 - [Completed Rope formal evaluation and real simulator images](reports/rope_formal20/README.md): four conditions × 20 targets, maximum 20 pushes, stopping at CD < 0.3. Native 5/5: **0.5809, 14/20**; fixed S 3/3: **0.6112, 13/20**; dynamic S 3/3: **0.5152, 12/20**; fixed S without extra warmup: **0.5834, 13/20**. Dynamic S lowers mean CD but no S condition improves success rate. Includes [complete three-push image sequences](reports/rope_formal20/visuals/README.md) from separately recorded executions, favorable and unfavorable examples, and the full raw evidence package.
 
 - [PushT clean-data audit](reports/pusht_clean_audit_20261116/README.md): LeWM-GD clean is **32/50 (64%)** and already populated. No matching LeWM-CEM or DDP-WM-CEM clean archive was found in the reference repository; those two table entries remain unmeasured.

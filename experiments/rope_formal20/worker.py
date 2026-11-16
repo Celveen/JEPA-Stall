@@ -18,7 +18,7 @@ sys.path.insert(0, str(REPO / 'experiments/rope_chunk3'))
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--arm', choices=('native5', 'fixed3', 'dynamic3', 'fixed3_nowarm'), required=True)
+    parser.add_argument('--arm', choices=('native5', 'native3', 'fixed3', 'dynamic3', 'fixed3_nowarm'), required=True)
     parser.add_argument('--sample', type=int, choices=range(20), required=True)
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--max-pushes', type=int, choices=(15, 20), default=20)

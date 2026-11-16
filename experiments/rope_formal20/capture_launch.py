@@ -14,15 +14,21 @@ def main():
     p.add_argument('--root',type=Path,required=True)
     p.add_argument('--samples',type=int,nargs='+',default=[3,7])
     p.add_argument('--gpus',type=int,nargs=2,default=[5,6])
+    p.add_argument('--selection-note',default=None)
     a=p.parse_args(); root=a.root.resolve(); root.mkdir(parents=True,exist_ok=True)
     if len(set(a.gpus))!=2 or len(set(a.samples))!=len(a.samples):
         raise ValueError('Distinct GPUs and samples required')
     rows=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.used','--format=csv,noheader,nounits'],text=True)
     dev={int(r.split(',')[0]):(r.split(',')[1].strip(),int(r.split(',')[2])) for r in rows.splitlines()}
     assert all(dev[g][1]<500 for g in a.gpus), 'GPU occupied'
+    selection=a.selection_note
+    if selection is None:
+        if a.samples != [3,7]:
+            raise ValueError('Describe the prospective target selection with --selection-note')
+        selection='Targets chosen before capture: sample 03 improved and sample 07 regressed in completed formal pairs. No repeat-until-favorable selection.'
     manifest=dict(role='independent qualitative reruns, excluded from formal-20 results', samples=a.samples,
         arms=['native5','fixed3'], gpu_assignments=dict(zip(['native5','fixed3'],a.gpus)), started=time.time(),
-        selection='Targets chosen before capture: sample 03 improved and sample 07 regressed in completed formal pairs. No repeat-until-favorable selection.')
+        selection=selection)
     (root/'queue.json').write_text(json.dumps(manifest,indent=2)+'\n')
     def run(arm,gpu):
         env=os.environ.copy()
