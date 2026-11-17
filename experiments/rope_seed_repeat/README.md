@@ -54,3 +54,15 @@ This reads both seeds' original executed controls and verifies their paired
 initial/goal states. It distinguishes detector events, memories actually used
 in planning, and observed differences from Native, including differences that
 occur before intervention or in runs that never apply S.
+
+The completed [three-seed aggregate](../../reports/rope_seeds99_100_101/README.md)
+adds seed 101 and compares accuracy, success and mean executed pushes over all
+240 runs. Recompute the aggregate from the original episode directories with:
+
+```bash
+python experiments/rope_seed_repeat/aggregate_three_seeds.py
+```
+
+This requires NumPy and Matplotlib, verifies all paired targets and original
+per-seed totals, and writes tables plus a three-panel figure. Seed 99's Native-3
+episodes remain in their separate `eval_outputs/rope_formal20_native3` directory.
