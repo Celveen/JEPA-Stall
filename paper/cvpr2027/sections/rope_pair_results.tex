@@ -21,6 +21,6 @@ DINO-WM (ours) &\textbf{0.4793}&\textbf{71.7}&\textbf{11.30}\\
 \centering
 \captionsetup{skip=5pt}
 \makebox[\columnwidth][c]{\hspace*{-6pt}\includegraphics[width=0.92\columnwidth]{figures/fig_rope_cd_pushes.pdf}\hspace*{6pt}}
-\caption{\textbf{Faster Rope error reduction.} DINO-WM executes three pushes after each planning step, evaluated on 20 targets with three seeds. Ours uses fixed-strength memory with five warm-up pushes.}
+\caption{\textbf{Faster Rope error reduction.} Mean Chamfer distance (CD; lower is better) versus executed pushes. ECP reduces error faster and reaches a lower final error than native DINO-WM; shaded bands show variability across seeds.}
 \label{fig:rope-cd}
 \end{figure}
