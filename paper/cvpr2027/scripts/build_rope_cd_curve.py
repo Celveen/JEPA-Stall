@@ -136,7 +136,7 @@ def plot(data):
                 marker='o',markersize=2.7,markevery=[0,5,10,15,20],zorder=3)
     ax.legend(loc='lower left',bbox_to_anchor=(-.02,1.02),ncol=2,frameon=False,
               handlelength=1.6,handletextpad=.45,columnspacing=1.0,borderaxespad=0)
-    ax.set(xlim=(5,20),ylim=(0,1.2),xticks=[5,10,15,20],yticks=[0,.3,.6,.9,1.2],
+    ax.set(xlim=(5,20),ylim=(.3,1.2),xticks=[5,10,15,20],yticks=[.3,.6,.9,1.2],
            xlabel='Number of pushes',ylabel='Mean CD')
     for suffix in ['pdf','svg','png']:
         options={'metadata':{'CreationDate':None,'ModDate':None}} if suffix=='pdf' else {}
