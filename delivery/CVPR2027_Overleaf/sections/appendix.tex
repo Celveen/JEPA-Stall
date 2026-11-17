@@ -157,7 +157,7 @@ where $q\in\R^2$ is an approach or pushing waypoint computed from the observed o
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Contact guidance gives the largest LeWM gain.} Success counts and percentages on 350 PushObj tasks with a fixed, augmented-data LeWM and 150 controls. Native has no correction. Other rows compare stall-triggered latent penalties, pusher weighting, physical action offsets, and contact costs; offsets are in pixels. Contact weight 10 performs best.}
+\caption{\textbf{Contact guidance gives the largest LeWM gain.} Success counts and percentages on 350 PushObj tasks with a fixed, augmented-data LeWM and 150 controls. Native has no correction. Action offsets are in pixels.}
 \label{tab:lewm-contact}
 \small
 \begin{tabular}{lrr}
@@ -199,7 +199,7 @@ To verify that our offline interaction-biased data collection improves world mod
 \label{sec:threshold-details}
 \begin{table}[t]
 \centering
-\caption{\textbf{Earlier detection yields stable PushObj gains.} AdaJEPA with an augmented-data ResNet, memory and goal reweighting; 350 tasks, 30 replans, $\gamma_{\rm lo}=\gamma_{\rm hi}/3$. Triggered counts episodes with a stall; First is their median first-trigger replan. Rescue/harm counts native failures recovered/successes lost. All thresholds improve over native planning.}
+\caption{\textbf{Earlier detection yields stable PushObj gains.} AdaJEPA with an augmented-data ResNet, memory and goal reweighting; 350 tasks, 30 replans, $\gamma_{\rm lo}=\gamma_{\rm hi}/3$. Triggered counts episodes with a stall; First is their median first-trigger replan. All thresholds improve over native planning.}
 \label{tab:threshold}
 \small
 \setlength{\tabcolsep}{4pt}
@@ -298,7 +298,7 @@ Seeds 200, 300 / 30 replans &$57.90\pm3.45$&$71.19\pm2.44$\\
 \label{sec:action-space}
 \begin{table}[t]
 \centering
-\caption{\textbf{Physical action correction improves PushObj.} Success (\%) on 350 tasks per stream, with 30 replans and an augmented-data ResNet updated by AdaJEPA. Action offset combines a physical stall trigger, bounded pusher-goal offset, and temporary reweighting. Rescue/harm counts native failures recovered/successes lost. Streams share 35 target segments.}
+\caption{\textbf{Physical action correction improves PushObj.} Success (\%) on 350 tasks per stream, with 30 replans and an augmented-data ResNet updated by AdaJEPA. Action offset combines a physical stall trigger, bounded pusher-goal offset, and temporary reweighting. Streams share 35 target segments.}
 \label{tab:action}
 \small
 \begin{tabular}{lrrr}
@@ -325,7 +325,7 @@ with $a_{\max}=15$~px and $n_{\rm exec}=5$, combined with the 3-replan $10\times
 \begin{table*}[t]
 \centering
 
-\caption{\textbf{Memory complements continued adaptation on Maze.} Successes out of 100 tasks at 20/50 replans, using pretrained ResNet and AdaJEPA; goal tolerance is 0.5 units. $S/P$ denote memory/goal reweighting. Activation uses first stall, ten-replan delay, or prediction-loss plateau. Freeze stops updates without correction. Rescue/harm counts native failures recovered/successes lost at 50 replans; $p$ is the exact two-sided McNemar test against native AdaJEPA.}
+\caption{\textbf{Memory complements continued adaptation on Maze.} Successes out of 100 tasks at 20/50 replans, using pretrained ResNet and AdaJEPA; goal tolerance is 0.5 units. $S/P$ denote memory/goal reweighting. Activation uses first stall, ten-replan delay, or prediction-loss plateau. Freeze stops updates without correction. Rescue/harm and $p$ use 50 replans; $p$ is the exact two-sided McNemar test against native AdaJEPA.}
 \label{tab:maze-full}
 \small
 \begin{tabular}{llrrrr}

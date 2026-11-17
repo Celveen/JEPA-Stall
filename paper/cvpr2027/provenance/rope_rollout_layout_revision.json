@@ -1,0 +1,337 @@
+{
+  "base_commit": "6ba7ab8ae47819d0acf36479a712f44d24807297",
+  "new_experiments_run": false,
+  "changes": [
+    "Add a full-view matched Rope execution strip on page 8: shared start/goal and Native/Ours at pushes 5, 8, 11, 14, 17 and 20.",
+    "Register a pale-blue goal-rope contour from the shared goal image without changing recorded pixels.",
+    "Place Table 5 and the Rope CD curve below the strip; number main figures in reading order.",
+    "Remove the Mean plus/minus 1 SD legend title without changing curve values or uncertainty bands.",
+    "Shorten redundant table captions and experimental interpretations while preserving quantitative results."
+  ],
+  "all_table_values_and_equations_unchanged": true,
+  "all_underlying_curve_values_unchanged": true,
+  "abstract_introduction_conclusion_unchanged": true,
+  "supplied_figure3_unchanged": true,
+  "other_existing_figure_assets_unchanged": true,
+  "plot_view": {
+    "push_range": [
+      5,
+      20
+    ],
+    "cd_range": [
+      0,
+      1.8
+    ],
+    "seed_sd_unchanged": true
+  },
+  "positions": {
+    "fig:headline": {
+      "number": "1",
+      "page": 1
+    },
+    "fig:teaser": {
+      "number": "2",
+      "page": 2
+    },
+    "fig:method": {
+      "number": "3",
+      "page": 4
+    },
+    "tab:main": {
+      "number": "1",
+      "page": 6
+    },
+    "tab:components": {
+      "number": "2",
+      "page": 6
+    },
+    "fig:execution-recovery": {
+      "number": "4",
+      "page": 7
+    },
+    "fig:threshold": {
+      "number": "5",
+      "page": 7
+    },
+    "tab:timing": {
+      "number": "3",
+      "page": 7
+    },
+    "tab:maze": {
+      "number": "4",
+      "page": 7
+    },
+    "fig:rope-main-rollout": {
+      "number": "6",
+      "page": 8
+    },
+    "tab:rope": {
+      "number": "5",
+      "page": 8
+    },
+    "fig:rope-cd": {
+      "number": "7",
+      "page": 8
+    },
+    "tab:parameters": {
+      "number": "6",
+      "page": 13
+    },
+    "tab:pusht-ecp": {
+      "number": "7",
+      "page": 15
+    },
+    "tab:extra-baselines": {
+      "number": "8",
+      "page": 15
+    },
+    "tab:lewm-contact": {
+      "number": "9",
+      "page": 15
+    },
+    "tab:dinowm-aug": {
+      "number": "10",
+      "page": 15
+    },
+    "tab:threshold": {
+      "number": "11",
+      "page": 15
+    },
+    "tab:threshold-shape": {
+      "number": "12",
+      "page": 16
+    },
+    "tab:memory-strength": {
+      "number": "13",
+      "page": 16
+    },
+    "fig:push-distance": {
+      "number": "8",
+      "page": 16
+    },
+    "tab:eval-seeds": {
+      "number": "14",
+      "page": 17
+    },
+    "tab:training": {
+      "number": "15",
+      "page": 17
+    },
+    "tab:action": {
+      "number": "16",
+      "page": 17
+    },
+    "tab:maze-controls": {
+      "number": "17",
+      "page": 18
+    },
+    "fig:rope-budget": {
+      "number": "9",
+      "page": 18
+    },
+    "tab:maze-full": {
+      "number": "18",
+      "page": 19
+    },
+    "tab:rope-ablation": {
+      "number": "19",
+      "page": 19
+    },
+    "fig:rope-rollouts": {
+      "number": "10",
+      "page": 20
+    },
+    "fig:diverse-execution": {
+      "number": "11",
+      "page": 21
+    },
+    "fig:pusht-rollouts": {
+      "number": "12",
+      "page": 22
+    }
+  },
+  "text_edits": [
+    {
+      "file": "scripts/build_rope_cd_curve.py",
+      "old": "figsize=(3.35,1.8)",
+      "new": "figsize=(3.35,1.65)"
+    },
+    {
+      "file": "scripts/build_rope_cd_curve.py",
+      "old": "bottom=.23,top=.77",
+      "new": "bottom=.25,top=.84"
+    },
+    {
+      "file": "scripts/build_rope_cd_curve.py",
+      "old": ",\n              title=r'Mean $\\pm$ 1 SD',title_fontsize=8)",
+      "new": ")"
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": " Rescue/harm counts native failures recovered/successes lost.",
+      "new": ""
+    },
+    {
+      "file": "sections/appendix.tex",
+      "old": " Rescue/harm counts native failures recovered/successes lost.",
+      "new": ""
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "Native disables ECP; bold marks row maxima.",
+      "new": "Native disables ECP."
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "Ours adds memory $S$, after a prediction-loss plateau for AdaJEPA.",
+      "new": "Ours adds memory $S$."
+    },
+    {
+      "file": "tables/world_model_comparison.tex",
+      "old": "within 150 controls; bold marks column maxima.",
+      "new": "within 150 controls."
+    },
+    {
+      "file": "tables/world_model_comparison.tex",
+      "old": ", with AdaJEPA achieving the highest means.",
+      "new": "."
+    },
+    {
+      "file": "tables/additional_baselines.tex",
+      "old": " DDP-WM has the highest mean among these baselines.",
+      "new": ""
+    },
+    {
+      "file": "tables/maze_controls.tex",
+      "old": "Rescue/harm counts native failures recovered/successes lost; loss-gated $S$ avoids losses.",
+      "new": "Loss-gated $S$ avoids losses."
+    },
+    {
+      "file": "sections/appendix.tex",
+      "old": "Other rows compare stall-triggered latent penalties, pusher weighting, physical action offsets, and contact costs; offsets are in pixels. Contact weight 10 performs best.",
+      "new": "Action offsets are in pixels."
+    },
+    {
+      "file": "sections/appendix.tex",
+      "old": "Rescue/harm counts native failures recovered/successes lost at 50 replans; $p$ is the exact two-sided McNemar test against native AdaJEPA.",
+      "new": "Rescue/harm and $p$ use 50 replans; $p$ is the exact two-sided McNemar test against native AdaJEPA."
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "\\begin{table}[t]\n\\centering\n\\caption{\\textbf{ECP improves Rope planning.} Fixed DINO-WM, three pushes per plan. Ours adds fixed-strength memory after five warm-up pushes. Twenty targets repeat under three seeds (60 runs). CD is mean final Chamfer distance; success requires CD $<0.3$. Pushes averages all runs, including failures capped at 20.}\n\\label{tab:rope}\n\\small\n\\begin{tabular*}{\\columnwidth}{@{\\extracolsep{\\fill}}lrrr@{}}\n\\toprule\nMethod & CD $\\downarrow$ & Success (\\%) $\\uparrow$ & Pushes $\\downarrow$\\\\\n\\midrule\nDINO-WM (native) &0.6865&55.0&12.68\\\\\nDINO-WM (ours) &\\textbf{0.4793}&\\textbf{71.7}&\\textbf{11.30}\\\\\n\\bottomrule\n\\end{tabular*}\n\\end{table}",
+      "new": "\\input{sections/rope_results_panel}"
+    },
+    {
+      "file": "sections/experiments.tex",
+      "old": "\n\\begin{figure}[t]\n\\centering\n\\includegraphics[width=0.95\\columnwidth]{figures/fig_rope_cd_pushes.pdf}\n\\caption{\\textbf{Faster Rope error reduction.} DINO-WM with three pushes per plan; 20 targets under three seeds. Ours uses fixed-strength memory with five warm-up pushes.}\n\\label{fig:rope-cd}\n\\end{figure}\n",
+      "new": "\n"
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "Cross-domain examples also show recovered PushT episodes and lower Rope error (\\cref{fig:execution-recovery}).",
+      "new": "Cross-domain examples show recovered PushT episodes and Rope recovery (\\cref{fig:execution-recovery,fig:rope-main-rollout})."
+    },
+    {
+      "file": "scripts/build_rope_cd_curve.py",
+      "old": "figsize=(3.35,1.65)",
+      "new": "figsize=(3.35,1.5)"
+    },
+    {
+      "file": "scripts/build_rope_cd_curve.py",
+      "old": "bottom=.25,top=.84",
+      "new": "bottom=.27,top=.82"
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "\\paragraph{Conditional correction outperforms permanent reweighting and deeper search.}\nApplying the $10\\times$ multiplier permanently rescues 50 failures but \\textbf{breaks 32 episodes that native MPC solves}, for less than half the net gain of ECP (\\cref{tab:timing}). Triggered ECP preserves every native success while recovering \\textbf{39 failures}, modifying the cost only where native planning has stalled. Deeper search does not resolve stalls either: a lookahead planner evaluating candidate prefixes improves net success only marginally while introducing \\textbf{27 regressions}, and adding lookahead to ECP is worse than ECP alone. These controls support correcting the objective rather than only increasing search.",
+      "new": "\\paragraph{Conditional correction outperforms permanent reweighting and deeper search.}\nPermanent $10\\times$ weighting rescues 50 failures but \\textbf{breaks 32 native successes}, yielding less than half ECP's net gain (\\cref{tab:timing}). Triggered ECP instead recovers \\textbf{39 failures without regressions}. Lookahead search adds \\textbf{27 regressions} for only a marginal net gain; combining it with ECP also underperforms ECP alone. These controls favor correcting the stalled objective over increasing search."
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "\\paragraph{Loss-gated coordination complements online adaptation.}\nOn Maze with online adaptation, correcting at the first stall recovers 7 failures but loses 4 native successes, and a fixed delay is worse than not correcting (\\cref{tab:maze-controls}). Freezing adaptation at the stall point without correcting the objective collapses 50-replan success from 82\\% to 60\\% (\\cref{tab:maze-full}). The loss gate (\\cref{eq:gate}) avoids both pitfalls, retaining every native success at 30 replans and reaching 87\\% at 50 replans.",
+      "new": "\\paragraph{Loss-gated coordination complements online adaptation.}\nOn Maze with adaptation, immediate correction rescues 7 failures but loses 4 native successes; a fixed delay is worse than no correction (\\cref{tab:maze-controls}). Freezing adaptation at a stall without correcting the objective reduces 50-replan success from 82\\% to 60\\% (\\cref{tab:maze-full}). The loss gate (\\cref{eq:gate}) preserves all native successes at 30 replans and reaches 87\\% at 50 replans."
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "\\subsection{Qualitative and behavioral recovery}\n\\label{sec:qualitative}\nIn the PushObj episode of \\cref{fig:teaser}a, the native frozen controller brings the object nearly to its goal by replan 15 and then circles locally without closing the pusher error; ECP shares the first 15 plans, detects the stall, and completes the task two replans later (\\cref{fig:push-distance}). Across triggered episodes, ECP moves the pusher $>15$~px from the stalled position within three replans \\textbf{38\\% of the time vs.\\ 11\\% natively}, and reduces object error or succeeds within ten replans in \\textbf{34\\% vs.\\ 1\\% natively} (\\cref{sec:behavior}). In Maze, stagnation memory makes dead-end corridors costly and redirects the trajectory. Cross-domain examples show recovered PushT episodes and Rope recovery (\\cref{fig:execution-recovery,fig:rope-main-rollout}).\n",
+      "new": "\\subsection{Qualitative and behavioral recovery}\n\\label{sec:qualitative}\nIn \\cref{fig:teaser}a, native frozen control nearly aligns the PushObj object by replan 15, then circles without closing the pusher error. ECP shares those first 15 plans and succeeds two replans later (\\cref{fig:push-distance}). Across triggered episodes, ECP moves the pusher $>15$~px from the stalled position within three replans in \\textbf{38\\% vs.\\ 11\\%} of cases, and reduces object error or succeeds within ten replans in \\textbf{34\\% vs.\\ 1\\%} (\\cref{sec:behavior}). On Maze, memory redirects paths from dead ends. Further examples show PushT and Rope recovery (\\cref{fig:execution-recovery,fig:rope-main-rollout}).\n"
+    },
+    {
+      "file": "sections/experiments.tex",
+      "old": "\\section{Experiments}\n\\label{sec:experiments}\n\\input{tables/world_model_comparison}\n\n\\subsection{Experimental setup}\n\\paragraph{Tasks and metrics.}\nAll tasks are specified by a goal image: \\emph{PushObj} comprises 350 pushing tasks over seven object shapes, of which I, small-T, and square are unseen during training. \\emph{PushT} uses 50 matched start--goal pairs under clean observations and six visual shifts: blur, salt-and-pepper (S\\&P) noise, darker lighting, and a recolored agent, object, or goal. \\emph{Maze} comprises 100 navigation tasks across five held-out layouts, and \\emph{Rope} 20 deformable-object targets repeated under three seeds. PushObj and PushT succeed when the joint pusher/object position error is below 20~pixels and object-angle error is below $\\pi/9$; Maze succeeds when position error is below 0.5~units. On Rope, we report final Chamfer distance (CD) and count success at $\\text{CD}<0.3$ within at most 20 pushes.\n\n\\paragraph{World models and baselines.}\nOur primary world model couples a ResNet visual encoder with a latent Transformer predictor pretrained offline. \\emph{Frozen} holds all weights fixed during execution, whereas \\emph{AdaJEPA} adapts them online from executed transitions~\\cite{wang2026adajepa}. \\emph{Released} denotes the published checkpoint, \\emph{Data aug.} a checkpoint trained offline on our interaction-biased data, and \\emph{Native} the planner without ECP. We compare against and apply ECP to DINO-WM~\\cite{zhou2025dinowm} and LeWM~\\cite{maes2026lewm} with fixed weights. \\emph{Ours} combines augmented training with ECP on PushObj and PushT, and adds ECP to the released models on Maze and Rope.\n\n\\paragraph{Implementation details.}\nPushObj and PushT controllers receive 150 control calls and retain their gradient-descent (GD) or cross-entropy (CEM) planner. ResNet controllers allow 30 replans, each executing five controls from a 25-control horizon; Maze repeats each control four times. Rope uses fixed DINO-WM with three pushes per plan and observation after every push. Across tasks, the detection window spans $W=3$ feedback steps (one completed replan on PushObj, PushT, and Maze; one push on Rope) after a task-specific warm-up. Thresholds satisfy $\\gamma_{\\rm lo}=\\gamma_{\\rm hi}/3$, with $\\gamma_{\\rm hi}=0.45$ for main PushObj and $0.15$ for PushT, Maze, Rope, and PushObj component studies. Memory uses $\\beta=0.25$ and $\\kappa=2$, and goal weight is multiplied by $b=10$ for three planning calls. ECP uses memory $S$ and proprioceptive reweighting $P$ on PushObj and PushT, and $S$ alone on Maze and Rope; Rope stores unit memory weights after five warm-up pushes. Paired comparisons with and without ECP share identical checkpoints, tasks, seeds, and execution budgets.\n\n\\subsection{Comparison with recent world models}\n\\label{sec:comparison}\n\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=0.92\\textwidth]{figures/fig5_execution_recovery.pdf}\n\\caption{\\textbf{ECP recovers failed plans and reduces Rope error.} Brown/teal denote without/with ECP. In (a--f), labels give outcome and stopping replans (maximum 30). Rope pairs (g--h) show both methods after 20 pushes; CD is Chamfer distance (lower is better; success $<0.3$). ECP succeeds in (a--g) and lowers CD in (h), where both methods fail.}\n\\label{fig:execution-recovery}\n\\end{figure*}\n\\Cref{tab:main} compares complete PushObj and PushT controllers. \\emph{Ours (AdaJEPA)} exceeds the strongest baseline by \\textbf{+8.3~pp} on PushObj (77.7\\% vs.\\ 69.4\\%) and \\textbf{+7.4~pp} across the six PushT visual shifts (63.7\\% vs.\\ 56.3\\%), leading 13 of the 16 columns. \\emph{Ours (frozen)} also outperforms released AdaJEPA on PushObj (72.3\\% vs.\\ 69.4\\%). ECP never lowers PushT success across the 28 combinations of checkpoint, update rule, and visual shift (\\cref{tab:pusht-ecp}). Additional fixed-weight R3M, DINO CLS, and DDP-WM controls remain below both of our controllers on average (\\cref{tab:extra-baselines}).\n\n\\subsection{Generality across backbones, tasks, and updates}\n\\label{sec:generality}\n\\paragraph{Other backbones.}\nOn LeWM with fixed parameters, interaction-biased training and ECP together gain \\textbf{+18.6~pp} on PushObj over matched random-data training. Memory and pusher reweighting alone change success by less than one point; a triggered contact-directed term supplies the full recovery gain (\\cref{tab:lewm-contact}).\n\n\\paragraph{Checkpoints and update rules.}\nApplied to the released ResNet checkpoint without retraining, ECP gains \\textbf{+16.0~pp} on PushObj with fixed weights and \\textbf{+3.7~pp} with AdaJEPA (\\cref{tab:components}).\n\n\\paragraph{Navigation and deformable objects.}\nOn Maze, stagnation memory raises success from 48.0\\% to 50.0\\% (frozen) and from 63.0\\% to 66.0\\% (loss-gated AdaJEPA) without losing a single native success (\\cref{tab:maze}). Rope changes the dynamics, backbone (DINO-WM), and optimizer (CEM) at once. Across three seeds, fixed-strength ECP lowers mean final CD from 0.6865 to 0.4793 (30.2\\%) and raises success from 55.0\\% to 71.7\\%. Mean pushes fall from 12.68 to 11.30, including unsuccessful runs (\\cref{tab:rope}). Mean CD falls below 0.7 after 12 pushes, versus 14 for native planning (\\cref{fig:rope-cd}).\n\n",
+      "new": "\\section{Experiments}\n\\label{sec:experiments}\n\\input{tables/world_model_comparison}\n\n\\subsection{Experimental setup}\n\\paragraph{Tasks and metrics.}\nAll tasks are specified by a goal image: \\emph{PushObj} comprises 350 pushing tasks over seven object shapes, of which I, small-T, and square are unseen during training. \\emph{PushT} uses 50 matched start--goal pairs under clean observations and six visual shifts: blur, salt-and-pepper (S\\&P) noise, darker lighting, and a recolored agent, object, or goal. \\emph{Maze} comprises 100 navigation tasks across five held-out layouts, and \\emph{Rope} 20 deformable-object targets repeated under three seeds. PushObj and PushT succeed when the joint pusher/object position error is below 20~pixels and object-angle error is below $\\pi/9$; Maze succeeds when position error is below 0.5~units. On Rope, we report final Chamfer distance (CD) and count success at $\\text{CD}<0.3$ within at most 20 pushes.\n\n\\paragraph{World models and baselines.}\nOur primary world model couples a ResNet visual encoder with a latent Transformer predictor pretrained offline. \\emph{Frozen} holds all weights fixed during execution, whereas \\emph{AdaJEPA} adapts them online from executed transitions~\\cite{wang2026adajepa}. \\emph{Released} denotes the published checkpoint, \\emph{Data aug.} a checkpoint trained offline on our interaction-biased data, and \\emph{Native} the planner without ECP. We compare against and apply ECP to DINO-WM~\\cite{zhou2025dinowm} and LeWM~\\cite{maes2026lewm} with fixed weights. \\emph{Ours} combines augmented training with ECP on PushObj and PushT, and adds ECP to the released models on Maze and Rope.\n\n\\paragraph{Implementation details.}\nPushObj and PushT controllers receive 150 control calls and retain their gradient-descent (GD) or cross-entropy (CEM) planner. ResNet controllers allow 30 replans, each executing five controls from a 25-control horizon; Maze repeats each control four times. Rope uses fixed DINO-WM with three pushes per plan and observation after every push. Across tasks, the detection window spans $W=3$ feedback steps (one completed replan on PushObj, PushT, and Maze; one push on Rope) after a task-specific warm-up. Thresholds satisfy $\\gamma_{\\rm lo}=\\gamma_{\\rm hi}/3$, with $\\gamma_{\\rm hi}=0.45$ for main PushObj and $0.15$ for PushT, Maze, Rope, and PushObj component studies. Memory uses $\\beta=0.25$ and $\\kappa=2$, and goal weight is multiplied by $b=10$ for three planning calls. ECP uses memory $S$ and proprioceptive reweighting $P$ on PushObj and PushT, and $S$ alone on Maze and Rope; Rope stores unit memory weights after five warm-up pushes. Paired comparisons with and without ECP share identical checkpoints, tasks, seeds, and execution budgets.\n\n\\subsection{Comparison with recent world models}\n\\label{sec:comparison}\n\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=0.92\\textwidth]{figures/fig5_execution_recovery.pdf}\n\\caption{\\textbf{ECP recovers failed plans and reduces Rope error.} Brown/teal denote without/with ECP. In (a--f), labels give outcome and stopping replans (maximum 30). Rope pairs (g--h) show both methods after 20 pushes; CD is Chamfer distance (lower is better; success $<0.3$). ECP succeeds in (a--g) and lowers CD in (h), where both methods fail.}\n\\label{fig:execution-recovery}\n\\end{figure*}\n\\Cref{tab:main} compares complete PushObj and PushT controllers. \\emph{Ours (AdaJEPA)} exceeds the strongest baseline by \\textbf{+8.3~pp} on PushObj (77.7\\% vs.\\ 69.4\\%) and \\textbf{+7.4~pp} across the six PushT visual shifts (63.7\\% vs.\\ 56.3\\%), leading 13 of the 16 columns. \\emph{Ours (frozen)} also outperforms released AdaJEPA on PushObj (72.3\\% vs.\\ 69.4\\%). ECP never lowers PushT success across the 28 combinations of checkpoint, update rule, and visual shift (\\cref{tab:pusht-ecp}). Additional fixed-weight R3M, DINO CLS, and DDP-WM controls remain below both of our controllers on average (\\cref{tab:extra-baselines}).\n\n\\subsection{Generality across backbones, tasks, and updates}\n\\label{sec:generality}\n\\paragraph{Other backbones.}\nOn LeWM with fixed parameters, interaction-biased training and ECP together gain \\textbf{+18.6~pp} on PushObj over matched random-data training. Memory and pusher reweighting alone change success by less than one point; a triggered contact-directed term supplies the full recovery gain (\\cref{tab:lewm-contact}).\n\n\\paragraph{Checkpoints and update rules.}\nApplied to the released ResNet checkpoint without retraining, ECP gains \\textbf{+16.0~pp} on PushObj with fixed weights and \\textbf{+3.7~pp} with AdaJEPA (\\cref{tab:components}).\n\n\\paragraph{Navigation and deformable objects.}\nOn Maze, stagnation memory raises success from 48.0\\% to 50.0\\% (frozen) and from 63.0\\% to 66.0\\% (loss-gated AdaJEPA) without losing a single native success (\\cref{tab:maze}). Rope changes the dynamics, backbone (DINO-WM), and optimizer (CEM) at once. Across three seeds, fixed-strength ECP lowers mean final CD from 0.6865 to 0.4793 (30.2\\%) and raises success from 55.0\\% to 71.7\\%. Mean pushes fall from 12.68 to 11.30, including unsuccessful runs (\\cref{tab:rope}). Mean CD falls below 0.7 after 12 pushes, versus 14 for native planning (\\cref{fig:rope-cd}).\n"
+    }
+  ],
+  "build": {
+    "engine": "pdflatex",
+    "abstract_words_whitespace": 231,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 12,
+    "combined_pages": 22,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": null
+  },
+  "crossrefs": {
+    "before": {
+      "total_reference_targets": 79,
+      "main_reference_targets": 31,
+      "main_to_appendix_targets": 15,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 80,
+      "main_reference_targets": 32,
+      "main_to_appendix_targets": 15,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "settings_parameter_table_references": 0,
+    "pdf_internal_links_checked": 226,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 184,
+    "label_destinations_checked": 74,
+    "headline_and_trajectory_figures_unchanged": true,
+    "bibliography_unchanged": true
+  },
+  "visual_review": "Inspected final page 8 at 1600 pixels, pages 6\u20137 and affected appendix pages; no clipped labels or overlapping content."
+}

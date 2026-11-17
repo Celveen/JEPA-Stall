@@ -122,8 +122,8 @@ def plot(data):
         'xtick.labelsize':8,'ytick.labelsize':8,'legend.fontsize':7.8,
         'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none',
         'axes.linewidth':.6,'savefig.facecolor':'white'})
-    fig,ax=plt.subplots(figsize=(3.35,1.8))
-    fig.subplots_adjust(left=.14,right=.98,bottom=.23,top=.77)
+    fig,ax=plt.subplots(figsize=(3.35,1.5))
+    fig.subplots_adjust(left=.14,right=.98,bottom=.27,top=.82)
     ax.spines[['top','right']].set_visible(False)
     ax.tick_params(length=2.5,width=.6)
     ax.grid(axis='y',color='#DCE2E5',linewidth=.45,zorder=0)
@@ -135,8 +135,7 @@ def plot(data):
         ax.plot(data['push_budgets'],mean,color=color,ls=ls,lw=1.4,label=label,
                 marker='o',markersize=2.7,markevery=[0,5,10,15,20],zorder=3)
     ax.legend(loc='lower left',bbox_to_anchor=(-.02,1.02),ncol=2,frameon=False,
-              handlelength=1.6,handletextpad=.45,columnspacing=1.0,borderaxespad=0,
-              title=r'Mean $\pm$ 1 SD',title_fontsize=8)
+              handlelength=1.6,handletextpad=.45,columnspacing=1.0,borderaxespad=0)
     ax.set(xlim=(5,20),ylim=(0,1.8),xticks=[5,10,15,20],yticks=[0,.5,1.,1.5],
            xlabel='Pushes',ylabel='Mean CD')
     for suffix in ['pdf','svg','png']:

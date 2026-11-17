@@ -1,0 +1,240 @@
+{
+  "source": "reports/rope_seed101_20",
+  "seed": 101,
+  "sample": 5,
+  "global_target": 15,
+  "steps": [
+    5,
+    8,
+    11,
+    14,
+    17,
+    20
+  ],
+  "new_experiments_run": false,
+  "selection": "Illustrative matched case where ECP is applied and succeeds while native planning fails at the same 20-push budget.",
+  "protocol": "Fixed DINO-WM, three-push plans, per-push observations, five warm-up pushes, fixed-strength memory 2, CD < 0.3 success.",
+  "archives": {
+    "reports/rope_seed101_20/native3_evidence.tar.gz": "a358914156f1cb4ac05ecbecd67a1b5a2a5e445bbb9e51936f74f2157250636f",
+    "reports/rope_seed101_20/fixed3_evidence.tar.gz": "c1e68ccd3878d8640599f9f3523415590d0d6f2b5b562bfdbaf59935b5cbc710"
+  },
+  "files": {
+    "figures/recorded_rollouts/rope_main_native3_005.png": {
+      "sha256": "1bdb93e2f3fc00cd5091d2712b9d7fd379039313b4bd64f3655aa30c8de54d62",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 5,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_native3_008.png": {
+      "sha256": "bcae2dbc5e65d277601dad5d0f0128f6dd03b892bd14c3eec1630baaeff61589",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 8,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_native3_011.png": {
+      "sha256": "168845a4cf84abd23d2f980ec9b702e0ec7298d71e7ce704b7d2846b4f26a86e",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 11,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_native3_014.png": {
+      "sha256": "168845a4cf84abd23d2f980ec9b702e0ec7298d71e7ce704b7d2846b4f26a86e",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 14,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_native3_017.png": {
+      "sha256": "168845a4cf84abd23d2f980ec9b702e0ec7298d71e7ce704b7d2846b4f26a86e",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 17,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_native3_020.png": {
+      "sha256": "404bd499ee7b064bab0af77006ceb832d14fe6ef01db8123054c9fab2d05b2e8",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 20,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_start.png": {
+      "sha256": "5b141acb53d1283f55ca731e3dc159d9eb113cff7ec642e69cd7fc17f204efa6",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 0,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_goal.png": {
+      "sha256": "d5c155578570201a64c2ef36e8a4104e9b21c02f24f7d5aefe113dec3e87a07b",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/target.pkl",
+      "step": null,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_fixed3_005.png": {
+      "sha256": "1bdb93e2f3fc00cd5091d2712b9d7fd379039313b4bd64f3655aa30c8de54d62",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 5,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_fixed3_008.png": {
+      "sha256": "1bdb93e2f3fc00cd5091d2712b9d7fd379039313b4bd64f3655aa30c8de54d62",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 8,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_fixed3_011.png": {
+      "sha256": "3c8e7183e73949bcdb4276b8c0fccd1b2d2ece8a6ea0fb75c00d70a8542de7d6",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 11,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_fixed3_014.png": {
+      "sha256": "ea292fb9e3f9477ef7d4f7ee96392b2cd133463caf29bd39f2a5cf728a11e798",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 14,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_fixed3_017.png": {
+      "sha256": "ea292fb9e3f9477ef7d4f7ee96392b2cd133463caf29bd39f2a5cf728a11e798",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 17,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_fixed3_020.png": {
+      "sha256": "a17b1001469e322a79747be2280f08a2dad9c1fe86c765dac909c22aaaa7237b",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 20,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    }
+  },
+  "rows": [
+    {
+      "arm": "native3",
+      "label": "Native",
+      "frames": [
+        {
+          "path": "figures/recorded_rollouts/rope_main_native3_005.png",
+          "step": 5,
+          "cd": 1.8437143401474523
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_native3_008.png",
+          "step": 8,
+          "cd": 1.7390815161732718
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_native3_011.png",
+          "step": 11,
+          "cd": 1.7390815244510667
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_native3_014.png",
+          "step": 14,
+          "cd": 1.7390815173994127
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_native3_017.png",
+          "step": 17,
+          "cd": 1.7390815220690214
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_native3_020.png",
+          "step": 20,
+          "cd": 1.7939197385826178
+        }
+      ],
+      "final_cd": 1.7939197385826178,
+      "actual_pushes": 20,
+      "success": false,
+      "recorded_execution_sha256": "2cef0816384406f2e4735fbe300fa7230b6d3d64f404cd1eea2cb0a1f7364917"
+    },
+    {
+      "arm": "fixed3",
+      "label": "Ours",
+      "frames": [
+        {
+          "path": "figures/recorded_rollouts/rope_main_fixed3_005.png",
+          "step": 5,
+          "cd": 1.8437143439794457
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_fixed3_008.png",
+          "step": 8,
+          "cd": 1.8437143556471627
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_fixed3_011.png",
+          "step": 11,
+          "cd": 1.8525993521853392
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_fixed3_014.png",
+          "step": 14,
+          "cd": 1.5097865258856975
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_fixed3_017.png",
+          "step": 17,
+          "cd": 1.5097865269744757
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_fixed3_020.png",
+          "step": 20,
+          "cd": 0.16810256511376237
+        }
+      ],
+      "final_cd": 0.16810256511376237,
+      "actual_pushes": 20,
+      "success": true,
+      "recorded_execution_sha256": "d2922de3e660be746aeac4c23c60eb7ac11f9e0db3b98f9e444de9b584f9b6b2"
+    }
+  ],
+  "start": "figures/recorded_rollouts/rope_main_start.png",
+  "goal": "figures/recorded_rollouts/rope_main_goal.png",
+  "identity": {
+    "target_sha256": "acba118201257f05ecf7578f7ffe9600b2cfce064d75afab8851c1c79b1fe15c",
+    "checkpoint_sha256": "d8f0af314f651b6265bf33359f2b8a55b5cf05e58edacdf127780d28a4948515",
+    "encoder_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "first_ecp_application_push": 7
+  },
+  "goal_annotation": {
+    "source": "figures/recorded_rollouts/rope_main_goal.png",
+    "red_rope_pixels": 188,
+    "red_threshold": "R > G + 25, R > B + 25, R > 100",
+    "pixel_bounds": [
+      76,
+      106,
+      136,
+      145
+    ],
+    "dilation_pixels": 2,
+    "display": "Pale-blue vector halo at original image coordinates.",
+    "fixed_camera_background_pixel_check": true,
+    "underlying_frames_unchanged": true
+  }
+}

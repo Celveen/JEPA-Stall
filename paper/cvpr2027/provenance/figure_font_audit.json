@@ -95,8 +95,15 @@
       "font_programs": 1,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 19,
-      "sha256": "adae9840ffbe69edcae714d70dcd84f1919c76b41d489ff6796c53c99aa2fac7"
+      "text_words": 15,
+      "sha256": "94e44e6bc1a9537ccc0ca93f6ad84c20fb07340a53fb56e115f34300cd52bd98"
+    },
+    "fig_rope_main_rollout.pdf": {
+      "font_programs": 2,
+      "all_font_resources_embedded": true,
+      "type3_fonts": false,
+      "text_words": 40,
+      "sha256": "dcdb6e3625a4cf9f0824bba12b4d10175fe84893fedc0ca374eb8952e78a4742"
     },
     "fig_threshold_sensitivity.pdf": {
       "font_programs": 2,
@@ -107,28 +114,28 @@
     }
   },
   "all_figure_annotations_extractable": true,
-  "raster_content": "Simulator observations only; annotations remain vector text.",
+  "raster_content": "Simulator observations only; labels and registered goal annotations remain vector.",
   "pdfs": {
     "paper.pdf": {
-      "font_programs": 68,
+      "font_programs": 70,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 14858,
-      "sha256": "13a637d1a33621d3e2d478f929eb7644efd909b01617da9833d9483cfe964dc0"
+      "text_words": 14789,
+      "sha256": "dc556b10dbbe768b424a2d9b69fd7299f6846668076eaeb02b3c7b24f81d0a0e"
     },
     "paper_main.pdf": {
-      "font_programs": 57,
+      "font_programs": 59,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 7536,
-      "sha256": "7b2b5ee436d195acb266a6beec2b8477cd7464c611471d0268fa9cdbffd7448a"
+      "text_words": 7517,
+      "sha256": "0302f8444a9b9136b01245c564bca4c36403bb67c300986101eb3368bae845d5"
     },
     "paper_appendix.pdf": {
       "font_programs": 30,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 7322,
-      "sha256": "97e991c10325ba8a18f5045228ab5ef53d86533a55d8461b796e8902974028dd"
+      "text_words": 7272,
+      "sha256": "686e76c097907ea93eca1cb4ceb4b12cf19564a7f7c6e2089ec85e7cab434518"
     }
   }
 }
