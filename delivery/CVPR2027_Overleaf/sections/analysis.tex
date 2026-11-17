@@ -21,7 +21,7 @@ Data aug. & AdaJEPA &74.9&76.0&\textbf{77.1}&76.9\\
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.95\columnwidth]{figures/fig_threshold_sensitivity.pdf}
+\makebox[\columnwidth][c]{\hspace*{-6pt}\includegraphics[width=0.95\columnwidth]{figures/fig_threshold_sensitivity.pdf}\hspace*{6pt}}
 \caption{\textbf{Gains persist across stall thresholds.} AdaJEPA updates an augmented-data ResNet on 350 PushObj tasks with 30 replans. Teal points report ECP success (memory plus goal reweighting); dashed is native planning. Larger $\gamma_{\rm hi}$ detects stalls earlier; $\gamma_{\rm lo}=\gamma_{\rm hi}/3$.}
 \label{fig:threshold}
 \end{figure}

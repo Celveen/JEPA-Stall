@@ -103,25 +103,28 @@ def main():
         raise RuntimeError(f'Combined manuscript has {len(pages)} pages, exceeding 22.')
     shutil.copyfile(ROOT / 'main.pdf', ROOT / 'paper.pdf')
     shutil.copyfile(ROOT / 'main.pdf', ROOT / 'paper_v14.pdf')
-    if poppler:
-        with tempfile.TemporaryDirectory(prefix='jepa-paper-pages-') as directory:
-            pattern = str(Path(directory) / 'page-%d.pdf')
-            run(['pdfseparate', 'main.pdf', pattern])
-            numbered = [str(Path(directory) / f'page-{i+1}.pdf') for i in range(len(pages))]
-            for name, selected in [('paper_main.pdf', numbered[:appendix_page]),
-                                   ('paper_appendix.pdf', numbered[appendix_page:])]:
-                destination = ROOT / name
-                if destination.exists():
-                    destination.unlink()
-                run(['pdfunite', *selected, str(destination)])
-    else:
-        from pypdf import PdfWriter
-        for name, selected in [('paper_main.pdf', reader.pages[:appendix_page]),
-                               ('paper_appendix.pdf', reader.pages[appendix_page:])]:
-            writer = PdfWriter()
-            for page in selected:
-                writer.add_page(page)
-            writer.write(ROOT / name)
+    # Rebuild links explicitly: page-by-page splitting loses named destination
+    # coordinates. References outside each file remain readable, without a
+    # broken internal hyperlink to a page absent from that file.
+    import pymupdf as fitz
+    source = fitz.open(ROOT / 'main.pdf')
+    for name, first, last in [('paper_main.pdf', 0, appendix_page - 1),
+                              ('paper_appendix.pdf', appendix_page, len(source) - 1)]:
+        output = fitz.open()
+        output.insert_pdf(source, from_page=first, to_page=last, links=False)
+        for page_index in range(first, last + 1):
+            target_page = output[page_index - first]
+            for link in source[page_index].get_links():
+                if link['kind'] == fitz.LINK_URI:
+                    target_page.insert_link({'kind': fitz.LINK_URI, 'from': link['from'], 'uri': link['uri']})
+                elif first <= link.get('page', -1) <= last:
+                    target_page.insert_link({'kind': fitz.LINK_GOTO, 'from': link['from'],
+                                             'page': link['page'] - first,
+                                             'to': link.get('to', fitz.Point(0, 0)),
+                                             'zoom': link.get('zoom', 0)})
+        output.save(ROOT / name, garbage=4, deflate=True)
+        output.close()
+    source.close()
     report = {'engine': engine,
               'abstract_words_whitespace': abstract_words,
               'abstract_page': 1, 'figure_one_page': figure_one_page,
