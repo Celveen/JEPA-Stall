@@ -83,31 +83,45 @@
       "type3_fonts": false,
       "text_words": 66,
       "sha256": "2657e25cad8980a0774c3ba9862fe34fdc223c89b30c005ce1f388c54a70c079"
-    }
-  },
-  "pdfs": {
-    "paper.pdf": {
-      "font_programs": 43,
-      "all_font_resources_embedded": true,
-      "type3_fonts": false,
-      "text_words": 14912,
-      "sha256": "28bb1c9bdcd30e97a67b3f59c53106839fe092bd94b7d26f4bffbe2bb116cb17"
     },
-    "paper_main.pdf": {
-      "font_programs": 34,
+    "figS_rope_success_budget.pdf": {
+      "font_programs": 2,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 7971,
-      "sha256": "418f95d59377ddcdf0424fc51977a1f2d1359dc67b0bb384a2a835ab04650461"
+      "text_words": 29,
+      "sha256": "d689ac0fc92f2935431f97008b48c2624a50e493940eff51f91cbde94c556de8"
     },
-    "paper_appendix.pdf": {
-      "font_programs": 27,
+    "fig_threshold_sensitivity.pdf": {
+      "font_programs": 2,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 6941,
-      "sha256": "3b2254110d283d5fd8244fb2ba050b95c251d9277637b5f5babc0356fd59ea81"
+      "text_words": 20,
+      "sha256": "bc3800e15683222e332cf34b06627559a3434d415d9e7d1c78ef923309e82ebe"
     }
   },
   "all_figure_annotations_extractable": true,
-  "raster_content": "Recorded simulator scenes only; labels, legends and axes remain PDF text."
+  "raster_content": "Simulator observations only; annotations and all new curves are vector PDF text.",
+  "pdfs": {
+    "paper.pdf": {
+      "font_programs": 47,
+      "all_font_resources_embedded": true,
+      "type3_fonts": false,
+      "text_words": 14847,
+      "sha256": "1c932be3f6d167b1964a970cd1063fa4a5393a00301e5304674955223a9e2189"
+    },
+    "paper_main.pdf": {
+      "font_programs": 36,
+      "all_font_resources_embedded": true,
+      "type3_fonts": false,
+      "text_words": 7822,
+      "sha256": "87387105df22c2e7e712004bbd699b39795e713819783354e4a857dde5a65782"
+    },
+    "paper_appendix.pdf": {
+      "font_programs": 29,
+      "all_font_resources_embedded": true,
+      "type3_fonts": false,
+      "text_words": 7025,
+      "sha256": "9e57b3055658b74f4b7f8509394f8559e1a9bfb5ed10b74ca49c0362bb06239f"
+    }
+  }
 }

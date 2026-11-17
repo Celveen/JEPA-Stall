@@ -35,35 +35,35 @@ A stall detector must separate lack of progress from lack of motion, since a sta
  {\max\{D_{\alpha_0}(z_t,z_g),\epsilon\}}},
  \label{eq:rate}
 \end{equation}
-where $z_{t-W}$ is the state $W$ feedback steps earlier and $\epsilon$ is a numerical floor. This movement rate is dimensionless, hence independent of the latent scale, and it is small whenever the controller has moved little relative to the distance still to be covered. We map it to a continuous stall weight,
+where $z_{t-W}$ is the state $W$ feedback steps earlier and $\epsilon$ is a numerical floor. The ratio compares net motion with remaining goal distance: small $r_t$ indicates little movement relative to the task still ahead. It is invariant to uniform latent rescaling when the numerical floor is inactive. We map it to a continuous stall weight,
 \begin{equation}
  w_t=\operatorname{clip}_{[0,1]}\!\left(
  \frac{\gamma_{\rm hi}-r_t}{\gamma_{\rm hi}-\gamma_{\rm lo}}\right),
  \label{eq:weight}
 \end{equation}
-which equals one when $r_t$ falls below the lower threshold $\gamma_{\rm lo}$ and vanishes above the upper threshold $\gamma_{\rm hi}$. Whenever $w_t>0$, the pair $(o_t,w_t)$ is appended to the episode memory $\mathcal M_t$. Because current, past, and goal observations are all encoded by the current encoder, the detector stays consistent under online adaptation.
+which equals one below $\gamma_{\rm lo}$, decreases linearly between the thresholds, and is zero above $\gamma_{\rm hi}$. Whenever $w_t>0$, the pair $(o_t,w_t)$ is appended to the episode memory $\mathcal M_t$. Because current, past, and goal observations are all encoded by the current encoder, the detector stays consistent under online adaptation.
 
 \subsection{Stagnation memory}
 \label{sec:memory}
-The memory turns detected stalls into a cost that discourages predicted trajectories from re-entering stalled neighborhoods, while leaving the goal and unrelated regions of the latent space unaffected. Before each planning call, every stored observation is re-encoded as a memory state $m_j$, where $j$ indexes the entries of $\mathcal M_t$ and $w_j$ is the recorded stall weight. Each memory receives an amplitude $s_j$ and a squared support radius $\rho_j$ that scale with its goal distance,
-\begin{align}
- s_j&=\frac{D_{\alpha_0}(m_j,z_g)}{H+1},\nonumber\\
- \rho_j&=\max\{\beta D_{\alpha_0}(m_j,z_g),\epsilon\},
+The memory turns detected stalls into a cost that discourages predicted trajectories from re-entering stalled neighborhoods, while leaving the goal and unrelated regions of the latent space unaffected. Before each planning call, every stored observation is re-encoded as a memory state $m_j$, where $j$ indexes the entries of $\mathcal M_t$ and $w_j$ is the recorded stall weight. Let $d_j=D_{\alpha_0}(m_j,z_g)$ be its squared goal distance. The penalty amplitude $s_j$ and squared support radius $\rho_j$ are
+\begin{equation}
+ s_j=\frac{d_j}{H+1},\qquad
+ \rho_j=\max\{\beta d_j,\epsilon\}.
  \label{eq:memoryscale}
-\end{align}
-with radius fraction $\beta\in(0,1)$; the factor $1/(H+1)$ matches the scale of an all-frame goal objective. A compact-support kernel penalizes predicted states near the memory,
+\end{equation}
+Here $\beta\in(0,1)$ sets the neighborhood size, and $1/(H+1)$ matches the all-frame goal objective's scale. A compact-support kernel penalizes predicted states near the memory,
 \begin{equation}
  K_j(z)=\left[1-\frac{D_{\alpha_0}(z,m_j)}{\rho_j}\right]_+^2,
  \label{eq:kernel}
 \end{equation}
-where $[u]_+=\max(u,0)$. Summing over memories and over the horizon yields the regularizer
+where $[u]_+=\max(u,0)$. The kernel is one at $m_j$ and zero when $D_{\alpha_0}(z,m_j)\geq\rho_j$. Summing over memories and the horizon gives
 \begin{equation}
  \mathcal R_t^{\rm stall}(A)
  =\sum_{h=1}^{H}\pi_h
  \sum_{j\in\mathcal M_t}w_js_jK_j(\hat z_{t,h}(A)),
  \label{eq:penalty}
 \end{equation}
-in which the normalized weights $\pi_h=2^h/\sum_{k=1}^{H}2^k$ emphasize later frames and thus favor plans that end outside a stalled neighborhood. Memories are kept for the whole episode, so every stalled neighborhood continues to shape all subsequent plans.
+in which the normalized weights $\pi_h=2^h/\sum_{k=1}^{H}2^k$ emphasize later frames and thus favor plans that end outside a stalled neighborhood. Memories persist throughout the episode. The fixed-strength Rope variant assigns unit weight to every triggered memory instead of retaining its severity $w_j$.
 
 Tying the amplitude and the radius to the goal distance gives the regularizer two useful properties, derived in \cref{sec:properties}. It never penalizes the goal: because $\beta<1$, the support of each kernel is strictly smaller than the distance from its memory to the goal, so, above the numerical floor $\epsilon$, the goal lies outside every support. It is also smooth and local: the penalty and its first derivative vanish at the support boundary and beyond, so plans that stay away from stalled neighborhoods are optimized exactly as before.
 
@@ -79,7 +79,7 @@ In its trigger-only mode, ECP sets $g_t=1$ throughout, and the empty memory guar
  {\max\{\bar\ell_{t-W_g},\epsilon\}}.
  \label{eq:gate}
 \end{equation}
-Starting from $g_t=0$, the gate opens at the first step at which the controller is stalled ($w_t>0$) and the model has stopped improving ($q_t<\tau_g$), and it stays open thereafter. Stalled observations are recorded while the gate is closed, so the memory is available as soon as correction begins.
+Positive $q_t$ means the prediction loss has fallen; zero or negative values indicate a plateau or increase. Starting from $g_t=0$, the gate opens when the controller is stalled ($w_t>0$) and improvement falls below a minimum $\tau_g$ ($q_t<\tau_g$), and remains open thereafter. Stalled observations are recorded while the gate is closed, so the memory is available as soon as correction begins.
 
 \subsection{Interaction-biased data augmentation}
 \label{sec:data}

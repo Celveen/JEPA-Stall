@@ -1,34 +1,5 @@
 {
   "before": {
-    "total_reference_targets": 66,
-    "main_reference_targets": 37,
-    "main_to_appendix_targets": 21,
-    "main_to_appendix_labels": [
-      "sec:properties",
-      "sec:implementation",
-      "sec:pending",
-      "tab:dinowm-aug",
-      "tab:training",
-      "tab:maze-controls",
-      "tab:memory-strength",
-      "tab:action",
-      "tab:threshold-shape",
-      "sec:additional-controls",
-      "tab:maze-controls",
-      "tab:maze-full",
-      "sec:behavior",
-      "fig:pusht-rollouts",
-      "fig:rope-rollouts",
-      "tab:parameters",
-      "tab:pusht-ecp",
-      "tab:extra-baselines",
-      "sec:backbone",
-      "tab:lewm-contact",
-      "sec:rope-details"
-    ],
-    "missing_labels": []
-  },
-  "after": {
     "total_reference_targets": 67,
     "main_reference_targets": 37,
     "main_to_appendix_targets": 21,
@@ -57,11 +28,39 @@
     ],
     "missing_labels": []
   },
+  "after": {
+    "total_reference_targets": 69,
+    "main_reference_targets": 36,
+    "main_to_appendix_targets": 20,
+    "main_to_appendix_labels": [
+      "sec:properties",
+      "sec:implementation",
+      "tab:dinowm-aug",
+      "tab:training",
+      "tab:maze-controls",
+      "tab:memory-strength",
+      "tab:action",
+      "tab:threshold-shape",
+      "sec:additional-controls",
+      "tab:maze-controls",
+      "tab:maze-full",
+      "sec:behavior",
+      "fig:pusht-rollouts",
+      "fig:rope-rollouts",
+      "tab:parameters",
+      "tab:pusht-ecp",
+      "tab:extra-baselines",
+      "sec:backbone",
+      "tab:lewm-contact",
+      "sec:rope-details"
+    ],
+    "missing_labels": []
+  },
   "settings_parameter_table_references": 1,
-  "pdf_internal_links_checked": 197,
+  "pdf_internal_links_checked": 199,
   "invalid_pdf_internal_links": 0,
-  "named_destinations": 183,
-  "label_destinations_checked": 68,
+  "named_destinations": 182,
+  "label_destinations_checked": 70,
   "headline_and_trajectory_figures_unchanged": true,
   "bibliography_unchanged": true
 }

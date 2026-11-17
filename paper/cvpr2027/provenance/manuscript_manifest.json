@@ -5,44 +5,45 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "XeTeX via Tectonic",
-  "base_repository_commit": "f7a23217b329e7fa206a5c3f8967b2c7f860193b",
+  "base_repository_commit": "e70d7cc7ce0bba6a4ded906a8799c6bbdbfe2bba",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/rope_three_seed_revision.json",
+  "audit": "provenance/curves_equations_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "28bb1c9bdcd30e97a67b3f59c53106839fe092bd94b7d26f4bffbe2bb116cb17",
-    "paper_v14.pdf": "28bb1c9bdcd30e97a67b3f59c53106839fe092bd94b7d26f4bffbe2bb116cb17",
-    "paper_main.pdf": "418f95d59377ddcdf0424fc51977a1f2d1359dc67b0bb384a2a835ab04650461",
-    "paper_appendix.pdf": "3b2254110d283d5fd8244fb2ba050b95c251d9277637b5f5babc0356fd59ea81"
+    "paper.pdf": "1c932be3f6d167b1964a970cd1063fa4a5393a00301e5304674955223a9e2189",
+    "paper_v14.pdf": "1c932be3f6d167b1964a970cd1063fa4a5393a00301e5304674955223a9e2189",
+    "paper_main.pdf": "87387105df22c2e7e712004bbd699b39795e713819783354e4a857dde5a65782",
+    "paper_appendix.pdf": "9e57b3055658b74f4b7f8509394f8559e1a9bfb5ed10b74ca49c0362bb06239f"
   },
-  "figures": 8,
+  "figures": 10,
   "main_body_pages": 8,
   "combined_pages": 21,
-  "revision": "v3-rope-three-seed-fixed-strength",
+  "revision": "v3-planning-curves-equation-clarity",
   "abstract_words_whitespace": 213,
   "figure_pages": {
     "fig:headline": 1,
     "fig:teaser": 2,
     "fig:method": 4,
     "fig:execution-recovery": 7,
-    "fig:push-distance": 18,
+    "fig:threshold": 8,
+    "fig:push-distance": 16,
+    "fig:rope-budget": 18,
     "fig:rope-rollouts": 19,
     "fig:diverse-execution": 20,
     "fig:pusht-rollouts": 21
   },
-  "revision_description": "Use fixed-strength S with five warm-up pushes as the Rope main method, report three-seed accuracy and all-run push efficiency, and show two matched full-view Rope executions.",
+  "revision_description": "Add measured threshold and Rope success-budget curves; clarify equations and place Equation 5 on one line.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-17T04:56:23.781867+00:00",
+  "updated": "2026-11-17T05:36:37.771768+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 11,
   "table_pages": {
     "tab:main": 6,
     "tab:components": 7,
-    "tab:threshold": 8,
     "tab:timing": 8,
     "tab:maze": 8,
     "tab:rope": 8,
@@ -51,10 +52,11 @@
     "tab:extra-baselines": 15,
     "tab:lewm-contact": 15,
     "tab:dinowm-aug": 15,
+    "tab:threshold": 15,
     "tab:threshold-shape": 16,
     "tab:memory-strength": 16,
     "tab:training": 16,
-    "tab:action": 16,
+    "tab:action": 17,
     "tab:maze-controls": 17,
     "tab:maze-full": 18,
     "tab:rope-ablation": 18
@@ -76,5 +78,5 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/rope_three_seed_revision.json"
+  "current_revision_provenance": "provenance/curves_equations_revision.json"
 }

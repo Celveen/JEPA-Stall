@@ -162,7 +162,7 @@ The contact extension uses observed simulator object pose and known shape geomet
  J_{\rm contact}(A)=10\operatorname{mean}_{k=1,\ldots,5;\,d=x,y}
  \left(\frac{\hat p_{k,d}(A)-q_d}{\sigma_{p,d}}\right)^2,
 \]
-where $q$ is the selected waypoint and $\hat p_k(A)$ is the pusher position predicted by differentiable PD dynamics from its observed position and velocity. The normalization uses dataset pusher-position standard deviations. This term acts jointly with the visual goal, stagnation regularizer, and conditional pusher-goal term during action optimization. The optimizer output is executed directly. Controls are compared in \cref{tab:lewm-contact}.
+where $q$ is the selected waypoint and $\hat p_k(A)$ is the pusher position predicted by differentiable PD dynamics from its observed position and velocity. Here $k$ indexes the five predicted controls, $d\in\{x,y\}$ indexes position coordinates, and $\sigma_{p,d}$ is the dataset pusher-position standard deviation on axis $d$. This term acts jointly with the visual goal, stagnation regularizer, and conditional pusher-goal term during action optimization. The optimizer output is executed directly. Controls are compared in \cref{tab:lewm-contact}.
 
 \begin{table}[t]
 \centering
@@ -207,6 +207,25 @@ To test whether the training-side benefit depends on our backbone, we train two 
 
 \section{Trigger-threshold ablation details}
 \label{sec:threshold-details}
+\begin{table}[t]
+\centering
+\caption{\textbf{Trigger-threshold ablation on PushObj.} Augmented-data ResNet checkpoint with AdaJEPA online updates and $S{+}P$, 350 tasks, 30 replans, $\gamma_{\rm lo}=\gamma_{\rm hi}/3$. Triggered counts episodes with at least one detected stall; First is the median replan of the first trigger. Rescue/harm counts native failures recovered and native successes lost.}
+\label{tab:threshold}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+$\gamma_{\rm hi}$ & Success (\%) & Triggered & First & Rescue / harm\\
+\midrule
+Native &74.9&---&---&---\\
+0.15 &76.9&90&14&8 / 1\\
+0.30 &77.4&101&12&11 / 2\\
+0.45 &\textbf{77.7}&108&11&11 / 1\\
+0.60 &77.4&111&10&11 / 2\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \begin{table*}[t]
 \centering
 \caption{\textbf{Per-shape results of the trigger-threshold ablation.} PushObj success (\%) with the augmented-data checkpoint and $S{+}P$, 50 tasks per shape, 30 replans, and $\gamma_{\rm lo}=\gamma_{\rm hi}/3$. Frozen fixes the pretrained ResNet world model; AdaJEPA updates it online. Native omits ECP. Seen averages L, Z, $+$, and T; Unseen averages I, square (Sq.), and small-T (sT).}
@@ -229,7 +248,7 @@ AdaJEPA & Native & 52 & 88 & 50 & 94 & 72 & 84 & 84 & 87.5 & 58.0 & 74.9\\
 \end{table*}
 All runs use the same checkpoint and the same 350 tasks, GD with 100 iterations, 30 replans of five controls, a three-replan detection window, and a 50-control warm-up; only the trigger interval changes. Every Native/ECP pair has identical starts and goals and identical actions up to the first intervention.
 
-The per-shape breakdown separates the larger gains on seen shapes from transfer to unseen geometry. With fixed ResNet weights, the two tested thresholds solve the same number of tasks but exchange two outcomes; this equality of aggregate success does not imply identical trajectories.
+\Cref{tab:threshold} gives the trigger timing and paired outcomes underlying \cref{fig:threshold}; larger thresholds activate correction earlier and in more episodes. The per-shape breakdown separates gains on seen shapes from transfer to unseen geometry. With fixed ResNet weights, the two tested thresholds solve the same number of tasks but exchange two outcomes; this equality of aggregate success does not imply identical trajectories.
 
 \section{Additional PushObj ablations}
 \label{sec:additional-controls}
@@ -257,7 +276,13 @@ For the augmented-data ResNet model held fixed at test time, memory alone has fi
 
 \subsection{Behavior after a trigger}
 \label{sec:behavior}
-We compare each triggered episode of the augmented-data ResNet model held fixed at test time ($\gamma_{\rm hi}=0.15$) with its native counterpart from the trigger onward. With ECP, the pusher moves more than 15 pixels away from the stalled position within three replans in 38\% of triggered episodes, versus 11\% under native planning. Within ten replans, the object error decreases by more than 5 pixels or the task succeeds in 34\% of triggered episodes, versus 1\% natively. ECP thus changes behavior promptly after the trigger, in line with the recoveries in \cref{fig:teaser,fig:execution-recovery}.
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/figS_pushobj_distance.pdf}
+\caption{\textbf{Completing a stalled PushObj trajectory.} Both controllers hold the offline-pretrained ResNet world model fixed. The curve reports joint pusher/object position error; lines mark the detected stall and the 20-pixel success threshold. The angle condition holds at the successful endpoint.}
+\label{fig:push-distance}
+\end{figure}
+We compare each triggered episode of the augmented-data ResNet model held fixed at test time ($\gamma_{\rm hi}=0.15$) with its native counterpart from the trigger onward. With ECP, the pusher moves more than 15 pixels away from the stalled position within three replans in 38\% of triggered episodes, versus 11\% under native planning. Within ten replans, the object error decreases by more than 5 pixels or the task succeeds in 34\% of triggered episodes, versus 1\% natively. \Cref{fig:push-distance} tracks the goal error during one such recovery.
 
 \subsection{Additional task stream and training seeds}
 \label{sec:replication}
@@ -277,7 +302,7 @@ Seeds 200, 300 / 30 replans &$57.90\pm3.45$&$71.19\pm2.44$\\
 \end{table}
 An additional PushObj stream (S7) contains 280 targets from 280 source episodes, with no target-segment or source-episode overlap with the two 350-task streams. At 30 replans, AdaJEPA solves 217, trigger-only combined correction solves 222, and gated combined correction solves 220. S7 was also used during development.
 
-\Cref{tab:training} reports native planning across three training initializations; its rows use different target streams and execution budgets and are not pooled. ECP component interventions use one checkpoint per training recipe. S7 was also used during development; source-disjoint confirmation and replication of ECP across trained models remain future work.
+\Cref{tab:training} reports native planning across three training initializations; its rows use different target streams and execution budgets and are not pooled. ECP component interventions use one checkpoint per training recipe. Source-disjoint confirmation and replication of ECP across trained models remain future work.
 
 \subsection{Action-space instantiation}
 \label{sec:action-space}
@@ -369,21 +394,11 @@ Native&5&0&0.5809&70.0\%&12.75\\
 
 Fixed $S$ with five warm-up pushes has the best aggregate CD, success, and push count among the matched three-push configurations. It gains three, three, and four successes across the seeds, rescues 12 native failures, and loses two native successes. Both CD and mean push count improve in every seed. Dynamic $S$ has lower CD in seed 99 but no gain in seed 100; removing warm-up yields worse CD than native planning in seed 101. The five-push native control changes both prediction and execution horizons and is reported separately rather than pooled across seeds.
 
-Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention, so aggregate comparisons do not attribute every trajectory difference to $S$. The three seeds repeat the same targets; they do not establish generalization to a larger target set. The Rope pairs in \cref{fig:execution-recovery} show fixed-strength ECP and native planning after equal numbers of pushes.
-
-\section{Simulator renderings}
-\label{sec:renderings}
-\paragraph{Recorded execution and replay.}
-PushT and Rope sequences use RGB observations saved during actual simulator execution. PushObj and Maze views use the original Pymunk and MuJoCo renderers at logged states. Their solid trajectories replay saved full-precision controls with the original action normalization and repeat settings; replan endpoints agree within $5.0\times10^{-4}$ pixels and $5.0\times10^{-5}$ state units, respectively. Trajectories are not smoothed. Every pair retains the same full-scene framing, and no local magnification is used.
-
-\paragraph{Visual shifts and deformation.}
-The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T-shaped background anchor is not the task goal; the final column shows the actual target observation. In the red-agent native run, the pusher leaves the viewport. The two Rope sequences compare native DINO-WM and fixed-strength ECP with five warm-up pushes on matched targets. Columns align actual push counts, and all four runs execute twenty pushes. ECP first affects planning at push seven in both examples. All views retain the full camera frame.
-
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/figS_pushobj_distance.pdf}
-\caption{\textbf{Completing a stalled PushObj trajectory.} Both controllers hold the offline-pretrained ResNet world model fixed. The curve reports joint pusher/object position error; lines mark the detected stall and the 20-pixel success threshold. The angle condition holds at the successful endpoint.}
-\label{fig:push-distance}
+\includegraphics[width=\columnwidth]{figures/figS_rope_success_budget.pdf}
+\caption{\textbf{Rope success versus executed pushes.} Each curve counts the fraction of 60 DINO-WM runs that have reached CD $<0.3$ by a given push budget (20 targets, three seeds). All variants predict and execute three pushes per plan, with success checked after each push. Warm-up counts pushes before stall detection begins.}
+\label{fig:rope-budget}
 \end{figure}
 
 \begin{figure*}[t]
@@ -392,6 +407,22 @@ The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T
 \caption{\textbf{Matched Rope executions with DINO-WM.} Native planning (brown) and fixed-strength ECP with five warm-up pushes (teal), on two targets from seed 101. Columns align actual push counts. At push twenty, ECP succeeds in (a) and reaches lower CD in (b), where both runs remain above the 0.3 success threshold.}
 \label{fig:rope-rollouts}
 \end{figure*}
+
+\Cref{fig:rope-budget} shows when successes accumulate, complementing the endpoint scores in \cref{tab:rope-ablation}. Successful runs remain counted at larger budgets; unsuccessful runs contribute zero throughout.
+
+Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention, so aggregate comparisons do not attribute every trajectory difference to $S$. The three seeds repeat the same targets; they do not establish generalization to a larger target set. The Rope pairs in \cref{fig:execution-recovery} show fixed-strength ECP and native planning after equal numbers of pushes.
+
+\section{Simulator renderings}
+\label{sec:renderings}
+\paragraph{Recorded execution and replay.}
+PushT and Rope sequences use RGB observations saved during actual simulator execution. PushObj and Maze views use the original Pymunk and MuJoCo renderers at logged states. Their solid trajectories replay saved full-precision controls with the original action normalization and repeat settings; replan endpoints agree within $5.0\times10^{-4}$ pixels and $5.0\times10^{-5}$ state units, respectively. Trajectories are not smoothed. Every pair retains the same full-scene framing, and no local magnification is used.
+
+\paragraph{Visual shifts and deformation.}
+The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T-shaped background anchor is not the task goal; the final column shows the actual target observation. In the red-agent native run, the pusher leaves the viewport. The two Rope sequences compare native DINO-WM and fixed-strength ECP with five warm-up pushes on matched targets. Columns align all four runs at equal push counts.
+
+
+
+
 
 \begin{figure*}[t]
 \centering
@@ -411,13 +442,8 @@ The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T
 
 \section{Limitations and future work}
 \label{sec:pending}
-\paragraph{Evaluation scope.}
-The PushObj and Maze task lists were used during method development, and the trigger threshold and LeWM contact weight were selected on them. The reported paired gains are therefore development results. Component interventions use one checkpoint per training recipe and were run at $\gamma_{\rm hi}=0.15$; the single-component variants were not re-evaluated at $0.45$. The paired statistics are unadjusted. The Maze gains correspond to two (frozen) and three (adaptive) additional tasks out of 100, and with AdaJEPA the PushObj gains concentrate on seen shapes (\cref{tab:threshold-shape}).
+PushObj and Maze tasks informed method development, including threshold and LeWM contact-weight selection. Component ablations use one checkpoint per recipe at $\gamma_{\rm hi}=0.15$, without retesting individual components at $0.45$; paired statistics are unadjusted. Maze gains are modest; adaptive PushObj gains favor seen shapes (\cref{tab:threshold-shape}).
 
-\paragraph{Representation-level stall detection.}
-Stagnation is detected in the learned representation, so a visual shift that obscures the object state can also degrade the progress signal. On PushT, red-object success remains at 12\% for the frozen augmented model and reaches 18\% with AdaJEPA (\cref{tab:pusht-ecp}).
+Visual shifts can impair latent stall detection: red-object PushT success is only 12\% with fixed augmented ResNet weights and 18\% with AdaJEPA (\cref{tab:pusht-ecp}). ECP does not improve the tested DINO-WM/CEM PushObj outcomes. Lookahead controls match execution budgets but use more computation per replan.
 
-The lookahead controls share ECP's execution budget but not its per-replan computation. On PushObj with DINO-WM and CEM, augmentation improves success, whereas ECP leaves outcomes unchanged in the tested settings.
-
-\paragraph{Planned evaluations.}
-Future studies will use source-disjoint PushObj tasks and new Maze layouts, vary collection bias and noise independently under matched training, and replicate ECP across checkpoints and seeds. Matched-budget controls will compare triggers, memory, loss gates, weighting, and search. Further work includes shift-robust encoders, aggregating verified recoveries, and learning ACT-inspired temporal behaviors. Multiple training seeds will quantify uncertainty in the paired gains~\cite{henderson2018matters,agarwal2021statistical}.
+Future work will test source-disjoint tasks, isolate collection bias and noise, match computation budgets, and replicate across checkpoints and training seeds to quantify paired-gain uncertainty~\cite{henderson2018matters,agarwal2021statistical}.

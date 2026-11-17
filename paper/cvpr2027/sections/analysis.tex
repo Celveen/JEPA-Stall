@@ -23,29 +23,17 @@ Data aug. & AdaJEPA &74.9&76.0&\textbf{77.1}&76.9\\
 \end{table}
 
 \paragraph{Both corrections contribute, in different tasks.}
-Each correction alone improves on native planning for both checkpoints and both update rules (\cref{tab:components}). On PushObj, most of the gain comes from goal reweighting, and adding memory changes the outcome by at most one task, in line with stalls in which the object is nearly in place while the pusher position remains open. On Maze with AdaJEPA the roles are reversed, and memory alone attains the highest success without regressions (\cref{tab:maze-controls}). Memory is most effective on the joint visual and proprioceptive latent, which separates scenes that share an agent position; it outperforms a proprioception-only memory at every strength we test (\cref{tab:memory-strength}). The corrections thus address complementary causes of stagnation, unfinished goal components and revisited regions. The principle also extends beyond the latent objective: an action-space variant that detects stalls from physical displacement and applies a bounded pusher-goal offset improves AdaJEPA on two task streams (\cref{tab:action}).
+Each correction improves native planning across checkpoints and update rules (\cref{tab:components}). On PushObj, goal reweighting accounts for most of the gain; adding memory changes at most one outcome, consistent with stalls dominated by unfinished pusher alignment. On Maze with AdaJEPA, memory alone yields the highest success without regressions (\cref{tab:maze-controls}). Joint visual/proprioceptive memory outperforms proprioception-only memory at every tested strength, separating scenes that share an agent position (\cref{tab:memory-strength}). The components thus address unfinished goals and revisited regions. An action-space variant using physical displacement and a bounded pusher-goal offset also improves AdaJEPA on two task streams (\cref{tab:action}).
 
-\begin{table}[t]
+\begin{figure}[t]
 \centering
-\caption{\textbf{Trigger-threshold ablation on PushObj.} Augmented-data ResNet checkpoint with AdaJEPA online updates and $S{+}P$, 350 tasks, 30 replans, $\gamma_{\rm lo}=\gamma_{\rm hi}/3$. Triggered counts episodes with at least one detected stall; First is the median replan of the first trigger. Rescue/harm counts native failures recovered and native successes lost.}
-\label{tab:threshold}
-\small
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{lrrrr}
-\toprule
-$\gamma_{\rm hi}$ & Success (\%) & Triggered & First & Rescue / harm\\
-\midrule
-Native &74.9&---&---&---\\
-0.15 &76.9&90&14&8 / 1\\
-0.30 &77.4&101&12&11 / 2\\
-0.45 &\textbf{77.7}&108&11&11 / 1\\
-0.60 &77.4&111&10&11 / 2\\
-\bottomrule
-\end{tabular}
-\end{table}
+\includegraphics[width=\columnwidth]{figures/fig_threshold_sensitivity.pdf}
+\caption{\textbf{Trigger-threshold sensitivity on PushObj.} AdaJEPA with the augmented-data ResNet, 350 tasks and 30 replans. ECP uses $S{+}P$ and $\gamma_{\rm lo}=\gamma_{\rm hi}/3$. Points show measured success; the dashed line is native planning.}
+\label{fig:threshold}
+\end{figure}
 
 \paragraph{ECP is robust to the trigger threshold.}
-\Cref{tab:threshold} varies the threshold below which movement counts as a stall over a fourfold range. Larger thresholds trigger in more episodes and earlier, yet success stays within one point across the range and always above native planning, with at most two regressions. Per shape, gains appear on seen and unseen shapes alike with fixed parameters and concentrate on seen shapes with AdaJEPA (\cref{tab:threshold-shape}).
+\Cref{fig:threshold} varies the threshold below which movement counts as a stall over a fourfold range. Larger thresholds trigger in more episodes and earlier, yet success stays within one point across the range and always above native planning, with at most two regressions. Per shape, gains appear on seen and unseen shapes alike with fixed parameters and concentrate on seen shapes with AdaJEPA (\cref{tab:threshold-shape}).
 
 \begin{table}[t]
 \centering
@@ -66,7 +54,7 @@ ECP (triggered $S{+}P$) &\textbf{72.3}&39 / 0\\
 \end{table}
 
 \paragraph{Conditional correction outperforms permanent reweighting and longer search.}
-Applying the same multiplier permanently recovers many failures but breaks 32 episodes that native planning solves, for less than half the net gain of ECP (\cref{tab:timing}). Triggered correction preserves every native success while recovering 39 failures, because it alters the objective only where native planning has stopped working. A more thorough search does not resolve stalls either: a lookahead planner that evaluates additional candidate sequences improves success only marginally and introduces 27 regressions, and adding lookahead to ECP is worse than ECP alone (\cref{sec:additional-controls}). When the objective itself points toward an unproductive plan, optimizing it harder does not help.
+Permanent reweighting breaks 32 native successes and yields less than half ECP's net gain (\cref{tab:timing}). Triggered correction preserves every native success while recovering 39 failures. Lookahead search adds only a marginal gain and introduces 27 regressions; combining it with ECP performs worse than ECP alone (\cref{sec:additional-controls}). Optimizing an objective more thoroughly does not resolve its preference for an unproductive plan.
 
 \begin{table}[t]
 \centering
