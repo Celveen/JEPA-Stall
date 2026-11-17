@@ -5,24 +5,24 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "pdfLaTeX (TeX Live 2026)",
-  "base_repository_commit": "f1d71e17bba344af28e8d44b029b3fc351cd0654",
+  "base_repository_commit": "dd15e91db5c7f7a7251edf817c2284ede5355d46",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/rollout_clarity_revision.json",
+  "audit": "provenance/rope_axis_refinement_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "8ac7a8fb61e82dbb1e3d1e635b7dad1d857f1eba3a3ca753ee229037454b157d",
-    "paper_v14.pdf": "8ac7a8fb61e82dbb1e3d1e635b7dad1d857f1eba3a3ca753ee229037454b157d",
-    "paper_main.pdf": "21e5ff2a7e4a2ce191a50ed05ae36f39253e5abf66a11aade4dedd8ac0d78046",
-    "paper_appendix.pdf": "8bf03f3ece5a70d19791f22285ab4bcfc2ad0291a108ad08aec5b16136754e6a"
+    "paper.pdf": "e36b3df4c9634d03ff91718b4269f27bf4ddbe2c125fa6ce8e97654cf5cd13ca",
+    "paper_v14.pdf": "e36b3df4c9634d03ff91718b4269f27bf4ddbe2c125fa6ce8e97654cf5cd13ca",
+    "paper_main.pdf": "d60ebd5b1bd163361e22e6bde9f516f2202214b8b6d8d1cf362d9cb1cffa8035",
+    "paper_appendix.pdf": "e4565bd0226780b786a8c46f1b838de39ca6ce58dd1951789c225892d17dfc6d"
   },
   "figures": 12,
   "main_body_pages": 8,
   "combined_pages": 22,
-  "revision": "rollout-final-push-clarity",
+  "revision": "rope-axis-refinement",
   "abstract_words_whitespace": 231,
   "figure_pages": {
     "fig:headline": 1,
@@ -38,7 +38,7 @@
     "fig:diverse-execution": 21,
     "fig:pusht-rollouts": 22
   },
-  "revision_description": "Show recorded pushes 5,8,14,18,19,20 to reveal late Rope correction; refine cost wording and Figure 7 caption spacing.",
+  "revision_description": "Remove final sentence of Table 5 caption; increase Figure 7 height, use zero-based 0\u20131.2 CD range with full bands, and label Number of pushes.",
   "reference_svg_sha256": "1c4e4b79bb4021566f01f518e59be4e90b38295f96c6c39deebe42a05680b89a",
   "updated": "2026-11-17",
   "main_with_references_pages": 10,
