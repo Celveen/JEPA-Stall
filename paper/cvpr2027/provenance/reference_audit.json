@@ -1,8 +1,8 @@
 {
   "before": {
-    "total_reference_targets": 80,
-    "main_reference_targets": 32,
-    "main_to_appendix_targets": 15,
+    "total_reference_targets": 82,
+    "main_reference_targets": 33,
+    "main_to_appendix_targets": 16,
     "main_to_appendix_labels": [
       "sec:properties",
       "sec:implementation",
@@ -14,6 +14,7 @@
       "tab:threshold-shape",
       "tab:maze-controls",
       "tab:maze-full",
+      "sec:cost",
       "fig:push-distance",
       "sec:behavior",
       "tab:pusht-ecp",
@@ -47,10 +48,10 @@
     "missing_labels": []
   },
   "settings_parameter_table_references": 0,
-  "pdf_internal_links_checked": 230,
+  "pdf_internal_links_checked": 368,
   "invalid_pdf_internal_links": 0,
-  "named_destinations": 191,
+  "named_destinations": 179,
   "label_destinations_checked": 76,
   "headline_and_trajectory_figures_unchanged": true,
-  "bibliography_unchanged": true
+  "bibliography_unchanged": false
 }

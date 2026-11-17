@@ -304,7 +304,11 @@ FUNCTION {format.doi}
 FUNCTION {format.title}
 { title empty$
     { "" }
-    { title "t" change.case$ }
+    { url empty$
+        { doi empty$ { title "t" change.case$ }
+          { "\href{https://doi.org/" doi * "}{" * title "t" change.case$ * "}" * } if$ }
+        { "\href{" url * "}{" * title "t" change.case$ * "}" * }
+      if$ }
   if$
 }
 

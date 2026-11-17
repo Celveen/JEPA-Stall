@@ -5,24 +5,24 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "pdfLaTeX (TeX Live 2026)",
-  "base_repository_commit": "32db049e2261fe7770a822441c2f32f38d7c3ea2",
+  "base_repository_commit": "1c4541b3e0147c96dc0ce65388ab3fa76773c783",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/cost_and_spacing_revision.json",
+  "audit": "provenance/bibliography_review.json",
   "pdf_sha256": {
-    "paper.pdf": "b37a0a5589ea710dbee2db07871cc915044de68492e2a9ee9c42509350dd6dc6",
-    "paper_v14.pdf": "b37a0a5589ea710dbee2db07871cc915044de68492e2a9ee9c42509350dd6dc6",
-    "paper_main.pdf": "1b456384cb7ab522cb74a358d1dff430e04c1a65fb690d9f99d8c0ee13ebc6ad",
-    "paper_appendix.pdf": "221fa1166f6f87fe5c4845fcea7aeb4eced9cc1c8255f5b74808f93c3e7e26e0"
+    "paper.pdf": "34c74bcc964496cc42a1a6a9272b2f17dbe071a2abc88f2a18f2af11360fa4cd",
+    "paper_v14.pdf": "34c74bcc964496cc42a1a6a9272b2f17dbe071a2abc88f2a18f2af11360fa4cd",
+    "paper_main.pdf": "afbdd655ed82f0bfd6cc85e578d6fb1d45fee7e8425d2eed5914853456bfc980",
+    "paper_appendix.pdf": "87493ed1ab1eaa29d5143a5660f1cde7fb8132653099b8b07770592863fd73ca"
   },
   "figures": 11,
   "main_body_pages": 8,
   "combined_pages": 22,
-  "revision": "cost-results-and-compact-float-spacing",
+  "revision": "prose-typography-and-reference-audit",
   "abstract_words_whitespace": 231,
   "figure_pages": {
     "fig:headline": 1,
@@ -38,7 +38,7 @@
     "fig:diverse-execution": 21,
     "fig:pusht-rollouts": 22
   },
-  "revision_description": "Remove stretched gaps after Figure 5 and Table 5; add measured ECP cost conclusions in the main paper and paired timing/memory details in the appendix.",
+  "revision_description": "Remove experimental prose boldface, link all bibliography titles and verify primary sources and appendix destinations.",
   "reference_svg_sha256": "1c4e4b79bb4021566f01f518e59be4e90b38295f96c6c39deebe42a05680b89a",
   "updated": "2026-11-17T10:30:42.990576+00:00",
   "main_with_references_pages": 10,
@@ -82,6 +82,6 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/cost_and_spacing_revision.json",
+  "current_revision_provenance": "provenance/bibliography_review.json",
   "tables": 19
 }
