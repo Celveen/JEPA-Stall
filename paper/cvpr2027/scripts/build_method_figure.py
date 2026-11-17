@@ -43,7 +43,9 @@ def main():
         p=fonts/filename
         if not p.exists():p=Path(reportlab.__file__).parent/'fonts'/backup
         pdfmetrics.registerFont(TTFont(name,str(p)))
-    overlay=BytesIO(); c=canvas.Canvas(overlay,pagesize=(468,234),invariant=1);serial=0
+    # Use an embedded font from the first PDF text state; ReportLab's default
+    # would otherwise leave an unembedded Helvetica resource in the figure.
+    overlay=BytesIO(); c=canvas.Canvas(overlay,pagesize=(468,234),invariant=1,initialFontName='Diagram');serial=0
     def vertex(x,y,w,h,style,value=''):
         nonlocal serial
         serial+=1;v=ET.SubElement(root,'mxCell',id=f'planning_v2_{serial}',value=value,style=style,vertex='1',parent='1')
@@ -123,8 +125,16 @@ def main():
         rect(x,204,13,9,ACCENT if i<3 else LIGHT,ACCENT if i<3 else '#cad0d3',.3)
     text(155,221,'Across replans',7.5)
     c.save();ov=fitz.open(stream=overlay.getvalue(),filetype='pdf');page.show_pdf_page(page.rect,ov,0)
+    # STIX's legacy private-use code for calligraphic R should copy as Unicode
+    # SCRIPT CAPITAL R; this changes extraction only, never the drawn glyph.
+    for xref in range(1,document.xref_length()):
+        if 'STIXNonUnicode' not in document.xref_object(xref):continue
+        kind,value=document.xref_get_key(xref,'ToUnicode')
+        if kind=='xref':
+            cmap=int(value.split()[0]);stream=document.xref_stream(cmap)
+            document.update_stream(cmap,stream.replace(b'[<e23e>]',b'[<211b>]').replace(b'[<E23E>]',b'[<211B>]'))
     target=paper/'figures/fig2_method.pdf';document.subset_fonts();document.save(target,garbage=4,deflate=True);document.close();ov.close()
-    d=fitz.open(target);(paper/'figures/svg/fig2_method.svg').write_text(d[0].get_svg_image(text_as_path=True));d.close()
+    d=fitz.open(target);(paper/'figures/svg/fig2_method.svg').write_text(d[0].get_svg_image(text_as_path=False));d.close()
     d=pdfium.PdfDocument(target);preview=paper/'figures/previews/fig2_method.png';d[0].render(scale=4).to_pil().save(preview);d.close()
     drawio=repo/'delivery/Figure3.drawio';ET.indent(tree,space='  ');tree.write(drawio,encoding='utf-8',xml_declaration=True); (paper/'Figure3.drawio').write_bytes(drawio.read_bytes())
     sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()

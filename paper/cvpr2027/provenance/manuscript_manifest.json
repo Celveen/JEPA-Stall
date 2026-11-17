@@ -5,40 +5,38 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "XeTeX via Tectonic",
-  "base_repository_commit": "2d341cbfac96824bd57bfa29fbb6fe3fbcc4d758",
+  "base_repository_commit": "09ac1804c09b122a29b8b084e546b452c33d032e",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/appendix_evidence_revision.json",
+  "audit": "provenance/v3_rope_fairness_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "e7b910d751d5eb1705e2817b752258f0d6e5f8d15aa02946405db5028d3211d1",
-    "paper_v14.pdf": "e7b910d751d5eb1705e2817b752258f0d6e5f8d15aa02946405db5028d3211d1",
-    "paper_main.pdf": "0efaec81eaf665f8292421a8ddca0e2b55674e1a4e37a39ad0ef54213f3f255e",
-    "paper_appendix.pdf": "21c0fa1dd3fc08d44a6e92944e3e35d0b2b95e07c36b0767630801920e739548"
+    "paper.pdf": "37e88de998e51f7e2aa3090c932fba5bed075ac5e43e47f9fb64511a44bdd6eb",
+    "paper_v14.pdf": "37e88de998e51f7e2aa3090c932fba5bed075ac5e43e47f9fb64511a44bdd6eb",
+    "paper_main.pdf": "7b073351f725c7c3a07bd734cc5dd2932934cda1c10838c691f025a070e262a5",
+    "paper_appendix.pdf": "6a253f0009d621065b8f8c3cb87beece2d2c1b49e9c0414c4530ad62ba20d7e8"
   },
-  "figures": 10,
+  "figures": 8,
   "main_body_pages": 8,
   "combined_pages": 21,
-  "revision": "v2-planning-appendix-evidence",
-  "abstract_words_whitespace": 196,
+  "revision": "v3-matched-rope-embedded-fonts",
+  "abstract_words_whitespace": 213,
   "figure_pages": {
     "fig:headline": 1,
     "fig:teaser": 2,
     "fig:method": 4,
     "fig:execution-recovery": 7,
     "fig:push-distance": 18,
-    "fig:push-frames": 19,
-    "fig:maze-case": 19,
     "fig:rope-rollouts": 19,
     "fig:diverse-execution": 20,
     "fig:pusht-rollouts": 21
   },
-  "revision_description": "Restore appendix evidence, streamline supplementary text and add verified real PushT/Rope rollout sequences in 21 pages.",
+  "revision_description": "Adopt supplied v3, correct Rope image comparisons, disclose seed sensitivity, remove duplicate appendix figures and ensure embedded, copyable figure text.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-16T16:30:43.467585+00:00",
+  "updated": "2026-11-17T03:22:03.789248+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 11,
   "table_pages": {
@@ -78,5 +76,5 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/appendix_evidence_revision.json"
+  "current_revision_provenance": "provenance/v3_rope_fairness_revision.json"
 }

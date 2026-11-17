@@ -1,5 +1,5 @@
 \section*{Supplementary Material}
-This supplement details implementation, evaluation protocols, backbone transfer, ablations, simulator renderings, and limitations.
+This supplement follows the order of the main paper. It gives implementation details and the properties of the stagnation regularizer (\cref{sec:implementation,sec:properties}), specifies the benchmark protocols and backbone-transfer experiments (\cref{sec:benchmark,sec:backbone}), reports the remaining ablations (\cref{sec:threshold-details,sec:additional-controls,sec:maze-details,sec:rope-details}), and documents the simulator renderings, limitations, and future work (\cref{sec:renderings,sec:pending}).
 
 \section{Implementation and evaluation details}
 \label{sec:implementation}
@@ -80,7 +80,7 @@ Write $\hat z_{t,0}=z_t$ for the initial context. The inherited objective is
 Here $J_{\rm goal}=J_{\rm all}$ throughout Maze, while PushObj uses $J_{\rm last}$ for the first five plans and $J_{\rm all}$ thereafter. Both $\omega_h$ and the regularizer weights $\pi_h$ are normalized, but $\omega_h$ includes the fixed context and $\pi_h$ weights only predicted states. The extra $1/(H+1)$ factor is inherited from the implementation; the memory amplitude uses the same scale. Main PushObj regularization begins after the terminal-only phase.
 
 \paragraph{Update and activation order.}
-After execution, the newest-transition error is measured, the optional online model update is applied, and motion is evaluated using the resulting encoder. Each positive trigger appends an observation and its weight, even while the gate is closed. For the trigger-only variant, the memory and three-call boost become available at the next plan. For the gated variant, the first feedback satisfying both $w_t>0$ and $q_t<\tau_g$ opens the gate permanently. Earlier memories then become active, and that feedback starts the boost. The gate requires one qualifying feedback, rather than several consecutive detections. A later positive trigger renews the boost interval; memory entries remain active after the boost expires. No memory deduplication, decay, or averaging by memory size is applied. Observation and model state reset between episodes. Detection starts after ten completed replans on PushObj and four in the Maze gating study. The main correction variants continue adapting after activation; model freezing is confined to the explicitly labeled controls.
+After execution, the newest-transition error is measured, the optional online model update is applied, and motion is evaluated using the resulting encoder. Each positive trigger appends an observation and its weight, even while the gate is closed. For the trigger-only variant, the memory and three-call boost become available at the next plan. For the gated variant, the running mean in \cref{eq:gate} is $\bar\ell_t=(\ell_t+\ell_{t-1}+\ell_{t-2})/3$, and the gate is evaluated once both loss windows are available. The first feedback satisfying both $w_t>0$ and $q_t<\tau_g$ opens the gate permanently. Earlier memories then become active, and that feedback starts the boost. The gate requires one qualifying feedback, rather than several consecutive detections. A later positive trigger renews the boost interval; memory entries remain active after the boost expires. No memory deduplication, decay, or averaging by memory size is applied. Observation and model state reset between episodes. Detection starts after ten completed replans on PushObj and four in the Maze gating study. The main correction variants continue adapting after activation; model freezing is confined to the explicitly labeled controls.
 
 \subsection{Paired evaluation and statistics}
 \label{sec:paired}
@@ -365,7 +365,10 @@ Native&5&0&0.581&\textbf{70\%}&12.75\\
 
 Dynamic strength achieves the lowest mean CD among these configurations, whereas the native five-push horizon gives the highest success rate. Relative to native planning with the same three-push horizon, dynamic $S$ gains three successes and loses one; CD is lower on ten targets, higher on eight, and equal on two. Fixed $S$ and removing its warm-up each reach 65\% success but have higher mean CD than dynamic $S$. These metrics describe different aspects of the final configuration, so neither strength schedule dominates on every metric.
 
-Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention. The main comparison therefore reports aggregate same-protocol outcomes rather than attributing every trajectory difference to $S$. The fixed-strength examples in \cref{fig:execution-recovery} are separate visualization runs and do not supply the dynamic-strength aggregate scores.
+Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention. The main comparison therefore reports aggregate same-protocol outcomes rather than attributing every trajectory difference to $S$. The Rope examples in \cref{fig:execution-recovery} compare equal executed push counts on seed 100; they illustrate individual outcomes, not the aggregate seed-99 gain.
+
+\paragraph{Seed sensitivity.}
+The reported Rope tables use reference seed 99. Repeating the same 20 targets with seed 100 gives native/dynamic-$S$ mean CD of 0.5759/0.5763 and success of 65\%/60\%. Fixed $S$ with/without warm-up reaches CD 0.3542/0.3033, both at 80\% success. The dynamic-strength CD gain therefore does not persist across these two seeds. These are repeated executions of the same targets, not additional independent tasks.
 
 \section{Simulator renderings}
 \label{sec:renderings}
@@ -373,7 +376,7 @@ Each condition is an independent physics execution under matching targets, model
 PushT and Rope sequences use RGB observations saved during actual simulator execution. PushObj and Maze views use the original Pymunk and MuJoCo renderers at logged states. Their solid trajectories replay saved full-precision controls with the original action normalization and repeat settings; replan endpoints agree within $5.0\times10^{-4}$ pixels and $5.0\times10^{-5}$ state units, respectively. Trajectories are not smoothed. Every pair retains the same full-scene framing, and no local magnification is used.
 
 \paragraph{Visual shifts and deformation.}
-The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T-shaped background anchor is not the task goal; the final column shows the actual target observation. In the red-agent native run, the pusher leaves the viewport. Rope sequences use DINO-WM with native five-push plans and fixed-strength ECP three-push plans after five warm-up pushes. These recorded visualization runs are separate from aggregate evaluation, including the dynamic-strength Rope results.
+The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T-shaped background anchor is not the task goal; the final column shows the actual target observation. In the red-agent native run, the pusher leaves the viewport. The Rope sequence compares native DINO-WM and dynamic ECP on the same target and seed, using three-push plans and identical observation times. Both runs stop after ten pushes; ECP first affects planning at push seven. All views retain the full camera frame.
 
 \begin{figure}[t]
 \centering
@@ -384,22 +387,8 @@ The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig1_pushobj_motivation.pdf}
-\caption{\textbf{PushObj recovery with fixed ResNet weights.} The controllers share the start, goal, and first 15 executed plans. ECP completes the pusher-position component at replan 17; native planning remains unsuccessful at replan 30. Shared states appear once.}
-\label{fig:push-frames}
-\end{figure*}
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figures/fig3_maze_case.pdf}
-\caption{\textbf{Maze recovery with AdaJEPA.} The first six plans match. Gated memory reaches goal distance 0.44 at replan 27, below the 0.5 threshold; native AdaJEPA remains 3.04 units away at replan 30. Online model updates continue in both runs.}
-\label{fig:maze-case}
-\end{figure*}
-
-\begin{figure*}[t]
-\centering
 \includegraphics[width=\textwidth]{figures/figS_rope_rollouts.pdf}
-\caption{\textbf{Recorded Rope execution with DINO-WM.} A full-view sequence for target 15 with native planning and fixed-strength ECP. Labels count actual pushes and show final Chamfer distance (CD). ECP reaches lower final CD in this example but uses more pushes. Both models remain fixed; each row ends at its own successful stopping state.}
+\caption{\textbf{Matched Rope executions with DINO-WM.} Native planning (brown) and dynamic ECP (teal) on target 13, seed 100. Columns show the same actual push counts. Both runs succeed at push ten; final CD is 0.122 without ECP and 0.057 with ECP. The first corrected action is push seven.}
 \label{fig:rope-rollouts}
 \end{figure*}
 
@@ -431,6 +420,3 @@ The lookahead controls share ECP's execution budget but not its per-replan compu
 
 \paragraph{Planned evaluations.}
 Future studies will use source-disjoint PushObj tasks and new Maze layouts, vary collection bias and noise independently under matched training, and replicate ECP across checkpoints and seeds. Matched-budget controls will compare triggers, memory, loss gates, weighting, and search. Further work includes shift-robust encoders, aggregating verified recoveries, and learning ACT-inspired temporal behaviors. Multiple training seeds will quantify uncertainty in the paired gains~\cite{henderson2018matters,agarwal2021statistical}.
-
-\paragraph{Artifact provenance.}
-Source materials include result manifests, hashes, figure scripts and assets, plus CVPR styles.

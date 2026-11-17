@@ -1,5 +1,5 @@
 {
-  "source": "fullview_visuals_20261116.json, lewm_figure4_visuals.json and replayed_paths_v12.json",
+  "source": "fullview_visuals_20261116.json, lewm_figure4_visuals.json, replayed_paths_v12.json and rope_matched_visuals_seed100.json",
   "case_order": [
     [
       "old",
@@ -34,19 +34,19 @@
       1
     ]
   ],
-  "rope_excluded_from_formal_aggregate": true,
-  "rope_labels": "Frozen CD / Ours CD: Chamfer distance, lower is better; native 5/5 versus fixed-S 3/3; targets 15 and 24 have 3 and 0 S activations",
+  "rope_evaluation_seed": 100,
+  "rope_display": "Native versus dynamic ECP on targets 13/16, both arms ending at 10/20 pushes respectively; lower final CD in these illustrative cases, not a seed-wide gain",
   "titles": "PushObj ResNet; PushT LeWM; Maze AdaJEPA; Rope DINO-WM",
   "legend": {
     "Without ECP": "#B95B38",
     "With ECP": "#087D83"
   },
-  "maze_e": "Verified AdaJEPA target 75, also used in Figure 2; not a relabeled frozen run",
+  "maze_e": "Verified AdaJEPA target 75, also used in Figure 2",
   "framing": "Full image bounds for all 16 panels; PushObj boundary draw calls omitted; LeWM original PNG perimeter hidden by white vector strips",
   "pusht_labels": "Terminating replan count; LeWM with/without ECP",
   "outputs": {
     "figures/fig5_execution_recovery.pdf": {
-      "sha256": "b6350941d0c4f849c5d3cdfe29c898691e80a84548946a02ef70944e9dde4a96",
+      "sha256": "b6afb0e70f2c9df12c0bce2f965a24c80ec263a8067638a5acd5b5c2537488fb",
       "size_inches": [
         6.875,
         2.82
@@ -56,7 +56,7 @@
       "text_collisions": 0
     },
     "figures/svg/fig5_execution_recovery.svg": {
-      "sha256": "11e1ef39dde4d02ad0eefeb66d542791543f1666a79957c679544deba1fd4335",
+      "sha256": "8b66da7ac6f4d463cb8c6b3deb3599af67c19a066a605f512d239f684f6f6855",
       "size_inches": [
         6.875,
         2.82
@@ -66,7 +66,7 @@
       "text_collisions": 0
     },
     "figures/previews/fig5_execution_recovery.png": {
-      "sha256": "451941e38258561f7345ec68485f22dcec2fdbe63857d8453852a71d49cd9d27",
+      "sha256": "8328c523c68dab6863aab29dfa67acf79e12fb58044c7f344d828af3a8a9de7a",
       "size_inches": [
         6.875,
         2.82

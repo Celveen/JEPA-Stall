@@ -1,6 +1,6 @@
 \section{Execution-conditioned planning}
 \label{sec:method}
-Our approach couples interaction-biased training with inference-time correction (\cref{fig:method}). Offline, augmented collection enriches the experience from which dynamics are learned. Online, ECP monitors execution, and once it detects a stall, stagnation memory raises the cost of candidate trajectories that revisit stalled states while temporary reweighting emphasizes the unfinished goal component. Both corrections persist across replans.
+Our approach has two parts (\cref{fig:method}). Offline, interaction-biased data collection enriches the experience from which dynamics are learned. Online, ECP monitors execution and, once it detects a stall, modifies the next planning objective through a stagnation memory and a temporary goal reweighting that persist across replans.
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig2_method.pdf}
@@ -8,80 +8,79 @@ Our approach couples interaction-biased training with inference-time correction 
 \label{fig:method}
 \end{figure*}
 
-\subsection{Latent planning objective}
-At planning decision $t$, the observation $o_t=(x_t,p_t)$ contains image $x_t$ and proprioception $p_t$; $o_g$ is the goal observation. An encoder $E_\theta$ maps them to $z_t=(z_t^v,z_t^p)$ and $z_g$, with visual and proprioceptive dimensions $d_v$ and $d_p$. For candidate action blocks $A=(a_1,\ldots,a_H)$, the action-conditioned predictor $P_\theta$ produces future states $\hat z_{t,h}(A)$, $h=1,\ldots,H$, where $\theta$ denotes the model parameters and $H$ the planning horizon. MPC executes the first action block and replans from the resulting observation.
+\subsection{Latent planning and the ECP objective}
+At planning step $t$, the agent receives an observation $o_t=(x_t,p_t)$, consisting of an image $x_t$ and proprioception $p_t$, together with a goal observation $o_g$. An encoder $E_\theta$ maps them to latent states $z_t=(z_t^v,z_t^p)$ and $z_g$, whose visual and proprioceptive parts have dimensions $d_v$ and $d_p$. Given candidate action blocks $A=(a_1,\ldots,a_H)$ over a horizon $H$, an action-conditioned predictor $P_\theta$ produces future states $\hat z_{t,h}(A)$, $h=1,\ldots,H$. Model predictive control optimizes $A$, executes its first block, and replans from the resulting observation.
 
-The planning distance balances the two observation branches:
+Planning quality is measured by a distance that balances the two branches of the latent state,
 \begin{equation}
  D_\alpha(z,z')=
  \frac{\norm{z^v-z'^v}^2}{d_v}
  +\alpha\frac{\norm{z^p-z'^p}^2}{d_p},
  \label{eq:metric}
 \end{equation}
-where $\norm{\cdot}$ is the Euclidean norm and $\alpha\geq0$ weights proprioception. The native goal objective $J_{\rm goal}(A;\alpha)$ aggregates this distance along the rollout using the original planner's terminal-frame or weighted all-frame schedule. We call this unmodified objective native planning. ECP solves
+where $\norm{\cdot}$ is the Euclidean norm and $\alpha\geq0$ weights proprioception. The planner's \emph{native} objective $J_{\rm goal}(A;\alpha)$ aggregates this distance to the goal along the rollout, at the terminal frame or over all frames depending on the underlying planner. Since $J_{\rm goal}$ depends only on the current observation and the goal, planning calls made from the same state are indistinguishable, whatever happened between them. ECP lets the objective depend on the episode instead:
 \begin{equation}
  A_t^*=\argmin_A\left\{
  J_{\rm goal}(A;\alpha_t)
  +\kappa g_t\mathcal R_t^{\rm stall}(A)\right\}.
  \label{eq:objective}
 \end{equation}
-Here $\mathcal R_t^{\rm stall}$ is our stagnation regularizer, $\kappa$ its strength, $g_t\in\{0,1\}$ an activation gate, and $\alpha_t$ a temporary goal weight. Before any stall is detected, \cref{eq:objective} reduces exactly to native planning. ECP thus modifies only the action objective and leaves the predictive architecture untouched, allowing either fixed parameters or AdaJEPA online updates.
+Here $\mathcal R_t^{\rm stall}$ is a stagnation regularizer built from an episode memory $\mathcal M_t$, $\kappa$ is its strength, $g_t\in\{0,1\}$ gates its activation, and $\alpha_t$ is a goal weight that can be raised temporarily above its base value $\alpha_0$. Until a stall is detected, the memory is empty and $\alpha_t=\alpha_0$, so \cref{eq:objective} coincides exactly with native planning. ECP thus changes only the action objective: the encoder, predictor, and optimizer are untouched, and $\theta$ may stay fixed or be updated online.
 
 \subsection{Detecting stagnation from execution}
 \label{sec:trigger}
-The trigger compares net movement with the distance still remaining to the goal. Over a window of $W$ observation-feedback steps, the normalized movement rate is
+A stall detector must separate lack of progress from lack of motion, since a stalled controller can execute large actions and still end where it began. We therefore compare the \emph{net} latent displacement over a window of $W$ observation-feedback steps with the distance that remains to the goal:
 \begin{equation}
  r_t=\sqrt{\frac{D_{\alpha_0}(z_t,z_{t-W})}
- {\max\{D_{\alpha_0}(z_t,z_g),\epsilon\}}}.
+ {\max\{D_{\alpha_0}(z_t,z_g),\epsilon\}}},
  \label{eq:rate}
 \end{equation}
-A feedback step is one completed replan on PushObj, PushT, and Maze, or one push on Rope. Here $z_{t-W}$ is the state $W$ feedback steps earlier, $\alpha_0=1$ is the base proprioceptive weight, and $\epsilon=10^{-12}$ prevents division by zero. A small $r_t$ indicates little net progress even when the intervening actions are large. Normalizing by the remaining distance makes the rate dimensionless and independent of the latent scale. We convert $r_t$ into a continuous stall weight:
+where $z_{t-W}$ is the state $W$ feedback steps earlier and $\epsilon$ is a numerical floor. This movement rate is dimensionless, hence independent of the latent scale, and it is small whenever the controller has moved little relative to the distance still to be covered. We map it to a continuous stall weight,
 \begin{equation}
  w_t=\operatorname{clip}_{[0,1]}\!\left(
  \frac{\gamma_{\rm hi}-r_t}{\gamma_{\rm hi}-\gamma_{\rm lo}}\right),
  \label{eq:weight}
 \end{equation}
-where $\operatorname{clip}_{[0,1]}$ clamps its argument to $[0,1]$. Motion below $\gamma_{\rm lo}$ receives full weight, and motion above $\gamma_{\rm hi}$ receives zero. We use $W=3$ and tie $\gamma_{\rm lo}=\gamma_{\rm hi}/3$ throughout. The main PushObj results use $\gamma_{\rm hi}=0.45$; PushT, Maze, Rope, and the PushObj component studies use $\gamma_{\rm hi}=0.15$. A positive $w_t$ stores $(o_t,w_t)$ in the episode memory $\mathcal M_t$. Current, historical, and goal observations are all encoded by the current encoder, so the trigger stays consistent during online adaptation. Detection begins after a task-specific warm-up.
+which equals one when $r_t$ falls below the lower threshold $\gamma_{\rm lo}$ and vanishes above the upper threshold $\gamma_{\rm hi}$. Whenever $w_t>0$, the pair $(o_t,w_t)$ is appended to the episode memory $\mathcal M_t$. Because current, past, and goal observations are all encoded by the current encoder, the detector stays consistent under online adaptation.
 
-\subsection{A trajectory-level stagnation regularizer}
+\subsection{Stagnation memory}
 \label{sec:memory}
-Once a configuration is recorded as stalled, nearby predicted states receive an additional cost. Scaling each cost by its distance to the goal ties the correction to the current task. Before planning, each stored observation is re-encoded as a memory state $m_j$, where $j$ indexes the entries of $\mathcal M_t$ and $w_j$ is the recorded trigger weight. Its goal-scaled amplitude $s_j$ and squared support radius $\rho_j$ are
+The memory turns detected stalls into a cost that discourages predicted trajectories from re-entering stalled neighborhoods, while leaving the goal and unrelated regions of the latent space unaffected. Before each planning call, every stored observation is re-encoded as a memory state $m_j$, where $j$ indexes the entries of $\mathcal M_t$ and $w_j$ is the recorded stall weight. Each memory receives an amplitude $s_j$ and a squared support radius $\rho_j$ that scale with its goal distance,
 \begin{align}
  s_j&=\frac{D_{\alpha_0}(m_j,z_g)}{H+1},\nonumber\\
- \rho_j&=\max\{\beta D_{\alpha_0}(m_j,z_g),\epsilon\}.
+ \rho_j&=\max\{\beta D_{\alpha_0}(m_j,z_g),\epsilon\},
  \label{eq:memoryscale}
 \end{align}
-A compact-support kernel penalizes a predicted state near that memory:
+with radius fraction $\beta\in(0,1)$; the factor $1/(H+1)$ matches the scale of an all-frame goal objective. A compact-support kernel penalizes predicted states near the memory,
 \begin{equation}
  K_j(z)=\left[1-\frac{D_{\alpha_0}(z,m_j)}{\rho_j}\right]_+^2,
  \label{eq:kernel}
 \end{equation}
-where $[u]_+=\max(u,0)$, so a memory affects only predictions within its support radius. To favor corrections that persist toward the end of the plan, each predicted frame receives the normalized weight $\pi_h=2^h/\sum_{k=1}^{H}2^k$, $h=1,\ldots,H$. The trajectory penalty sums these local costs:
+where $[u]_+=\max(u,0)$. Summing over memories and over the horizon yields the regularizer
 \begin{equation}
  \mathcal R_t^{\rm stall}(A)
  =\sum_{h=1}^{H}\pi_h
- \sum_{j\in\mathcal M_t}w_js_jK_j(\hat z_{t,h}(A)).
+ \sum_{j\in\mathcal M_t}w_js_jK_j(\hat z_{t,h}(A)),
  \label{eq:penalty}
 \end{equation}
-We use $\beta=0.25$ and $\kappa=2$; the $1/(H+1)$ scale matches the ResNet all-frame objective. For the terminal-cost Rope planner, we omit this factor. The initial context is excluded because candidate actions cannot change it. Memory persists throughout the episode, so every stalled neighborhood continues to shape all subsequent plans.
+in which the normalized weights $\pi_h=2^h/\sum_{k=1}^{H}2^k$ emphasize later frames and thus favor plans that end outside a stalled neighborhood. Memories are kept for the whole episode, so every stalled neighborhood continues to shape all subsequent plans.
 
-This construction has two properties that make it well suited to augmenting a goal objective. First, it never penalizes the goal: the support radius is half the memory-to-goal distance in the norm induced by $D_{\alpha_0}$, so, above the numerical floor $\epsilon$, the goal lies outside every kernel's support. Second, it is smooth and local: the penalty and its first derivative vanish at the support boundary and beyond, so trajectories away from stalled neighborhoods are unaffected. \Cref{sec:properties} derives these properties and the dependence of the action gradient on the learned dynamics.
+Tying the amplitude and the radius to the goal distance gives the regularizer two useful properties, derived in \cref{sec:properties}. It never penalizes the goal: because $\beta<1$, the support of each kernel is strictly smaller than the distance from its memory to the goal, so, above the numerical floor $\epsilon$, the goal lies outside every support. It is also smooth and local: the penalty and its first derivative vanish at the support boundary and beyond, so plans that stay away from stalled neighborhoods are optimized exactly as before.
 
 \subsection{Temporary goal reweighting}
 \label{sec:weighting}
-Memory specifies where not to return; goal reweighting specifies what to finish. When a positive trigger occurs with the correction gate open, we set $\alpha_t=b\alpha_0$, with multiplier $b=10$, for the next three planning calls. A later trigger renews this interval; otherwise the weight returns to $\alpha_0$. In PushObj, success requires both object placement and pusher positioning, and the boost completes the agent-position component once the object is nearly aligned. Because the boost is conditional and temporary, the native objective governs planning until a stall calls for correction.
+Memory tells the planner where not to return; it does not tell it what to finish. A controller can stall with one goal component nearly satisfied and another still open: in PushObj, once the object is nearly aligned, the remaining error lies in the pusher position, which the proprioceptive branch of \cref{eq:metric} measures directly. When a stall is detected and the correction gate is open, ECP therefore raises the proprioceptive weight to $\alpha_t=b\,\alpha_0$, with $b>1$, for a fixed number of planning calls. A new trigger renews this interval; otherwise the weight returns to $\alpha_0$. Because the boost is conditional and temporary, the native objective governs planning whenever execution is progressing.
 
-\subsection{Scheduling correction during adaptation}
+\subsection{Coordinating correction with online adaptation}
 \label{sec:gate}
-The trigger-only variant sets $g_t=1$ throughout; an empty memory gives zero regularization before the first trigger. To coordinate correction with online learning, a second variant schedules activation by the recent prediction error while model updates continue. Let $\ell_t$ be the MSE on the newest executed transition, measured before its update, and $\bar\ell_t=(\ell_t+\ell_{t-1}+\ell_{t-2})/3$. Define
+In its trigger-only mode, ECP sets $g_t=1$ throughout, and the empty memory guarantees native behavior before the first trigger. When the world model adapts online, however, a stall may resolve through continued learning, and the objective needs to change only once learning has plateaued. A gated mode detects this from the prediction error. Let $\ell_t$ be the mean squared prediction error on the newest executed transition, measured before its model update, and $\bar\ell_t$ its short running mean. The relative improvement over a separation of $W_g$ steps is
 \begin{equation}
  q_t=\frac{\bar\ell_{t-W_g}-\bar\ell_t}
- {\max\{\bar\ell_{t-W_g},\epsilon\}},
- \qquad W_g=3.
+ {\max\{\bar\ell_{t-W_g},\epsilon\}}.
  \label{eq:gate}
 \end{equation}
-Starting from $g_t=0$, the gate opens once $w_t>0$ and $q_t<\tau_g$, with relative-improvement threshold $\tau_g=0.05$ and both loss windows available, and stays open thereafter. Intuitively, correction starts when the controller is stalled and adaptation alone has stopped reducing prediction error. Memory accumulates before activation; opening the gate enables its use and the short boost on the next plan. Prediction learning and stagnation correction thus operate on separate, coordinated schedules.
+Starting from $g_t=0$, the gate opens at the first step at which the controller is stalled ($w_t>0$) and the model has stopped improving ($q_t<\tau_g$), and it stays open thereafter. Stalled observations are recorded while the gate is closed, so the memory is available as soon as correction begins.
 
 \subsection{Interaction-biased data augmentation}
 \label{sec:data}
-Data augmentation enriches the interactions available before deployment. Following AdaJEPA's contact-biased collection~\cite{wang2026adajepa}, we add an object-directed offset $b_c\operatorname{unit}(c_i-p_i)$ and Gaussian noise $\sigma_c\eta_i$ to the source action at control step $i$. Here $c_i,p_i\in\R^2$ are the object center and pusher position, $\eta_i\sim\mathcal N(0,I_2)$ is standard Gaussian noise, and $\operatorname{unit}(v)$ returns $v/\norm{v}$ when $\norm{v}>10^{-6}$ and zero otherwise. We use bias magnitude $b_c=9$ pixels and per-axis noise standard deviation $\sigma_c=10$ pixels. The resulting actions are executed in the simulator and stored with the observations they produce, and every retained trajectory contains contact. We keep the latent-prediction and trajectory-straightening training objective unchanged~\cite{wang2026straightening}. We collect 16,000 training and 4,000 validation episodes; \cref{sec:implementation} gives the complete training recipe.
+ECP corrects stalls as they occur; the training data influences how often they occur in the first place, since a world model can only predict the interactions it has seen. Following AdaJEPA's contact-biased collection~\cite{wang2026adajepa} and inspired by the noise injection of DART~\cite{laskey2017dart}, we add an object-directed offset and Gaussian noise to each source action $u_i$ at control step $i$, giving $u_i+b_c\operatorname{unit}(c_i-p_i)+\sigma_c\eta_i$. Here $c_i,p_i\in\R^2$ are the object center and pusher position, $\operatorname{unit}(\cdot)$ normalizes a nonzero vector, $\eta_i\sim\mathcal N(0,I_2)$, and $b_c$ and $\sigma_c$ set the bias and noise scales. The perturbed actions are executed in the simulator, and every retained trajectory contains contact. The training objective, latent prediction with trajectory straightening~\cite{wang2026straightening}, is left unchanged; \cref{sec:implementation} gives the complete recipe.

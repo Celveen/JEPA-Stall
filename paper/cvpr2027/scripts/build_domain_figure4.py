@@ -86,11 +86,13 @@ def save(fig,name,rows,panels):
  plt.close(fig)
 
 
-# Eight paired cases with full original camera frames; no local crops.
-# Rope illustrates lower final CD under different action cadences, not S alone.
+# Full-scene pairs; each Rope pair has the same actual executed push count.
 domains=json.loads((V/'fullview_visuals_20261116.json').read_text())
 for key,value in domains['pushobj'].items():cases[key]['frames']=value['frames']
 domains['pusht']=json.loads((V/'lewm_figure4_visuals.json').read_text())['pusht']
+rope_sources=json.loads((V/'rope_matched_visuals_seed100.json').read_text())
+for name,record in rope_sources['files'].items():
+ assert hashlib.sha256((O/name).read_bytes()).hexdigest()==record['sha256']
 fig=plt.figure(figsize=(6.875,2.82))
 fig.legend(handles=[Patch(facecolor=FAIL,label='Without ECP'),Patch(facecolor=OURS,label='With ECP')],loc='upper center',bbox_to_anchor=(.5,1.008),ncol=2,frameon=False,fontsize=8.5,handlelength=1.4,handleheight=.8,columnspacing=2.1)
 items=[('old','Z'),('old','square'),('pusht',0),('pusht',1),('old','maze_ada'),('old','maze_ada_alt'),('rope',0),('rope',1)]
@@ -101,13 +103,14 @@ for k,(kind,key) in enumerate(items):
  elif kind=='pusht':
   c=domains['pusht'][key];title='PushT · LeWM'
  else:
-  c=domains['rope'][key];title='Rope · DINO-WM'
+  c=rope_sources['cases'][key];title='Rope · DINO-WM'
  fig.text(x+.118,top,f'({chr(97+k)}) {title}',fontsize=8.1,weight='bold',color=INK,ha='center',va='top')
  for j,mode in enumerate(['base','ours']):
   left=x+j*.121;ax=fig.add_axes([left,bottom,.114,.285])
   if kind=='old':scene(ax,c,mode,small=True)
   else:
-   im=Image.open(O/c['frames'][mode]['path']);ax.imshow(np.array(im))
+   frame=c['rows'][j]['frames'][-1] if kind=='rope' else c['frames'][mode]
+   im=Image.open(O/frame['path']);ax.imshow(np.array(im))
    box=(0,0,im.width,im.height)
    if kind=='pusht':
     # Keep recorded pixels unchanged; hide only the static gray viewport frame.
@@ -117,13 +120,13 @@ for k,(kind,key) in enumerate(items):
    ax.set(xlim=box[::2],ylim=(box[3],box[1]));ax.set_xticks([]);ax.set_yticks([])
    for sp in ax.spines.values():sp.set_visible(False)
   if kind=='rope':
-   label=('Frozen CD: ' if mode=='base' else 'Ours CD: ')+f"{c['native_cd' if mode=='base' else 'ours_cd']:.3f}"
+   label=f"CD {c['rows'][j]['final_cd']:.3f}"
    color=FAIL if mode=='base' else OURS
   else:
    n=len(c['states'][mode])-1 if kind=='old' else c['replans'][mode]
    label=('Fail' if mode=='base' else 'Success')+f' · {n}';color=FAIL if mode=='base' else OURS
   fig.text(left+.057,bottom-.023,label,fontsize=7.5,color=color,ha='center',va='top')
-manifest={'source':'fullview_visuals_20261116.json, lewm_figure4_visuals.json and replayed_paths_v12.json','case_order':items,'rope_excluded_from_formal_aggregate':True,'rope_labels':'Frozen CD / Ours CD: Chamfer distance, lower is better; native 5/5 versus fixed-S 3/3; targets 15 and 24 have 3 and 0 S activations','titles':'PushObj ResNet; PushT LeWM; Maze AdaJEPA; Rope DINO-WM','legend':{'Without ECP':FAIL,'With ECP':OURS},'maze_e':'Verified AdaJEPA target 75, also used in Figure 2; not a relabeled frozen run','framing':'Full image bounds for all 16 panels; PushObj boundary draw calls omitted; LeWM original PNG perimeter hidden by white vector strips','pusht_labels':'Terminating replan count; LeWM with/without ECP','outputs':{}}
+manifest={'source':'fullview_visuals_20261116.json, lewm_figure4_visuals.json, replayed_paths_v12.json and rope_matched_visuals_seed100.json','case_order':items,'rope_evaluation_seed':100,'rope_display':'Native versus dynamic ECP on targets 13/16, both arms ending at 10/20 pushes respectively; lower final CD in these illustrative cases, not a seed-wide gain','titles':'PushObj ResNet; PushT LeWM; Maze AdaJEPA; Rope DINO-WM','legend':{'Without ECP':FAIL,'With ECP':OURS},'maze_e':'Verified AdaJEPA target 75, also used in Figure 2','framing':'Full image bounds for all 16 panels; PushObj boundary draw calls omitted; LeWM original PNG perimeter hidden by white vector strips','pusht_labels':'Terminating replan count; LeWM with/without ECP','outputs':{}}
 save(fig,'fig5_execution_recovery',2,16)
 (V/'domain_figure4_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
-print('Built Figure 4: 2 PushObj, 2 PushT, 2 Maze and 2 Rope cases (all full-view).')
+print('Built Figure 4: eight full-view pairs, including two equal-push Rope cases.')
