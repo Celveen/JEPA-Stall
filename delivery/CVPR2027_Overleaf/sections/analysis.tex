@@ -72,11 +72,16 @@ AdaJEPA & Native &63.0\\
 \paragraph{ECP is robust to the trigger threshold.}
 \Cref{fig:threshold} varies $\gamma_{\rm hi}$ over a fourfold range. Larger thresholds trigger earlier and in more episodes, yet success varies by less than one percentage point (76.9\%--77.7\%) and always above native planning, with at most two regressions. Gains appear on seen and unseen shapes alike with fixed weights and concentrate on seen shapes with AdaJEPA (\cref{tab:threshold-shape}).
 
+\input{sections/rope_pair_results}
+
 \paragraph{Conditional correction outperforms permanent reweighting and deeper search.}
 Permanent $10\times$ weighting rescues 50 failures but \textbf{breaks 32 native successes}, yielding less than half ECP's net gain (\cref{tab:timing}). Triggered ECP instead recovers \textbf{39 failures without regressions}. Lookahead search adds \textbf{27 regressions} for only a marginal net gain; combining it with ECP also underperforms ECP alone. These controls favor correcting the stalled objective over increasing search.
 
 \paragraph{Loss-gated coordination complements online adaptation.}
 On Maze with adaptation, immediate correction rescues 7 failures but loses 4 native successes; a fixed delay is worse than no correction (\cref{tab:maze-controls}). Freezing adaptation at a stall without correcting the objective reduces 50-replan success from 82\% to 60\% (\cref{tab:maze-full}). The loss gate (\cref{eq:gate}) preserves all native successes at 30 replans and reaches 87\% at 50 replans.
+
+\paragraph{Computational cost.}
+On 350 paired PushObj tasks (fixed ResNet), ECP's 2.8\% per-replan overhead is offset by 12.4\% fewer replans, reducing mean task-loop time by 12.1\%. Memory use increases (\cref{sec:cost}).
 
 \subsection{Qualitative and behavioral recovery}
 \label{sec:qualitative}

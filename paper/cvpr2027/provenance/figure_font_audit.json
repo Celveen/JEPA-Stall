@@ -114,28 +114,28 @@
     }
   },
   "all_figure_annotations_extractable": true,
-  "raster_content": "Simulator observations only; labels and registered goal annotations remain vector.",
+  "raster_content": "Recorded simulator observations; annotations remain vector text.",
   "pdfs": {
     "paper.pdf": {
       "font_programs": 70,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 14789,
-      "sha256": "dc556b10dbbe768b424a2d9b69fd7299f6846668076eaeb02b3c7b24f81d0a0e"
+      "text_words": 15148,
+      "sha256": "b37a0a5589ea710dbee2db07871cc915044de68492e2a9ee9c42509350dd6dc6"
     },
     "paper_main.pdf": {
       "font_programs": 59,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 7517,
-      "sha256": "0302f8444a9b9136b01245c564bca4c36403bb67c300986101eb3368bae845d5"
+      "text_words": 7552,
+      "sha256": "1b456384cb7ab522cb74a358d1dff430e04c1a65fb690d9f99d8c0ee13ebc6ad"
     },
     "paper_appendix.pdf": {
       "font_programs": 30,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 7272,
-      "sha256": "686e76c097907ea93eca1cb4ceb4b12cf19564a7f7c6e2089ec85e7cab434518"
+      "text_words": 7596,
+      "sha256": "221fa1166f6f87fe5c4845fcea7aeb4eced9cc1c8255f5b74808f93c3e7e26e0"
     }
   }
 }
