@@ -122,8 +122,8 @@ def plot(data):
         'xtick.labelsize':8,'ytick.labelsize':8,'legend.fontsize':7.8,
         'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none',
         'axes.linewidth':.6,'savefig.facecolor':'white'})
-    fig,ax=plt.subplots(figsize=(3.35,1.5))
-    fig.subplots_adjust(left=.14,right=.98,bottom=.27,top=.82)
+    fig,ax=plt.subplots(figsize=(3.35,1.75))
+    fig.subplots_adjust(left=.14,right=.98,bottom=.24,top=.84)
     ax.spines[['top','right']].set_visible(False)
     ax.tick_params(length=2.5,width=.6)
     ax.grid(axis='y',color='#DCE2E5',linewidth=.45,zorder=0)

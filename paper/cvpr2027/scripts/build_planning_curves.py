@@ -115,8 +115,8 @@ def save(fig, stem):
 t=data['threshold']
 x=np.array(t['upper_thresholds']); y=np.array(t['ecp_successes'])*100/t['tasks']
 native=t['native_successes']*100/t['tasks']
-fig,ax=plt.subplots(figsize=(3.35,1.63))
-fig.subplots_adjust(left=.15,right=.97,bottom=.27,top=.94)
+fig,ax=plt.subplots(figsize=(3.35,1.85))
+fig.subplots_adjust(left=.15,right=.97,bottom=.24,top=.94)
 style(ax)
 ax.axhline(native,color=BROWN,ls=(0,(4,2)),lw=1.3)
 ax.plot(x,y,color=TEAL,marker='o',ms=4,lw=1.6,zorder=3)

@@ -1253,7 +1253,11 @@
     "henderson2018matters": "https://arxiv.org/abs/1709.06560"
   },
   "additional_primary_source_verification": {
-    "garcia1989mpc": "https://www.sciencedirect.com/science/article/abs/pii/0005109889900022"
+    "garcia1989mpc": "https://www.sciencedirect.com/science/article/abs/pii/0005109889900022",
+    "lynch1996pushing": "https://publications.ri.cmu.edu/stable-pushing-mechanics-controllability-and-planning",
+    "nagabandi2018neural": "https://arxiv.org/abs/1708.02596",
+    "yu2016pushing": "https://web.mit.edu/mcube/push-dataset/",
+    "williams2017mppi": "https://doi.org/10.2514/1.G001921"
   },
   "access_note": "Some publisher endpoints block automated access. DOI registration verifies identity, not unrestricted full-text access. Alternative author/preprint links are used where verified.",
   "style": "Removed prose textbf and run-in paragraph bold in experiments and analysis; retained section headings, captions and table best values. Linked bibliography titles without expanding reference text.",
@@ -1315,5 +1319,934 @@
     "label_destinations_checked": 76,
     "headline_and_trajectory_figures_unchanged": true,
     "bibliography_unchanged": false
-  }
+  },
+  "latest_primary_url_checks": [
+    {
+      "key": "maes2026lewm",
+      "url": "https://arxiv.org/abs/2603.19312",
+      "title": "LeWorldModel}: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2603.19312",
+      "page_title": [
+        "[2603.19312] LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels\" />",
+        "<meta name=\"citation_author\" content=\"Maes, Lucas\" />",
+        "<meta name=\"citation_author\" content=\"Lidec, Quentin Le\" />",
+        "<meta name=\"citation_author\" content=\"Scieur, Damien\" />",
+        "<meta name=\"citation_author\" content=\"LeCun, Yann\" />",
+        "<meta name=\"citation_author\" content=\"Balestriero, Randall\" />",
+        "<meta name=\"citation_date\" content=\"2026/03/13\" />"
+      ]
+    },
+    {
+      "key": "wang2026straightening",
+      "url": "https://proceedings.mlr.press/v306/wang26n.html",
+      "title": "Temporal Straightening for Latent Planning",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v306/wang26n.html",
+      "page_title": [
+        "Temporal Straightening for Latent Planning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Temporal Straightening for Latent Planning\"/>",
+        "<meta name=\"citation_author\" content=\"Ying Wang\">",
+        "<meta name=\"citation_author\" content=\"Oumayma Bounou\">",
+        "<meta name=\"citation_author\" content=\"Gaoyue Zhou\">",
+        "<meta name=\"citation_author\" content=\"Randall Balestriero\">",
+        "<meta name=\"citation_author\" content=\"Tim G. J. Rudner\">",
+        "<meta name=\"citation_author\" content=\"Yann Lecun\">",
+        "<meta name=\"citation_author\" content=\"Mengye Ren\">"
+      ]
+    },
+    {
+      "key": "wang2026adajepa",
+      "url": "https://arxiv.org/abs/2606.32026",
+      "title": "AdaJEPA}: An Adaptive Latent World Model",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2606.32026",
+      "page_title": [
+        "[2606.32026] AdaJEPA: An Adaptive Latent World Model"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"AdaJEPA: An Adaptive Latent World Model\" />",
+        "<meta name=\"citation_author\" content=\"Wang, Ying\" />",
+        "<meta name=\"citation_author\" content=\"Bounou, Oumayma\" />",
+        "<meta name=\"citation_author\" content=\"LeCun, Yann\" />",
+        "<meta name=\"citation_author\" content=\"Ren, Mengye\" />",
+        "<meta name=\"citation_date\" content=\"2026/06/30\" />"
+      ]
+    },
+    {
+      "key": "liu2026djepa",
+      "url": "https://arxiv.org/abs/2609.24749",
+      "title": "D-JEPA}: A Decision-Aligned Latent World Model",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2609.24749",
+      "page_title": [
+        "[2609.24749] D-JEPA: A Decision-Aligned Latent World Model"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"D-JEPA: A Decision-Aligned Latent World Model\" />",
+        "<meta name=\"citation_author\" content=\"Liu, Shuaijun\" />",
+        "<meta name=\"citation_author\" content=\"Wu, Chengyu\" />",
+        "<meta name=\"citation_author\" content=\"Wen, Qifu\" />",
+        "<meta name=\"citation_author\" content=\"You, Feiyang\" />",
+        "<meta name=\"citation_author\" content=\"Zhang, Chenglong\" />",
+        "<meta name=\"citation_author\" content=\"Hao, Shuyang\" />",
+        "<meta name=\"citation_author\" content=\"Lin, Xi\" />",
+        "<meta name=\"citation_author\" content=\"Su, Ningxin\" />",
+        "<meta name=\"citation_date\" content=\"2026/09/21\" />"
+      ]
+    },
+    {
+      "key": "kang2026anisowm",
+      "url": "https://arxiv.org/abs/2609.37441",
+      "title": "Anisotropic Representations Improve Planning in {JEPA} World Models",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2609.37441",
+      "page_title": [
+        "[2609.37441] Anisotropic Representations Improve Planning in JEPA World Models"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Anisotropic Representations Improve Planning in JEPA World Models\" />",
+        "<meta name=\"citation_author\" content=\"Kang, Mingu\" />",
+        "<meta name=\"citation_author\" content=\"Oh, Yoori\" />",
+        "<meta name=\"citation_author\" content=\"Kim, Sookyung\" />",
+        "<meta name=\"citation_author\" content=\"Lee, Joonseok\" />",
+        "<meta name=\"citation_date\" content=\"2026/09/29\" />"
+      ]
+    },
+    {
+      "key": "mete2026optta",
+      "url": "https://arxiv.org/abs/2610.35636",
+      "title": "Adapt for Planning, Not Just Prediction: Optimistic Test-Time World Model Adaptation",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2610.35636",
+      "page_title": [
+        "[2610.35636] Adapt for Planning, Not just Prediction: Optimistic Test-Time World Model Adaptation"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Adapt for Planning, Not just Prediction: Optimistic Test-Time World Model Adaptation\" />",
+        "<meta name=\"citation_author\" content=\"Mete, Akshay\" />",
+        "<meta name=\"citation_author\" content=\"Kalathil, Dileep\" />",
+        "<meta name=\"citation_author\" content=\"Kumar, P. R.\" />",
+        "<meta name=\"citation_date\" content=\"2026/10/26\" />"
+      ]
+    },
+    {
+      "key": "zhou2025dinowm",
+      "url": "https://proceedings.mlr.press/v267/zhou25t.html",
+      "title": "DINO-WM}: World Models on Pre-trained Visual Features Enable Zero-shot Planning",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v267/zhou25t.html",
+      "page_title": [
+        "DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning\"/>",
+        "<meta name=\"citation_author\" content=\"Gaoyue Zhou\">",
+        "<meta name=\"citation_author\" content=\"Hengkai Pan\">",
+        "<meta name=\"citation_author\" content=\"Yann Lecun\">",
+        "<meta name=\"citation_author\" content=\"Lerrel Pinto\">"
+      ]
+    },
+    {
+      "key": "assran2025vjepa2",
+      "url": "https://arxiv.org/abs/2506.09985",
+      "title": "V-JEPA 2}: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2506.09985",
+      "page_title": [
+        "[2506.09985] V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning\" />",
+        "<meta name=\"citation_author\" content=\"Assran, Mido\" />",
+        "<meta name=\"citation_author\" content=\"Bardes, Adrien\" />",
+        "<meta name=\"citation_author\" content=\"Fan, David\" />",
+        "<meta name=\"citation_author\" content=\"Garrido, Quentin\" />",
+        "<meta name=\"citation_author\" content=\"Howes, Russell\" />",
+        "<meta name=\"citation_author\" content=\"Mojtaba\" />",
+        "<meta name=\"citation_author\" content=\"Komeili\" />",
+        "<meta name=\"citation_author\" content=\"Muckley, Matthew\" />",
+        "<meta name=\"citation_author\" content=\"Rizvi, Ammar\" />",
+        "<meta name=\"citation_author\" content=\"Roberts, Claire\" />",
+        "<meta name=\"citation_author\" content=\"Sinha, Koustuv\" />",
+        "<meta name=\"citation_author\" content=\"Zholus, Artem\" />",
+        "<meta name=\"citation_author\" content=\"Arnaud, Sergio\" />",
+        "<meta name=\"citation_author\" content=\"Gejji, Abha\" />",
+        "<meta name=\"citation_author\" content=\"Martin, Ada\" />",
+        "<meta name=\"citation_author\" content=\"Hogan, Francois Robert\" />",
+        "<meta name=\"citation_author\" content=\"Dugas, Daniel\" />",
+        "<meta name=\"citation_author\" content=\"Bojanowski, Piotr\" />",
+        "<meta name=\"citation_author\" content=\"Khalidov, Vasil\" />",
+        "<meta name=\"citation_author\" content=\"Labatut, Patrick\" />",
+        "<meta name=\"citation_author\" content=\"Massa, Francisco\" />",
+        "<meta name=\"citation_author\" content=\"Szafraniec, Marc\" />",
+        "<meta name=\"citation_author\" content=\"Krishnakumar, Kapil\" />",
+        "<meta name=\"citation_author\" content=\"Li, Yong\" />",
+        "<meta name=\"citation_author\" content=\"Ma, Xiaodong\" />",
+        "<meta name=\"citation_author\" content=\"Chandar, Sarath\" />",
+        "<meta name=\"citation_author\" content=\"Meier, Franziska\" />",
+        "<meta name=\"citation_author\" content=\"LeCun, Yann\" />",
+        "<meta name=\"citation_author\" content=\"Rabbat, Michael\" />",
+        "<meta name=\"citation_author\" content=\"Ballas, Nicolas\" />",
+        "<meta name=\"citation_date\" content=\"2025/06/11\" />"
+      ]
+    },
+    {
+      "key": "assran2023ijepa",
+      "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Assran_Self-Supervised_Learning_From_Images_With_a_Joint-Embedding_Predictive_Architecture_CVPR_2023_paper.html",
+      "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+      "status": 200,
+      "final_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Assran_Self-Supervised_Learning_From_Images_With_a_Joint-Embedding_Predictive_Architecture_CVPR_2023_paper.html",
+      "page_title": [
+        "CVPR 2023 Open Access Repository"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Self-Supervised Learning From Images With a Joint-Embedding Predictive Architecture\">",
+        "<meta name=\"citation_author\" content=\"Assran, Mahmoud\">",
+        "<meta name=\"citation_author\" content=\"Duval, Quentin\">",
+        "<meta name=\"citation_author\" content=\"Misra, Ishan\">",
+        "<meta name=\"citation_author\" content=\"Bojanowski, Piotr\">",
+        "<meta name=\"citation_author\" content=\"Vincent, Pascal\">",
+        "<meta name=\"citation_author\" content=\"Rabbat, Michael\">",
+        "<meta name=\"citation_author\" content=\"LeCun, Yann\">",
+        "<meta name=\"citation_author\" content=\"Ballas, Nicolas\">"
+      ]
+    },
+    {
+      "key": "ha2018worldmodels",
+      "url": "https://arxiv.org/abs/1803.10122",
+      "title": "World Models}, author={Ha, David and Schmidhuber, J{\\\"u}rgen",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1803.10122",
+      "page_title": [
+        "[1803.10122] World Models"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"World Models\" />",
+        "<meta name=\"citation_author\" content=\"Ha, David\" />",
+        "<meta name=\"citation_author\" content=\"Schmidhuber, J\u00fcrgen\" />",
+        "<meta name=\"citation_date\" content=\"2018/03/27\" />"
+      ]
+    },
+    {
+      "key": "hafner2019planet",
+      "url": "https://proceedings.mlr.press/v97/hafner19a.html",
+      "title": "Learning Latent Dynamics for Planning from Pixels",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v97/hafner19a.html",
+      "page_title": [
+        "Learning Latent Dynamics for Planning from Pixels"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Learning Latent Dynamics for Planning from Pixels\"/>",
+        "<meta name=\"citation_author\" content=\"Danijar Hafner\">",
+        "<meta name=\"citation_author\" content=\"Timothy Lillicrap\">",
+        "<meta name=\"citation_author\" content=\"Ian Fischer\">",
+        "<meta name=\"citation_author\" content=\"Ruben Villegas\">",
+        "<meta name=\"citation_author\" content=\"David Ha\">",
+        "<meta name=\"citation_author\" content=\"Honglak Lee\">",
+        "<meta name=\"citation_author\" content=\"James Davidson\">"
+      ]
+    },
+    {
+      "key": "hafner2020dreamer",
+      "url": "https://arxiv.org/abs/1912.01603",
+      "title": "Dream to Control: Learning Behaviors by Latent Imagination",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1912.01603",
+      "page_title": [
+        "[1912.01603] Dream to Control: Learning Behaviors by Latent Imagination"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Dream to Control: Learning Behaviors by Latent Imagination\" />",
+        "<meta name=\"citation_author\" content=\"Hafner, Danijar\" />",
+        "<meta name=\"citation_author\" content=\"Lillicrap, Timothy\" />",
+        "<meta name=\"citation_author\" content=\"Ba, Jimmy\" />",
+        "<meta name=\"citation_author\" content=\"Norouzi, Mohammad\" />",
+        "<meta name=\"citation_date\" content=\"2019/12/03\" />"
+      ]
+    },
+    {
+      "key": "hansen2024tdmpc2",
+      "url": "https://arxiv.org/abs/2310.16828",
+      "title": "TD-MPC2}: Scalable, Robust World Models for Continuous Control",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2310.16828",
+      "page_title": [
+        "[2310.16828] TD-MPC2: Scalable, Robust World Models for Continuous Control"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"TD-MPC2: Scalable, Robust World Models for Continuous Control\" />",
+        "<meta name=\"citation_author\" content=\"Hansen, Nicklas\" />",
+        "<meta name=\"citation_author\" content=\"Su, Hao\" />",
+        "<meta name=\"citation_author\" content=\"Wang, Xiaolong\" />",
+        "<meta name=\"citation_date\" content=\"2023/10/25\" />"
+      ]
+    },
+    {
+      "key": "garcia1989mpc",
+      "url": "https://doi.org/10.1016/0005-1098(89)90002-2",
+      "title": "Model Predictive Control: Theory and Practice---A Survey",
+      "status": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/0005109889900022",
+      "page_title": [
+        "Redirecting"
+      ],
+      "metadata": []
+    },
+    {
+      "key": "khatib1986potential",
+      "url": "https://cs.stanford.edu/groups/manips/publications/pdfs/Khatib_1986_IJRR.pdf",
+      "title": "Real-Time Obstacle Avoidance for Manipulators and Mobile Robots",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+    },
+    {
+      "key": "pertsch2021spirl",
+      "url": "https://proceedings.mlr.press/v155/pertsch21a.html",
+      "title": "Accelerating Reinforcement Learning with Learned Skill Priors",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v155/pertsch21a.html",
+      "page_title": [
+        "Accelerating Reinforcement Learning with Learned Skill Priors"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Accelerating Reinforcement Learning with Learned Skill Priors\"/>",
+        "<meta name=\"citation_author\" content=\"Karl Pertsch\">",
+        "<meta name=\"citation_author\" content=\"Youngwoon Lee\">",
+        "<meta name=\"citation_author\" content=\"Joseph Lim\">"
+      ]
+    },
+    {
+      "key": "tirumala2022behaviorpriors",
+      "url": "https://jmlr.org/papers/v23/20-1038.html",
+      "title": "Behavior Priors for Efficient Reinforcement Learning",
+      "status": 200,
+      "final_url": "https://jmlr.org/papers/v23/20-1038.html",
+      "page_title": [
+        "Behavior Priors for Efficient Reinforcement Learning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Behavior Priors for Efficient Reinforcement Learning\">",
+        "<meta name=\"citation_author\" content=\"Dhruva Tirumala\">",
+        "<meta name=\"citation_author\" content=\"Alexandre Galashov\">",
+        "<meta name=\"citation_author\" content=\"Hyeonwoo Noh\">",
+        "<meta name=\"citation_author\" content=\"Leonard Hasenclever\">",
+        "<meta name=\"citation_author\" content=\"Razvan Pascanu\">",
+        "<meta name=\"citation_author\" content=\"Jonathan Schwarz\">",
+        "<meta name=\"citation_author\" content=\"Guillaume Desjardins\">",
+        "<meta name=\"citation_author\" content=\"Wojciech Marian Czarnecki\">",
+        "<meta name=\"citation_author\" content=\"Arun Ahuja\">",
+        "<meta name=\"citation_author\" content=\"Yee Whye Teh\">",
+        "<meta name=\"citation_author\" content=\"Nicolas Heess\">"
+      ]
+    },
+    {
+      "key": "pathak2017curiosity",
+      "url": "https://proceedings.mlr.press/v70/pathak17a.html",
+      "title": "Curiosity-driven Exploration by Self-supervised Prediction",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v70/pathak17a.html",
+      "page_title": [
+        "Curiosity-driven Exploration by Self-supervised Prediction"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Curiosity-driven Exploration by Self-supervised Prediction\"/>",
+        "<meta name=\"citation_author\" content=\"Deepak Pathak\">",
+        "<meta name=\"citation_author\" content=\"Pulkit Agrawal\">",
+        "<meta name=\"citation_author\" content=\"Alexei A. Efros\">",
+        "<meta name=\"citation_author\" content=\"Trevor Darrell\">"
+      ]
+    },
+    {
+      "key": "farahmand2017valueaware",
+      "url": "https://proceedings.mlr.press/v54/farahmand17a.html",
+      "title": "Value-Aware Loss Function for Model-based Reinforcement Learning",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v54/farahmand17a.html",
+      "page_title": [
+        "Value-Aware Loss Function for Model-based Reinforcement Learning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Value-Aware Loss Function for Model-based Reinforcement Learning\"/>",
+        "<meta name=\"citation_author\" content=\"Amir-Massoud Farahmand\">",
+        "<meta name=\"citation_author\" content=\"Andre Barreto\">",
+        "<meta name=\"citation_author\" content=\"Daniel Nikovski\">"
+      ]
+    },
+    {
+      "key": "fu2020d4rl",
+      "url": "https://arxiv.org/abs/2004.07219",
+      "title": "D4RL}: Datasets for Deep Data-Driven Reinforcement Learning",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2004.07219",
+      "page_title": [
+        "[2004.07219] D4RL: Datasets for Deep Data-Driven Reinforcement Learning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"D4RL: Datasets for Deep Data-Driven Reinforcement Learning\" />",
+        "<meta name=\"citation_author\" content=\"Fu, Justin\" />",
+        "<meta name=\"citation_author\" content=\"Kumar, Aviral\" />",
+        "<meta name=\"citation_author\" content=\"Nachum, Ofir\" />",
+        "<meta name=\"citation_author\" content=\"Tucker, George\" />",
+        "<meta name=\"citation_author\" content=\"Levine, Sergey\" />",
+        "<meta name=\"citation_date\" content=\"2020/04/15\" />"
+      ]
+    },
+    {
+      "key": "yin2026ddpwm",
+      "url": "https://proceedings.mlr.press/v306/yin26l.html",
+      "title": "DDP-WM}: Disentangled Dynamics Prediction for Efficient World Models",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v306/yin26l.html",
+      "page_title": [
+        "DDP-WM: Disentangled Dynamics Prediction for Efficient World Models"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"DDP-WM: Disentangled Dynamics Prediction for Efficient World Models\"/>",
+        "<meta name=\"citation_author\" content=\"Shicheng Yin\">",
+        "<meta name=\"citation_author\" content=\"Kaixuan Yin\">",
+        "<meta name=\"citation_author\" content=\"Weixing Chen\">",
+        "<meta name=\"citation_author\" content=\"Yang Liu\">",
+        "<meta name=\"citation_author\" content=\"Guanbin Li\">",
+        "<meta name=\"citation_author\" content=\"Liang Lin\">"
+      ]
+    },
+    {
+      "key": "sutton1991dyna",
+      "url": "https://doi.org/10.1145/122344.122377",
+      "title": "Dyna}, an Integrated Architecture for Learning, Planning, and Reacting",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "watter2015embed",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/a1afc58c6ca9540d057299ec3016d726-Abstract.html",
+      "title": "Embed to Control: A Locally Linear Latent Dynamics Model for Control from Raw Images",
+      "status": 200,
+      "final_url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/a1afc58c6ca9540d057299ec3016d726-Abstract.html",
+      "page_title": [
+        "Embed to Control: A Locally Linear Latent Dynamics Model for Control from Raw Images"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Embed to Control: A Locally Linear Latent Dynamics Model for Control from Raw Images\">",
+        "<meta name=\"citation_author\" content=\"Watter, Manuel\">",
+        "<meta name=\"citation_author\" content=\"Springenberg, Jost\">",
+        "<meta name=\"citation_author\" content=\"Boedecker, Joschka\">",
+        "<meta name=\"citation_author\" content=\"Riedmiller, Martin\">"
+      ]
+    },
+    {
+      "key": "nagabandi2018neural",
+      "url": "https://doi.org/10.1109/ICRA.2018.8463189",
+      "title": "Neural Network Dynamics for Model-Based Deep Reinforcement Learning with Model-Free Fine-Tuning",
+      "status": 202,
+      "final_url": "https://ieeexplore.ieee.org/document/8463189/",
+      "page_title": [],
+      "metadata": []
+    },
+    {
+      "key": "chua2018pets",
+      "url": "https://arxiv.org/abs/1805.12114",
+      "title": "Deep Reinforcement Learning in a Handful of Trials Using Probabilistic Dynamics Models",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1805.12114",
+      "page_title": [
+        "[1805.12114] Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models\" />",
+        "<meta name=\"citation_author\" content=\"Chua, Kurtland\" />",
+        "<meta name=\"citation_author\" content=\"Calandra, Roberto\" />",
+        "<meta name=\"citation_author\" content=\"McAllister, Rowan\" />",
+        "<meta name=\"citation_author\" content=\"Levine, Sergey\" />",
+        "<meta name=\"citation_date\" content=\"2018/05/30\" />"
+      ]
+    },
+    {
+      "key": "finn2017foresight",
+      "url": "https://arxiv.org/abs/1610.00696",
+      "title": "Deep Visual Foresight for Planning Robot Motion",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1610.00696",
+      "page_title": [
+        "[1610.00696] Deep Visual Foresight for Planning Robot Motion"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Deep Visual Foresight for Planning Robot Motion\" />",
+        "<meta name=\"citation_author\" content=\"Finn, Chelsea\" />",
+        "<meta name=\"citation_author\" content=\"Levine, Sergey\" />",
+        "<meta name=\"citation_date\" content=\"2016/10/03\" />"
+      ]
+    },
+    {
+      "key": "bardes2024vjepa",
+      "url": "https://arxiv.org/abs/2404.08471",
+      "title": "Revisiting Feature Prediction for Learning Visual Representations from Video",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2404.08471",
+      "page_title": [
+        "[2404.08471] Revisiting Feature Prediction for Learning Visual Representations from Video"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Revisiting Feature Prediction for Learning Visual Representations from Video\" />",
+        "<meta name=\"citation_author\" content=\"Bardes, Adrien\" />",
+        "<meta name=\"citation_author\" content=\"Garrido, Quentin\" />",
+        "<meta name=\"citation_author\" content=\"Ponce, Jean\" />",
+        "<meta name=\"citation_author\" content=\"Chen, Xinlei\" />",
+        "<meta name=\"citation_author\" content=\"Rabbat, Michael\" />",
+        "<meta name=\"citation_author\" content=\"LeCun, Yann\" />",
+        "<meta name=\"citation_author\" content=\"Assran, Mahmoud\" />",
+        "<meta name=\"citation_author\" content=\"Ballas, Nicolas\" />",
+        "<meta name=\"citation_date\" content=\"2024/02/15\" />"
+      ]
+    },
+    {
+      "key": "balestriero2025lejepa",
+      "url": "https://arxiv.org/abs/2511.08544",
+      "title": "LeJEPA}: Provable and Scalable Self-Supervised Learning Without the Heuristics",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2511.08544",
+      "page_title": [
+        "[2511.08544] LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics\" />",
+        "<meta name=\"citation_author\" content=\"Balestriero, Randall\" />",
+        "<meta name=\"citation_author\" content=\"LeCun, Yann\" />",
+        "<meta name=\"citation_date\" content=\"2025/11/11\" />"
+      ]
+    },
+    {
+      "key": "srinivas2018upn",
+      "url": "https://proceedings.mlr.press/v80/srinivas18b.html",
+      "title": "Universal Planning Networks: Learning Generalizable Representations for Visuomotor Control",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v80/srinivas18b.html",
+      "page_title": [
+        "Universal Planning Networks: Learning Generalizable Representations for Visuomotor Control"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Universal Planning Networks: Learning Generalizable Representations for Visuomotor Control\"/>",
+        "<meta name=\"citation_author\" content=\"Aravind Srinivas\">",
+        "<meta name=\"citation_author\" content=\"Allan Jabri\">",
+        "<meta name=\"citation_author\" content=\"Pieter Abbeel\">",
+        "<meta name=\"citation_author\" content=\"Sergey Levine\">",
+        "<meta name=\"citation_author\" content=\"Chelsea Finn\">"
+      ]
+    },
+    {
+      "key": "henaff2019straightening",
+      "url": "https://doi.org/10.1038/s41593-019-0377-4",
+      "title": "Perceptual Straightening of Natural Videos",
+      "status": 200,
+      "final_url": "https://www.nature.com/articles/s41593-019-0377-4?error=cookies_not_supported&code=21969c2d-777d-483c-8f53-6816cbf0fad9",
+      "page_title": [
+        "Perceptual straightening of natural videos | Nature Neuroscience",
+        "Close banner",
+        "Close banner"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Perceptual straightening of natural videos\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Neural Comput.; citation_title=Towards a theory of early visual processing; citation_author=JJ Atick, AN Redlich; citation_volume=320; citation_publication_date=1990; citation_pages=1-13; citation_id=CR2\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Biol. Cybern.; citation_title=A theory of maximizing sensory information; citation_author=JH Hateren; citation_volume=68; citation_publication_date=1992; citation_pages=23-29; citation_doi=10.1007/BF00203134; citation_id=CR3\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Science; citation_title=Concerted signaling by retinal ganglion cells; citation_author=M Meister, L Lagnado, DA Baylor; citation_volume=270; citation_publication_date=1995; citation_pages=1207-1210; citation_doi=10.1126/science.270.5239.1207; citation_id=CR4\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Network; citation_title=A test of metabolically efficient coding in the retina; citation_author=V Balasubramanian, MJ Berry; citation_volume=13; citation_publication_date=2002; citation_pages=531-552; citation_doi=10.1088/0954-898X_13_4_306; citation_id=CR5\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Neuron; citation_title=Redundancy in the population code of the retina; citation_author=JL Puchalla, E Schneidman, RA Harris, MJ Berry; citation_volume=46; citation_publication_date=2005; citation_pages=493-504; citation_doi=10.1016/j.neuron.2005.03.026; citation_id=CR6\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=J. Neurosci.; citation_title=Efficient coding of spatial information in the primate retina; citation_author=E Doi; citation_volume=32; citation_publication_date=2012; citation_pages=16256-16264; citation_doi=10.1523/JNEUROSCI.4036-12.2012; citation_id=CR7\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=J. Physiol.; citation_title=Receptive fields, binocular interaction and functional architecture in the cat&#8217;s visual cortex; citation_author=DH Hubel, TN Wiesel; citation_volume=160; citation_publication_date=1962; citation_pages=106-154; citation_doi=10.1113/jphysiol.1962.sp006837; citation_id=CR8\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Nature; citation_title=Emergence of simple-cell receptive field properties by learning a sparse code for natural images; citation_author=BA Olshausen, DJ Field; citation_volume=381; citation_publication_date=1996; citation_pages=607-609; citation_doi=10.1038/381607a0; citation_id=CR9\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Vision Res.; citation_title=The &#8216;independent components&#8217; of natural scenes are edge filters; citation_author=AJ Bell, TJ Sejnowski; citation_volume=37; citation_publication_date=1997; citation_pages=3327-3338; citation_doi=10.1016/S0042-6989(97)00121-1; citation_id=CR10\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Neuron; citation_title=Origin and function of tuning diversity in macaque visual cortex; citation_author=RLT Goris, EP Simoncelli, JA Movshon; citation_volume=88; citation_publication_date=2015; citation_pages=819-831; citation_doi=10.1016/j.neuron.2015.10.009; citation_id=CR11\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=J. Neurosci.; citation_title=Selectivity and tolerance (&#8216;invariance&#8217;) both increase as visual information propagates from cortical area V4 to IT; citation_author=NC Rust, JJ DiCarlo; citation_volume=30; citation_publication_date=2010; citation_pages=12978-12995; citation_doi=10.1523/JNEUROSCI.0179-10.2010; citation_id=CR12\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Commun. ACM; citation_title=MPEG: a video compression standard for multimedia applications; citation_author=D Gall; citation_volume=34; citation_publication_date=1991; citation_pages=46-58; citation_doi=10.1145/103085.103090; citation_id=CR13\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=In Proc. Allerton Conference on Communication, Control and Computing; citation_title=The information bottleneck method; citation_author=N Tishby, FC Pereira, W Bialek; citation_volume=37; citation_publication_date=1999; citation_pages=368-377; citation_id=CR14\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Neural Comput.; citation_title=Slow feature analysis: unsupervised learning of invariances; citation_author=L Wiskott, TJ Sejnowski; citation_volume=14; citation_publication_date=2002; citation_pages=715-70; citation_doi=10.1162/089976602317318938; citation_id=CR15\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Proc. Natl Acad. Sci. USA; citation_title=Predictive information in a sensory population; citation_author=SE Palmer, O Marre, MJ Berry, W Bialek; citation_volume=112; citation_publication_date=2015; citation_pages=6908-13; citation_doi=10.1073/pnas.1506855112; citation_id=CR17\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Trends Cogn. Sci.; citation_title=Untangling invariant object recognition; citation_author=JJ DiCarlo, DD Cox; citation_volume=11; citation_publication_date=2007; citation_pages=333-341; citation_doi=10.1016/j.tics.2007.06.010; citation_id=CR18\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Proc. of the Symposium in Applied Mathematics of the American Mathematical Society and the Society for Industrial and Applied Mathematics; citation_title=Optimal decision rules for some common psychophysical paradigms; citation_author=DL Noreen; citation_volume=13; citation_publication_date=1981; citation_pages=237-279; citation_id=CR19\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Science; citation_title=A global geometric framework for nonlinear dimensionality reduction; citation_author=JB Tenenbaum, V Silva, JC Langford; citation_volume=290; citation_publication_date=2000; citation_pages=2319-23; citation_doi=10.1126/science.290.5500.2319; citation_id=CR20\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Science; citation_title=Nonlinear dimensionality reduction by locally linear embedding; citation_author=ST Roweis, LK Saul; citation_volume=290; citation_publication_date=2000; citation_pages=2323-6; citation_doi=10.1126/science.290.5500.2323; citation_id=CR21\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Advances in Neural Information Processing Systems; citation_title=Exponential expressivity in deep neural networks through transient chaos; citation_author=B Poole, S Lahiri, M Raghu, J Sohl-Dickstein, S Ganguli; citation_volume=29; citation_publication_date=2016; citation_pages=3360-3368; citation_id=CR22\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Neuron; citation_title=Functional mechanisms shaping lateral geniculate responses to artificial and natural stimuli; citation_author=V Mante, V Bonin, M Carandini; citation_volume=58; citation_publication_date=2008; citation_pages=625-638; citation_doi=10.1016/j.neuron.2008.03.011; citation_id=CR23\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Advances in Neural Information Processing Systems; citation_title=Eigen-distortions of hierarchical representations; citation_author=A Berardino, J Ball&#233;, V Laparra, EP Simoncelli; citation_volume=30; citation_publication_date=2017; citation_pages=3530-3539; citation_id=CR24\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=J. Opt. Soc. Am. A; citation_title=Spatiotemporal energy models for the perception of motion; citation_author=EH Adelson, JR Bergen; citation_volume=2; citation_publication_date=1985; citation_pages=284; citation_doi=10.1364/JOSAA.2.000284; citation_id=CR25\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Nat. Rev. Neurosci.; citation_title=Normalization as a canonical neural computation; citation_author=M Carandini, DJ Heeger; citation_volume=13; citation_publication_date=2012; citation_pages=51-62; citation_doi=10.1038/nrn3136; citation_id=CR26\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Commun. Pur. Appl. Math.; citation_title=Group invariant scattering.; citation_author=S Mallat; citation_volume=65; citation_publication_date=2012; citation_pages=1331-1398; citation_doi=10.1002/cpa.21413; citation_id=CR27\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Nature; citation_title=Deep learning; citation_author=Y LeCun, Y Bengio, G Hinton; citation_volume=521; citation_publication_date=2015; citation_pages=436-444; citation_doi=10.1038/nature14539; citation_id=CR28\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Proc Natl Acad. Sci. USA; citation_title=Performance-optimized hierarchical models predict neural responses in higher visual cortex; citation_author=DLK Yamins; citation_volume=111; citation_publication_date=2014; citation_pages=8619-8624; citation_doi=10.1073/pnas.1403112111; citation_id=CR29\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=PLoS Comput. Biol.; citation_title=Deep supervised, but not unsupervised, models may explain IT cortical representation; citation_author=SM Khaligh-Razavi, N Kriegeskorte; citation_volume=10; citation_publication_date=2014; citation_pages=e1003915; citation_doi=10.1371/journal.pcbi.1003915; citation_id=CR30\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=PLoS Comput. Biol.; citation_title=Invariant recognition drives neural representations of action sequences; citation_author=A Tacchetti, L Isik, T Poggio; citation_volume=13; citation_publication_date=2017; citation_pages=e1005859; citation_doi=10.1371/journal.pcbi.1005859; citation_id=CR31\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Nat. Neurosci.; citation_title=Explicit information for category-orthogonal object properties increases along the ventral stream; citation_author=H Hong, DLK Yamins, NJ Majaj, JJ Dicarlo; citation_volume=19; citation_publication_date=2016; citation_pages=613-22; citation_doi=10.1038/nn.4247; citation_id=CR32\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Advances in Neural Information Processing Systems; citation_title=ImageNet classification with deep convolutional neural networks; citation_author=A Krizhevsky, I Sutskever, GE Hinton; citation_volume=25; citation_publication_date=2012; citation_pages=1-9; citation_id=CR33\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=In Proc. International Conference on Learning Representations; citation_title=Very deep convolutional networks for large-scale image recognition; citation_author=K Simonyan, A Zisserman; citation_volume=3; citation_publication_date=2015; citation_pages=1-14; citation_id=CR34\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=In Proc. International Conference on Machine Learning; citation_title=Batch normalization: accelerating deep network training by reducing internal covariate shift; citation_author=S Ioffe, C Szegedy; citation_volume=7; citation_publication_date=2015; citation_pages=1-9; citation_id=CR35\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=In Proc. Conference on Computer Vision and Pattern Recognition; citation_title=Deep residual learning for image recognition; citation_author=K He, X Zhang, S Ren, J Sun; citation_volume=29; citation_publication_date=2016; citation_pages=770-778; citation_id=CR36\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=In Proc. Conference on Computer Vision and Pattern Recognition; citation_title=Densely connected convolutional networks; citation_author=G Huang, Z Liu, L Van Der Maaten, KQ Weinberger; citation_volume=30; citation_publication_date=2017; citation_pages=2261-2269; citation_id=CR37\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Annu. Rev. Neurosci.; citation_title=Natural image statistics and neural representation; citation_author=EP Simoncelli, BA Olshausen; citation_volume=24; citation_publication_date=2001; citation_pages=1193-1216; citation_doi=10.1146/annurev.neuro.24.1.1193; citation_id=CR38\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Network; citation_title=Redundancy reduction revisited; citation_author=H Barlow; citation_volume=12; citation_publication_date=2001; citation_pages=241-253; citation_doi=10.1080/net.12.3.241.253; citation_id=CR39\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Neuron; citation_title=Testing the efficiency of sensory coding with optimal stimulus ensembles; citation_author=CK Machens, T Gollisch, O Kolesnikova, AVM Herz; citation_volume=47; citation_publication_date=2005; citation_pages=447-456; citation_doi=10.1016/j.neuron.2005.06.015; citation_id=CR40\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Annu. Rev. Psychol.; citation_title=Visual perception and the statistical properties of natural scenes; citation_author=WS Geisler; citation_volume=59; citation_publication_date=2008; citation_pages=167-192; citation_doi=10.1146/annurev.psych.58.110405.085632; citation_id=CR41\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Biol. Cybernet.; citation_title=Neocognitron: a self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position; citation_author=K Fukushima; citation_volume=36; citation_publication_date=1980; citation_pages=193-202; citation_doi=10.1007/BF00344251; citation_id=CR43\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Proc. Natl Acad. Sci. USA; citation_title=A feedforward architecture accounts for rapid categorization; citation_author=T Serre, A Oliva, T Poggio; citation_volume=104; citation_publication_date=2007; citation_pages=6424-6429; citation_doi=10.1073/pnas.0700622104; citation_id=CR44\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=In Proc. International Conferenceon Learning Representations; citation_title=Geodesics of learned representations; citation_author=OJ H&#233;naff, EP Simoncelli; citation_volume=4; citation_publication_date=2016; citation_pages=1-10; citation_id=CR46\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Science; citation_title=Unsupervised natural experience rapidly alters invariant object representation in visual cortex; citation_author=N Li, JJ DiCarlo; citation_volume=321; citation_publication_date=2008; citation_pages=1502-1507; citation_doi=10.1126/science.1160028; citation_id=CR48\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Neuron; citation_title=Unsupervised natural visual experience rapidly reshapes size-invariant object representation in inferior temporal cortex; citation_author=N Li, JJ DiCarlo; citation_volume=67; citation_publication_date=2010; citation_pages=1062-1075; citation_doi=10.1016/j.neuron.2010.08.029; citation_id=CR49\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Nat. Neurosci.; citation_title=&#8216;Breaking&#8217; position-invariant object recognition; citation_author=DD Cox, P Meier, N Oertelt, JJ DiCarlo; citation_volume=8; citation_publication_date=2005; citation_pages=1145-1147; citation_doi=10.1038/nn1519; citation_id=CR50\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=IEEE Transactions on Image Process.; citation_title=Study of subjective and objective quality assessment of video; citation_author=K Seshadrinathan, R Soundararajan, AC Bovik, LK Cormack; citation_volume=19; citation_publication_date=2010; citation_pages=1427-1441; citation_doi=10.1109/TIP.2010.2042111; citation_id=CR51\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Percept. Psychophys.; citation_title=The psychometric function: I. Fitting, sampling, and goodness of fit; citation_author=FA Wichmann, NJ Hill; citation_volume=63; citation_publication_date=2001; citation_pages=1293-1313; citation_doi=10.3758/BF03194544; citation_id=CR53\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Mach. Learn.; citation_title=Introduction to variational methods for graphical models; citation_author=MI Jordan, Z Ghahramani, TS Jaakkola, LK Saul; citation_volume=37; citation_publication_date=1999; citation_pages=183-233; citation_doi=10.1023/A:1007665907178; citation_id=CR54\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=In Proc. International Conference on Learning Representations; citation_title=Auto-encoding variational bayes; citation_author=DP Kingma, M Welling; citation_volume=2; citation_publication_date=2014; citation_pages=1-14; citation_id=CR55\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=J. Physiol.; citation_title=Regional variations in the visual acuity for interference fringes on the retina; citation_author=DG Green; citation_volume=207; citation_publication_date=1970; citation_pages=351-6; citation_doi=10.1113/jphysiol.1970.sp009065; citation_id=CR57\"/>",
+        "<meta name=\"citation_author\" content=\"H&#233;naff, Olivier J.\"/>",
+        "<meta name=\"citation_author_institution\" content=\"Center for Neural Science, New York University, New York, USA\"/>",
+        "<meta name=\"citation_author_institution\" content=\"DeepMind, London, UK\"/>",
+        "<meta name=\"citation_author\" content=\"Goris, Robbe L. T.\"/>",
+        "<meta name=\"citation_author_institution\" content=\"Center for Perceptual Systems, University of Texas at Austin, Austin, USA\"/>",
+        "<meta name=\"citation_author\" content=\"Simoncelli, Eero P.\"/>",
+        "<meta name=\"citation_author_institution\" content=\"Center for Neural Science, New York University, New York, USA\"/>",
+        "<meta name=\"citation_author_institution\" content=\"Howard Hughes Medical Institute, New York University, New York, USA\"/>",
+        "<meta name=\"citation_author_institution\" content=\"Courant Institute of Mathematical Sciences, New York University, New York, USA\"/>",
+        "<meta name=\"citation_author_institution\" content=\"Department of Psychology, New York University, New York, USA\"/>"
+      ]
+    },
+    {
+      "key": "gelada2019deepmdp",
+      "url": "https://proceedings.mlr.press/v97/gelada19a.html",
+      "title": "DeepMDP}: Learning Continuous Latent Space Models for Representation Learning",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v97/gelada19a.html",
+      "page_title": [
+        "DeepMDP: Learning Continuous Latent Space Models for Representation Learning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"DeepMDP: Learning Continuous Latent Space Models for Representation Learning\"/>",
+        "<meta name=\"citation_author\" content=\"Carles Gelada\">",
+        "<meta name=\"citation_author\" content=\"Saurabh Kumar\">",
+        "<meta name=\"citation_author\" content=\"Jacob Buckman\">",
+        "<meta name=\"citation_author\" content=\"Ofir Nachum\">",
+        "<meta name=\"citation_author\" content=\"Marc G. Bellemare\">"
+      ]
+    },
+    {
+      "key": "sun2020ttt",
+      "url": "https://proceedings.mlr.press/v119/sun20b.html",
+      "title": "Test-Time Training with Self-Supervision for Generalization under Distribution Shifts",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v119/sun20b.html",
+      "page_title": [
+        "Test-Time Training with Self-Supervision for Generalization under Distribution Shifts"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Test-Time Training with Self-Supervision for Generalization under Distribution Shifts\"/>",
+        "<meta name=\"citation_author\" content=\"Yu Sun\">",
+        "<meta name=\"citation_author\" content=\"Xiaolong Wang\">",
+        "<meta name=\"citation_author\" content=\"Zhuang Liu\">",
+        "<meta name=\"citation_author\" content=\"John Miller\">",
+        "<meta name=\"citation_author\" content=\"Alexei Efros\">",
+        "<meta name=\"citation_author\" content=\"Moritz Hardt\">"
+      ]
+    },
+    {
+      "key": "wang2021tent",
+      "url": "https://arxiv.org/abs/2006.10726",
+      "title": "Tent: Fully Test-Time Adaptation by Entropy Minimization",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2006.10726",
+      "page_title": [
+        "[2006.10726] Tent: Fully Test-time Adaptation by Entropy Minimization"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Tent: Fully Test-time Adaptation by Entropy Minimization\" />",
+        "<meta name=\"citation_author\" content=\"Wang, Dequan\" />",
+        "<meta name=\"citation_author\" content=\"Shelhamer, Evan\" />",
+        "<meta name=\"citation_author\" content=\"Liu, Shaoteng\" />",
+        "<meta name=\"citation_author\" content=\"Olshausen, Bruno\" />",
+        "<meta name=\"citation_author\" content=\"Darrell, Trevor\" />",
+        "<meta name=\"citation_date\" content=\"2020/06/18\" />"
+      ]
+    },
+    {
+      "key": "rubinstein1999cem",
+      "url": "https://doi.org/10.1023/A:1010091220143",
+      "title": "The Cross-Entropy Method for Combinatorial and Continuous Optimization",
+      "status": 200,
+      "final_url": "https://link.springer.com/article/10.1023/A:1010091220143?error=cookies_not_supported&code=726b885c-a34b-45c2-8299-c8ebbd293d4b",
+      "page_title": [
+        "The Cross-Entropy Method for Combinatorial and Continuous Optimization | Methodology and Computing in Applied Probability | Springer Nature Link"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"The Cross-Entropy Method for Combinatorial and Continuous Optimization\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_title=Local Search in Combinatorial Optimization; citation_publication_date=1997; citation_id=CR2; citation_author=E. H. L. Aarts; citation_author=J. K. Lenstra; citation_publisher=Wiley\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Journal of Computational Physics; citation_title=Seeking Global Minima; citation_author=W. A. T. W. Abdullah; citation_volume=110; citation_publication_date=1994; citation_pages=320; citation_id=CR3\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Journal of the Royal Statistical Society, Series B; citation_title=A General Class of Coefficients of Divergence of one Distribution from Another; citation_author=S. M. Ali, S. D. Silvey; citation_volume=28; citation_publication_date=1966; citation_pages=131-142; citation_id=CR5\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Management Science; citation_title=A Method for Discrete Stochastic Optimization; citation_author=S. Andrad&#243;ttir; citation_volume=41; citation_publication_date=1995; citation_pages=1946-1961; citation_id=CR6\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=SIAM J. Optimization; citation_title=A Global Search Method for Discrete Stochastic Optimization; citation_author=S. Andrad&#243;ttir; citation_volume=6; citation_publication_date=1996; citation_pages=513-530; citation_id=CR7\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_title=Non-Uniform Random Variate Generation; citation_publication_date=1986; citation_id=CR10; citation_author=L. Devroye; citation_publisher=Springer\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Journal on ACM; citation_title=A Random Polynomial-Time Algorithm for Approximation the Volume of Convex Bodies; citation_author=M. Dyer, A. Frieze, R. Kannan; citation_volume=38; citation_publication_date=1991; citation_pages=1-17; citation_id=CR11\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Annals of Applied Probability; citation_title=Probabilistic Search with Overrides; citation_author=B. L. Fox, G. W. Heine; citation_volume=6; citation_publication_date=1996; citation_pages=1087-1094; citation_id=CR12\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Journal of the American Statistical Association; citation_title=Annealing Markov Chain Monte-Carlo with Applications to to Ancestral Inference; citation_author=C. J. Geyer, E.A. Thompson; citation_volume=90; citation_publication_date=1995; citation_pages=909-920; citation_id=CR13\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_title=Genetic Algorithms in Search, Optimization and Machine Learning; citation_publication_date=1989; citation_id=CR16; citation_author=D. Goldberg; citation_publisher=Addison Wesley\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Journal of Global Optimization; citation_title=Simulated Annealing for Noisy Cost Functions; citation_author=W. J. Gutjahr, G. C. Pflug; citation_volume=8; citation_publication_date=1996; citation_pages=1-13; citation_id=CR18\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Biometrika; citation_title=Monte Carlo Sampling Methods using Markov Chains and their Applications; citation_author=W. K. Hastings; citation_volume=57; citation_publication_date=1970; citation_pages=92-109; citation_id=CR19\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=SIAM Journal on Computing; citation_title=Approximating the Permanent; citation_author=M. R. Jerrum, A. J. Sinclair; citation_volume=18; citation_publication_date=1989; citation_pages=1149-1178; citation_id=CR21\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=SIAM Journal on Computing; citation_title=Polynomial-Time Approximation Algorithms for the Ising Model; citation_author=M. R. Jerrum, A. J. Sinclair; citation_volume=22; citation_publication_date=1993; citation_pages=1087-1116; citation_id=CR22\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Science; citation_title=Optimization by Simulated Annealing; citation_author=S. Kirkpatrick, C. D. Gelatt, M. P. Vecchi; citation_volume=220; citation_publication_date=1983; citation_pages=671-680; citation_id=CR26\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_title=Rare Events Estimation Via Cross-Entropy and Importance Sampling; citation_publication_date=1999; citation_id=CR27; citation_author=D. Lieber; citation_publisher=William Davidson Faculty of Industrial Engineering and Management, Technion\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=IEEE, Transactions on Reliability; citation_title=Quick Estimation of Rare events in Stochastic Networks; citation_author=D. Lieber, R. Y. Rubinstein, D. Elmakis; citation_volume=46; citation_issue=2; citation_publication_date=1997; citation_pages=254-265; citation_id=CR28\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=DIMACS Seies in Discrete Mathematics and Theoretical Computer Science; citation_title=Randomized Algorithms in Combinatorial Optimization; citation_author=L. Lovasz; citation_volume=25; citation_publication_date=1995; citation_pages=153-179; citation_id=CR29\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Europhisics letters; citation_title=Simulated Tempering: A New Monte Carlo Scheme; citation_author=E. Marinari, G. Parisi; citation_volume=19; citation_publication_date=1992; citation_pages=451-458; citation_id=CR30\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Computer Journal; citation_title=A Simplex Method for Function Minimization; citation_author=R. Mead, J. A. Nedler; citation_volume=7; citation_publication_date=1965; citation_pages=308-313; citation_id=CR31\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=J. of Chemical Physics; citation_title=Equations of State Calculations by Fast Computing Machines; citation_author=M. Metropolis, A.W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, E. Teller; citation_volume=21; citation_publication_date=1953; citation_pages=1087-1092; citation_id=CR32\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Annals of Operations Research; citation_title=Metaheuristics: A bibliography; citation_author=I. H. Osman, G. Laporte; citation_volume=63; citation_publication_date=1996; citation_pages=513-523; citation_id=CR34\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_title=Discrete Optimization; citation_publication_date=1988; citation_id=CR36; citation_author=R. G. Parker; citation_author=R. L. Rardin; citation_publisher=Academic Press\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=IEEE Transactions on Information Theory; citation_title=Stochastic Approximation Algorithms for Partition Function Estimation of Gibbs Random Fields; citation_author=G. Potamianos, J. Goutsias; citation_volume=43; citation_issue=6; citation_publication_date=1997; citation_pages=1948-1965; citation_id=CR37\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_title=Modern Heuristic Search Methods; citation_publication_date=1996; citation_id=CR38; citation_author=V. J. Rayward-Smith; citation_author=I. H. Osman; citation_author=C. R. Reeves; citation_author=G. D. Smith; citation_publisher=Wiley\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_title=Modern heuristic techniques; citation_inbook_title=Modern Heuristic Search Methods; citation_publication_date=1996; citation_id=CR39; citation_author=C. R. Reeves; citation_publisher=Wiley\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Journal of Global Optimization; citation_title=Simulated Annealing for Constrained Global Optimization; citation_author=H. E. Romeijn, R. L. Smith; citation_volume=5; citation_publication_date=1994; citation_pages=101-126; citation_id=CR40\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=European Journal of Operations Research; citation_title=Optimization of Computer Simulation Models with Rare Events; citation_author=R. Y. Rubinstein; citation_volume=99; citation_publication_date=1997; citation_pages=89-112; citation_id=CR42\"/>",
+        "<meta name=\"citation_reference\" content=\"citation_journal_title=Assoc. Comput. Mach. Trans. Math. Software; citation_title=An Efficient Method for Generating Discrete Random Variables with General Distributions; citation_author=A. J. Walker; citation_volume=3; citation_publication_date=1977; citation_pages=253-256; citation_id=CR46\"/>",
+        "<meta name=\"citation_author\" content=\"Rubinstein, Reuven\"/>",
+        "<meta name=\"citation_author_email\" content=\"ierrr01@ie.technion.ac.il\"/>"
+      ]
+    },
+    {
+      "key": "pinneri2021icem",
+      "url": "https://proceedings.mlr.press/v155/pinneri21a.html",
+      "title": "Sample-Efficient Cross-Entropy Method for Real-Time Planning",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v155/pinneri21a.html",
+      "page_title": [
+        "Sample-efficient Cross-Entropy Method for Real-time Planning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Sample-efficient Cross-Entropy Method for Real-time Planning\"/>",
+        "<meta name=\"citation_author\" content=\"Cristina Pinneri\">",
+        "<meta name=\"citation_author\" content=\"Shambhuraj Sawant\">",
+        "<meta name=\"citation_author\" content=\"Sebastian Blaes\">",
+        "<meta name=\"citation_author\" content=\"Jan Achterhold\">",
+        "<meta name=\"citation_author\" content=\"Joerg Stueckler\">",
+        "<meta name=\"citation_author\" content=\"Michal Rolinek\">",
+        "<meta name=\"citation_author\" content=\"Georg Martius\">"
+      ]
+    },
+    {
+      "key": "williams2017mppi",
+      "url": "https://doi.org/10.2514/1.G001921",
+      "title": "Model Predictive Path Integral Control: From Theory to Parallel Computation",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "koren1991potential",
+      "url": "https://doi.org/10.1109/ROBOT.1991.131810",
+      "title": "Potential Field Methods and Their Inherent Limitations for Mobile Robot Navigation",
+      "error": "Remote end closed connection without response"
+    },
+    {
+      "key": "glover1989tabu",
+      "url": "https://doi.org/10.1287/ijoc.1.3.190",
+      "title": "Tabu Search---Part {I",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "eysenbach2019sorb",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/5c48ff18e0a47baaf81d8b8ea51eec92-Abstract.html",
+      "title": "Search on the Replay Buffer: Bridging Planning and Reinforcement Learning",
+      "status": 200,
+      "final_url": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/5c48ff18e0a47baaf81d8b8ea51eec92-Abstract.html",
+      "page_title": [
+        "Search on the Replay Buffer: Bridging Planning and Reinforcement Learning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Search on the Replay Buffer: Bridging Planning and Reinforcement Learning\">",
+        "<meta name=\"citation_author\" content=\"Eysenbach, Ben\">",
+        "<meta name=\"citation_author\" content=\"Salakhutdinov, Russ R.\">",
+        "<meta name=\"citation_author\" content=\"Levine, Sergey\">"
+      ]
+    },
+    {
+      "key": "lynch1996pushing",
+      "url": "https://doi.org/10.1177/027836499601500602",
+      "title": "Stable Pushing: Mechanics, Controllability, and Planning",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "agrawal2016poking",
+      "url": "https://papers.nips.cc/paper_files/paper/2016/hash/c203d8a151612acf12457e4d67635a95-Abstract.html",
+      "title": "Learning to Poke by Poking: Experiential Learning of Intuitive Physics",
+      "status": 200,
+      "final_url": "https://papers.nips.cc/paper_files/paper/2016/hash/c203d8a151612acf12457e4d67635a95-Abstract.html",
+      "page_title": [
+        "Learning to Poke by Poking: Experiential Learning of Intuitive Physics"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Learning to Poke by Poking: Experiential Learning of Intuitive Physics\">",
+        "<meta name=\"citation_author\" content=\"Agrawal, Pulkit\">",
+        "<meta name=\"citation_author\" content=\"Nair, Ashvin V.\">",
+        "<meta name=\"citation_author\" content=\"Abbeel, Pieter\">",
+        "<meta name=\"citation_author\" content=\"Malik, Jitendra\">",
+        "<meta name=\"citation_author\" content=\"Levine, Sergey\">"
+      ]
+    },
+    {
+      "key": "yu2016pushing",
+      "url": "https://doi.org/10.1109/IROS.2016.7758091",
+      "title": "More than a Million Ways to Be Pushed: A High-Fidelity Experimental Dataset of Planar Pushing",
+      "error": "Remote end closed connection without response"
+    },
+    {
+      "key": "henderson2018matters",
+      "url": "https://arxiv.org/abs/1709.06560",
+      "title": "Deep Reinforcement Learning That Matters",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1709.06560",
+      "page_title": [
+        "[1709.06560] Deep Reinforcement Learning that Matters"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Deep Reinforcement Learning that Matters\" />",
+        "<meta name=\"citation_author\" content=\"Henderson, Peter\" />",
+        "<meta name=\"citation_author\" content=\"Islam, Riashat\" />",
+        "<meta name=\"citation_author\" content=\"Bachman, Philip\" />",
+        "<meta name=\"citation_author\" content=\"Pineau, Joelle\" />",
+        "<meta name=\"citation_author\" content=\"Precup, Doina\" />",
+        "<meta name=\"citation_author\" content=\"Meger, David\" />",
+        "<meta name=\"citation_date\" content=\"2017/09/19\" />"
+      ]
+    },
+    {
+      "key": "agarwal2021statistical",
+      "url": "https://papers.neurips.cc/paper_files/paper/2021/hash/f514cec81cb148559cf475e7426eed5e-Abstract.html",
+      "title": "Deep Reinforcement Learning at the Edge of the Statistical Precipice",
+      "status": 200,
+      "final_url": "https://papers.neurips.cc/paper_files/paper/2021/hash/f514cec81cb148559cf475e7426eed5e-Abstract.html",
+      "page_title": [
+        "Deep Reinforcement Learning at the Edge of the Statistical Precipice"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Deep Reinforcement Learning at the Edge of the Statistical Precipice\">",
+        "<meta name=\"citation_author\" content=\"Agarwal, Rishabh\">",
+        "<meta name=\"citation_author\" content=\"Schwarzer, Max\">",
+        "<meta name=\"citation_author\" content=\"Castro, Pablo Samuel\">",
+        "<meta name=\"citation_author\" content=\"Courville, Aaron\">",
+        "<meta name=\"citation_author\" content=\"Bellemare, Marc\">"
+      ]
+    },
+    {
+      "key": "ross2011dagger",
+      "url": "https://proceedings.mlr.press/v15/ross11a.html",
+      "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v15/ross11a.html",
+      "page_title": [
+        "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning\"/>",
+        "<meta name=\"citation_author\" content=\"Stephane Ross\">",
+        "<meta name=\"citation_author\" content=\"Geoffrey Gordon\">",
+        "<meta name=\"citation_author\" content=\"Drew Bagnell\">"
+      ]
+    },
+    {
+      "key": "zhao2023act",
+      "url": "https://www.roboticsproceedings.org/rss19/p016.html",
+      "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+      "status": 200,
+      "final_url": "https://www.roboticsproceedings.org/rss19/p016.html",
+      "page_title": [
+        "Robotics: Science and Systems XIX - Online Proceedings"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware\" />",
+        "<meta name=\"citation_author\" content=\"Tony Z. Zhao\" />",
+        "<meta name=\"citation_author\" content=\"Vikash Kumar\" />",
+        "<meta name=\"citation_author\" content=\"Sergey Levine\" />",
+        "<meta name=\"citation_author\" content=\"Chelsea Finn\" />"
+      ]
+    },
+    {
+      "key": "laskey2017dart",
+      "url": "https://proceedings.mlr.press/v78/laskey17a.html",
+      "title": "DART}: Noise Injection for Robust Imitation Learning",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v78/laskey17a.html",
+      "page_title": [
+        "DART: Noise Injection for Robust Imitation Learning"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"DART: Noise Injection for Robust Imitation Learning\"/>",
+        "<meta name=\"citation_author\" content=\"Michael Laskey\">",
+        "<meta name=\"citation_author\" content=\"Jonathan Lee\">",
+        "<meta name=\"citation_author\" content=\"Roy Fox\">",
+        "<meta name=\"citation_author\" content=\"Anca Dragan\">",
+        "<meta name=\"citation_author\" content=\"Ken Goldberg\">"
+      ]
+    },
+    {
+      "key": "nair2022r3m",
+      "url": "https://proceedings.mlr.press/v205/nair23a.html",
+      "title": "R3M}: A Universal Visual Representation for Robot Manipulation",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v205/nair23a.html",
+      "page_title": [
+        "R3M: A Universal Visual Representation for Robot Manipulation"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"R3M: A Universal Visual Representation for Robot Manipulation\"/>",
+        "<meta name=\"citation_author\" content=\"Suraj Nair\">",
+        "<meta name=\"citation_author\" content=\"Aravind Rajeswaran\">",
+        "<meta name=\"citation_author\" content=\"Vikash Kumar\">",
+        "<meta name=\"citation_author\" content=\"Chelsea Finn\">",
+        "<meta name=\"citation_author\" content=\"Abhinav Gupta\">"
+      ]
+    },
+    {
+      "key": "oquab2024dinov2",
+      "url": "https://arxiv.org/abs/2304.07193",
+      "title": "DINOv2}: Learning Robust Visual Features without Supervision",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2304.07193",
+      "page_title": [
+        "[2304.07193] DINOv2: Learning Robust Visual Features without Supervision"
+      ],
+      "metadata": [
+        "<meta name=\"citation_title\" content=\"DINOv2: Learning Robust Visual Features without Supervision\" />",
+        "<meta name=\"citation_author\" content=\"Oquab, Maxime\" />",
+        "<meta name=\"citation_author\" content=\"Darcet, Timoth\u00e9e\" />",
+        "<meta name=\"citation_author\" content=\"Moutakanni, Th\u00e9o\" />",
+        "<meta name=\"citation_author\" content=\"Vo, Huy\" />",
+        "<meta name=\"citation_author\" content=\"Szafraniec, Marc\" />",
+        "<meta name=\"citation_author\" content=\"Khalidov, Vasil\" />",
+        "<meta name=\"citation_author\" content=\"Fernandez, Pierre\" />",
+        "<meta name=\"citation_author\" content=\"Haziza, Daniel\" />",
+        "<meta name=\"citation_author\" content=\"Massa, Francisco\" />",
+        "<meta name=\"citation_author\" content=\"El-Nouby, Alaaeldin\" />",
+        "<meta name=\"citation_author\" content=\"Assran, Mahmoud\" />",
+        "<meta name=\"citation_author\" content=\"Ballas, Nicolas\" />",
+        "<meta name=\"citation_author\" content=\"Galuba, Wojciech\" />",
+        "<meta name=\"citation_author\" content=\"Howes, Russell\" />",
+        "<meta name=\"citation_author\" content=\"Huang, Po-Yao\" />",
+        "<meta name=\"citation_author\" content=\"Li, Shang-Wen\" />",
+        "<meta name=\"citation_author\" content=\"Misra, Ishan\" />",
+        "<meta name=\"citation_author\" content=\"Rabbat, Michael\" />",
+        "<meta name=\"citation_author\" content=\"Sharma, Vasu\" />",
+        "<meta name=\"citation_author\" content=\"Synnaeve, Gabriel\" />",
+        "<meta name=\"citation_author\" content=\"Xu, Hu\" />",
+        "<meta name=\"citation_author\" content=\"Jegou, Herv\u00e9\" />",
+        "<meta name=\"citation_author\" content=\"Mairal, Julien\" />",
+        "<meta name=\"citation_author\" content=\"Labatut, Patrick\" />",
+        "<meta name=\"citation_author\" content=\"Joulin, Armand\" />",
+        "<meta name=\"citation_author\" content=\"Bojanowski, Piotr\" />",
+        "<meta name=\"citation_date\" content=\"2023/04/14\" />"
+      ]
+    }
+  ],
+  "checked_on": "2026-11-17",
+  "bib_entries": 49,
+  "cited_entries": 47,
+  "review_note": "All 49 bibliography records checked (47 cited). Access-restricted publisher records cross-checked against DOI registration metadata or verified author/institution/preprint sources. No bibliographic identity mismatch found. Full-text access may still require publisher authorization."
 }
