@@ -94,3 +94,10 @@ When the model adapts online on Maze, intervention timing matters: correcting at
 \subsection{Qualitative and behavioral recovery}
 \label{sec:qualitative}
 In the PushObj episode of \cref{fig:teaser}a, the native frozen controller brings the object nearly to its goal by replan 15 and then circles locally without closing the pusher error; ECP shares the first 15 plans, detects the stall, and completes the task two replans later (\cref{fig:push-distance}). Across triggered episodes, ECP moves the pusher $>15$~px from the stalled position within three replans \textbf{38\% of the time vs.\ 11\% natively}, and reduces object error or succeeds within ten replans in \textbf{34\% vs.\ 1\% natively} (\cref{sec:behavior}). In Maze, stagnation memory makes dead-end corridors costly and redirects the trajectory. Cross-domain examples also show recovered PushT episodes and lower Rope error (\cref{fig:execution-recovery}).
+
+\begin{figure}[b]
+\centering
+\includegraphics[width=0.95\columnwidth]{figures/fig_rope_cd_pushes.pdf}
+\caption{\textbf{Faster Rope error reduction.} DINO-WM with three pushes per plan; 20 targets under three seeds. Ours uses fixed-strength memory with five warm-up pushes. Mean Chamfer distance (CD), with $\pm1$ SD across seed means; successful runs retain terminal CD.}
+\label{fig:rope-cd}
+\end{figure}
