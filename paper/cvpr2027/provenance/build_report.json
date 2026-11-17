@@ -1,4 +1,5 @@
 {
+  "engine": "pdflatex",
   "abstract_words_whitespace": 213,
   "abstract_page": 1,
   "figure_one_page": 1,
@@ -11,5 +12,5 @@
   "undefined_references_or_citations": false,
   "overfull_boxes": false,
   "build_runs_experiments": false,
-  "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
+  "known_upstream_warning": null
 }

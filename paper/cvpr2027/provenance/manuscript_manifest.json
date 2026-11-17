@@ -4,41 +4,41 @@
   "template_url": "https://github.com/cvpr-org/author-kit/releases/tag/CVPR2027-v1",
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
-  "tex_engine": "XeTeX via Tectonic",
-  "base_repository_commit": "e70d7cc7ce0bba6a4ded906a8799c6bbdbfe2bba",
+  "tex_engine": "pdfLaTeX (TeX Live 2026); independently checked with XeTeX/Tectonic",
+  "base_repository_commit": "b7c2cec890a7f4c4578504a2baad68d4eaf90db4",
   "new_experiments_run": false,
   "style_sha256": {
-    "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
+    "cvpr.sty": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/curves_equations_revision.json",
+  "audit": "provenance/oral_narrative_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "1c932be3f6d167b1964a970cd1063fa4a5393a00301e5304674955223a9e2189",
-    "paper_v14.pdf": "1c932be3f6d167b1964a970cd1063fa4a5393a00301e5304674955223a9e2189",
-    "paper_main.pdf": "87387105df22c2e7e712004bbd699b39795e713819783354e4a857dde5a65782",
-    "paper_appendix.pdf": "9e57b3055658b74f4b7f8509394f8559e1a9bfb5ed10b74ca49c0362bb06239f"
+    "paper.pdf": "b891f4d12f915a5fe87ecca923252d620cb2290984b48f49721703d92bee5b69",
+    "paper_v14.pdf": "b891f4d12f915a5fe87ecca923252d620cb2290984b48f49721703d92bee5b69",
+    "paper_main.pdf": "5122cdeb577e0fbcf48f598ec84c4183e23b034b36ea30c2b240122be9f900f1",
+    "paper_appendix.pdf": "2966d526404ea4c01d03a6de09b3722ebda72569176eb965ef5d8e7065adac72"
   },
   "figures": 10,
   "main_body_pages": 8,
   "combined_pages": 21,
-  "revision": "v3-planning-curves-equation-clarity",
+  "revision": "oral-narrative-pdflatex",
   "abstract_words_whitespace": 213,
   "figure_pages": {
     "fig:headline": 1,
     "fig:teaser": 2,
     "fig:method": 4,
     "fig:execution-recovery": 7,
-    "fig:threshold": 8,
+    "fig:threshold": 7,
     "fig:push-distance": 16,
     "fig:rope-budget": 18,
     "fig:rope-rollouts": 19,
     "fig:diverse-execution": 20,
     "fig:pusht-rollouts": 21
   },
-  "revision_description": "Add measured threshold and Rope success-budget curves; clarify equations and place Equation 5 on one line.",
+  "revision_description": "Integrate the supplied clearer oral-revision narrative while preserving current results and figures; verify eight main-body pages with the official CVPR2027 template.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-17T05:36:37.771768+00:00",
+  "updated": "2026-11-17T06:46:47.046612+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 11,
   "table_pages": {
@@ -78,5 +78,5 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/curves_equations_revision.json"
+  "current_revision_provenance": "provenance/oral_narrative_revision.json"
 }

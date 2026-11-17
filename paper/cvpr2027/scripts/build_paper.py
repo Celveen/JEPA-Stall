@@ -22,17 +22,36 @@ def run(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--tectonic', default=os.environ.get('TECTONIC', 'tectonic'))
+    parser.add_argument('--engine', choices=['pdflatex', 'tectonic'],
+                        help='Default: pdfLaTeX, matching a new Overleaf project.')
+    parser.add_argument('--pdflatex', default=os.environ.get('PDFLATEX', 'pdflatex'))
+    parser.add_argument('--tectonic', default=os.environ.get('TECTONIC'))
     parser.add_argument('--web-bundle', help='Optional Tectonic resource mirror URL.')
     parser.add_argument('--skip-compile', action='store_true')
     args = parser.parse_args()
+    engine = args.engine or ('tectonic' if args.tectonic else 'pdflatex')
     if not args.skip_compile:
-        command = [args.tectonic, '-X', 'compile', 'main.tex', '--keep-logs', '--keep-intermediates']
-        if args.web_bundle:
-            command += ['--web-bundle', args.web_bundle]
-        result = run(command)
-        print(result.stdout)
-        print(result.stderr)
+        if engine == 'pdflatex':
+            executable = shutil.which(args.pdflatex)
+            if executable is None:
+                raise RuntimeError('pdfLaTeX not found; supply --pdflatex /path/to/pdflatex.')
+            bibtex = str(Path(executable).parent / 'bibtex')
+            command = [executable, '-no-shell-escape', '-interaction=nonstopmode',
+                       '-halt-on-error', '-file-line-error', 'main.tex']
+            run(command)
+            run([bibtex, 'main'])
+            # Resolve citations, back-references, line numbers and floats.
+            for _ in range(3):
+                run(command)
+            print('pdfLaTeX and BibTeX compilation completed.')
+        else:
+            command = [args.tectonic or 'tectonic', '-X', 'compile', 'main.tex',
+                       '--keep-logs', '--keep-intermediates']
+            if args.web_bundle:
+                command += ['--web-bundle', args.web_bundle]
+            result = run(command)
+            print(result.stdout)
+            print(result.stderr)
     log = (ROOT / 'main.log').read_text(errors='replace')
     defects = re.findall(r'^.*(?:Overfull|undefined references|Citation .* undefined|Reference .* undefined).*$',
                          log, flags=re.MULTILINE)
@@ -50,7 +69,7 @@ def main():
     abstract = re.sub(r'\\(?:begin|end)\{abstract\}', '', abstract).strip()
     abstract_words = len(abstract.split())
     if not 160 <= abstract_words <= 250:
-        raise RuntimeError(f'Abstract has {abstract_words} words; expected 160--250 for the v2-based draft.')
+        raise RuntimeError(f'Abstract has {abstract_words} words; expected 160--250.')
     figure_one_page = next(i + 1 for i, p in enumerate(pages) if re.search(r'Figure\s+1\.', p))
     trajectory_figure_page = next(i + 1 for i, p in enumerate(pages) if re.search(r'Figure\s+2\.', p))
     if 'Abstract' not in pages[0] or figure_one_page != 1 or trajectory_figure_page != 2:
@@ -80,6 +99,8 @@ def main():
     appendix_page = next(i for i, p in enumerate(pages) if 'Supplementary Material' in p)
     if statement_page > 8:
         raise RuntimeError(f'Main body is {statement_page} pages, exceeding eight.')
+    if len(pages) > 22:
+        raise RuntimeError(f'Combined manuscript has {len(pages)} pages, exceeding 22.')
     shutil.copyfile(ROOT / 'main.pdf', ROOT / 'paper.pdf')
     shutil.copyfile(ROOT / 'main.pdf', ROOT / 'paper_v14.pdf')
     if poppler:
@@ -101,7 +122,8 @@ def main():
             for page in selected:
                 writer.add_page(page)
             writer.write(ROOT / name)
-    report = {'abstract_words_whitespace': abstract_words,
+    report = {'engine': engine,
+              'abstract_words_whitespace': abstract_words,
               'abstract_page': 1, 'figure_one_page': figure_one_page,
               'headline_on_first_page_right_column': True,
               'trajectory_figure_page': trajectory_figure_page,
@@ -112,7 +134,8 @@ def main():
               'undefined_references_or_citations': False,
               'overfull_boxes': False,
               'build_runs_experiments': False,
-              'known_upstream_warning': 'lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected.'}
+              'known_upstream_warning': ('lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected.'
+                                         if engine == 'tectonic' else None)}
     (ROOT / 'provenance' / 'build_report.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
 

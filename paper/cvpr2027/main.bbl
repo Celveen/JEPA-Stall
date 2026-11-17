@@ -5,119 +5,82 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Agarwal et~al.(2021)Agarwal, Schwarzer, Castro, Courville, and
-  Bellemare]{agarwal2021statistical}
-Rishabh Agarwal, Max Schwarzer, Pablo~Samuel Castro, Aaron~C. Courville, and
-  Marc~G. Bellemare.
+\bibitem[Agarwal et~al.(2021)Agarwal, Schwarzer, Castro, Courville, and Bellemare]{agarwal2021statistical}
+Rishabh Agarwal, Max Schwarzer, Pablo~Samuel Castro, Aaron~C. Courville, and Marc~G. Bellemare.
 \newblock Deep reinforcement learning at the edge of the statistical precipice.
 \newblock In \emph{Advances in Neural Information Processing Systems}, 2021.
 
-\bibitem[Agrawal et~al.(2016)Agrawal, Nair, Abbeel, Malik, and
-  Levine]{agrawal2016poking}
-Pulkit Agrawal, Ashvin~V. Nair, Pieter Abbeel, Jitendra Malik, and Sergey
-  Levine.
-\newblock Learning to poke by poking: Experiential learning of intuitive
-  physics.
+\bibitem[Agrawal et~al.(2016)Agrawal, Nair, Abbeel, Malik, and Levine]{agrawal2016poking}
+Pulkit Agrawal, Ashvin~V. Nair, Pieter Abbeel, Jitendra Malik, and Sergey Levine.
+\newblock Learning to poke by poking: Experiential learning of intuitive physics.
 \newblock In \emph{Advances in Neural Information Processing Systems}, 2016.
 
-\bibitem[Assran et~al.(2023)Assran, Duval, Misra, Bojanowski, Vincent, Rabbat,
-  LeCun, and Ballas]{assran2023ijepa}
-Mahmoud Assran, Quentin Duval, Ishan Misra, Piotr Bojanowski, Pascal Vincent,
-  Michael Rabbat, Yann LeCun, and Nicolas Ballas.
-\newblock Self-supervised learning from images with a joint-embedding
-  predictive architecture.
-\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern
-  Recognition}, pages 15619--15629, 2023.
+\bibitem[Assran et~al.(2023)Assran, Duval, Misra, Bojanowski, Vincent, Rabbat, LeCun, and Ballas]{assran2023ijepa}
+Mahmoud Assran, Quentin Duval, Ishan Misra, Piotr Bojanowski, Pascal Vincent, Michael Rabbat, Yann LeCun, and Nicolas Ballas.
+\newblock Self-supervised learning from images with a joint-embedding predictive architecture.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 15619--15629, 2023.
 
-\bibitem[Assran et~al.(2025)Assran, Bardes, Fan, Garrido, Howes, Komeili,
-  Muckley, Rizvi, Roberts, Sinha, Zholus, Arnaud, Gejji, Martin, Robert~Hogan,
-  Dugas, Bojanowski, Khalidov, Labatut, Massa, Szafraniec, Krishnakumar, Li,
-  Ma, Chandar, Meier, LeCun, Rabbat, and Ballas]{assran2025vjepa2}
-Mahmoud Assran, Adrien Bardes, David Fan, Quentin Garrido, Russell Howes,
-  Mojtaba Komeili, Matthew Muckley, Ammar Rizvi, Claire Roberts, Koustuv Sinha,
-  Artem Zholus, Sergio Arnaud, Abha Gejji, Ada Martin, Francois Robert~Hogan,
-  Daniel Dugas, Piotr Bojanowski, Vasil Khalidov, Patrick Labatut, Francisco
-  Massa, Marc Szafraniec, Kapil Krishnakumar, Yong Li, Xiaodong Ma, Sarath
-  Chandar, Franziska Meier, Yann LeCun, Michael Rabbat, and Nicolas Ballas.
-\newblock {V-JEPA 2}: Self-supervised video models enable understanding,
-  prediction and planning.
+\bibitem[Assran et~al.(2025)Assran, Bardes, Fan, Garrido, Howes, Komeili, Muckley, Rizvi, Roberts, Sinha, Zholus, Arnaud, Gejji, Martin, Robert~Hogan, Dugas, Bojanowski, Khalidov, Labatut, Massa, Szafraniec, Krishnakumar, Li, Ma, Chandar, Meier, LeCun, Rabbat, and Ballas]{assran2025vjepa2}
+Mahmoud Assran, Adrien Bardes, David Fan, Quentin Garrido, Russell Howes, Mojtaba Komeili, Matthew Muckley, Ammar Rizvi, Claire Roberts, Koustuv Sinha, Artem Zholus, Sergio Arnaud, Abha Gejji, Ada Martin, Francois Robert~Hogan, Daniel Dugas, Piotr Bojanowski, Vasil Khalidov, Patrick Labatut, Francisco Massa, Marc Szafraniec, Kapil Krishnakumar, Yong Li, Xiaodong Ma, Sarath Chandar, Franziska Meier, Yann LeCun, Michael Rabbat, and Nicolas Ballas.
+\newblock {V-JEPA 2}: Self-supervised video models enable understanding, prediction and planning.
 \newblock \emph{arXiv preprint arXiv:2506.09985}, 2025.
 
 \bibitem[Balestriero and LeCun(2025)]{balestriero2025lejepa}
 Randall Balestriero and Yann LeCun.
-\newblock {LeJEPA}: Provable and scalable self-supervised learning without the
-  heuristics.
+\newblock {LeJEPA}: Provable and scalable self-supervised learning without the heuristics.
 \newblock \emph{arXiv preprint arXiv:2511.08544}, 2025.
 
-\bibitem[Bardes et~al.(2024)Bardes, Garrido, Ponce, Chen, Rabbat, LeCun,
-  Assran, and Ballas]{bardes2024vjepa}
-Adrien Bardes, Quentin Garrido, Jean Ponce, Xinlei Chen, Michael Rabbat, Yann
-  LeCun, Mahmoud Assran, and Nicolas Ballas.
-\newblock Revisiting feature prediction for learning visual representations
-  from video.
+\bibitem[Bardes et~al.(2024)Bardes, Garrido, Ponce, Chen, Rabbat, LeCun, Assran, and Ballas]{bardes2024vjepa}
+Adrien Bardes, Quentin Garrido, Jean Ponce, Xinlei Chen, Michael Rabbat, Yann LeCun, Mahmoud Assran, and Nicolas Ballas.
+\newblock Revisiting feature prediction for learning visual representations from video.
 \newblock \emph{Transactions on Machine Learning Research}, 2024.
 
 \bibitem[Chua et~al.(2018)Chua, Calandra, McAllister, and Levine]{chua2018pets}
 Kurtland Chua, Roberto Calandra, Rowan McAllister, and Sergey Levine.
-\newblock Deep reinforcement learning in a handful of trials using
-  probabilistic dynamics models.
+\newblock Deep reinforcement learning in a handful of trials using probabilistic dynamics models.
 \newblock In \emph{Advances in Neural Information Processing Systems}, 2018.
 
-\bibitem[Eysenbach et~al.(2019)Eysenbach, Salakhutdinov, and
-  Levine]{eysenbach2019sorb}
+\bibitem[Eysenbach et~al.(2019)Eysenbach, Salakhutdinov, and Levine]{eysenbach2019sorb}
 Benjamin Eysenbach, Ruslan Salakhutdinov, and Sergey Levine.
-\newblock Search on the replay buffer: Bridging planning and reinforcement
-  learning.
+\newblock Search on the replay buffer: Bridging planning and reinforcement learning.
 \newblock In \emph{Advances in Neural Information Processing Systems}, 2019.
 
-\bibitem[Farahmand et~al.(2017)Farahmand, Barreto, and
-  Nikovski]{farahmand2017valueaware}
+\bibitem[Farahmand et~al.(2017)Farahmand, Barreto, and Nikovski]{farahmand2017valueaware}
 Amir-Massoud Farahmand, Andre Barreto, and Daniel Nikovski.
 \newblock Value-aware loss function for model-based reinforcement learning.
-\newblock In \emph{International Conference on Artificial Intelligence and
-  Statistics}, pages 1486--1494, 2017.
+\newblock In \emph{International Conference on Artificial Intelligence and Statistics}, pages 1486--1494, 2017.
 
 \bibitem[Finn and Levine(2017)]{finn2017foresight}
 Chelsea Finn and Sergey Levine.
 \newblock Deep visual foresight for planning robot motion.
-\newblock In \emph{IEEE International Conference on Robotics and Automation},
-  pages 2786--2793, 2017.
+\newblock In \emph{IEEE International Conference on Robotics and Automation}, pages 2786--2793, 2017.
 
 \bibitem[Garc{\'i}a et~al.(1989)Garc{\'i}a, Prett, and Morari]{garcia1989mpc}
 Carlos~E. Garc{\'i}a, David~M. Prett, and Manfred Morari.
 \newblock Model predictive control: Theory and practice---a survey.
 \newblock \emph{Automatica}, 25\penalty0 (3):\penalty0 335--348, 1989.
 
-\bibitem[Gelada et~al.(2019)Gelada, Kumar, Buckman, Nachum, and
-  Bellemare]{gelada2019deepmdp}
-Carles Gelada, Saurabh Kumar, Jacob Buckman, Ofir Nachum, and Marc~G.
-  Bellemare.
-\newblock {DeepMDP}: Learning continuous latent space models for representation
-  learning.
-\newblock In \emph{International Conference on Machine Learning}, pages
-  2170--2179, 2019.
+\bibitem[Gelada et~al.(2019)Gelada, Kumar, Buckman, Nachum, and Bellemare]{gelada2019deepmdp}
+Carles Gelada, Saurabh Kumar, Jacob Buckman, Ofir Nachum, and Marc~G. Bellemare.
+\newblock {DeepMDP}: Learning continuous latent space models for representation learning.
+\newblock In \emph{International Conference on Machine Learning}, pages 2170--2179, 2019.
 
 \bibitem[Glover(1989)]{glover1989tabu}
 Fred Glover.
 \newblock Tabu search---part {I}.
-\newblock \emph{ORSA Journal on Computing}, 1\penalty0 (3):\penalty0 190--206,
-  1989.
+\newblock \emph{ORSA Journal on Computing}, 1\penalty0 (3):\penalty0 190--206, 1989.
 
 \bibitem[Ha and Schmidhuber(2018)]{ha2018worldmodels}
 David Ha and J{\"u}rgen Schmidhuber.
 \newblock World models.
 \newblock \emph{arXiv preprint arXiv:1803.10122}, 2018.
 
-\bibitem[Hafner et~al.(2019)Hafner, Lillicrap, Fischer, Villegas, Ha, Lee, and
-  Davidson]{hafner2019planet}
-Danijar Hafner, Timothy Lillicrap, Ian Fischer, Ruben Villegas, David Ha,
-  Honglak Lee, and James Davidson.
+\bibitem[Hafner et~al.(2019)Hafner, Lillicrap, Fischer, Villegas, Ha, Lee, and Davidson]{hafner2019planet}
+Danijar Hafner, Timothy Lillicrap, Ian Fischer, Ruben Villegas, David Ha, Honglak Lee, and James Davidson.
 \newblock Learning latent dynamics for planning from pixels.
-\newblock In \emph{International Conference on Machine Learning}, pages
-  2555--2565, 2019.
+\newblock In \emph{International Conference on Machine Learning}, pages 2555--2565, 2019.
 
-\bibitem[Hafner et~al.(2020)Hafner, Lillicrap, Ba, and
-  Norouzi]{hafner2020dreamer}
+\bibitem[Hafner et~al.(2020)Hafner, Lillicrap, Ba, and Norouzi]{hafner2020dreamer}
 Danijar Hafner, Timothy Lillicrap, Jimmy Ba, and Mohammad Norouzi.
 \newblock Dream to control: Learning behaviors by latent imagination.
 \newblock In \emph{International Conference on Learning Representations}, 2020.
@@ -127,16 +90,13 @@ Nicklas Hansen, Hao Su, and Xiaolong Wang.
 \newblock {TD-MPC2}: Scalable, robust world models for continuous control.
 \newblock In \emph{International Conference on Learning Representations}, 2024.
 
-\bibitem[H{\'e}naff et~al.(2019)H{\'e}naff, Goris, and
-  Simoncelli]{henaff2019straightening}
+\bibitem[H{\'e}naff et~al.(2019)H{\'e}naff, Goris, and Simoncelli]{henaff2019straightening}
 Olivier~J. H{\'e}naff, Robbe L.~T. Goris, and Eero~P. Simoncelli.
 \newblock Perceptual straightening of natural videos.
 \newblock \emph{Nature Neuroscience}, 22\penalty0 (6):\penalty0 984--991, 2019.
 
-\bibitem[Henderson et~al.(2018)Henderson, Islam, Bachman, Pineau, Precup, and
-  Meger]{henderson2018matters}
-Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup,
-  and David Meger.
+\bibitem[Henderson et~al.(2018)Henderson, Islam, Bachman, Pineau, Precup, and Meger]{henderson2018matters}
+Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup, and David Meger.
 \newblock Deep reinforcement learning that matters.
 \newblock In \emph{AAAI Conference on Artificial Intelligence}, 2018.
 
@@ -148,187 +108,128 @@ Mingu Kang, Yoori Oh, Sookyung Kim, and Joonseok Lee.
 \bibitem[Khatib(1986)]{khatib1986potential}
 Oussama Khatib.
 \newblock Real-time obstacle avoidance for manipulators and mobile robots.
-\newblock \emph{The International Journal of Robotics Research}, 5\penalty0
-  (1):\penalty0 90--98, 1986.
+\newblock \emph{The International Journal of Robotics Research}, 5\penalty0 (1):\penalty0 90--98, 1986.
 
 \bibitem[Koren and Borenstein(1991)]{koren1991potential}
 Yoram Koren and Johann Borenstein.
-\newblock Potential field methods and their inherent limitations for mobile
-  robot navigation.
-\newblock In \emph{IEEE International Conference on Robotics and Automation},
-  pages 1398--1404, 1991.
+\newblock Potential field methods and their inherent limitations for mobile robot navigation.
+\newblock In \emph{IEEE International Conference on Robotics and Automation}, pages 1398--1404, 1991.
 
-\bibitem[Laskey et~al.(2017)Laskey, Lee, Fox, Dragan, and
-  Goldberg]{laskey2017dart}
+\bibitem[Laskey et~al.(2017)Laskey, Lee, Fox, Dragan, and Goldberg]{laskey2017dart}
 Michael Laskey, Jonathan Lee, Roy Fox, Anca Dragan, and Ken Goldberg.
 \newblock {DART}: Noise injection for robust imitation learning.
-\newblock In \emph{Proceedings of the 1st Annual Conference on Robot Learning},
-  pages 143--156. PMLR, 2017.
+\newblock In \emph{Proceedings of the 1st Annual Conference on Robot Learning}, pages 143--156. PMLR, 2017.
 
-\bibitem[Liu et~al.(2026)Liu, Wu, Wen, You, Zhang, Hao, Lin, and
-  Su]{liu2026djepa}
-Shuaijun Liu, Chengyu Wu, Qifu Wen, Feiyang You, Chenglong Zhang, Shuyang Hao,
-  Xi Lin, and Ningxin Su.
+\bibitem[Liu et~al.(2026)Liu, Wu, Wen, You, Zhang, Hao, Lin, and Su]{liu2026djepa}
+Shuaijun Liu, Chengyu Wu, Qifu Wen, Feiyang You, Chenglong Zhang, Shuyang Hao, Xi Lin, and Ningxin Su.
 \newblock {D-JEPA}: A decision-aligned latent world model.
 \newblock \emph{arXiv preprint arXiv:2609.24749}, 2026.
 
 \bibitem[Lynch and Mason(1996)]{lynch1996pushing}
 Kevin~M. Lynch and Matthew~T. Mason.
 \newblock Stable pushing: Mechanics, controllability, and planning.
-\newblock \emph{The International Journal of Robotics Research}, 15\penalty0
-  (6):\penalty0 533--556, 1996.
+\newblock \emph{The International Journal of Robotics Research}, 15\penalty0 (6):\penalty0 533--556, 1996.
 
-\bibitem[Maes et~al.(2026)Maes, Le~Lidec, Scieur, LeCun, and
-  Balestriero]{maes2026lewm}
-Lucas Maes, Quentin Le~Lidec, Damien Scieur, Yann LeCun, and Randall
-  Balestriero.
-\newblock {LeWorldModel}: Stable end-to-end joint-embedding predictive
-  architecture from pixels.
+\bibitem[Maes et~al.(2026)Maes, Le~Lidec, Scieur, LeCun, and Balestriero]{maes2026lewm}
+Lucas Maes, Quentin Le~Lidec, Damien Scieur, Yann LeCun, and Randall Balestriero.
+\newblock {LeWorldModel}: Stable end-to-end joint-embedding predictive architecture from pixels.
 \newblock \emph{arXiv preprint arXiv:2603.19312}, 2026.
 
 \bibitem[Mete et~al.(2026)Mete, Kalathil, and Kumar]{mete2026optta}
 Akshay Mete, Dileep Kalathil, and P.~R. Kumar.
-\newblock Adapt for planning, not just prediction: Optimistic test-time world
-  model adaptation.
+\newblock Adapt for planning, not just prediction: Optimistic test-time world model adaptation.
 \newblock \emph{arXiv preprint arXiv:2610.35636}, 2026.
 \newblock CoRL 2026 Workshop on Pretrain to Adapt.
 
-\bibitem[Nagabandi et~al.(2018)Nagabandi, Kahn, Fearing, and
-  Levine]{nagabandi2018neural}
+\bibitem[Nagabandi et~al.(2018)Nagabandi, Kahn, Fearing, and Levine]{nagabandi2018neural}
 Anusha Nagabandi, Gregory Kahn, Ronald~S. Fearing, and Sergey Levine.
-\newblock Neural network dynamics for model-based deep reinforcement learning
-  with model-free fine-tuning.
-\newblock In \emph{IEEE International Conference on Robotics and Automation},
-  pages 7559--7566, 2018.
+\newblock Neural network dynamics for model-based deep reinforcement learning with model-free fine-tuning.
+\newblock In \emph{IEEE International Conference on Robotics and Automation}, pages 7559--7566, 2018.
 
-\bibitem[Nair et~al.(2023)Nair, Rajeswaran, Kumar, Finn, and
-  Gupta]{nair2022r3m}
+\bibitem[Nair et~al.(2023)Nair, Rajeswaran, Kumar, Finn, and Gupta]{nair2022r3m}
 Suraj Nair, Aravind Rajeswaran, Vikash Kumar, Chelsea Finn, and Abhinav Gupta.
 \newblock {R3M}: A universal visual representation for robot manipulation.
-\newblock In \emph{Proceedings of the 6th Conference on Robot Learning}, pages
-  892--909, 2023.
+\newblock In \emph{Proceedings of the 6th Conference on Robot Learning}, pages 892--909, 2023.
 
-\bibitem[Oquab et~al.(2024)Oquab, Darcet, Moutakanni, Vo, Szafraniec, Khalidov,
-  Fernandez, Haziza, Massa, El-Nouby, Assran, Ballas, Galuba, Howes, Huang, Li,
-  Misra, Rabbat, Sharma, Synnaeve, Xu, J{\'e}gou, Mairal, Labatut, Joulin, and
-  Bojanowski]{oquab2024dinov2}
-Maxime Oquab, Timoth{\'e}e Darcet, Th{\'e}o Moutakanni, Huy Vo, Marc
-  Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa,
-  Alaaeldin El-Nouby, Mahmoud Assran, Nicolas Ballas, Wojciech Galuba, Russell
-  Howes, Po-Yao Huang, Shang-Wen Li, Ishan Misra, Michael Rabbat, Vasu Sharma,
-  Gabriel Synnaeve, Hu Xu, Herv{\'e} J{\'e}gou, Julien Mairal, Patrick Labatut,
-  Armand Joulin, and Piotr Bojanowski.
+\bibitem[Oquab et~al.(2024)Oquab, Darcet, Moutakanni, Vo, Szafraniec, Khalidov, Fernandez, Haziza, Massa, El-Nouby, Assran, Ballas, Galuba, Howes, Huang, Li, Misra, Rabbat, Sharma, Synnaeve, Xu, J{\'e}gou, Mairal, Labatut, Joulin, and Bojanowski]{oquab2024dinov2}
+Maxime Oquab, Timoth{\'e}e Darcet, Th{\'e}o Moutakanni, Huy Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby, Mahmoud Assran, Nicolas Ballas, Wojciech Galuba, Russell Howes, Po-Yao Huang, Shang-Wen Li, Ishan Misra, Michael Rabbat, Vasu Sharma, Gabriel Synnaeve, Hu Xu, Herv{\'e} J{\'e}gou, Julien Mairal, Patrick Labatut, Armand Joulin, and Piotr Bojanowski.
 \newblock {DINOv2}: Learning robust visual features without supervision.
 \newblock \emph{Transactions on Machine Learning Research}, 2024.
 
 \bibitem[Pertsch et~al.(2021)Pertsch, Lee, and Lim]{pertsch2021spirl}
 Karl Pertsch, Youngwoon Lee, and Joseph Lim.
 \newblock Accelerating reinforcement learning with learned skill priors.
-\newblock In \emph{Proceedings of the 2020 Conference on Robot Learning}, pages
-  188--204, 2021.
+\newblock In \emph{Proceedings of the 2020 Conference on Robot Learning}, pages 188--204, 2021.
 
-\bibitem[Pinneri et~al.(2021)Pinneri, Sawant, Blaes, Achterhold, Stueckler,
-  Rolinek, and Martius]{pinneri2021icem}
-Cristina Pinneri, Shambhuraj Sawant, Sebastian Blaes, Jan Achterhold, Joerg
-  Stueckler, Michal Rolinek, and Georg Martius.
+\bibitem[Pinneri et~al.(2021)Pinneri, Sawant, Blaes, Achterhold, Stueckler, Rolinek, and Martius]{pinneri2021icem}
+Cristina Pinneri, Shambhuraj Sawant, Sebastian Blaes, Jan Achterhold, Joerg Stueckler, Michal Rolinek, and Georg Martius.
 \newblock Sample-efficient cross-entropy method for real-time planning.
-\newblock In \emph{Proceedings of the 2020 Conference on Robot Learning}, pages
-  1049--1065, 2021.
+\newblock In \emph{Proceedings of the 2020 Conference on Robot Learning}, pages 1049--1065, 2021.
 
 \bibitem[Ross et~al.(2011)Ross, Gordon, and Bagnell]{ross2011dagger}
 Stephane Ross, Geoffrey Gordon, and Drew Bagnell.
-\newblock A reduction of imitation learning and structured prediction to
-  no-regret online learning.
-\newblock In \emph{Proceedings of the Fourteenth International Conference on
-  Artificial Intelligence and Statistics}, pages 627--635, 2011.
+\newblock A reduction of imitation learning and structured prediction to no-regret online learning.
+\newblock In \emph{Proceedings of the Fourteenth International Conference on Artificial Intelligence and Statistics}, pages 627--635, 2011.
 
 \bibitem[Rubinstein(1999)]{rubinstein1999cem}
 Reuven Rubinstein.
-\newblock The cross-entropy method for combinatorial and continuous
-  optimization.
-\newblock \emph{Methodology and Computing in Applied Probability}, 1\penalty0
-  (2):\penalty0 127--190, 1999.
+\newblock The cross-entropy method for combinatorial and continuous optimization.
+\newblock \emph{Methodology and Computing in Applied Probability}, 1\penalty0 (2):\penalty0 127--190, 1999.
 
-\bibitem[Srinivas et~al.(2018)Srinivas, Jabri, Abbeel, Levine, and
-  Finn]{srinivas2018upn}
+\bibitem[Srinivas et~al.(2018)Srinivas, Jabri, Abbeel, Levine, and Finn]{srinivas2018upn}
 Aravind Srinivas, Allan Jabri, Pieter Abbeel, Sergey Levine, and Chelsea Finn.
-\newblock Universal planning networks: Learning generalizable representations
-  for visuomotor control.
-\newblock In \emph{International Conference on Machine Learning}, pages
-  4732--4741, 2018.
+\newblock Universal planning networks: Learning generalizable representations for visuomotor control.
+\newblock In \emph{International Conference on Machine Learning}, pages 4732--4741, 2018.
 
 \bibitem[Sun et~al.(2020)Sun, Wang, Liu, Miller, Efros, and Hardt]{sun2020ttt}
 Yu Sun, Xiaolong Wang, Zhuang Liu, John Miller, Alexei Efros, and Moritz Hardt.
-\newblock Test-time training with self-supervision for generalization under
-  distribution shifts.
-\newblock In \emph{International Conference on Machine Learning}, pages
-  9229--9248, 2020.
+\newblock Test-time training with self-supervision for generalization under distribution shifts.
+\newblock In \emph{International Conference on Machine Learning}, pages 9229--9248, 2020.
 
 \bibitem[Sutton(1991)]{sutton1991dyna}
 Richard~S. Sutton.
-\newblock {Dyna}, an integrated architecture for learning, planning, and
-  reacting.
+\newblock {Dyna}, an integrated architecture for learning, planning, and reacting.
 \newblock \emph{ACM SIGART Bulletin}, 2\penalty0 (4):\penalty0 160--163, 1991.
 
-\bibitem[Tirumala et~al.(2022)Tirumala, Galashov, Noh, Hasenclever, Pascanu,
-  Schwarz, Desjardins, Czarnecki, Ahuja, Teh, and
-  Heess]{tirumala2022behaviorpriors}
-Dhruva Tirumala, Alexandre Galashov, Hyeonwoo Noh, Leonard Hasenclever, Razvan
-  Pascanu, Jonathan Schwarz, Guillaume Desjardins, Wojciech~Marian Czarnecki,
-  Arun Ahuja, Yee~Whye Teh, and Nicolas Heess.
+\bibitem[Tirumala et~al.(2022)Tirumala, Galashov, Noh, Hasenclever, Pascanu, Schwarz, Desjardins, Czarnecki, Ahuja, Teh, and Heess]{tirumala2022behaviorpriors}
+Dhruva Tirumala, Alexandre Galashov, Hyeonwoo Noh, Leonard Hasenclever, Razvan Pascanu, Jonathan Schwarz, Guillaume Desjardins, Wojciech~Marian Czarnecki, Arun Ahuja, Yee~Whye Teh, and Nicolas Heess.
 \newblock Behavior priors for efficient reinforcement learning.
-\newblock \emph{Journal of Machine Learning Research}, 23\penalty0
-  (221):\penalty0 1--68, 2022.
+\newblock \emph{Journal of Machine Learning Research}, 23\penalty0 (221):\penalty0 1--68, 2022.
 
-\bibitem[Wang et~al.(2021)Wang, Shelhamer, Liu, Olshausen, and
-  Darrell]{wang2021tent}
+\bibitem[Wang et~al.(2021)Wang, Shelhamer, Liu, Olshausen, and Darrell]{wang2021tent}
 Dequan Wang, Evan Shelhamer, Shaoteng Liu, Bruno Olshausen, and Trevor Darrell.
 \newblock Tent: Fully test-time adaptation by entropy minimization.
 \newblock In \emph{International Conference on Learning Representations}, 2021.
 
-\bibitem[Wang et~al.(2026{\natexlab{a}})Wang, Bounou, LeCun, and
-  Ren]{wang2026adajepa}
+\bibitem[Wang et~al.(2026{\natexlab{a}})Wang, Bounou, LeCun, and Ren]{wang2026adajepa}
 Ying Wang, Oumayma Bounou, Yann LeCun, and Mengye Ren.
 \newblock {AdaJEPA}: An adaptive latent world model.
 \newblock \emph{arXiv preprint arXiv:2606.32026}, 2026{\natexlab{a}}.
 
-\bibitem[Wang et~al.(2026{\natexlab{b}})Wang, Bounou, Zhou, Balestriero,
-  Rudner, LeCun, and Ren]{wang2026straightening}
-Ying Wang, Oumayma Bounou, Gaoyue Zhou, Randall Balestriero, Tim G.~J. Rudner,
-  Yann LeCun, and Mengye Ren.
+\bibitem[Wang et~al.(2026{\natexlab{b}})Wang, Bounou, Zhou, Balestriero, Rudner, LeCun, and Ren]{wang2026straightening}
+Ying Wang, Oumayma Bounou, Gaoyue Zhou, Randall Balestriero, Tim G.~J. Rudner, Yann LeCun, and Mengye Ren.
 \newblock Temporal straightening for latent planning.
-\newblock In \emph{International Conference on Machine Learning}, pages
-  125168--125196, 2026{\natexlab{b}}.
+\newblock In \emph{International Conference on Machine Learning}, pages 125168--125196, 2026{\natexlab{b}}.
 
-\bibitem[Watter et~al.(2015)Watter, Springenberg, Boedecker, and
-  Riedmiller]{watter2015embed}
-Manuel Watter, Jost~Tobias Springenberg, Joschka Boedecker, and Martin
-  Riedmiller.
-\newblock Embed to control: A locally linear latent dynamics model for control
-  from raw images.
+\bibitem[Watter et~al.(2015)Watter, Springenberg, Boedecker, and Riedmiller]{watter2015embed}
+Manuel Watter, Jost~Tobias Springenberg, Joschka Boedecker, and Martin Riedmiller.
+\newblock Embed to control: A locally linear latent dynamics model for control from raw images.
 \newblock In \emph{Advances in Neural Information Processing Systems}, 2015.
 
-\bibitem[Williams et~al.(2017)Williams, Aldrich, and
-  Theodorou]{williams2017mppi}
+\bibitem[Williams et~al.(2017)Williams, Aldrich, and Theodorou]{williams2017mppi}
 Grady Williams, Andrew Aldrich, and Evangelos~A. Theodorou.
-\newblock Model predictive path integral control: From theory to parallel
-  computation.
-\newblock \emph{Journal of Guidance, Control, and Dynamics}, 40\penalty0
-  (2):\penalty0 344--357, 2017.
+\newblock Model predictive path integral control: From theory to parallel computation.
+\newblock \emph{Journal of Guidance, Control, and Dynamics}, 40\penalty0 (2):\penalty0 344--357, 2017.
 
 \bibitem[Yin et~al.(2026)Yin, Yin, Chen, Liu, Li, and Lin]{yin2026ddpwm}
 Shicheng Yin, Kaixuan Yin, Weixing Chen, Yang Liu, Guanbin Li, and Liang Lin.
-\newblock {DDP-WM}: Disentangled dynamics prediction for efficient world
-  models.
-\newblock In \emph{Proceedings of the 43rd International Conference on Machine
-  Learning}, pages 149240--149258. PMLR, 2026.
+\newblock {DDP-WM}: Disentangled dynamics prediction for efficient world models.
+\newblock In \emph{Proceedings of the 43rd International Conference on Machine Learning}, pages 149240--149258. PMLR, 2026.
 
 \bibitem[Yu et~al.(2016)Yu, Bauza, Fazeli, and Rodriguez]{yu2016pushing}
 Kuan-Ting Yu, Maria Bauza, Nima Fazeli, and Alberto Rodriguez.
-\newblock More than a million ways to be pushed: A high-fidelity experimental
-  dataset of planar pushing.
-\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and
-  Systems}, pages 30--37, 2016.
+\newblock More than a million ways to be pushed: A high-fidelity experimental dataset of planar pushing.
+\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and Systems}, pages 30--37, 2016.
 
 \bibitem[Zhao et~al.(2023)Zhao, Kumar, Levine, and Finn]{zhao2023act}
 Tony~Z. Zhao, Vikash Kumar, Sergey Levine, and Chelsea Finn.
@@ -337,9 +238,7 @@ Tony~Z. Zhao, Vikash Kumar, Sergey Levine, and Chelsea Finn.
 
 \bibitem[Zhou et~al.(2025)Zhou, Pan, LeCun, and Pinto]{zhou2025dinowm}
 Gaoyue Zhou, Hengkai Pan, Yann LeCun, and Lerrel Pinto.
-\newblock {DINO-WM}: World models on pre-trained visual features enable
-  zero-shot planning.
-\newblock In \emph{International Conference on Machine Learning}, pages
-  79115--79135, 2025.
+\newblock {DINO-WM}: World models on pre-trained visual features enable zero-shot planning.
+\newblock In \emph{International Conference on Machine Learning}, pages 79115--79135, 2025.
 
 \end{thebibliography}
