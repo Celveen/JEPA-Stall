@@ -22,6 +22,8 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 
 ## Latest results (2026-11-16)
 
+- [Completed Rope seed-100 repeat](reports/rope_seed100_20/SEED_COMPARISON.md): four 3/3 arms × 20 matched targets. Native: **CD 0.5759, 13/20**; fixed S: **0.3542, 16/20**; dynamic S: **0.5763, 12/20**; fixed S without extra warmup: **0.3033, 16/20**. Includes the seed-99 comparison, trigger/application counts, uniformly recomputed actual-control differences, and all 80 recorded trajectories. Fixed S improves on Native in this repeat; the earlier dynamic-S advantage does not persist.
+
 - [Real LeWM red-goal / red-agent comparisons](reports/lewm_shift_visuals_20261116/README.md): same frozen checkpoint with intervention off/on, ten fixed targets per condition. GD success counts are **4→5/10** for red goal and **0→1/10** for red agent, with no regressions. Includes one selected rescue per condition, unmodified simulator screenshots, full playback, every-three-control sequences and all 40 recorded trajectories. The LeWM contact intervention uses observed simulator object pose and known geometry.
 
 - [Completed LeWM PushT clean CEM evaluation](reports/lewm_pusht_clean_20261116/README.md): **36/50 (72%)**, now filled in the main table. T-only training and the 50-target evaluation are complete; raw outcomes, training logs, checkpoint identity and frozen-weight checks are included.
