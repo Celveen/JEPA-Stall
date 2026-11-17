@@ -1,7 +1,6 @@
 \section{Experiments}
 \label{sec:experiments}
 \input{tables/world_model_comparison}
-We evaluate ECP across four task families and three world-model backbones, examining performance against recent controllers, cross-domain generality, and the source of its gains.
 
 \subsection{Experimental setup}
 \paragraph{Tasks and metrics.}
@@ -11,7 +10,7 @@ All tasks are specified by a goal image: \emph{PushObj} comprises 350 pushing ta
 Our primary world model couples a ResNet visual encoder with a latent Transformer predictor pretrained offline. \emph{Frozen} holds all weights fixed during execution, whereas \emph{AdaJEPA} adapts them online from executed transitions~\cite{wang2026adajepa}. \emph{Released} denotes the published checkpoint, \emph{Data aug.} a checkpoint trained offline on our interaction-biased data, and \emph{Native} the planner without ECP. We compare against and apply ECP to DINO-WM~\cite{zhou2025dinowm} and LeWM~\cite{maes2026lewm} with fixed weights. \emph{Ours} combines augmented training with ECP on PushObj and PushT, and adds ECP to the released models on Maze and Rope.
 
 \paragraph{Implementation details.}
-PushObj and PushT controllers receive 150 control calls and retain their gradient-descent (GD) or cross-entropy (CEM) planner. ResNet controllers allow 30 replans, each executing five controls from a 25-control horizon; Maze repeats each control four times. Rope holds DINO-WM fixed, predicts and executes three pushes per plan, and observes after every push. Across tasks, the detection window spans $W=3$ feedback steps (one completed replan on PushObj, PushT, and Maze; one push on Rope) after a task-specific warm-up. Thresholds satisfy $\gamma_{\rm lo}=\gamma_{\rm hi}/3$, with $\gamma_{\rm hi}=0.45$ for main PushObj and $0.15$ for PushT, Maze, Rope, and PushObj component studies. Memory uses $\beta=0.25$ and $\kappa=2$, and goal weight is multiplied by $b=10$ for three planning calls. Writing $S$ for stagnation memory and $P$ for proprioceptive reweighting, ECP uses $S{+}P$ on PushObj and PushT and memory-only $S$ on Maze and Rope (with unit memory weights and $\kappa=2$ after five warm-up pushes on Rope). Paired comparisons with and without ECP share identical checkpoints, tasks, seeds, and execution budgets.
+PushObj and PushT controllers receive 150 control calls and retain their gradient-descent (GD) or cross-entropy (CEM) planner. ResNet controllers allow 30 replans, each executing five controls from a 25-control horizon; Maze repeats each control four times. Rope uses fixed DINO-WM with three pushes per plan and observation after every push. Across tasks, the detection window spans $W=3$ feedback steps (one completed replan on PushObj, PushT, and Maze; one push on Rope) after a task-specific warm-up. Thresholds satisfy $\gamma_{\rm lo}=\gamma_{\rm hi}/3$, with $\gamma_{\rm hi}=0.45$ for main PushObj and $0.15$ for PushT, Maze, Rope, and PushObj component studies. Memory uses $\beta=0.25$ and $\kappa=2$, and goal weight is multiplied by $b=10$ for three planning calls. ECP uses memory $S$ and proprioceptive reweighting $P$ on PushObj and PushT, and $S$ alone on Maze and Rope; Rope stores unit memory weights after five warm-up pushes. Paired comparisons with and without ECP share identical checkpoints, tasks, seeds, and execution budgets.
 
 \subsection{Comparison with recent world models}
 \label{sec:comparison}
@@ -21,15 +20,22 @@ PushObj and PushT controllers receive 150 control calls and retain their gradien
 \caption{\textbf{ECP recovers failed plans and reduces Rope error.} Brown/teal denote without/with ECP. In (a--f), labels give outcome and stopping replans (maximum 30). Rope pairs (g--h) show both methods after 20 pushes; CD is Chamfer distance (lower is better; success $<0.3$). ECP succeeds in (a--g) and lowers CD in (h), where both methods fail.}
 \label{fig:execution-recovery}
 \end{figure*}
-\Cref{tab:main} compares complete controllers under a shared 150-control budget. First, \emph{Ours (AdaJEPA)} achieves the highest mean success among the compared controllers, exceeding the strongest baseline by \textbf{+8.3~pp} on PushObj (77.7\% vs.\ 69.4\%) and by \textbf{+7.4~pp} across the six PushT visual shifts (63.7\% vs.\ 56.3\%), attaining the best result in 13 of the 16 columns. Second, \emph{Ours (frozen)} is equally revealing: without a single online model update, it reaches 72.3\% on PushObj---outperforming the released AdaJEPA controller (69.4\%), which adapts its weights after every replan. This supports addressing closed-loop stalls through the planning objective as well as model adaptation. Moreover, adding ECP never lowers PushT success in any of the 28 combinations of checkpoint, update rule, and visual shift (\cref{tab:pusht-ecp}), and fixed-weight controls built on R3M, DINO CLS, and DDP-WM remain below both of our controllers on average (\cref{tab:extra-baselines}).
+\Cref{tab:main} compares complete PushObj and PushT controllers. \emph{Ours (AdaJEPA)} exceeds the strongest baseline by \textbf{+8.3~pp} on PushObj (77.7\% vs.\ 69.4\%) and \textbf{+7.4~pp} across the six PushT visual shifts (63.7\% vs.\ 56.3\%), leading 13 of the 16 columns. \emph{Ours (frozen)} also outperforms released AdaJEPA on PushObj (72.3\% vs.\ 69.4\%). ECP never lowers PushT success across the 28 combinations of checkpoint, update rule, and visual shift (\cref{tab:pusht-ecp}). Additional fixed-weight R3M, DINO CLS, and DDP-WM controls remain below both of our controllers on average (\cref{tab:extra-baselines}).
 
 \subsection{Generality across backbones, tasks, and updates}
 \label{sec:generality}
 \paragraph{Other backbones.}
-ECP is not tied to the ResNet world model. On LeWM with fixed parameters, interaction-biased training and ECP together gain \textbf{+18.6~pp} on PushObj over matched random-data training. Memory and pusher reweighting alone change success by less than one point; a triggered contact-directed term supplies the full recovery gain (\cref{tab:lewm-contact}).
+On LeWM with fixed parameters, interaction-biased training and ECP together gain \textbf{+18.6~pp} on PushObj over matched random-data training. Memory and pusher reweighting alone change success by less than one point; a triggered contact-directed term supplies the full recovery gain (\cref{tab:lewm-contact}).
 
 \paragraph{Checkpoints and update rules.}
-On PushObj, ECP improves the ResNet world model whether weights are released or trained on augmented data, and whether they are fixed or adapted online (\cref{tab:components}). The released checkpoint isolates the pure planning effect: with zero retraining, ECP gains \textbf{+16.0~pp} with fixed parameters and \textbf{+3.7~pp} with AdaJEPA.
+Applied to the released ResNet checkpoint without retraining, ECP gains \textbf{+16.0~pp} on PushObj with fixed weights and \textbf{+3.7~pp} with AdaJEPA (\cref{tab:components}).
 
 \paragraph{Navigation and deformable objects.}
-Stagnation memory also transfers beyond manipulation. On Maze, with the released checkpoint and no new offline training, it raises success from 48.0\% to 50.0\% (frozen) and from 63.0\% to 66.0\% (loss-gated AdaJEPA) without losing a single native success (\cref{tab:maze}). Rope changes the dynamics, backbone (DINO-WM), and optimizer (CEM) at once. Across three seeds, fixed-strength ECP lowers mean final CD from 0.6865 to 0.4793 (30.2\%) and raises success from 55.0\% to 71.7\%. Mean pushes fall from 12.68 to 11.30, including unsuccessful runs (\cref{tab:rope}). Mean CD falls below 0.7 after 12 pushes, versus 14 for native planning (\cref{fig:rope-cd}).
+On Maze, stagnation memory raises success from 48.0\% to 50.0\% (frozen) and from 63.0\% to 66.0\% (loss-gated AdaJEPA) without losing a single native success (\cref{tab:maze}). Rope changes the dynamics, backbone (DINO-WM), and optimizer (CEM) at once. Across three seeds, fixed-strength ECP lowers mean final CD from 0.6865 to 0.4793 (30.2\%) and raises success from 55.0\% to 71.7\%. Mean pushes fall from 12.68 to 11.30, including unsuccessful runs (\cref{tab:rope}). Mean CD falls below 0.7 after 12 pushes, versus 14 for native planning (\cref{fig:rope-cd}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\columnwidth]{figures/fig_rope_cd_pushes.pdf}
+\caption{\textbf{Faster Rope error reduction.} DINO-WM with three pushes per plan; 20 targets under three seeds. Ours uses fixed-strength memory with five warm-up pushes.}
+\label{fig:rope-cd}
+\end{figure}

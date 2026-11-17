@@ -389,7 +389,7 @@ Fixed $S$ with five warm-up pushes has the best aggregate CD, success, and push 
 \label{fig:rope-rollouts}
 \end{figure*}
 
-\Cref{fig:rope-budget} shows when successes accumulate, complementing the endpoint scores in \cref{tab:rope-ablation}. Successful runs remain counted at larger budgets; unsuccessful runs contribute zero throughout.
+\Cref{fig:rope-budget} counts successes cumulatively; unsuccessful runs contribute zero. The mean-CD curve retains each successful run's terminal CD at larger push budgets, averaging over 20 targets and then three seeds; shading shows the sample SD of the three seed means.
 
 Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention, so aggregate comparisons do not attribute every trajectory difference to $S$. The three seeds repeat the same targets; they do not establish generalization to a larger target set. The Rope pairs in \cref{fig:execution-recovery} show fixed-strength ECP and native planning after equal numbers of pushes.
 
