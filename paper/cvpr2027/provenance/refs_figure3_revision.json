@@ -1,0 +1,174 @@
+{
+  "base_commit": "511760c96949e6cd65db2bf479a18c651571cf7a",
+  "new_experiments_run": false,
+  "changes": [
+    "Remove repeated or premature figure/table pointers while retaining quantitative evidence references.",
+    "Remove redundant appendix-section pointers and the settings table pointer.",
+    "Point the cross-domain qualitative summary directly to main Figure 4.",
+    "Replace Figure 3 directly from the author-supplied editable SVG; export with local draw.io."
+  ],
+  "reference_counts": {
+    "before": {
+      "all_cross_reference_targets": 42,
+      "figure_table_targets": 32,
+      "equation_targets": 3
+    },
+    "after": {
+      "all_cross_reference_targets": 31,
+      "figure_table_targets": 24,
+      "equation_targets": 3
+    }
+  },
+  "text_edits": {
+    "introduction.tex": [
+      [
+        " (\\cref{fig:teaser}c,d)",
+        ""
+      ]
+    ],
+    "method.tex": [
+      [
+        " (\\cref{fig:teaser})",
+        ""
+      ]
+    ],
+    "experiments.tex": [
+      [
+        " (\\cref{tab:parameters})",
+        ""
+      ],
+      [
+        " (\\cref{fig:headline})",
+        ""
+      ],
+      [
+        "\\cref{sec:backbone,tab:lewm-contact}",
+        "\\cref{tab:lewm-contact}"
+      ],
+      [
+        "\\cref{tab:components,fig:threshold}",
+        "\\cref{tab:components}"
+      ]
+    ],
+    "analysis.tex": [
+      [
+        " (\\cref{tab:components})",
+        ""
+      ],
+      [
+        " (\\cref{sec:additional-controls})",
+        ""
+      ],
+      [
+        "In Maze, stagnation memory makes dead-end corridors costly and redirects the trajectory (\\cref{fig:teaser}b,d), while PushT and Rope rollouts show intermediate frames of further recoveries (\\cref{fig:pusht-rollouts,fig:rope-rollouts}).",
+        "In Maze, stagnation memory makes dead-end corridors costly and redirects the trajectory. Cross-domain examples also show recovered PushT episodes and lower Rope error (\\cref{fig:execution-recovery})."
+      ]
+    ],
+    "conclusion.tex": [
+      [
+        " (\\cref{sec:pending})",
+        ""
+      ]
+    ]
+  },
+  "abstract_unchanged": true,
+  "equations_tables_captions_and_bibliography_unchanged": true,
+  "all_other_figure_assets_unchanged": true,
+  "figure3_source_sha256": "1c4e4b79bb4021566f01f518e59be4e90b38295f96c6c39deebe42a05680b89a",
+  "figure3_import": "provenance/method_figure_import.json",
+  "build": {
+    "engine": "pdflatex",
+    "abstract_words_whitespace": 231,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 12,
+    "combined_pages": 22,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": null
+  },
+  "crossrefs": {
+    "before": {
+      "total_reference_targets": 91,
+      "main_reference_targets": 42,
+      "main_to_appendix_targets": 22,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "sec:pending",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "sec:additional-controls",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "fig:pusht-rollouts",
+        "fig:rope-rollouts",
+        "tab:parameters",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "sec:backbone",
+        "tab:lewm-contact",
+        "sec:rope-details"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 80,
+      "main_reference_targets": 31,
+      "main_to_appendix_targets": 16,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact",
+        "sec:rope-details"
+      ],
+      "missing_labels": []
+    },
+    "settings_parameter_table_references": 0,
+    "pdf_internal_links_checked": 226,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 184,
+    "label_destinations_checked": 72,
+    "headline_and_trajectory_figures_unchanged": true,
+    "bibliography_unchanged": true
+  },
+  "visual_comparison": {
+    "appendix_content_pixel_identical_excluding_review_line_numbers": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ]
+  }
+}

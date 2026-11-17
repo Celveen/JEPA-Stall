@@ -29,7 +29,7 @@ Here $\mathcal R_t^{\rm stall}$ is a stagnation regularizer built from an episod
 
 \subsection{Detecting stagnation from execution}
 \label{sec:trigger}
-A stall detector must separate lack of progress from lack of instantaneous motion, since a stalled controller can execute large oscillatory actions and still end where it began (\cref{fig:teaser}). We therefore compare the \emph{net} latent displacement over a window of $W$ observation-feedback steps with the distance remaining to the goal:
+A stall detector must separate lack of progress from lack of instantaneous motion, since a stalled controller can execute large oscillatory actions and still end where it began. We therefore compare the \emph{net} latent displacement over a window of $W$ observation-feedback steps with the distance remaining to the goal:
 \begin{equation}
  r_t=\sqrt{\frac{D_{\alpha_0}(z_t,z_{t-W})}
  {\max\{D_{\alpha_0}(z_t,z_g),\epsilon\}}},
