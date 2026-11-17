@@ -47,7 +47,7 @@
       "all_font_resources_embedded": true,
       "type3_fonts": false,
       "text_words": 80,
-      "sha256": "b6afb0e70f2c9df12c0bce2f965a24c80ec263a8067638a5acd5b5c2537488fb"
+      "sha256": "d3348783f32296849c9e366aae214a6bc1e36acf7e2efef6d22584b0637b77be"
     },
     "figS_diverse_execution_v11.pdf": {
       "font_programs": 2,
@@ -81,36 +81,33 @@
       "font_programs": 2,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 33,
-      "sha256": "648ee887062ca9a6d65b1fa9ee7b0eb95ee4ef55425d84619b453f7dc04c3aa8"
+      "text_words": 66,
+      "sha256": "2657e25cad8980a0774c3ba9862fe34fdc223c89b30c005ce1f388c54a70c079"
     }
   },
-  "method_visible_pixels_unchanged": true,
-  "method_copyable_unicode_math": true,
-  "method_svg_uses_text_elements": true,
-  "all_figure_annotations_extractable": true,
-  "raster_content": "Simulator observations only; headings, legends, axes, numeric labels and method explanations remain PDF text.",
   "pdfs": {
     "paper.pdf": {
       "font_programs": 43,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 14881,
-      "sha256": "37e88de998e51f7e2aa3090c932fba5bed075ac5e43e47f9fb64511a44bdd6eb"
+      "text_words": 14912,
+      "sha256": "28bb1c9bdcd30e97a67b3f59c53106839fe092bd94b7d26f4bffbe2bb116cb17"
     },
     "paper_main.pdf": {
       "font_programs": 34,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 7939,
-      "sha256": "7b073351f725c7c3a07bd734cc5dd2932934cda1c10838c691f025a070e262a5"
+      "text_words": 7971,
+      "sha256": "418f95d59377ddcdf0424fc51977a1f2d1359dc67b0bb384a2a835ab04650461"
     },
     "paper_appendix.pdf": {
       "font_programs": 27,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 6942,
-      "sha256": "6a253f0009d621065b8f8c3cb87beece2d2c1b49e9c0414c4530ad62ba20d7e8"
+      "text_words": 6941,
+      "sha256": "3b2254110d283d5fd8244fb2ba050b95c251d9277637b5f5babc0356fd59ea81"
     }
-  }
+  },
+  "all_figure_annotations_extractable": true,
+  "raster_content": "Recorded simulator scenes only; labels, legends and axes remain PDF text."
 }

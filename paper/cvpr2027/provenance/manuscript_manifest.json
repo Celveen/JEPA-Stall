@@ -5,24 +5,24 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "XeTeX via Tectonic",
-  "base_repository_commit": "09ac1804c09b122a29b8b084e546b452c33d032e",
+  "base_repository_commit": "f7a23217b329e7fa206a5c3f8967b2c7f860193b",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/v3_rope_fairness_revision.json",
+  "audit": "provenance/rope_three_seed_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "37e88de998e51f7e2aa3090c932fba5bed075ac5e43e47f9fb64511a44bdd6eb",
-    "paper_v14.pdf": "37e88de998e51f7e2aa3090c932fba5bed075ac5e43e47f9fb64511a44bdd6eb",
-    "paper_main.pdf": "7b073351f725c7c3a07bd734cc5dd2932934cda1c10838c691f025a070e262a5",
-    "paper_appendix.pdf": "6a253f0009d621065b8f8c3cb87beece2d2c1b49e9c0414c4530ad62ba20d7e8"
+    "paper.pdf": "28bb1c9bdcd30e97a67b3f59c53106839fe092bd94b7d26f4bffbe2bb116cb17",
+    "paper_v14.pdf": "28bb1c9bdcd30e97a67b3f59c53106839fe092bd94b7d26f4bffbe2bb116cb17",
+    "paper_main.pdf": "418f95d59377ddcdf0424fc51977a1f2d1359dc67b0bb384a2a835ab04650461",
+    "paper_appendix.pdf": "3b2254110d283d5fd8244fb2ba050b95c251d9277637b5f5babc0356fd59ea81"
   },
   "figures": 8,
   "main_body_pages": 8,
   "combined_pages": 21,
-  "revision": "v3-matched-rope-embedded-fonts",
+  "revision": "v3-rope-three-seed-fixed-strength",
   "abstract_words_whitespace": 213,
   "figure_pages": {
     "fig:headline": 1,
@@ -34,15 +34,15 @@
     "fig:diverse-execution": 20,
     "fig:pusht-rollouts": 21
   },
-  "revision_description": "Adopt supplied v3, correct Rope image comparisons, disclose seed sensitivity, remove duplicate appendix figures and ensure embedded, copyable figure text.",
+  "revision_description": "Use fixed-strength S with five warm-up pushes as the Rope main method, report three-seed accuracy and all-run push efficiency, and show two matched full-view Rope executions.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-17T03:22:03.789248+00:00",
+  "updated": "2026-11-17T04:56:23.781867+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 11,
   "table_pages": {
     "tab:main": 6,
     "tab:components": 7,
-    "tab:threshold": 7,
+    "tab:threshold": 8,
     "tab:timing": 8,
     "tab:maze": 8,
     "tab:rope": 8,
@@ -76,5 +76,5 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/v3_rope_fairness_revision.json"
+  "current_revision_provenance": "provenance/rope_three_seed_revision.json"
 }

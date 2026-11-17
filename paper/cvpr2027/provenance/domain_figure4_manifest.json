@@ -1,5 +1,5 @@
 {
-  "source": "fullview_visuals_20261116.json, lewm_figure4_visuals.json, replayed_paths_v12.json and rope_matched_visuals_seed100.json",
+  "source": "fullview_visuals_20261116.json, lewm_figure4_visuals.json, replayed_paths_v12.json and rope_fixed_visuals_seed101.json",
   "case_order": [
     [
       "old",
@@ -34,8 +34,8 @@
       1
     ]
   ],
-  "rope_evaluation_seed": 100,
-  "rope_display": "Native versus dynamic ECP on targets 13/16, both arms ending at 10/20 pushes respectively; lower final CD in these illustrative cases, not a seed-wide gain",
+  "rope_evaluation_seed": 101,
+  "rope_display": "Native versus fixed-strength ECP with five warm-up pushes on targets 15/21, seed 101; all four runs end at 20 pushes",
   "titles": "PushObj ResNet; PushT LeWM; Maze AdaJEPA; Rope DINO-WM",
   "legend": {
     "Without ECP": "#B95B38",
@@ -46,7 +46,7 @@
   "pusht_labels": "Terminating replan count; LeWM with/without ECP",
   "outputs": {
     "figures/fig5_execution_recovery.pdf": {
-      "sha256": "b6afb0e70f2c9df12c0bce2f965a24c80ec263a8067638a5acd5b5c2537488fb",
+      "sha256": "d3348783f32296849c9e366aae214a6bc1e36acf7e2efef6d22584b0637b77be",
       "size_inches": [
         6.875,
         2.82
@@ -56,7 +56,7 @@
       "text_collisions": 0
     },
     "figures/svg/fig5_execution_recovery.svg": {
-      "sha256": "8b66da7ac6f4d463cb8c6b3deb3599af67c19a066a605f512d239f684f6f6855",
+      "sha256": "18739f5b50c6c899d235e1a29ff47b0f71beaf85f212343d1d5e112e76fe2bdf",
       "size_inches": [
         6.875,
         2.82
@@ -66,7 +66,7 @@
       "text_collisions": 0
     },
     "figures/previews/fig5_execution_recovery.png": {
-      "sha256": "8328c523c68dab6863aab29dfa67acf79e12fb58044c7f344d828af3a8a9de7a",
+      "sha256": "50306512ad0ee843b63536b8403e1f3e9d2a4ec9f82a5005ddbff717c7190206",
       "size_inches": [
         6.875,
         2.82

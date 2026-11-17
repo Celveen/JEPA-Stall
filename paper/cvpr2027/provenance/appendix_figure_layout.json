@@ -2,7 +2,7 @@
   "shared_states_displayed_once": true,
   "local_crops": false,
   "gray_dividers": false,
-  "rope_display": "Matched native/dynamic-ECP executions on target 13, seed 100, both ending after 10 pushes",
+  "rope_display": "Matched native/fixed-ECP executions on targets 15 and 21, seed 101; all four runs execute 20 pushes",
   "outputs": {
     "figures/fig1_pushobj_motivation.pdf": {
       "sha256": "f1ba089e17779a0498f98c25cf4d45991a412e52c0466837e3012c3ca0c73582",
@@ -68,24 +68,24 @@
       ]
     },
     "figures/figS_rope_rollouts.pdf": {
-      "sha256": "648ee887062ca9a6d65b1fa9ee7b0eb95ee4ef55425d84619b453f7dc04c3aa8",
+      "sha256": "2657e25cad8980a0774c3ba9862fe34fdc223c89b30c005ce1f388c54a70c079",
       "size_inches": [
         6.875,
-        3.13
+        6.26
       ]
     },
     "figures/previews/figS_rope_rollouts.png": {
-      "sha256": "6d96b33461b4a674be47370acfb8a3d1626be98146bc3bb486de80571850f8ab",
+      "sha256": "e0f597d37e505baf7c79de104bc1e711939ec372b41ddc697c9900639006f1bb",
       "size_inches": [
         6.875,
-        3.13
+        6.26
       ]
     },
     "figures/svg/figS_rope_rollouts.svg": {
-      "sha256": "9837b2458b3a0e2e3854d9ad94c58e7cb08077cab255d683c79d15f498cf1731",
+      "sha256": "04a6c014e64e175fa0933ce5f4568e8ff5f67fe3f7a40fab2ddbad95d6f8fe2a",
       "size_inches": [
         6.875,
-        3.13
+        6.26
       ]
     }
   }

@@ -90,7 +90,7 @@ def save(fig,name,rows,panels):
 domains=json.loads((V/'fullview_visuals_20261116.json').read_text())
 for key,value in domains['pushobj'].items():cases[key]['frames']=value['frames']
 domains['pusht']=json.loads((V/'lewm_figure4_visuals.json').read_text())['pusht']
-rope_sources=json.loads((V/'rope_matched_visuals_seed100.json').read_text())
+rope_sources=json.loads((V/'rope_fixed_visuals_seed101.json').read_text())
 for name,record in rope_sources['files'].items():
  assert hashlib.sha256((O/name).read_bytes()).hexdigest()==record['sha256']
 fig=plt.figure(figsize=(6.875,2.82))
@@ -126,7 +126,7 @@ for k,(kind,key) in enumerate(items):
    n=len(c['states'][mode])-1 if kind=='old' else c['replans'][mode]
    label=('Fail' if mode=='base' else 'Success')+f' · {n}';color=FAIL if mode=='base' else OURS
   fig.text(left+.057,bottom-.023,label,fontsize=7.5,color=color,ha='center',va='top')
-manifest={'source':'fullview_visuals_20261116.json, lewm_figure4_visuals.json, replayed_paths_v12.json and rope_matched_visuals_seed100.json','case_order':items,'rope_evaluation_seed':100,'rope_display':'Native versus dynamic ECP on targets 13/16, both arms ending at 10/20 pushes respectively; lower final CD in these illustrative cases, not a seed-wide gain','titles':'PushObj ResNet; PushT LeWM; Maze AdaJEPA; Rope DINO-WM','legend':{'Without ECP':FAIL,'With ECP':OURS},'maze_e':'Verified AdaJEPA target 75, also used in Figure 2','framing':'Full image bounds for all 16 panels; PushObj boundary draw calls omitted; LeWM original PNG perimeter hidden by white vector strips','pusht_labels':'Terminating replan count; LeWM with/without ECP','outputs':{}}
+manifest={'source':'fullview_visuals_20261116.json, lewm_figure4_visuals.json, replayed_paths_v12.json and rope_fixed_visuals_seed101.json','case_order':items,'rope_evaluation_seed':101,'rope_display':'Native versus fixed-strength ECP with five warm-up pushes on targets 15/21, seed 101; all four runs end at 20 pushes','titles':'PushObj ResNet; PushT LeWM; Maze AdaJEPA; Rope DINO-WM','legend':{'Without ECP':FAIL,'With ECP':OURS},'maze_e':'Verified AdaJEPA target 75, also used in Figure 2','framing':'Full image bounds for all 16 panels; PushObj boundary draw calls omitted; LeWM original PNG perimeter hidden by white vector strips','pusht_labels':'Terminating replan count; LeWM with/without ECP','outputs':{}}
 save(fig,'fig5_execution_recovery',2,16)
 (V/'domain_figure4_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print('Built Figure 4: eight full-view pairs, including two equal-push Rope cases.')

@@ -87,15 +87,15 @@ AdaJEPA & Native &63.0\\
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Rope planning with DINO-WM.} Both rows keep the pretrained model fixed and predict/execute three pushes per plan. DINO-WM (ours) adds dynamic $S$ after five warm-up pushes. Success means Chamfer distance (CD) $<0.3$, over 20 targets with at most 20 pushes each.}
+\caption{\textbf{Rope planning with DINO-WM.} Both methods keep the pretrained model fixed and predict/execute three pushes per plan. Ours uses fixed-strength $S$ after five warm-up pushes. Results cover 20 targets repeated under three seeds (60 runs per method). Success is CD $<0.3$. Pushes averages all runs, with a 20-push cap.}
 \label{tab:rope}
 \small
-\begin{tabular*}{0.94\columnwidth}{@{\extracolsep{\fill}}lrr@{}}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrr@{}}
 \toprule
-Method & CD $\downarrow$ & Success (\%) $\uparrow$\\
+Method & CD $\downarrow$ & Success (\%) $\uparrow$ & Pushes $\downarrow$\\
 \midrule
-DINO-WM (native) &0.755&50.0\\
-DINO-WM (ours) &\textbf{0.515}&\textbf{60.0}\\
+DINO-WM (native) &0.6865&55.0&12.68\\
+DINO-WM (ours) &\textbf{0.4793}&\textbf{71.7}&\textbf{11.30}\\
 \bottomrule
 \end{tabular*}
 \end{table}

@@ -341,34 +341,35 @@ The released ResNet checkpoint remains fixed, with action repeat four, a seven-r
 
 \section{Rope protocol and ablations}
 \label{sec:rope-details}
-We evaluate the same 20 ordered targets with a pretrained DINO-WM checkpoint, holding the encoder and predictor fixed. DINO-WM (native) and DINO-WM (ours) use a prediction horizon of three pushes and execute all three before the next optimization. Observations and the success test are updated after every push; a successful episode stops immediately, even inside an action sequence. The maximum budget is 20 pushes, and success requires CD $<0.3$. CEM uses 300 candidates, 30 elites, and ten iterations per optimization.
+We evaluate the same 20 ordered targets under seeds 99, 100, and 101, giving 60 executions per condition, not 60 distinct targets. All conditions share the pretrained DINO-WM encoder and predictor with fixed parameters. The main comparison predicts and executes three pushes before replanning, observes after every push, and stops immediately when CD $<0.3$, including inside an action sequence. The maximum budget is 20 pushes. CEM uses 300 candidates, 30 elites, and ten iterations per optimization. Mean pushes includes successful and unsuccessful runs; it measures executed actions, not wall-clock speed.
 
-DINO-WM (ours) applies dynamic stagnation memory with $\kappa=2$ and stored strength $2w_t$, using a three-push detection window and thresholds 0.05/0.15. It allows five warm-up pushes; at the next planning boundary, the earliest corrected action is push seven. A fixed-strength control assigns strength two to every stored memory. Removing its additional warm-up still requires the detection window, so its earliest corrected action is push four. The five-push native control changes both prediction and execution horizons to five. The terminal goal cost uses memory amplitude $D_{\alpha_0}(m_j,z_g)$, without the $1/(H+1)$ factor used for the ResNet all-frame objective.
+DINO-WM (ours) uses fixed-strength stagnation memory: a positive trigger stores unit weight in \cref{eq:penalty}, giving strength $\kappa=2$. Detection uses a three-push window, thresholds 0.05/0.15, and five warm-up pushes; the earliest corrected action is push seven. Dynamic $S$ instead stores the severity-dependent strength $2w_t$. Removing the additional warm-up retains the detection window, so its earliest corrected action is push four. The terminal goal cost uses memory amplitude $D_{\alpha_0}(m_j,z_g)$, without the $1/(H+1)$ factor used for the ResNet all-frame objective.
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Rope ablations.} All rows hold the pretrained DINO-WM fixed on 20 identical targets. $H$ counts predicted and executed pushes per plan; observations arrive after every push. Warm counts pushes before memory activation is allowed. Success requires CD $<0.3$. Pushes is the mean number executed.}
+\caption{\textbf{Rope ablations with fixed DINO-WM weights.} $H$ is the predicted/executed pushes per plan; Warm is the number of warm-up pushes. Success requires CD $<0.3$, with a 20-push cap. Pushes averages all runs. The upper block pools three seeds on the same 20 targets; the horizon control below uses seed 99 only.}
 \label{tab:rope-ablation}
 \small\setlength{\tabcolsep}{2pt}
 \begin{tabular}{lrrrrr}
 \toprule
 Variant & $H$ & Warm & CD $\downarrow$ & Succ. $\uparrow$ & Pushes $\downarrow$\\
 \midrule
-Native &3&0&0.755&50\%&14.35\\
-DINO-WM (ours)&3&5&\textbf{0.515}&60\%&\textbf{12.50}\\
-Fixed $S$&3&5&0.611&65\%&12.60\\
-Fixed $S$&3&0&0.583&65\%&13.55\\
-Native&5&0&0.581&\textbf{70\%}&12.75\\
+\multicolumn{6}{l}{Three seeds (60 runs per row)}\\
+Native &3&0&0.6865&55.0\%&12.68\\
+DINO-WM (ours)&3&5&\textbf{0.4793}&\textbf{71.7\%}&\textbf{11.30}\\
+Dynamic $S$&3&5&0.5720&63.3\%&11.68\\
+Fixed $S$, no warm-up&3&0&0.5518&70.0\%&12.05\\
+\midrule
+\multicolumn{6}{l}{Horizon control: seed 99 (20 runs per row)}\\
+Native&3&0&0.7547&50.0\%&14.35\\
+Native&5&0&0.5809&70.0\%&12.75\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Dynamic strength achieves the lowest mean CD among these configurations, whereas the native five-push horizon gives the highest success rate. Relative to native planning with the same three-push horizon, dynamic $S$ gains three successes and loses one; CD is lower on ten targets, higher on eight, and equal on two. Fixed $S$ and removing its warm-up each reach 65\% success but have higher mean CD than dynamic $S$. These metrics describe different aspects of the final configuration, so neither strength schedule dominates on every metric.
+Fixed $S$ with five warm-up pushes has the best aggregate CD, success, and push count among the matched three-push configurations. It gains three, three, and four successes across the seeds, rescues 12 native failures, and loses two native successes. Both CD and mean push count improve in every seed. Dynamic $S$ has lower CD in seed 99 but no gain in seed 100; removing warm-up yields worse CD than native planning in seed 101. The five-push native control changes both prediction and execution horizons and is reported separately rather than pooled across seeds.
 
-Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention. The main comparison therefore reports aggregate same-protocol outcomes rather than attributing every trajectory difference to $S$. The Rope examples in \cref{fig:execution-recovery} compare equal executed push counts on seed 100; they illustrate individual outcomes, not the aggregate seed-99 gain.
-
-\paragraph{Seed sensitivity.}
-The reported Rope tables use reference seed 99. Repeating the same 20 targets with seed 100 gives native/dynamic-$S$ mean CD of 0.5759/0.5763 and success of 65\%/60\%. Fixed $S$ with/without warm-up reaches CD 0.3542/0.3033, both at 80\% success. The dynamic-strength CD gain therefore does not persist across these two seeds. These are repeated executions of the same targets, not additional independent tasks.
+Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention, so aggregate comparisons do not attribute every trajectory difference to $S$. The three seeds repeat the same targets; they do not establish generalization to a larger target set. The Rope pairs in \cref{fig:execution-recovery} show fixed-strength ECP and native planning after equal numbers of pushes.
 
 \section{Simulator renderings}
 \label{sec:renderings}
@@ -376,7 +377,7 @@ The reported Rope tables use reference seed 99. Repeating the same 20 targets wi
 PushT and Rope sequences use RGB observations saved during actual simulator execution. PushObj and Maze views use the original Pymunk and MuJoCo renderers at logged states. Their solid trajectories replay saved full-precision controls with the original action normalization and repeat settings; replan endpoints agree within $5.0\times10^{-4}$ pixels and $5.0\times10^{-5}$ state units, respectively. Trajectories are not smoothed. Every pair retains the same full-scene framing, and no local magnification is used.
 
 \paragraph{Visual shifts and deformation.}
-The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T-shaped background anchor is not the task goal; the final column shows the actual target observation. In the red-agent native run, the pusher leaves the viewport. The Rope sequence compares native DINO-WM and dynamic ECP on the same target and seed, using three-push plans and identical observation times. Both runs stop after ten pushes; ECP first affects planning at push seven. All views retain the full camera frame.
+The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T-shaped background anchor is not the task goal; the final column shows the actual target observation. In the red-agent native run, the pusher leaves the viewport. The two Rope sequences compare native DINO-WM and fixed-strength ECP with five warm-up pushes on matched targets. Columns align actual push counts, and all four runs execute twenty pushes. ECP first affects planning at push seven in both examples. All views retain the full camera frame.
 
 \begin{figure}[t]
 \centering
@@ -388,7 +389,7 @@ The PushT sequences show LeWM under red-agent and red-goal shifts. The colored T
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/figS_rope_rollouts.pdf}
-\caption{\textbf{Matched Rope executions with DINO-WM.} Native planning (brown) and dynamic ECP (teal) on target 13, seed 100. Columns show the same actual push counts. Both runs succeed at push ten; final CD is 0.122 without ECP and 0.057 with ECP. The first corrected action is push seven.}
+\caption{\textbf{Matched Rope executions with DINO-WM.} Native planning (brown) and fixed-strength ECP with five warm-up pushes (teal), on two targets from seed 101. Columns align actual push counts. At push twenty, ECP succeeds in (a) and reaches lower CD in (b), where both runs remain above the 0.3 success threshold.}
 \label{fig:rope-rollouts}
 \end{figure*}
 

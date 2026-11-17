@@ -216,17 +216,17 @@ def sequence(cases, name):
     save(fig, name)
 
 sequence([c for c in manifest['cases'] if c['dataset']=='PushT'], 'figS_pusht_rollouts')
-# Equal-push observations from the audited seed-100 executions.
-rope = json.loads((p/'provenance/rope_matched_visuals_seed100.json').read_text())
+# Equal-push observations from the audited seed-101 executions.
+rope = json.loads((p/'provenance/rope_fixed_visuals_seed101.json').read_text())
 for name, record in rope['files'].items():
     assert sha((p/name).read_bytes()) == record['sha256']
-case = rope['cases'][0]
-case['shared_start'] = True
-for row in case['rows']:
-    row['frames'][-1]['cd'] = row['final_cd']
-sequence([case], 'figS_rope_rollouts')
+for case in rope['cases']:
+    case['shared_start'] = True
+    for row in case['rows']:
+        row['frames'][-1]['cd'] = row['final_cd']
+sequence(rope['cases'], 'figS_rope_rollouts')
 (p/'provenance/appendix_figure_layout.json').write_text(json.dumps({
     'shared_states_displayed_once': True, 'local_crops': False, 'gray_dividers': False,
-    'rope_display': 'Matched native/dynamic-ECP executions on target 13, seed 100, both ending after 10 pushes',
+    'rope_display': 'Matched native/fixed-ECP executions on targets 15 and 21, seed 101; all four runs execute 20 pushes',
     'outputs': outputs}, indent=2)+'\n')
 print('Built supplementary execution figures, including equal-push Rope observations.')
