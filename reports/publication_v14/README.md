@@ -1,5 +1,7 @@
 # CVPR 2027 paper and evaluation artifacts — v14
 
+- [Frozen ECP paired cost analysis](../frozen_ecp_cost_20261117/README.md): 350 matched tasks per arm with GD100 + CUDA Graph. ECP increases success from **61.14% to 72.29%**, adds **2.81%** per-replan latency, and reduces mean task-loop wall time by **12.06%**; peak allocated GPU memory rises from **0.823 to 0.967 GiB**. Includes all 700 task measurements, raw actions/replays, configurations, source snapshots and a CPU-only verifier.
+
 The main manuscript is [paper_v14.pdf](../../paper/cvpr2027/paper_v14.pdf); editable source and native simulator figures are in `paper/cvpr2027/`.
 
 ## Results included

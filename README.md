@@ -22,6 +22,8 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 
 ## Latest results (2026-11-17)
 
+- [Frozen ECP paired cost analysis](reports/frozen_ecp_cost_20261117/README.md): 350 matched tasks per arm with GD100 + CUDA Graph. ECP increases success from **61.14% to 72.29%**, adds **2.81%** per-replan latency, and reduces mean task-loop wall time by **12.06%**; peak allocated GPU memory rises from **0.823 to 0.967 GiB**. Includes all 700 task measurements, raw actions/replays, configurations, source snapshots and a CPU-only verifier.
+
 - [Figure 1 additional evaluation seeds](reports/figure1_eval_seeds_20261117/README.md): all three AdaJEPA conditions now have seeds 100/200/300: **68.76 ± 1.41%** (base), **73.90 ± 1.19%** (augmentation), and **76.86 ± 1.03%** (augmentation + ECP). Frozen + ECP is **72.29 ± 0.00%** and LeWM + ECP is **66.00 ± 0.00%**. Includes 3,500 additional-seed task evaluations, physical-replay records and 125 exact eager/CUDA Graph action/RNG comparisons. These are fixed-task evaluation-seed repeats, not independent training seeds; the four other Frozen/LeWM conditions retain their original single-seed results.
 
 
