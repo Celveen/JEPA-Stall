@@ -4,6 +4,8 @@ The main manuscript is [paper_v14.pdf](../../paper/cvpr2027/paper_v14.pdf); edit
 
 ## Results included
 
+**Update, 17 November 2026:** [Figure 1 evaluation-seed follow-up](../figure1_eval_seeds_20261117/README.md) adds complete three-seed statistics for all three AdaJEPA conditions and augmented ECP for Frozen/LeWM. AdaJEPA reaches **68.76 ± 1.41% / 73.90 ± 1.19% / 76.86 ± 1.03%** for base / augmentation / augmentation + ECP. The follow-up includes all 3,500 additional-seed outcomes, physical replay, checkpoint/task identities and exact CUDA Graph validation. Four Frozen/LeWM base/augmentation conditions remain single-seed. Existing compiled manuscript figures retain their original single-seed values.
+
 **Update, 11 November 2026:** the DINO-WM PushObj v3 run has completed. Its [complete results and logs](../dinowm_pushobj_v3/completed_results/README.md) supersede the partial snapshot below for that experiment. The original manifest and progress archive retain their historical snapshot dates.
 
 - **PushT and six visual shifts:** all 56 checkpoint/update/ECP/condition evaluations, 2,800 task runs; 1,400 pre-intervention pairs verified.

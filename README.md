@@ -20,7 +20,10 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 | `models/`, `datasets/`, `env/`, `train.py`, `plan.py` | World-model training and planning infrastructure |
 | `data/targets/` | Evaluation target sets (ordered chunks of plan targets) used by the runners |
 
-## Latest results (2026-11-16)
+## Latest results (2026-11-17)
+
+- [Figure 1 additional evaluation seeds](reports/figure1_eval_seeds_20261117/README.md): all three AdaJEPA conditions now have seeds 100/200/300: **68.76 ± 1.41%** (base), **73.90 ± 1.19%** (augmentation), and **76.86 ± 1.03%** (augmentation + ECP). Frozen + ECP is **72.29 ± 0.00%** and LeWM + ECP is **66.00 ± 0.00%**. Includes 3,500 additional-seed task evaluations, physical-replay records and 125 exact eager/CUDA Graph action/RNG comparisons. These are fixed-task evaluation-seed repeats, not independent training seeds; the four other Frozen/LeWM conditions retain their original single-seed results.
+
 
 - [Rope three-seed aggregate (99, 100, 101)](reports/rope_seeds99_100_101/README.md): four matched 3/3 conditions, 20 targets repeated under three seeds (240 runs). **Fixed S with five-push warmup reduces mean CD from 0.6865 to 0.4793 (30.2%) and mean executed pushes from 12.68 to 11.30 (10.9%), while increasing success from 33/60 to 43/60 (55.0% to 71.7%).** Both CD and push count improve over the matched Native control in every seed. Includes all four conditions, seed sensitivity, paired outcomes, executed-action comparisons, and the newly completed [seed-101 evidence](reports/rope_seed101_20/README.md). Push counts average all runs under the same 20-push cap and CD <0.3 stopping rule.
 
