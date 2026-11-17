@@ -3,7 +3,7 @@
 Our approach couples offline recovery-aware data collection with online closed-loop objective conditioning (\cref{fig:method}). Offline, interaction-biased noisy exploration enriches the experience from which dynamics are learned. Online, ECP monitors execution and, once it detects a stall, modifies subsequent planning objectives via a stagnation memory and a temporary goal-subspace reweighting that persist across replans.
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig2_method.pdf}
+\includegraphics[width=0.95\textwidth]{figures/fig2_method.pdf}
 \caption{\textbf{ECP connects execution feedback to planning.} Offline actions combine contact bias with Gaussian noise before collection. Step 3 illustrates PushObj, Maze, shifted PushT, and Rope execution. Step 4 detects small net movement relative to goal distance. Step 5 retains stagnation memory ($S$) and boosts goal weighting ($P$) for three calls, renewed by new triggers. The timeline highlights sustained correction inspired by ACT. Model parameters may remain fixed or adapt online.}
 \label{fig:method}
 \end{figure*}

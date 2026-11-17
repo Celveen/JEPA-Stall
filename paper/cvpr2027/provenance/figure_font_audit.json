@@ -22,11 +22,11 @@
       "sha256": "c20c8c20eee1989275c04d8ce5adf0e234ae0831bbaf9bcb95f3a519a4815664"
     },
     "fig2_method.pdf": {
-      "font_programs": 7,
+      "font_programs": 27,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 86,
-      "sha256": "a02a4d629b2d3250db86931202d1ea1014059129fd5d9d4417cc109bac44a3ac"
+      "text_words": 88,
+      "sha256": "894945305f2c5e5171bfc3f7d2a962eb4c49d23a5f691a37f41fc4e7951fad31"
     },
     "fig3_maze_case.pdf": {
       "font_programs": 1,
@@ -100,28 +100,28 @@
     }
   },
   "all_figure_annotations_extractable": true,
-  "raster_content": "Simulator observations only; annotations and all new curves are vector PDF text.",
+  "raster_content": "Simulator images only; all annotations remain extractable vector text.",
   "pdfs": {
     "paper.pdf": {
-      "font_programs": 47,
+      "font_programs": 67,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 14533,
-      "sha256": "b891f4d12f915a5fe87ecca923252d620cb2290984b48f49721703d92bee5b69"
+      "text_words": 14701,
+      "sha256": "9bdac3146e69a038308a5bd45c0510cdf585b92a0e3399d94a31b26e86c9a5bb"
     },
     "paper_main.pdf": {
-      "font_programs": 36,
+      "font_programs": 56,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
-      "text_words": 7651,
-      "sha256": "5122cdeb577e0fbcf48f598ec84c4183e23b034b36ea30c2b240122be9f900f1"
+      "text_words": 7819,
+      "sha256": "50668adc339aff1f0cf320060572977a836a00164d428340e5a9cccd90426ec6"
     },
     "paper_appendix.pdf": {
       "font_programs": 30,
       "all_font_resources_embedded": true,
       "type3_fonts": false,
       "text_words": 6882,
-      "sha256": "2966d526404ea4c01d03a6de09b3722ebda72569176eb965ef5d8e7065adac72"
+      "sha256": "6a41d3c61c14afcfd6225538662765f7efb270d9ea892011bdc8aa6cd084c780"
     }
   }
 }

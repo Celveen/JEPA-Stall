@@ -1,8 +1,8 @@
 {
   "before": {
-    "total_reference_targets": 69,
-    "main_reference_targets": 36,
-    "main_to_appendix_targets": 20,
+    "total_reference_targets": 91,
+    "main_reference_targets": 41,
+    "main_to_appendix_targets": 21,
     "main_to_appendix_labels": [
       "sec:properties",
       "sec:implementation",
@@ -15,6 +15,7 @@
       "sec:additional-controls",
       "tab:maze-controls",
       "tab:maze-full",
+      "fig:push-distance",
       "sec:behavior",
       "fig:pusht-rollouts",
       "fig:rope-rollouts",
@@ -28,12 +29,13 @@
     "missing_labels": []
   },
   "after": {
-    "total_reference_targets": 91,
-    "main_reference_targets": 41,
-    "main_to_appendix_targets": 21,
+    "total_reference_targets": 92,
+    "main_reference_targets": 42,
+    "main_to_appendix_targets": 22,
     "main_to_appendix_labels": [
       "sec:properties",
       "sec:implementation",
+      "sec:pending",
       "tab:dinowm-aug",
       "tab:training",
       "tab:maze-controls",

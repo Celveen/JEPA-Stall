@@ -5,25 +5,25 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "pdfLaTeX (TeX Live 2026); independently checked with XeTeX/Tectonic",
-  "base_repository_commit": "b7c2cec890a7f4c4578504a2baad68d4eaf90db4",
+  "base_repository_commit": "79d5d8fb704ae2e8dc88b6598e01c34bf5386616",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/oral_narrative_revision.json",
+  "audit": "provenance/story_restoration_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "b891f4d12f915a5fe87ecca923252d620cb2290984b48f49721703d92bee5b69",
-    "paper_v14.pdf": "b891f4d12f915a5fe87ecca923252d620cb2290984b48f49721703d92bee5b69",
-    "paper_main.pdf": "5122cdeb577e0fbcf48f598ec84c4183e23b034b36ea30c2b240122be9f900f1",
-    "paper_appendix.pdf": "2966d526404ea4c01d03a6de09b3722ebda72569176eb965ef5d8e7065adac72"
+    "paper.pdf": "9bdac3146e69a038308a5bd45c0510cdf585b92a0e3399d94a31b26e86c9a5bb",
+    "paper_v14.pdf": "9bdac3146e69a038308a5bd45c0510cdf585b92a0e3399d94a31b26e86c9a5bb",
+    "paper_main.pdf": "50668adc339aff1f0cf320060572977a836a00164d428340e5a9cccd90426ec6",
+    "paper_appendix.pdf": "6a41d3c61c14afcfd6225538662765f7efb270d9ea892011bdc8aa6cd084c780"
   },
   "figures": 10,
   "main_body_pages": 8,
   "combined_pages": 21,
-  "revision": "oral-narrative-pdflatex",
-  "abstract_words_whitespace": 213,
+  "revision": "author-story-restored-figure3-import",
+  "abstract_words_whitespace": 254,
   "figure_pages": {
     "fig:headline": 1,
     "fig:teaser": 2,
@@ -36,9 +36,9 @@
     "fig:diverse-execution": 20,
     "fig:pusht-rollouts": 21
   },
-  "revision_description": "Integrate the supplied clearer oral-revision narrative while preserving current results and figures; verify eight main-body pages with the official CVPR2027 template.",
+  "revision_description": "Preserve the supplied abstract, introduction and conclusion with updated Rope figures; replace Figure 3 with author editable SVG.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-17T06:46:47.046612+00:00",
+  "updated": "2026-11-17T07:14:46.957272+00:00",
   "main_with_references_pages": 10,
   "appendix_pages": 11,
   "table_pages": {
@@ -78,5 +78,5 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/oral_narrative_revision.json"
+  "current_revision_provenance": "provenance/story_restoration_revision.json"
 }

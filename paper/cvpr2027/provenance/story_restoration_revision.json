@@ -1,0 +1,134 @@
+{
+  "base_commit": "79d5d8fb704ae2e8dc88b6598e01c34bf5386616",
+  "new_experiments_run": false,
+  "inputs": {
+    "figure3.drawio.svg": "50ecbcaabc61fdfb9dcb18c51388e9da00c043bb5c792acd2008d586cc35c292",
+    "JEPA-Stall_CVPR_Oral_Revised.pdf": "38314296b90bc57c59e00e4709990f9c531c70d9a71f45d930a524a9c4698917"
+  },
+  "protected_sections": {
+    "abstract": {
+      "all_original_narrative_preserved": true,
+      "source_sha256": "544cd2d5418ebb746e5a84418d4e4a0eeda130728d80ef8ba55689d971dd2f61",
+      "current_sha256": "da6f54f7fc59d5980861d787289313d31cfac1060330bc7cfdebfb3ad70a2790"
+    },
+    "introduction": {
+      "all_original_narrative_preserved": true,
+      "source_sha256": "3f430741e28c85549e7bb968f5398630c4f435a59c2c3575ca01e6fb2e71e61e",
+      "current_sha256": "3e79db37236c1ebd4c772f29ea5524a02cc1b2b189a25ba3bd25596cce2e17fc"
+    },
+    "conclusion": {
+      "all_original_narrative_preserved": true,
+      "source_sha256": "303032e3a3917b61568f29d9249609380549192e992c3ae3a87ddb57caa012b3",
+      "current_sha256": "3fc9da3c53f4f145247ba707298a140b2ea076c7ba50341fff3e159e5e883ede"
+    }
+  },
+  "authorized_text_corrections": [
+    "Rope CD reduction 31.7% -> 30.2%, now measured across three seeds.",
+    "Keep previously requested propose and Inspired by DART wording."
+  ],
+  "layout_only_changes": [
+    "Keep contributions together across the page break.",
+    "Figure 2 width 0.90, Figure 3 width 0.95, Figure 4 width 0.92 of text width; threshold curve 0.95 of column width.",
+    "No font-size, margin, template or preamble changes."
+  ],
+  "equations_and_data_tables_unchanged": true,
+  "all_other_figure_assets_unchanged": true,
+  "figure3_content_redrawn": false,
+  "figure3_import": "provenance/method_figure_import.json",
+  "additional_evaluation_seeds": {
+    "report": "reports/figure1_eval_seeds_20261117",
+    "verified_batches": 294,
+    "task_records": 3500,
+    "exact_action_rng_comparisons": 125,
+    "manuscript_figure1_uses_original_seed_results": true,
+    "reason": "New report covers only five of nine conditions; original-seed figures remain internally consistent."
+  },
+  "build": {
+    "engine": "pdflatex",
+    "abstract_words_whitespace": 254,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 11,
+    "combined_pages": 21,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": null
+  },
+  "independent_xetex_validation": {
+    "body_pages": 8,
+    "combined_pages": 21
+  },
+  "crossrefs": {
+    "before": {
+      "total_reference_targets": 91,
+      "main_reference_targets": 41,
+      "main_to_appendix_targets": 21,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "sec:additional-controls",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "fig:pusht-rollouts",
+        "fig:rope-rollouts",
+        "tab:parameters",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "sec:backbone",
+        "tab:lewm-contact",
+        "sec:rope-details"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 92,
+      "main_reference_targets": 42,
+      "main_to_appendix_targets": 22,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "sec:pending",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "sec:additional-controls",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "fig:pusht-rollouts",
+        "fig:rope-rollouts",
+        "tab:parameters",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "sec:backbone",
+        "tab:lewm-contact",
+        "sec:rope-details"
+      ],
+      "missing_labels": []
+    },
+    "settings_parameter_table_references": 1,
+    "pdf_internal_links_checked": 238,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 181,
+    "label_destinations_checked": 70,
+    "headline_and_trajectory_figures_unchanged": true,
+    "bibliography_unchanged": true
+  }
+}

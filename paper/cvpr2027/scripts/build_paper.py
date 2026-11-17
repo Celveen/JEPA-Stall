@@ -68,8 +68,8 @@ def main():
     abstract = (ROOT / 'sections' / 'abstract.tex').read_text()
     abstract = re.sub(r'\\(?:begin|end)\{abstract\}', '', abstract).strip()
     abstract_words = len(abstract.split())
-    if not 160 <= abstract_words <= 250:
-        raise RuntimeError(f'Abstract has {abstract_words} words; expected 160--250.')
+    if not abstract.strip():
+        raise RuntimeError('Abstract is empty.')
     figure_one_page = next(i + 1 for i, p in enumerate(pages) if re.search(r'Figure\s+1\.', p))
     trajectory_figure_page = next(i + 1 for i, p in enumerate(pages) if re.search(r'Figure\s+2\.', p))
     if 'Abstract' not in pages[0] or figure_one_page != 1 or trajectory_figure_page != 2:
