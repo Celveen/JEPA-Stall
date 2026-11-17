@@ -5,24 +5,24 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "pdfLaTeX (TeX Live 2026)",
-  "base_repository_commit": "e34ff8bb0cf9c631d01973d9310c26d38ba7f370",
+  "base_repository_commit": "f1d71e17bba344af28e8d44b029b3fc351cd0654",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/final_submission_check.json",
+  "audit": "provenance/rollout_clarity_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "4d516e6376a9a1995673824e9db392e28f2b1cbb10d58fedd0fa1a7eb590ffee",
-    "paper_v14.pdf": "4d516e6376a9a1995673824e9db392e28f2b1cbb10d58fedd0fa1a7eb590ffee",
-    "paper_main.pdf": "edb9eb17b411fdeca9b4ca3524ce90b75cdb53ef2187a2d4fa4687e3cefcf84b",
-    "paper_appendix.pdf": "319f1f00b698f83fb0d22b2c655683ee474aaf43e80ec940243f0273ffe45738"
+    "paper.pdf": "8ac7a8fb61e82dbb1e3d1e635b7dad1d857f1eba3a3ca753ee229037454b157d",
+    "paper_v14.pdf": "8ac7a8fb61e82dbb1e3d1e635b7dad1d857f1eba3a3ca753ee229037454b157d",
+    "paper_main.pdf": "21e5ff2a7e4a2ce191a50ed05ae36f39253e5abf66a11aade4dedd8ac0d78046",
+    "paper_appendix.pdf": "8bf03f3ece5a70d19791f22285ab4bcfc2ad0291a108ad08aec5b16136754e6a"
   },
   "figures": 12,
   "main_body_pages": 8,
   "combined_pages": 22,
-  "revision": "final-submission-layout-and-split-pdfs",
+  "revision": "rollout-final-push-clarity",
   "abstract_words_whitespace": 231,
   "figure_pages": {
     "fig:headline": 1,
@@ -38,7 +38,7 @@
     "fig:diverse-execution": 21,
     "fig:pusht-rollouts": 22
   },
-  "revision_description": "Shift Figures 5/7 left 6pt, give Table 5 caption a 7pt gap, and preserve precise in-file destinations in separate main/supplement PDFs.",
+  "revision_description": "Show recorded pushes 5,8,14,18,19,20 to reveal late Rope correction; refine cost wording and Figure 7 caption spacing.",
   "reference_svg_sha256": "1c4e4b79bb4021566f01f518e59be4e90b38295f96c6c39deebe42a05680b89a",
   "updated": "2026-11-17",
   "main_with_references_pages": 10,

@@ -82,8 +82,7 @@ Permanent $10\times$ weighting rescues 50 failures but breaks 32 native successe
 \par\smallskip\noindent Loss-gated coordination complements online adaptation.
 On Maze with adaptation, immediate correction rescues 7 failures but loses 4 native successes; a fixed delay is worse than no correction (\cref{tab:maze-controls}). Freezing adaptation at a stall without correcting the objective reduces 50-replan success from 82\% to 60\% (\cref{tab:maze-full}). The loss gate (\cref{eq:gate}) preserves all native successes at 30 replans and reaches 87\% at 50 replans.
 
-\par\smallskip\noindent Computational cost.
-On 350 paired PushObj tasks (fixed ResNet), ECP's 2.8\% per-replan overhead is offset by 12.4\% fewer replans, reducing mean task-loop time by 12.1\%. Memory use increases (\cref{sec:cost}).
+\par\smallskip\noindent About computational cost, on 350 paired PushObj tasks (fixed ResNet), ECP's 2.8\% per-replan overhead is offset by 12.4\% fewer replans, reducing mean task-loop time by 12.1\%. Memory use increases (\cref{sec:cost}).
 
 \subsection{Qualitative and behavioral recovery}
 \label{sec:qualitative}

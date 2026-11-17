@@ -6,9 +6,9 @@
   "steps": [
     5,
     8,
-    11,
     14,
-    17,
+    18,
+    19,
     20
   ],
   "new_experiments_run": false,
@@ -35,14 +35,6 @@
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
-    "figures/recorded_rollouts/rope_main_native3_011.png": {
-      "sha256": "168845a4cf84abd23d2f980ec9b702e0ec7298d71e7ce704b7d2846b4f26a86e",
-      "archive": "native3_evidence.tar.gz",
-      "member": "native3/sample_05/recorded_execution.npz",
-      "step": 11,
-      "full_original_viewport": true,
-      "pixel_exact_to_recorded_observation": true
-    },
     "figures/recorded_rollouts/rope_main_native3_014.png": {
       "sha256": "168845a4cf84abd23d2f980ec9b702e0ec7298d71e7ce704b7d2846b4f26a86e",
       "archive": "native3_evidence.tar.gz",
@@ -51,11 +43,19 @@
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
-    "figures/recorded_rollouts/rope_main_native3_017.png": {
-      "sha256": "168845a4cf84abd23d2f980ec9b702e0ec7298d71e7ce704b7d2846b4f26a86e",
+    "figures/recorded_rollouts/rope_main_native3_018.png": {
+      "sha256": "cc842f00b953254b96ddf40ab8d1ac048f265fb20e4eec8158decbabc72c9f49",
       "archive": "native3_evidence.tar.gz",
       "member": "native3/sample_05/recorded_execution.npz",
-      "step": 17,
+      "step": 18,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_native3_019.png": {
+      "sha256": "cc842f00b953254b96ddf40ab8d1ac048f265fb20e4eec8158decbabc72c9f49",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 19,
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
@@ -99,14 +99,6 @@
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
-    "figures/recorded_rollouts/rope_main_fixed3_011.png": {
-      "sha256": "3c8e7183e73949bcdb4276b8c0fccd1b2d2ece8a6ea0fb75c00d70a8542de7d6",
-      "archive": "fixed3_evidence.tar.gz",
-      "member": "fixed3/sample_05/recorded_execution.npz",
-      "step": 11,
-      "full_original_viewport": true,
-      "pixel_exact_to_recorded_observation": true
-    },
     "figures/recorded_rollouts/rope_main_fixed3_014.png": {
       "sha256": "ea292fb9e3f9477ef7d4f7ee96392b2cd133463caf29bd39f2a5cf728a11e798",
       "archive": "fixed3_evidence.tar.gz",
@@ -115,11 +107,19 @@
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
-    "figures/recorded_rollouts/rope_main_fixed3_017.png": {
-      "sha256": "ea292fb9e3f9477ef7d4f7ee96392b2cd133463caf29bd39f2a5cf728a11e798",
+    "figures/recorded_rollouts/rope_main_fixed3_018.png": {
+      "sha256": "0a1b61502423493e518d10ca6f290729193079c0dc0a403c6c779d4ea352542e",
       "archive": "fixed3_evidence.tar.gz",
       "member": "fixed3/sample_05/recorded_execution.npz",
-      "step": 17,
+      "step": 18,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_main_fixed3_019.png": {
+      "sha256": "9ee42584d4c6df8188b8b498a82abb0d0f23e1533627d0043a419c0de6a8dddc",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 19,
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
@@ -148,19 +148,19 @@
           "cd": 1.7390815161732718
         },
         {
-          "path": "figures/recorded_rollouts/rope_main_native3_011.png",
-          "step": 11,
-          "cd": 1.7390815244510667
-        },
-        {
           "path": "figures/recorded_rollouts/rope_main_native3_014.png",
           "step": 14,
           "cd": 1.7390815173994127
         },
         {
-          "path": "figures/recorded_rollouts/rope_main_native3_017.png",
-          "step": 17,
-          "cd": 1.7390815220690214
+          "path": "figures/recorded_rollouts/rope_main_native3_018.png",
+          "step": 18,
+          "cd": 1.8947410026057332
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_native3_019.png",
+          "step": 19,
+          "cd": 1.8947410006738021
         },
         {
           "path": "figures/recorded_rollouts/rope_main_native3_020.png",
@@ -188,19 +188,19 @@
           "cd": 1.8437143556471627
         },
         {
-          "path": "figures/recorded_rollouts/rope_main_fixed3_011.png",
-          "step": 11,
-          "cd": 1.8525993521853392
-        },
-        {
           "path": "figures/recorded_rollouts/rope_main_fixed3_014.png",
           "step": 14,
           "cd": 1.5097865258856975
         },
         {
-          "path": "figures/recorded_rollouts/rope_main_fixed3_017.png",
-          "step": 17,
-          "cd": 1.5097865269744757
+          "path": "figures/recorded_rollouts/rope_main_fixed3_018.png",
+          "step": 18,
+          "cd": 1.5218937046055951
+        },
+        {
+          "path": "figures/recorded_rollouts/rope_main_fixed3_019.png",
+          "step": 19,
+          "cd": 0.7332495364634303
         },
         {
           "path": "figures/recorded_rollouts/rope_main_fixed3_020.png",

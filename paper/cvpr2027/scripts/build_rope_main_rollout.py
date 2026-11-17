@@ -16,7 +16,7 @@ from PIL import Image,ImageFilter
 
 PAPER=Path(__file__).resolve().parents[1]
 MANIFEST=PAPER/'provenance/rope_main_rollout_data.json'
-STEPS=[5,8,11,14,17,20]
+STEPS=[5,8,14,18,19,20]
 sha=lambda data:hashlib.sha256(data).hexdigest()
 
 class ArrayOnlyUnpickler(pickle.Unpickler):
