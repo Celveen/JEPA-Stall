@@ -5,24 +5,24 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "pdfLaTeX (TeX Live 2026)",
-  "base_repository_commit": "cb7de94013ac740677b771b54a5b0985c8291814",
+  "base_repository_commit": "4dfedac2e4854e98298b2337413ad4d56ec1452c",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/submission_curves_revision.json",
+  "audit": "provenance/figure4_scale_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "19cd19261946c013434ce5c118b86e83e2aaf86782e99a19a138e8d01ca45d80",
-    "paper_v14.pdf": "19cd19261946c013434ce5c118b86e83e2aaf86782e99a19a138e8d01ca45d80",
-    "paper_main.pdf": "0d69d60d7c0779e1574b3e2ee35bf6d4aaf736d5f08b08f947a31abfdcc07c15",
+    "paper.pdf": "981dae4b71417d2b24b01010e8c373c0314c85160dcaef4eaeddf670fe948469",
+    "paper_v14.pdf": "981dae4b71417d2b24b01010e8c373c0314c85160dcaef4eaeddf670fe948469",
+    "paper_main.pdf": "cd9a32020dd725fa2fe17e1bcd9f946f3062a1ce7fe6d4db384b26455853eab0",
     "paper_appendix.pdf": "b51f230340455b9139d8bbe5c02616b02dbe8d07f5baf86254358bbd37d84abb"
   },
   "figures": 12,
   "main_body_pages": 8,
   "combined_pages": 22,
-  "revision": "submission-curve-proportions",
+  "revision": "figure4-proportional-enlargement",
   "abstract_words_whitespace": 231,
   "figure_pages": {
     "fig:headline": 1,
@@ -38,7 +38,7 @@
     "fig:diverse-execution": 21,
     "fig:pusht-rollouts": 22
   },
-  "revision_description": "Increase Figure 5 height slightly and Figure 7 more; narrow and center Figure 7. No prose or data changes.",
+  "revision_description": "Enlarge Figure 4 uniformly from 92% to 98% text width, filling page 7 lower-right space without changing prose or page 8.",
   "reference_svg_sha256": "1c4e4b79bb4021566f01f518e59be4e90b38295f96c6c39deebe42a05680b89a",
   "updated": "2026-11-17",
   "main_with_references_pages": 10,
