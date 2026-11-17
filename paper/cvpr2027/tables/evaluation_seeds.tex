@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{\textbf{Headline results across three evaluation seeds.} Each seed repeats 350 fixed PushObj tasks per model, with unchanged checkpoints and 150 controls. Seed columns count successes; the final column gives mean success (\%) $\pm$ sample SD. Seeds are 100/200/300 for ResNet and 2000/2001/2002 for LeWM. Frozen/LeWM keep pretrained weights fixed; AdaJEPA updates ResNet online. Augmented data adds noisy contact interactions. Zero SD reflects deterministic evaluation; ECP improves AdaJEPA in every seed.}
+\label{tab:eval-seeds}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Controller & Training / planning & Seed 1 & Seed 2 & Seed 3 & Success (\%)\\
+\midrule
+Frozen (ResNet) & Augmented data + ECP & 253 & 253 & 253 & $72.29\pm0.00$\\
+LeWM & Augmented data + ECP & 231 & 231 & 231 & $66.00\pm0.00$\\
+\midrule
+AdaJEPA (ResNet) & Base data & 243 & 235 & 244 & $68.76\pm1.41$\\
+AdaJEPA (ResNet) & Augmented data & 262 & 254 & 260 & $73.90\pm1.19$\\
+AdaJEPA (ResNet) & Augmented data + ECP & 272 & 265 & 270 & $76.86\pm1.03$\\
+\bottomrule
+\end{tabular*}
+\end{table*}

@@ -4,7 +4,7 @@ Our approach couples offline recovery-aware data collection with online closed-l
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/fig2_method.pdf}
-\caption{\textbf{ECP connects execution feedback to planning.} Offline actions combine contact bias with Gaussian noise before collection. Step 3 illustrates PushObj, Maze, shifted PushT, and Rope execution. Step 4 detects small net movement relative to goal distance. Step 5 retains stagnation memory ($S$) and boosts goal weighting ($P$) for three calls, renewed by new triggers. The timeline highlights sustained correction inspired by ACT. Model parameters may remain fixed or adapt online.}
+\caption{\textbf{How ECP uses execution feedback.} Offline, noisy contact-biased actions provide world-model training data. Steps 1--3 encode current/goal images, optimize predicted actions, and execute the first block. Step 4 detects small net movement relative to goal distance. Step 5 penalizes stalled-state revisits through persistent memory $S$ (blue), and boosts the unfinished proprioceptive goal term for three replans through $P$ (brown). New stalls renew the boost.}
 \label{fig:method}
 \end{figure*}
 

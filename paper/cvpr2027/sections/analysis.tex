@@ -3,7 +3,7 @@
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Component ablation on PushObj} ($\gamma_{\rm hi}=0.15$). Success (\%) on the same 350 tasks and 30-replan budget. $S$ denotes memory-based stagnation regularization; $P$ denotes temporary proprioceptive reweighting. Both checkpoints are offline-pretrained ResNet world models. Frozen fixes their parameters; AdaJEPA updates them online. Native omits ECP. Row maxima are bold.}
+\caption{\textbf{ECP components improve PushObj success.} Success (\%) on 350 tasks, 30 replans, $\gamma_{\rm hi}=0.15$. $S/P$ denote stagnation memory/temporary proprioceptive reweighting. Released/Data aug. use published/interaction-biased pretrained ResNet checkpoints. Frozen fixes weights; AdaJEPA updates them online. Native disables ECP; bold marks row maxima.}
 \label{tab:components}
 \small
 \setlength{\tabcolsep}{3.2pt}
@@ -22,7 +22,7 @@ Data aug. & AdaJEPA &74.9&76.0&\textbf{77.1}&76.9\\
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.95\columnwidth]{figures/fig_threshold_sensitivity.pdf}
-\caption{\textbf{Trigger-threshold sensitivity on PushObj.} AdaJEPA with the augmented-data ResNet, 350 tasks and 30 replans. ECP uses $S{+}P$ and $\gamma_{\rm lo}=\gamma_{\rm hi}/3$. Points show measured success; the dashed line is native planning.}
+\caption{\textbf{Gains persist across stall thresholds.} AdaJEPA updates an augmented-data ResNet on 350 PushObj tasks with 30 replans. Teal points report ECP success (memory plus goal reweighting); dashed is native planning. Larger $\gamma_{\rm hi}$ detects stalls earlier; $\gamma_{\rm lo}=\gamma_{\rm hi}/3$.}
 \label{fig:threshold}
 \end{figure}
 
@@ -34,7 +34,7 @@ Each correction alone improves over native planning across both checkpoints and 
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Triggered correction versus permanent reweighting and additional search} ($\gamma_{\rm hi}=0.15$). PushObj planning with the offline-pretrained, augmented-data ResNet world model held fixed. Permanent weighting uses the same $10\times$ multiplier as ECP. Rescue/harm counts are paired changes relative to native MPC.}
+\caption{\textbf{Triggered correction preserves native successes.} Success (\%) on 350 PushObj tasks with a fixed, augmented-data ResNet and 30 replans. ECP uses memory $S$ and temporary goal reweighting $P$; permanent weighting always applies the $10\times$ boost. Lookahead tests extra action prefixes. Rescue/harm counts native failures recovered/successes lost.}
 \label{tab:timing}
 \small
 \begin{tabular}{lrr}
@@ -52,7 +52,7 @@ ECP (triggered $S{+}P$) &\textbf{72.3}&39 / 0\\
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Stagnation memory on Maze.} Frozen holds the offline-pretrained ResNet world model fixed; AdaJEPA updates it online. Native omits ECP; Ours adds memory-only $S$. Success requires position error $<0.5$ on 100 tasks with a 30-replan budget.}
+\caption{\textbf{Memory improves Maze success without regressions.} Success (\%) on 100 tasks within 30 replans, with 0.5-unit goal tolerance. Frozen fixes a pretrained ResNet; AdaJEPA updates it online. Native omits ECP; Ours adds memory $S$, after a prediction-loss plateau for AdaJEPA.}
 \label{tab:maze}
 \small
 \begin{tabular*}{0.94\columnwidth}{@{\extracolsep{\fill}}llr@{}}
@@ -69,7 +69,7 @@ AdaJEPA & Native &63.0\\
 
 \begin{table}[t]
 \centering
-\caption{\textbf{Rope planning with DINO-WM.} Both methods keep the pretrained model fixed and predict/execute three pushes per plan. Ours uses fixed-strength $S$ after five warm-up pushes. Results cover 20 targets repeated under three seeds (60 runs per method). Success is CD $<0.3$. Pushes averages all runs, with a 20-push cap.}
+\caption{\textbf{ECP improves Rope planning.} Fixed DINO-WM, three pushes per plan. Ours adds fixed-strength memory after five warm-up pushes. Twenty targets repeat under three seeds (60 runs). CD is mean final Chamfer distance; success requires CD $<0.3$. Pushes averages all runs, including failures capped at 20.}
 \label{tab:rope}
 \small
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrr@{}}

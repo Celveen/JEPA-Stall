@@ -1,6 +1,6 @@
 \begin{table}[t]
 \centering
-\caption{\textbf{Correction type and schedule on Maze.} Success (\%) on 100 tasks at 30 replans with the released, offline-pretrained ResNet world model. Frozen fixes its parameters; AdaJEPA updates them online; the two freeze controls disable both $S$ and $P$. Rescue/harm is relative to native planning with the same update rule.}
+\caption{\textbf{Correction type and timing determine Maze recovery.} Success (\%) on 100 tasks with 30 replans. Frozen fixes a pretrained ResNet; AdaJEPA updates it online. $S/P$ denote memory/goal reweighting. Activation uses the first stall, a ten-replan delay, or a prediction-loss plateau. Freeze stops updates without correction. Rescue/harm counts native failures recovered/successes lost; loss-gated $S$ avoids losses.}
 \label{tab:maze-controls}
 \small
 \setlength{\tabcolsep}{2.2pt}

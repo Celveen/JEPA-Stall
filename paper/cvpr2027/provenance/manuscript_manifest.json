@@ -5,24 +5,24 @@
   "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
   "template_tag": "CVPR2027-v1",
   "tex_engine": "pdfLaTeX (TeX Live 2026); independently checked with XeTeX/Tectonic",
-  "base_repository_commit": "79d5d8fb704ae2e8dc88b6598e01c34bf5386616",
+  "base_repository_commit": "6825d8de01f293417a555eaf4f20ed781a299b42",
   "new_experiments_run": false,
   "style_sha256": {
     "cvpr.sty": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
     "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
   },
   "writing_skill": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/main/skills/anti-defensive-writing-en",
-  "audit": "provenance/story_restoration_revision.json",
+  "audit": "provenance/captions_seed_revision.json",
   "pdf_sha256": {
-    "paper.pdf": "9bdac3146e69a038308a5bd45c0510cdf585b92a0e3399d94a31b26e86c9a5bb",
-    "paper_v14.pdf": "9bdac3146e69a038308a5bd45c0510cdf585b92a0e3399d94a31b26e86c9a5bb",
-    "paper_main.pdf": "50668adc339aff1f0cf320060572977a836a00164d428340e5a9cccd90426ec6",
-    "paper_appendix.pdf": "6a41d3c61c14afcfd6225538662765f7efb270d9ea892011bdc8aa6cd084c780"
+    "paper.pdf": "15778817fd067e24e778ce791b6701a68aca958586ed10baee874356a5ffbcdf",
+    "paper_v14.pdf": "15778817fd067e24e778ce791b6701a68aca958586ed10baee874356a5ffbcdf",
+    "paper_main.pdf": "33d23e490036769441e41afe3c246cc31d796943163425fa401d34dfa97d6d21",
+    "paper_appendix.pdf": "2283958f71b603be35b3c1bf40f6e95cea7e6609dccca6e0a810c8751980fbc6"
   },
   "figures": 10,
   "main_body_pages": 8,
-  "combined_pages": 21,
-  "revision": "author-story-restored-figure3-import",
+  "combined_pages": 22,
+  "revision": "evaluation-seed-appendix-self-contained-captions",
   "abstract_words_whitespace": 254,
   "figure_pages": {
     "fig:headline": 1,
@@ -32,15 +32,15 @@
     "fig:threshold": 7,
     "fig:push-distance": 16,
     "fig:rope-budget": 18,
-    "fig:rope-rollouts": 19,
-    "fig:diverse-execution": 20,
-    "fig:pusht-rollouts": 21
+    "fig:rope-rollouts": 20,
+    "fig:diverse-execution": 21,
+    "fig:pusht-rollouts": 22
   },
-  "revision_description": "Preserve the supplied abstract, introduction and conclusion with updated Rope figures; replace Figure 3 with author editable SVG.",
+  "revision_description": "Add the complete evaluation-seed repetitions in the appendix and make figure/table captions self-contained, preserving the author narrative.",
   "reference_svg_sha256": "86b9b2d45a93ed243df9dbf32f7157af635f54e9281bb713380d34973b9dd4e8",
-  "updated": "2026-11-17T07:14:46.957272+00:00",
+  "updated": "2026-11-17T07:58:30.743942+00:00",
   "main_with_references_pages": 10,
-  "appendix_pages": 11,
+  "appendix_pages": 12,
   "table_pages": {
     "tab:main": 6,
     "tab:components": 7,
@@ -55,11 +55,12 @@
     "tab:threshold": 15,
     "tab:threshold-shape": 16,
     "tab:memory-strength": 16,
-    "tab:training": 16,
+    "tab:eval-seeds": 17,
+    "tab:training": 17,
     "tab:action": 17,
-    "tab:maze-controls": 17,
-    "tab:maze-full": 18,
-    "tab:rope-ablation": 18
+    "tab:maze-controls": 18,
+    "tab:maze-full": 19,
+    "tab:rope-ablation": 19
   },
   "abstract_sentences": null,
   "primary_evaluation_status": "complete",
@@ -78,5 +79,6 @@
   },
   "training_inference_inspiration_source": "reports/lewm_contact_schedule_20261113/RECOVERY_METHOD_PLAN.md",
   "advisor_revision_provenance": "provenance/overleaf_sync_20261115.json",
-  "current_revision_provenance": "provenance/story_restoration_revision.json"
+  "current_revision_provenance": "provenance/captions_seed_revision.json",
+  "tables": 19
 }

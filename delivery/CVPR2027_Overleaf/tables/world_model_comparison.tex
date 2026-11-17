@@ -1,6 +1,6 @@
 \begin{table*}[t]
 \centering
-\caption{\textbf{Comparison with recent world-model controllers on PushObj and PushT.} Success (\%) at 150 controls; bold marks column maxima. Frozen fixes an offline-pretrained ResNet world model; AdaJEPA updates it online. Released denotes the published checkpoint. PushObj uses 50 tasks per shape; DINO-WM and LeWM use one archived task list; Frozen, AdaJEPA, and Ours use a second list over the same shapes. Sq., sT, and S\&P denote square, small-T, and salt-and-pepper noise. Avg. covers seven shapes or six visual shifts. Agent, Object, and Goal denote red-color shifts. Ours uses augmented data with $\gamma_{\rm hi}=0.45$ on PushObj and $0.15$ on PushT.}
+\caption{\textbf{World-model control on PushObj and PushT.} Success (\%) within 150 controls; bold marks column maxima. Each shape/condition uses 50 tasks. Avg. covers seven shapes or six shifts, excluding Clean. Sq., sT, S\&P mean square, small-T, salt-and-pepper noise; Agent/Object/Goal recolor that component red. Frozen fixes a pretrained ResNet; AdaJEPA updates it online. Released uses published weights; Ours adds augmented training and ECP, with AdaJEPA achieving the highest means. PushObj task lists differ between DINO-WM/LeWM and ResNet controllers.}
 \label{tab:main}
 \small
 \setlength{\tabcolsep}{2pt}

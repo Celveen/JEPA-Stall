@@ -1,6 +1,6 @@
 \begin{table*}[t]
 \centering
-\caption{\textbf{Checkpoint and intervention comparisons on PushT.} Success (\%) on the same 50 tasks and at most 30 replans. Both checkpoints are offline-pretrained ResNet world models: Frozen fixes parameters, while AdaJEPA updates them online. Released uses the published weights; Data aug. uses interaction-biased training. Paired ECP on/off runs share tasks and the pre-trigger random stream. Avg. covers six shifts.}
+\caption{\textbf{ECP improves PushT across checkpoints and shifts.} Success (\%) on 50 matched tasks per condition, with 30 replans of five controls. Released/Data aug. use published/interaction-biased pretrained ResNet checkpoints. Frozen fixes weights; AdaJEPA updates them online. S\&P is salt-and-pepper noise; Red columns recolor the named component. Avg. excludes Clean. ECP matches or improves native success in every column.}
 \label{tab:pusht-ecp}
 \small
 \setlength{\tabcolsep}{3.7pt}
