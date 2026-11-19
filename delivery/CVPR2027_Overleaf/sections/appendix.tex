@@ -345,7 +345,7 @@ Freeze, no $S/P$ & Loss gate &53&78&2 / 6&0.289\\
 \bottomrule
 \end{tabular}
 \end{table*}
-\Cref{tab:maze-controls,tab:maze-full} dissect the interaction between objective correction ($S$, $P$, $S{+}P$), activation schedule (First stall, Fixed 10-replan delay, Loss gate), and online parameter updates on Maze across 20, 30, and 50 replans. Halting online model updates upon stall detection (\emph{Freeze, no $S/P$}) severely degrades performance (dropping from 82 to 60 at 50 replans, $p=1.05\times10^{-5}$), showing the benefit of continued adaptation in these controls and that loss-gated stagnation memory ($S$, reaching 87/100 with 6~/~1 rescue/harm) complements ongoing learning.
+\Cref{tab:maze-controls,tab:maze-full} compare correction type, activation schedule, and online updates at 20, 30, and 50 replans. At 50 replans, halting updates at the first stall reduces successes from 82 to 60 ($p=1.05\times10^{-5}$). Continuing adaptation with loss-gated memory ($S$) raises successes to 87/100, recovering six failures and losing one native success. \Cref{tab:maze-medium-threshold} tests $S$ at a higher stall threshold on medium-length routes.
 
 \section{Rope protocol and ablations}
 \label{sec:rope-details}
@@ -405,9 +405,31 @@ All qualitative trajectories in \cref{fig:teaser,fig:execution-recovery,fig:push
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/figS_diverse_execution_v12.pdf}
+\includegraphics[width=0.79\textwidth]{figures/figS_diverse_execution_v12.pdf}
 \caption{\textbf{Recoveries across seven PushObj shapes and four Maze tasks.} Paired brown native paths fail and teal ECP paths succeed from shared starts/goals within 30 replans. Frozen fixes a pretrained ResNet; AdaJEPA updates it online. Dots mark five-control blocks. These selected episodes show ECP escaping repeated local paths.}
 \label{fig:diverse-execution}
+\par\medskip
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{type=table}
+\caption{\textbf{Stagnation memory at a higher Maze threshold.} Each seed supplies 50 paired routes of 6--9 grid cells across five held-out layouts. Entries under the seed IDs count successes. Final goal distance and executed controls are means over all 150 runs per row. Frozen fixes the pretrained ResNet; AdaJEPA updates it online. Memory ($S$) improves AdaJEPA on all three seeds; Frozen loses two successes on seed 102.}
+\label{tab:maze-medium-threshold}
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Successes by seed (/50)} & & & \\
+\cmidrule(lr){2-4}
+Controller & 100 & 101 & 102 & Success (\%) $\uparrow$ & Final distance $\downarrow$ & Controls $\downarrow$ \\
+\midrule
+Frozen       & 33 & 29 & 30 & 61.3 & 1.0044 & 78.61 \\
+Frozen + $S$ & 35 & 34 & 28 & 64.7 & 0.9295 & 75.86 \\
+AdaJEPA       & 35 & 37 & 37 & 72.7 & 0.8370 & 69.31 \\
+AdaJEPA + $S$ & 38 & 39 & 40 & 78.0 & 0.7450 & 67.63 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\raggedright
+The detector uses $(\gamma_{\rm hi},\gamma_{\rm lo})=(0.30,0.10)$ and a rolling 15-control window. The planner observes after every control and can store one memory per five-control block. Because the task set and observation cadence also differ from the main Maze evaluation at $(0.15,0.05)$, the paired rows measure the effect of memory within this protocol. Seed 100 includes 20 pilot tasks; on the remaining 130 tasks, memory raises AdaJEPA successes from 96 to 103.
+\end{minipage}
 \end{figure*}
 
 \begin{figure*}[t]
