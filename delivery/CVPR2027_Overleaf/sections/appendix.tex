@@ -449,6 +449,6 @@ Promising next steps include evaluating on source-disjoint task streams and held
 \begin{figure*}[p]
 \centering
 \includegraphics[width=\textwidth]{figures/figS_maze_detour_rollout.pdf}
-\caption{\textbf{A detour around a Maze wall.} Each column compares native AdaJEPA with AdaJEPA using ECP (Ours) at the same control. Trails show the last four controls, the white ring marks the agent, and the pale yellow ring marks the shared goal. As Ours backs out of the passage, its goal distance rises from 4.13 to 5.42 units between controls 65 and 70. It reaches the goal at control 90 with a distance of 0.17. Native finishes 4.71 units away after 150 controls.}
+\caption{\textbf{Maze recoveries with adaptive and frozen ResNet world models.} Each row shows five recorded frames from one run. Columns align the two planners by executed control. Trails cover the preceding four controls, the white ring marks the agent, and the pale ring marks the goal. In (a), Ours briefly moves farther away to round a wall and reaches the goal at control 90. In (b), Ours reaches the goal at control 43 with the pretrained ResNet held fixed. Both native runs exhaust the 150-control budget.}
 \label{fig:maze-detour}
 \end{figure*}

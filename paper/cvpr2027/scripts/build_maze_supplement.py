@@ -21,19 +21,22 @@ PAPER = Path(__file__).resolve().parents[1]
 FIGURES = PAPER / 'figures'
 ROLLOUTS = PAPER.parents[1] / 'reports/maze_medium50_three_seeds_observed/rollouts'
 GALLERY_CASE = 'adajepa_seed101_sample25'
-ROLLOUT_CASE = 'adajepa_seed102_sample13'
-ARMS = ('adajepa', 'adajepa_s')
+ROLLOUTS_TO_PLOT = (
+    ('adajepa_seed102_sample13', '(a) Maze · AdaJEPA', (65, 70, 72, 75, 90)),
+    ('frozen_seed101_sample31', '(b) Maze · Frozen ResNet', (35, 37, 40, 42, 43)),
+)
 NATIVE, MEMORY = '#9e4d32', '#008275'
 INK = '#163047'
-CONTROLS = (65, 70, 72, 75, 81, 90)
 LIGHT_PATHS = ('#F1AC8D', '#81DBCE')
 SUBSTEPS = 20
 
 
 def read_pair(case):
     provenance = json.loads((ROLLOUTS / 'provenance.json').read_text())[case]
+    planner = case.split('_', 1)[0]
+    arms = (planner, planner + '_s')
     runs = []
-    for arm in ARMS:
+    for arm in arms:
         record = provenance['rgb_source'][arm]
         path = ROLLOUTS / record['published_recording']
         assert hashlib.sha256(path.read_bytes()).hexdigest() == record['sha256']
@@ -43,7 +46,7 @@ def read_pair(case):
     np.testing.assert_array_equal(runs[0]['target_rgb'], runs[1]['target_rgb'])
     np.testing.assert_array_equal(runs[0]['rgb'][0], runs[1]['rgb'][0])
     distances = [np.linalg.norm(run['states'][:, :2] - run['state_g'][:2], axis=1) for run in runs]
-    for arm, trace in zip(ARMS, distances):
+    for arm, trace in zip(arms, distances):
         result = provenance['result'][arm]
         assert len(trace) - 1 == result['controls']
         np.testing.assert_allclose(trace[-1], result['distance'], atol=1e-6)
@@ -126,55 +129,59 @@ def gallery_panel(path, runs, goal):
     plt.close(fig)
 
 
-def rollout_plot(runs, distances, goal):
-    width, height = 6.875, 8.05
+def rollout_plot():
+    width, height = 6.875, 6.75
     fig = plt.figure(figsize=(width, height))
 
     def board(x, top, size):
         return fig.add_axes([x/width, 1 - (top+size)/height, size/width, size/height])
 
-    for title, image, top in (('Start', runs[0]['rgb'][0], 1.62),
-                              ('Goal', runs[0]['target_rgb'], 3.71)):
-        ax = board(.045, top, 1.16)
-        show_frame(ax, image, goal if title == 'Goal' else None)
-        ax.set_title(title, fontsize=11, color=INK, pad=5)
-    fig.add_artist(Line2D([1.31/width]*2, [1-6.49/height, 1-.17/height],
-                          transform=fig.transFigure, color='#D5DBDD', lw=.85))
-
-    for index, control in enumerate(CONTROLS):
-        band, col = divmod(index, 3)
+    for case_index, (case, title, controls) in enumerate(ROLLOUTS_TO_PLOT):
+        runs, distances, goal = read_pair(case)
+        red, green, blue = np.moveaxis(runs[0]['target_rgb'].astype(int), -1, 0)
+        wall_y, wall_x = np.where((red > green + 18) & (green > blue + 18))
+        view = dict(xlim=(wall_x.min()-5, wall_x.max()+5), ylim=(wall_y.max()+5, wall_y.min()-5))
+        base = .06 + 3.40 * case_index
+        fig.text(.015, 1-base/height, title, va='top', fontsize=11,
+                 fontweight='bold', color=INK, family='STIXGeneral')
         for arm, run in enumerate(runs):
-            top = (.31, 3.63)[band] + 1.48*arm
-            size = 1.39
-            x = 1.91 + col*1.70
-            ax = board(x, top, size)
-            frame = run['rgb'][control]
-            show_frame(ax, frame)
-            # Use the same four-control interval and scale for both planners.
-            pixels = run['pixels'][(control-4)*SUBSTEPS:control*SUBSTEPS]
-            trace(ax, pixels, arm, 1.25)
-            ax.add_patch(Circle(goal, 8, fill=False, ec='#fff2be', lw=1.1, zorder=5))
-            ax.add_patch(Circle(agent_center(frame), 5.5, fill=False,
-                                ec='white', lw=.8, zorder=6))
-            if arm == 0:
-                ax.set_title(f'Control {control}', fontsize=10.5, color=INK, pad=4)
-            if col == 0:
-                fig.text(1.84/width, 1-(top+size/2)/height, ('Native', 'Ours')[arm],
-                         ha='right', va='center', fontsize=10, color=(NATIVE, MEMORY)[arm])
+            top = base + .51 + 1.05*arm
+            size = .90
+            reference = board(.06, top, size)
+            source = runs[0]['rgb'][0] if arm == 0 else runs[0]['target_rgb']
+            show_frame(reference, source, goal if arm == 1 else None)
+            reference.set(**view)
+            reference.set_title(('Start', 'Goal')[arm], fontsize=8.5, color=INK, pad=2)
+            fig.text(1.57/width, 1-(top+size/2)/height, ('Native', 'Ours')[arm],
+                     ha='right', va='center', fontsize=9, color=(NATIVE, MEMORY)[arm])
+            for col, control in enumerate(controls):
+                ax = board(1.66 + 1.055*col, top, size)
+                frame = run['rgb'][control]
+                show_frame(ax, frame)
+                ax.set(**view)
+                trail = run['pixels'][(control-4)*SUBSTEPS:control*SUBSTEPS]
+                trace(ax, trail, arm, .95)
+                ax.add_patch(Circle(goal, 8, fill=False, ec='#fff2be', lw=.85, zorder=5))
+                ax.add_patch(Circle(agent_center(frame), 5.5, fill=False,
+                                    ec='white', lw=.7, zorder=6))
+                if arm == 0:
+                    ax.set_title(f'Control {control}', fontsize=8.5, color=INK, pad=2)
 
-    ax = fig.add_axes([.11, .059, .855, .093])
-    for label, values, color in zip(('Native', 'Ours'), distances, (NATIVE, MEMORY)):
-        ax.plot(np.arange(len(values)), values, label=label, color=color, lw=1.45)
-        ax.scatter(len(values)-1, values[-1], s=18, color=color, zorder=3)
-    ax.scatter(CONTROLS, distances[1][list(CONTROLS)], s=18, color=MEMORY, zorder=3)
-    ax.axhline(.5, color='#75808a', ls='--', lw=.75, label='Success threshold')
-    ax.set(xlim=(0, 150), ylim=(0, 7), xticks=np.arange(0, 151, 25), yticks=(0, 2, 4, 6))
-    ax.set_xlabel('Executed controls', fontsize=10)
-    ax.set_ylabel('Goal distance', fontsize=10)
-    ax.tick_params(length=3, labelsize=9)
-    ax.spines[['top', 'right']].set_visible(False)
-    ax.legend(loc='lower center', bbox_to_anchor=(.5, 1.01), ncols=3, frameon=False,
-              borderaxespad=0, fontsize=9)
+        fig.add_artist(Line2D([1.06/width]*2, [1-(base+2.47)/height, 1-(base+.35)/height],
+                              transform=fig.transFigure, color='#D5DBDD', lw=.8))
+        ax = fig.add_axes([.14, 1-(base+2.98)/height, .65, .40/height])
+        for label, values, color in zip(('Native', 'Ours'), distances, (NATIVE, MEMORY)):
+            ax.plot(np.arange(len(values)), values, label=label, color=color, lw=1.15)
+            ax.scatter(len(values)-1, values[-1], s=10, color=color, zorder=3)
+        ax.scatter(controls, distances[1][list(controls)], s=10, color=MEMORY, zorder=3)
+        ax.axhline(.5, color='#75808a', ls='--', lw=.75, label='Success threshold')
+        ax.set(xlim=(0,150), ylim=(0,7), xticks=np.arange(0,151,25), yticks=(0,3,6))
+        ax.set_xlabel('Executed controls', fontsize=8, labelpad=1)
+        ax.set_ylabel('Goal\ndistance', fontsize=8, labelpad=2)
+        ax.tick_params(length=2, labelsize=7.5, pad=1.5)
+        ax.spines[['top', 'right']].set_visible(False)
+        ax.legend(loc='center left', bbox_to_anchor=(1.02, .50), borderaxespad=0,
+                  frameon=False, handlelength=1.3, fontsize=7.2)
     fig.savefig(FIGURES / 'figS_maze_detour_rollout.pdf', dpi=330)
     plt.close(fig)
 
@@ -220,7 +227,7 @@ def main():
             separate_gallery_inputs(gallery)
             page.show_pdf_page(box, panel, 0)
             gallery.save(FIGURES / 'figS_diverse_execution_maze.pdf', garbage=4, deflate=True)
-    rollout_plot(*read_pair(ROLLOUT_CASE))
+    rollout_plot()
 
 
 if __name__ == '__main__':

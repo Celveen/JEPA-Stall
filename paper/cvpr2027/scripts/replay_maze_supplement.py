@@ -1,4 +1,4 @@
-"""Export the two Maze figure paths with MuJoCo 2.2.2 and the repository environment."""
+"""Export the paired Maze figure paths with MuJoCo 2.2.2 and the repository environment."""
 from pathlib import Path
 import sys
 
@@ -12,8 +12,8 @@ RAW = REPO / 'reports/maze_medium50_three_seeds_observed/rollouts/raw'
 
 def export_paths(point_maze):
     output = {}
-    for seed, sample in ((101, 25), (102, 13)):
-        case = f'adajepa_seed{seed}_sample{sample}'
+    for planner, seed, sample in (('adajepa', 101, 25), ('adajepa', 102, 13), ('frozen', 101, 31)):
+        case = f'{planner}_seed{seed}_sample{sample}'
         with np.load(REPO / f'reports/maze_medium50_s{seed}_g030_observed/goals.npz') as goals:
             with point_maze(goals['map_specs'][sample - 1]).asfile() as xml:
                 model = mujoco.MjModel.from_xml_path(xml.name)
