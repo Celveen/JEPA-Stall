@@ -26,14 +26,19 @@ A detector event is a control with positive stall weight. Action comparisons use
 
 ## Recorded simulator examples
 
-These two selected recovery cases use the RGB frames recorded during the 0.30/0.10 runs. Each pair shares the start, goal, layout and checkpoint. The figures align frames at the same executed control and show where each run stopped. The distance curves use the simulator states at every executed control.
+The three AdaJEPA comparisons show selected recoveries on different seeds and layouts from the 0.30/0.10 evaluation. Each pair shares the start, goal, layout and checkpoint. The panels use recorded MuJoCo RGB frames, and the distance curves use the corresponding simulator states.
 
-| Condition | Seed and sample | Native | With S | Figure |
-|---|---|---|---|---|
-| Frozen | Seed 101, sample 31 | Fails at 150 controls, distance 2.787 | Succeeds at 43 controls, distance 0.484 | [PNG](rollouts/frozen_seed101_sample31.png) · [PDF](rollouts/frozen_seed101_sample31.pdf) |
-| AdaJEPA | Seed 102, sample 13 | Fails at 150 controls, distance 4.710 | Succeeds at 90 controls, distance 0.174 | [PNG](rollouts/adajepa_seed102_sample13.png) · [PDF](rollouts/adajepa_seed102_sample13.pdf) |
+One full execution step contains five controls, so the budget is 30 steps. Every recorded point is plotted at its control index divided by five. A fractional value marks progress within a partial step, e.g. 19.4 means two controls into step 20. Both runs in a pair use the same step coordinates.
 
-Sample numbers are one-based. [Frame indices and source records](rollouts/provenance.json) identify the exact episodes used in the figures.
+| Seed and sample | Layout | Native | AdaJEPA+S | Figure | Raw materials |
+|---|---:|---|---|---|---|
+| 100, sample 29 | 3 | Fails at 30 steps, distance 2.298 | Succeeds at 19.4 steps, distance 0.460 | [PNG](rollouts/adajepa_seed100_sample29.png) · [PDF](rollouts/adajepa_seed100_sample29.pdf) | [Frames and traces](rollouts/raw/adajepa_seed100_sample29) |
+| 101, sample 25 | 4 | Fails at 30 steps, distance 2.529 | Succeeds at 22.2 steps, distance 0.460 | [PNG](rollouts/adajepa_seed101_sample25.png) · [PDF](rollouts/adajepa_seed101_sample25.pdf) | [Frames and traces](rollouts/raw/adajepa_seed101_sample25) |
+| 102, sample 13 | 2 | Fails at 30 steps, distance 4.710 | Succeeds at 18 steps, distance 0.174 | [PNG](rollouts/adajepa_seed102_sample13.png) · [PDF](rollouts/adajepa_seed102_sample13.pdf) | [Frames and traces](rollouts/raw/adajepa_seed102_sample13) |
+
+The Frozen example uses the same step convention. In seed 101, sample 31, Native fails at 30 steps with distance 2.787, and Frozen+S succeeds at 8.6 steps with distance 0.484. [PNG](rollouts/frozen_seed101_sample31.png) · [PDF](rollouts/frozen_seed101_sample31.pdf) · [Frames and traces](rollouts/raw/frozen_seed101_sample31)
+
+Each raw folder contains `frames.tar.gz` with the shared goal and every unannotated 224 × 224 PNG from both runs, including their start and final frames. In each PNG filename, `control_000` is the initial frame and `control_005` is step 1. `native.npz` and `plus_s.npz` preserve the original simulator recordings, including RGB, states and controls. `trajectory.csv` contains both time units and the distance trace. [Frame indices and recording hashes](rollouts/provenance.json) · [Figure rendering script](rollouts/render_rollouts.py)
 
 ## Data
 
