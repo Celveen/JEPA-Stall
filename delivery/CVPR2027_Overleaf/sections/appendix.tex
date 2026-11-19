@@ -397,22 +397,25 @@ Each condition is an independent physics execution under matching targets, model
 
 \section{Simulator renderings and rollout visualizations}
 \label{sec:renderings}
-All qualitative trajectories in \cref{fig:teaser,fig:execution-recovery,fig:push-distance,fig:rope-rollouts,fig:diverse-execution,fig:pusht-rollouts} are generated from verified simulator executions without trajectory smoothing. PushT and Rope figures display raw RGB frames captured during closed-loop execution, while PushObj and Maze render logged simulator states via Pymunk and MuJoCo (with replayed control endpoints matching logged states within $5.0\times10^{-4}$~pixels and $5.0\times10^{-5}$ world units, respectively).
-
-
-
-
+The qualitative trajectories in \cref{fig:teaser,fig:execution-recovery,fig:push-distance,fig:rope-rollouts,fig:diverse-execution,fig:pusht-rollouts} come from simulator executions without smoothing. PushT, Rope, and panel (l) of \cref{fig:diverse-execution} show recorded RGB frames. The other PushObj and Maze panels render logged Pymunk and MuJoCo states. Replayed control endpoints match within $5.0\times10^{-4}$~pixels and $5.0\times10^{-5}$ world units, respectively.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.79\textwidth]{figures/figS_diverse_execution_v12.pdf}
-\caption{\textbf{Recoveries across seven PushObj shapes and four Maze tasks.} Paired brown native paths fail and teal ECP paths succeed from shared starts/goals within 30 replans. Frozen fixes a pretrained ResNet; AdaJEPA updates it online. Dots mark five-control blocks. These selected episodes show ECP escaping repeated local paths.}
+\includegraphics[width=0.73\textwidth]{figures/figS_diverse_execution_maze.pdf}
+\par\smallskip
+\begin{minipage}[c]{0.59\textwidth}
+\caption{\textbf{ECP recovers stalled PushObj and Maze runs.} Brown and teal show planning without and with ECP from the same start and goal. Frozen fixes the pretrained ResNet, while AdaJEPA updates it online. In (l), recorded MuJoCo frames show AdaJEPA with memory ($S$) moving away from the goal (pale ring) to go around a wall. Goal distance rises from 4.13 to 5.42 at step 14, then falls to 0.17 at step 18. Native planning never reaches $d<0.5$ (dashed line) in 30 steps. Each step executes five controls.}
 \label{fig:diverse-execution}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.39\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/figS_maze_detour_distance.pdf}
+\end{minipage}
 \par\medskip
 \begin{minipage}{\textwidth}
 \centering
 \captionsetup{type=table}
-\caption{\textbf{Stagnation memory at a higher Maze threshold.} Each seed supplies 50 paired routes of 6--9 grid cells across five held-out layouts. Entries under the seed IDs count successes. Final goal distance and executed controls are means over all 150 runs per row. Frozen fixes the pretrained ResNet; AdaJEPA updates it online. Memory ($S$) improves AdaJEPA on all three seeds; Frozen loses two successes on seed 102.}
+\caption{\textbf{Stagnation memory at a higher Maze threshold.} Each seed supplies 50 paired routes of 6--9 grid cells across five held-out layouts. Distance and controls are averaged over all 150 runs per row. Memory ($S$) improves AdaJEPA on all three seeds. Frozen, which fixes the pretrained ResNet, loses two successes on seed 102.}
 \label{tab:maze-medium-threshold}
 \small
 \begin{tabular}{lrrrrrr}
@@ -428,7 +431,7 @@ AdaJEPA + $S$ & 38 & 39 & 40 & 78.0 & 0.7450 & 67.63 \\
 \bottomrule
 \end{tabular}
 \par\smallskip\raggedright
-The detector uses $(\gamma_{\rm hi},\gamma_{\rm lo})=(0.30,0.10)$ and a rolling 15-control window. The planner observes after every control and can store one memory per five-control block. Because the task set and observation cadence also differ from the main Maze evaluation at $(0.15,0.05)$, the paired rows measure the effect of memory within this protocol. Seed 100 includes 20 pilot tasks; on the remaining 130 tasks, memory raises AdaJEPA successes from 96 to 103.
+The detector checks a rolling 15-control window at $(\gamma_{\rm hi},\gamma_{\rm lo})=(0.30,0.10)$ and can store one memory per five-control block. The tasks and observation cadence also differ from the main Maze evaluation. Excluding the 20 pilot tasks in seed 100, memory raises AdaJEPA successes from 96 to 103 out of 130.
 \end{minipage}
 \end{figure*}
 
