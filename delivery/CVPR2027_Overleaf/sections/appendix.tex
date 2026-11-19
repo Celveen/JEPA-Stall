@@ -408,7 +408,7 @@ The rollout figures show simulator executions without smoothing. PushT, Rope, pa
 \begin{minipage}{\textwidth}
 \centering
 \captionsetup{type=table}
-\caption{\textbf{Stagnation memory at a higher Maze threshold.} Each seed supplies 50 paired routes of 6--9 grid cells across five held-out layouts. Distance and controls are means over 150 runs per row. Ours adds stagnation memory. Bold marks the better result within each controller pair. Memory improves AdaJEPA on all three seeds. With the pretrained ResNet frozen, it solves two fewer routes on seed 102.}
+\caption{\textbf{Stagnation memory at a higher Maze threshold.} Each seed supplies 50 paired routes of 6--9 grid cells across five held-out layouts. Distance and controls are means over 150 runs per row. Ours adds stagnation memory. Bold marks the best result in each column. Memory improves AdaJEPA on all three seeds. With the pretrained ResNet frozen, it solves two fewer routes on seed 102.}
 \label{tab:maze-medium-threshold}
 \small
 \begin{tabular}{lrrrrrr}
@@ -417,8 +417,8 @@ The rollout figures show simulator executions without smoothing. PushT, Rope, pa
 \cmidrule(lr){2-4}
 Controller & 100 & 101 & 102 & Success (\%) $\uparrow$ & Final distance $\downarrow$ & Controls $\downarrow$ \\
 \midrule
-Frozen         & 33 & 29 & \textbf{30} & 61.3 & 1.0044 & 78.61 \\
-Frozen (Ours)  & \textbf{35} & \textbf{34} & 28 & \textbf{64.7} & \textbf{0.9295} & \textbf{75.86} \\
+Frozen         & 33 & 29 & 30 & 61.3 & 1.0044 & 78.61 \\
+Frozen (Ours)  & 35 & 34 & 28 & 64.7 & 0.9295 & 75.86 \\
 AdaJEPA        & 35 & 37 & 37 & 72.7 & 0.8370 & 69.31 \\
 AdaJEPA (Ours) & \textbf{38} & \textbf{39} & \textbf{40} & \textbf{78.0} & \textbf{0.7450} & \textbf{67.63} \\
 \bottomrule
