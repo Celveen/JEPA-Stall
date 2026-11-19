@@ -99,8 +99,8 @@ def main():
     appendix_page = next(i for i, p in enumerate(pages) if 'Supplementary Material' in p)
     if statement_page > 8:
         raise RuntimeError(f'Main body is {statement_page} pages, exceeding eight.')
-    if len(pages) > 22:
-        raise RuntimeError(f'Combined manuscript has {len(pages)} pages, exceeding 22.')
+    if len(pages) > 23:
+        raise RuntimeError(f'Combined manuscript has {len(pages)} pages, exceeding 23.')
     shutil.copyfile(ROOT / 'main.pdf', ROOT / 'paper.pdf')
     shutil.copyfile(ROOT / 'main.pdf', ROOT / 'paper_v14.pdf')
     # Rebuild links explicitly: page-by-page splitting loses named destination

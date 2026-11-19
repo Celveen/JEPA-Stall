@@ -402,7 +402,7 @@ The rollout figures show simulator executions without smoothing. PushT, Rope, pa
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.79\textwidth]{figures/figS_diverse_execution_maze.pdf}
-\caption{\textbf{ECP recovers stalls across seven PushObj shapes and five Maze tasks.} Brown and teal show planning without and with ECP from the same start and goal. Frozen fixes the pretrained ResNet, while AdaJEPA updates it online. Dots mark five-control blocks. Panel (l) shows recorded MuJoCo frames from the two runs.}
+\caption{\textbf{ECP recovers stalls across seven PushObj shapes and five Maze tasks.} Brown and teal paths trace planning without and with ECP from the same start (circle) to their endpoints (cross or diamond). Stars mark goals and dots mark five-control blocks. Frozen fixes the pretrained ResNet, while AdaJEPA updates it online.}
 \label{fig:diverse-execution}
 \par\medskip
 \begin{minipage}{\textwidth}
@@ -430,7 +430,7 @@ The detector checks a rolling 15-control window at $(\gamma_{\rm hi},\gamma_{\rm
 
 \begin{figure*}[p]
 \centering
-\includegraphics[width=0.72\textwidth]{figures/figS_pusht_rollouts.pdf}
+\includegraphics[width=\textwidth]{figures/figS_pusht_rollouts.pdf}
 \caption{\textbf{ECP recovers PushT under color shifts.} Paired runs use the same fixed LeWM, start, goal, and 150-control budget. Brown/teal label planning without/with ECP; frame numbers count executed controls. ECP succeeds under both red-agent and red-goal shifts, while native planning exhausts its budget. The right column shows the goal observation.}
 \label{fig:pusht-rollouts}
 \end{figure*}
@@ -448,7 +448,7 @@ Promising next steps include evaluating on source-disjoint task streams and held
 
 \begin{figure*}[p]
 \centering
-\includegraphics[width=0.94\textwidth]{figures/figS_maze_detour_rollout.pdf}
-\caption{\textbf{A Maze recovery requires a temporary detour away from the goal.} The two AdaJEPA runs share a start and goal (pale ring). Recorded MuJoCo frames show that with stagnation memory ($S$), the agent backs out of the passage and goes around the wall. Its goal distance rises from 4.13 to 5.42 units at step 14 before dropping to 0.17 at step 18. Native planning ends at 4.71 units after 30 steps. The dashed line marks the success threshold ($d<0.5$). Each step executes five controls.}
+\includegraphics[width=\textwidth]{figures/figS_maze_detour_rollout.pdf}
+\caption{\textbf{A detour around a Maze wall.} Each column compares native AdaJEPA with AdaJEPA using ECP (Ours) at the same control. Trails show the last four controls, the white ring marks the agent, and the pale yellow ring marks the shared goal. As Ours backs out of the passage, its goal distance rises from 4.13 to 5.42 units between controls 65 and 70. It reaches the goal at control 90 with a distance of 0.17. Native finishes 4.71 units away after 150 controls.}
 \label{fig:maze-detour}
 \end{figure*}
