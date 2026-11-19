@@ -24,6 +24,19 @@ Each planner predicts 25 controls and executes blocks of up to five. It observes
 
 A detector event is a control with positive stall weight. Action comparisons use the clipped controls executed by both methods before either stops, with an L2 difference threshold of `1e-6`. The paired audit checks actions and states before S first becomes active. Final distance and control means include every task, including failures.
 
+## Recorded simulator examples
+
+These two selected recovery cases use the RGB frames recorded during the 0.30/0.10 runs. Each pair shares the start, goal, layout and checkpoint. The figures align frames at the same executed control and show where each run stopped. The distance curves use the simulator states at every executed control.
+
+| Condition | Seed and sample | Native | With S | Figure |
+|---|---|---|---|---|
+| Frozen | Seed 101, sample 31 | Fails at 150 controls, distance 2.787 | Succeeds at 43 controls, distance 0.484 | [PNG](rollouts/frozen_seed101_sample31.png) · [PDF](rollouts/frozen_seed101_sample31.pdf) |
+| AdaJEPA | Seed 102, sample 13 | Fails at 150 controls, distance 4.710 | Succeeds at 90 controls, distance 0.174 | [PNG](rollouts/adajepa_seed102_sample13.png) · [PDF](rollouts/adajepa_seed102_sample13.pdf) |
+
+Sample numbers are one-based. [Frame indices and source records](rollouts/provenance.json) identify the exact episodes used in the figures.
+
+## Data
+
 - [Aggregate CSV](aggregate.csv), [per-seed CSV](by_seed.csv), [all 600 episodes and paired statistics](summary.json), and [checkpoint and run provenance](provenance.json).
 - Seed 100: [episode CSV](../maze_medium50_s100_g030_observed/episodes.csv), [summary](../maze_medium50_s100_g030_observed/summary.json), [task manifest](../maze_medium50_s100_g030_observed/goals.npz), [protocol](../maze_medium50_s100_g030_observed/protocol.json), [per-control records](../maze_medium50_s100_g030_observed/per_control.jsonl.gz).
 - Seed 101: [episode CSV](../maze_medium50_s101_g030_observed/episodes.csv), [summary](../maze_medium50_s101_g030_observed/summary.json), [task manifest](../maze_medium50_s101_g030_observed/goals.npz), [protocol](../maze_medium50_s101_g030_observed/protocol.json), [per-control records](../maze_medium50_s101_g030_observed/per_control.jsonl.gz).

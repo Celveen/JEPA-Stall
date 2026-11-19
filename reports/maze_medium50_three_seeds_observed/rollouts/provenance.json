@@ -1,0 +1,102 @@
+{
+  "frozen_seed101_sample31": {
+    "seed": 101,
+    "sample_idx": 30,
+    "sample_number": 31,
+    "map_idx": 0,
+    "bfs_distance": 9,
+    "gamma_hi": 0.3,
+    "gamma_lo": 0.1,
+    "first_different_physical_control": 36,
+    "matched_start_and_target_images_verified": true,
+    "common_prefix_images_verified_through": 35,
+    "result": {
+      "frozen": {
+        "success": false,
+        "controls": 150,
+        "distance": 2.78682541847229
+      },
+      "frozen_s": {
+        "success": true,
+        "controls": 43,
+        "distance": 0.4839414954185486
+      }
+    },
+    "frame_indices": {
+      "frozen": [
+        0,
+        35,
+        40,
+        43,
+        150
+      ],
+      "frozen_s": [
+        0,
+        35,
+        40,
+        43
+      ]
+    },
+    "rgb_source": {
+      "frozen": {
+        "file": "eval_outputs/maze_medium50_s101_g030_observed/frozen/episodes/sample_030.npz",
+        "sha256": "2bbfc7390e1cfd7114527aab14817feefdf107a6f633b6683494c86948b8ebf5"
+      },
+      "frozen_s": {
+        "file": "eval_outputs/maze_medium50_s101_g030_observed/frozen_s/episodes/sample_030.npz",
+        "sha256": "3832bc37a8b6b210d98ff0287b92b45382cc6bebda75125ba41446c840f7a443"
+      }
+    },
+    "trace_source": "reports/maze_medium50_s101_g030_observed/per_control.jsonl.gz"
+  },
+  "adajepa_seed102_sample13": {
+    "seed": 102,
+    "sample_idx": 12,
+    "sample_number": 13,
+    "map_idx": 2,
+    "bfs_distance": 9,
+    "gamma_hi": 0.3,
+    "gamma_lo": 0.1,
+    "first_different_physical_control": 31,
+    "matched_start_and_target_images_verified": true,
+    "common_prefix_images_verified_through": 30,
+    "result": {
+      "adajepa": {
+        "success": false,
+        "controls": 150,
+        "distance": 4.7098588943481445
+      },
+      "adajepa_s": {
+        "success": true,
+        "controls": 90,
+        "distance": 0.17436064779758453
+      }
+    },
+    "frame_indices": {
+      "adajepa": [
+        0,
+        30,
+        60,
+        90,
+        150
+      ],
+      "adajepa_s": [
+        0,
+        30,
+        60,
+        90
+      ]
+    },
+    "rgb_source": {
+      "adajepa": {
+        "file": "eval_outputs/maze_medium50_s102_g030_observed/adajepa/episodes/sample_012.npz",
+        "sha256": "1d8d91b954991204054e89e06939035fededea14713d00c21a71b4ec5340fde0"
+      },
+      "adajepa_s": {
+        "file": "eval_outputs/maze_medium50_s102_g030_observed/adajepa_s/episodes/sample_012.npz",
+        "sha256": "bbd7c39f43bd6e1fc43f5b74da00f8f6d783a0c3fcced5c43519143c4cdf06df"
+      }
+    },
+    "trace_source": "reports/maze_medium50_s102_g030_observed/per_control.jsonl.gz"
+  }
+}
