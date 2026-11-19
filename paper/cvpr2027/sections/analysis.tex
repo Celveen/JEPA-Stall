@@ -3,7 +3,7 @@
 
 \begin{table}[t]
 \centering
-\caption{\textbf{ECP components improve PushObj success.} Success (\%) on 350 tasks, 30 replans, $\gamma_{\rm hi}=0.15$. $S/P$ denote stagnation memory/temporary proprioceptive reweighting. Released/Data aug. use published/interaction-biased pretrained ResNet checkpoints. Frozen fixes weights; AdaJEPA updates them online. Native disables ECP.}
+\caption{\textbf{ECP components improve PushObj success.} Success (\%) on 350 tasks, 30 replans, $\gamma_{\rm hi}=0.15$. $S/P$ denote stagnation memory/temporary proprioceptive reweighting. Released/Data aug. use published/interaction-biased pretrained ResNet checkpoints. Native disables ECP. Frozen keeps pretrained weights fixed; AdaJEPA updates them online.}
 \label{tab:components}
 \small
 \setlength{\tabcolsep}{3.2pt}
@@ -22,15 +22,15 @@ Data aug. & AdaJEPA &74.9&76.0&\textbf{77.1}&76.9\\
 \begin{figure}[t]
 \centering
 \makebox[\columnwidth][c]{\hspace*{-6pt}\includegraphics[width=0.95\columnwidth]{figures/fig_threshold_sensitivity.pdf}\hspace*{6pt}}
-\caption{\textbf{Gains persist across stall thresholds.} AdaJEPA updates an augmented-data ResNet on 350 PushObj tasks with 30 replans. Teal points report ECP success (memory plus goal reweighting); dashed is native planning. Larger $\gamma_{\rm hi}$ detects stalls earlier; $\gamma_{\rm lo}=\gamma_{\rm hi}/3$.}
+\caption{\textbf{Gains persist across stall thresholds.} AdaJEPA updates an augmented-data ResNet on 350 PushObj tasks with 30 replans. Teal points report ECP success (memory plus goal reweighting); dashed is native planning. The lower threshold is $\gamma_{\rm lo}=\gamma_{\rm hi}/3$; larger upper thresholds detect stalls earlier.}
 \label{fig:threshold}
 \end{figure}
 
 \par\smallskip\noindent Training data and planning correction are complementary.
-On PushObj, augmentation improves the ResNet world model by +17.4~pp (frozen) and +5.4~pp (AdaJEPA), while ECP adds a further +11.1~pp and +2.9~pp on the same checkpoints (\cref{fig:headline}). This training benefit transfers across backbones: under matched training, it raises frozen DINO-WM with CEM from 24.6\% to 48.9\% across all seven shapes (\cref{tab:dinowm-aug}), far exceeding variation across training seeds (\cref{tab:training}).
+On PushObj, augmentation improves the ResNet world model by +17.4~pp (frozen) and +5.4~pp (AdaJEPA), while ECP adds a further +11.1~pp and +2.9~pp on the same checkpoints (\cref{fig:headline}). This training benefit transfers across backbones: under matched training, it raises frozen DINO-WM with CEM from 24.6\% to 48.9\% across all seven shapes (\cref{tab:dinowm-aug}), exceeding the observed variability across independent offline training seeds (\cref{tab:training}).
 
 \par\smallskip\noindent Both corrections contribute, in complementary roles.
-On PushObj, where stalls occur once the object is nearly aligned while the pusher position remains open, temporary reweighting ($P$) drives most of the gain. On Maze with AdaJEPA, where stalls arise from corridor oscillation rather than subspace imbalance, the roles reverse: stagnation memory ($S$) alone attains the highest success (66.0\%) without regressions (\cref{tab:maze-controls}). Memory is most effective on the \emph{joint} visual--proprioceptive latent, which separates scenes sharing an agent position and outperforms proprioception-only memory at every tested strength (\cref{tab:memory-strength}). An action-space variant applying a bounded pusher-goal offset upon physical stagnation similarly improves AdaJEPA across two task streams (\cref{tab:action}).
+On PushObj, where stalls occur once the object is nearly aligned while the pusher position remains open, temporary reweighting ($P$) drives most of the gain. On Maze with AdaJEPA, where stalls arise from corridor oscillation rather than subspace imbalance, the roles reverse: stagnation memory ($S$) alone attains the highest success (66.0\%) without regressions (\cref{tab:maze-controls}). Memory is most effective on the \emph{joint} visual--proprioceptive latent, which separates scenes sharing an agent position and outperforms proprioception-only memory at every tested strength (\cref{tab:memory-strength}). An action-space variant applying a bounded pusher-goal offset upon physical stagnation also improves AdaJEPA on both independently evaluated task streams (\cref{tab:action}).
 
 \begin{table}[t]
 \centering
@@ -72,7 +72,7 @@ AdaJEPA & Native &63.0\\
 \par\smallskip\noindent ECP is robust to the trigger threshold.
 \Cref{fig:threshold} varies $\gamma_{\rm hi}$ over a fourfold range. Larger thresholds trigger earlier and in more episodes, yet success varies by less than one percentage point (76.9\%--77.7\%) and always above native planning, with at most two regressions. Gains appear on seen and unseen shapes alike with fixed weights and concentrate on seen shapes with AdaJEPA (\cref{tab:threshold-shape}).
 
-Within this tested range, recovery is therefore not tied to a narrowly tuned trigger value: changing detection sensitivity leaves the benefit of execution-conditioned correction largely intact.
+Within this tested range, recovery is therefore not tied to a narrowly tuned trigger value: changing detection sensitivity preserves the observed benefit of execution-conditioned correction across the tested thresholds.
 
 \input{sections/rope_pair_results}
 
@@ -80,10 +80,10 @@ Within this tested range, recovery is therefore not tied to a narrowly tuned tri
 Permanent $10\times$ weighting rescues 50 failures but breaks 32 native successes, yielding less than half ECP's net gain (\cref{tab:timing}). Triggered ECP instead recovers 39 failures without regressions. Lookahead search adds 27 regressions for only a marginal net gain; combining it with ECP also underperforms ECP alone. These controls favor correcting the stalled objective over increasing search.
 
 \par\smallskip\noindent Loss-gated coordination complements online adaptation.
-On Maze with adaptation, immediate correction rescues 7 failures but loses 4 native successes; a fixed delay is worse than no correction (\cref{tab:maze-controls}). Freezing adaptation at a stall without correcting the objective reduces 50-replan success from 82\% to 60\% (\cref{tab:maze-full}). The loss gate (\cref{eq:gate}) preserves all native successes at 30 replans and reaches 87\% at 50 replans.
+On Maze with adaptation, immediate correction rescues 7 failures but loses 4 native successes; a fixed delay is worse than no correction (\cref{tab:maze-controls}). Freezing adaptation at a stall without correcting the objective reduces 50-replan success from 82\% to 60\% (\cref{tab:maze-full}). The loss gate (\cref{eq:gate}) preserves all native successes at 30 replans and reaches 87\% success within a budget of 50 replans.
 
 \par\smallskip\noindent About computational cost, on 350 paired PushObj tasks (fixed ResNet), ECP's 2.8\% per-replan overhead is offset by 12.4\% fewer replans, reducing mean task-loop time by 12.1\%. Memory use increases (\cref{sec:cost}).
 
 \subsection{Qualitative and behavioral recovery}
 \label{sec:qualitative}
-In \cref{fig:teaser}a, native frozen control nearly aligns the PushObj object by replan 15, then circles without closing the pusher error. ECP shares those first 15 plans and succeeds two replans later (\cref{fig:push-distance}). Across triggered episodes, ECP moves the pusher $>15$~px from the stalled position within three replans in 38\% vs.\ 11\% of cases, and reduces object error or succeeds within ten replans in 34\% vs.\ 1\% (\cref{sec:behavior}). On Maze, memory redirects paths from dead ends. Further examples show PushT and Rope recovery (\cref{fig:execution-recovery,fig:rope-main-rollout}).
+In \cref{fig:teaser}a, native frozen control nearly aligns the PushObj object by replan 15, then circles without closing the pusher error. ECP shares those first 15 plans and succeeds two replans later (\cref{fig:push-distance}). Across triggered episodes, ECP moves the pusher $>15$~px from the stalled position within three replans in 38\% vs.\ 11\% of cases, and reduces object error or succeeds within ten replans in 34\% vs.\ 1\% (\cref{sec:behavior}). On Maze, memory redirects paths from dead ends. Additional PushT and Rope examples appear (\cref{fig:execution-recovery,fig:rope-main-rollout}).

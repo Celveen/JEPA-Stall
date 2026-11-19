@@ -8,7 +8,7 @@ All PushObj and Maze task lists reported in the main paper were used during meth
 \subsection{World-model architecture and training objective}
 The ResNet world models are pretrained offline on action--observation sequences; the \emph{Frozen} setting holds all pretrained weights fixed during test-time execution. For PushObj and PushT, the encoder uses a SmallResNetGeM visual backbone outputting a $d_v=384$-dimensional embedding, paired with a 6-layer action-conditioned Transformer predictor (16 attention heads, feed-forward width 2048, dropout 0.1). Proprioceptive states and 5-step action blocks are mapped through learned 10-dimensional linear embeddings ($d_p=10$). Each training window comprises four observations spaced five control steps apart, where three context frames predict the corresponding one-step-shifted targets. Action embeddings condition the Transformer predictor but are excluded from the reconstruction target.
 
-Let $z_i^o=[z_i^v;z_i^p]\in\R^{d_o}$ denote the concatenated observation latent of total dimension $d_o=d_v+d_p$, let $\hat z_{i+1}^o$ denote the teacher-forced one-step prediction, and let $\operatorname{sg}(\cdot)$ denote the stop-gradient operator. The offline training loss combines mean-squared latent prediction with Temporal Straightening (TS)~\cite{wang2026straightening}:
+Let $z_i^o=[z_i^v;z_i^p]\in\R^{d_o}$ denote the concatenated observation latent of total dimension $d_o=d_v+d_p$, let $\hat z_{i+1}^o$ denote the teacher-forced one-step prediction, and let $\operatorname{sg}(\cdot)$ denote the stop-gradient operator. The offline training loss combines mean-squared latent prediction with the Temporal Straightening (TS) training objective~\cite{wang2026straightening}:
 \begin{align}
  \mathcal L_{\rm WM}&=\frac{1}{3d_o}\sum_{i=0}^{2}
  \norm{\hat z_{i+1}^o-\operatorname{sg}(z_{i+1}^o)}^2
@@ -24,7 +24,7 @@ For our augmented-data PushObj checkpoints, we train for 3 epochs with $\lambda_
 For Maze, we directly evaluate the published SmallResNet checkpoint (without GeM pooling, trained with $\lambda_{\rm TS}=0.001$ and identical Transformer dimensions) without any new offline training. Both released checkpoints correspond to epoch~3 snapshots from a configured 5-epoch schedule.
 
 \subsection{Interaction-biased data collection}
-Our contact-biased PushObj dataset comprises 4,000 training and 1,000 validation trajectories for each of the four seen geometries (T, L, Z, and $+$). Trajectory generation follows source state placement with up to four retries, 20-pixel positional jitter, and 0.3-radian orientation jitter. At each step, nominal actions are perturbed with a $b_c=9$~px object-directed contact bias and isotropic Gaussian noise of standard deviation $\sigma_c=10$~px per axis. Actions are logged in pixel displacement units and scaled by $1/100$ for the simulator API. Quality filtering verifies scene validity and requires single-block displacements below 80~pixels; every retained trajectory is verified to contain physical contact. Training and local validation source pools are strictly disjoint (while the exact overlap between the published evaluation targets and the original authors' pretraining pool is not documented in the upstream release).
+Our contact-biased PushObj dataset comprises 4,000 training and 1,000 validation trajectories for each of the four seen geometries (T, L, Z, and $+$). Trajectory generation follows source state placement with up to four retries, 20-pixel positional jitter, and 0.3-radian orientation jitter. At each step, nominal actions are perturbed with a $b_c=9$~px object-directed contact bias and isotropic Gaussian noise of standard deviation $\sigma_c=10$~px per axis. Actions are logged in pixel displacement units and scaled by $1/100$ for the simulator API. Quality filtering verifies scene validity and requires single-block displacements below 80~pixels; every retained trajectory is verified to contain physical contact. Training and local validation source pools are strictly disjoint (while the exact overlap between the published evaluation targets and the original authors' pretraining pool is not documented in the available upstream release documentation).
 
 \subsection{Receding-horizon planning and online adaptation}
 For the ResNet controllers, receding-horizon MPC optimizes a sequence of 25 physical controls (corresponding to $H=5$ latent steps at frameskip 5) and executes the first 5 controls per replan. Gradient-based action optimization runs 100 Adam iterations per replan with an initial learning rate of 0.1 cosine-annealed to zero and zero added optimization noise. The initial plan at $t=0$ is initialized at zero physical displacement; subsequent replans warm-start from the unexecuted 20-step suffix padded with five zeros.
@@ -43,7 +43,7 @@ Notice that the positional predicate evaluates the joint 4D Euclidean norm acros
 
 \subsection{Summary of notation, hyperparameters, and execution order}
 \label{sec:parameters}
-For the ResNet controllers, $t$ indexes completed replans, $h\in\{1,\ldots,H\}$ indexes predicted latent steps along the planning horizon, $i$ indexes physical control steps during offline collection, and $j\in\mathcal M_t$ indexes stored stagnation memories. At each planning call $t$, all latent vectors ($z_t,z_{t-W},z_g,m_j$) are encoded using the current encoder parameters $\theta_t$ and held fixed throughout the 100-iteration action optimization.
+For the ResNet controllers, $t$ indexes completed replans, $h\in\{1,\ldots,H\}$ indexes predicted latent steps along the planning horizon, $i$ indexes physical control steps during offline collection, and $j\in\mathcal M_t$ indexes stored stagnation memories. At each planning call $t$, all latent vectors ($z_t,z_{t-W},z_g,m_j$) are encoded using the current encoder parameters $\theta_t$ and held fixed throughout all 100 action-optimization iterations in that planning call.
 
 \begin{table*}[t]
 \centering
@@ -78,21 +78,21 @@ Writing $\hat z_{t,0}=z_t$ for the encoded current observation, the terminal and
  \omega_h&=\frac{2^h}{\sum_{k=0}^{H}2^k}.
  \label{eq:baseexact}
 \end{align}
-Maze optimizes $J_{\rm goal}=J_{\rm all}$ throughout the episode, whereas PushObj optimizes $J_{\rm last}$ for the first five replans and $J_{\rm all}$ thereafter. While $\omega_h$ sums over $h=0,\ldots,H$ and the memory weights $\pi_h$ in \cref{eq:penalty} sum over predicted steps $h=1,\ldots,H$ (since $\hat z_{t,0}=z_t$ does not depend on $A$), both share the $1/(H+1)$ scaling factor. On PushObj, stagnation detection and regularization begin after the initial 10-replan warm-up (and after 4 replans in the Maze gating study).
+Maze optimizes $J_{\rm goal}=J_{\rm all}$ throughout the episode, whereas PushObj optimizes $J_{\rm last}$ for the first five replans and $J_{\rm all}$ thereafter. While $\omega_h$ sums over $h=0,\ldots,H$ and the memory weights $\pi_h$ in \cref{eq:penalty} sum over predicted steps $h=1,\ldots,H$ (since $\hat z_{t,0}=z_t$ does not depend on $A$), both share the $1/(H+1)$ scaling factor. On PushObj, stagnation detection and regularization begin after 10 warm-up replans on PushObj and 4 in the Maze gating study.
 
 \paragraph{Per-step execution and gating sequence.}
-At the end of each executed action block, the controller performs the following ordered updates: (1)~evaluates the one-step prediction loss $\ell_t$ on the newly observed transition; (2)~applies the online AdaJEPA parameter update (if enabled); (3)~computes the progress ratio $r_t$ and stall weight $w_t$ using the updated encoder; and (4)~if $w_t>0$, appends $(o_t,w_t)$ to $\mathcal M_t$. In trigger-only mode ($g_t\equiv 1$), both the updated memory $\mathcal M_t$ and the 3-replan proprioceptive boost ($\alpha_t=b\alpha_0$) take effect on the very next planning call. In loss-gated mode, $\bar\ell_t=(\ell_t+\ell_{t-1}+\ell_{t-2})/3$ tracks the 3-step running loss; at the first feedback step where both windows are populated and $w_t>0$ with $q_t<\tau_g$, the gate switches permanently to $g_t=1$, simultaneously activating all previously logged memories in $\mathcal M_t$ and initiating the 3-replan boost window. Subsequent triggers ($w_t>0$) renew the 3-replan boost timer, while all entries in $\mathcal M_t$ persist until the episode terminates.
+At the end of each executed action block, the controller performs the following ordered updates: (1)~evaluates the one-step prediction loss $\ell_t$ on the newly observed transition; (2)~applies the online AdaJEPA parameter update (if enabled); (3)~computes the progress ratio $r_t$ and stall weight $w_t$ using the updated encoder; and (4)~if $w_t>0$, appends $(o_t,w_t)$ to $\mathcal M_t$. In trigger-only mode ($g_t\equiv 1$), both the updated memory $\mathcal M_t$ and the 3-replan proprioceptive boost ($\alpha_t=b\alpha_0$) take effect on the very next planning call. In loss-gated mode, $\bar\ell_t=(\ell_t+\ell_{t-1}+\ell_{t-2})/3$ tracks the 3-step running loss; at the first feedback step where both windows are populated and $w_t>0$ with $q_t<\tau_g$, the gate switches permanently to $g_t=1$, simultaneously activating all previously logged memories in $\mathcal M_t$ and initiating the 3-replan boost window. Subsequent triggers ($w_t>0$) renew the 3-replan boost timer, while every stored memory remains available until the end of the episode.
 
 \subsection{Paired evaluation protocol and statistical testing}
 \label{sec:paired}
-Native/ECP comparisons on PushObj, PushT, and Maze are paired at the individual task level. Before the first detected trigger, $\mathcal M_t=\emptyset$ and $\alpha_t=\alpha_0$, so the planning objectives coincide. Thus, any episode that never triggers a stall produces the exact same trajectory under Native and ECP. The paired audits verify action and state agreement before intervention. Triggered tasks are rerun while non-triggered trajectories are reused; permanent-weight controls rerun all tasks.
+Native/ECP comparisons on PushObj, PushT, and Maze are paired at the individual task level. Before the first detected trigger, $\mathcal M_t=\emptyset$ and $\alpha_t=\alpha_0$, so the planning objectives coincide. Thus, any episode that never triggers a stall produces the exact same trajectory under Native and ECP. The paired audits verify action and state agreement before intervention. Triggered tasks are rerun while non-triggered trajectories are reused; permanent-weight controls rerun every task in the paired evaluation.
 
-For paired binary success outcomes across $N$ tasks, let $u$ denote the number of \emph{rescues} (tasks failed by the native baseline but solved with the intervention) and $v$ denote the number of \emph{harms} (tasks solved natively but failed under the intervention). The exact two-sided McNemar / sign-test $p$-value is given by:
+For paired binary success outcomes across $N$ tasks, let $u$ denote the number of \emph{rescues} (tasks failed by the native baseline but solved with the intervention) and $v$ denote the number of \emph{harms} (tasks solved natively but failed under the intervention). The exact two-sided McNemar / sign test assigns the following probability to these paired outcomes:
 \begin{equation}
  p=\min\!\left(1,\,2\sum_{k=0}^{\min(u,v)}
  \binom{u+v}{k}2^{-(u+v)}\right).
 \end{equation}
-In the main text and ablation tables, we report raw rescue/harm counts $(u / v)$ alongside aggregate success rates to make the directional stability of each intervention completely transparent.
+In the main text and ablation tables, we report raw rescue/harm counts $(u / v)$ alongside aggregate success rates to distinguish recovered failures from successes lost under each tested corrective intervention.
 
 \section{Mathematical properties of the stagnation regularizer}
 \label{sec:properties}
@@ -105,15 +105,15 @@ For any memory anchor $m_j$ at positive distance $d_g=D_{\alpha_0}(m_j,z_g)>0$ f
 \begin{equation}
  K_j(z_g)=\left[1-\frac{d_g}{\beta d_g}\right]_+^2=[1-1/\beta]_+^2=0\quad(0<\beta<1).
 \end{equation}
-Geometrically, in the norm induced by $Q$, the kernel's support is an open ball of radius $\sqrt{\beta d_g}$ centered at $m_j$, whose boundary remains at a strictly positive margin $(1-\sqrt{\beta})\sqrt{d_g}>0$ away from $z_g$. Consequently, the goal state is strictly excluded from the support of every active memory kernel.
+Geometrically, in the norm induced by $Q$, the kernel's support is an open ball of radius $\sqrt{\beta d_g}$ centered at $m_j$, whose boundary remains at a strictly positive margin $(1-\sqrt{\beta})\sqrt{d_g}>0$ away from $z_g$. Thus every active memory kernel strictly excludes the goal from its support.
 
-For any predicted state $z$ strictly inside the support ($D_{\alpha_0}(z,m_j)<\rho_j$), differentiating \cref{eq:kernel} with respect to $z$ gives:
+For any predicted state $z$ strictly inside the support ($D_{\alpha_0}(z,m_j)<\rho_j$), the derivative of \cref{eq:kernel} with respect to the predicted latent state is:
 \begin{equation}
  \nabla_zK_j(z)=-\frac{4}{\rho_j}
  \left(1-\frac{D_{\alpha_0}(z,m_j)}{\rho_j}\right)Q(z-m_j).
  \label{eq:kernelgradient}
 \end{equation}
-During gradient-based action optimization (which minimizes \cref{eq:objective}), the negative gradient $-\nabla_z K_j(z)$ points away from the anchor along $Q(z-m_j)$, repelling the predicted rollout state away from the stalled anchor $m_j$. As $D_{\alpha_0}(z,m_j)\uparrow\rho_j$, both $K_j(z)\to 0$ and $\nabla_z K_j(z)\to 0$, guaranteeing $C^1$ smoothness across the support boundary and zero gradient perturbation outside the kernel support. (At the exact singleton $z=m_j$, $K_j(m_j)=1$ is maximal and $\nabla_z K_j(m_j)=0$.)
+During gradient-based action optimization (which minimizes \cref{eq:objective}), the negative gradient $-\nabla_z K_j(z)$ points away from the anchor along $Q(z-m_j)$, repelling the predicted rollout state away from the stalled anchor $m_j$. As $D_{\alpha_0}(z,m_j)\uparrow\rho_j$, both $K_j(z)\to 0$ and $\nabla_z K_j(z)\to 0$, guaranteeing $C^1$ smoothness across the support boundary and zero gradient perturbation outside the kernel support. (At the anchor $z=m_j$, the kernel reaches its maximum, $K_j(m_j)=1$, with zero gradient $\nabla_z K_j(m_j)=0$.)
 
 Propagating this state gradient back to the candidate action sequence $A$ via the predictor's action-to-latent Jacobian $G_{t,h}=\partial\hat z_{t,h}(A)/\partial A$ yields the total regularizer gradient:
 \begin{equation}
@@ -141,19 +141,19 @@ All methods share the 150-control execution budget on the exact same 50 start--g
 \input{tables/pusht_checkpoint_matrix}
 
 \input{tables/additional_baselines}
-\Cref{tab:extra-baselines} reports additional fixed-weight visual representation baselines---R3M~\cite{nair2022r3m}, DINOv2 CLS~\cite{oquab2024dinov2}, and DDP-WM~\cite{yin2026ddpwm}---evaluated with CEM (200 candidates, 30 elites, 10 iterations) on the exact same 50-task shifted PushT benchmark.
+\Cref{tab:extra-baselines} reports additional fixed-weight visual representation baselines---R3M~\cite{nair2022r3m}, DINOv2 CLS~\cite{oquab2024dinov2}, and DDP-WM~\cite{yin2026ddpwm}---evaluated with CEM (200 candidates, 30 elites, 10 iterations) on the same 50 shifted PushT tasks.
 
 \section{Cross-backbone transfer studies}
 \label{sec:backbone}
 \subsection{Transfer to LeWorldModel (LeWM)}
 To evaluate ECP on an end-to-end JEPA architecture trained directly from pixels~\cite{maes2026lewm}, we train a matched baseline LeWM on ordinary random actions and an augmented LeWM on our interaction-biased noisy trajectories (both using 16k training / 4k validation trajectories for 10 epochs). On the 350 PushObj tasks with frozen weights, native planning on the random-data LeWM achieves 47.4\% (166/350), and adding ECP raises success to 53.1\% (186/350, with 21 rescues and 1 harm). Combining interaction-biased training (61.4\% native) with ECP reaches \textbf{66.0\% (231/350)}, yielding a total improvement of \textbf{+18.6~pp} (\cref{fig:headline,tab:lewm-contact}).
 
-On LeWM, the tested memory and pusher-goal weighting have limited effect (+0.6~pp in \cref{tab:lewm-contact}). Instead, when the stall detector triggers (using the same 0.15/0.45 threshold interval after a 50-control warm-up), the LeWM instantiation of ECP activates an auxiliary contact-guidance potential over a 4-replan burst (at most 7 guided replans per episode):
+On LeWM, the tested memory and pusher-goal weighting have limited effect (+0.6~pp in \cref{tab:lewm-contact}). Instead, when the stall detector triggers (using the same 0.15/0.45 threshold interval after a 50-control warm-up), the LeWM instantiation of ECP activates an auxiliary contact-guidance potential for four replans, with no more than seven guided replans allowed within an episode:
 \[
  J_{\rm contact}(A)=10\operatorname{mean}_{k=1,\ldots,5;\,d=x,y}
  \left(\frac{\hat p_{k,d}(A)-q_d}{\sigma_{p,d}}\right)^2,
 \]
-where $q\in\R^2$ is an approach or pushing waypoint computed from the observed object pose and geometry, $\hat p_k(A)$ is the pusher trajectory rolled out under differentiable PD dynamics, $k$ indexes the five predicted controls, $d\in\{x,y\}$ indexes coordinates, and $\sigma_{p,d}$ is the dataset position standard deviation on axis $d$. As shown in \cref{tab:lewm-contact}, this triggered objective rescues 18 native failures against 2 regressions, nearly doubling the rate of physical object contact within 15 controls after a stall (from 46/134 to 82/134 tasks) and tripling the rate of $>5$~px object-error reduction (34 vs.\ 11 tasks).
+where $q\in\R^2$ is an approach or pushing waypoint computed from the observed object pose and geometry, $\hat p_k(A)$ is the pusher trajectory rolled out under differentiable PD dynamics, $k$ indexes the five predicted controls, $d\in\{x,y\}$ indexes coordinates, and $\sigma_{p,d}$ is the dataset position standard deviation on axis $d$. As shown in \cref{tab:lewm-contact}, this triggered objective rescues 18 native failures against 2 regressions, nearly doubling the rate of physical object contact within 15 controls after a stall (from 46/134 to 82/134 tasks) and tripling the number of tasks with object-error reduction above 5~px, from 11 tasks to 34 tasks.
 
 \begin{table}[t]
 \centering
@@ -180,7 +180,7 @@ Contact objective, weight 20 &227&64.9\\
 \label{sec:dinowm}
 \begin{table}[t]
 \centering
-\caption{\textbf{Augmentation improves DINO-WM on every shape.} PushObj success (\%) on 50 tasks per shape, with fixed weights, CEM, and 150 controls. Both models train for three epochs, differing only in action data. Sq./sT mean square/small-T; Avg. averages seven shapes.}
+\caption{\textbf{Augmentation improves DINO-WM on every shape.} PushObj success (\%) on 50 tasks per shape, with fixed weights, CEM, and 150 controls. Both models train for three epochs, differing only in action data. Sq./sT mean square/small-T; Avg. is mean success across all seven evaluated shapes.}
 \label{tab:dinowm-aug}
 \small
 \setlength{\tabcolsep}{3.4pt}
@@ -193,7 +193,7 @@ Augmentation &\textbf{16}&\textbf{72}&\textbf{14}&\textbf{46}&\textbf{56}&\textb
 \bottomrule
 \end{tabular}
 \end{table}
-To verify that our offline interaction-biased data collection improves world models independently of our ResNet architecture, we train two DINO-WM models for 3 epochs under identical settings---one on standard random actions and one on our interaction-biased dataset---and evaluate both using frozen weights and CEM (6 replans of 25 controls). As shown in \cref{tab:dinowm-aug}, interaction-biased training nearly doubles average PushObj success from 24.6\% (86/350) to \textbf{48.9\% (171/350)}, yielding large gains across all four seen shapes and all three unseen shapes. (Under this coarse 6-replan cadence, the 3-step stall detector after warm-up has minimal remaining horizon to intervene, leaving CEM outcomes unchanged.)
+To verify that our offline interaction-biased data collection improves world models independently of our ResNet architecture, we train two DINO-WM models for 3 epochs under identical settings---one on standard random actions and one on our interaction-biased dataset---and evaluate both using frozen weights and CEM (6 replans of 25 controls). As shown in \cref{tab:dinowm-aug}, interaction-biased training nearly doubles average PushObj success from 24.6\% (86/350) to \textbf{48.9\% (171/350)}, yielding large gains across all four seen shapes and all three unseen shapes. (Under this coarse 6-replan cadence, the 3-step stall detector after warm-up has minimal remaining horizon to intervene, so the CEM outcomes remain unchanged by the correction.)
 
 \section{Extended trigger-threshold analysis}
 \label{sec:threshold-details}
@@ -257,7 +257,7 @@ Joint latent &75.4&\textbf{76.0}&75.7\\
 \Cref{tab:memory-strength} compares constructing the repulsive kernel $K_j(z)$ over the full joint visual--proprioceptive latent $D_{\alpha_0}(z,m_j)$ against a proprioception-only variant that measures kernel distance and support radius exclusively in the proprioceptive subspace $\norm{z^p-m_j^p}^2/d_p$. Across a $16\times$ range of penalty weights $\kappa\in\{0.5,2,8\}$, the joint latent memory consistently outperforms the proprioceptive-only memory without introducing regressions, confirming the importance of visual context in defining stalled neighborhoods.
 
 \subsection{Search controls and statistical significance}
-In \cref{tab:timing}, the \emph{Lookahead search} baseline evaluates eight fixed-direction macro-action prefixes (each spanning two latent steps at unit normalized magnitude followed by an optimized continuation) alongside the standard warm-start candidate. \emph{Triggered lookahead} invokes a 10-step continuation search only upon stall detection (up to 3 interventions separated by at least 4 replans). Checking for stalls after 5 instead of 10 warm-up replans yields identical performance (62.6\% with $S$ alone, 5~/~0 rescue/harm) because trajectories rarely stall prior to replan 11. Under exact two-sided McNemar tests against native Frozen MPC on the augmented checkpoint ($\gamma_{\rm hi}=0.15$), temporary proprioceptive reweighting ($P$, 39~/~0 rescue/harm) achieves $p=3.64\times10^{-12}$, whereas permanent reweighting (50~/~32 rescue/harm) yields only $p=0.0598$ due to its high regression rate.
+In \cref{tab:timing}, the \emph{Lookahead search} baseline evaluates eight fixed-direction macro-action prefixes (each spanning two latent steps at unit normalized magnitude followed by an optimized continuation) alongside the standard warm-start candidate. \emph{Triggered lookahead} invokes a 10-step continuation search only upon stall detection (up to 3 interventions separated by at least 4 replans). Checking for stalls after 5 instead of 10 warm-up replans yields identical performance (62.6\% with $S$ alone, 5~/~0 rescue/harm) because trajectories rarely stall prior to replan 11. Under exact two-sided McNemar tests against native Frozen MPC on the augmented checkpoint ($\gamma_{\rm hi}=0.15$), temporary proprioceptive reweighting ($P$, 39~/~0 rescue/harm) achieves $p=3.64\times10^{-12}$, whereas permanent reweighting (50~/~32 rescue/harm) yields only $p=0.0598$ because it loses many previously successful tasks.
 
 \subsection{Post-trigger behavioral kinematics}
 \label{sec:behavior}
@@ -292,7 +292,7 @@ Seeds 200, 300 / 30 replans &$57.90\pm3.45$&$71.19\pm2.44$\\
 \bottomrule
 \end{tabular}
 \end{table}
-\Cref{tab:training} confirms that native planning performance on our interaction-biased dataset is stable across three independent offline training seeds (with standard deviations of $2.16\%$--$3.45\%$), well below the +17.4~pp data-augmentation gain and +11.1~pp ECP gain. On an additional 280-task PushObj evaluation stream (S7, drawn from 280 source episodes disjoint from the two 350-task lists), ECP similarly improves 30-replan AdaJEPA from 217/280 (77.5\%) to 222/280 (79.3\%, trigger-only) and 220/280 (78.6\%, loss-gated).
+\Cref{tab:training} confirms that native planning performance on our interaction-biased dataset is stable across three independent offline training seeds (with standard deviations of $2.16\%$--$3.45\%$), well below the +17.4~pp data-augmentation gain and +11.1~pp ECP gain. On an additional 280-task PushObj evaluation stream (S7, drawn from 280 source episodes disjoint from the two 350-task lists), ECP similarly improves 30-replan AdaJEPA from 217/280 (77.5\%) to 222/280 (79.3\%, trigger-only) and 220/280 (78.6\%) with the optional prediction-loss gate.
 
 \subsection{Physical action-space instantiation}
 \label{sec:action-space}
@@ -310,7 +310,7 @@ Seed 200 &74.3&78.9&16 / 0\\
 \bottomrule
 \end{tabular}
 \end{table}
-To demonstrate that execution-conditioned correction is not restricted to latent-space kernels, \cref{tab:action} evaluates a physical action-space instantiation of ECP. When physical pusher displacement over 3 replans drops below 10~pixels (after a 10-replan warm-up), the controller adds a bounded displacement offset toward the goal pusher position $p_g$. Writing $v_t=p_g-p_t$ for the displacement from the current pusher position $p_t$,
+To demonstrate that execution-conditioned correction is not restricted to latent-space kernels, \cref{tab:action} evaluates a physical action-space instantiation of ECP. When physical pusher displacement over 3 replans drops below 10~pixels (after a 10-replan warm-up), the controller adds a bounded displacement offset toward the goal pusher position $p_g$. For the displacement $v_t=p_g-p_t$ from the current pusher position to its goal, the bounded corrective offset is
 \begin{equation}
  \delta a_t=\operatorname{unit}(v_t)
  \min\!\left(a_{\max},\frac{\norm{v_t}}{n_{\rm exec}}\right),
@@ -327,7 +327,7 @@ with $a_{\max}=15$~px and $n_{\rm exec}=5$, combined with the 3-replan $10\times
 \begin{table*}[t]
 \centering
 
-\caption{\textbf{Memory complements continued adaptation on Maze.} Successes out of 100 tasks at 20/50 replans, using pretrained ResNet and AdaJEPA; goal tolerance is 0.5 units. $S/P$ denote memory/goal reweighting. Activation uses first stall, ten-replan delay, or prediction-loss plateau. Freeze stops updates without correction. Rescue/harm and $p$ use 50 replans; $p$ is the exact two-sided McNemar test against native AdaJEPA.}
+\caption{\textbf{Memory complements continued adaptation on Maze.} Successes out of 100 tasks at 20/50 replans, using pretrained ResNet and AdaJEPA; goal tolerance is 0.5 units. $S/P$ denote memory/goal reweighting. Freeze stops model updates; other rows continue online adaptation. Rescue/harm and $p$ use 50 replans; $p$ is the exact two-sided McNemar test comparing each correction with native AdaJEPA.}
 \label{tab:maze-full}
 \small
 \begin{tabular}{llrrrr}
@@ -380,7 +380,7 @@ Fixed $S$ with five warm-up pushes has the best aggregate CD, success, and push 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/figS_rope_success_budget.pdf}
-\caption{\textbf{Rope success versus push budget.} Percentage reaching Chamfer distance $<0.3$ by each push count: 20 targets repeated under three seeds, with fixed DINO-WM and three pushes per plan. $S$ is memory with fixed or severity-dependent strength; warm-up delays detection. Fixed $S$ with five warm-up pushes reaches the highest final success.}
+\caption{\textbf{Rope success versus push budget.} Percentage reaching Chamfer distance $<0.3$ by each push count: 20 targets repeated under three seeds, with fixed DINO-WM and three pushes per plan. $S$ is memory with fixed or severity-dependent strength; warm-up delays detection. Fixed $S$ with five warm-up pushes achieves the highest success rate at the end of the evaluation budget.}
 \label{fig:rope-budget}
 \end{figure}
 
@@ -393,7 +393,7 @@ Fixed $S$ with five warm-up pushes has the best aggregate CD, success, and push 
 
 \Cref{fig:rope-budget} counts successes cumulatively; unsuccessful runs contribute zero. The mean-CD curve retains each successful run's terminal CD at larger push budgets, averaging over 20 targets and then three seeds; shading shows the sample SD of the three seed means.
 
-Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention, so aggregate comparisons do not attribute every trajectory difference to $S$. The three seeds repeat the same targets; they do not establish generalization to a larger target set. The Rope pairs in \cref{fig:execution-recovery} show fixed-strength ECP and native planning after equal numbers of pushes.
+Each condition is an independent physics execution under matching targets, model, seeds, CEM settings, and stopping rule. Numerical simulation differences can precede the first memory intervention, so aggregate comparisons do not attribute every trajectory difference to $S$. The three seeds repeat the same targets; they do not establish generalization to a larger target set. The Rope pairs in \cref{fig:execution-recovery} compare native planning and fixed-strength ECP at equal push counts.
 
 \section{Simulator renderings and rollout visualizations}
 \label{sec:renderings}
