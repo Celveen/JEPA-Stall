@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add the matched Maze example from the released MuJoCo recordings to Figure 11."""
+"""Build the appendix Maze comparisons from the released MuJoCo recordings."""
 import hashlib
 import json
 from pathlib import Path
@@ -16,15 +16,16 @@ import pymupdf
 PAPER = Path(__file__).resolve().parents[1]
 FIGURES = PAPER / 'figures'
 ROLLOUTS = PAPER.parents[1] / 'reports/maze_medium50_three_seeds_observed/rollouts'
-CASE = 'adajepa_seed102_sample13'
+GALLERY_CASE = 'adajepa_seed101_sample25'
+ROLLOUT_CASE = 'adajepa_seed102_sample13'
 ARMS = ('adajepa', 'adajepa_s')
 NATIVE, MEMORY = '#9e4d32', '#008275'
 INK = '#163047'
-STEPS = (14, 18)
+STEPS = (13, 14, 15, 18)
 
 
-def read_pair():
-    provenance = json.loads((ROLLOUTS / 'provenance.json').read_text())[CASE]
+def read_pair(case):
+    provenance = json.loads((ROLLOUTS / 'provenance.json').read_text())[case]
     runs = []
     for arm in ARMS:
         record = provenance['rgb_source'][arm]
@@ -43,63 +44,84 @@ def read_pair():
     return runs, distances, provenance['controls_per_step']
 
 
-def gallery_panel(path, runs, controls_per_step):
+def show_frame(ax, rgb, goal=None):
+    ax.imshow(rgb, interpolation='nearest')
+    if goal is not None:
+        ax.add_patch(Circle(goal, radius=8, linewidth=.7, fill=False, edgecolor='#fff2be'))
+    ax.set(xlim=(32, 212), ylim=(191, 11))
+    ax.set_axis_off()
+
+
+def gallery_panel(path, runs):
     fig = plt.figure(figsize=(247.5 / 72, 84 / 72))
-    fig.text(.024, .981, '(l) Maze · AdaJEPA / ECP (recorded frames)',
+    fig.text(.024, .981, '(l) Maze · AdaJEPA / ECP',
              fontsize=8.6, weight='bold', color=INK, va='top', family='DejaVu Serif')
-    red, green, blue = np.moveaxis(runs[0]['target_rgb'].astype(int), -1, 0)
-    goal_y, goal_x = np.where((green > red + 12) & (green > blue + 12))
-    assert 0 < len(goal_x) and np.ptp(goal_x) < 12 and np.ptp(goal_y) < 12
-    goal = (goal_x.mean(), goal_y.mean())
-    for step_index, step in enumerate(STEPS):
-        for arm, color in enumerate((NATIVE, MEMORY)):
-            column = 2 * step_index + arm
-            left = .037 + .242 * column
-            fig.text(left + .104, .82, f'{("Native", "+S")[arm]} · {step}',
-                     ha='center', va='top', fontsize=7.8, color=color, family='DejaVu Serif')
-            ax = fig.add_axes([left, .057, .208, .613])
-            ax.imshow(runs[arm]['rgb'][step * controls_per_step], interpolation='nearest')
-            ax.add_patch(Circle(goal, radius=8, linewidth=.65, fill=False, edgecolor='#fff2be'))
-            ax.set(xlim=(32, 212), ylim=(191, 11))
-            ax.set_axis_off()
+    frames = (runs[0]['rgb'][0], runs[0]['target_rgb'], runs[0]['rgb'][-1], runs[1]['rgb'][-1])
+    for col, (rgb, label, color) in enumerate(zip(frames, ('Start', 'Goal', 'Failure', 'ECP success'),
+                                                  (INK, INK, NATIVE, MEMORY))):
+        left = .037 + .242 * col
+        fig.text(left + .104, .83, label, ha='center', va='top', fontsize=8,
+                 color=color, family='DejaVu Serif')
+        show_frame(fig.add_axes([left, .098, .208, .613]), rgb)
     fig.savefig(path, dpi=330, transparent=True)
     plt.close(fig)
 
 
-def distance_plot(distances, controls_per_step):
-    fig, ax = plt.subplots(figsize=(2.68, 1.24))
-    fig.subplots_adjust(left=.17, right=.968, bottom=.26, top=.84)
+def rollout_plot(runs, distances, controls_per_step):
+    fig = plt.figure(figsize=(6.6, 2.95))
+    red, green, blue = np.moveaxis(runs[0]['target_rgb'].astype(int), -1, 0)
+    goal_y, goal_x = np.where((green > red + 12) & (green > blue + 12))
+    assert 0 < len(goal_x) and np.ptp(goal_x) < 12 and np.ptp(goal_y) < 12
+    goal = (goal_x.mean(), goal_y.mean())
+    grid = fig.add_gridspec(2, 5, left=.013, right=.99, bottom=.335, top=.897,
+                           wspace=.11, hspace=.39)
+    for row, (name, color) in enumerate((('Start', INK), ('Goal', INK))):
+        ax = fig.add_subplot(grid[row, 0])
+        rgb = runs[0]['rgb'][0] if row == 0 else runs[0]['target_rgb']
+        show_frame(ax, rgb)
+        ax.set_title(name, fontsize=8.5, color=color, pad=3)
+    for col, step in enumerate(STEPS, 1):
+        for arm, color in enumerate((NATIVE, MEMORY)):
+            ax = fig.add_subplot(grid[arm, col])
+            index = step * controls_per_step
+            show_frame(ax, runs[arm]['rgb'][index], goal)
+            ax.set_title(f'Step {step}' if arm == 0 else f'{distances[arm][index]:.2f} units',
+                         fontsize=8.5, color=INK if arm == 0 else color, pad=3)
+
+    ax = fig.add_axes([.115, .13, .66, .172])
     for label, trace, color in zip(('Native', '+S'), distances, (NATIVE, MEMORY)):
         steps = np.arange(len(trace)) / controls_per_step
         ax.plot(steps, trace, label=label, color=color, lw=1.15)
         ax.scatter(steps[-1], trace[-1], s=9, color=color, zorder=3)
-    for step in STEPS:
-        ax.scatter(step, distances[1][step * controls_per_step], s=9, color=MEMORY, zorder=3)
-    ax.axhline(.5, color='#75808a', linestyle='--', lw=.65)
+    ax.scatter(STEPS, [distances[1][s * controls_per_step] for s in STEPS],
+               s=9, color=MEMORY, zorder=3)
+    ax.axhline(.5, color='#75808a', linestyle='--', lw=.65, label='Success threshold')
     ax.set(xlim=(0, 30), ylim=(0, 7), xticks=(0, 5, 10, 15, 20, 25, 30),
-           yticks=(0, 2, 4, 6))
+           yticks=(0, 3, 6))
     ax.set_xlabel('Execution step', labelpad=1.5)
-    ax.set_ylabel('Goal distance', labelpad=2)
+    ax.set_ylabel('Goal\ndistance', labelpad=3)
     ax.tick_params(length=2, pad=1.5)
     ax.spines[['top', 'right']].set_visible(False)
-    ax.legend(loc='lower center', bbox_to_anchor=(.5, 1.02), ncols=2,
-              frameon=False, borderaxespad=0, handlelength=1.4, columnspacing=1.4)
-    fig.savefig(FIGURES / 'figS_maze_detour_distance.pdf')
+    ax.legend(loc='center left', bbox_to_anchor=(1.035, .54), frameon=False,
+              borderaxespad=0, handlelength=1.4)
+    fig.text(.228, .76, 'Native', fontsize=8.5, color=NATIVE, ha='right', va='center')
+    fig.text(.228, .45, '+S', fontsize=8.5, color=MEMORY, ha='right', va='center')
+    fig.savefig(FIGURES / 'figS_maze_detour_rollout.pdf', dpi=330)
     plt.close(fig)
 
 
 def main():
     plt.rcParams.update({'font.size': 8, 'pdf.fonttype': 42, 'ps.fonttype': 42})
-    runs, distances, controls_per_step = read_pair()
+    gallery_runs, _, _ = read_pair(GALLERY_CASE)
     with TemporaryDirectory() as folder:
         panel_path = Path(folder) / 'panel.pdf'
-        gallery_panel(panel_path, runs, controls_per_step)
+        gallery_panel(panel_path, gallery_runs)
         with pymupdf.open(FIGURES / 'figS_diverse_execution_v12.pdf') as gallery, pymupdf.open(panel_path) as panel:
             page = gallery[0]
             box = pymupdf.Rect(page.rect.width / 2, page.rect.height - 84, page.rect.width, page.rect.height)
             page.show_pdf_page(box, panel, 0)
             gallery.save(FIGURES / 'figS_diverse_execution_maze.pdf', garbage=4, deflate=True)
-    distance_plot(distances, controls_per_step)
+    rollout_plot(*read_pair(ROLLOUT_CASE))
 
 
 if __name__ == '__main__':
