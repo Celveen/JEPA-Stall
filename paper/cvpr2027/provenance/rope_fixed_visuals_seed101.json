@@ -33,6 +33,14 @@
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_native_016.png": {
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 16,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
     "figures/recorded_rollouts/rope_seed101_fixed_t15_native_020.png": {
       "sha256": "404bd499ee7b064bab0af77006ceb832d14fe6ef01db8123054c9fab2d05b2e8",
       "archive": "native3_evidence.tar.gz",
@@ -62,6 +70,14 @@
       "archive": "fixed3_evidence.tar.gz",
       "member": "fixed3/sample_05/recorded_execution.npz",
       "step": 12,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_016.png": {
+      "sha256": "4329ca703f830bb1e0fa7af71e2c811fa3b6f03d0c11252968ac84441bec2352",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 16,
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
@@ -105,6 +121,14 @@
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_native_016.png": {
+      "sha256": "ede8517f636cd35555e59da2700c69edea110badd66911d0eeec8d15d3fab838",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_11/recorded_execution.npz",
+      "step": 16,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
     "figures/recorded_rollouts/rope_seed101_fixed_t21_native_020.png": {
       "sha256": "95c5adcc9d7151f5e44d56e1ecfcb2136523ed73b905319ecc30f46ccc1d5dda",
       "archive": "native3_evidence.tar.gz",
@@ -137,6 +161,14 @@
       "full_original_viewport": true,
       "pixel_exact_to_recorded_observation": true
     },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_016.png": {
+      "sha256": "79e7d8ac95213fdb9e489a03ea069a721fedae5e34278a642e27c8b1ff8ef07e",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_11/recorded_execution.npz",
+      "step": 16,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
     "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_020.png": {
       "sha256": "d1bedab52af0a8749a8c2c25e22b49c60d7fdc52346215df6dda9f5449fdaa00",
       "archive": "fixed3_evidence.tar.gz",
@@ -164,6 +196,7 @@
         0,
         6,
         12,
+        16,
         20
       ],
       "rows": [
@@ -181,6 +214,10 @@
             {
               "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_native_012.png",
               "step": 12
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_native_016.png",
+              "step": 16
             },
             {
               "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_native_020.png",
@@ -208,6 +245,10 @@
               "step": 12
             },
             {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_016.png",
+              "step": 16
+            },
+            {
               "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_020.png",
               "step": 20
             }
@@ -233,6 +274,7 @@
         0,
         6,
         12,
+        16,
         20
       ],
       "rows": [
@@ -250,6 +292,10 @@
             {
               "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_native_012.png",
               "step": 12
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_native_016.png",
+              "step": 16
             },
             {
               "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_native_020.png",
@@ -275,6 +321,10 @@
             {
               "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_012.png",
               "step": 12
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_016.png",
+              "step": 16
             },
             {
               "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_020.png",

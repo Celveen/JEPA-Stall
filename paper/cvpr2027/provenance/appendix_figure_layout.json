@@ -2,6 +2,9 @@
   "shared_states_displayed_once": true,
   "local_crops": false,
   "gray_dividers": false,
+  "shared_reference_column": "Start above goal, both shared by the two execution rows",
+  "execution_columns": 4,
+  "frame_side_inches": 1.1,
   "rope_display": "Matched native/fixed-ECP executions on targets 15 and 21, seed 101; all four runs execute 20 pushes",
   "outputs": {
     "figures/fig1_pushobj_motivation.pdf": {
@@ -47,42 +50,42 @@
       ]
     },
     "figures/figS_pusht_rollouts.pdf": {
-      "sha256": "fc4960b25eaf4657f93696a9d95d75fbdaa045fe1c6524e1b1f4b35372ee8513",
+      "sha256": "08b6eedc6db7ddfcf3f7d4731b80bce66cd5005d486392fdc5baae7c59c4a3fa",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/previews/figS_pusht_rollouts.png": {
-      "sha256": "cabf709e13ecd191971d73a8338930c194f4ec23fe790f3a8489c4375ee90654",
+      "sha256": "e3e227d6f7119bdb2d3b82e45a11e75ef0431dc21d6afab071001be5771c1d10",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/svg/figS_pusht_rollouts.svg": {
-      "sha256": "f9cb4dd45879760f4d373a14e6c248a7149dd5f5df14a2687f505a7fbfe389d9",
+      "sha256": "6e406186cbf4823376229ccea9d9cd305e40bb70ddbe9d24b6fcb7276c2c2569",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/figS_rope_rollouts.pdf": {
-      "sha256": "2657e25cad8980a0774c3ba9862fe34fdc223c89b30c005ce1f388c54a70c079",
+      "sha256": "fd4d4d504dcb35cc56902a7cc092f1b45b5134be27d3ce8196f7b2066937d772",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/previews/figS_rope_rollouts.png": {
-      "sha256": "e0f597d37e505baf7c79de104bc1e711939ec372b41ddc697c9900639006f1bb",
+      "sha256": "1832fbb4d28afef758b9bc7e149b55fcdf4dfcd0df3e7f85308df9c47319088c",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/svg/figS_rope_rollouts.svg": {
-      "sha256": "04a6c014e64e175fa0933ce5f4568e8ff5f67fe3f7a40fab2ddbad95d6f8fe2a",
+      "sha256": "8394780287c6c465a74cb0a31385689cdfe9299ef03a9649e761320a7b631232",
       "size_inches": [
         6.875,
         6.26

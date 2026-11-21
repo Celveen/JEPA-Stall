@@ -35,6 +35,121 @@
     ],
     "image_count": 40
   },
-  "pdf_hyperlinks_verified": 353,
-  "main_pdf_sources_edited": false
+  "pdf_hyperlinks_verified": 354,
+  "main_pdf_sources_edited": false,
+  "pdf_named_destinations": 164,
+  "four_frame_sequences": {
+    "10": {
+      "execution_columns": 4,
+      "shared_references": "left column, start above goal",
+      "frame_side_inches": 1.1,
+      "recorded_scene_count": 20,
+      "source_pixel_checks_passed": true,
+      "sha256": "fd4d4d504dcb35cc56902a7cc092f1b45b5134be27d3ce8196f7b2066937d772",
+      "push_indices": [
+        6,
+        12,
+        16,
+        20
+      ]
+    },
+    "12": {
+      "execution_columns": 4,
+      "shared_references": "left column, start above goal",
+      "frame_side_inches": 1.1,
+      "recorded_scene_count": 20,
+      "source_pixel_checks_passed": true,
+      "sha256": "08b6eedc6db7ddfcf3f7d4731b80bce66cd5005d486392fdc5baae7c59c4a3fa",
+      "controls": {
+        "red_agent": {
+          "native": [
+            50,
+            75,
+            100,
+            150
+          ],
+          "ours": [
+            50,
+            75,
+            100,
+            140
+          ]
+        },
+        "red_goal": {
+          "native": [
+            40,
+            60,
+            62,
+            150
+          ],
+          "ours": [
+            40,
+            60,
+            62,
+            65
+          ]
+        }
+      }
+    }
+  },
+  "column_bottom_alignment": {
+    "13": {
+      "before": {
+        "bottom_y_points": [
+          713.41,
+          652.03
+        ],
+        "column_end_difference_points": 61.38
+      },
+      "after": {
+        "bottom_y_points": [
+          713.41,
+          711.8
+        ],
+        "column_end_difference_points": 1.61
+      }
+    },
+    "16": {
+      "before": {
+        "bottom_y_points": [
+          706.3,
+          686.81
+        ],
+        "column_end_difference_points": 19.49
+      },
+      "after": {
+        "bottom_y_points": [
+          706.3,
+          710.72
+        ],
+        "column_end_difference_points": 4.42
+      }
+    },
+    "19": {
+      "before": {
+        "bottom_y_points": [
+          664.32,
+          708.64
+        ],
+        "column_end_difference_points": 44.32
+      },
+      "after": {
+        "bottom_y_points": [
+          700.18,
+          708.64
+        ],
+        "column_end_difference_points": 8.46
+      }
+    }
+  },
+  "page_21": {
+    "content": "Figure 13 and its caption only",
+    "interpretation_moved_to_page": 19,
+    "figure_size_inches": [
+      6.875,
+      8.0
+    ],
+    "scene_side_inches": 0.95,
+    "distance_plot_height_inches": 0.7
+  }
 }

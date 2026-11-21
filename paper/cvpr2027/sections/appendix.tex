@@ -131,6 +131,8 @@ The checkpoint matrix in \cref{tab:pusht-ecp} separates the contribution of data
 
 The shifts also probe different parts of the visual task. Agent recoloring changes the controlled effector, object recoloring changes the manipulated body, and goal recoloring changes the target cue. Keeping the start--goal pairs fixed makes these conditions directly comparable. The common stopping rule evaluates physical alignment, so improvement reflects completed interactions under the altered observations.
 
+The strongest shifted-condition average combines augmented training, adaptation, and ECP. Gains with frozen weights show that correction works without online learning; the matched AdaJEPA rows establish its added contribution during adaptation.
+
 % Keep supplementary figure pages aligned to the same top margin as text pages.
 \makeatletter
 \setlength{\@fptop}{0pt}
@@ -421,7 +423,7 @@ Freeze, no $S/P$ & Loss gate &53 / 78&2 / 6&0.289\\
 \end{tabular}
 \par}
 \par\smallskip
-Memory redirects repeated corridor visits while AdaJEPA continues learning. Loss-gated memory preserves native successes at 30 replans; longer budgets show the recovery benefit of continuing updates after a stall.\par
+Memory redirects repeated corridor visits while AdaJEPA continues learning. Loss-gated memory preserves native successes at 30 replans; longer budgets show the benefit of continued updates. The recorded medium-route examples in \cref{fig:maze-detour} show recovery with either fixed or adapted weights.\par
 
 \end{minipage}\par
 
@@ -523,7 +525,7 @@ The visualizations connect the aggregate gains to changes in execution. Rope, Pu
 \par\smallskip
 {\centering
 \includegraphics[width=\textwidth]{figures/figS_rope_rollouts.pdf}
-\captionof{figure}{\textbf{Rope trajectories at equal push counts.} Brown/teal denote native planning/fixed-strength ECP with five warm-up pushes, using the same fixed DINO-WM, start, and goal. Columns align executed pushes. CD is final Chamfer distance (lower is better; success $<0.3$). ECP succeeds in (a); in (b), it lowers CD but both runs fail.}
+\captionof{figure}{\textbf{Rope trajectories at equal push counts.} Brown/teal denote native planning/fixed-strength ECP with five warm-up pushes, using the same fixed DINO-WM, start, and goal. Four columns align executed pushes; the shared start and goal are stacked at left. CD is final Chamfer distance (lower is better; success $<0.3$). ECP succeeds in (a); in (b), it lowers CD but both runs fail.}
 \label{fig:rope-rollouts}
 \par}
 \par\smallskip
@@ -557,7 +559,7 @@ Changing the approach to an object can complete alignment; leaving a revisited c
 \par\smallskip
 \noindent \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
-The examples retain all seven PushObj shapes and three distinct Maze cases. In manipulation, changing the approach to the object completes alignment; in navigation, leaving a revisited corridor opens a route to the goal. Both use the recent stall to condition subsequent planning.
+\Cref{fig:maze-detour} examines this mechanism at a wall. In the adaptive-model example, ECP leaves a revisited corridor, temporarily increases goal distance, and rounds the wall before reaching the target. The frozen-model pair shows recovery without weight updates. The distance traces link these detours to subsequent progress. Control indices expose motion inside a planning block; five controls equal one step. Both plots use actual executed trajectories.
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
@@ -577,29 +579,18 @@ The PushT pairs in \cref{fig:pusht-rollouts} hold the LeWM weights, task, and ex
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
-ECP completes both tasks while native planning repeats local motion until the control limit. The snapshots show the intervening physical interaction and final alignment, complementing the aggregate visual-shift results. Each sequence ends at its actual stopping point, and the rightmost image gives the common goal observation.
+ECP completes both tasks while native planning repeats local motion until the control limit. The snapshots show the intervening physical interaction and final alignment, complementing the aggregate visual-shift results. Each sequence ends at its actual stopping point. The shared start and goal occupy the left column, beside four stages of execution.
 \end{minipage}\par
 \par\smallskip
 {\centering
 \includegraphics[width=\textwidth]{figures/figS_pusht_rollouts.pdf}
-\captionof{figure}{\textbf{ECP recovers PushT under color shifts.} Paired runs use the same fixed LeWM, start, goal, and 150-control budget. Brown/teal label planning without/with ECP; frame numbers count executed controls. ECP succeeds under both red-agent and red-goal shifts, while native planning exhausts its budget. The right column shows the goal observation.}
+\captionof{figure}{\textbf{ECP recovers PushT under color shifts.} Paired runs use the same fixed LeWM, start, goal, and 150-control budget. Brown/teal label planning without/with ECP; frame numbers count executed controls. ECP succeeds under both red-agent and red-goal shifts, while native planning exhausts its budget. The left column shows the shared start and goal.}
 \label{fig:pusht-rollouts}
 \par}
 
 \end{table*}
 \clearpage
 \begin{table*}[!t]
-\par\smallskip
-\noindent \begin{minipage}[t]{\columnwidth}
-\vspace{0pt}
-\paragraph{Navigation requires useful detours.}
-\Cref{fig:maze-detour} examines why a temporary increase in goal distance can be productive. In the adaptive-model example, ECP leaves a repeatedly visited corridor, rounds the wall, and reaches the goal. The distance trace and recorded frames identify the detour and its subsequent progress.
-\end{minipage}\hfill
-\begin{minipage}[t]{\columnwidth}
-\vspace{0pt}
-The frozen-model example shows the same recovery pattern without changing world-model weights. It directly illustrates how execution-conditioned memory changes planning. Control indices expose motion within a planning block; five controls correspond to one step. The paths and distance traces use the actual executed trajectories.
-\end{minipage}\par
-\par\smallskip
 {\centering
 \includegraphics[width=\textwidth]{figures/figS_maze_detour_rollout.pdf}
 \captionof{figure}{\textbf{Maze recoveries with adaptive and frozen ResNet world models.} Each row shows five recorded frames from one run. Columns align the two planners by executed control. Trails cover the preceding four controls, the white ring marks the agent, and the pale ring marks the goal. In (a), Ours briefly moves farther away to round a wall and reaches the goal at control 90. In (b), Ours reaches the goal at control 43 with the pretrained ResNet held fixed. Both native runs exhaust the 150-control budget.}

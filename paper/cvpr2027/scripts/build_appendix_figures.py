@@ -23,6 +23,8 @@ from PIL import Image
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--paper', type=Path, default=Path(__file__).resolve().parents[1])
 parser.add_argument('--import-repo', type=Path)
+parser.add_argument('--only-supplementary', action='store_true',
+                    help='Rebuild the supplementary sequences without touching main-paper figures.')
 args = parser.parse_args()
 p = args.paper
 dest = p / 'figures/recorded_rollouts'
@@ -55,7 +57,7 @@ if args.import_repo:
     assert sha(arc.read_bytes()) == checks[arc.name]
     manifest['source_archives'][arc.relative_to(repo).as_posix()] = checks[arc.name]
     with tarfile.open(arc) as tar:
-        for cond, mid in [('red_agent', [50, 100]), ('red_goal', [40, 60])]:
+        for cond, mid in [('red_agent', [50, 75, 100]), ('red_goal', [40, 60, 62])]:
             idx = summary['selected_targets'][cond]
             row = next(x for x in summary['all_episode_rows'] if x['condition'] == cond and x['target_index'] == idx)
             assert not row['native_success'] and row['ours_success']
@@ -80,7 +82,25 @@ if args.import_repo:
                     for step in [0, *mid, stop]:
                         source = src / f'figures/{cond}/{arm}_frames/{step:03d}.png'
                         relative = f'pusht_{cond}_{arm}_{step:03d}.png'
-                        rel = copy_checked(source, relative, checks[source.relative_to(src).as_posix()], data['rgb'][idx, step])
+                        if source.exists():
+                            rel = copy_checked(source, relative, checks[source.relative_to(src).as_posix()], data['rgb'][idx, step])
+                        else:
+                            # Per-control records include moments between the
+                            # original five-control screenshot exports.
+                            pixels = data['rgb'][idx, step]
+                            assert pixels.dtype == np.uint8
+                            path = dest / relative
+                            if path.exists():
+                                np.testing.assert_array_equal(np.asarray(Image.open(path)), pixels)
+                            else:
+                                Image.fromarray(pixels).save(path)
+                            np.testing.assert_array_equal(np.asarray(Image.open(path)), pixels)
+                            rel = path.relative_to(p).as_posix()
+                            manifest['files'][rel] = {
+                                'sha256': sha(path.read_bytes()),
+                                'archive': arc.relative_to(repo).as_posix(),
+                                'member': member, 'target_index': idx, 'step': step,
+                                'verified_against_recorded_rgb': True}
                         frames.append({'path': rel, 'step': step})
                     source = src / f'figures/{cond}/target.png'
                     case['goal'] = copy_checked(source, f'pusht_{cond}_goal.png', checks[source.relative_to(src).as_posix()], goal)
@@ -168,9 +188,10 @@ def save(fig, name):
     plt.close(fig)
 
 # Shared start, pre-correction state and goal appear only once.
-for task, name, prefix, before, native_end, ours_end in [
+main_comparisons = [] if args.only_supplementary else [
     ('PushObj', 'fig1_pushobj_motivation', 'push', 15, 30, 17),
-    ('Maze', 'fig3_maze_case', 'maze', 6, 30, 27)]:
+    ('Maze', 'fig3_maze_case', 'maze', 6, 30, 27)]
+for task, name, prefix, before, native_end, ours_end in main_comparisons:
     fig = plt.figure(figsize=(6.875, 1.48))
     filenames = ['start', 'before', 'baseline_end', 'corrected_end', 'goal']
     headings = ['Start', 'Before correction', 'Without ECP', 'With ECP', 'Goal']
@@ -192,25 +213,29 @@ def sequence(cases, name):
         suffix = case.get('condition', f"target {case['target']}").replace('_', ' ')
         title = f"({chr(97+idx)}) {case['dataset']} · {case['backbone']} · {suffix.title()}"
         text(fig, .14, top-.14, title, fontsize=10, weight='bold', color=INK)
-        shared_y = top - 2.14
-        if case['shared_start']:
-            scene(fig, case['rows'][0]['frames'][0]['path'], .14, shared_y, side, case['hide_border'])
-            text(fig, .69, shared_y-.13, 'Shared start', fontsize=8.6, ha='center', color=INK)
-        scene(fig, case['goal'], .14+4*1.34, shared_y, side, case['hide_border'])
-        text(fig, .69+4*1.34, shared_y-.13, 'Shared goal', fontsize=8.6, ha='center', color=INK)
+        assert case['shared_start']
+        np.testing.assert_array_equal(
+            np.asarray(Image.open(p / case['rows'][0]['frames'][0]['path'])),
+            np.asarray(Image.open(p / case['rows'][1]['frames'][0]['path'])))
+        # Stack common references to preserve the original 1.10-inch frame size
+        # while adding a fourth execution column.
+        for row_index, (path, label) in enumerate([
+                (case['rows'][0]['frames'][0]['path'], 'Shared start'),
+                (case['goal'], 'Shared goal')]):
+            y = top - 1.43 - 1.42 * row_index
+            scene(fig, path, .14, y, side, case['hide_border'])
+            text(fig, .69, y-.125, label, fontsize=8.15, ha='center', color=INK)
         for row_index, row in enumerate(case['rows']):
+            assert len(row['frames'][1:]) == 4
             color = BROWN if row['arm'] == 'native' else TEAL
             y = top - 1.43 - 1.42 * row_index
             label = 'Without ECP' if row['arm'] == 'native' else 'With ECP'
             text(fig, 1.48, y+side+.035, label, fontsize=8.8, color=color, weight='bold')
-            if not case['shared_start']:
-                scene(fig, row['frames'][0]['path'], .14, y, side, case['hide_border'])
-                text(fig, .69, y-.125, 'Start', fontsize=8.15, ha='center', color=color)
             for col, frame in enumerate(row['frames'][1:], 1):
                 x = .14 + 1.34 * col
                 scene(fig, frame['path'], x, y, side, case['hide_border'])
                 label = f"{case['unit']} {frame['step']}"
-                if col == 3:
+                if col == len(row['frames']) - 1:
                     label += f" · CD {frame['cd']:.3f}" if 'cd' in frame else (' · success' if row['success'] else ' · failure')
                 text(fig, x+side/2, y-.125, label, fontsize=8.15, color=color, ha='center')
     save(fig, name)
@@ -225,8 +250,14 @@ for case in rope['cases']:
     for row in case['rows']:
         row['frames'][-1]['cd'] = row['final_cd']
 sequence(rope['cases'], 'figS_rope_rollouts')
-(p/'provenance/appendix_figure_layout.json').write_text(json.dumps({
+layout_path = p/'provenance/appendix_figure_layout.json'
+if args.only_supplementary and layout_path.exists():
+    prior = json.loads(layout_path.read_text())
+    outputs = {**prior.get('outputs', {}), **outputs}
+layout_path.write_text(json.dumps({
     'shared_states_displayed_once': True, 'local_crops': False, 'gray_dividers': False,
+    'shared_reference_column': 'Start above goal, both shared by the two execution rows',
+    'execution_columns': 4, 'frame_side_inches': 1.10,
     'rope_display': 'Matched native/fixed-ECP executions on targets 15 and 21, seed 101; all four runs execute 20 pushes',
     'outputs': outputs}, indent=2)+'\n')
 print('Built supplementary execution figures, including equal-push Rope observations.')

@@ -21,6 +21,10 @@
               "step": 50
             },
             {
+              "path": "figures/recorded_rollouts/pusht_red_agent_native_075.png",
+              "step": 75
+            },
+            {
               "path": "figures/recorded_rollouts/pusht_red_agent_native_100.png",
               "step": 100
             },
@@ -41,6 +45,10 @@
             {
               "path": "figures/recorded_rollouts/pusht_red_agent_ours_050.png",
               "step": 50
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_ours_075.png",
+              "step": 75
             },
             {
               "path": "figures/recorded_rollouts/pusht_red_agent_ours_100.png",
@@ -81,6 +89,10 @@
               "step": 60
             },
             {
+              "path": "figures/recorded_rollouts/pusht_red_goal_native_062.png",
+              "step": 62
+            },
+            {
               "path": "figures/recorded_rollouts/pusht_red_goal_native_150.png",
               "step": 150
             }
@@ -101,6 +113,10 @@
             {
               "path": "figures/recorded_rollouts/pusht_red_goal_ours_060.png",
               "step": 60
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_ours_062.png",
+              "step": 62
             },
             {
               "path": "figures/recorded_rollouts/pusht_red_goal_ours_065.png",
@@ -196,6 +212,11 @@
       "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/050.png",
       "verified_against_recorded_rgb": true
     },
+    "figures/recorded_rollouts/pusht_red_agent_native_075.png": {
+      "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/075.png",
+      "verified_against_recorded_rgb": true
+    },
     "figures/recorded_rollouts/pusht_red_agent_native_100.png": {
       "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
       "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/100.png",
@@ -219,6 +240,11 @@
     "figures/recorded_rollouts/pusht_red_agent_ours_050.png": {
       "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
       "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/ours_frames/050.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_ours_075.png": {
+      "sha256": "6a9bdb06b5432fd6fe1db346bc2bb37289f9e2be36c406c235e4e8f4fff2278a",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/ours_frames/075.png",
       "verified_against_recorded_rgb": true
     },
     "figures/recorded_rollouts/pusht_red_agent_ours_100.png": {
@@ -246,6 +272,11 @@
       "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/060.png",
       "verified_against_recorded_rgb": true
     },
+    "figures/recorded_rollouts/pusht_red_goal_native_062.png": {
+      "sha256": "beddf40d38818409ecf1152bf97bf98b51b75dce3808c3a6aea5f90c358a292d",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/062.png",
+      "verified_against_recorded_rgb": true
+    },
     "figures/recorded_rollouts/pusht_red_goal_native_150.png": {
       "sha256": "68cdacc46661ea0295b5c1bfa0f69b8092a7f604173a3dd39f5cb23bc23b30c2",
       "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/150.png",
@@ -269,6 +300,11 @@
     "figures/recorded_rollouts/pusht_red_goal_ours_060.png": {
       "sha256": "584978bf602745c05f38f40301f1a6677ddd77e1ad24071470227ebcc5765459",
       "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/ours_frames/060.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_ours_062.png": {
+      "sha256": "012944ff09c47f72e1307e9b2ba0570f300aedc8e73abd2a70ad9b16104ffb86",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/ours_frames/062.png",
       "verified_against_recorded_rgb": true
     },
     "figures/recorded_rollouts/pusht_red_goal_ours_065.png": {

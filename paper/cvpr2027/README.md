@@ -8,7 +8,8 @@
 
 - 已提交的正文、声明与参考文献共 10 页逐像素保留；附录为 11 页。正文引用和参考文献页码回链保持正确，全文有 21 张表、13 张图和 16 个展示公式。
 - 附录将实验目的和解读与对应图表一起排版。Figure 8、9 使用完整单栏宽度，Figure 10–13 使用完整跨栏宽度。Figure 11 移除最下方 k、l 两个案例，保留七种 PushObj 形状与三个 Maze 案例；保留区域与原图逐像素一致。
-- Figure 10 的两组 Rope 观察对齐第 6、12、20 推，使用相同目标与三推规划节奏。第一组 ECP 成功，第二组获得更低 CD；图注明确给出两组的停止结果。原始素材保持完整视角。
+- Figure 10 的两组 Rope 观察对齐第 6、12、16、20 推，使用相同目标与三推规划节奏。第一组 ECP 成功，第二组获得更低 CD；图注明确给出两组的停止结果。Figure 12 同样使用四列过程帧，red-agent 增加 control 75，red-goal 增加 control 62。两图将共享起点与目标上下放在左侧，每帧仍为 1.10 英寸，原始素材保持完整视角。
+- 第 13、16、19 页补齐相关实验解读并平衡栏尾；第 21 页只放 Figure 13 与图注，Maze 绕行解读移至第 19 页。Figure 13 放大场景截图和距离曲线，使用完整图页。
 - 方法图去除未嵌入的默认 Helvetica 资源，修正花体 ℛ 的复制映射，图像外观不变；图内文字保持可选择文本，SVG 也使用文本元素。全部图 PDF 和论文 PDF 的字体资源已检查嵌入。
 - Overleaf 包只包含 CVPR 模板与实际编译依赖，不含 Markdown、审计文件、原始帧或生成缓存。
 
@@ -20,9 +21,9 @@
 
 Figure 3：`python scripts/build_method_figure.py`；PDF、SVG 与 draw.io 来自相同绘图元素。依赖 PyMuPDF、ReportLab、pypdfium2 和 Pillow；使用 Mac Times New Roman 字体，字体文件不可用时回退至随 ReportLab 提供的 Vera。
 
-Figure 4：`python scripts/build_domain_figure4.py --paper .`。附录运行图：`python scripts/build_appendix_figures.py`。重建使用已核验的随稿帧，不运行新实验。Rope 帧可用 `python scripts/prepare_rope_matched_visuals.py --repo /path/to/JEPA-Stall` 从原始压缩记录重新导出，来源见 `provenance/rope_fixed_visuals_seed101.json`。
+Figure 4：`python scripts/build_domain_figure4.py --paper .`。附录运行图：`python scripts/build_appendix_figures.py --only-supplementary`，保持正文图文件不变。重建使用已核验的随稿帧，不运行新实验。Rope 帧可用 `python scripts/prepare_rope_matched_visuals.py --repo /path/to/JEPA-Stall` 从原始压缩记录重新导出，来源见 `provenance/rope_fixed_visuals_seed101.json`。PushT 帧可通过 `build_appendix_figures.py` 的 `--import-repo /path/to/JEPA-Stall` 参数从原始记录核验并导出。
 
-Figure 11、13：`python scripts/build_maze_supplement.py`。Figure 11 的生成器保留 a–j 十个案例，Figure 13 使用既有 MuJoCo 运行记录。
+Figure 11、13：`python scripts/build_maze_supplement.py`。Figure 11 的生成器保留 a–j 十个案例，Figure 13 使用既有 MuJoCo 运行记录；`--only-rollout` 单独更新 Figure 13。
 
 Figure 1 顺序为 Frozen、LeWM、AdaJEPA，LeWM 三柱为 47.4%、61.4%、66.0%；可用 `python scripts/build_headline.py --data provenance/headline_data_latest.json` 重建。LeWM PushT clean CEM 为 72%（36/50），原始结果见 [完整记录](../../reports/lewm_pusht_clean_20261116/README.md)。
 

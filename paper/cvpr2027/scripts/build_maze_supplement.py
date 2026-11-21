@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build the appendix Maze comparisons from the released MuJoCo recordings."""
+import argparse
 import hashlib
 import io
 import json
@@ -130,7 +131,7 @@ def gallery_panel(path, runs, goal):
 
 
 def rollout_plot():
-    width, height = 6.875, 6.75
+    width, height = 6.875, 8.0
     fig = plt.figure(figsize=(width, height))
 
     def board(x, top, size):
@@ -141,12 +142,12 @@ def rollout_plot():
         red, green, blue = np.moveaxis(runs[0]['target_rgb'].astype(int), -1, 0)
         wall_y, wall_x = np.where((red > green + 18) & (green > blue + 18))
         view = dict(xlim=(wall_x.min()-5, wall_x.max()+5), ylim=(wall_y.max()+5, wall_y.min()-5))
-        base = .06 + 3.40 * case_index
+        base = .06 + 4.00 * case_index
         fig.text(.015, 1-base/height, title, va='top', fontsize=11,
                  fontweight='bold', color=INK, family='STIXGeneral')
         for arm, run in enumerate(runs):
-            top = base + .51 + 1.05*arm
-            size = .90
+            top = base + .51 + 1.12*arm
+            size = .95
             reference = board(.06, top, size)
             source = runs[0]['rgb'][0] if arm == 0 else runs[0]['target_rgb']
             show_frame(reference, source, goal if arm == 1 else None)
@@ -167,9 +168,9 @@ def rollout_plot():
                 if arm == 0:
                     ax.set_title(f'Control {control}', fontsize=8.5, color=INK, pad=2)
 
-        fig.add_artist(Line2D([1.06/width]*2, [1-(base+2.47)/height, 1-(base+.35)/height],
+        fig.add_artist(Line2D([1.06/width]*2, [1-(base+2.58)/height, 1-(base+.35)/height],
                               transform=fig.transFigure, color='#D5DBDD', lw=.8))
-        ax = fig.add_axes([.14, 1-(base+2.98)/height, .65, .40/height])
+        ax = fig.add_axes([.14, 1-(base+3.58)/height, .65, .70/height])
         for label, values, color in zip(('Native', 'Ours'), distances, (NATIVE, MEMORY)):
             ax.plot(np.arange(len(values)), values, label=label, color=color, lw=1.15)
             ax.scatter(len(values)-1, values[-1], s=10, color=color, zorder=3)
@@ -234,7 +235,14 @@ def retain_ten_gallery_panels(gallery):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--only-rollout', action='store_true',
+                        help='Rebuild the detour figure while keeping the gallery unchanged.')
+    args = parser.parse_args()
     plt.rcParams.update({'font.size': 8, 'pdf.fonttype': 42, 'ps.fonttype': 42})
+    if args.only_rollout:
+        rollout_plot()
+        return
     gallery_runs, _, gallery_goal = read_pair(GALLERY_CASE)
     with TemporaryDirectory() as folder:
         panel_path = Path(folder) / 'panel.pdf'

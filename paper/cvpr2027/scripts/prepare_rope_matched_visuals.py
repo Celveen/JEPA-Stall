@@ -9,13 +9,15 @@ from pathlib import Path
 import pickle
 import tarfile
 import numpy as np
+from numpy.core.multiarray import _reconstruct
 from PIL import Image
 
 class ArrayOnlyUnpickler(pickle.Unpickler):
     """Read NumPy observations without reconstructing archived torch objects."""
     def find_class(self, module, name):
         allowed = {
-            ('numpy.core.multiarray', '_reconstruct'): np._core.multiarray._reconstruct,
+            ('numpy.core.multiarray', '_reconstruct'): _reconstruct,
+            ('numpy._core.multiarray', '_reconstruct'): _reconstruct,
             ('numpy', 'ndarray'): np.ndarray,
             ('numpy', 'dtype'): np.dtype,
             ('collections', 'OrderedDict'): collections.OrderedDict,
@@ -55,13 +57,16 @@ def save_frame(array, name, archive, member, step):
     np.testing.assert_array_equal(pixels, array)
     rel = 'figures/recorded_rollouts/'+name+'.png'
     target = p/rel
-    Image.fromarray(pixels).save(target)
+    if target.exists():
+        np.testing.assert_array_equal(np.asarray(Image.open(target)), pixels)
+    else:
+        Image.fromarray(pixels).save(target)
     manifest['files'][rel] = {'sha256': sha(target.read_bytes()),
         'archive': archive, 'member': member, 'step': step,
         'full_original_viewport': True, 'pixel_exact_to_recorded_observation': True}
     return rel
 
-for sample, steps in [(5, [0, 6, 12, 20]), (11, [0, 6, 12, 20])]:
+for sample, steps in [(5, [0, 6, 12, 16, 20]), (11, [0, 6, 12, 16, 20])]:
     native, ours = rows['native3', sample], rows['fixed3', sample]
     assert native['actual_pushes'] == ours['actual_pushes'] == str(steps[-1])
     assert int(ours['used_trigger_memories']) > 0
