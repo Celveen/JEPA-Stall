@@ -1,7 +1,11 @@
 {
   "shared_states_displayed_once": true,
   "local_crops": false,
-  "gray_dividers": false,
+  "gray_dividers": true,
+  "reference_separator": {
+    "color": "#D5DBDD",
+    "width_points": 0.8
+  },
   "shared_reference_column": "Start above goal, both shared by the two execution rows",
   "execution_columns": 4,
   "frame_side_inches": 1.1,
@@ -50,42 +54,42 @@
       ]
     },
     "figures/figS_pusht_rollouts.pdf": {
-      "sha256": "08b6eedc6db7ddfcf3f7d4731b80bce66cd5005d486392fdc5baae7c59c4a3fa",
+      "sha256": "9d7ffacb433479342ae55f1f2fc5fc1759b91b7039b9d8f50409d6ae3ac6c572",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/previews/figS_pusht_rollouts.png": {
-      "sha256": "e3e227d6f7119bdb2d3b82e45a11e75ef0431dc21d6afab071001be5771c1d10",
+      "sha256": "a91ed3ae12fd2a683280f4198cde56e54e4cc3d61106f4031a2ed93684f925b3",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/svg/figS_pusht_rollouts.svg": {
-      "sha256": "6e406186cbf4823376229ccea9d9cd305e40bb70ddbe9d24b6fcb7276c2c2569",
+      "sha256": "47cba53e884857577b386ea17c1ffd5fc597697c213c50eee2d3e532a9cbc232",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/figS_rope_rollouts.pdf": {
-      "sha256": "fd4d4d504dcb35cc56902a7cc092f1b45b5134be27d3ce8196f7b2066937d772",
+      "sha256": "c76fa2d61c31c5930643e0d4582c4702e7b17b02fac1a2fc7191aa61780c0ab0",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/previews/figS_rope_rollouts.png": {
-      "sha256": "1832fbb4d28afef758b9bc7e149b55fcdf4dfcd0df3e7f85308df9c47319088c",
+      "sha256": "f22bd699d0148eaa491ea8d126e0b89019788302374f858e0c34045bd80245ec",
       "size_inches": [
         6.875,
         6.26
       ]
     },
     "figures/svg/figS_rope_rollouts.svg": {
-      "sha256": "8394780287c6c465a74cb0a31385689cdfe9299ef03a9649e761320a7b631232",
+      "sha256": "fcbc63307cf55c3dd31b67004dde303ed85cef9cd198f7fe583f67ada15f3e9c",
       "size_inches": [
         6.875,
         6.26

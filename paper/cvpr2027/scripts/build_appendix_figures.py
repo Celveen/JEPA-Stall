@@ -16,6 +16,7 @@ os.environ.setdefault('MPLCONFIGDIR', '/tmp/jepa-appendix-figures')
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle
 import numpy as np
 from PIL import Image
@@ -213,6 +214,10 @@ def sequence(cases, name):
         suffix = case.get('condition', f"target {case['target']}").replace('_', ' ')
         title = f"({chr(97+idx)}) {case['dataset']} · {case['backbone']} · {suffix.title()}"
         text(fig, .14, top-.14, title, fontsize=10, weight='bold', color=INK)
+        fig.add_artist(Line2D(
+            [1.36 / fig.get_figwidth()] * 2,
+            [(top - 3.00) / fig.get_figheight(), (top - .24) / fig.get_figheight()],
+            transform=fig.transFigure, color='#D5DBDD', linewidth=.8))
         assert case['shared_start']
         np.testing.assert_array_equal(
             np.asarray(Image.open(p / case['rows'][0]['frames'][0]['path'])),
@@ -255,7 +260,8 @@ if args.only_supplementary and layout_path.exists():
     prior = json.loads(layout_path.read_text())
     outputs = {**prior.get('outputs', {}), **outputs}
 layout_path.write_text(json.dumps({
-    'shared_states_displayed_once': True, 'local_crops': False, 'gray_dividers': False,
+    'shared_states_displayed_once': True, 'local_crops': False, 'gray_dividers': True,
+    'reference_separator': {'color': '#D5DBDD', 'width_points': .8},
     'shared_reference_column': 'Start above goal, both shared by the two execution rows',
     'execution_columns': 4, 'frame_side_inches': 1.10,
     'rope_display': 'Matched native/fixed-ECP executions on targets 15 and 21, seed 101; all four runs execute 20 pushes',

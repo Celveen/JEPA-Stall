@@ -45,13 +45,17 @@
       "frame_side_inches": 1.1,
       "recorded_scene_count": 20,
       "source_pixel_checks_passed": true,
-      "sha256": "fd4d4d504dcb35cc56902a7cc092f1b45b5134be27d3ce8196f7b2066937d772",
+      "sha256": "c76fa2d61c31c5930643e0d4582c4702e7b17b02fac1a2fc7191aa61780c0ab0",
       "push_indices": [
         6,
         12,
         16,
         20
-      ]
+      ],
+      "reference_separator": {
+        "color": "#D5DBDD",
+        "width_points": 0.8
+      }
     },
     "12": {
       "execution_columns": 4,
@@ -59,7 +63,7 @@
       "frame_side_inches": 1.1,
       "recorded_scene_count": 20,
       "source_pixel_checks_passed": true,
-      "sha256": "08b6eedc6db7ddfcf3f7d4731b80bce66cd5005d486392fdc5baae7c59c4a3fa",
+      "sha256": "9d7ffacb433479342ae55f1f2fc5fc1759b91b7039b9d8f50409d6ae3ac6c572",
       "controls": {
         "red_agent": {
           "native": [
@@ -89,6 +93,10 @@
             65
           ]
         }
+      },
+      "reference_separator": {
+        "color": "#D5DBDD",
+        "width_points": 0.8
       }
     }
   },
@@ -97,9 +105,9 @@
       "before": {
         "bottom_y_points": [
           713.41,
-          652.03
+          711.8
         ],
-        "column_end_difference_points": 61.38
+        "column_end_difference_points": 1.61
       },
       "after": {
         "bottom_y_points": [
@@ -113,32 +121,32 @@
       "before": {
         "bottom_y_points": [
           706.3,
-          686.81
-        ],
-        "column_end_difference_points": 19.49
-      },
-      "after": {
-        "bottom_y_points": [
-          706.3,
           710.72
         ],
         "column_end_difference_points": 4.42
+      },
+      "after": {
+        "bottom_y_points": [
+          705.37,
+          707.73
+        ],
+        "column_end_difference_points": 2.36
       }
     },
     "19": {
       "before": {
         "bottom_y_points": [
-          664.32,
-          708.64
-        ],
-        "column_end_difference_points": 44.32
-      },
-      "after": {
-        "bottom_y_points": [
           700.18,
           708.64
         ],
         "column_end_difference_points": 8.46
+      },
+      "after": {
+        "bottom_y_points": [
+          702.24,
+          698.74
+        ],
+        "column_end_difference_points": 3.5
       }
     }
   },
@@ -151,5 +159,13 @@
     ],
     "scene_side_inches": 0.95,
     "distance_plot_height_inches": 0.7
+  },
+  "paragraph_endings": {
+    "required_last_line_fraction": 0.4,
+    "paragraphs_checked": 90,
+    "prose_segments": 68,
+    "captions": 22,
+    "minimum_visible_last_line_fraction": 0.404112,
+    "all_pass": true
   }
 }
