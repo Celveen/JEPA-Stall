@@ -1,0 +1,141 @@
+{
+  "revision": "v3-matched-rope-embedded-fonts",
+  "updated": "2026-11-17T03:22:03.789248+00:00",
+  "input_base_commit": "3922b7e1ea79aa66d0ab7bcbca7bee27d4b9ee60",
+  "publish_base_commit": "09ac1804c09b122a29b8b084e546b452c33d032e",
+  "inputs": {
+    "source_archive": "JEPA-Stall_CVPR2027_Overleaf_v3.zip",
+    "source_archive_sha256": "ab3699a56142c540f9da722fdc25f4d4196859798325da0fd535ed9609067090",
+    "pdf": "JEPA-Stall_CVPR2027_revised_v3.pdf",
+    "pdf_sha256": "b195f43ea0bbf2e97eac0a5b8fa79022bb291085a6792b7794c65655025fa4cf",
+    "unmodified_rebuild_text_matches_supplied_pdf": true
+  },
+  "v3_preservation": {
+    "modified_from_user_v3": [
+      "figures/fig2_method.pdf",
+      "figures/fig5_execution_recovery.pdf",
+      "figures/figS_rope_rollouts.pdf",
+      "sections/appendix.tex",
+      "sections/experiments.tex"
+    ],
+    "other_supplied_files_identical": true,
+    "changes": [
+      "Correct Rope comparisons using equal-push recordings and disclose second-seed sensitivity.",
+      "Remove duplicate appendix Figures 6/7 and the optional artifact paragraph.",
+      "Embed every method-figure font resource and correct copied math without altering visible pixels."
+    ]
+  },
+  "rope_correction": {
+    "removed": "Target 15 native five-push plans ending at 15 pushes versus fixed ECP three-push plans ending at 18 pushes; unequal protocols and budgets.",
+    "replaced_with": "Seed-100 native/dynamic-ECP recorded RGB observations for target 13 (both 10 pushes) and target 16 (both 20 pushes). Same target, seed, three-push horizon, observations and stopping criterion; memory actually applied in both selected ECP runs.",
+    "source": "provenance/rope_matched_visuals_seed100.json",
+    "main_tables_unchanged": true,
+    "reference_seed": 99,
+    "second_seed_disclosure": "Dynamic ECP does not reproduce CD gain on seed 100: native/dynamic CD 0.5759/0.5763; success 65%/60%. Fixed-strength controls reported alongside in a short appendix paragraph.",
+    "causal_limit": "Independent physics can diverge before the first intervention; illustrative lower-CD cases do not establish a seed-wide or isolated causal gain.",
+    "new_experiments_run": false
+  },
+  "appendix_cleanup": {
+    "removed_original_figure_numbers": [
+      6,
+      7
+    ],
+    "removed_paragraph": "Artifact provenance",
+    "rationale": "Repeated single-case imagery adds little beyond the main recovery figure and complete shape/Maze gallery; file provenance belongs in the repository.",
+    "policy_checked": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
+    "artifact_provenance_paragraph_required": false
+  },
+  "font_verification": "provenance/figure_font_audit.json",
+  "build": {
+    "abstract_words_whitespace": 213,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 11,
+    "combined_pages": 21,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
+  },
+  "cross_references": {
+    "before": {
+      "total_reference_targets": 48,
+      "main_reference_targets": 30,
+      "main_to_appendix_targets": 16,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:memory-strength",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "sec:behavior",
+        "fig:pusht-rollouts",
+        "fig:rope-rollouts",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact",
+        "tab:rope-ablation"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 66,
+      "main_reference_targets": 37,
+      "main_to_appendix_targets": 21,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "sec:pending",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "sec:additional-controls",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "sec:behavior",
+        "fig:pusht-rollouts",
+        "fig:rope-rollouts",
+        "tab:parameters",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "sec:backbone",
+        "tab:lewm-contact",
+        "sec:rope-details"
+      ],
+      "missing_labels": []
+    },
+    "settings_parameter_table_references": 1,
+    "pdf_internal_links_checked": 196,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 184,
+    "label_destinations_checked": 68,
+    "headline_and_trajectory_figures_unchanged": true,
+    "bibliography_unchanged": true
+  },
+  "pdf_quality": {
+    "pages": 21,
+    "references": 47,
+    "all_fonts_embedded": true,
+    "type3_fonts": false,
+    "figure_count": 8,
+    "method_pixels_preserved": true,
+    "duplicate_figures_6_and_7_removed": true,
+    "artifact_provenance_paragraph_removed": true
+  },
+  "visual_review": {
+    "all_pages_reviewed": true,
+    "revised_figures_reviewed": true,
+    "clipping_or_overlap_found": false
+  }
+}

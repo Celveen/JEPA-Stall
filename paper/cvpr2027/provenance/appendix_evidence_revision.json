@@ -1,0 +1,100 @@
+{
+  "updated_utc": "2026-11-16T16:30:43.467585+00:00",
+  "base_commit": "2d341cbfac96824bd57bfa29fbb6fe3fbcc4d758",
+  "changes": [
+    "Restore substantive references to appendix evidence in the main text.",
+    "Shorten repeated prose and the notation table; retain all experimental table values.",
+    "Compact Figures 6 and 7 by sharing identical states.",
+    "Add archived real PushT visual-shift and Rope execution sequences."
+  ],
+  "body_to_appendix_targets_before": 7,
+  "body_to_appendix_targets_after": 16,
+  "appendix_word_count_before": 6439,
+  "appendix_word_count_after": 5361,
+  "abstract_unchanged": true,
+  "experimental_table_values_unchanged": true,
+  "new_experiments_run": false,
+  "build": {
+    "abstract_words_whitespace": 196,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 11,
+    "combined_pages": 21,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
+  },
+  "qa": {
+    "fonts_checked": 42,
+    "all_fonts_embedded": true,
+    "type3_fonts": false,
+    "references": 47,
+    "pages": 21
+  },
+  "cross_reference_audit": {
+    "before": {
+      "total_reference_targets": 54,
+      "main_reference_targets": 22,
+      "main_to_appendix_targets": 7,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:memory-strength",
+        "sec:maze-details",
+        "tab:pusht-ecp",
+        "sec:rope-details"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 48,
+      "main_reference_targets": 30,
+      "main_to_appendix_targets": 16,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:memory-strength",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "sec:behavior",
+        "fig:pusht-rollouts",
+        "fig:rope-rollouts",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact",
+        "tab:rope-ablation"
+      ],
+      "missing_labels": []
+    },
+    "settings_table_figure_references": 0,
+    "pdf_internal_links_checked": 166,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 190,
+    "label_destinations_checked": 68,
+    "all_main_figure_assets_unchanged": true,
+    "bibliography_unchanged": true
+  },
+  "visual_review": "Rendered all 21 pages with Poppler; inspected all contact sheets and the compact figures/new recorded sequences in detail. No clipped text, overlapping labels, or blank trailing page.",
+  "layout_reference": {
+    "title": "DINO-WM",
+    "official_publication": "https://proceedings.mlr.press/v267/zhou25t.html",
+    "inspected_pdf": "https://arxiv.org/pdf/2411.04983",
+    "pages_inspected": [
+      14,
+      17,
+      18,
+      21
+    ]
+  },
+  "overleaf_policy": "Compilation dependencies only; no Markdown, raw frames, draw.io, audit manifests, preview manuscript, or build caches."
+}

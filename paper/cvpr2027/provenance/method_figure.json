@@ -1,0 +1,64 @@
+{
+  "source_type": "supplied_v2_with_vector_refinements",
+  "canvas_pt": [
+    468,
+    234
+  ],
+  "sources": {
+    "figures/source/fig2_method_v2_input.pdf": "9a07263b7ce3b6daada3f8655d45c5e3ad87396237c88bff71d86ad8065bc1bf",
+    "figures/source/Figure3_v2_input.drawio": "dd3ddbd6866ed9a855c2a96fc921038e00628edd960447ff9543fd9f6d4b1ab6",
+    "figures/domains_20261116/diagram_maze.png": "e7b953782af243d1e12f4f160775c326330948819495c261273d2b3cfabf6bf9",
+    "figures/domains_20261116/diagram_pushobj.png": "83f482cf724ed8ddecf38c95865026e97bbfebe65e1ac86db03bacadeac97930",
+    "figures/domains_20261116/diagram_pusht.png": "11fbe177e62e2705e3e35488e998cc71583dce8786352a1e77e370003b2a167f",
+    "figures/domains_20261116/diagram_rope.png": "5040ace6a88843deff06e5286972af58feebd7d02b6a59d08247cea41bba7293"
+  },
+  "changes": [
+    "Step 4: trajectory with Small / repeated move -> Activate correction explanation",
+    "Step 5: Avoid revisits and Boost goal weight with persistence timeline",
+    "Offline: contact-directed and perturbed action arrows with Contact bias + noise / Collect transitions; no algorithm tag",
+    "Step 3: PushObj, Maze, PushT color shift and recorded Rope simulation thumbnails"
+  ],
+  "removed_editable_cells": [
+    "execution",
+    "training_agent",
+    "training_object",
+    "memory_neighborhood",
+    "memory_point_0",
+    "memory_point_1",
+    "memory_point_2",
+    "component_bar_0",
+    "component_bar_1",
+    "component_bar_2",
+    "component_bar_3",
+    "vector_line2d_3",
+    "vector_patch_25",
+    "vector_patch_35",
+    "vector_patch_39",
+    "vector_patch_40",
+    "native_frame_4",
+    "native_frame_5",
+    "frame_border_2",
+    "frame_border_3",
+    "text_2_0",
+    "text_2_1",
+    "text_19_0",
+    "text_20_0",
+    "text_21_0",
+    "text_26_0",
+    "text_27_0",
+    "text_28_0",
+    "text_29_0",
+    "text_30_0",
+    "text_31_0",
+    "text_32_0",
+    "text_33_0"
+  ],
+  "new_editable_cells": 53,
+  "outputs": {
+    "paper/cvpr2027/figures/fig2_method.pdf": "a02a4d629b2d3250db86931202d1ea1014059129fd5d9d4417cc109bac44a3ac",
+    "paper/cvpr2027/figures/previews/fig2_method.png": "0c4a2df85d5a2dbd269f359629effdf657e5c9e89d683883530ae792f39a8d31",
+    "paper/cvpr2027/figures/svg/fig2_method.svg": "b06a3a0869ca3f7be094f5d9d46f9214621c0b4d58e21ebacd7797d6502e3bd0",
+    "delivery/Figure3.drawio": "dfd263b49d47725c6a049f53651ef0c53eb1269490e176e726bfad991f1ebf9e"
+  },
+  "generator_sha256": "3f83a246783928c2d0adadffe7367006314efa90ad26c7a979e0af9ff5de10ae"
+}

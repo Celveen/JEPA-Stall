@@ -1,0 +1,66 @@
+{
+  "status": "complete",
+  "started_utc": "2026-11-11T01:59:04.821056+00:00",
+  "completed_chunks": 140,
+  "total_chunks": 140,
+  "episodes_per_condition": 350,
+  "total_task_runs": 1400,
+  "by_condition": {
+    "adajepa_aug_g030": {
+      "completed_chunks": 35,
+      "total_chunks": 35
+    },
+    "dinowm_aug_g030": {
+      "completed_chunks": 35,
+      "total_chunks": 35
+    },
+    "dinowm_aug_dense_g030": {
+      "completed_chunks": 35,
+      "total_chunks": 35
+    },
+    "dinowm_aug_dense_native": {
+      "completed_chunks": 35,
+      "total_chunks": 35
+    }
+  },
+  "preflight": {
+    "adajepa_aug_g030": "passed",
+    "dinowm_aug_g030": "passed",
+    "dinowm_aug_dense_g030": "passed",
+    "dinowm_aug_dense_native": "passed"
+  },
+  "workers": {
+    "3": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_32_T"
+    },
+    "4": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_24_small_tee"
+    },
+    "1": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_34_T"
+    },
+    "0": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_30_T"
+    },
+    "6": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_29_plus"
+    },
+    "5": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_33_T"
+    },
+    "7": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_31_T"
+    }
+  },
+  "failures": [],
+  "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1",
+  "updated_utc": "2026-11-11T08:00:47.526059+00:00",
+  "summary": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/summary.json"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "arm": "native5",
+    "sample": 3,
+    "formal_final_cd": 1.208698021284404,
+    "visualization_final_cd": 0.7160015128332525,
+    "same_goal_model_planner_source_and_seeds": true
+  },
+  {
+    "arm": "native5",
+    "sample": 7,
+    "formal_final_cd": 0.21776826015108755,
+    "visualization_final_cd": 0.2645423133950631,
+    "same_goal_model_planner_source_and_seeds": true
+  },
+  {
+    "arm": "fixed3",
+    "sample": 3,
+    "formal_final_cd": 0.13082367487066343,
+    "visualization_final_cd": 0.08355946106268575,
+    "same_goal_model_planner_source_and_seeds": true
+  },
+  {
+    "arm": "fixed3",
+    "sample": 7,
+    "formal_final_cd": 2.4958602933084775,
+    "visualization_final_cd": 1.5622362944319987,
+    "same_goal_model_planner_source_and_seeds": true
+  }
+]

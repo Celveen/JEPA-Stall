@@ -1,0 +1,24 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     aten::_efficient_attention_forward         0.25%     422.000us         0.49%     824.000us      27.467us      76.174ms        44.76%      76.227ms       2.541ms            30  
+fmha_cutlassF_f32_aligned_64x64_rf_sm80(PyTorchMemEf...         0.00%       0.000us         0.00%       0.000us       0.000us      76.174ms        44.76%      76.174ms       2.539ms            30  
+                                            aten::addmm         1.29%       2.163ms         2.01%       3.373ms      37.478us      55.468ms        32.59%      64.534ms     717.044us            90  
+                                 ampere_sgemm_128x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us      47.759ms        28.06%      47.759ms     795.983us            60  
+                                  ampere_sgemm_64x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us      35.879ms        21.08%      35.879ms     597.983us            60  
+                                               aten::mm         0.35%     583.000us         0.50%     834.000us      27.800us      28.234ms        16.59%      28.307ms     943.567us            30  
+                                       cudaLaunchKernel         1.70%       2.839ms         1.70%       2.839ms       5.927us      20.270ms        11.91%      20.270ms      42.317us           479  
+                                             aten::gelu         0.21%     348.000us         0.31%     526.000us      17.533us       4.424ms         2.60%       5.599ms     186.633us            30  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       4.424ms         2.60%       4.424ms     147.467us            30  
+                                              aten::add         0.47%     783.000us         0.72%       1.203ms      18.508us       2.790ms         1.64%       6.285ms      96.692us            65  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       2.630ms         1.55%       2.630ms      43.833us            60  
+                                aten::native_layer_norm         0.63%       1.051ms         1.28%       2.146ms      33.015us       2.497ms         1.47%       3.480ms      53.538us            65  
+void at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us       2.497ms         1.47%       2.497ms      38.415us            65  
+                       cudaDeviceGetStreamPriorityRange         0.00%       1.000us         0.00%       1.000us       0.200us     534.000us         0.31%     534.000us     106.800us             5  
+          cudaOccupancyMaxActiveBlocksPerMultiprocessor         0.05%      76.000us         0.05%      76.000us       1.056us     421.000us         0.25%     421.000us       5.847us            72  
+                                              aten::cat         0.06%      94.000us         0.08%     138.000us      23.000us     289.000us         0.17%     289.000us      48.167us             6  
+void at::native::(anonymous namespace)::CatArrayBatc...         0.00%       0.000us         0.00%       0.000us       0.000us     263.000us         0.15%     263.000us      52.600us             5  
+                                        cudaMemsetAsync         0.43%     716.000us         0.43%     716.000us      10.848us     198.000us         0.12%     198.000us       3.000us            66  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 167.447ms
+Self CUDA time total: 170.192ms

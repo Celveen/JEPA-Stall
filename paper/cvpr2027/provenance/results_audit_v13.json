@@ -1,0 +1,591 @@
+{
+  "checked_utc": "2026-11-10T03:19:36.177969+00:00",
+  "new_experiments_started": false,
+  "primary_jobs_complete": 56,
+  "episode_runs": 2800,
+  "paired_episodes_verified": 1400,
+  "all_primary_targets_equal": true,
+  "raw_result_sha256": {
+    "released/clean/seed100/frozen": "d3266eec8832aa8cc94d75cdadc549e474f91f87d79f7b852690f2c31d5a629d",
+    "released/clean/seed100/frozen_ecp": "70ba4f7b2e2a8bac948f025f65b121a323cf26359093c3661ecb59e5c57d8858",
+    "released/clean/seed100/adajepa": "61ca0cd67d7a4bcebbe7ad4e859f5dd0fa95a27d4ee29887c4b7bb3b0054f62d",
+    "released/clean/seed100/adajepa_ecp": "b4357d82bc1b8d04148b845242fc9c8bd9fe175e5427a767f933e341e8ccb7d7",
+    "augmented/clean/seed100/frozen": "f555b9a78715b44fde370c3af11d56053a9f17ca0ff7cfeebaa145eeb2dd241d",
+    "augmented/clean/seed100/frozen_ecp": "8484c363c288f72a998b9d301fb8da19e79f548c10a815b2764ee388937fe0d2",
+    "augmented/clean/seed100/adajepa": "e7fd5720d9cdc2410084aa65b2b2aec161fe2f801f034e6fb4c5aaffd3ce3a4b",
+    "augmented/clean/seed100/adajepa_ecp": "10ae0db3931dfdccbb215772110314b5bb59208665cd3f409c2d4a4d887607b7",
+    "released/redBlock/seed100/frozen": "0ff9160aa01ec92316bd7f57c738cb435c2449db66ad1fcafd2a18206fb16385",
+    "released/redBlock/seed100/frozen_ecp": "8b2c04f91152acee827deb94fa91aeca83dbf87ff1207acf43e09055a0d3df60",
+    "released/redBlock/seed100/adajepa": "d9b71b686a8ce1f23b10dc7aaff4d75a8c0b4076f1d15de8cdac55089cee5951",
+    "released/redBlock/seed100/adajepa_ecp": "1e6a49310aad6698e1988c4a44a228ee28d8c747e3a7d0688038a96230660206",
+    "augmented/redBlock/seed100/frozen": "596c8dc40dd2419cb27deb530b1c9db73f1955b9b206cf02b5e5caa8c68ab44e",
+    "augmented/redBlock/seed100/frozen_ecp": "22a01cfa3ec4dfa77b0e516a51a97751a4b77fb532b8f42f7fa9cfc94610acde",
+    "augmented/redBlock/seed100/adajepa": "94414ecb029ba98dc28e08397c500fd1ce1e9c8ab7c87847b7263c6f41bd1bc9",
+    "augmented/redBlock/seed100/adajepa_ecp": "4841b29c3561c8f3081b25af561487f2bfaaf7572f1ca24dd22183542353f493",
+    "released/redAnchor/seed100/frozen": "a100b2cc4078cf7c890e107efb891009f584b5802f95cac53ca58517fae38530",
+    "released/redAnchor/seed100/frozen_ecp": "0bfd5a306de664b9b1a1687b68556dc32b9877112d435a736660af129b8868b2",
+    "released/redAnchor/seed100/adajepa": "7b749a323692679943b04038624af503606f5963968ec7ec152756b3b803a1cd",
+    "released/redAnchor/seed100/adajepa_ecp": "e9cba9be6370f2eae0f2f435341d54eb2717c4ffe44b2e88c5d123487df5c192",
+    "augmented/redAnchor/seed100/frozen": "09a2f37c07cc036942754be15abb59751770a549c055fce134f1354e4f366753",
+    "augmented/redAnchor/seed100/frozen_ecp": "2038ab91b74fd3ce86d8922b0126676968b935e23484f87860ee02f8fabd2ec2",
+    "augmented/redAnchor/seed100/adajepa": "d87e04f4e4636485125a91d5d3bb1f034168db9af913fa6fc8ba86f730cee32e",
+    "augmented/redAnchor/seed100/adajepa_ecp": "78f76874c8d7378f715a49d2187c8ae5df84713082df7674a530e8e4c3828568",
+    "released/redAgent/seed100/frozen": "9e467d88405cc0a52d7f99c8c10e13695f7b04f357f7a7aa00c27648500e30a7",
+    "released/redAgent/seed100/frozen_ecp": "959fa51be6ad09c3926cc2f7d71f62eebbabf94b35fe4a687d7e5a5661b43a74",
+    "released/redAgent/seed100/adajepa": "4f40b862bef76313532c5ee1ece32349b310e11cd99ab556754a41b97814fbb3",
+    "released/redAgent/seed100/adajepa_ecp": "203776ab216de665978cbdd3b4dd5b69ed1b0e90de01ae8c6c16f0ef7a696a85",
+    "augmented/redAgent/seed100/frozen": "7134e598875dfe1e718f92c95ec5a3c26984bd06880870b8116cb19582aa559a",
+    "augmented/redAgent/seed100/frozen_ecp": "bb26ee5c296bf3d88a1a5c5a9d51b77533df0a77bffd56355278842c14670d1a",
+    "augmented/redAgent/seed100/adajepa": "94eefb9be4d8a628cfc694e8368540bb67fbe0838fbd7de5a8405f46f62d3d6d",
+    "augmented/redAgent/seed100/adajepa_ecp": "6d3816185bc1445b044670057a662f65fba51a3f872040305c5cd29f4048ccc1",
+    "released/blur/seed100/frozen": "091c684671cd241ea58da792d3198844526297270c819dc662ade009f637442b",
+    "released/blur/seed100/frozen_ecp": "e7f01d60ab23d77fa07b2827b7893b1c910fe35e229e97837b898f36e369cf52",
+    "released/blur/seed100/adajepa": "bbc835329c3ad3367919d75104e3aad38d1a8b58bf46239c6e7d81d5e2d24149",
+    "released/blur/seed100/adajepa_ecp": "5f3cc96012b9751c31ecefa38bf244a233fe34b0d1d7b4267b47e5b44d436356",
+    "augmented/blur/seed100/frozen": "7cbe5d82b42c33f698d84d78f98d660ba244d5de448cf9f6b86c6d2d7f8bcef8",
+    "augmented/blur/seed100/frozen_ecp": "340050134a0580e4696053ae8ec214b24dfb36d26ca69a79eda0e389ca68f004",
+    "augmented/blur/seed100/adajepa": "32e1c43a028099eefcf67fe42b04caaaecc4530c0084bf9676f70ec903fb4a78",
+    "augmented/blur/seed100/adajepa_ecp": "1b0b9f6cf33c55f67ec5464ffea6924eb7769884cd13a43d66e39f065d04a4e0",
+    "released/snp/seed100/frozen": "4dd9a198369db79982295c0cc46214b3a9b94b1c20a4fc15994d31596ff18eb2",
+    "released/snp/seed100/frozen_ecp": "a4ba3cac3fddd2f6629acf3525bf348fa6c1ae826cf4a8159ba3dbbfaf856c3b",
+    "released/snp/seed100/adajepa": "9c4df44104d0d2e8d9d14f39f99813b95dfa18171c3d0b9fdf6d0de720efadb9",
+    "released/snp/seed100/adajepa_ecp": "e2da2c796c901574d87ab979c248854487a87ec4a63e522f01d3f342aa79aab7",
+    "augmented/snp/seed100/frozen": "dc4e15dd6748e0adc8db6c74110aee172c8dd3319fa6fa0136cb0d55027d0569",
+    "augmented/snp/seed100/frozen_ecp": "cbfc090c0c4b2304b4a3005aa378c2b6d43152f5a8df107680d19a2adc9b2875",
+    "augmented/snp/seed100/adajepa": "09f3ffb441b9286d6835a9844b27f815160f9f867c7841d45dd0d5eeb9916d34",
+    "augmented/snp/seed100/adajepa_ecp": "59e2f5c045e750ff49130e3e0b714a3ef3dfb8f96830dd39cd03e96abf20216d",
+    "released/dark/seed100/frozen": "12b41b73c650f2377d64819ba24dfd398c572aae7b2ae99e9756f48c25f8dff3",
+    "released/dark/seed100/frozen_ecp": "b0fe0a7ee4bf41b0bab968a9bcc17999143bcee30aa712eaf137751992678b16",
+    "released/dark/seed100/adajepa": "09304a78d41ef83db489bcba50bba22db1325b0794c877f9a3e79309f798703b",
+    "released/dark/seed100/adajepa_ecp": "c71aec6fda41b525be439243a143a37013b9e2384e4f6e5b7047bd8a6559bb82",
+    "augmented/dark/seed100/frozen": "4aea5947e222bd2c0de69715493150c962b12464398df09ede0ea1cef25c8b9e",
+    "augmented/dark/seed100/frozen_ecp": "3dd34f430ab3d30d8d04d9c5858330eba0ddee260789e8222a87a3d266b96e6f",
+    "augmented/dark/seed100/adajepa": "aaee3d19e74663778c92cfd9541b08559b701d6764f88e7f08bb59c7061d9ed4",
+    "augmented/dark/seed100/adajepa_ecp": "59e17bf580f65c33f32f0884f49f69ec95bf830cc697be7572143c8ea08c70ba"
+  },
+  "native_ecp_pairs": [
+    {
+      "id": "released/clean/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 30,
+      "ecp_successes": 34,
+      "rescues": 4,
+      "regressions": 0
+    },
+    {
+      "id": "released/clean/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 41,
+      "ecp_successes": 42,
+      "rescues": 1,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/clean/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 36,
+      "ecp_successes": 41,
+      "rescues": 5,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/clean/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 43,
+      "ecp_successes": 43,
+      "rescues": 0,
+      "regressions": 0
+    },
+    {
+      "id": "released/redBlock/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 5,
+      "ecp_successes": 5,
+      "rescues": 0,
+      "regressions": 0
+    },
+    {
+      "id": "released/redBlock/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 5,
+      "ecp_successes": 5,
+      "rescues": 0,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/redBlock/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 6,
+      "ecp_successes": 6,
+      "rescues": 1,
+      "regressions": 1
+    },
+    {
+      "id": "augmented/redBlock/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 8,
+      "ecp_successes": 9,
+      "rescues": 1,
+      "regressions": 0
+    },
+    {
+      "id": "released/redAnchor/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 18,
+      "ecp_successes": 19,
+      "rescues": 1,
+      "regressions": 0
+    },
+    {
+      "id": "released/redAnchor/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 20,
+      "ecp_successes": 20,
+      "rescues": 0,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/redAnchor/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 9,
+      "ecp_successes": 17,
+      "rescues": 8,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/redAnchor/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 21,
+      "ecp_successes": 21,
+      "rescues": 1,
+      "regressions": 1
+    },
+    {
+      "id": "released/redAgent/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 28,
+      "ecp_successes": 28,
+      "rescues": 0,
+      "regressions": 0
+    },
+    {
+      "id": "released/redAgent/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 30,
+      "ecp_successes": 31,
+      "rescues": 1,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/redAgent/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 28,
+      "ecp_successes": 34,
+      "rescues": 6,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/redAgent/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 32,
+      "ecp_successes": 34,
+      "rescues": 2,
+      "regressions": 0
+    },
+    {
+      "id": "released/blur/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 25,
+      "ecp_successes": 28,
+      "rescues": 3,
+      "regressions": 0
+    },
+    {
+      "id": "released/blur/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 38,
+      "ecp_successes": 40,
+      "rescues": 2,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/blur/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 29,
+      "ecp_successes": 36,
+      "rescues": 7,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/blur/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 41,
+      "ecp_successes": 43,
+      "rescues": 2,
+      "regressions": 0
+    },
+    {
+      "id": "released/snp/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 30,
+      "ecp_successes": 30,
+      "rescues": 0,
+      "regressions": 0
+    },
+    {
+      "id": "released/snp/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 38,
+      "ecp_successes": 39,
+      "rescues": 1,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/snp/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 31,
+      "ecp_successes": 35,
+      "rescues": 4,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/snp/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 40,
+      "ecp_successes": 40,
+      "rescues": 0,
+      "regressions": 0
+    },
+    {
+      "id": "released/dark/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 26,
+      "ecp_successes": 29,
+      "rescues": 3,
+      "regressions": 0
+    },
+    {
+      "id": "released/dark/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 38,
+      "ecp_successes": 40,
+      "rescues": 2,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/dark/seed100/frozen_ecp",
+      "n": 50,
+      "native_successes": 35,
+      "ecp_successes": 39,
+      "rescues": 4,
+      "regressions": 0
+    },
+    {
+      "id": "augmented/dark/seed100/adajepa_ecp",
+      "n": 50,
+      "native_successes": 43,
+      "ecp_successes": 44,
+      "rescues": 1,
+      "regressions": 0
+    }
+  ],
+  "pushobj_reference_rows": [
+    {
+      "method": "DINO-WM",
+      "planner": "GD",
+      "n": 350,
+      "successes": 172,
+      "success_percent": 49.142857142857146
+    },
+    {
+      "method": "LeWM",
+      "planner": "GD",
+      "n": 350,
+      "successes": 212,
+      "success_percent": 60.57142857142858
+    },
+    {
+      "method": "DINO-WM",
+      "planner": "CEM",
+      "n": 350,
+      "successes": 217,
+      "success_percent": 62.0
+    },
+    {
+      "method": "LeWM",
+      "planner": "CEM",
+      "n": 350,
+      "successes": 224,
+      "success_percent": 64.0
+    },
+    {
+      "method": "DDP-WM",
+      "planner": "CEM",
+      "n": 350,
+      "successes": 202,
+      "success_percent": 57.714285714285715
+    }
+  ],
+  "pushobj_reference_states_match_within_list": true,
+  "pusht_imported_runs_verified": 44,
+  "pusht_imported_files": [
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/default/final_eval_results.npz",
+      "sha256": "bb6e478b2459d3c6b0968db2521d6347774fbe47ef73a3566a7123b8250eaf45",
+      "success_percent": 64.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/blur/final_eval_results.npz",
+      "sha256": "161c02361757f9edb3634697396604ad5fd99e802411353051d2d14e1822e0ab",
+      "success_percent": 62.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/snp/final_eval_results.npz",
+      "sha256": "bf85fe852eea5a25226f9e523ceb1289b5ea89b711799a6b294ade7f622f7bca",
+      "success_percent": 62.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/dark/final_eval_results.npz",
+      "sha256": "14c73218063d9658e5a23b78c60827478cce5d12806f65cd42782e9beb04b593",
+      "success_percent": 57.99999999999999
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/red_agent/final_eval_results.npz",
+      "sha256": "cd175211d07310b66a418438b35136dda3ffa2dee79d3e79dc28a24007cb916a",
+      "success_percent": 4.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/red_object/final_eval_results.npz",
+      "sha256": "dbab9c88051ef4f111f0defd5f87bc85cf97d85f0bae5a57ff98e6e665293cfe",
+      "success_percent": 16.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/red_goal/final_eval_results.npz",
+      "sha256": "33f8409f0efe30a4acc90a74c4dbb4106bec7729df2b5398e8542a2fafa86519",
+      "success_percent": 34.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/default/final_eval_results.npz",
+      "sha256": "74002a6b17f028025ab263b6eb7544b8b2e7e726bbca6ed2ac1ad6f45985b5d0",
+      "success_percent": 50.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/blur/final_eval_results.npz",
+      "sha256": "5ef6d4e3f39f60e65d8ae8305e6121f6d057ba9c28a5d4196f7fab8f8b13033e",
+      "success_percent": 44.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/snp/final_eval_results.npz",
+      "sha256": "6adcb5b523a25aa9f14868b7726c9afe68b66d58407194888585448d95f3a334",
+      "success_percent": 8.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/dark/final_eval_results.npz",
+      "sha256": "84dd92b9bafe2ebb1d9b0dffd5a486a325e62ed3925c69bed4b56166476cd36b",
+      "success_percent": 50.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/red_agent/final_eval_results.npz",
+      "sha256": "ac969758e8a7aa18c628f47d8c0139868358a592a6647f0ae5827717ee0ac033",
+      "success_percent": 44.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/red_object/final_eval_results.npz",
+      "sha256": "3e3fa13592a29607609e132d63de31550223a9b765131dba613bc96c0bf2db66",
+      "success_percent": 36.0
+    },
+    {
+      "file": "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/red_goal/final_eval_results.npz",
+      "sha256": "478389d9a82dcf9f8b45b5d169b6f5588da61c32606ae0555d8fef807b969502",
+      "success_percent": 46.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/blur/final_eval_results.npz",
+      "sha256": "5837cc0d7a53410ef40005ca7d03d0c97e987dd295fdb37c0937e424d1befbb2",
+      "success_percent": 56.00000000000001
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/snp/final_eval_results.npz",
+      "sha256": "0efebea24d7e4c2aa6b47d41b81dc5a4df80d1335ff6c9220ef27b97cf2cf988",
+      "success_percent": 22.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/dark/final_eval_results.npz",
+      "sha256": "f0e15c5a387ed72b43c12848414b68c9aac827f01408e4a5907aab0e6e9b4ce4",
+      "success_percent": 66.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/red_agent/final_eval_results.npz",
+      "sha256": "d49daa72b057d1954697fed824b724c000b3a93409e256f995b59c2c5941d2e2",
+      "success_percent": 62.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/red_object/final_eval_results.npz",
+      "sha256": "30ac9566eb771c1747d0c319dfcae456d802217c09302aae208292c0e738865c",
+      "success_percent": 42.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/red_goal/final_eval_results.npz",
+      "sha256": "26cce7eb92ee3887856c354d9956be70ace4839ad22f3252be56b9036ee9cf2c",
+      "success_percent": 68.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/blur/final_eval_results.npz",
+      "sha256": "28ef4e11c2b87cc7092cb7293b7d4a71eb627484f47ad5de79eb6a6d1335fecd",
+      "success_percent": 66.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/snp/final_eval_results.npz",
+      "sha256": "1cf81961a11170385a0d67d7a933e3c76273d2d61298c071723e5e34c10b94cf",
+      "success_percent": 4.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/dark/final_eval_results.npz",
+      "sha256": "6dc4dbb268a7d3dc6c59b7dcef06d63ff078fc6a01f9b6127be897ed95d2832f",
+      "success_percent": 76.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_agent/final_eval_results.npz",
+      "sha256": "3ef908880704334dcbc68d74f2a6790dd7e764fe3688d76eb8c67404f0a96b2f",
+      "success_percent": 74.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_object/final_eval_results.npz",
+      "sha256": "1b5b052d003b5d6be2910cfd8b53dc63509e5ba68a18fbb8521c5a27cf63165e",
+      "success_percent": 46.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_goal/final_eval_results.npz",
+      "sha256": "4fb3afa81f6c763ceee1ea205a00d078a3728406234ecea07f5028636d81ea0c",
+      "success_percent": 76.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/blur/final_eval_results.npz",
+      "sha256": "68457039af6dae1e078262287b996cc05b11de78b0aa953e4707dd26f71ae7f4",
+      "success_percent": 66.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/snp/final_eval_results.npz",
+      "sha256": "342e07afa5446b2bc5d321d1d7a78bc13450fd8f5245c7fc9c64eb8f9553ddcc",
+      "success_percent": 64.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/dark/final_eval_results.npz",
+      "sha256": "79e7cf7c0c85c031febcb24c6095714c22aaeca6c7dc9948cd5808b27cc1c34f",
+      "success_percent": 64.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/red_agent/final_eval_results.npz",
+      "sha256": "92bbd498637f20a6c81019f8d20d380cbdadbd50e81a33cbd5adaa4642a7d93c",
+      "success_percent": 2.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/red_object/final_eval_results.npz",
+      "sha256": "d003b872bf7b0f9235e209493db1bec80df99d337d11e31e2d25d61b52cd9694",
+      "success_percent": 20.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/red_goal/final_eval_results.npz",
+      "sha256": "de74314f0b8007d21c406602a2b87bc597715f34e4d708a44d8fc4119b518e64",
+      "success_percent": 26.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/blur/final_eval_results.npz",
+      "sha256": "11d716a420c9f933b1fb62f8d6ac02104414d311b268b4e089dcef6402cb29d0",
+      "success_percent": 82.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/snp/final_eval_results.npz",
+      "sha256": "ca74919d3f9d1cab004052b6a92673d1adcaf5eb74d9d96a277301c07c7f694c",
+      "success_percent": 72.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/dark/final_eval_results.npz",
+      "sha256": "7aa323ed36355c71670647cce816d800d0354afb199327a9a3f65c54472f4e89",
+      "success_percent": 84.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/red_agent/final_eval_results.npz",
+      "sha256": "2ddad6d1512b21f5d5750d00dd38dbbf860bf5cbac37fcbbbdb6042c937e3cd0",
+      "success_percent": 60.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/red_object/final_eval_results.npz",
+      "sha256": "54499b5bd29c80c9d3f3b4a9e83c79a366f76af2298a72bc70f1bc2161b8f88c",
+      "success_percent": 26.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/red_goal/final_eval_results.npz",
+      "sha256": "022f097db039c0a3c9859629a0eed95e660ba1f5b8fd9f608a5779f346035901",
+      "success_percent": 36.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/blur/final_eval_results.npz",
+      "sha256": "58f0ffeb8b3d3be24d25fc7a04789b6285e1f599b2f57b670b98f6722817b603",
+      "success_percent": 57.99999999999999
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/snp/final_eval_results.npz",
+      "sha256": "57a325f5b9d83998bb9793d01a7d4214de41373b99e1010a3e493cf74f2142f1",
+      "success_percent": 62.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/dark/final_eval_results.npz",
+      "sha256": "36d4b2880cf36ad4d2d1b1f7b48363eefe487637adcace0b3f8be0724cc91d77",
+      "success_percent": 72.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/red_agent/final_eval_results.npz",
+      "sha256": "a70e10a53ba309f204b636f76cbe4777283938f14cd53ecf3269ec608333b1d5",
+      "success_percent": 64.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/red_object/final_eval_results.npz",
+      "sha256": "540857e553077b1db0362a9e173cfa51a85a5eae1b220ad0a3309ebd5e3cbdf2",
+      "success_percent": 18.0
+    },
+    {
+      "file": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/red_goal/final_eval_results.npz",
+      "sha256": "7e5ad0299d3ff36908b95f1cf811d4f1e711c66c66f8c69a859ea8e239859919",
+      "success_percent": 22.0
+    }
+  ],
+  "maze_summary": {
+    "baseline_successes": 48,
+    "n": 100,
+    "arms": {
+      "S": {
+        "successes": 50,
+        "rescues": [
+          7,
+          60
+        ],
+        "regressions": [],
+        "pretrigger_pairs_verified": 50,
+        "untriggered_reused": 50
+      },
+      "SP": {
+        "successes": 54,
+        "rescues": [
+          1,
+          11,
+          12,
+          14,
+          48,
+          51,
+          60,
+          70,
+          81
+        ],
+        "regressions": [
+          65,
+          80,
+          97
+        ],
+        "pretrigger_pairs_verified": 50,
+        "untriggered_reused": 50
+      }
+    }
+  },
+  "missing_cells_note": "Three archived CEM clean-PushT measurements unavailable; cross-list PushObj blanks are not incomplete primary jobs. New DINO-WM v3 remains in progress and is not imported."
+}

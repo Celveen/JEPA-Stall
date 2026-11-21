@@ -1,0 +1,14 @@
+{"mpc/success_rate": 1.0, "mpc/mean_state_dist": 32.1215934753418, "mpc/mean_visual_dist": 2.7453762755102042, "mpc/mean_proprio_dist": 12.36331844329834, "mpc/mean_div_visual_emb": 241.25343322753906, "mpc/mean_div_proprio_emb": 0.5042024254798889, "step": 1, "adajepa/pred_loss": NaN}
+{"mpc/success_rate": 0.0, "mpc/mean_state_dist": 62.36192321777344, "mpc/mean_visual_dist": 2.8413318452380953, "mpc/mean_proprio_dist": 25.745378494262695, "mpc/mean_div_visual_emb": 172.67987060546875, "mpc/mean_div_proprio_emb": 0.6313803195953369, "step": 1, "adajepa/pred_loss": NaN}
+{"mpc/success_rate": 0.0, "mpc/mean_state_dist": 39.62908935546875, "mpc/mean_visual_dist": 3.6629597151360542, "mpc/mean_proprio_dist": 18.482431411743164, "mpc/mean_div_visual_emb": 194.02403259277344, "mpc/mean_div_proprio_emb": 1.1917295455932617, "step": 2, "adajepa/pred_loss": NaN}
+{"mpc/success_rate": 0.0, "mpc/mean_state_dist": 51.10029220581055, "mpc/mean_visual_dist": 3.8366549744897958, "mpc/mean_proprio_dist": 20.962512969970703, "mpc/mean_div_visual_emb": 191.07431030273438, "mpc/mean_div_proprio_emb": 1.6999821662902832, "step": 3, "adajepa/pred_loss": NaN}
+{"mpc/success_rate": 0.0, "mpc/mean_state_dist": 47.14514923095703, "mpc/mean_visual_dist": 3.828477093962585, "mpc/mean_proprio_dist": 18.09819984436035, "mpc/mean_div_visual_emb": 204.04470825195312, "mpc/mean_div_proprio_emb": 2.2207281589508057, "step": 4, "adajepa/pred_loss": NaN}
+{"mpc/success_rate": 0.0, "mpc/mean_state_dist": 52.421993255615234, "mpc/mean_visual_dist": 3.834163743622449, "mpc/mean_proprio_dist": 20.23014259338379, "mpc/mean_div_visual_emb": 227.38531494140625, "mpc/mean_div_proprio_emb": 2.668077230453491, "step": 5, "adajepa/pred_loss": NaN}
+{"mpc/success_rate": 0.0, "mpc/mean_state_dist": 50.61770248413086, "mpc/mean_visual_dist": 3.8631151679421767, "mpc/mean_proprio_dist": 19.253807067871094, "mpc/mean_div_visual_emb": 212.33409118652344, "mpc/mean_div_proprio_emb": 2.972562789916992, "step": 6, "adajepa/pred_loss": NaN}
+{"mpc/success_rate": 0.5, "step": 1}
+{"mpc/success_rate": 0.5, "step": 2}
+{"mpc/success_rate": 0.5, "step": 3}
+{"mpc/success_rate": 0.5, "step": 4}
+{"mpc/success_rate": 0.5, "step": 5}
+{"mpc/success_rate": 0.5, "step": 6}
+{"final_eval/success_rate": 0.5, "final_eval/mean_state_dist": 41.36964797973633, "final_eval/mean_visual_dist": 3.3042457217261907, "final_eval/mean_proprio_dist": 15.808563232421875, "final_eval/mean_div_visual_emb": 321.38580322265625, "final_eval/mean_div_proprio_emb": 3.015018939971924}

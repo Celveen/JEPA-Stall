@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "stage": "completed_and_packaged",
+  "pid": 275464,
+  "gpu": 0,
+  "started_utc": "2026-11-10T09:56:29.308964+00:00",
+  "planned_primary_episodes": 100,
+  "planned_paired_tasks": 50,
+  "integration_episodes": 2,
+  "paired_tasks_completed": 50,
+  "training": false,
+  "online_updates": false,
+  "active_arm": "S",
+  "active_chunk": 4,
+  "worker_pid": 317066,
+  "active_log": "/data/zjc/adaJEPA/JEPA-Stall/eval_outputs/rope_ecp_20261110/logs/S_chunk_04.log",
+  "active_output": "/data/zjc/adaJEPA/JEPA-Stall/eval_outputs/rope_ecp_20261110/S/chunk_04",
+  "updated_utc": "2026-11-10T12:41:30.547175+00:00",
+  "ended_utc": "2026-11-10T12:41:40.276284+00:00",
+  "archive": {
+    "path": "paired_rope_results.tar.gz",
+    "sha256": "fb95ae69ef0c3c7dc0d113d068c4743a48960e1c51e90e6f4ee418cfb4c0d17d",
+    "bytes": 46516243
+  },
+  "summary": {
+    "status": "complete",
+    "paired_episodes": 50,
+    "planned_paired_episodes": 50,
+    "primary_metric": "final particle Chamfer distance; lower is better",
+    "training_or_online_updates": false,
+    "independent_seed_repetitions": 1,
+    "interpretation": "fixed 50-task pilot; not three-seed confirmation",
+    "prefix_action_tolerance": {
+      "atol": 1e-05,
+      "rtol": 1e-05
+    },
+    "prefix_cd_tolerance": {
+      "atol": 2e-05,
+      "rtol": 2e-05
+    },
+    "native_mean_cd": 1.8384913365084956,
+    "S_mean_cd": 1.8384913365084956,
+    "mean_S_minus_native": 0.0,
+    "relative_mean_cd_reduction_percent": 0.0,
+    "improved_episodes": 0,
+    "worsened_episodes": 0,
+    "unchanged_within_2e5": 50,
+    "triggered_episodes": 10,
+    "action_changed_episodes": 0,
+    "exploratory_paired_mean_delta_ci95": [
+      0.0,
+      0.0
+    ],
+    "all_pre_intervention_checks_passed": true,
+    "positive_penalty_candidate_evaluations": 0,
+    "candidate_batches_with_memory": 160,
+    "maximum_added_cost": 0.0
+  }
+}

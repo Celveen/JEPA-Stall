@@ -1,0 +1,405 @@
+{
+  "internal_source_repository": "https://github.com/Celveen/SE-JEPA/tree/baselines",
+  "commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "repository_name_allowed_in_manuscript": false,
+  "reference_root": "/tmp/jepa_revision_v8/se-jepa-reference",
+  "target": {
+    "path": "/tmp/jepa_revision_v8/se-jepa-reference/research_snapshots/2026-11-08-pusht-gd/references/lewm/targets_T.pkl",
+    "sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+    "episodes": 50,
+    "order": "file",
+    "source_pool_indices": [
+      864,
+      394,
+      776,
+      911,
+      430,
+      41,
+      265,
+      988,
+      523,
+      497,
+      414,
+      940,
+      802,
+      849,
+      310,
+      991,
+      488,
+      366,
+      597,
+      913,
+      929,
+      223,
+      516,
+      142,
+      288,
+      143,
+      773,
+      97,
+      633,
+      818,
+      256,
+      931,
+      545,
+      722,
+      829,
+      616,
+      923,
+      150,
+      317,
+      101,
+      747,
+      75,
+      920,
+      870,
+      700,
+      338,
+      483,
+      573,
+      103,
+      362
+    ],
+    "source_pool_sha256": "f08486da48f7a6961e3d0035b48d9cd13515c0322bbacaf9dd9f973bf7bad624",
+    "selection_seed": 0,
+    "eval_seed": 100,
+    "environment_seeds": "100*i+1 for i=0..49",
+    "goal_generation": "simulator replay of segment actions; not raw segment terminal state"
+  },
+  "shifts": [
+    {
+      "name": "blur",
+      "parameters": "Gaussian sigma=2.0; kernel13",
+      "override": "ood_corruption=blur ood_level=2.0"
+    },
+    {
+      "name": "snp",
+      "parameters": "density0.01 independently white and black; approximately2% total changed pixels",
+      "override": "ood_corruption=snp1 ood_level=0.01"
+    },
+    {
+      "name": "dark",
+      "parameters": "uint8 RGB multiplied by0.9",
+      "override": "ood_corruption=dark ood_level=0.9"
+    },
+    {
+      "name": "red_agent",
+      "parameters": "pusher rendered Red",
+      "override": "++env_kwargs_override.agent_color=Red"
+    },
+    {
+      "name": "red_object",
+      "parameters": "object rendered Red",
+      "override": "++env_kwargs_override.color=Red"
+    },
+    {
+      "name": "red_goal",
+      "parameters": "fixed reference marker rendered Red; does not move task goal",
+      "override": "++env_kwargs_override.goal_color=Red"
+    }
+  ],
+  "external_baseline_rows": [
+    {
+      "method": "LeWM",
+      "planner": "GD",
+      "training": "T16k",
+      "epoch": 10,
+      "scores_percent": {
+        "default": 64.0,
+        "blur": 62.0,
+        "snp": 62.0,
+        "dark": 57.99999999999999,
+        "red_agent": 4.0,
+        "red_object": 16.0,
+        "red_goal": 34.0
+      },
+      "six_shift_mean_percent": 39.33333333333333,
+      "exact_states_match": true,
+      "source_files": [
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/default/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/blur/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/snp/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/dark/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/red_agent/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/red_object/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/lewm/red_goal/final_eval_results.npz"
+      ],
+      "max_replans": 30,
+      "physical_steps_per_replan": 5,
+      "max_physical_steps": 150,
+      "objective": "staged",
+      "optimizer": "GD100 lr0.1 Adam cosine",
+      "episodes_per_condition": 50,
+      "seed": 100
+    },
+    {
+      "method": "DINO-WM (random T16k)",
+      "planner": "GD",
+      "training": "Random T16k",
+      "epoch": 3,
+      "scores_percent": {
+        "default": 50.0,
+        "blur": 44.0,
+        "snp": 8.0,
+        "dark": 50.0,
+        "red_agent": 44.0,
+        "red_object": 36.0,
+        "red_goal": 46.0
+      },
+      "six_shift_mean_percent": 37.99999999999999,
+      "exact_states_match": true,
+      "source_files": [
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/default/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/blur/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/snp/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/dark/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/red_agent/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/red_object/final_eval_results.npz",
+        "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/red_goal/final_eval_results.npz"
+      ],
+      "max_replans": 6,
+      "physical_steps_per_replan": 25,
+      "max_physical_steps": 150,
+      "objective": "last",
+      "optimizer": "GD100 lr0.1 Adam cosine",
+      "episodes_per_condition": 50,
+      "seed": 100
+    },
+    {
+      "method": "DDP-WM",
+      "planner": "CEM",
+      "training": "T-only checkpoint",
+      "epoch": null,
+      "scores_percent": {
+        "default": null,
+        "blur": 56.00000000000001,
+        "snp": 22.0,
+        "dark": 66.0,
+        "red_agent": 62.0,
+        "red_object": 42.0,
+        "red_goal": 68.0
+      },
+      "six_shift_mean_percent": 52.666666666666664,
+      "exact_states_match": true,
+      "source_files": [
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/blur/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/snp/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/dark/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/red_agent/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/red_object/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_VIS50/red_goal/final_eval_results.npz"
+      ],
+      "max_replans": 30,
+      "physical_steps_per_replan": 5,
+      "max_physical_steps": 150,
+      "objective": "staged",
+      "optimizer": "CEM200x10",
+      "episodes_per_condition": 50,
+      "seed": 100
+    },
+    {
+      "method": "DINO-WM (reference checkpoint)",
+      "planner": "CEM",
+      "training": "T-only reference checkpoint",
+      "epoch": null,
+      "scores_percent": {
+        "default": null,
+        "blur": 66.0,
+        "snp": 4.0,
+        "dark": 76.0,
+        "red_agent": 74.0,
+        "red_object": 46.0,
+        "red_goal": 76.0
+      },
+      "six_shift_mean_percent": 57.0,
+      "exact_states_match": true,
+      "source_files": [
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/blur/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/snp/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/dark/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_agent/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_object/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_goal/final_eval_results.npz"
+      ],
+      "max_replans": 30,
+      "physical_steps_per_replan": 5,
+      "max_physical_steps": 150,
+      "objective": "staged",
+      "optimizer": "CEM200x10",
+      "episodes_per_condition": 50,
+      "seed": 100
+    },
+    {
+      "method": "LeWM",
+      "planner": "CEM",
+      "training": "T16k",
+      "epoch": 10,
+      "scores_percent": {
+        "default": null,
+        "blur": 66.0,
+        "snp": 64.0,
+        "dark": 64.0,
+        "red_agent": 2.0,
+        "red_object": 20.0,
+        "red_goal": 26.0
+      },
+      "six_shift_mean_percent": 40.333333333333336,
+      "exact_states_match": true,
+      "source_files": [
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/blur/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/snp/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/dark/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/red_agent/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/red_object/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_VIS50/red_goal/final_eval_results.npz"
+      ],
+      "max_replans": 30,
+      "physical_steps_per_replan": 5,
+      "max_physical_steps": 150,
+      "objective": "staged",
+      "optimizer": "CEM200x10",
+      "episodes_per_condition": 50,
+      "seed": 100
+    },
+    {
+      "method": "AdaJEPA (augmented-data checkpoint)",
+      "planner": "CEM",
+      "training": "T16k",
+      "epoch": 3,
+      "scores_percent": {
+        "default": null,
+        "blur": 82.0,
+        "snp": 72.0,
+        "dark": 84.0,
+        "red_agent": 60.0,
+        "red_object": 26.0,
+        "red_goal": 36.0
+      },
+      "six_shift_mean_percent": 60.0,
+      "exact_states_match": true,
+      "source_files": [
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/blur/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/snp/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/dark/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/red_agent/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/red_object/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_adajepa_VIS50/red_goal/final_eval_results.npz"
+      ],
+      "max_replans": 30,
+      "physical_steps_per_replan": 5,
+      "max_physical_steps": 150,
+      "objective": "staged",
+      "optimizer": "CEM200x10",
+      "episodes_per_condition": 50,
+      "seed": 100
+    },
+    {
+      "method": "Frozen (augmented-data checkpoint)",
+      "planner": "CEM",
+      "training": "T16k",
+      "epoch": 3,
+      "scores_percent": {
+        "default": null,
+        "blur": 57.99999999999999,
+        "snp": 62.0,
+        "dark": 72.0,
+        "red_agent": 64.0,
+        "red_object": 18.0,
+        "red_goal": 22.0
+      },
+      "six_shift_mean_percent": 49.333333333333336,
+      "exact_states_match": true,
+      "source_files": [
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/blur/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/snp/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/dark/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/red_agent/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/red_object/final_eval_results.npz",
+        "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/t16k_frozen_VIS50/red_goal/final_eval_results.npz"
+      ],
+      "max_replans": 30,
+      "physical_steps_per_replan": 5,
+      "max_physical_steps": 150,
+      "objective": "staged",
+      "optimizer": "CEM200x10",
+      "episodes_per_condition": 50,
+      "seed": 100
+    }
+  ],
+  "existing_local_nonmatched_rows": [
+    {
+      "method": "frozen",
+      "training": "our augmented T16k checkpoint, epoch3 cos1e-2",
+      "episodes_per_condition": 150,
+      "evaluation_seeds": [
+        100,
+        200,
+        300
+      ],
+      "target_profile": "1000-pool random.sample per evaluation seed; NOT external50 tasks",
+      "scores_percent": {
+        "default": 82.0,
+        "blur": 57.99999999999999,
+        "snp": 62.0,
+        "dark": 75.33333333333333,
+        "red_agent": 52.0,
+        "red_object": 10.0,
+        "red_goal": 18.0
+      }
+    },
+    {
+      "method": "adajepa",
+      "training": "our augmented T16k checkpoint, epoch3 cos1e-2",
+      "episodes_per_condition": 150,
+      "evaluation_seeds": [
+        100,
+        200,
+        300
+      ],
+      "target_profile": "1000-pool random.sample per evaluation seed; NOT external50 tasks",
+      "scores_percent": {
+        "default": 90.66666666666666,
+        "blur": 89.33333333333333,
+        "snp": 90.0,
+        "dark": 92.0,
+        "red_agent": 67.33333333333333,
+        "red_object": 24.666666666666668,
+        "red_goal": 38.0
+      }
+    }
+  ],
+  "sota_status": "NOT ESTABLISHED: ECP has no completed run on external50; current PushObj targets differ from H7t3. Methods additionally differ in training/controller; a best-among-compared-methods claim requires completed matching ECP results. No unqualified SOTA sentence is currently supported.",
+  "source_equivalence": {
+    "env/pusht/pusht_env.py": {
+      "same_bytes_as_local": true,
+      "sha256": "e76a4cf6d1dd143156dcfa25076371c76a238f6d523415ae74a387b7b0919378"
+    },
+    "env/pusht/pusht_wrapper.py": {
+      "same_bytes_as_local": true,
+      "sha256": "939dc7db9ac4f6f5da4ad550fafe96a91a28090e164d1053c4c02c02b57e4cb1"
+    },
+    "planning/image_corruption.py": {
+      "same_bytes_as_local": true,
+      "sha256": "eeab9dc0549f4c198fb9991d9b608ca6caecdd5ff50c86fd55717be70bb09afd"
+    }
+  },
+  "ddpwm_original_citation": {
+    "title": "DDP-WM: Disentangled Dynamics Prediction for Efficient World Models",
+    "authors": [
+      "Shicheng Yin",
+      "Kaixuan Yin",
+      "Weixing Chen",
+      "Yang Liu",
+      "Guanbin Li",
+      "Liang Lin"
+    ],
+    "year": 2026,
+    "venue": "Proceedings of the 43rd International Conference on Machine Learning",
+    "series": "Proceedings of Machine Learning Research",
+    "volume": 306,
+    "pages": "149240--149258",
+    "url": "https://proceedings.mlr.press/v306/yin26l.html",
+    "arxiv": "2602.01780"
+  },
+  "bundled_reference_root": "raw_baselines"
+}

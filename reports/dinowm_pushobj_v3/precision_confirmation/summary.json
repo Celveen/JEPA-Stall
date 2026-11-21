@@ -1,0 +1,137 @@
+{
+  "status": "complete",
+  "n": 14,
+  "fp32_successes": 6,
+  "bf16_successes": 6,
+  "bf16_rescues": 0,
+  "bf16_regressions": 0,
+  "paired": [
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_00_I",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_00_I",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_05_L",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_05_L",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_10_square",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_10_square",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_15_Z",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_15_Z",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_20_small_tee",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_20_small_tee",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_25_plus",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_25_plus",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_30_T",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_30_T",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    }
+  ],
+  "scope": "Native frozen planning; first task of each of seven shapes for both checkpoints. Full 6-replan cap, 25 controls per replan; diagnostic subset, not proof of population accuracy equivalence. Excluded from main benchmark totals."
+}

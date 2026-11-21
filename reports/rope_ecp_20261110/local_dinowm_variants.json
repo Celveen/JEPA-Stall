@@ -1,0 +1,39 @@
+{
+  "task": "PushObj",
+  "use_local_versions_not_other_server": true,
+  "new_dinowm_evaluation_started": false,
+  "not_a_single_factor_data_comparison": true,
+  "variants": [
+    {
+      "version": "biased",
+      "data_root": "/data/zjc/adaJEPA/CL-JEPA/data/pushobj_bias_16k",
+      "trajectory_counts": {
+        "train": 16000,
+        "val": 4000
+      },
+      "shapes": "T,L,Z,+",
+      "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3/checkpoints/model_3.pth",
+      "fixed_epoch": 3,
+      "checkpoint_sha256": "91134c87e679936b369f3829d8752a62c4510853fee7ec710e25f449c679006f",
+      "generation_config_sha256": "c93a31cabfe4f8aa74227e38c15538b298b516fd83c7775cddd9d74f88218871"
+    },
+    {
+      "version": "random",
+      "data_root": "/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pushobj_random16k_20261106",
+      "trajectory_counts": {
+        "train": 16000,
+        "val": 1600
+      },
+      "shapes": [
+        "I",
+        "square",
+        "Z",
+        "T"
+      ],
+      "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_random16k_orig_e3_20261106/checkpoints/model_3.pth",
+      "fixed_epoch": 3,
+      "checkpoint_sha256": "4a7166bc75ff2924cb140845ea1ebc785f2f0def4a9c3e47b55fb9104c85b0c0",
+      "generation_config_sha256": "6f4e414309f9dfb53f9552feacbd8d45965e58875bd57ed20ed77e4c2e43ea03"
+    }
+  ]
+}

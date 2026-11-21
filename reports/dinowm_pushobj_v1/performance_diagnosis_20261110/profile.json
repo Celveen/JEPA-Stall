@@ -1,0 +1,140 @@
+{
+  "kind": "fixed_observation_inference_profile_not_task_evaluation",
+  "torch": "2.3.0+cu121",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "default_matmul_tf32": false,
+  "default_cudnn_tf32": true,
+  "parameter_dtypes": [
+    "torch.float32"
+  ],
+  "horizon_model_steps": 5,
+  "candidates": 300,
+  "results": [
+    {
+      "precision": "fp32",
+      "batch": 16,
+      "seconds": [
+        3.2071551736444235,
+        3.219146281480789
+      ],
+      "median_s": 3.2131507275626063,
+      "max_allocated_gib": 0.436495304107666,
+      "cost_max_abs_error": 0.0,
+      "cost_mean_abs_error": 0.0,
+      "elite_overlap_of_30": 30,
+      "best_candidate_same": true
+    },
+    {
+      "precision": "fp32",
+      "batch": 64,
+      "seconds": [
+        3.161895217373967,
+        3.166942320764065
+      ],
+      "median_s": 3.164418769069016,
+      "max_allocated_gib": 1.2372527122497559,
+      "cost_max_abs_error": 4.76837158203125e-07,
+      "cost_mean_abs_error": 9.040037696195213e-08,
+      "elite_overlap_of_30": 30,
+      "best_candidate_same": true
+    },
+    {
+      "precision": "fp32",
+      "batch": 300,
+      "seconds": [
+        3.1823472641408443,
+        3.180093850940466
+      ],
+      "median_s": 3.181220557540655,
+      "max_allocated_gib": 4.63349723815918,
+      "cost_max_abs_error": 4.76837158203125e-07,
+      "cost_mean_abs_error": 9.953976132237585e-08,
+      "elite_overlap_of_30": 30,
+      "best_candidate_same": true
+    },
+    {
+      "precision": "tf32",
+      "batch": 16,
+      "seconds": [
+        2.586293749511242,
+        2.586042983457446
+      ],
+      "median_s": 2.586168366484344,
+      "max_allocated_gib": 0.43650150299072266,
+      "cost_max_abs_error": 0.0004589557647705078,
+      "cost_mean_abs_error": 0.00010724564344855025,
+      "elite_overlap_of_30": 30,
+      "best_candidate_same": true
+    },
+    {
+      "precision": "tf32",
+      "batch": 64,
+      "seconds": [
+        2.4990867655724287,
+        2.5008489284664392
+      ],
+      "median_s": 2.499967847019434,
+      "max_allocated_gib": 1.2372527122497559,
+      "cost_max_abs_error": 0.000525355339050293,
+      "cost_mean_abs_error": 0.00010890623525483534,
+      "elite_overlap_of_30": 30,
+      "best_candidate_same": true
+    },
+    {
+      "precision": "tf32",
+      "batch": 300,
+      "seconds": [
+        2.492983056232333,
+        2.494537465274334
+      ],
+      "median_s": 2.4937602607533336,
+      "max_allocated_gib": 4.63349723815918,
+      "cost_max_abs_error": 0.0004992485046386719,
+      "cost_mean_abs_error": 0.00011138995614601299,
+      "elite_overlap_of_30": 30,
+      "best_candidate_same": true
+    },
+    {
+      "precision": "bf16",
+      "batch": 16,
+      "seconds": [
+        0.9971180390566587,
+        0.9971527755260468
+      ],
+      "median_s": 0.9971354072913527,
+      "max_allocated_gib": 0.3589038848876953,
+      "cost_max_abs_error": 0.009925365447998047,
+      "cost_mean_abs_error": 0.0013448039535433054,
+      "elite_overlap_of_30": 29,
+      "best_candidate_same": true
+    },
+    {
+      "precision": "bf16",
+      "batch": 64,
+      "seconds": [
+        0.922193257138133,
+        0.9219701420515776
+      ],
+      "median_s": 0.9220816995948553,
+      "max_allocated_gib": 0.9206423759460449,
+      "cost_max_abs_error": 0.008645772933959961,
+      "cost_mean_abs_error": 0.0013479030458256602,
+      "elite_overlap_of_30": 30,
+      "best_candidate_same": true
+    },
+    {
+      "precision": "bf16",
+      "batch": 300,
+      "seconds": [
+        0.8960005044937134,
+        0.895091786980629
+      ],
+      "median_s": 0.8955461457371712,
+      "max_allocated_gib": 3.1539864540100098,
+      "cost_max_abs_error": 0.008645772933959961,
+      "cost_mean_abs_error": 0.0013479030458256602,
+      "elite_overlap_of_30": 30,
+      "best_candidate_same": true
+    }
+  ]
+}

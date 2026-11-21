@@ -1,0 +1,38 @@
+\par\smallskip
+\noindent \begin{minipage}[t]{\columnwidth}
+\vspace{0pt}
+\section{Computational cost}
+\label{sec:cost}
+To test feasibility with lower compute, each planning run uses a single RTX 3090. Native and ECP share a fixed checkpoint and tasks; paired ten-task batches run sequentially on the same GPU with alternating order. The implementation uses PyTorch 2.3.0 and CUDA 12.1.\par\smallskip
+\normalsize
+GPU-synchronized timers include CUDA Graph capture and simulator replay, excluding model loading and the separate physics audit. \Cref{tab:cost} shows that fewer replans offset the per-replan overhead and reduce mean task time. Peak allocated memory stays below one GiB.\par
+
+\end{minipage}\hfill
+\begin{minipage}[t]{\columnwidth}
+\vspace{0pt}
+\par\smallskip
+{\centering
+\centering
+\captionof{table}{\textbf{Planning time and memory on PushObj.} 350 paired tasks, fixed ResNet. Task time includes failures capped at 30 replans. P95: 95th percentile; memory: maximum PyTorch peak.}
+\label{tab:cost}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrr@{}}
+\toprule
+Metric & Without ECP & With ECP\\
+\midrule
+Success (\%) &61.14&72.29\\
+Mean replans / task &15.59&13.66\\
+Planning (ms / replan) &747.24&768.27\\
+GD (ms / replan) &747.14&752.39\\
+Mean task time (s) &15.25&13.41\\
+P95 task time (s) &31.60&32.49\\
+Total planning time (s) &4078.45&3672.32\\
+Peak allocated memory (GiB) &0.823&0.967\\
+Peak reserved memory (GiB) &1.342&1.469\\
+\bottomrule
+\end{tabular*}
+
+\par}
+
+\end{minipage}\par

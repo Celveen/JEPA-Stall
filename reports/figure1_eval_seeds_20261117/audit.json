@@ -1,0 +1,93 @@
+{
+  "verified_batches": 294,
+  "new_seed_task_evaluations": 3500,
+  "reused_eager_batches": 40,
+  "reused_eager_tasks": 720,
+  "all_physics_replays_verified": true,
+  "raw_success_arrays_match_receipts": true,
+  "all_non_adaptive_models_unchanged": true,
+  "seed_pair_audit": {
+    "frozen/ecp": {
+      "chunks": 35,
+      "identical_success_arrays": 35,
+      "identical_actions": 35,
+      "identical_tasks": 35
+    },
+    "adajepa/ecp": {
+      "chunks": 35,
+      "identical_success_arrays": 15,
+      "identical_actions": 0,
+      "identical_tasks": 35
+    },
+    "lewm/ecp": {
+      "chunks": 7,
+      "identical_success_arrays": 7,
+      "identical_actions": 7,
+      "identical_tasks": 7
+    },
+    "adajepa/base": {
+      "chunks": 35,
+      "identical_success_arrays": 16,
+      "identical_actions": 0,
+      "identical_tasks": 35
+    },
+    "adajepa/aug": {
+      "chunks": 35,
+      "identical_success_arrays": 16,
+      "identical_actions": 0,
+      "identical_tasks": 35
+    }
+  },
+  "checkpoints_sha256": {
+    "pushobj_bias_16k_e3_seed0/checkpoints/model_3.pth": "e80bc83ebafae128834d43256bfbd95c2fb66e4874652679662a131664975fdd",
+    "lewm_pushobj_bias16k_e10/checkpoints/model_10.pth": "077d55daa795c627a9eca3d7e3a86ba7b98a843f6043a7e61b67a17bba8805a6",
+    "pushobj_shape_shift/checkpoints/model_latest.pth": "6a0a75a94eefa4ca1e261cd1010c2c886e1465ce77035ec8a802eb75db3ead95"
+  },
+  "inputs_sha256": {
+    "inputs/lewm/chunk_00_I.pkl": "456d94fab562990b30545dc6d4385ea4c076c4ad59b4233f00883f096bdb4fd3",
+    "inputs/lewm/chunk_01_L.pkl": "bcca122a4512ca33db7dc3551ed20d2f26efac3ba684172858267220dd97768e",
+    "inputs/lewm/chunk_02_square.pkl": "9ee75ba011ba2d52be7f9a08c0922afdfb3a8cab16ea6f35ab066e481d7d2749",
+    "inputs/lewm/chunk_03_Z.pkl": "c9c57f4bb48029eb7ffcd88711489f8f2eb52c7d57bcf5aa8459b80afe9897ed",
+    "inputs/lewm/chunk_04_small_tee.pkl": "0d714951a3b1a5eaaa625f3bf8f247428e6d174bcc5938a410606d0ca788243d",
+    "inputs/lewm/chunk_05_plus.pkl": "79344be87922637d1fd84a26d4ddb2d5bfa87a7ebb6a961c249efb1683c6e030",
+    "inputs/lewm/chunk_06_T.pkl": "6252c40cc470fba79ca318b77537c9349f68824d211046d1481f95f3e48d2a83",
+    "inputs/resnet/chunk_00_I.pkl": "713e89ed146994300ef5951798e5ed147bf134aac9457032b9c919fda2268ed7",
+    "inputs/resnet/chunk_01_I.pkl": "0eb3d5e58c5d24c05cf76dde324a23df518a4463d8437b0de7ba803ed6e432ac",
+    "inputs/resnet/chunk_02_I.pkl": "874e64fbd8f1b8b4eb155ceee38b703c5c591a3325c8fc7723d98741ff07cf0c",
+    "inputs/resnet/chunk_03_I.pkl": "64fa4d79e85fb2ef3e8a055b978f1efd37d3c4bbba6e4dea597a333f76dcfad0",
+    "inputs/resnet/chunk_04_I.pkl": "3f485a4807b86e4a05a7271ed37b8ad1d38b7169358c3f2a0508e7089ab9103d",
+    "inputs/resnet/chunk_05_L.pkl": "5be7a55169c0e21abcc09e7ffe3edc678c35529463d798eda42f7c418bd53d32",
+    "inputs/resnet/chunk_06_L.pkl": "70d692d5b5a56da907e899e31a34bece0b4fd5a9cd6e042f302dcc9b9541ce00",
+    "inputs/resnet/chunk_07_L.pkl": "da1170d6bd7ae2b0722080c35aa27911c1343e3d4becab85dab35a0f3e1f96c9",
+    "inputs/resnet/chunk_08_L.pkl": "9e30ed57d8d23f5840d50885e2285290e8349fefc402a2561b987ab70f78a6fd",
+    "inputs/resnet/chunk_09_L.pkl": "cde27e3f28690010198bb98467aa506e5c343aad92d8a2f358f5269b4294e5d0",
+    "inputs/resnet/chunk_10_square.pkl": "92acfbbe5b5dbd69dbaa1996412cfa1bb26e00ae01ed8288501e135cc7975456",
+    "inputs/resnet/chunk_11_square.pkl": "97a95ab9919d88a672f74ccf6199935b0556d55639886ff28e39ddd9576f6b02",
+    "inputs/resnet/chunk_12_square.pkl": "313307e8ffbd085d08143d5d4d2b247e6650e2b4ec8c748207da25a4a5016b42",
+    "inputs/resnet/chunk_13_square.pkl": "1eafefc254f04686bb01af9c34c5d2770861dc7c0ef4b0b597e6f4f9d60fd2c5",
+    "inputs/resnet/chunk_14_square.pkl": "b6437ed7058c23c9912bea7027048ad0e5dcce07eff2f73fc61e00f19d956f23",
+    "inputs/resnet/chunk_15_Z.pkl": "aeb681a330ff6414cf172bc2013a23869d3cadc23d92053c1cf75bb579af16b4",
+    "inputs/resnet/chunk_16_Z.pkl": "6fccde03492dc40918a8913f1448bf58f15744f14d0cd833b63b64aa1e307d14",
+    "inputs/resnet/chunk_17_Z.pkl": "9a6ce2c2ec41de05db02415a0134ff34afea4637a4ebf8e365e165dfde6131a7",
+    "inputs/resnet/chunk_18_Z.pkl": "1cf3cccf16e9f9040af9a8fa94ed25cc5a64c3797f7e33abf021c65ec30d3126",
+    "inputs/resnet/chunk_19_Z.pkl": "6a25825dbb78874d8580bbddca491f96aef66243d2f03160cba2da4377873584",
+    "inputs/resnet/chunk_20_small_tee.pkl": "ff78c36c1b4e51aa7518359322e90aba7e52c7b90088775a5262e022ae7c6c56",
+    "inputs/resnet/chunk_21_small_tee.pkl": "6830c46219c9e67144afde74b1b115aea0e0a4dd9dd4997b937b2d179e3851ae",
+    "inputs/resnet/chunk_22_small_tee.pkl": "e1a54e7004312e2f54cca6da52b8f32008d63f97282fd47586dea9a24957faa5",
+    "inputs/resnet/chunk_23_small_tee.pkl": "33a24455b0ba7118b1b199f08249b90c6d60a095538f4539dcc8f87087249420",
+    "inputs/resnet/chunk_24_small_tee.pkl": "d1d90a46177a726fa3600621ae82dfe62839b588237bdc63f82868c6f5a286e9",
+    "inputs/resnet/chunk_25_plus.pkl": "addf3cc0f697e2ad69db07034e2f9b5ab8882fcff56d160317e900a32f96dc45",
+    "inputs/resnet/chunk_26_plus.pkl": "6e9dd7db56422ae61d2dc081f0e0cd15e0b76f5e9f47f5a65d520f899b4a945c",
+    "inputs/resnet/chunk_27_plus.pkl": "c95c8e8c3afe1d2e688b306bc807788289fc6d7953a424d51e3ebdb6699c8cae",
+    "inputs/resnet/chunk_28_plus.pkl": "d57a94a204052dc93c0c8969fe4b3e56770796db7b8cede7e9c617f83a1d79d7",
+    "inputs/resnet/chunk_29_plus.pkl": "f24e8f5267bb57c11d39d3db6cc1b89bb1ecc7cce0e19efca82e5105956b3363",
+    "inputs/resnet/chunk_30_T.pkl": "8dcc71f3b05e08f29d63997f0a2afe8e959f9857a1c7d292bd8c909739e28e95",
+    "inputs/resnet/chunk_31_T.pkl": "d1dcc1f22bed8cf6190ddd5881788cbfb5f32a54a62dab308f5d0c1cd1415048",
+    "inputs/resnet/chunk_32_T.pkl": "747fe9df76237577a6f106dc6851478199c84627a01718c094edb6322cd143d1",
+    "inputs/resnet/chunk_33_T.pkl": "084b8966177b2795e31ae6191b000c96450d7d4166e3e9658bafcbf22c527d79",
+    "inputs/resnet/chunk_34_T.pkl": "0f49c6684c018580ae61bc6650a5be171c05047b115774c6c35db8986246031d"
+  },
+  "cuda_graph_upstream_commit": "aa397f3f551a8fe5b8015e18514f78c2a2956a98",
+  "experiment_checkout_commit": "3922b7e",
+  "publication_base_commit": "a5bc992"
+}

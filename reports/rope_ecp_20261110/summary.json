@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "paired_episodes": 50,
+  "planned_paired_episodes": 50,
+  "primary_metric": "final particle Chamfer distance; lower is better",
+  "training_or_online_updates": false,
+  "independent_seed_repetitions": 1,
+  "interpretation": "fixed 50-task pilot; not three-seed confirmation",
+  "prefix_action_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "prefix_cd_tolerance": {
+    "atol": 2e-05,
+    "rtol": 2e-05
+  },
+  "native_mean_cd": 1.8384913365084956,
+  "S_mean_cd": 1.8384913365084956,
+  "mean_S_minus_native": 0.0,
+  "relative_mean_cd_reduction_percent": 0.0,
+  "improved_episodes": 0,
+  "worsened_episodes": 0,
+  "unchanged_within_2e5": 50,
+  "triggered_episodes": 10,
+  "action_changed_episodes": 0,
+  "exploratory_paired_mean_delta_ci95": [
+    0.0,
+    0.0
+  ],
+  "all_pre_intervention_checks_passed": true,
+  "positive_penalty_candidate_evaluations": 0,
+  "candidate_batches_with_memory": 160,
+  "maximum_added_cost": 0.0
+}

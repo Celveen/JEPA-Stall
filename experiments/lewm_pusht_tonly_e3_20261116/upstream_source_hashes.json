@@ -1,0 +1,19 @@
+{
+  "archive": "reports/lewm_random_matched16k_20261116/training_and_evaluation.tar.gz",
+  "original_files": {
+    "LICENSE.LeWM": "4882021920cbd61e050e4dc2e02440e9bd36ea4cbc5803e738a2ee3d63502e07",
+    "distributed_training.py": "522f6d71f622a0a1f92a5d9b58ff4c8a3c6face4164a4f92c08e521107d6f866",
+    "encoder_parallel.py": "213d2d3ae2125ac224a91fe4cf8d77a3fca93c3c582846a25635d7a5c834d834",
+    "train_lewm.py": "770e24c7bfea5560eb4be8294f68c17cf3d9b56b4a399017a419994f05a65132",
+    "train_lewm_distributed.py": "459982a6e9125618601bcaf7c9c4333b8e60a21fc5b557f21d8d85f0afb42be3",
+    "train_lewm_eight_gpu.py": "0e46119a763781f84747772ca8327f52854d653a84ef1b16274f7d7869b60638",
+    "datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "datasets/deformable_env_dset.py": "1380a909f5579a4eb69271ef98f16dfd0517829b219c9990ea61f82340035b3f",
+    "datasets/img_transforms.py": "973ab63f5ff29ef371bb4ec0a6bff81f903c8a8bea7eaac14d62c9dace477c57",
+    "datasets/pusht_dset.py": "47f77f27e633d1e2eff069904788d8dd8b07e199a1b18599f57844a8d0ab11f5",
+    "datasets/traj_dset.py": "01d1a914f93198c228917453dae8aae57af7b788c80bb01b84fb0fd1b1988f66",
+    "datasets/window_stream.py": "69f2a1390259eb15bc99a0bcd0c40875aa629e328703b980609d4282ae41bb1c",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/lewm.py": "1f36bbf4411408be468b44dc20261969436256e168d0097b1b9b98aa75f05355"
+  }
+}

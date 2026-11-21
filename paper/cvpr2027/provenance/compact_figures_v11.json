@@ -1,0 +1,99 @@
+{
+  "revision": 11,
+  "source": "replayed_paths_v11.json",
+  "path_type": "solid polylines through recorded simulator integration steps",
+  "marker_spacing": "every five executed control calls",
+  "smoothing": false,
+  "outputs": {
+    "figures/fig1_trajectory_cases.pdf": {
+      "sha256": "6ad2c6c1bf591ecc688e0290ecf2df5a349c8b9c8f7cb2690a634c9b0fdef54c",
+      "size_inches": [
+        6.875,
+        3.25
+      ],
+      "rows": 2,
+      "simulation_panels": 8,
+      "overlapping_labels": 0
+    },
+    "figures/svg/fig1_trajectory_cases.svg": {
+      "sha256": "d2b1f144f50dab8c11b4532ede9276af9c2edad5b119b2a5cb7dec4ba8312809",
+      "size_inches": [
+        6.875,
+        3.25
+      ],
+      "rows": 2,
+      "simulation_panels": 8,
+      "overlapping_labels": 0
+    },
+    "figures/previews/fig1_trajectory_cases.png": {
+      "sha256": "7e70965cddbca1e0790d64374dd3318e9614910a7b899c1a89b6858f64b0c567",
+      "size_inches": [
+        6.875,
+        3.25
+      ],
+      "rows": 2,
+      "simulation_panels": 8,
+      "overlapping_labels": 0
+    },
+    "figures/fig5_execution_recovery.pdf": {
+      "sha256": "c899ceb70eeabe34ecb6cb347a6cc3f860259bacbffdb37b189f7899e1643202",
+      "size_inches": [
+        6.875,
+        2.52
+      ],
+      "rows": 2,
+      "simulation_panels": 16,
+      "overlapping_labels": 0
+    },
+    "figures/svg/fig5_execution_recovery.svg": {
+      "sha256": "336c755745a3d3689966b08077e7f2fc950ecbd5f8b2144605b69455a931ef73",
+      "size_inches": [
+        6.875,
+        2.52
+      ],
+      "rows": 2,
+      "simulation_panels": 16,
+      "overlapping_labels": 0
+    },
+    "figures/previews/fig5_execution_recovery.png": {
+      "sha256": "8322a6cebb8da6c5160fe6aaf39761c93f6a3a4987c1bfbb4a707be770feb2ef",
+      "size_inches": [
+        6.875,
+        2.52
+      ],
+      "rows": 2,
+      "simulation_panels": 16,
+      "overlapping_labels": 0
+    },
+    "figures/figS_diverse_execution_v11.pdf": {
+      "sha256": "3ce879bc4aba6974eefb219a0396588a26e6aed290cf3e1587e364fd9404c01b",
+      "size_inches": [
+        6.875,
+        6.7
+      ],
+      "rows": 5,
+      "simulation_panels": 36,
+      "overlapping_labels": 0
+    },
+    "figures/svg/figS_diverse_execution_v11.svg": {
+      "sha256": "b063021e63f89abb6e26b588e724e53a3144bc9e7f662c1a93686f3fd32013b6",
+      "size_inches": [
+        6.875,
+        6.7
+      ],
+      "rows": 5,
+      "simulation_panels": 36,
+      "overlapping_labels": 0
+    },
+    "figures/previews/figS_diverse_execution_v11.png": {
+      "sha256": "a1403a01bc51627302a3d8ffcdc70776f85fd3c52837b82693453fd1d9129d70",
+      "size_inches": [
+        6.875,
+        6.7
+      ],
+      "rows": 5,
+      "simulation_panels": 36,
+      "overlapping_labels": 0
+    }
+  }
+}

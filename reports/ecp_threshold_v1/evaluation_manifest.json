@@ -1,0 +1,557 @@
+{
+  "authorized_on": "2026-11-11",
+  "condition_order": [
+    "adajepa_aug_g030",
+    "dinowm_aug_g030",
+    "dinowm_aug_dense_g030",
+    "dinowm_aug_dense_native"
+  ],
+  "gpus": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "excluded_gpus": [
+    2
+  ],
+  "episodes_per_condition": 350,
+  "total_task_runs": 1400,
+  "targets": [
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_00_I.pkl",
+      "sha256": "713e89ed146994300ef5951798e5ed147bf134aac9457032b9c919fda2268ed7"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_01_I.pkl",
+      "sha256": "0eb3d5e58c5d24c05cf76dde324a23df518a4463d8437b0de7ba803ed6e432ac"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_02_I.pkl",
+      "sha256": "874e64fbd8f1b8b4eb155ceee38b703c5c591a3325c8fc7723d98741ff07cf0c"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_03_I.pkl",
+      "sha256": "64fa4d79e85fb2ef3e8a055b978f1efd37d3c4bbba6e4dea597a333f76dcfad0"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_04_I.pkl",
+      "sha256": "3f485a4807b86e4a05a7271ed37b8ad1d38b7169358c3f2a0508e7089ab9103d"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_05_L.pkl",
+      "sha256": "5be7a55169c0e21abcc09e7ffe3edc678c35529463d798eda42f7c418bd53d32"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_06_L.pkl",
+      "sha256": "70d692d5b5a56da907e899e31a34bece0b4fd5a9cd6e042f302dcc9b9541ce00"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_07_L.pkl",
+      "sha256": "da1170d6bd7ae2b0722080c35aa27911c1343e3d4becab85dab35a0f3e1f96c9"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_08_L.pkl",
+      "sha256": "9e30ed57d8d23f5840d50885e2285290e8349fefc402a2561b987ab70f78a6fd"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_09_L.pkl",
+      "sha256": "cde27e3f28690010198bb98467aa506e5c343aad92d8a2f358f5269b4294e5d0"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_10_square.pkl",
+      "sha256": "92acfbbe5b5dbd69dbaa1996412cfa1bb26e00ae01ed8288501e135cc7975456"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_11_square.pkl",
+      "sha256": "97a95ab9919d88a672f74ccf6199935b0556d55639886ff28e39ddd9576f6b02"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_12_square.pkl",
+      "sha256": "313307e8ffbd085d08143d5d4d2b247e6650e2b4ec8c748207da25a4a5016b42"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_13_square.pkl",
+      "sha256": "1eafefc254f04686bb01af9c34c5d2770861dc7c0ef4b0b597e6f4f9d60fd2c5"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_14_square.pkl",
+      "sha256": "b6437ed7058c23c9912bea7027048ad0e5dcce07eff2f73fc61e00f19d956f23"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_15_Z.pkl",
+      "sha256": "aeb681a330ff6414cf172bc2013a23869d3cadc23d92053c1cf75bb579af16b4"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_16_Z.pkl",
+      "sha256": "6fccde03492dc40918a8913f1448bf58f15744f14d0cd833b63b64aa1e307d14"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_17_Z.pkl",
+      "sha256": "9a6ce2c2ec41de05db02415a0134ff34afea4637a4ebf8e365e165dfde6131a7"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_18_Z.pkl",
+      "sha256": "1cf3cccf16e9f9040af9a8fa94ed25cc5a64c3797f7e33abf021c65ec30d3126"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_19_Z.pkl",
+      "sha256": "6a25825dbb78874d8580bbddca491f96aef66243d2f03160cba2da4377873584"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_20_small_tee.pkl",
+      "sha256": "ff78c36c1b4e51aa7518359322e90aba7e52c7b90088775a5262e022ae7c6c56"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_21_small_tee.pkl",
+      "sha256": "6830c46219c9e67144afde74b1b115aea0e0a4dd9dd4997b937b2d179e3851ae"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_22_small_tee.pkl",
+      "sha256": "e1a54e7004312e2f54cca6da52b8f32008d63f97282fd47586dea9a24957faa5"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_23_small_tee.pkl",
+      "sha256": "33a24455b0ba7118b1b199f08249b90c6d60a095538f4539dcc8f87087249420"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_24_small_tee.pkl",
+      "sha256": "d1d90a46177a726fa3600621ae82dfe62839b588237bdc63f82868c6f5a286e9"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_25_plus.pkl",
+      "sha256": "addf3cc0f697e2ad69db07034e2f9b5ab8882fcff56d160317e900a32f96dc45"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_26_plus.pkl",
+      "sha256": "6e9dd7db56422ae61d2dc081f0e0cd15e0b76f5e9f47f5a65d520f899b4a945c"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_27_plus.pkl",
+      "sha256": "c95c8e8c3afe1d2e688b306bc807788289fc6d7953a424d51e3ebdb6699c8cae"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_28_plus.pkl",
+      "sha256": "d57a94a204052dc93c0c8969fe4b3e56770796db7b8cede7e9c617f83a1d79d7"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_29_plus.pkl",
+      "sha256": "f24e8f5267bb57c11d39d3db6cc1b89bb1ecc7cce0e19efca82e5105956b3363"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_30_T.pkl",
+      "sha256": "8dcc71f3b05e08f29d63997f0a2afe8e959f9857a1c7d292bd8c909739e28e95"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_31_T.pkl",
+      "sha256": "d1dcc1f22bed8cf6190ddd5881788cbfb5f32a54a62dab308f5d0c1cd1415048"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_32_T.pkl",
+      "sha256": "747fe9df76237577a6f106dc6851478199c84627a01718c094edb6322cd143d1"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_33_T.pkl",
+      "sha256": "084b8966177b2795e31ae6191b000c96450d7d4166e3e9658bafcbf22c527d79"
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_34_T.pkl",
+      "sha256": "0f49c6684c018580ae61bc6650a5be171c05047b115774c6c35db8986246031d"
+    }
+  ],
+  "checkpoints": {
+    "adajepa_aug_g030": "e80bc83ebafae128834d43256bfbd95c2fb66e4874652679662a131664975fdd",
+    "dinowm_aug_g030": "35ecac035f6494068b2124a40383483eb5b241860d04b1f5b1d7144ba0796dad",
+    "dinowm_aug_dense_g030": "35ecac035f6494068b2124a40383483eb5b241860d04b1f5b1d7144ba0796dad",
+    "dinowm_aug_dense_native": "35ecac035f6494068b2124a40383483eb5b241860d04b1f5b1d7144ba0796dad"
+  },
+  "resolved_first_chunk_configs": {
+    "adajepa_aug_g030": {
+      "ckpt_base_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/pushobj_bias_16k_e3_seed0",
+      "model_name": null,
+      "model_epoch": "3",
+      "seed": 100,
+      "n_evals": 10,
+      "segments_order": "file",
+      "goal_source": "segments",
+      "eval_data_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_00_I.pkl",
+      "ood_corruption": null,
+      "ood_level": null,
+      "env_kwargs_override": null,
+      "goal_H": 25,
+      "n_plot_samples": 10,
+      "decode_for_viz": false,
+      "num_start_frames": 1,
+      "debug_dset_init": false,
+      "objective": {
+        "_target_": "planning.objectives.create_objective_fn",
+        "alpha": 1,
+        "base": 2,
+        "mode": "staged"
+      },
+      "planner": {
+        "_target_": "planning.stagnation.StagnationMPCPlanner",
+        "max_iter": 30,
+        "n_taken_actions": 5,
+        "adapt": {
+          "lr": 0.0005,
+          "steps": 1,
+          "optimizer": "adam",
+          "finetune_every": 1,
+          "replay_buffer": "recent5",
+          "finetune_encoder": true,
+          "encoder_lr": 1e-05,
+          "last_layer_only": true,
+          "encoder_last_layer_only": true
+        },
+        "probe": {
+          "seed": 0
+        },
+        "escape": {
+          "mode": "none",
+          "start": 10,
+          "window": 3,
+          "stall_px": 10.0,
+          "max_n": 5,
+          "gap": null,
+          "kick_px": 10.0,
+          "restarts": 8,
+          "proprio_boost": 1.0,
+          "object_scale": 0.0,
+          "object_escapes": 1,
+          "boost_replans": 0,
+          "workspace_clip": false,
+          "ws_lo": 22.0,
+          "ws_hi": 489.0,
+          "action_cap_px": 0.0,
+          "seed": 0
+        },
+        "reuse_actions": true,
+        "sub_planner": {
+          "target": "planning.gd.GDPlanner",
+          "lr": 0.1,
+          "sample_type": "zero",
+          "action_noise": 0,
+          "horizon": 25,
+          "var_scale": 1,
+          "opt_steps": 100,
+          "eval_every": -1
+        },
+        "name": "adajepa_aug_g030",
+        "stag": {
+          "space": "latent",
+          "kappa": 2.0,
+          "start": 10,
+          "window": 3,
+          "gamma_lo": 0.1,
+          "gamma_hi": 0.3,
+          "beta": 0.25,
+          "prop_boost": 10.0,
+          "boost_replans": 2,
+          "alpha": 1.0,
+          "base": 2.0
+        }
+      },
+      "wandb_logging": false,
+      "saved_folder": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_00_I"
+    },
+    "dinowm_aug_g030": {
+      "ckpt_base_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented",
+      "model_name": null,
+      "model_epoch": "3",
+      "seed": 100,
+      "n_evals": 10,
+      "segments_order": "file",
+      "goal_source": "segments",
+      "eval_data_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_00_I.pkl",
+      "ood_corruption": null,
+      "ood_level": null,
+      "env_kwargs_override": null,
+      "goal_H": 25,
+      "n_plot_samples": 10,
+      "decode_for_viz": false,
+      "num_start_frames": 1,
+      "debug_dset_init": false,
+      "objective": {
+        "_target_": "planning.objectives.create_objective_fn",
+        "alpha": 1,
+        "base": 2,
+        "mode": "last"
+      },
+      "planner": {
+        "_target_": "physical_stagnation.PhysicalTimeStagnationMPCPlanner",
+        "max_iter": 6,
+        "n_taken_actions": 25,
+        "adapt": {
+          "lr": 0.0005,
+          "steps": 1,
+          "optimizer": "adam",
+          "finetune_every": 1,
+          "replay_buffer": "recent5",
+          "finetune_encoder": false,
+          "encoder_lr": 1e-05,
+          "last_layer_only": true,
+          "encoder_last_layer_only": true
+        },
+        "probe": {
+          "seed": 0,
+          "mode": "none"
+        },
+        "escape": {
+          "mode": "none",
+          "start": 10,
+          "window": 3,
+          "stall_px": 10.0,
+          "max_n": 5,
+          "gap": null,
+          "kick_px": 10.0,
+          "restarts": 8,
+          "proprio_boost": 1.0,
+          "object_scale": 0.0,
+          "object_escapes": 1,
+          "boost_replans": 0,
+          "workspace_clip": false,
+          "ws_lo": 22.0,
+          "ws_hi": 489.0,
+          "action_cap_px": 0.0,
+          "seed": 0
+        },
+        "reuse_actions": true,
+        "sub_planner": {
+          "target": "cem_memory.ChunkedCEMPlanner",
+          "lr": 0.1,
+          "sample_type": "zero",
+          "action_noise": 0,
+          "horizon": 25,
+          "var_scale": 1,
+          "opt_steps": 10,
+          "eval_every": -1,
+          "num_samples": 200,
+          "topk": 30,
+          "candidate_batch": 64,
+          "precision": "bf16",
+          "timing_path": "cem_timings.jsonl"
+        },
+        "name": "dinowm_aug_g030",
+        "stag": {
+          "space": "latent",
+          "kappa": 2.0,
+          "start": 2,
+          "window": 3,
+          "gamma_lo": 0.1,
+          "gamma_hi": 0.3,
+          "beta": 0.25,
+          "prop_boost": 10.0,
+          "boost_replans": 0,
+          "alpha": 1.0,
+          "base": 2.0
+        },
+        "control_timing": {
+          "executed_controls": 25,
+          "warmup_controls": 50,
+          "history_stride_controls": 5,
+          "boost_controls": 15
+        }
+      },
+      "wandb_logging": false,
+      "saved_folder": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_00_I",
+      "protocol_id": "dinowm_pushobj_cem200x10_mpc6x25_v1"
+    },
+    "dinowm_aug_dense_g030": {
+      "ckpt_base_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented",
+      "model_name": null,
+      "model_epoch": "3",
+      "seed": 100,
+      "n_evals": 10,
+      "segments_order": "file",
+      "goal_source": "segments",
+      "eval_data_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_00_I.pkl",
+      "ood_corruption": null,
+      "ood_level": null,
+      "env_kwargs_override": null,
+      "goal_H": 25,
+      "n_plot_samples": 10,
+      "decode_for_viz": false,
+      "num_start_frames": 1,
+      "debug_dset_init": false,
+      "objective": {
+        "_target_": "planning.objectives.create_objective_fn",
+        "alpha": 1,
+        "base": 2,
+        "mode": "last"
+      },
+      "planner": {
+        "_target_": "planning.stagnation.StagnationMPCPlanner",
+        "max_iter": 30,
+        "n_taken_actions": 5,
+        "adapt": {
+          "lr": 0.0005,
+          "steps": 1,
+          "optimizer": "adam",
+          "finetune_every": 1,
+          "replay_buffer": "recent5",
+          "finetune_encoder": false,
+          "encoder_lr": 1e-05,
+          "last_layer_only": true,
+          "encoder_last_layer_only": true
+        },
+        "probe": {
+          "seed": 0,
+          "mode": "none"
+        },
+        "escape": {
+          "mode": "none",
+          "start": 10,
+          "window": 3,
+          "stall_px": 10.0,
+          "max_n": 5,
+          "gap": null,
+          "kick_px": 10.0,
+          "restarts": 8,
+          "proprio_boost": 1.0,
+          "object_scale": 0.0,
+          "object_escapes": 1,
+          "boost_replans": 0,
+          "workspace_clip": false,
+          "ws_lo": 22.0,
+          "ws_hi": 489.0,
+          "action_cap_px": 0.0,
+          "seed": 0
+        },
+        "reuse_actions": true,
+        "sub_planner": {
+          "target": "cem_memory.ChunkedCEMPlanner",
+          "horizon": 25,
+          "num_samples": 200,
+          "opt_steps": 10,
+          "topk": 30,
+          "var_scale": 1,
+          "eval_every": -1,
+          "candidate_batch": 64,
+          "precision": "bf16",
+          "timing_path": "cem_timings.jsonl"
+        },
+        "name": "dinowm_aug_dense_g030",
+        "stag": {
+          "space": "latent",
+          "kappa": 2.0,
+          "start": 10,
+          "window": 3,
+          "gamma_lo": 0.1,
+          "gamma_hi": 0.3,
+          "beta": 0.25,
+          "prop_boost": 10.0,
+          "boost_replans": 2,
+          "alpha": 1.0,
+          "base": 2.0
+        }
+      },
+      "wandb_logging": false,
+      "saved_folder": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_00_I"
+    },
+    "dinowm_aug_dense_native": {
+      "ckpt_base_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented",
+      "model_name": null,
+      "model_epoch": "3",
+      "seed": 100,
+      "n_evals": 10,
+      "segments_order": "file",
+      "goal_source": "segments",
+      "eval_data_path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_00_I.pkl",
+      "ood_corruption": null,
+      "ood_level": null,
+      "env_kwargs_override": null,
+      "goal_H": 25,
+      "n_plot_samples": 10,
+      "decode_for_viz": false,
+      "num_start_frames": 1,
+      "debug_dset_init": false,
+      "objective": {
+        "_target_": "planning.objectives.create_objective_fn",
+        "alpha": 1,
+        "base": 2,
+        "mode": "last"
+      },
+      "planner": {
+        "_target_": "planning.stagnation.StagnationMPCPlanner",
+        "max_iter": 30,
+        "n_taken_actions": 5,
+        "adapt": {
+          "lr": 0.0005,
+          "steps": 1,
+          "optimizer": "adam",
+          "finetune_every": 1,
+          "replay_buffer": "recent5",
+          "finetune_encoder": false,
+          "encoder_lr": 1e-05,
+          "last_layer_only": true,
+          "encoder_last_layer_only": true
+        },
+        "probe": {
+          "seed": 0,
+          "mode": "none"
+        },
+        "escape": {
+          "mode": "none",
+          "start": 10,
+          "window": 3,
+          "stall_px": 10.0,
+          "max_n": 5,
+          "gap": null,
+          "kick_px": 10.0,
+          "restarts": 8,
+          "proprio_boost": 1.0,
+          "object_scale": 0.0,
+          "object_escapes": 1,
+          "boost_replans": 0,
+          "workspace_clip": false,
+          "ws_lo": 22.0,
+          "ws_hi": 489.0,
+          "action_cap_px": 0.0,
+          "seed": 0
+        },
+        "reuse_actions": true,
+        "sub_planner": {
+          "target": "cem_memory.ChunkedCEMPlanner",
+          "horizon": 25,
+          "num_samples": 200,
+          "opt_steps": 10,
+          "topk": 30,
+          "var_scale": 1,
+          "eval_every": -1,
+          "candidate_batch": 64,
+          "precision": "bf16",
+          "timing_path": "cem_timings.jsonl"
+        },
+        "name": "dinowm_aug_dense_native",
+        "stag": {
+          "space": "latent",
+          "kappa": 0.0,
+          "start": 10,
+          "window": 3,
+          "gamma_lo": 0.1,
+          "gamma_hi": 0.3,
+          "beta": 0.25,
+          "prop_boost": 1.0,
+          "boost_replans": 2,
+          "alpha": 1.0,
+          "base": 2.0
+        }
+      },
+      "wandb_logging": false,
+      "saved_folder": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_00_I"
+    }
+  },
+  "source_sha256": {
+    "reports/ecp_threshold_v1/evaluate.py": "966daba2038b553dcd0c4c1c6a38144bbaea665ddd77cbeb76f87c61ed00d3dd",
+    "reports/ecp_threshold_v1/queue_evaluation.py": "fad233d55c18c8def4ede6705989c75ebfeeb49a0150dccff56d6726984170e3",
+    "planning/stagnation.py": "c237297896be7be77d9e8962bdf292d05cd1022bc8d527addd709827c0bcfce0",
+    "reports/dinowm_pushobj_v3/cem_memory.py": "3cb8e27dbd55a4c4ed94bfca1c68cae3149899f481f85a9db84f9bfe52ef3cc5",
+    "reports/dinowm_pushobj_v3/physical_stagnation.py": "919cdc9f67b9129097fc308c118773280035cc1f142e5fe2f051c0f2c786a63c"
+  },
+  "third_validation_confirmed": "User selected augmented frozen DINO-WM, 30 plans x 5 controls, threshold 0.3; same-cadence native control included.",
+  "protocol": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/ecp_threshold_v1/PROTOCOL.md"
+}

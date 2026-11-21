@@ -1,0 +1,91 @@
+{
+  "task": "PushT",
+  "n": 50,
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "condition_order": [
+    "clean",
+    "blur",
+    "snp",
+    "dark",
+    "red_agent",
+    "red_object",
+    "red_goal"
+  ],
+  "rows": [
+    {
+      "method": "DINO-WM",
+      "planner": "GD",
+      "success_percent": [
+        50,
+        44,
+        8,
+        50,
+        44,
+        36,
+        46
+      ]
+    },
+    {
+      "method": "LeWM",
+      "planner": "GD",
+      "success_percent": [
+        64,
+        62,
+        62,
+        58,
+        4,
+        16,
+        34
+      ]
+    },
+    {
+      "method": "DINO-WM",
+      "planner": "CEM",
+      "success_percent": [
+        48,
+        40,
+        2,
+        44,
+        40,
+        24,
+        48
+      ],
+      "training": "random T16k",
+      "epoch": 3,
+      "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
+      "evidence": "dinowm_pusht_cem_e3_v14.json"
+    },
+    {
+      "method": "LeWM",
+      "planner": "CEM",
+      "success_percent": [
+        72,
+        66,
+        64,
+        64,
+        2,
+        20,
+        26
+      ],
+      "clean_evidence": "lewm_pusht_clean_20261116.json",
+      "checkpoint_scope": "Clean uses newly trained T-only weights; six visual shifts retain the archived model."
+    },
+    {
+      "method": "DDP-WM",
+      "planner": "CEM",
+      "success_percent": [
+        null,
+        56,
+        22,
+        66,
+        62,
+        42,
+        68
+      ]
+    }
+  ],
+  "metric": "joint pusher/object position <20px and wrapped object-angle error <pi/9",
+  "protocol_note": "150 physical controls. Both DINO-WM PushT rows use the same random T16k epoch-3 checkpoint, terminal objective, and 6x25 execution. DINO-WM CEM uses 300x30, while other CEM rows use 200x10 and 30x5. Shared task list; each method retains its recorded noise realization.",
+  "new_ecp_results": "All 56 primary jobs complete; provenance/comparison_v14.json",
+  "detailed_audit": "dinowm_pusht_cem_e3_v14.json (new CEM); original v8 audit retained for other baselines"
+}

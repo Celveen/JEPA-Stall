@@ -1,0 +1,113 @@
+{
+  "evaluation_seed_replicates_only": true,
+  "fixed_task_lists": true,
+  "results": [
+    {
+      "family": "frozen",
+      "stage": "ecp",
+      "seeds": [
+        100,
+        200,
+        300
+      ],
+      "successes": [
+        253,
+        253,
+        253
+      ],
+      "tasks_per_seed": 350,
+      "mean_percent": 72.28571428571429,
+      "sample_std_percent": 0.0
+    },
+    {
+      "family": "lewm",
+      "stage": "ecp",
+      "seeds": [
+        2000,
+        2001,
+        2002
+      ],
+      "successes": [
+        231,
+        231,
+        231
+      ],
+      "tasks_per_seed": 350,
+      "mean_percent": 66.0,
+      "sample_std_percent": 0.0
+    },
+    {
+      "family": "adajepa",
+      "stage": "base",
+      "seeds": [
+        100,
+        200,
+        300
+      ],
+      "successes": [
+        243,
+        235,
+        244
+      ],
+      "tasks_per_seed": 350,
+      "mean_percent": 68.76190476190476,
+      "sample_std_percent": 1.4093951035189285
+    },
+    {
+      "family": "adajepa",
+      "stage": "aug",
+      "seeds": [
+        100,
+        200,
+        300
+      ],
+      "successes": [
+        262,
+        254,
+        260
+      ],
+      "tasks_per_seed": 350,
+      "mean_percent": 73.90476190476191,
+      "sample_std_percent": 1.1895234282663654
+    },
+    {
+      "family": "adajepa",
+      "stage": "ecp",
+      "seeds": [
+        100,
+        200,
+        300
+      ],
+      "successes": [
+        272,
+        265,
+        270
+      ],
+      "tasks_per_seed": 350,
+      "mean_percent": 76.85714285714285,
+      "sample_std_percent": 1.0301575072754257
+    }
+  ],
+  "not_completed": [
+    {
+      "family": "frozen",
+      "stage": "base",
+      "reason": "additional seeds deferred; deterministic planning under this protocol"
+    },
+    {
+      "family": "frozen",
+      "stage": "aug",
+      "reason": "additional seeds deferred; deterministic planning under this protocol"
+    },
+    {
+      "family": "lewm",
+      "stage": "base",
+      "reason": "additional seeds deferred; deterministic planning under this protocol"
+    },
+    {
+      "family": "lewm",
+      "stage": "aug",
+      "reason": "additional seeds deferred; deterministic planning under this protocol"
+    }
+  ]
+}

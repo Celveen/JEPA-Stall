@@ -1,0 +1,43 @@
+{
+  "arm": "augmented",
+  "rows": [
+    {
+      "sample_idx": 0,
+      "seconds": {
+        "fp32": 21.304367231205106,
+        "bf16": 6.289156835526228
+      },
+      "speedup": 3.3874759031068944,
+      "actions_finite": true,
+      "action_rms_difference": 0.28798988461494446,
+      "executed_action_rms_difference": 0.13154631853103638,
+      "max_action_difference": 1.1117243766784668,
+      "fp32_rescored_costs": {
+        "fp32": 0.6196625828742981,
+        "bf16": 0.6170508861541748
+      },
+      "relative_cost_increase": -0.004214707797926033,
+      "actions_identical": false
+    },
+    {
+      "sample_idx": 5,
+      "seconds": {
+        "fp32": 21.377580400556326,
+        "bf16": 6.273899804800749
+      },
+      "speedup": 3.4073831373906125,
+      "actions_finite": true,
+      "action_rms_difference": 0.3647693693637848,
+      "executed_action_rms_difference": 0.27112284302711487,
+      "max_action_difference": 0.970059871673584,
+      "fp32_rescored_costs": {
+        "fp32": 0.7043316960334778,
+        "bf16": 0.6848787665367126
+      },
+      "relative_cost_increase": -0.027618989186936314,
+      "actions_identical": false
+    }
+  ],
+  "frozen_weights_unchanged": true,
+  "interpretation": "Numerical diagnostic, not closed-loop success equivalence."
+}

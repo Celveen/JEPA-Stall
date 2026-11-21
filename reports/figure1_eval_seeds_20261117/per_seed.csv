@@ -1,0 +1,16 @@
+family,stage,seed,successes,tasks,success_percent,source
+frozen,ecp,100,253,350,72.28571428571429,historical
+frozen,ecp,200,253,350,72.28571428571429,evaluated
+frozen,ecp,300,253,350,72.28571428571429,evaluated
+lewm,ecp,2000,231,350,66.0,historical
+lewm,ecp,2001,231,350,66.0,evaluated
+lewm,ecp,2002,231,350,66.0,evaluated
+adajepa,base,100,243,350,69.42857142857143,historical
+adajepa,base,200,235,350,67.14285714285714,evaluated
+adajepa,base,300,244,350,69.71428571428571,evaluated
+adajepa,aug,100,262,350,74.85714285714286,historical
+adajepa,aug,200,254,350,72.57142857142857,evaluated
+adajepa,aug,300,260,350,74.28571428571429,evaluated
+adajepa,ecp,100,272,350,77.71428571428571,historical
+adajepa,ecp,200,265,350,75.71428571428571,evaluated
+adajepa,ecp,300,270,350,77.14285714285714,evaluated

@@ -1,0 +1,49 @@
+{
+  "updated_utc": "2026-11-16T07:11:22.380265+00:00",
+  "authoritative_base": "User-supplied CVPR2027 revised_v2 PDF and Overleaf_v2 ZIP",
+  "inputs": {
+    "JEPA-Stall_CVPR2027_revised_v2.pdf": "e9264a1cd7065b643b8b556a553ad3afc4e5afc9cc4dd2d83d60b73f6bee0a72",
+    "JEPA-Stall_CVPR2027_Overleaf_v2.zip": "0df7e6d8c6174dad9def4ac8a9163aaf6cb915fc8947618078f687507bba3063"
+  },
+  "title": "When World Models Stall: Execution-Conditioned Planning in Latent Space",
+  "changes": [
+    "Rename own method to Execution-Conditioned Planning; retain genuine literature uses of priors and original cited publication titles.",
+    "Refine Figure 3 steps 4/5 with stagnation trajectory and persistent-memory/three-call-weight timeline; add DAgger-inspired coverage label.",
+    "Condense Figure 3 caption and future-work paragraph to preserve eight main-body pages.",
+    "Fix duplicated and in related work."
+  ],
+  "new_experiments_run": false,
+  "v2_result_tables_byte_identical": true,
+  "v2_other_figure_pdfs_byte_identical": true,
+  "bibliography_source_byte_identical": true,
+  "reference_numbers": {
+    "DAgger": 30,
+    "ACT": 43
+  },
+  "reference_count": 44,
+  "figure3_details": "provenance/method_figure.json",
+  "format": {
+    "abstract_words_whitespace": 212,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 10,
+    "combined_pages": 20,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
+  },
+  "font_checks": {
+    "fonts_checked": 40,
+    "all_fonts_embedded": true,
+    "type3_fonts": false,
+    "references": 44,
+    "pages": 20
+  },
+  "llm_statement_matches_supplied_v2": true,
+  "visual_review": "All 20 pages reviewed as rendered contact sheets; title/abstract, Figure 3, and Table 1 inspected at full-page scale."
+}

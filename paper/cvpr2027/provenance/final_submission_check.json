@@ -1,0 +1,249 @@
+{
+  "before": {
+    "total_reference_targets": 82,
+    "main_reference_targets": 33,
+    "main_to_appendix_targets": 16,
+    "main_to_appendix_labels": [
+      "sec:properties",
+      "sec:implementation",
+      "tab:dinowm-aug",
+      "tab:training",
+      "tab:maze-controls",
+      "tab:memory-strength",
+      "tab:action",
+      "tab:threshold-shape",
+      "tab:maze-controls",
+      "tab:maze-full",
+      "sec:cost",
+      "fig:push-distance",
+      "sec:behavior",
+      "tab:pusht-ecp",
+      "tab:extra-baselines",
+      "tab:lewm-contact"
+    ],
+    "missing_labels": []
+  },
+  "after": {
+    "total_reference_targets": 82,
+    "main_reference_targets": 33,
+    "main_to_appendix_targets": 16,
+    "main_to_appendix_labels": [
+      "sec:properties",
+      "sec:implementation",
+      "tab:dinowm-aug",
+      "tab:training",
+      "tab:maze-controls",
+      "tab:memory-strength",
+      "tab:action",
+      "tab:threshold-shape",
+      "tab:maze-controls",
+      "tab:maze-full",
+      "sec:cost",
+      "fig:push-distance",
+      "sec:behavior",
+      "tab:pusht-ecp",
+      "tab:extra-baselines",
+      "tab:lewm-contact"
+    ],
+    "missing_labels": []
+  },
+  "settings_parameter_table_references": 0,
+  "pdf_internal_links_checked": 368,
+  "invalid_pdf_internal_links": 0,
+  "named_destinations": 179,
+  "label_destinations_checked": 76,
+  "headline_and_trajectory_figures_unchanged": true,
+  "bibliography_unchanged": true,
+  "body_pages": 8,
+  "main_submission_pages": 10,
+  "supplementary_pages": 12,
+  "figures": [
+    [
+      1,
+      1,
+      "fig:headline"
+    ],
+    [
+      2,
+      2,
+      "fig:teaser"
+    ],
+    [
+      3,
+      4,
+      "fig:method"
+    ],
+    [
+      4,
+      7,
+      "fig:execution-recovery"
+    ],
+    [
+      5,
+      7,
+      "fig:threshold"
+    ],
+    [
+      6,
+      8,
+      "fig:rope-main-rollout"
+    ],
+    [
+      7,
+      8,
+      "fig:rope-cd"
+    ],
+    [
+      8,
+      16,
+      "fig:push-distance"
+    ],
+    [
+      9,
+      19,
+      "fig:rope-budget"
+    ],
+    [
+      10,
+      20,
+      "fig:rope-rollouts"
+    ],
+    [
+      11,
+      21,
+      "fig:diverse-execution"
+    ],
+    [
+      12,
+      22,
+      "fig:pusht-rollouts"
+    ]
+  ],
+  "tables": [
+    [
+      1,
+      6,
+      "tab:main"
+    ],
+    [
+      2,
+      6,
+      "tab:components"
+    ],
+    [
+      3,
+      7,
+      "tab:timing"
+    ],
+    [
+      4,
+      7,
+      "tab:maze"
+    ],
+    [
+      5,
+      8,
+      "tab:rope"
+    ],
+    [
+      6,
+      13,
+      "tab:parameters"
+    ],
+    [
+      7,
+      15,
+      "tab:pusht-ecp"
+    ],
+    [
+      8,
+      15,
+      "tab:extra-baselines"
+    ],
+    [
+      9,
+      15,
+      "tab:lewm-contact"
+    ],
+    [
+      10,
+      15,
+      "tab:dinowm-aug"
+    ],
+    [
+      11,
+      15,
+      "tab:threshold"
+    ],
+    [
+      12,
+      16,
+      "tab:threshold-shape"
+    ],
+    [
+      13,
+      16,
+      "tab:memory-strength"
+    ],
+    [
+      14,
+      17,
+      "tab:eval-seeds"
+    ],
+    [
+      15,
+      17,
+      "tab:training"
+    ],
+    [
+      16,
+      17,
+      "tab:action"
+    ],
+    [
+      17,
+      17,
+      "tab:cost"
+    ],
+    [
+      18,
+      18,
+      "tab:maze-controls"
+    ],
+    [
+      19,
+      19,
+      "tab:maze-full"
+    ],
+    [
+      20,
+      19,
+      "tab:rope-ablation"
+    ]
+  ],
+  "cited_references": 47,
+  "letter_size": true,
+  "template_unchanged": true,
+  "protected_narrative_unchanged": true,
+  "visual_review_all_22_pages": true,
+  "split_pdf_validation": {
+    "paper_main.pdf": {
+      "pages": 10,
+      "validated_links": 280,
+      "cross_file_links_removed_text_preserved": 28
+    },
+    "paper_appendix.pdf": {
+      "pages": 12,
+      "validated_links": 32,
+      "cross_file_links_removed_text_preserved": 28
+    }
+  },
+  "curve_shift_left_pt": 6,
+  "table5_caption_skip_pt": 7,
+  "official_page_rule": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
+  "warnings_reviewed": [
+    "EPS conversion disabled: no EPS assets used",
+    "hypcap ignored for inline caption: label destination validated",
+    "Float-only column: inspected and intentional"
+  ]
+}

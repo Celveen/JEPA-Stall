@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "no_model_or_simulator_executed": true,
+  "same_episode_same_call_identical": true,
+  "fresh_noise_each_call": true,
+  "different_episode_different_noise": true,
+  "independent_of_previous_episode_length": true,
+  "initial_target_corruption_unchanged": true,
+  "proprio_unchanged": true,
+  "observed_changed_pixel_fraction": 0.0194091796875,
+  "scope": "Noise-stream pairing only. Full pre-trigger planner equivalence requires the GPU smoke."
+}

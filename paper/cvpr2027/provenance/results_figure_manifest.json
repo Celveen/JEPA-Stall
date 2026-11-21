@@ -1,0 +1,61 @@
+{
+  "evidence_path": "/tmp/jepa_cvpr2027/paper/provenance/evidence.json",
+  "evidence_sha256": "1db116b897f14ea1d321ea382f5dd12688fe0a90009616db5879bfe228128bf7",
+  "generator_sha256": "c16cbeabec6b6e682eff71a9df7dfc4432b8115fe2b7fd3695644c1e84f9fdc5",
+  "budget_replans": 30,
+  "pushobj": {
+    "denominator": 350,
+    "column_order": [
+      {
+        "checkpoint": "official",
+        "planner": "frozen"
+      },
+      {
+        "checkpoint": "bias16k",
+        "planner": "frozen"
+      },
+      {
+        "checkpoint": "official",
+        "planner": "adajepa"
+      },
+      {
+        "checkpoint": "bias16k",
+        "planner": "adajepa"
+      }
+    ],
+    "series_counts": {
+      "Baseline": [
+        153,
+        214,
+        243,
+        262
+      ],
+      "+ weighting": [
+        210,
+        253,
+        255,
+        270
+      ],
+      "+ weighting + memory": [
+        209,
+        253,
+        256,
+        269
+      ]
+    }
+  },
+  "maze": {
+    "denominator": 100,
+    "baseline": "AdaJEPA",
+    "intervention": "SZ-switch (stall memory; no proprioceptive boost)",
+    "counts": [
+      63,
+      66
+    ]
+  },
+  "paired_tasks_shared_within_dataset": true,
+  "interpretation": "Checkpoint/planner settings are conditions, not independent replicate experiments. No uncertainty bars: only the recorded runs are shown. The maze correction differs from the PushObj weighting variants.",
+  "width_inches": 6.875,
+  "height_inches": 2.75,
+  "minimum_font_pt": 8
+}

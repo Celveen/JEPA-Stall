@@ -1,0 +1,189 @@
+{
+  "base_commit": "784511b7985130f5a85006489bee3beb73e4b5b6",
+  "new_experiments_run": false,
+  "changes": [
+    "Display the Rope CD curve from push 5 through 20; retain the complete source trajectories and original 0\u20131.8 vertical scale.",
+    "Move the curve to the experiments section before the conclusion.",
+    "Remove the requested caption sentence; retain a compact mean/SD legend and put the aggregation convention in the appendix protocol.",
+    "Condense repeated controller definitions, budget descriptions, general claims and duplicated rescue/harm counts."
+  ],
+  "all_underlying_curve_values_unchanged": true,
+  "all_table_values_and_equations_unchanged": true,
+  "abstract_introduction_conclusion_unchanged": true,
+  "all_other_figure_assets_unchanged": true,
+  "plot_view": {
+    "push_range": [
+      5,
+      20
+    ],
+    "cd_range": [
+      0,
+      1.8
+    ],
+    "seed_sd_unchanged": true
+  },
+  "figure_number": "5",
+  "figure_page": 7,
+  "conclusion_page": 8,
+  "text_edits": {
+    "replacements": {
+      "experiments.tex": [
+        [
+          "We evaluate ECP across four task families and three world-model backbones, examining performance against recent controllers, cross-domain generality, and the source of its gains.\n",
+          ""
+        ],
+        [
+          "Rope holds DINO-WM fixed, predicts and executes three pushes per plan, and observes after every push.",
+          "Rope uses fixed DINO-WM with three pushes per plan and observation after every push."
+        ],
+        [
+          "Writing $S$ for stagnation memory and $P$ for proprioceptive reweighting, ECP uses $S{+}P$ on PushObj and PushT and memory-only $S$ on Maze and Rope (with unit memory weights and $\\kappa=2$ after five warm-up pushes on Rope).",
+          "ECP uses memory $S$ and proprioceptive reweighting $P$ on PushObj and PushT, and $S$ alone on Maze and Rope; Rope stores unit memory weights after five warm-up pushes."
+        ],
+        [
+          "\\Cref{tab:main} compares complete controllers under a shared 150-control budget. First, \\emph{Ours (AdaJEPA)} achieves the highest mean success among the compared controllers, exceeding the strongest baseline by \\textbf{+8.3~pp} on PushObj (77.7\\% vs.\\ 69.4\\%) and by \\textbf{+7.4~pp} across the six PushT visual shifts (63.7\\% vs.\\ 56.3\\%), attaining the best result in 13 of the 16 columns. Second, \\emph{Ours (frozen)} is equally revealing: without a single online model update, it reaches 72.3\\% on PushObj---outperforming the released AdaJEPA controller (69.4\\%), which adapts its weights after every replan. This supports addressing closed-loop stalls through the planning objective as well as model adaptation. Moreover, adding ECP never lowers PushT success in any of the 28 combinations of checkpoint, update rule, and visual shift (\\cref{tab:pusht-ecp}), and fixed-weight controls built on R3M, DINO CLS, and DDP-WM remain below both of our controllers on average (\\cref{tab:extra-baselines}).",
+          "\\Cref{tab:main} compares complete PushObj and PushT controllers. \\emph{Ours (AdaJEPA)} exceeds the strongest baseline by \\textbf{+8.3~pp} on PushObj (77.7\\% vs.\\ 69.4\\%) and \\textbf{+7.4~pp} across the six PushT visual shifts (63.7\\% vs.\\ 56.3\\%), leading 13 of the 16 columns. \\emph{Ours (frozen)} also outperforms released AdaJEPA on PushObj (72.3\\% vs.\\ 69.4\\%). ECP never lowers PushT success across the 28 combinations of checkpoint, update rule, and visual shift (\\cref{tab:pusht-ecp}). Additional fixed-weight R3M, DINO CLS, and DDP-WM controls remain below both of our controllers on average (\\cref{tab:extra-baselines})."
+        ],
+        [
+          "ECP is not tied to the ResNet world model. On LeWM with fixed parameters,",
+          "On LeWM with fixed parameters,"
+        ],
+        [
+          "On PushObj, ECP improves the ResNet world model whether weights are released or trained on augmented data, and whether they are fixed or adapted online (\\cref{tab:components}). The released checkpoint isolates the pure planning effect: with zero retraining, ECP gains \\textbf{+16.0~pp} with fixed parameters and \\textbf{+3.7~pp} with AdaJEPA.",
+          "Applied to the released ResNet checkpoint without retraining, ECP gains \\textbf{+16.0~pp} on PushObj with fixed weights and \\textbf{+3.7~pp} with AdaJEPA (\\cref{tab:components})."
+        ],
+        [
+          "Stagnation memory also transfers beyond manipulation. On Maze, with the released checkpoint and no new offline training, it raises success",
+          "On Maze, stagnation memory raises success"
+        ]
+      ],
+      "analysis.tex": [
+        [
+          "Offline training coverage and online planning correction act at different stages, and their gains accumulate: augmentation improves the ResNet world model on PushObj by",
+          "On PushObj, augmentation improves the ResNet world model by"
+        ],
+        [
+          "Each correction alone improves over native planning across both checkpoints and update rules. On PushObj,",
+          "On PushObj,"
+        ],
+        [
+          " (50~/~32)",
+          ""
+        ],
+        [
+          "\\textbf{39 failures (39~/~0)}",
+          "\\textbf{39 failures}"
+        ],
+        [
+          " (34~/~27)",
+          ""
+        ],
+        [
+          "When the model adapts online on Maze, intervention timing matters: correcting at the first stall recovers failures but loses 4 native successes (7~/~4),",
+          "On Maze with online adaptation, correcting at the first stall recovers 7 failures but loses 4 native successes,"
+        ],
+        [
+          "at 30 replans (3~/~0)",
+          "at 30 replans"
+        ]
+      ],
+      "appendix.tex": [
+        [
+          "\\Cref{fig:rope-budget} shows when successes accumulate, complementing the endpoint scores in \\cref{tab:rope-ablation}. Successful runs remain counted at larger budgets; unsuccessful runs contribute zero throughout.",
+          "\\Cref{fig:rope-budget} counts successes cumulatively; unsuccessful runs contribute zero. The mean-CD curve retains each successful run's terminal CD at larger push budgets, averaging over 20 targets and then three seeds; shading shows the sample SD of the three seed means."
+        ]
+      ]
+    },
+    "old_figure": "\n\\begin{figure}[b]\n\\centering\n\\includegraphics[width=0.95\\columnwidth]{figures/fig_rope_cd_pushes.pdf}\n\\caption{\\textbf{Faster Rope error reduction.} DINO-WM with three pushes per plan; 20 targets under three seeds. Ours uses fixed-strength memory with five warm-up pushes. Mean Chamfer distance (CD), with $\\pm1$ SD across seed means; successful runs retain terminal CD.}\n\\label{fig:rope-cd}\n\\end{figure}\n",
+    "new_figure": "\n\\begin{figure}[t]\n\\centering\n\\includegraphics[width=0.95\\columnwidth]{figures/fig_rope_cd_pushes.pdf}\n\\caption{\\textbf{Faster Rope error reduction.} DINO-WM with three pushes per plan; 20 targets under three seeds. Ours uses fixed-strength memory with five warm-up pushes.}\n\\label{fig:rope-cd}\n\\end{figure}\n",
+    "plot_changes": [
+      [
+        "figsize=(3.35,1.45)",
+        "figsize=(3.35,1.8)"
+      ],
+      [
+        "bottom=.25,top=.80",
+        "bottom=.23,top=.77"
+      ],
+      [
+        "handlelength=1.6,handletextpad=.45,columnspacing=1.0,borderaxespad=0)",
+        "handlelength=1.6,handletextpad=.45,columnspacing=1.0,borderaxespad=0,\n              title=r'Mean $\\pm$ 1 SD',title_fontsize=8)"
+      ],
+      [
+        "xlim=(0,20),ylim=(0,1.8),xticks=[0,5,10,15,20]",
+        "xlim=(5,20),ylim=(0,1.8),xticks=[5,10,15,20]"
+      ]
+    ]
+  },
+  "build": {
+    "engine": "pdflatex",
+    "abstract_words_whitespace": 231,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 12,
+    "combined_pages": 22,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": null
+  },
+  "crossrefs": {
+    "before": {
+      "total_reference_targets": 80,
+      "main_reference_targets": 31,
+      "main_to_appendix_targets": 15,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 79,
+      "main_reference_targets": 31,
+      "main_to_appendix_targets": 15,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "settings_parameter_table_references": 0,
+    "pdf_internal_links_checked": 225,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 185,
+    "label_destinations_checked": 73,
+    "headline_and_trajectory_figures_unchanged": true,
+    "bibliography_unchanged": true
+  }
+}

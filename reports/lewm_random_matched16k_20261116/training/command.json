@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/appuser/anaconda3/envs/ts/bin/python",
+    "-u",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=8",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_8gpu_20261116/runtime/train_lewm_distributed.py",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_8gpu_20261116/config.yaml"
+  ],
+  "cwd": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_8gpu_20261116/runtime",
+  "environment_overrides": {
+    "CUDA_VISIBLE_DEVICES": "GPU-46e54a30-c5f9-0d24-39a5-746dc07e390e,GPU-759bf33a-347a-f48e-9967-094bef34ca14,GPU-f15e7c17-9fbd-9e83-163a-6e6b8065a65a,GPU-35eb1fdc-8b9e-2df5-5cc7-0799c8f77e18,GPU-c3ef23e1-9594-3fbf-52a7-66336dbb9504,GPU-fc48c836-1875-f27f-1afc-f42b783c153a,GPU-906821a0-511f-3f5c-de64-2cbe7d637cf9,GPU-c5e439ed-8b41-412d-f3ff-3beb5f20c67b",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

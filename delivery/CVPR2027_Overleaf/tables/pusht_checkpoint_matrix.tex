@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{\textbf{PushT results by checkpoint and visual shift.} Ours combines the interaction-biased checkpoint (Data aug.) with ECP on. Released uses the published ResNet checkpoint. Success (\%) is measured on 50 matched tasks per condition over 30 replans of five controls. Frozen fixes weights, and AdaJEPA updates them online. S\&P is salt-and-pepper noise. Avg. excludes Clean.}
+\label{tab:pusht-ecp}
+\small
+\setlength{\tabcolsep}{3.7pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcrrrrrrrr@{}}
+\toprule
+Checkpoint & Updates & ECP & Clean & Blur & S\&P & Dark & Red agent & Red object & Red goal & Avg.\\
+\midrule
+Released & Frozen & Off & 60 & 50 & 60 & 52 & 56 & 10 & 36 & 44.0\\
+Released & Frozen & On & 68 & 56 & 60 & 58 & 56 & 10 & 38 & 46.3\\
+Released & AdaJEPA & Off & 82 & 76 & 76 & 76 & 60 & 10 & 40 & 56.3\\
+Released & AdaJEPA & On & 84 & 80 & 78 & 80 & 62 & 10 & 40 & 58.3\\
+\midrule
+Data aug. & Frozen & Off & 72 & 58 & 62 & 70 & 56 & 12 & 18 & 46.0\\
+Data aug. & Frozen & \textbf{On} & 82 & 72 & 70 & 78 & 68 & 12 & 34 & \textbf{55.7}\\
+Data aug. & AdaJEPA & Off & 86 & 82 & 80 & 86 & 64 & 16 & 42 & 61.7\\
+Data aug. & AdaJEPA & \textbf{On} & 86 & 86 & 80 & 88 & 68 & 18 & 42 & \textbf{63.7}\\
+\bottomrule
+\end{tabular*}
+\end{table*}

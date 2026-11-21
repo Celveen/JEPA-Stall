@@ -1,0 +1,86 @@
+{
+  "model": "LeWM PushObj",
+  "checkpoint": "checkpoints/model_10.pth",
+  "epoch": 10,
+  "step": 127360,
+  "source_checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_bias16k/checkpoints/model_10.pth",
+  "tensor_identical_to_model_latest": true,
+  "dataset": "pushobj_bias_16k",
+  "data_type": "pusht_noise action replay with contact-directed action bias and Gaussian noise",
+  "training_shapes": [
+    "T",
+    "L",
+    "Z",
+    "+"
+  ],
+  "train_trajectories": 16000,
+  "validation_trajectories": 4000,
+  "action_bias_px": 9.0,
+  "action_noise_std_px": 10.0,
+  "placement": "source",
+  "training_windows": 1630266,
+  "train_seed": 0,
+  "epochs": 10,
+  "final_validation": {
+    "epoch": 10,
+    "step": 127360,
+    "val": {
+      "loss": 0.16297196254134177,
+      "pred_loss": 0.006595009262673557,
+      "sigreg_loss": 1.737578125
+    },
+    "hours": 5.301055429776509
+  },
+  "repository": "https://github.com/Celveen/SE-JEPA",
+  "local_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "files": [
+    {
+      "path": "checkpoints/model_10.pth",
+      "size": 72267462,
+      "sha256": "077d55daa795c627a9eca3d7e3a86ba7b98a843f6043a7e61b67a17bba8805a6",
+      "md5": "80746d927382121009bb754407bbf2a1"
+    },
+    {
+      "path": "hydra.yaml",
+      "size": 1064,
+      "sha256": "8a2a8371730b1cc2a7059ec371a65949c3eaefa66442aed84db497f25e3b7c83",
+      "md5": "a5f5b0eb4b144a3e33d4e4ef8023deb1"
+    },
+    {
+      "path": "training_config.yaml",
+      "size": 1364,
+      "sha256": "2feb7943a714c6ef01b1b0d96aceb8fe869239870087bbb3c9619a54222f3985",
+      "md5": "2fd562f6637d2ac0513492f39e856f7a"
+    },
+    {
+      "path": "data_generation_config.json",
+      "size": 2258,
+      "sha256": "c93a31cabfe4f8aa74227e38c15538b298b516fd83c7775cddd9d74f88218871",
+      "md5": "082c11786a28534646fe7daeca5ad925"
+    },
+    {
+      "path": "DATA_REGENERATION.txt",
+      "size": 474,
+      "sha256": "38f8d1db98fd2555adc526b3b80bea8b00b14da5ded4a6cf3a45898c5a12767e",
+      "md5": "b46a47f439883ff1784f855f0b7c9d0f"
+    },
+    {
+      "path": "model_code/lewm.py",
+      "size": 16135,
+      "sha256": "1f36bbf4411408be468b44dc20261969436256e168d0097b1b9b98aa75f05355",
+      "md5": "cbc0cc923510b621517d807812f2b075"
+    },
+    {
+      "path": "model_code/UPSTREAM_LICENSE",
+      "size": 1067,
+      "sha256": "4882021920cbd61e050e4dc2e02440e9bd36ea4cbc5803e738a2ee3d63502e07",
+      "md5": "9df72c0ce3ec1f866e17fb96b6a7d67e"
+    },
+    {
+      "path": "train_lewm.py",
+      "size": 7516,
+      "sha256": "770e24c7bfea5560eb4be8294f68c17cf3d9b56b4a399017a419994f05a65132",
+      "md5": "6035d32a80ed3427ec79aae4c2c18581"
+    }
+  ]
+}

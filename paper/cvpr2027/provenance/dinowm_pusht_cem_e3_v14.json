@@ -1,0 +1,114 @@
+{
+  "source_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "training": "random T16k",
+  "epoch": 3,
+  "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
+  "evaluation_plan_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "protocol": {
+    "objective": "last",
+    "physical_steps_per_replan": 25,
+    "max_replans": 6,
+    "max_physical_steps": 150
+  },
+  "cem": {
+    "target": "planning.cem.CEMPlanner",
+    "num_samples": 300,
+    "topk": 30,
+    "opt_steps": 30
+  },
+  "replaced_pushT_row": {
+    "method": "DINO-WM",
+    "planner": "CEM",
+    "success_percent": [
+      null,
+      66,
+      4,
+      76,
+      74,
+      46,
+      76
+    ]
+  },
+  "conditions": [
+    {
+      "condition": "default",
+      "n": 50,
+      "successes": 24,
+      "success_percent": 48,
+      "source_kind": "raw_npz_and_completed_summary",
+      "raw_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/final_eval_results.npz",
+      "sha256": "3be6a41020c4e9f39a70866f9a832d212168b9cd04078dab125f267af87a1156",
+      "exact_states_match": true
+    },
+    {
+      "condition": "blur",
+      "n": 50,
+      "successes": 20,
+      "success_percent": 40,
+      "source_kind": "raw_npz_and_completed_summary",
+      "raw_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/final_eval_results.npz",
+      "sha256": "47b35fdedb51e21a45f7070eeccb0d5ac6d4b6b02cd166dd10d1113422a66fea",
+      "exact_states_match": true
+    },
+    {
+      "condition": "snp",
+      "n": 50,
+      "successes": 1,
+      "success_percent": 2,
+      "source_kind": "raw_npz_and_completed_summary",
+      "raw_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/final_eval_results.npz",
+      "sha256": "68305753620745c495155c6dd9ce9b9239b8786199d4d8363bb42fd513741fa0",
+      "exact_states_match": true
+    },
+    {
+      "condition": "dark",
+      "n": 50,
+      "successes": 22,
+      "success_percent": 44,
+      "source_kind": "raw_npz_and_completed_summary",
+      "raw_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/final_eval_results.npz",
+      "sha256": "0647d9c467b709d9814127d8fb4798a0a3bb7db1191448f129ca6c49c30c9070",
+      "exact_states_match": true
+    },
+    {
+      "condition": "red_agent",
+      "n": 50,
+      "successes": 20,
+      "success_percent": 40,
+      "source_kind": "raw_npz_and_completed_summary",
+      "raw_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/final_eval_results.npz",
+      "sha256": "09be6d8c76cfa9d17344e2aae0e746da8c2584044a41be3b796b9469f2476319",
+      "exact_states_match": true
+    },
+    {
+      "condition": "red_object",
+      "n": 50,
+      "successes": 12,
+      "success_percent": 24,
+      "source_kind": "completed_run_summary",
+      "raw_archive_available": false
+    },
+    {
+      "condition": "red_goal",
+      "n": 50,
+      "successes": 24,
+      "success_percent": 48,
+      "source_kind": "completed_run_summary",
+      "raw_archive_available": false
+    }
+  ],
+  "six_shift_mean_percent": 33.0,
+  "all_conditions_complete": true,
+  "raw_npz_conditions_verified": 5,
+  "summary_only_conditions": [
+    "red_object",
+    "red_goal"
+  ],
+  "summary_evidence": {
+    "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-08-pusht-gd/source_pipeline_metadata/dinowm/summary.json",
+    "sha256": "d1b3a19c2ca0c4578e3f5ece20400053d6f928401c6cd91090a94ba35d6a1009"
+  },
+  "raw_archive_root": "reports/pusht_visual_v8/raw_baselines",
+  "note": "The directory retains an old e10 name; checkpoint receipt and per-run protocol verify epoch 3. Red-object/red-goal are backed by completed 50-task aggregate records; their raw NPZ files are absent from the source snapshot."
+}

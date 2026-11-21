@@ -1,0 +1,128 @@
+{
+  "completed_conditions": 10,
+  "samples_per_condition": 10,
+  "episode_condition_results": 100,
+  "success_rule": "CD < 0.3",
+  "rows": [
+    {
+      "condition": "Native",
+      "predict": 5,
+      "execute": 1,
+      "cap": 20,
+      "warmup": null,
+      "mean_cd": 1.0046006541055477,
+      "successes": 4,
+      "S_triggers": 0,
+      "changed_samples": 0,
+      "total_pushes": 157
+    },
+    {
+      "condition": "S",
+      "predict": 5,
+      "execute": 1,
+      "cap": 20,
+      "warmup": 3,
+      "mean_cd": 1.0794301452264914,
+      "successes": 4,
+      "S_triggers": 2,
+      "changed_samples": 1,
+      "total_pushes": 157
+    },
+    {
+      "condition": "S",
+      "predict": 5,
+      "execute": 1,
+      "cap": 20,
+      "warmup": 5,
+      "mean_cd": 1.0069519834246388,
+      "successes": 4,
+      "S_triggers": 3,
+      "changed_samples": 1,
+      "total_pushes": 157
+    },
+    {
+      "condition": "Native",
+      "predict": 3,
+      "execute": 3,
+      "cap": 20,
+      "warmup": null,
+      "mean_cd": 0.3119033362901438,
+      "successes": 8,
+      "S_triggers": 0,
+      "changed_samples": 0,
+      "total_pushes": 110
+    },
+    {
+      "condition": "Fixed S",
+      "predict": 3,
+      "execute": 3,
+      "cap": 20,
+      "warmup": 5,
+      "mean_cd": 0.24297992201669646,
+      "successes": 8,
+      "S_triggers": 17,
+      "changed_samples": 4,
+      "total_pushes": 111
+    },
+    {
+      "condition": "Dynamic S",
+      "predict": 3,
+      "execute": 3,
+      "cap": 20,
+      "warmup": 5,
+      "mean_cd": 0.31091158528548035,
+      "successes": 8,
+      "S_triggers": 17,
+      "changed_samples": 4,
+      "total_pushes": 108
+    },
+    {
+      "condition": "Native",
+      "predict": 5,
+      "execute": 5,
+      "cap": 20,
+      "warmup": null,
+      "mean_cd": 0.671488187462678,
+      "successes": 7,
+      "S_triggers": 0,
+      "changed_samples": 0,
+      "total_pushes": 124
+    },
+    {
+      "condition": "Native",
+      "predict": 3,
+      "execute": 3,
+      "cap": 15,
+      "warmup": null,
+      "mean_cd": 0.42056266761543304,
+      "successes": 7,
+      "S_triggers": 0,
+      "changed_samples": 0,
+      "total_pushes": 91
+    },
+    {
+      "condition": "Fixed S",
+      "predict": 3,
+      "execute": 3,
+      "cap": 15,
+      "warmup": 5,
+      "mean_cd": 0.41171489192177424,
+      "successes": 7,
+      "S_triggers": 10,
+      "changed_samples": 3,
+      "total_pushes": 91
+    },
+    {
+      "condition": "Dynamic S",
+      "predict": 3,
+      "execute": 3,
+      "cap": 15,
+      "warmup": 5,
+      "mean_cd": 0.4177724941217839,
+      "successes": 7,
+      "S_triggers": 10,
+      "changed_samples": 3,
+      "total_pushes": 94
+    }
+  ]
+}

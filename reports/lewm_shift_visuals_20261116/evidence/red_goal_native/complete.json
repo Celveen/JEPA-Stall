@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "condition": "red_goal",
+  "arm": "native",
+  "diagnostic_only": false,
+  "successes": 4,
+  "episodes": 10,
+  "checkpoint_sha256": "9e2b8afee10e46f3b7ae2bd5a9b67ebc28e86af0ccc0d0d293e2fd77471d2576",
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "runner_sha256": "470dfe899a4ac4af2bfd3c07677189eca78ab3417a2aadc5788570e523d65b82",
+  "target_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "seed": 100,
+  "planner": "GD100",
+  "wall_seconds": 210.1805023769848,
+  "success_rule": "joint agent/object xy distance <20px AND wrapped angle error <pi/9",
+  "capture": "unmodified RGB/states from the final evaluated simulator rollout; resim_from_start protocol",
+  "method": "off"
+}

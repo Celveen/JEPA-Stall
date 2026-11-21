@@ -1,0 +1,7 @@
+left,right,mean_cd_delta_right_minus_left,lower_cd,higher_cd,equal_cd,gained_successes,lost_successes
+native3,fixed3,-0.20719350829911276,35,23,2,12,2
+native3,dynamic3,-0.11444853807250327,29,28,3,8,3
+native3,fixed3_nowarm,-0.13468099087323143,33,25,2,10,1
+fixed3,dynamic3,0.09274497022660949,26,32,2,3,8
+fixed3,fixed3_nowarm,0.07251251742588133,26,30,4,6,7
+dynamic3,fixed3_nowarm,-0.02023245280072816,37,21,2,10,6

@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "target_epochs": 3,
+  "completed_chunks": 140,
+  "total_chunks": 140,
+  "episodes_per_condition": 350,
+  "precision": "bf16",
+  "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16",
+  "workers": {
+    "0": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_34_T"
+    },
+    "1": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_34_T"
+    },
+    "3": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_29_plus"
+    },
+    "5": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_34_T"
+    },
+    "6": {
+      "status": "between_jobs",
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_34_T"
+    }
+  },
+  "failures": [],
+  "updated_utc": "2026-11-10T05:11:05.295064+00:00",
+  "summary": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/summary.json"
+}

@@ -1,0 +1,245 @@
+{
+  "commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "files": [
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/.hydra/config.yaml",
+      "sha256": "b83ab53b7e4c7320d9872a59d5c795b282882deae8ab2b2395131e607e07bb20",
+      "git_blob": "3ad2b0858183474d1466adc53b1d3b281925bb35",
+      "bytes": 2083
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/.hydra/overrides.yaml",
+      "sha256": "c2303358af7f7f17b8cb1a57633335597ce1cf030e4db97c4c780067cc7ec31a",
+      "git_blob": "306971832561e19d20636b2c83189d8f46ba4526",
+      "bytes": 832
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/final_eval_results.npz",
+      "sha256": "47b35fdedb51e21a45f7070eeccb0d5ac6d4b6b02cd166dd10d1113422a66fea",
+      "git_blob": "166217f64c2f878e3778baf6758540945a316078",
+      "bytes": 41712
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "git_blob": "f5258bef6b098ff2aa549c3f493eb6a23bd775cd",
+      "bytes": 196
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/launch_command.json",
+      "sha256": "f0e026fd1bc2782db112f2c7876f98833ffadf686971eb4016adb3366705dbad",
+      "git_blob": "2f6e53587b4d8bd0a320e55eb1b2a0a1546b5a75",
+      "bytes": 1185
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/logs.json.gz",
+      "sha256": "32ca81284d6703b040facd963a498176b4927de1546647cf962e04518af4c763",
+      "git_blob": "03e16c59ed178a7a17f94f40a8a3e51c529a2d4d",
+      "bytes": 490
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/protocol.json",
+      "sha256": "5ab4c446242e4567789280087125d7c9262fd56a8f74653b61ffb59603bdd03e",
+      "git_blob": "7e98582df10d063c8fc7cd661d2fc82b1114eb6b",
+      "bytes": 667
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/runtime_protocol.json",
+      "sha256": "5ab4c446242e4567789280087125d7c9262fd56a8f74653b61ffb59603bdd03e",
+      "git_blob": "7e98582df10d063c8fc7cd661d2fc82b1114eb6b",
+      "bytes": 667
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/.hydra/config.yaml",
+      "sha256": "3e53e4d95042bfaa6e2fdd8c468529e99077d5a525015e742befbc45e3e993c6",
+      "git_blob": "26b4058899b66072becd9dc37c7c234c4bdf2030",
+      "bytes": 2083
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/.hydra/overrides.yaml",
+      "sha256": "f68d2e8a0861be41c9df5b372c9611474ec657c11e60a2b49aaff4472ffccdf5",
+      "git_blob": "d8dc779b57b3c433d9b02babcd2e038de5039377",
+      "bytes": 832
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/final_eval_results.npz",
+      "sha256": "0647d9c467b709d9814127d8fb4798a0a3bb7db1191448f129ca6c49c30c9070",
+      "git_blob": "12d5f96b4d256cc8be0f7086e02c4ed3052596f3",
+      "bytes": 39280
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "git_blob": "f5258bef6b098ff2aa549c3f493eb6a23bd775cd",
+      "bytes": 196
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/launch_command.json",
+      "sha256": "b2654acd86f0166aefaa666d40dfe8b991b3671813d311297c3dfdc9f424e178",
+      "git_blob": "6725d823ac04fd9f1797f0c969d92438d631f94c",
+      "bytes": 1185
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/logs.json.gz",
+      "sha256": "bc3769e22e281f11449fbb60034b645a487c2bf99f1283ab065e29ce7946e1b2",
+      "git_blob": "095b04fd12f29f69e5bf91ee87f392518c6a3c31",
+      "bytes": 491
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/protocol.json",
+      "sha256": "1e7dbd31ff66fcf54f45c7eed194ea4a4e802e89bc1600836fd9d9bad4061abf",
+      "git_blob": "6afcbab2143e0de9ea610907a47337730cf039af",
+      "bytes": 667
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/runtime_protocol.json",
+      "sha256": "1e7dbd31ff66fcf54f45c7eed194ea4a4e802e89bc1600836fd9d9bad4061abf",
+      "git_blob": "6afcbab2143e0de9ea610907a47337730cf039af",
+      "bytes": 667
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/.hydra/config.yaml",
+      "sha256": "fd1d85c8e570d9a44b4478030792b1d5627a54568d11e8e2360834eccba39939",
+      "git_blob": "2a0c8213411c242b963cc36c12b3d584bc8f3271",
+      "bytes": 2090
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/.hydra/overrides.yaml",
+      "sha256": "803e820c031967ea8b9ba683f6f9ab104d9e5aabae7ebdfc6da7e7c405167f34",
+      "git_blob": "ce17289be118f29d2f9f9cce083bdabc03507004",
+      "bytes": 800
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/final_eval_results.npz",
+      "sha256": "3be6a41020c4e9f39a70866f9a832d212168b9cd04078dab125f267af87a1156",
+      "git_blob": "a702e5cb93d3fa198078ec32fcba93c0384cb1ed",
+      "bytes": 37838
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "git_blob": "f5258bef6b098ff2aa549c3f493eb6a23bd775cd",
+      "bytes": 196
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/launch_command.json",
+      "sha256": "8f83e312f3da8406fd7fffb15064f062cac0e858a8ec09cb743f4ed0bee5b35c",
+      "git_blob": "48ad43924d2f3149d0a7317aa3647ad4282dad05",
+      "bytes": 1150
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/logs.json.gz",
+      "sha256": "60c476cf0d6ed788c704c5d9200f8c746676afebcac724b7e55e355c94d5d807",
+      "git_blob": "85e718870cde7eeb2b14abb02df71f75e3fefd25",
+      "bytes": 505
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/protocol.json",
+      "sha256": "359146610a3a7be0e6c30b624b005ed75220d9e05a0a0458f9326c5b6268a386",
+      "git_blob": "1ec75684af280dc6c98ac78ca7c6e2ff1a19244a",
+      "bytes": 670
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/runtime_protocol.json",
+      "sha256": "359146610a3a7be0e6c30b624b005ed75220d9e05a0a0458f9326c5b6268a386",
+      "git_blob": "1ec75684af280dc6c98ac78ca7c6e2ff1a19244a",
+      "bytes": 670
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/.hydra/config.yaml",
+      "sha256": "7068a5502b1c89dae6dca09fedf23288355c39b8d84ace85ddadcb9b9b971f00",
+      "git_blob": "d8404450e6ed79240b398e1f8f6d6814dda7460d",
+      "bytes": 2108
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/.hydra/overrides.yaml",
+      "sha256": "f9517d8578013f5c45ac200d578e490fc697d3b297aa3317a1916b46e4cd9b6f",
+      "git_blob": "2f5c2fb1f37ca61ff5e6c4eda6844977d7649dd8",
+      "bytes": 844
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/final_eval_results.npz",
+      "sha256": "09be6d8c76cfa9d17344e2aae0e746da8c2584044a41be3b796b9469f2476319",
+      "git_blob": "748223c3b401fdd1c669e0e2ead96b2cd8a05a63",
+      "bytes": 41132
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "git_blob": "f5258bef6b098ff2aa549c3f493eb6a23bd775cd",
+      "bytes": 196
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/launch_command.json",
+      "sha256": "aacccc2b0e2c88eb6f9df419f2199c28bd57b8b62e8fa18e90530f4fa43d1ca8",
+      "git_blob": "132824a8b9effa2416755be8c3da8a4f06b00d2a",
+      "bytes": 1199
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/logs.json.gz",
+      "sha256": "a589134f456efd8825896e5f1c823530b13a278b711b797ae8479ee63e0d951e",
+      "git_blob": "140d9830a638d3d2dd76fbbdcc844b6f60e7b4dd",
+      "bytes": 502
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/protocol.json",
+      "sha256": "d41703c26b56952cef29e21d32a9b207795be0d27f809cf3c27a706c7111a51e",
+      "git_blob": "0cd3d9a6d5bbc704658d13f8acad13f521227949",
+      "bytes": 672
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/runtime_protocol.json",
+      "sha256": "d41703c26b56952cef29e21d32a9b207795be0d27f809cf3c27a706c7111a51e",
+      "git_blob": "0cd3d9a6d5bbc704658d13f8acad13f521227949",
+      "bytes": 672
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/.hydra/config.yaml",
+      "sha256": "ea0b013add957f619cfa751084e79510ed279be1c87e6b038655558a0a23968a",
+      "git_blob": "0c5ac4d9cefbf17c4881c8b51b92640cea0a2c98",
+      "bytes": 2082
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/.hydra/overrides.yaml",
+      "sha256": "675dd6771f7dbc52331c75fedbff7f81613fb0cd7a3851429c651fe3ca145877",
+      "git_blob": "080e8df591ff05500c15f53d27ff0be07ec98b87",
+      "bytes": 831
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/final_eval_results.npz",
+      "sha256": "68305753620745c495155c6dd9ce9b9239b8786199d4d8363bb42fd513741fa0",
+      "git_blob": "555ee6334d05972dd27624846ea247950df2f9ea",
+      "bytes": 58186
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "git_blob": "f5258bef6b098ff2aa549c3f493eb6a23bd775cd",
+      "bytes": 196
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/launch_command.json",
+      "sha256": "6167f8a04f3b54bfc21bd7e0a7ef37343c44271bfbcd75a3551fe0fa17fc79bb",
+      "git_blob": "420ab68e1e282d32d186209161f353c8d4853e93",
+      "bytes": 1183
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/logs.json.gz",
+      "sha256": "61c560d94fbb042866e13e86d508ff9c425eca183398a4156884d3f21d6a17e4",
+      "git_blob": "98ebf108f103a9a221b436abd34ad3039ab6cd71",
+      "bytes": 503
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/protocol.json",
+      "sha256": "184666801a4cb4572ae1f37d9e8f97d2ef8517a73b4a2601fb3b4d75c4ffb5d7",
+      "git_blob": "85124910351fa97126d3dc6cab77e50b25414a50",
+      "bytes": 666
+    },
+    {
+      "path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/runtime_protocol.json",
+      "sha256": "184666801a4cb4572ae1f37d9e8f97d2ef8517a73b4a2601fb3b4d75c4ffb5d7",
+      "git_blob": "85124910351fa97126d3dc6cab77e50b25414a50",
+      "bytes": 666
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "before": {
+    "total_reference_targets": 82,
+    "main_reference_targets": 33,
+    "main_to_appendix_targets": 16,
+    "main_to_appendix_labels": [
+      "sec:properties",
+      "sec:implementation",
+      "tab:dinowm-aug",
+      "tab:training",
+      "tab:maze-controls",
+      "tab:memory-strength",
+      "tab:action",
+      "tab:threshold-shape",
+      "tab:maze-controls",
+      "tab:maze-full",
+      "sec:cost",
+      "fig:push-distance",
+      "sec:behavior",
+      "tab:pusht-ecp",
+      "tab:extra-baselines",
+      "tab:lewm-contact"
+    ],
+    "missing_labels": []
+  },
+  "after": {
+    "total_reference_targets": 82,
+    "main_reference_targets": 33,
+    "main_to_appendix_targets": 16,
+    "main_to_appendix_labels": [
+      "sec:properties",
+      "sec:implementation",
+      "tab:dinowm-aug",
+      "tab:training",
+      "tab:maze-controls",
+      "tab:memory-strength",
+      "tab:action",
+      "tab:threshold-shape",
+      "tab:maze-controls",
+      "tab:maze-full",
+      "sec:cost",
+      "fig:push-distance",
+      "sec:behavior",
+      "tab:pusht-ecp",
+      "tab:extra-baselines",
+      "tab:lewm-contact"
+    ],
+    "missing_labels": []
+  },
+  "settings_parameter_table_references": 0,
+  "pdf_internal_links_checked": 368,
+  "invalid_pdf_internal_links": 0,
+  "named_destinations": 179,
+  "label_destinations_checked": 76,
+  "headline_and_trajectory_figures_unchanged": true,
+  "bibliography_unchanged": true,
+  "body_pages": 8,
+  "main_submission_pages": 10,
+  "supplementary_pages": 12,
+  "curve_ylim": [
+    0.3,
+    1.2
+  ],
+  "visible_band_max": 1.1145960313817478,
+  "visible_band_min": 0.35061528775685197,
+  "uncertainty_bands_unclipped": true,
+  "curve_height": 2.35,
+  "xlabel": "Number of pushes",
+  "unchanged_aggregate_data": true,
+  "split_pdf_pixels_and_links_valid": true
+}

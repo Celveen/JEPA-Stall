@@ -1,0 +1,53 @@
+% !TeX program = pdflatex
+% Verified with pdfLaTeX; the eight-page limit applies before the LLM statement and references.
+% Official CVPR 2027 author kit, tag CVPR2027-v1.
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[review]{cvpr}
+\input{preamble}
+\def\confName{CVPR}
+\def\confYear{2027}
+\title{When World Models Stall:\\Execution-Conditioned Planning in Latent Space}
+\author{Anonymous CVPR submission}
+\begin{document}
+\maketitle
+\suppressfloats[t]
+
+\input{sections/abstract}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig0_headline.pdf}
+\caption{\textbf{Data augmentation and ECP improve PushObj success.} Success (\%) on 350 tasks (50 per shape), with 150 controls and the original evaluation seed. Frozen fixes a pretrained ResNet; AdaJEPA updates it online. Base data uses released ResNet weights or random-data LeWM training; augmentation adds noisy contact interactions. Brackets show the combined gain in task success, measured in percentage points (pp).}
+\label{fig:headline}
+\end{figure}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.90\textwidth]{figures/fig1_trajectory_cases.pdf}
+\caption{\textbf{ECP resolves local stalls in four episodes.} Brown native paths fail; teal ECP paths succeed within 30 replans. Frozen fixes a pretrained ResNet; AdaJEPA updates it online. Center plots enlarge boxed intervals; $\Delta x,\Delta y$ are displacements in pixels (px) or world units (u). Dots mark five-control blocks. Circles/stars mark starts/goals, crosses/diamonds mark failure/success, and numbers count replans.}
+\label{fig:teaser}
+\end{figure*}
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/method}
+\input{sections/experiments}
+\begingroup
+\raggedbottom
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{9pt plus 2pt minus 2pt}
+\input{sections/analysis}
+\input{sections/conclusion}
+\clearpage
+\endgroup
+\flushbottom
+\section*{LLM Usage Statement}
+ChatGPT assisted with manuscript revision, error checking, and language polishing, as well as the organization of experimental logs and code debugging.
+
+{\small
+\bibliographystyle{ieeenat_fullname}
+\bibliography{references}}
+\label{page:lastreferences}
+\ifdefined\NoAppendix\else
+\clearpage
+\appendix
+\input{sections/appendix}
+\fi
+\end{document}

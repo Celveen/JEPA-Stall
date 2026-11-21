@@ -1,0 +1,149 @@
+{
+  "status": "complete",
+  "base_seed": 100,
+  "previous_seed": 99,
+  "samples_per_condition": 20,
+  "formal_episodes": 80,
+  "maximum_pushes": 20,
+  "success_rule": "CD < 0.3",
+  "global_targets": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "conditions": {
+    "native3": {
+      "mean_cd": 0.5759073814299485,
+      "std_cd_across_targets": 0.8662531658810411,
+      "successes": 13,
+      "total_pushes": 235,
+      "S_trigger_events": 0,
+      "triggered_samples": 0,
+      "applied_samples": 0,
+      "used_trigger_memories": 0,
+      "used_fractional_strength_memories": 0,
+      "positive_penalty_evaluations": 0,
+      "elapsed_s_sum": 3170.286966901971
+    },
+    "fixed3": {
+      "mean_cd": 0.35421923369010627,
+      "std_cd_across_targets": 0.4892899084038693,
+      "successes": 16,
+      "total_pushes": 207,
+      "S_trigger_events": 39,
+      "triggered_samples": 10,
+      "applied_samples": 7,
+      "used_trigger_memories": 32,
+      "used_fractional_strength_memories": 0,
+      "positive_penalty_evaluations": 1798,
+      "elapsed_s_sum": 2803.2601848580525
+    },
+    "dynamic3": {
+      "mean_cd": 0.5762783126441102,
+      "std_cd_across_targets": 0.8536400748629287,
+      "successes": 12,
+      "total_pushes": 237,
+      "S_trigger_events": 51,
+      "triggered_samples": 9,
+      "applied_samples": 8,
+      "used_trigger_memories": 47,
+      "used_fractional_strength_memories": 2,
+      "positive_penalty_evaluations": 3074,
+      "elapsed_s_sum": 3213.164971135033
+    },
+    "fixed3_nowarm": {
+      "mean_cd": 0.3033245709204382,
+      "std_cd_across_targets": 0.40600012347928244,
+      "successes": 16,
+      "total_pushes": 223,
+      "S_trigger_events": 51,
+      "triggered_samples": 10,
+      "applied_samples": 8,
+      "used_trigger_memories": 47,
+      "used_fractional_strength_memories": 0,
+      "positive_penalty_evaluations": 4691,
+      "elapsed_s_sum": 2907.716501724848
+    }
+  },
+  "paired_vs_native3": {
+    "fixed3": {
+      "mean_cd_delta": -0.22168814773984216,
+      "lower_cd": 9,
+      "higher_cd": 11,
+      "gained_successes": 3,
+      "lost_successes": 0
+    },
+    "dynamic3": {
+      "mean_cd_delta": 0.0003709312141618182,
+      "lower_cd": 7,
+      "higher_cd": 12,
+      "gained_successes": 1,
+      "lost_successes": 2
+    },
+    "fixed3_nowarm": {
+      "mean_cd_delta": -0.27258281050951033,
+      "lower_cd": 10,
+      "higher_cd": 10,
+      "gained_successes": 3,
+      "lost_successes": 0
+    }
+  },
+  "seed99_comparison": {
+    "native3": {
+      "previous_mean_cd": 0.7546801521887649,
+      "new_mean_cd": 0.5759073814299485,
+      "mean_cd_delta": -0.17877277075881648,
+      "previous_successes": 10,
+      "new_successes": 13
+    },
+    "fixed3": {
+      "previous_mean_cd": 0.6112380077540654,
+      "new_mean_cd": 0.35421923369010627,
+      "mean_cd_delta": -0.2570187740639592,
+      "previous_successes": 13,
+      "new_successes": 16
+    },
+    "dynamic3": {
+      "previous_mean_cd": 0.5151827050870776,
+      "new_mean_cd": 0.5762783126441102,
+      "mean_cd_delta": 0.06109560755703258,
+      "previous_successes": 12,
+      "new_successes": 12
+    },
+    "fixed3_nowarm": {
+      "previous_mean_cd": 0.5833716809067212,
+      "new_mean_cd": 0.3033245709204382,
+      "mean_cd_delta": -0.280047109986283,
+      "previous_successes": 13,
+      "new_successes": 16
+    }
+  },
+  "audit": {
+    "paired_targets_exact": true,
+    "unchanged_targets_vs_seed99": true,
+    "same_frozen_model": true,
+    "official_encoder_verified": true,
+    "same_planner_core_as_seed99": true,
+    "all_actual_frames_saved": true,
+    "independent_physics": true
+  },
+  "fixed_dynamic_strength_contrast_exercised": true,
+  "action_difference_limit": "Independent physics may diverge before S; action differences alone are not all attributable to the intervention."
+}

@@ -1,0 +1,157 @@
+{
+  "source_repository": "https://github.com/Celveen/SE-JEPA",
+  "source_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "search_remote_refs": [
+    "refs/remotes/origin/ablation/no-familiarity-read-write 3faad041417c6f2a22df2ad62822c34fd075c4bb",
+    "refs/remotes/origin/baselines d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+    "refs/remotes/origin/codex/paper-revision-2026-11-05 8dd9aa39db4e309ca01562940f9ae0bbd8c02889",
+    "refs/remotes/origin/codex/results-dinowm-complete-20261110 8b5f9f6b3ccef3d7b2e356f8f15a2f6520f67fcd",
+    "refs/remotes/origin/codex/results-dreamerv3-iris-pushobj-20261110 31f9b34a3b46ef287e9a764b6d1fbef20b9e24f0",
+    "refs/remotes/origin/codex/results-rope-granular-crossdomain-20261111 02d1f525ff099addfcd03890ddfa94ce4bbb6315",
+    "refs/remotes/origin/cudagraph-gd aa397f3f551a8fe5b8015e18514f78c2a2956a98",
+    "refs/remotes/origin/main 1ac689926e1d9b3ddc40b398c4b36cdd963fbbee",
+    "refs/remotes/origin/paper-ready b05d49ccf8817fd21b9cd1b5398aff8bbe1ae329",
+    "refs/remotes/origin/reports-pack 8fee1af0de40fe912251655d7f91c30a3e3c0189",
+    "refs/remotes/origin/results ef134eef56ec2143cd2fd96bbfdd51adac60a3ad",
+    "refs/remotes/origin/results-shape-v6a 53c1dffc79362b247b5a2df2d39820270dd51846",
+    "refs/remotes/origin/rope-cl 040ba0eb1fa7fe09960633aa09f3fac4ec09ac73"
+  ],
+  "missing_clean": [
+    "R3M",
+    "DINO CLS",
+    "DDP-WM"
+  ],
+  "searched_report_archive_members": 91,
+  "condition_order": [
+    "blur",
+    "snp",
+    "dark",
+    "red_agent",
+    "red_object",
+    "red_goal"
+  ],
+  "rows": {
+    "r3m": {
+      "success_percent": [
+        30,
+        16,
+        2,
+        32,
+        32,
+        18
+      ],
+      "mean_percent": 21.666666666666668,
+      "paired_initial_and_goal_states_match": true
+    },
+    "dino_cls": {
+      "success_percent": [
+        30,
+        16,
+        56,
+        42,
+        22,
+        42
+      ],
+      "mean_percent": 34.666666666666664,
+      "paired_initial_and_goal_states_match": true
+    }
+  },
+  "sources": {
+    "provenance/additional_baselines/r3m/blur/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/blur/final_eval_results.npz",
+      "sha256": "c362dc7080949ec94c585bb8d57523963286a021a41f0bfedd41447eef33646d"
+    },
+    "provenance/additional_baselines/r3m/blur/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/blur/.hydra/config.yaml",
+      "sha256": "a73dba6c540e721490107faf84a892c35b89d9e1162b6a3f0f41fe1cfbf0c810"
+    },
+    "provenance/additional_baselines/r3m/snp/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/snp/final_eval_results.npz",
+      "sha256": "c70f5351b387de2de54162c91005233389cd98bfc2cd7f3da95a912f4763cd40"
+    },
+    "provenance/additional_baselines/r3m/snp/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/snp/.hydra/config.yaml",
+      "sha256": "17ab55c7e01891eb541f4185e8b420b1386cfb20760bce85a38ce8b0364f257a"
+    },
+    "provenance/additional_baselines/r3m/dark/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/dark/final_eval_results.npz",
+      "sha256": "e738f5c90c533048138a80200da6a69d879f8e41676e704d67782bf31b29ccc3"
+    },
+    "provenance/additional_baselines/r3m/dark/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/dark/.hydra/config.yaml",
+      "sha256": "ddbf27d0af34bc2ab6c6fbd998e7a6182ea2ef0b870ac55c47d9d7aec2926961"
+    },
+    "provenance/additional_baselines/r3m/red_agent/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/red_agent/final_eval_results.npz",
+      "sha256": "13a20cae0126f369ed16a0ccc8581ae288ddf3ef620f4e7682fe8c19a252f2bd"
+    },
+    "provenance/additional_baselines/r3m/red_agent/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/red_agent/.hydra/config.yaml",
+      "sha256": "2c521528fe4850e8b7a918740757e5ab8bc6d5d6478e74f80335dcdb3478d40f"
+    },
+    "provenance/additional_baselines/r3m/red_object/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/red_object/final_eval_results.npz",
+      "sha256": "1ac1dc583e4b431ce2e30ad4e8ced1461665dd67aaa1497e8f72480a641fb7b6"
+    },
+    "provenance/additional_baselines/r3m/red_object/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/red_object/.hydra/config.yaml",
+      "sha256": "07d374646ef9cd4111db92078c39da737633622d675c60b96579966e902a7e42"
+    },
+    "provenance/additional_baselines/r3m/red_goal/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/red_goal/final_eval_results.npz",
+      "sha256": "305a84ef740f648504fe9fa59968890eca55f0ab1057999956416a8ea705caa9"
+    },
+    "provenance/additional_baselines/r3m/red_goal/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/r3m_VIS50/red_goal/.hydra/config.yaml",
+      "sha256": "ebaa10e693bf7135fbcf915e1c6a718b1f276c768157aa62883c042f574f8eee"
+    },
+    "provenance/additional_baselines/dino_cls/blur/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/blur/final_eval_results.npz",
+      "sha256": "6f96284b5c631299a54d6fe8fcd261f5914aab6b4d5804659641aad5c4351815"
+    },
+    "provenance/additional_baselines/dino_cls/blur/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/blur/.hydra/config.yaml",
+      "sha256": "3fd380c71752cc690739ddcb2e1f13bbcf6873aacd4a99d6f9c9e068b5c7a713"
+    },
+    "provenance/additional_baselines/dino_cls/snp/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/snp/final_eval_results.npz",
+      "sha256": "ce4edd2b5d863617989dee7ccba1d65f10142b99ce6e98e698e2aa818938329d"
+    },
+    "provenance/additional_baselines/dino_cls/snp/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/snp/.hydra/config.yaml",
+      "sha256": "4b8d95fad11b13616612375d1e4f12ed7f2009666725cd7fde549c490ec5b3a9"
+    },
+    "provenance/additional_baselines/dino_cls/dark/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/dark/final_eval_results.npz",
+      "sha256": "0294044b2a99b8e17f75e74e86e84f36a53d644daebce9b9d68b0881f3f734ca"
+    },
+    "provenance/additional_baselines/dino_cls/dark/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/dark/.hydra/config.yaml",
+      "sha256": "76f9b5477eabcece189e7e9ff6c55754a57d8a7f3a98277a35a8f670f23ea7f6"
+    },
+    "provenance/additional_baselines/dino_cls/red_agent/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/red_agent/final_eval_results.npz",
+      "sha256": "2b23d1875434f3e57b9edc2620f5512ffec22cb1f8af96ab257831c7cb104496"
+    },
+    "provenance/additional_baselines/dino_cls/red_agent/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/red_agent/.hydra/config.yaml",
+      "sha256": "a03b58b5c9a65e02dbe22275e08419d7d61d100431896a98b92f1a2ecf9776ba"
+    },
+    "provenance/additional_baselines/dino_cls/red_object/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/red_object/final_eval_results.npz",
+      "sha256": "12fdad89d5a4279a526af1bd3f1b8652277e88fe2dec5d24b82947764eb4754a"
+    },
+    "provenance/additional_baselines/dino_cls/red_object/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/red_object/.hydra/config.yaml",
+      "sha256": "bee20265994f0836bd8b4ef243cec91d1959f4b6b7ec869adb334e0613a57217"
+    },
+    "provenance/additional_baselines/dino_cls/red_goal/final_eval_results.npz": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/red_goal/final_eval_results.npz",
+      "sha256": "1c294382576f98ff4ddf11fe012ca6befa5bbf1c47557f4cabbbe91b38dbd795"
+    },
+    "provenance/additional_baselines/dino_cls/red_goal/config.yaml": {
+      "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_VIS50/red_goal/.hydra/config.yaml",
+      "sha256": "52c0d025d7b1ceabacf128395def51320c24ea65b7884b876fa83640a75c0f63"
+    }
+  }
+}

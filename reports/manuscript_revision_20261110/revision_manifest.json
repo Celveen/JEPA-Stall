@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-10",
+  "reference_abstract": {
+    "repository": "Celveen/SE-JEPA",
+    "branch": "codex/paper-revision-2026-11-05",
+    "commit": "676c23a5161fd72d21a8d180c6b52feafb97faac",
+    "file": "paper/SE_JEPA_CVPR2027_Overleaf/sec/0_abstract.tex"
+  },
+  "abstract_words": 163,
+  "result_placement": "last two sentences",
+  "sota_scope": "new state of the art on the evaluated PushT visual-shift benchmark",
+  "method_equations_before": 11,
+  "method_equations_after": 8,
+  "equations_converted_to_prose_or_inline": [
+    "eq:timeweights",
+    "eq:boost",
+    "eq:collection"
+  ],
+  "native_figure_layout_preserved": true,
+  "figure3_gray_palette": {
+    "#4f6657": "#293640",
+    "#eef2ee": "#f6f5f2",
+    "#dae4db": "#d7d5cf"
+  },
+  "drawio_native_elements": {
+    "shapes": 28,
+    "edges": 20,
+    "text": 37,
+    "embedded_simulator_images": 6
+  },
+  "figure3_pdf_page_1_based": 4,
+  "build_report": {
+    "abstract_words_whitespace": 163,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 10,
+    "combined_pages": 20,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
+  },
+  "outputs": {
+    "delivery/Abstract.txt": "8862e224203b626ed579b0ca859b0e0a776697b0f16e834c9108e9c251cdb8d5",
+    "delivery/Figure3.drawio": "cf43eb943b2a09cd7a0b03b4f37057a110d3dc39c2c25e70e3ef57dceba3eb6c",
+    "delivery/CVPR2027_Preview.pdf": "8fb6d3c488d0f618239fade26d0e3d7e6166926be114e05ea492460702f60bbc",
+    "delivery/CVPR2027_Overleaf.zip": "a7363941b9a242050b2b4b7234886ca83bdbcd3bce93095585cf1c21d0722712",
+    "paper/cvpr2027/paper_v14.pdf": "8fb6d3c488d0f618239fade26d0e3d7e6166926be114e05ea492460702f60bbc",
+    "paper/cvpr2027/paper_source_v14.zip": "49c992ff64e0a773ddcd6f04077c778a74d289036442d366f5b084eead24f613"
+  },
+  "experiment_settings_changed_by_manuscript_revision": false,
+  "original_source_package_members_preserved": true,
+  "abstract_revision": "problem, method and advantages, then results; no experiment-design detail",
+  "backbone_statement": "architecture/interface compatibility without additional learned parameters",
+  "reported_adajepa_gain": {
+    "task": "PushObj",
+    "gain_percentage_points": 7.4,
+    "baseline_successes": 243,
+    "full_method_successes": 269,
+    "tasks": 350,
+    "scope": "interaction-biased training plus ECP"
+  }
+}

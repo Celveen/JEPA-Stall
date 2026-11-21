@@ -1,0 +1,190 @@
+{
+  "revision": 12,
+  "source": "replayed_paths_v12.json",
+  "figure2_case_keys": [
+    "I",
+    "maze_frozen",
+    "pushobj_ada",
+    "maze_ada"
+  ],
+  "figure4_case_keys": [
+    "L",
+    "Z",
+    "T",
+    "plus",
+    "square",
+    "small_tee",
+    "maze_frozen_alt",
+    "maze_ada_alt"
+  ],
+  "shared_case_keys": [],
+  "shared_initial_goal_pairs": 0,
+  "paths": "solid physics replay",
+  "dots_every_controls": 5,
+  "inset_statistics": {
+    "I": {
+      "first_replan": 15,
+      "last_replan": 30,
+      "unit": "pixels",
+      "dense_samples": 751,
+      "extent_xy": [
+        11.831008674738008,
+        17.12636901554407
+      ],
+      "path_length": 505.38435870287543,
+      "net_displacement": 0.5353959405313736,
+      "reference_position": [
+        49.88557439051147,
+        184.5475732455357
+      ],
+      "scale": "equal x/y, linear",
+      "uses_dense_physics_states": true
+    },
+    "maze_frozen": {
+      "first_replan": 3,
+      "last_replan": 13,
+      "unit": "world units",
+      "dense_samples": 1001,
+      "extent_xy": [
+        0.21327097288371277,
+        0.8714687821802598
+      ],
+      "path_length": 10.28562706320431,
+      "net_displacement": 0.2149301766447653,
+      "reference_position": [
+        2.198492452473907,
+        2.7846615327649684
+      ],
+      "scale": "equal x/y, linear",
+      "uses_dense_physics_states": true
+    },
+    "pushobj_ada": {
+      "first_replan": 20,
+      "last_replan": 30,
+      "unit": "pixels",
+      "dense_samples": 501,
+      "extent_xy": [
+        40.81487986643009,
+        21.027963900440625
+      ],
+      "path_length": 509.59225891189067,
+      "net_displacement": 0.9890690334984408,
+      "reference_position": [
+        389.90028758848024,
+        323.7404029750856
+      ],
+      "scale": "equal x/y, linear",
+      "uses_dense_physics_states": true
+    },
+    "maze_ada": {
+      "first_replan": 7,
+      "last_replan": 30,
+      "unit": "world units",
+      "dense_samples": 2301,
+      "extent_xy": [
+        0.9528721655361965,
+        2.879973270592046
+      ],
+      "path_length": 45.08529480292709,
+      "net_displacement": 0.00031837731580596277,
+      "reference_position": [
+        4.401514160451444,
+        3.1985020368696375
+      ],
+      "scale": "equal x/y, linear",
+      "uses_dense_physics_states": true
+    }
+  },
+  "outputs": {
+    "figures/fig1_trajectory_cases.pdf": {
+      "sha256": "c20c8c20eee1989275c04d8ce5adf0e234ae0831bbaf9bcb95f3a519a4815664",
+      "size_inches": [
+        6.875,
+        3.38
+      ],
+      "rows": 2,
+      "simulation_panels": 8,
+      "text_collisions": 0
+    },
+    "figures/svg/fig1_trajectory_cases.svg": {
+      "sha256": "e07f69d6118f66213b824d2030b46253ea52a17888b392eb8000f3f9b6bc5ca1",
+      "size_inches": [
+        6.875,
+        3.38
+      ],
+      "rows": 2,
+      "simulation_panels": 8,
+      "text_collisions": 0
+    },
+    "figures/previews/fig1_trajectory_cases.png": {
+      "sha256": "fe83b303ba6dd2575c65d9fe0152515d425fb6fb7bb2ef79760cbcd8c1f0cab7",
+      "size_inches": [
+        6.875,
+        3.38
+      ],
+      "rows": 2,
+      "simulation_panels": 8,
+      "text_collisions": 0
+    },
+    "figures/fig5_execution_recovery.pdf": {
+      "sha256": "5e1774efcff85da00e8de9ef6981ba47239a14898e737f5ba94670e0e1622fd9",
+      "size_inches": [
+        6.875,
+        2.55
+      ],
+      "rows": 2,
+      "simulation_panels": 16,
+      "text_collisions": 0
+    },
+    "figures/svg/fig5_execution_recovery.svg": {
+      "sha256": "bef197140a9d0873bff7261a25e293ce03afec1fb8cc9a6286a92c67e1c6f68b",
+      "size_inches": [
+        6.875,
+        2.55
+      ],
+      "rows": 2,
+      "simulation_panels": 16,
+      "text_collisions": 0
+    },
+    "figures/previews/fig5_execution_recovery.png": {
+      "sha256": "ab8a3eeef8b31846a749cf877a0c97272fe6836159d15379b79a6656707eed14",
+      "size_inches": [
+        6.875,
+        2.55
+      ],
+      "rows": 2,
+      "simulation_panels": 16,
+      "text_collisions": 0
+    },
+    "figures/figS_diverse_execution_v12.pdf": {
+      "sha256": "cf109e49cc4d10e2e176c8611a837ac7503d2fc615ad21dea10827dd1a191ed4",
+      "size_inches": [
+        6.875,
+        7.1
+      ],
+      "rows": 6,
+      "simulation_panels": 44,
+      "text_collisions": 0
+    },
+    "figures/svg/figS_diverse_execution_v12.svg": {
+      "sha256": "c91fc2a9d922e2b60a2470ed8c272244b806ad181b42571c62fce130f2f6d3ca",
+      "size_inches": [
+        6.875,
+        7.1
+      ],
+      "rows": 6,
+      "simulation_panels": 44,
+      "text_collisions": 0
+    },
+    "figures/previews/figS_diverse_execution_v12.png": {
+      "sha256": "ccb6e1a89a232a1749dfed77e839d3495ccda78bb59f0b7534a022a8d7011d66",
+      "size_inches": [
+        6.875,
+        7.1
+      ],
+      "rows": 6,
+      "simulation_panels": 44,
+      "text_collisions": 0
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-11-10T02:51:32.070378+00:00",
+  "observed_main_run_plans": 55,
+  "mean_cem_seconds_per_plan": 6.264803413640369,
+  "median_cem_seconds_per_plan": 6.2466569896787405,
+  "maximum_cem_seconds_per_task_estimate": 37.58882048184221,
+  "search_only_full_queue_hours_at_cap": 2.9235749263655055,
+  "initial_elapsed_hours_estimate_including_overhead": [
+    3,
+    4
+  ],
+  "estimate_note": "Five main GPUs, 1400 condition-task evaluations; early success may shorten runs. Recalibrate after completed chunks."
+}

@@ -1,0 +1,238 @@
+{
+  "seeds": [
+    99,
+    100,
+    101
+  ],
+  "distinct_targets": 20,
+  "runs_per_method": 60,
+  "total_runs": 240,
+  "all_raw_metrics_and_configurations_verified": true,
+  "same_model_and_targets_verified": true,
+  "statistics": {
+    "native3": {
+      "mean_cd": 0.6864581634387983,
+      "successes": 33,
+      "success_percent": 55.0,
+      "mean_pushes": 12.683333333333334,
+      "runs": 60
+    },
+    "fixed3": {
+      "mean_cd": 0.4792646551396854,
+      "successes": 43,
+      "success_percent": 71.66666666666667,
+      "mean_pushes": 11.3,
+      "runs": 60
+    },
+    "dynamic3": {
+      "mean_cd": 0.572009625366295,
+      "successes": 38,
+      "success_percent": 63.333333333333336,
+      "mean_pushes": 11.683333333333334,
+      "runs": 60
+    },
+    "fixed3_nowarm": {
+      "mean_cd": 0.5517771725655668,
+      "successes": 42,
+      "success_percent": 70.0,
+      "mean_pushes": 12.05,
+      "runs": 60
+    }
+  },
+  "by_seed": [
+    {
+      "arm": "native3",
+      "seed": 99,
+      "mean_cd": 0.7546801521887649,
+      "successes": 10,
+      "mean_pushes": 14.35
+    },
+    {
+      "arm": "native3",
+      "seed": 100,
+      "mean_cd": 0.5759073814299485,
+      "successes": 13,
+      "mean_pushes": 11.75
+    },
+    {
+      "arm": "native3",
+      "seed": 101,
+      "mean_cd": 0.7287869566976812,
+      "successes": 10,
+      "mean_pushes": 11.95
+    },
+    {
+      "arm": "fixed3",
+      "seed": 99,
+      "mean_cd": 0.6112380077540654,
+      "successes": 13,
+      "mean_pushes": 12.6
+    },
+    {
+      "arm": "fixed3",
+      "seed": 100,
+      "mean_cd": 0.35421923369010627,
+      "successes": 16,
+      "mean_pushes": 10.35
+    },
+    {
+      "arm": "fixed3",
+      "seed": 101,
+      "mean_cd": 0.47233672397488463,
+      "successes": 14,
+      "mean_pushes": 10.95
+    },
+    {
+      "arm": "dynamic3",
+      "seed": 99,
+      "mean_cd": 0.5151827050870776,
+      "successes": 12,
+      "mean_pushes": 12.5
+    },
+    {
+      "arm": "dynamic3",
+      "seed": 100,
+      "mean_cd": 0.5762783126441102,
+      "successes": 12,
+      "mean_pushes": 11.85
+    },
+    {
+      "arm": "dynamic3",
+      "seed": 101,
+      "mean_cd": 0.624567858367697,
+      "successes": 14,
+      "mean_pushes": 10.7
+    },
+    {
+      "arm": "fixed3_nowarm",
+      "seed": 99,
+      "mean_cd": 0.5833716809067212,
+      "successes": 13,
+      "mean_pushes": 13.55
+    },
+    {
+      "arm": "fixed3_nowarm",
+      "seed": 100,
+      "mean_cd": 0.3033245709204382,
+      "successes": 16,
+      "mean_pushes": 11.15
+    },
+    {
+      "arm": "fixed3_nowarm",
+      "seed": 101,
+      "mean_cd": 0.7686352658695411,
+      "successes": 13,
+      "mean_pushes": 11.45
+    }
+  ],
+  "cd_reduction_percent": 30.182976812626304,
+  "push_reduction_percent": 10.906701708278577,
+  "pushes_definition": "All actual executions, successful and unsuccessful; stop at first CD < 0.3 or 20 pushes.",
+  "main_method": "Fixed memory strength 2 after five warm-up pushes; three-push prediction/execution with observation after every push.",
+  "source_hashes": {
+    "reports/rope_seeds99_100_101/summary.json": "5d2619c37b7f3540ce2877ea723cd4b7af57af08b924d9d35863ba0a7bf63eae",
+    "reports/rope_seeds99_100_101/aggregate.csv": "f3dd25d780856c0901919c1e3931c35f417e390426bec2f899b95b5cf5d99296",
+    "reports/rope_seeds99_100_101/action_summary.csv": "cfb9846927da079fa9a6b7c73b33f37ae2c0f7ec4ff7993fade621dcdc8df595",
+    "reports/rope_seeds99_100_101/action_comparisons.csv": "0f5489e12a4f1bc7e64e35a4c6580a0eaefaf200d4a8dab2454613ec12a59ec7",
+    "reports/rope_seeds99_100_101/paired_comparisons.csv": "587f0e19a011e2d267eb52eab50740bfce00c3dac31f105905f6863aa7ae1dfe",
+    "reports/rope_seeds99_100_101/by_seed.csv": "419d75ded1f1ba595d85e2d8c4d49f4c35a590777e9f897119d14f6631e33c19",
+    "reports/rope_seeds99_100_101/per_run.csv": "fe95a7261e21041e8eb6d89e66133f27c0c020603bac98ca2ff5bf7b7c043894"
+  },
+  "archive_and_identity_checks": {
+    "reports/rope_formal20_native3/native3_evidence.tar.gz": "f5c71d47472c928fd7a312bd27e7aaa6670eab82f2f81e90a24e41f12e0a0c4c",
+    "target_0": [
+      "7a21f11cac45ee0b7056d6921659b1bd2c8862892af19761fa60258a9348ba5c",
+      "9081114f15328a238f79823b2bf3691a53826ae747f7f418a9cce4236607c1e9"
+    ],
+    "model": [
+      "d8f0af314f651b6265bf33359f2b8a55b5cf05e58edacdf127780d28a4948515",
+      "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9"
+    ],
+    "target_1": [
+      "09763c248dd0bd1f621df649a8c53ef9735254a19a06ae8157634dfb0491c81d",
+      "21333e0e57d7d99dff0f08cd46839492f599d5dbe65bc90f0465d4243e2d5615"
+    ],
+    "target_2": [
+      "7af9376a25b976971c0f1690bef9f1f101a343b88c24491e64c4e54db8f17fde",
+      "9a78fe300fe600a85aace0f12ccb4a038d9dd1c3fd406f8e41cd98ba057784a3"
+    ],
+    "target_3": [
+      "d5b70c82c0d75600c4204ca8b2bf9a8da65bfe7b151465886b67d6e7be49d9c7",
+      "32c22a4cbc444956c10e94700620c28eadfa085c9ce7e2887269b539a07dac7c"
+    ],
+    "target_4": [
+      "91c265e2fc76814965300c92272677f4c9f5616dc58bf2fd6c1501b77293aeb6",
+      "a19edfa8fe7a15d3a37830c39deb420d48a251f33f90fbab93d21589eae06cd1"
+    ],
+    "target_5": [
+      "ac6ee73607a983002b4bbddedc200c7b4fdb7918281193c76015a1ffbe7c385e",
+      "c50fc801c6b65fb4c9cb1f1748c56038e5ab552fde5eadeea56057c608fc30e0"
+    ],
+    "target_6": [
+      "15e46687de17fe648f67d5a5d1bd166503d8982cdb03c2346918452c67842d9c",
+      "be74e34eebc1d4f04c54582d1d2f07db138125d874e8e7454f1cda7f76e2b353"
+    ],
+    "target_7": [
+      "b27de7401dd03042026667f75879f7b441ac03cb028239564cd2b63562be124d",
+      "f0115bcb4e321ce81cea7c4c597e802c83a6feae254d0b1d862a04e28bedbc7a"
+    ],
+    "target_8": [
+      "917f8b2f099c86a043f070f2939a478b4be7cd3b436239e98a792ae6f7b0430b",
+      "568fb9219f8b8cd29fbd1c431e018c63eb3282a862a3742bc2692329d92fe4ce"
+    ],
+    "target_9": [
+      "8b104fe29d7841130d61c0a1cb984cfa9eaae6afdb38ec2a9ed192b65699a2ea",
+      "6a3a385f556bb6a70aa2decbd894e2e0aa9420c099df16744739475602d1ab26"
+    ],
+    "target_10": [
+      "38eaeb360601eb5340319c268b7a80b3c57d2d3c861f458c373f6b5f58bbbf83",
+      "07ba8fcb8edd491d1c522dcac36a36fb6a3d4353cd6e2e1f9c2d89073e958916"
+    ],
+    "target_11": [
+      "b4fcf81552b89ccd34c2bf4199168bcc0aece9ffbbff622be66d03d9f7bcd87f",
+      "99b6dd320e107dc48c95683cdae5c4e7cb64452ba0a819dd5d84a820d4b2870c"
+    ],
+    "target_12": [
+      "dd02689c478e282ea3198d117f7058f6122895420cce4e4e0b3a6cb1a7468afa",
+      "f13cbd23da4cb5f2180fc7d4c1ccb118b9b5bf872f04c364dfddc3c5e57622ef"
+    ],
+    "target_13": [
+      "9cae8d443bc47e41eb8323da233f7647200234cafe65f0a66a51f3f7d37c33f8",
+      "b653ca58079095f8bc03f5a70fcb9f2ac25db0a0dbac4e375589b7d6cda22017"
+    ],
+    "target_14": [
+      "bd5cee707e7b914299b0e0a75ea5e622567dc078fceb6cce331f2a78ea376ed5",
+      "4b00bc908066e8e9faacc2ba966564aa9f97bfe39caf49860ef33d121715d281"
+    ],
+    "target_15": [
+      "460ccfdd2b004ac704da27cde1a0c9dad7f99da5dfc9e75fb5ed9f487ac79a47",
+      "61b03530b9f267aa3459096d1e9c656a36019f1fc20a55e4e62c6aab6c51d307"
+    ],
+    "target_16": [
+      "3cb1d829ab0bd87637bd30e58348eeb01ff674fe9f615685697ee8ac21b146b8",
+      "76e36a8f1f0df5b9263e9ba6572331a2420b363fbcb87c06700774eb64f1a7a5"
+    ],
+    "target_17": [
+      "a4c8906ae28bef2cb9ecb89d6387a90487c74d467299545f6f187bee365dc96e",
+      "63ac64b00a0832f957d18f3bce482d3212604111c9133c0287e5bb36d0085ca7"
+    ],
+    "target_18": [
+      "4a8cb4e8ccbe4dac738e89bc4d468265f98a531b1e54a1fb14cedda59e7e35f7",
+      "e96c48e61dda2027c5fc0b42d446519d9a424d7b1309469b83e15e339f620544"
+    ],
+    "target_19": [
+      "075350153f1c7234d11d9691c507085a02ac6979dbf331ffa226d63e3d4213f6",
+      "c69122899e794428d39ce34be806a188d5d4d48730d9cfccb4eb50c05200993a"
+    ],
+    "reports/rope_formal20/evidence.tar.gz": "7869a8cd8c8064fbbc79f4edbca77608b78bcdef4f52d4c6a56ec9d6320fe490",
+    "reports/rope_seed100_20/native3_evidence.tar.gz": "0a0b95a3471fa7fdfa68f3e1cd75333b4ef23787a467c1a49e0c99dcf2de29af",
+    "reports/rope_seed100_20/fixed3_evidence.tar.gz": "4c21098de0897175552a319a7f60bbb5e9163632d1217f0feca5c5ff8d8d1ccd",
+    "reports/rope_seed100_20/dynamic3_evidence.tar.gz": "05dc219095399dcbbad08d8064bf4998078977f0948d810fd44d4f9621ab2ecc",
+    "reports/rope_seed100_20/fixed3_nowarm_evidence.tar.gz": "e02be6356293a56c3519d6bf99043f0ba833b42444720b28bd75a05e8b7a8061",
+    "reports/rope_seed101_20/native3_evidence.tar.gz": "a358914156f1cb4ac05ecbecd67a1b5a2a5e445bbb9e51936f74f2157250636f",
+    "reports/rope_seed101_20/fixed3_evidence.tar.gz": "c1e68ccd3878d8640599f9f3523415590d0d6f2b5b562bfdbaf59935b5cbc710",
+    "reports/rope_seed101_20/dynamic3_evidence.tar.gz": "1d3ed7fd469a8fe0d39dc47e55ecc067458b7a15c6d35b4bce280a282ba7e93e",
+    "reports/rope_seed101_20/fixed3_nowarm_evidence.tar.gz": "20565167354d1f68f9141f50a896b5e3ab3c770cf6f4d0109157823f222c9255"
+  },
+  "new_experiments_run": false
+}

@@ -1,0 +1,30 @@
+{
+  "pid": 161096,
+  "gpu": 4,
+  "command": [
+    "/home/appuser/anaconda3/envs/ts/bin/python",
+    "-u",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/evaluate.py",
+    "--repo",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+    "--checkpoint",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/ordinary",
+    "--epoch",
+    "3",
+    "--n-evals",
+    "1",
+    "--targets",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_10_square/targets.pkl",
+    "--output",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_10_square",
+    "--precision",
+    "fp32",
+    "--candidate-batch",
+    "64",
+    "--validation-replans",
+    "6",
+    "--memory-limit-gib",
+    "8"
+  ],
+  "started_utc": "2026-11-10T02:56:42.559492+00:00"
+}

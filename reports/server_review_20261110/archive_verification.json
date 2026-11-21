@@ -1,0 +1,293 @@
+{
+  "checked_utc": "2026-11-10T08:35:52.194509+00:00",
+  "new_experiments_started": false,
+  "archives_verified": [
+    {
+      "path": "reports/publication_v14/archives/pusht_visual_complete.tar.gz",
+      "sha256": "77e4d0956f96ea4eb0d93a58d0570dcdb1be34c6358ae6b0601d52187a0e5049",
+      "bytes": 26407201,
+      "passed": true
+    },
+    {
+      "path": "reports/publication_v14/archives/maze_frozen_complete.tar.gz",
+      "sha256": "8b5d928c1d34f3668020129efd074306eab43abc30b744aab02c0577992f6eb9",
+      "bytes": 1526004,
+      "passed": true
+    },
+    {
+      "path": "reports/publication_v14/archives/dinowm_pushobj_training_and_validation.tar.gz",
+      "sha256": "c3769ee12d68e72b1abd6f5c02f33522a96a4866ff78f17917f30de81e8f168c",
+      "bytes": 500858,
+      "passed": true
+    },
+    {
+      "path": "reports/publication_v14/archives/dinowm_pushobj_v3_progress.tar.gz",
+      "sha256": "5e60a6546b5f3cdd43c56146c528a73bcc7dc8f3a2a794729f13141307552471",
+      "bytes": 3274688,
+      "passed": true
+    },
+    {
+      "path": "reports/publication_v14/archives/dinowm_superseded_evaluations.tar.gz",
+      "sha256": "6142df0a3090b14aa0d66791178f8fc95d7295c7480ee4cb30aa7a61828a4619",
+      "bytes": 485432,
+      "passed": true
+    },
+    {
+      "path": "reports/publication_v14/archives/main_pushobj_frozen.tar.gz",
+      "sha256": "10ae6bb63556ed53c2f5382427929542a7e6af2713da5828ac0a498f799400dc",
+      "bytes": 47584726,
+      "passed": true
+    },
+    {
+      "path": "reports/publication_v14/archives/main_pushobj_adajepa.tar.gz",
+      "sha256": "ec9d7e29df18899f3791a5600e6d2973e2869239acd34aa27d26898ae43238e4",
+      "bytes": 24500424,
+      "passed": true
+    },
+    {
+      "path": "reports/publication_v14/archives/main_maze_and_additional_controls.tar.gz",
+      "sha256": "b8f515d1628b3638f08bfc3961623073ea59c85df232e6110d6f4345f28609b6",
+      "bytes": 57584836,
+      "passed": true
+    }
+  ],
+  "pusht": {
+    "jobs": 56,
+    "episode_runs": 2800,
+    "all_primary_targets_equal": true,
+    "paired_episodes_verified": 1400,
+    "pairs": [
+      {
+        "id": "released/clean/seed100/frozen_ecp",
+        "native_successes": 30,
+        "ecp_successes": 34,
+        "rescues": 4,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/clean/seed100/adajepa_ecp",
+        "native_successes": 41,
+        "ecp_successes": 42,
+        "rescues": 1,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/clean/seed100/frozen_ecp",
+        "native_successes": 36,
+        "ecp_successes": 41,
+        "rescues": 5,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/clean/seed100/adajepa_ecp",
+        "native_successes": 43,
+        "ecp_successes": 43,
+        "rescues": 0,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/redBlock/seed100/frozen_ecp",
+        "native_successes": 5,
+        "ecp_successes": 5,
+        "rescues": 0,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/redBlock/seed100/adajepa_ecp",
+        "native_successes": 5,
+        "ecp_successes": 5,
+        "rescues": 0,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/redBlock/seed100/frozen_ecp",
+        "native_successes": 6,
+        "ecp_successes": 6,
+        "rescues": 1,
+        "regressions": 1,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/redBlock/seed100/adajepa_ecp",
+        "native_successes": 8,
+        "ecp_successes": 9,
+        "rescues": 1,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/redAnchor/seed100/frozen_ecp",
+        "native_successes": 18,
+        "ecp_successes": 19,
+        "rescues": 1,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/redAnchor/seed100/adajepa_ecp",
+        "native_successes": 20,
+        "ecp_successes": 20,
+        "rescues": 0,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/redAnchor/seed100/frozen_ecp",
+        "native_successes": 9,
+        "ecp_successes": 17,
+        "rescues": 8,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/redAnchor/seed100/adajepa_ecp",
+        "native_successes": 21,
+        "ecp_successes": 21,
+        "rescues": 1,
+        "regressions": 1,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/redAgent/seed100/frozen_ecp",
+        "native_successes": 28,
+        "ecp_successes": 28,
+        "rescues": 0,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/redAgent/seed100/adajepa_ecp",
+        "native_successes": 30,
+        "ecp_successes": 31,
+        "rescues": 1,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/redAgent/seed100/frozen_ecp",
+        "native_successes": 28,
+        "ecp_successes": 34,
+        "rescues": 6,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/redAgent/seed100/adajepa_ecp",
+        "native_successes": 32,
+        "ecp_successes": 34,
+        "rescues": 2,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/blur/seed100/frozen_ecp",
+        "native_successes": 25,
+        "ecp_successes": 28,
+        "rescues": 3,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/blur/seed100/adajepa_ecp",
+        "native_successes": 38,
+        "ecp_successes": 40,
+        "rescues": 2,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/blur/seed100/frozen_ecp",
+        "native_successes": 29,
+        "ecp_successes": 36,
+        "rescues": 7,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/blur/seed100/adajepa_ecp",
+        "native_successes": 41,
+        "ecp_successes": 43,
+        "rescues": 2,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/snp/seed100/frozen_ecp",
+        "native_successes": 30,
+        "ecp_successes": 30,
+        "rescues": 0,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/snp/seed100/adajepa_ecp",
+        "native_successes": 38,
+        "ecp_successes": 39,
+        "rescues": 1,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/snp/seed100/frozen_ecp",
+        "native_successes": 31,
+        "ecp_successes": 35,
+        "rescues": 4,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/snp/seed100/adajepa_ecp",
+        "native_successes": 40,
+        "ecp_successes": 40,
+        "rescues": 0,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/dark/seed100/frozen_ecp",
+        "native_successes": 26,
+        "ecp_successes": 29,
+        "rescues": 3,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "released/dark/seed100/adajepa_ecp",
+        "native_successes": 38,
+        "ecp_successes": 40,
+        "rescues": 2,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/dark/seed100/frozen_ecp",
+        "native_successes": 35,
+        "ecp_successes": 39,
+        "rescues": 4,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      },
+      {
+        "id": "augmented/dark/seed100/adajepa_ecp",
+        "native_successes": 43,
+        "ecp_successes": 44,
+        "rescues": 1,
+        "regressions": 0,
+        "pretrigger_pairs_verified": 50
+      }
+    ]
+  },
+  "dinowm_v3_historical_snapshot": {
+    "archived_complete_chunks": 92,
+    "later_status_file_completed_chunks": 94,
+    "total_chunks": 140,
+    "later_status_updated_utc": "2026-11-10T04:28:22.066878+00:00",
+    "original_host_current_state_checked": false
+  }
+}

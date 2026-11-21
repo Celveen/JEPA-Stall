@@ -1,0 +1,3208 @@
+{
+  "completed_output_directories": 73,
+  "episode_condition_results": 100,
+  "file_count": 800,
+  "archive_sha256": "f50643e704371310848c4ceba5b11f3528faae16c5ac53a9a2b9c62921152d90",
+  "files": {
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/complete.json": {
+      "bytes": 3212,
+      "sha256": "3274ceef25b22d3ba07fde8815032b57ccc1bef4db0190e8e8318f48a96e99b8"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/ecp_costs.json": {
+      "bytes": 1357,
+      "sha256": "c36e14e3695bcfb8270326b599e97c224e9c76d8a48875d255d9745adc208c54"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/ecp_records.json": {
+      "bytes": 23636,
+      "sha256": "6dbce61b701eac93a1f768315dfd39aa0aca465de0d9336ef0f028894ef99110"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/final_eval_results.npz": {
+      "bytes": 454794,
+      "sha256": "b174f79592bc468ac19e58018916f95efc83e0b178c6475929cf83301223afc2"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/frozen_model_audit.json": {
+      "bytes": 746,
+      "sha256": "f338293703346051fa4faf49204ca104ddaa1ab98b4c33fee2ef32cf1a183775"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/logs.json": {
+      "bytes": 4923,
+      "sha256": "27834e8c975ce7bac03f0bd3a40b447b22583f68b03a984ebaf11eb614d5473c"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/prefix_reuse.json": {
+      "bytes": 7339,
+      "sha256": "59cedeb4ab1da11df0d5c1f04d4f36174916668a2f04240380394b480332b354"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/rope_metrics.npz": {
+      "bytes": 229127,
+      "sha256": "206bcd8c8bc256cb15c2ce11c0cd769f3311741a4d6d6f5aab2381c9b82e031f"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/S/chunk_00/run_manifest.json": {
+      "bytes": 2880,
+      "sha256": "734555724273f38e6b18b48509fbb59309a45ff6fb916ef69e750943ce4a988b"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/complete.json": {
+      "bytes": 3114,
+      "sha256": "ca1b2eef75f1a27ffd00127afdc823f8569bbe3634b2056d6049aa61679c737c"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/ecp_records.json": {
+      "bytes": 23675,
+      "sha256": "6b5e34db12d20a4c6e6ef4432ce3136d1b8d48bf95baefe6be852ba877d35c85"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/final_eval_results.npz": {
+      "bytes": 454794,
+      "sha256": "765769d41ff011d9824ebd0cd2767ffe4e953e8215fba80bb8e831609ec51b6e"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "da4cf3c27516bf9ea1a2f5ab9dd20031d66db1c8685c76569fefd994f4e10f6d"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/logs.json": {
+      "bytes": 4920,
+      "sha256": "963a657de8471eb35515101265357e3b971d461b2a6559c2d40cb20356c32db5"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/prefix_reuse.json": {
+      "bytes": 5848,
+      "sha256": "46ca2d8dc6f2d8c8d1f92b412532392fa6d26c302bbfb5cc29593d8fe9ac7635"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/rope_metrics.npz": {
+      "bytes": 230069,
+      "sha256": "fe8b2755c8b92efd6bae6cca6eb5f1f540ac3a3f18e2b59a46c01af4c38995cb"
+    },
+    "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00/run_manifest.json": {
+      "bytes": 2782,
+      "sha256": "68843da619db8d3369453f888249d09e15b3c28fb787c7c91e4097bfd9b8e3fe"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/complete.json": {
+      "bytes": 3343,
+      "sha256": "f144633e60fc973d5b2f70d6810756e7e83869ede68c5ec0a5bf5d03e895743a"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/ecp_costs.json": {
+      "bytes": 1356,
+      "sha256": "4178bdc02f807f1670b52f5a1dc665ac8c5616138662a6cc96bd0ba198e0dfe1"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/ecp_records.json": {
+      "bytes": 22470,
+      "sha256": "addd21c026fc47b172156ce0e7157fd80f2f5d6c892079b8974d70820ce4c5cf"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/final_eval_results.npz": {
+      "bytes": 454794,
+      "sha256": "05478e156abb4609cc77563757918568b1f0430a112adb6d4f861078957404bf"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/frozen_model_audit.json": {
+      "bytes": 867,
+      "sha256": "927f4afc27b61dd7f9a60283318bf20fe507c9cd9217dc70144e3c08225e803f"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/logs.json": {
+      "bytes": 4917,
+      "sha256": "b8c6f68eb303ca8b1d56ccf12661b3ecacb93fca7875ea5d159436317883ca69"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/prefix_reuse.json": {
+      "bytes": 7339,
+      "sha256": "59cedeb4ab1da11df0d5c1f04d4f36174916668a2f04240380394b480332b354"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/rope_metrics.npz": {
+      "bytes": 230008,
+      "sha256": "619ffae34ecb3edc074d76a7ecfec9342cb1d5404241307869fffe7504a38793"
+    },
+    "eval_outputs/rope_feedback_pretrained_warmup5/S/chunk_00/run_manifest.json": {
+      "bytes": 3012,
+      "sha256": "cbe3d8e908848f1294405f1b65483ec247a1a8f93c4219fa90fad9e9d84d8de6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/chunk_audit.json": {
+      "bytes": 322,
+      "sha256": "68da8c0ea97ac69d178a94ab5089e1a2f0f9ff26597301391956d746c8c1c832"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/complete.json": {
+      "bytes": 3781,
+      "sha256": "f1aaba64a05be045132d9f8abd5f5fdda624ae7a34795b61103b572bd42b3de1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/ecp_records.json": {
+      "bytes": 2750,
+      "sha256": "e6b7ff5a54565ce3c3c6e41329a1c6ab9d4ad5c61e123e105495ae5cff9d58b5"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/final_eval_results.npz": {
+      "bytes": 45615,
+      "sha256": "37bf7526d9484fd190a4590a211a580c7bbdde6322c1a8eb9753ca1f2431e16a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/frozen_model_audit.json": {
+      "bytes": 742,
+      "sha256": "6c8375a93d0ae9e9a2a8eed7b0c990dfaf9154d35b24d51afca108e15343a482"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/logs.json": {
+      "bytes": 1680,
+      "sha256": "0ae12cb5287189cfdc55d4c11c510420cd660428577de9e9d782b39c01b87012"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/prefix_reuse.json": {
+      "bytes": 327,
+      "sha256": "d6bf89d2ccec7339c6e04049f214fdcd2d3404b3402703d0323969ae2e95dd2b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/rope_metrics.npz": {
+      "bytes": 24246,
+      "sha256": "57a0c3b032ac56d2a56133a4ad70d029c55e64dd971a0ca041640643beabde41"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_00/run_manifest.json": {
+      "bytes": 3449,
+      "sha256": "01d97b22799d0e0b45fa17cca416a89cead0686119f599eda07a5f7cb29e8c78"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/chunk_audit.json": {
+      "bytes": 353,
+      "sha256": "894dcc4b5afdfe0cb1c1930f8796fded997e8d6054aa60df93662612bd262ea2"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/complete.json": {
+      "bytes": 3787,
+      "sha256": "52f43d1d55689fbb644657505e0f480ae1157ac952e8538b100f7bedd2e3cdf3"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/ecp_costs.json": {
+      "bytes": 268,
+      "sha256": "7fd5443666072816188451908aede49a3acc5dda3b56d4aa9f6554a618658cc6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/ecp_records.json": {
+      "bytes": 8933,
+      "sha256": "406a26cf757d0298d716770fbce02566493481e945bdf43196305a02d0654d05"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/final_eval_results.npz": {
+      "bytes": 45825,
+      "sha256": "419b350ea36bbe4e7272e47cc5cf89a946ee579eb0f41c3781ed07c6fd39ff02"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "64b03dde939956a6e56bbb901e425afdf705ef6ac52cea0dd5967bcd3c912d5d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/logs.json": {
+      "bytes": 4252,
+      "sha256": "e5bde688a225a398c47d1dd97bacd82434fc4738050f4c625fbea9a963665771"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/prefix_reuse.json": {
+      "bytes": 987,
+      "sha256": "5f590178828793e4cc67734afc9f28c19c79119f4d6e51b67aeebe55b7dd630f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/rope_metrics.npz": {
+      "bytes": 24362,
+      "sha256": "bf162fe070af7a08be1a53f14e6d8973edbb9ad86c3e3cbcea2a7a744e423bcd"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_01/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "63443f125aa9b9248e7636eb0d573700537ba60b9a64f7ad9b9099364b9aeca3"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/chunk_audit.json": {
+      "bytes": 361,
+      "sha256": "e508cb86e9e73013275a54a6b3e36ed9b4231b4cdd1ff7bfddfebb363dc9bc32"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/complete.json": {
+      "bytes": 3785,
+      "sha256": "bcf81eb01b3ff89ce733017e287e39048ba4d1f0fcbbee3d6c51c1ef37fa6338"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/ecp_costs.json": {
+      "bytes": 401,
+      "sha256": "096ec80511713d456b2eb130fb43f28a97003e242e05c36f720115a1d1dfe516"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/ecp_records.json": {
+      "bytes": 10469,
+      "sha256": "e88ff4f3572fa451c61980673134e7c2718cdb6346fb275182493c4af91beab8"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/final_eval_results.npz": {
+      "bytes": 46018,
+      "sha256": "7b935532330ed293a69bd54d546da287510ef097593807ec27e5dd4efe2c4e50"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "cd5c62c6086199e04e654b73cdbab790e1d5d326b5c0350550a8552bde289fd4"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/logs.json": {
+      "bytes": 4956,
+      "sha256": "97bf09d3f2554a07e41d0a107093b3e73811555cd66ebc39d1951873e690394a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/prefix_reuse.json": {
+      "bytes": 1152,
+      "sha256": "8ebb1c9779999fe21de553e7bad7b7a9cd0ec6f8e652982f0b0cf98c2c7a6dca"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/rope_metrics.npz": {
+      "bytes": 25027,
+      "sha256": "502e3a5e5ff427989c47a224269cd16426c301dd2923f6bd0f11bd1ea1f06a85"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_02/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "a5b387ca88b0c9087188fc87da21f11ef4a8a71853d399aee608d1a2f72a28ef"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "3f468a85fa43689f2a6f663311cb67a72d0c6d9356fd4cacea5636a82299b2e9"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/complete.json": {
+      "bytes": 3788,
+      "sha256": "f940789cb3e8f1fc4821f567032b4ecbf0a1dc23c00b81680321d71969287e15"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "2a8e11db157f47724ba0157018ac87838a3b0019e4c7abd460b994b6c5f7c50a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/final_eval_results.npz": {
+      "bytes": 46763,
+      "sha256": "b3fe2a2688380e25476f5b6a20c7626caefb3208172836f948d5f278835d067a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "6a8175f465f578f137080a3879a95624b581dedac7107e0834b223a19c4e2738"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/logs.json": {
+      "bytes": 990,
+      "sha256": "4b6dcbe594a2b2f12d50d40e6d039acc1e2c752b587ef8bdeafdcf76b43c3db1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/rope_metrics.npz": {
+      "bytes": 25143,
+      "sha256": "6da6a80cc2752e0ce60e6c7b6890cc81a1917e840ac418ddeff963ecd7c73580"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_03/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "5bec3f9b2c8bc9d04a21f1bf1edff9754cf321604fce3901f2552e49ad46949a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "b9b781116b49e945b22de19681f8b38a5551bfbaa4685c7596539eb77c07223d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/complete.json": {
+      "bytes": 3785,
+      "sha256": "f4b99fbacf0d271a4ac9718c6fd7eb1edd005bd5a11da78f3f9a1efa6972f813"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "a2299184450a7d6924e40796d5e88db9b308539a67385ae073f20a81eac1240e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/final_eval_results.npz": {
+      "bytes": 46532,
+      "sha256": "f58800eea06b515ce85d67e1b432c77527094f177e40d3a2703731a3503ea303"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "4b641cd0cc235a96822214640be3e165ecea1b62c065376c2b1342b4672b5aae"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/logs.json": {
+      "bytes": 987,
+      "sha256": "27622e17e0e1a63e4e04eb26674f5bb1bc50f4ba14827741480f26761e268066"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/rope_metrics.npz": {
+      "bytes": 24937,
+      "sha256": "5972d7b8bb42dae84c00d45ef490c4cfdfaf679b0b28047232b261476211a4b1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_04/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "aba50962ec480784446eb9f283cc5c61e5432cdd0bbb22c59172d14972499ffc"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/chunk_audit.json": {
+      "bytes": 355,
+      "sha256": "21beda93079089386e965f08387b61cb77bfc8775ed704b086482d3f7fc767d7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/complete.json": {
+      "bytes": 3786,
+      "sha256": "dd02009842602ab5abc7d2adcdd22886b760a4d3fd8c4f2f44e74195320e1a30"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/ecp_costs.json": {
+      "bytes": 119,
+      "sha256": "638effaf249350e522aa398ad618031cf0a1789dcfa3868555e7b7417d27ac1d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/ecp_records.json": {
+      "bytes": 8973,
+      "sha256": "0434daefa1f6f42be02870a1523d1f12fe756199c7e1425d185d800d283cac35"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/final_eval_results.npz": {
+      "bytes": 46468,
+      "sha256": "94390380284b1814733ecb250a2d0e9a5738ad6ac4bc777d8e639c8867c951ec"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "03dfab3480467c8a4339f66a3214ed07cb1d986b19f0bb8ad0236605ee39392e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/logs.json": {
+      "bytes": 4239,
+      "sha256": "0db82be1b762c537f8e0b2352d2be58a8dbf7bb7ebf16b2f179201d06aa9659e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/prefix_reuse.json": {
+      "bytes": 928,
+      "sha256": "db163c794cf8e88282039e4b332f64946b12b4246b7cb18ac78e79cdd3eafa50"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/rope_metrics.npz": {
+      "bytes": 25161,
+      "sha256": "bf40a2b823348e450dc542c25baf81adf9d21904ef60a5f11f62ee67c411d920"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_05/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "e5de4da8c4f9ede10509de073791613e028687aa5a891766d5b1c62771c046c0"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/chunk_audit.json": {
+      "bytes": 336,
+      "sha256": "9616a53a3f219af662cbd7c65c5663cbe62b389ac351dd3d4387e860de1d869a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/complete.json": {
+      "bytes": 3785,
+      "sha256": "cf363fd54cda7b2305a9894788e0871aa6b283ebf4f1ad95b788e27d43d54910"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/ecp_costs.json": {
+      "bytes": 271,
+      "sha256": "a908cf2a166e6aaebcac4a34c9a1919a4987c6ca6ba3f14b5eddab9f9afd0670"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/ecp_records.json": {
+      "bytes": 6131,
+      "sha256": "f119304dbac8328a942a2d6c740b645ea6dd2c47293ed88c084b2ed17ec67601"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/final_eval_results.npz": {
+      "bytes": 45713,
+      "sha256": "26947365c80ebad9ca02ee5755fe77281eee8107d624b678dad569b6538056a5"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "d96b643233f70fc0ac6430947d84ffeda97b0a307f1281a5e68289a029ef8c13"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/logs.json": {
+      "bytes": 3084,
+      "sha256": "34624e0a933200a1f8d714acfee2b9a52ebe0998fbc94b6d53d5fae52c3d684e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/prefix_reuse.json": {
+      "bytes": 831,
+      "sha256": "e52d6af45de27824fde11f79ad404a366ae3b3993944b68e632cff5c446634db"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/rope_metrics.npz": {
+      "bytes": 24999,
+      "sha256": "46b0f8856c4d3b960700c4cf98296449056168d37d0efb8d759f8bc5c80663b6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_06/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "ef505cc8b3705f1c40b88ee00f5b91a8d9b2fbc110f71dd055d08649ef921562"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/chunk_audit.json": {
+      "bytes": 332,
+      "sha256": "9114613496075dd5b6e90bdc11d9b071e1c75513a88c902b55150f77efe36eb0"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/complete.json": {
+      "bytes": 3785,
+      "sha256": "102b41abdf1927db1144ddca59ccacc24ed2ceb7f326a2a925bbb1e2d1d2b8e0"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/ecp_costs.json": {
+      "bytes": 138,
+      "sha256": "c81276e899f7d83de3e459213990de9837f3143024b3bd503b28ecc7f5f3146d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/ecp_records.json": {
+      "bytes": 3297,
+      "sha256": "b68c9fa399d03b62b87cf5dd09aa47f090b00f10303be7d39ca4d6b0bdd157cb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/final_eval_results.npz": {
+      "bytes": 46862,
+      "sha256": "17309a0a88a87a7e102a9efd81c3604bf7261094c5610197cca32883c6e914da"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "d01776eb073cb975ff6775dd99a9088d963a53b4f58e0aa6bdc3282dc12d7b5d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/logs.json": {
+      "bytes": 1918,
+      "sha256": "7d5d72cc11195c9c3942a4fe0e03d244b851daa2bb26978bb47ddd928da8a8b7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/prefix_reuse.json": {
+      "bytes": 381,
+      "sha256": "d8bdb8ec62d52e3233f75c460ecc5a356ed41e4ec127d2f9d3d2e752a82c7e92"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/rope_metrics.npz": {
+      "bytes": 25107,
+      "sha256": "a13a9bb81831b6de569abd3d8a78de9b2f08236e9b1a5eb5a5ef57ec681aa7f7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_07/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "d82e82c82de961b9edcc7dd3d9902cd15bf2607971bcffd1500305060f40e43c"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "f0ce90cf5057aac5af517730d851d15b001d5410da45a7cf105a30592a8b4bbf"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/complete.json": {
+      "bytes": 3785,
+      "sha256": "31f3dea50b60f5f8eece1f4777b5232d73f8401db52a8a63ebe061cf839b1262"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/ecp_records.json": {
+      "bytes": 1223,
+      "sha256": "5f55c6fe975a0742ebeb7e1e4c56d0218698da7f225bb8e97264731b31856ee0"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/final_eval_results.npz": {
+      "bytes": 46424,
+      "sha256": "3b0055e1a31cb40c90e4ab17dc6049c476b72b113e8184e746bafc5a70bf7748"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "24df45d6308c26cb01990d9c1cd07a39ef5140f88afd3b0d0a17c501001f4a64"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/logs.json": {
+      "bytes": 984,
+      "sha256": "59d2465c790273fa4f502e010addac937c60cbbab662709165ac1acd6fb50141"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/rope_metrics.npz": {
+      "bytes": 25281,
+      "sha256": "73ab22e414ab0b408c6f5855a5b6d1715f5219fbe6ef9fabe8d03f469fc6b044"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_08/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "56b95cdbbbd5be3c43fb19e9b133345261f9fc4e4460a4b71efd00f9f984d02a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/chunk_audit.json": {
+      "bytes": 361,
+      "sha256": "fea6999762ed5f34e1e007d3f4ae0d6ab547442cb70b49c31f079e2f38373298"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/complete.json": {
+      "bytes": 3781,
+      "sha256": "f9824a6bdfdc484de5cd6768c5240739d155bd8254d353fbf44719f8a720f08a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/ecp_costs.json": {
+      "bytes": 404,
+      "sha256": "6464d94ab4212bb442304325ccf405900c84f4d92f1a5323a96afaa805694c0d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/ecp_records.json": {
+      "bytes": 10489,
+      "sha256": "9639ff49dd943a403c48d9e45a47376f4a95db00a2251a94f1fc126472fbb04f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/final_eval_results.npz": {
+      "bytes": 46041,
+      "sha256": "a1e2ddc5dcb95de18a5bab33c7657e3c853cdd79afeb07ac737e41beaa797ed7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/frozen_model_audit.json": {
+      "bytes": 742,
+      "sha256": "caa4eb5ca3d35f8c9ee187f557c7dc31c2c9d744756f5c638f482b8299acf519"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/logs.json": {
+      "bytes": 4939,
+      "sha256": "59d63d4c48fd446d5043af121526a5b8a07937c232b9a6e11e68d90d9eaf9412"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/prefix_reuse.json": {
+      "bytes": 1330,
+      "sha256": "c80ba3796b7dc85d793c8873ecec32bd341b8cca1010284f1a2c50824ef5ca55"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/rope_metrics.npz": {
+      "bytes": 24758,
+      "sha256": "1b8e273969a3bb0cd61340c9df09a99bc41aad31675cbefee3c9f25634d42587"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/dynamic3/sample_09/run_manifest.json": {
+      "bytes": 3452,
+      "sha256": "e47b8c71c912a7419c39bff2e92019e56c40a339d388068937b4c957f9bf3376"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/chunk_audit.json": {
+      "bytes": 320,
+      "sha256": "eec757ea87e319837ccc731b8e0c6118e2ac4eeb64b2d5b9d8e6a411b5aa25db"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/complete.json": {
+      "bytes": 3773,
+      "sha256": "0dca88a6f61f08d9217d3ffeeea5f04fdafacc0f2b167c084aeceb8c1e02e660"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/ecp_records.json": {
+      "bytes": 2750,
+      "sha256": "b40ea37ccca3f62ec3f946f721c56820dbefc0dc03be50afca905e3ca946638b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/final_eval_results.npz": {
+      "bytes": 45615,
+      "sha256": "37bf7526d9484fd190a4590a211a580c7bbdde6322c1a8eb9753ca1f2431e16a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "8a19c4821a46a592df86ce6f35462e2e5c8088cf1d9652a8dbbb51ed4211fea5"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/logs.json": {
+      "bytes": 1680,
+      "sha256": "0ae12cb5287189cfdc55d4c11c510420cd660428577de9e9d782b39c01b87012"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/prefix_reuse.json": {
+      "bytes": 327,
+      "sha256": "d6bf89d2ccec7339c6e04049f214fdcd2d3404b3402703d0323969ae2e95dd2b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/rope_metrics.npz": {
+      "bytes": 24246,
+      "sha256": "57a0c3b032ac56d2a56133a4ad70d029c55e64dd971a0ca041640643beabde41"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_00/run_manifest.json": {
+      "bytes": 3441,
+      "sha256": "5cd12f61866afabe5dfa813a34bf187c72ba39e29a0d3b5fbd449c223b839374"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/chunk_audit.json": {
+      "bytes": 351,
+      "sha256": "edf2cfb79c256ad535895ead3298a2a8bc46bf01dafc0b3582d12eb19ee20289"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/complete.json": {
+      "bytes": 3776,
+      "sha256": "60a580b4c6817f4be42f9998d5ce5e2be2c2879060a11075584c75ca432ad598"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/ecp_costs.json": {
+      "bytes": 268,
+      "sha256": "7fd5443666072816188451908aede49a3acc5dda3b56d4aa9f6554a618658cc6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/ecp_records.json": {
+      "bytes": 8939,
+      "sha256": "d3f23052b42be646b838ece5c68f3f3d8b8d957004b0969c631b8137de25f6d9"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/final_eval_results.npz": {
+      "bytes": 45825,
+      "sha256": "419b350ea36bbe4e7272e47cc5cf89a946ee579eb0f41c3781ed07c6fd39ff02"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "49ddb8847c4a3e720ae943f70edf0d1b6d6abace52bfc37ef472d568502a9d9a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/logs.json": {
+      "bytes": 4247,
+      "sha256": "efca29903a95779ab33f62f02120132121471ef82d7de0a0dd1702a8dae63779"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/prefix_reuse.json": {
+      "bytes": 987,
+      "sha256": "5f590178828793e4cc67734afc9f28c19c79119f4d6e51b67aeebe55b7dd630f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/rope_metrics.npz": {
+      "bytes": 24341,
+      "sha256": "1d31c488f7c024859cb5dc0952cdf922a5d7e507b593ba4387492ccc9021da63"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_01/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "13f82650a81c35c11e3baffe971e65e558f580824620e51cc9b6f3a27999890a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/chunk_audit.json": {
+      "bytes": 359,
+      "sha256": "dd84899de372e44e497517b21f0a1776413d816c6f91f2764bea66047588f846"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/complete.json": {
+      "bytes": 3777,
+      "sha256": "f7a136e9e5a6761b0aa38f656c8bc6c5f946f0d1a793b33c95198486f38f75ef"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/ecp_costs.json": {
+      "bytes": 401,
+      "sha256": "096ec80511713d456b2eb130fb43f28a97003e242e05c36f720115a1d1dfe516"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/ecp_records.json": {
+      "bytes": 10469,
+      "sha256": "cb32ef070753c1a456fe261de2aef2180387cbf777bf0459de56ff12dacc2ac5"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/final_eval_results.npz": {
+      "bytes": 46018,
+      "sha256": "7b935532330ed293a69bd54d546da287510ef097593807ec27e5dd4efe2c4e50"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "6c1f3d425724424e476114947a34ec871280b03fc6879c7d33b468ef4506917f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/logs.json": {
+      "bytes": 4956,
+      "sha256": "97bf09d3f2554a07e41d0a107093b3e73811555cd66ebc39d1951873e690394a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/prefix_reuse.json": {
+      "bytes": 1152,
+      "sha256": "8ebb1c9779999fe21de553e7bad7b7a9cd0ec6f8e652982f0b0cf98c2c7a6dca"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/rope_metrics.npz": {
+      "bytes": 25027,
+      "sha256": "502e3a5e5ff427989c47a224269cd16426c301dd2923f6bd0f11bd1ea1f06a85"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_02/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "332e6ae0dfd4a510fd14667ff706996008f12d031de208efd32bbdafbe4636d4"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/chunk_audit.json": {
+      "bytes": 316,
+      "sha256": "d54382017ff2375b85f422cfffaf1cfa74c6575246174b4e0495bec36b6ee11f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/complete.json": {
+      "bytes": 3780,
+      "sha256": "5851a5e7ebd9643113cf252e7cea16ce213f4cb00d37bd9f921702c0148ba252"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "3934f8bb712aa85aa846358f44ce5dd373ac26e9f8ba75e9e602dc2ef8db3714"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/final_eval_results.npz": {
+      "bytes": 46763,
+      "sha256": "b3fe2a2688380e25476f5b6a20c7626caefb3208172836f948d5f278835d067a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/frozen_model_audit.json": {
+      "bytes": 742,
+      "sha256": "0aaa4112c08e0e61ea14dd27407f88ab79d2673b869f96bb5c08c20f71f175ac"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/logs.json": {
+      "bytes": 990,
+      "sha256": "4b6dcbe594a2b2f12d50d40e6d039acc1e2c752b587ef8bdeafdcf76b43c3db1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/rope_metrics.npz": {
+      "bytes": 25143,
+      "sha256": "6da6a80cc2752e0ce60e6c7b6890cc81a1917e840ac418ddeff963ecd7c73580"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_03/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "6dffe2cc916e1e184be1a7919a31b8d7772b4b55c6e73c7fea3824699c1c9954"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/chunk_audit.json": {
+      "bytes": 316,
+      "sha256": "26f4f1a71e09fa9b3561682f01a10d1943ac098ed6f05ef91b56bb988721ac12"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/complete.json": {
+      "bytes": 3777,
+      "sha256": "485d3ec09f606d264a0735e22fbe34b3df3689b9cb49df3ffd4b98bc579743cb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "e8441df537de2b7611a63a4bf32cb109901c1701e8660798dd4933299597bd5f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/final_eval_results.npz": {
+      "bytes": 46532,
+      "sha256": "f58800eea06b515ce85d67e1b432c77527094f177e40d3a2703731a3503ea303"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "a6392348e5636e53745d05a66d627788a7ad41c6670ff16d8072629f46b3b82a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/logs.json": {
+      "bytes": 987,
+      "sha256": "27622e17e0e1a63e4e04eb26674f5bb1bc50f4ba14827741480f26761e268066"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/rope_metrics.npz": {
+      "bytes": 24937,
+      "sha256": "5972d7b8bb42dae84c00d45ef490c4cfdfaf679b0b28047232b261476211a4b1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_04/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "85e0be2e62503f91a4b779632fc5debd6f32f116b86f9a485c2e9e030bf82a51"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/chunk_audit.json": {
+      "bytes": 353,
+      "sha256": "92ded8885e600cc7732603da5bdca3e06ee919b5025a9915e295d91d4ab1e78d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/complete.json": {
+      "bytes": 3778,
+      "sha256": "1aea7706901c8d6a70bde1edbe437f78009ead2d9a84c8f3fa6c71cadf61b984"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/ecp_costs.json": {
+      "bytes": 119,
+      "sha256": "638effaf249350e522aa398ad618031cf0a1789dcfa3868555e7b7417d27ac1d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/ecp_records.json": {
+      "bytes": 8976,
+      "sha256": "d43af2b5def8f432f58d5f7f699cf827ad9ec996e26a099be6163bbc6220808c"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/final_eval_results.npz": {
+      "bytes": 46468,
+      "sha256": "94390380284b1814733ecb250a2d0e9a5738ad6ac4bc777d8e639c8867c951ec"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/frozen_model_audit.json": {
+      "bytes": 742,
+      "sha256": "a79db05b6d40f265300baf42aa9ef43380498eafcc1294be5828579698ecec00"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/logs.json": {
+      "bytes": 4239,
+      "sha256": "0db82be1b762c537f8e0b2352d2be58a8dbf7bb7ebf16b2f179201d06aa9659e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/prefix_reuse.json": {
+      "bytes": 928,
+      "sha256": "db163c794cf8e88282039e4b332f64946b12b4246b7cb18ac78e79cdd3eafa50"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/rope_metrics.npz": {
+      "bytes": 25161,
+      "sha256": "bf40a2b823348e450dc542c25baf81adf9d21904ef60a5f11f62ee67c411d920"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_05/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "11647e05b8215cd3dd59400881cc428120e97e2b64ff01c5ed8fc3c34b2480b4"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/chunk_audit.json": {
+      "bytes": 342,
+      "sha256": "08fc51a407feb9e4a5143cc3080343a2e5da383a27029471bff115d090a838cc"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/complete.json": {
+      "bytes": 3776,
+      "sha256": "f425e9de76301e0d6ac0e4aefcc04db9550a812250ec380fb066b5b717289904"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/ecp_costs.json": {
+      "bytes": 404,
+      "sha256": "a2661776c9b3c351b4379ee3e3c8818877d13aa4714ead6e46862950878d4a74"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/ecp_records.json": {
+      "bytes": 7836,
+      "sha256": "14c4a758443c278232082a32817b2136627efe20f50aa9a94a5a8c7b728ea4c0"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/final_eval_results.npz": {
+      "bytes": 45764,
+      "sha256": "18cc247fba78e34c2097225388102059f224cff9c6c59aed5691d2ec9f18f963"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/frozen_model_audit.json": {
+      "bytes": 742,
+      "sha256": "c0c96892d96b44fbd6824304399a71c46d7bf88c589fd818632ff0bee0446c80"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/logs.json": {
+      "bytes": 3781,
+      "sha256": "1319f251c8ea1223a8f07589bbfb085f51f40fd94f9c32cb7f30622321e175c6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/prefix_reuse.json": {
+      "bytes": 1085,
+      "sha256": "29f20fdadbd2b6b39d6a31c25d4691c0ca7172163be25cbf85945e636e4c7786"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/rope_metrics.npz": {
+      "bytes": 24991,
+      "sha256": "d0a3d066ae4bc24ae5294d1b4406b01a8c913d8c42d36865f2045ca4cb442db8"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_06/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "49b60a9de86e80bfa19d146ae88db2803464aa99e890ced16c0041c4a3837efa"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/chunk_audit.json": {
+      "bytes": 330,
+      "sha256": "d47ee868444906da11d6b0cd16a115a6307d80b0964757b6039ec2ce2c5b56eb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/complete.json": {
+      "bytes": 3777,
+      "sha256": "e60682f8fdf28b176d8ec54ec2469fe8dfd2a61b67c7d624807f0ddc8a417033"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/ecp_costs.json": {
+      "bytes": 138,
+      "sha256": "c81276e899f7d83de3e459213990de9837f3143024b3bd503b28ecc7f5f3146d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/ecp_records.json": {
+      "bytes": 3298,
+      "sha256": "a837c4f93b46fb9f37e5beaebed6c834bfc32dfd3caaec49d9bbd5291da5aa03"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/final_eval_results.npz": {
+      "bytes": 46862,
+      "sha256": "17309a0a88a87a7e102a9efd81c3604bf7261094c5610197cca32883c6e914da"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "80b0b9a75fe8cb8ca3fbe2ccf065f3a35a439d109d107348ffdfcadef8f63bb9"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/logs.json": {
+      "bytes": 1918,
+      "sha256": "7d5d72cc11195c9c3942a4fe0e03d244b851daa2bb26978bb47ddd928da8a8b7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/prefix_reuse.json": {
+      "bytes": 381,
+      "sha256": "d8bdb8ec62d52e3233f75c460ecc5a356ed41e4ec127d2f9d3d2e752a82c7e92"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/rope_metrics.npz": {
+      "bytes": 25107,
+      "sha256": "a13a9bb81831b6de569abd3d8a78de9b2f08236e9b1a5eb5a5ef57ec681aa7f7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_07/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "1f1e27669bad508a55c5b94eb321e5ec07679295bd774c576d57350cdeee08ba"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/chunk_audit.json": {
+      "bytes": 316,
+      "sha256": "c89400798ee004bada261b7fb9a1c24f0fbe3ada72f376a209ce107caedb7720"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/complete.json": {
+      "bytes": 3777,
+      "sha256": "dabfc4121237064d10a456a0b7b1a398fc5e9677ba3fda484728e7c4dc0d440b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "e69101efbdb1811473c25b4a62bc93e801c7c84abe3fafaa24f7855c67c58abc"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/final_eval_results.npz": {
+      "bytes": 46424,
+      "sha256": "3b0055e1a31cb40c90e4ab17dc6049c476b72b113e8184e746bafc5a70bf7748"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/frozen_model_audit.json": {
+      "bytes": 741,
+      "sha256": "df8d22397170a0bd42f02cdedee45f0ae27f88f7429239901b215b44f68028ba"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/logs.json": {
+      "bytes": 984,
+      "sha256": "59d2465c790273fa4f502e010addac937c60cbbab662709165ac1acd6fb50141"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/rope_metrics.npz": {
+      "bytes": 25281,
+      "sha256": "73ab22e414ab0b408c6f5855a5b6d1715f5219fbe6ef9fabe8d03f469fc6b044"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_08/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "d791667a09aefdc6e943acc0b2c7b6479c223eb11f26b9aff9a204a3e8d03739"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/chunk_audit.json": {
+      "bytes": 359,
+      "sha256": "39beee961d12bd0c24987a7596b6fd3601acd0b68c9e7c218951a9120a182408"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/complete.json": {
+      "bytes": 3776,
+      "sha256": "2c472382109757831d16034e1d9748c9dd772a0542c1ace9f93ff83d174c0bbc"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/ecp_costs.json": {
+      "bytes": 404,
+      "sha256": "d38df6a24258ad405c4cd6907fc17256de1723feb75d2c701e53ddb7fa2ce28e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/ecp_records.json": {
+      "bytes": 10478,
+      "sha256": "62915bd3131b8f358f5d01e10d690e3323eb9be4a95aed3d47c85678d8b62177"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/final_eval_results.npz": {
+      "bytes": 46042,
+      "sha256": "85b040d6be1b3e7f229c802f996ca8d55295b07b0f8169474505f64ecaa843d1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/frozen_model_audit.json": {
+      "bytes": 740,
+      "sha256": "23ae155a28e039232a3d88729c9a42b9be9a9e73198ef107939eecee83d9fe6f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/logs.json": {
+      "bytes": 4952,
+      "sha256": "d8299b260899f6ace93c0a64472359ab67d0a0849b86bbe499ca4edaf1869fdb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/prefix_reuse.json": {
+      "bytes": 1330,
+      "sha256": "c80ba3796b7dc85d793c8873ecec32bd341b8cca1010284f1a2c50824ef5ca55"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/rope_metrics.npz": {
+      "bytes": 25365,
+      "sha256": "c6ebc6ed61de59fcd7e3a50aa46f4a59a14a6cae1e8fe0bf272f9fd55401f3df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/fixed3/sample_09/run_manifest.json": {
+      "bytes": 3444,
+      "sha256": "d71b6f2fab697dc5aa24fe6a447d32f1791ae10c489d01d204cf0d41cf5c33c4"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/chunk_audit.json": {
+      "bytes": 322,
+      "sha256": "68da8c0ea97ac69d178a94ab5089e1a2f0f9ff26597301391956d746c8c1c832"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/complete.json": {
+      "bytes": 3674,
+      "sha256": "82caa9be024501b2dd6ee53d23b486151fbf3fc1651602ac6ce2980cff415e23"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/ecp_records.json": {
+      "bytes": 2751,
+      "sha256": "2cb0d8dd6395267041fdcb4bbac1eaf08ba1486ab359d67e7e2cb9811716e39c"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/final_eval_results.npz": {
+      "bytes": 45615,
+      "sha256": "37bf7526d9484fd190a4590a211a580c7bbdde6322c1a8eb9753ca1f2431e16a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "eb63057fb69bb94ab36df579513fe33b245134dec2983474dfbfdb0c07fa6878"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/logs.json": {
+      "bytes": 1680,
+      "sha256": "0ae12cb5287189cfdc55d4c11c510420cd660428577de9e9d782b39c01b87012"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/prefix_reuse.json": {
+      "bytes": 505,
+      "sha256": "806274852ed516a46cddc3136c72d92ba61b8854d7e54bb81a7c52e86847efc4"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/rope_metrics.npz": {
+      "bytes": 24246,
+      "sha256": "57a0c3b032ac56d2a56133a4ad70d029c55e64dd971a0ca041640643beabde41"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_00/run_manifest.json": {
+      "bytes": 3342,
+      "sha256": "e18b41ce3e689a6e312ee693e1b6c269075dc951c737e48e5e105b846e1865ce"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/chunk_audit.json": {
+      "bytes": 355,
+      "sha256": "4c243ce0d920d353e69881e08de5243d8c98f1455f10bf63969cc29f63b20505"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/complete.json": {
+      "bytes": 3673,
+      "sha256": "644c74b5bf6cca399f1c2073ee135ed156651c7896cbb955fbce763ecec4091a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/ecp_records.json": {
+      "bytes": 8932,
+      "sha256": "1fe66a0e6c31d09f23cc60e8e8fda3edafa1326ef85dc044da15fde1f0485a1b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/final_eval_results.npz": {
+      "bytes": 45824,
+      "sha256": "ead82df1d81cdb7973138a725b17c554573c1d702339916888689b9d1d63978d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "72e1c40471b2c0cc126e44f49df6438087657a8bbb230cbbe25976b64923b125"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/logs.json": {
+      "bytes": 4239,
+      "sha256": "ec41c0f5ffec76852e1beb4c003df09c65ce0b43d90d8e38573c05ad7bc7e7c3"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/prefix_reuse.json": {
+      "bytes": 1432,
+      "sha256": "e1cff74ff2dc6f6c042fac7a884e68ef0c0ef951b6a1165df0fb17c68b60d074"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/rope_metrics.npz": {
+      "bytes": 24430,
+      "sha256": "1f79c19508b02033e97259a7307ae2756567a9774b66e076ef8fb47b736176a9"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_01/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "e857e1cfb10e5d5034284b6fff08768a3dde0f9e33763dac9c6932e7e9fbc1d3"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/chunk_audit.json": {
+      "bytes": 363,
+      "sha256": "63a828afbc6866d1832a9c3473e23ddcf343db063833ac28004503e5a808ebab"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/complete.json": {
+      "bytes": 3678,
+      "sha256": "4b80d508c9a37732ad0c201959f6298650446395e0c882b6bfccd255f9d08ea8"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/ecp_records.json": {
+      "bytes": 10455,
+      "sha256": "db18ab108cfb4093704bcceacb5d924ce6cd0c6427722d108c200131975bde25"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/final_eval_results.npz": {
+      "bytes": 46018,
+      "sha256": "7d3bf1ff4e6c731bbcd526ee8190bc4bf8ed418752b76742a3b1fdd28f9dfcdb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "db6251a6c36baabf2e7f2bd928cebf8d700d66e5fce40d889a2c37d0b756ed98"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/logs.json": {
+      "bytes": 4957,
+      "sha256": "07258d4098ff6c2b48a1a0d06202a9bf39dce7b30b13d3b3695e2ac7466dcc1e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/prefix_reuse.json": {
+      "bytes": 1686,
+      "sha256": "e439efbe47e2be70c7f037fcc0e7e9cd2b0cdd09d8c1586dcf672beeb4107d23"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/rope_metrics.npz": {
+      "bytes": 24863,
+      "sha256": "b4a96016548b8aa633f0173ad951e67fc3dc26fab6012ced6c93888f7bbaf6d9"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_02/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "8544a942c1d24035c64cba70e86f50b0f79dea313d4fda8e9236f2b2191c766b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "3f468a85fa43689f2a6f663311cb67a72d0c6d9356fd4cacea5636a82299b2e9"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/complete.json": {
+      "bytes": 3681,
+      "sha256": "a7ed4828f47f8b43d00f7fecc8ee4a207d325ad63689cffb359afd9e1446a910"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "326e2e22ed07746233076118dcb7c96ec54491dc7f6cc580cde24513307d121e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/final_eval_results.npz": {
+      "bytes": 46763,
+      "sha256": "b3fe2a2688380e25476f5b6a20c7626caefb3208172836f948d5f278835d067a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "6e7f3d50c5397213fc4bad31d2f3e92c66348914f47f780f07e4679b87f460d0"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/logs.json": {
+      "bytes": 990,
+      "sha256": "4b6dcbe594a2b2f12d50d40e6d039acc1e2c752b587ef8bdeafdcf76b43c3db1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/prefix_reuse.json": {
+      "bytes": 254,
+      "sha256": "19b98b961b1082839fa27b392df85fa960488c946d8b29f36f2049bb8f02e064"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/rope_metrics.npz": {
+      "bytes": 25143,
+      "sha256": "6da6a80cc2752e0ce60e6c7b6890cc81a1917e840ac418ddeff963ecd7c73580"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_03/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "b0f223bd7f3ace264322808ab98467a7e87e1b7fdb6ed08daec9f8a5f006e77c"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "b9b781116b49e945b22de19681f8b38a5551bfbaa4685c7596539eb77c07223d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/complete.json": {
+      "bytes": 3678,
+      "sha256": "7b386a8daa3e16a2c4abdf4ce261c2baba74a59f1ab4cfd98a3caac50e56e66a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/ecp_records.json": {
+      "bytes": 1223,
+      "sha256": "bc1f77be3780f26c83a7717265f15a69645e1651b06be91afd77f9a74fcdf532"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/final_eval_results.npz": {
+      "bytes": 46532,
+      "sha256": "f58800eea06b515ce85d67e1b432c77527094f177e40d3a2703731a3503ea303"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "883bd820315d297b8b598072e06f17989930afdd7249bdc4a78192dde34c0300"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/logs.json": {
+      "bytes": 987,
+      "sha256": "27622e17e0e1a63e4e04eb26674f5bb1bc50f4ba14827741480f26761e268066"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/prefix_reuse.json": {
+      "bytes": 254,
+      "sha256": "19b98b961b1082839fa27b392df85fa960488c946d8b29f36f2049bb8f02e064"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/rope_metrics.npz": {
+      "bytes": 24937,
+      "sha256": "5972d7b8bb42dae84c00d45ef490c4cfdfaf679b0b28047232b261476211a4b1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_04/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "5287030f2fcffddbfba95c45a91fbb749c792aab9a823d73d113f6ee572091ef"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/chunk_audit.json": {
+      "bytes": 355,
+      "sha256": "21beda93079089386e965f08387b61cb77bfc8775ed704b086482d3f7fc767d7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/complete.json": {
+      "bytes": 3679,
+      "sha256": "8ee75fe08937f48df56a1714a6fe2de594a88e5a6e5c43a94af7f5c55ee1310d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/ecp_records.json": {
+      "bytes": 8974,
+      "sha256": "a79577f37786476a1e10c8d1047bd8896d1e22c7d67bc528127e24375e0ed25a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/final_eval_results.npz": {
+      "bytes": 46468,
+      "sha256": "94390380284b1814733ecb250a2d0e9a5738ad6ac4bc777d8e639c8867c951ec"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "b4b604d51773ec7b05f9ae37411a91ecfa84cd72418e7fc38bdd3471935f7cba"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/logs.json": {
+      "bytes": 4239,
+      "sha256": "0db82be1b762c537f8e0b2352d2be58a8dbf7bb7ebf16b2f179201d06aa9659e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/prefix_reuse.json": {
+      "bytes": 1432,
+      "sha256": "e1cff74ff2dc6f6c042fac7a884e68ef0c0ef951b6a1165df0fb17c68b60d074"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/rope_metrics.npz": {
+      "bytes": 25160,
+      "sha256": "38d5ae45eeab7eb9f487d44420b5f258dea235af7e01255ab34b3be9374867b7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_05/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "d5b4d1fdb884f89126b22c46dee22416ece3bcdcfd6ea04fe2757769134a0de8"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/chunk_audit.json": {
+      "bytes": 347,
+      "sha256": "51d9a23743434df6287ca78842b3bd92e6e40a553d4649c09fd57a6326ea1635"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/complete.json": {
+      "bytes": 3678,
+      "sha256": "ce2abafd6e752fca806034876191429e2754de9b9d786120cef4a91e6994b68b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/ecp_records.json": {
+      "bytes": 7267,
+      "sha256": "c02fbd4b5ec2d73a7f9842ed3b4be917f39aad546afce1849ca126f292922b3c"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/final_eval_results.npz": {
+      "bytes": 45748,
+      "sha256": "2cc467478fc03a1335d53ff833b7ecd1f9d6563a72529016f0741b5671ce6658"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "8cbbca5b6417ea87804429d23a06420c01793cc02dd1e3b1a9fbdc0302717ef1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/logs.json": {
+      "bytes": 3552,
+      "sha256": "ac7ade5101dd38845cd425c0396ab95a6e1b003daab3632589c79514d055ef43"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/prefix_reuse.json": {
+      "bytes": 1178,
+      "sha256": "313a698351b84ea53359f964a07ef664ac4d53c2b31419300eb4349cbe59e19a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/rope_metrics.npz": {
+      "bytes": 24739,
+      "sha256": "524b25694b983b63f78fe61efbf0cb721d45f5298458cd15b3e23fb2e6fee460"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_06/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "827022a54ca94aa05c8744652241a2a9812e1c31283d712349eb9b2e3053e514"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/chunk_audit.json": {
+      "bytes": 332,
+      "sha256": "9114613496075dd5b6e90bdc11d9b071e1c75513a88c902b55150f77efe36eb0"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/complete.json": {
+      "bytes": 3678,
+      "sha256": "b02a2031a9deda6ee381350fd63e9071aba1a843ebc489f1223452a3756a6a35"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/ecp_records.json": {
+      "bytes": 3299,
+      "sha256": "7bbe6a50961425618ce42b87d55bae0cc4b748d3a5ec2e875657f29ea8d22634"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/final_eval_results.npz": {
+      "bytes": 46862,
+      "sha256": "17309a0a88a87a7e102a9efd81c3604bf7261094c5610197cca32883c6e914da"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "67bce61f3ba3aac0b828396f988b998452299597b0c390d82d06b63a0f7315ce"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/logs.json": {
+      "bytes": 1918,
+      "sha256": "7d5d72cc11195c9c3942a4fe0e03d244b851daa2bb26978bb47ddd928da8a8b7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/prefix_reuse.json": {
+      "bytes": 588,
+      "sha256": "7e70caedac0c94f950394009cc42d4f75bd59908c931d53aaac985d8fc710fe8"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/rope_metrics.npz": {
+      "bytes": 25106,
+      "sha256": "9144ba85f0f6af46100a26c378cc9553fc8c0fa3251f269b18a82c5ce85bb466"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_07/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "560d43cde7188624a652d69208161a3b747a37498676fa9f42e6f7f38b81473e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "f0ce90cf5057aac5af517730d851d15b001d5410da45a7cf105a30592a8b4bbf"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/complete.json": {
+      "bytes": 3678,
+      "sha256": "33572bfeffe1cd378d5127968311391699df73aaeb52324df68001ff602edb5a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/ecp_records.json": {
+      "bytes": 1223,
+      "sha256": "72e2746de5ede02e0b78d2cc9618ab2115d9ef2b10736c7a2d89f84c6e68192a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/final_eval_results.npz": {
+      "bytes": 46424,
+      "sha256": "3b0055e1a31cb40c90e4ab17dc6049c476b72b113e8184e746bafc5a70bf7748"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "8108f997b9ac41eab984f0237fa8c34223a294d53fdbb105d451b60def7b6662"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/logs.json": {
+      "bytes": 984,
+      "sha256": "59d2465c790273fa4f502e010addac937c60cbbab662709165ac1acd6fb50141"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/prefix_reuse.json": {
+      "bytes": 254,
+      "sha256": "19b98b961b1082839fa27b392df85fa960488c946d8b29f36f2049bb8f02e064"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/rope_metrics.npz": {
+      "bytes": 25281,
+      "sha256": "73ab22e414ab0b408c6f5855a5b6d1715f5219fbe6ef9fabe8d03f469fc6b044"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_08/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "e5fa9c08138db84b0f22700555dc1475bdbc425feb8fe0178785818f9e0dfebd"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/chunk_audit.json": {
+      "bytes": 363,
+      "sha256": "f32d7d7b9a3984a5399394b24c9032d1a15b88ee2af27afac9efc99d7594a618"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/complete.json": {
+      "bytes": 3678,
+      "sha256": "9047541579fac0ef145ec63567ab53252753236da04ae72ca578b2ca1a7743f3"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/ecp_records.json": {
+      "bytes": 10400,
+      "sha256": "452c4cc9c45427319ba7a9c5fc20e6cf92b9da38cfa6cd449293705c0630e893"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/final_eval_results.npz": {
+      "bytes": 46041,
+      "sha256": "97496d43de445afffd2686b9e41a614b85269eabf6012e71be4bb16b40b46787"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "27b9c6dd04c4658df5a33f7bd0f82e29d484cbdce5bba92cfba9f37b135bd31d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/logs.json": {
+      "bytes": 4953,
+      "sha256": "8f96f4eefaff0533226d0a932b78e15f169cb618d6a8141ad53ee60827284a90"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/prefix_reuse.json": {
+      "bytes": 1686,
+      "sha256": "e439efbe47e2be70c7f037fcc0e7e9cd2b0cdd09d8c1586dcf672beeb4107d23"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/rope_metrics.npz": {
+      "bytes": 24581,
+      "sha256": "008a9c3e4f77089380cfab9c0c6e6ec0a267bc6187474c44f1155072d12cc845"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native3/sample_09/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "191ccff4fa544810394015a3f51188e8a5114a9a84700f89628d3cc4a6fe3c3f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/chunk_audit.json": {
+      "bytes": 315,
+      "sha256": "13fdc5b33a570d8b771ae02c38b86e2362907af2d660d292eaadb5b4d41e2a54"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/complete.json": {
+      "bytes": 3675,
+      "sha256": "664f38dafcdc06ac946317da9697acc8d02c6b22be339cefb667753e54ef74c6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/ecp_records.json": {
+      "bytes": 2189,
+      "sha256": "b164ed3ec96a738ca8f7ce071747225bf6084d06848f2e31c3e2672bc25677a3"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/final_eval_results.npz": {
+      "bytes": 45598,
+      "sha256": "3527cd7751bbdfd62ee51925723fbf56ece91bbfeea264ccd64fb9a1eec8cd07"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/frozen_model_audit.json": {
+      "bytes": 641,
+      "sha256": "30ca605f400abd7df5ade76e1928ca68a0487101f6ff03ada939c5d6c3db0e93"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/logs.json": {
+      "bytes": 1451,
+      "sha256": "1e38f22666f1d8df9e2464bfc884c23783481f62c27d8f1f4bee7400c8642f0d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/prefix_reuse.json": {
+      "bytes": 422,
+      "sha256": "5a024e783900d41d6a99e3aff97b356b2219ed2718acc5c2aa4d630ef47e3b5a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/rope_metrics.npz": {
+      "bytes": 24078,
+      "sha256": "1ad8e33f7991407631342ca8c90105fbade28e03cc7f8e6bf604dd6bac2f26ec"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_00/run_manifest.json": {
+      "bytes": 3342,
+      "sha256": "947509b39831cd200ad1f5042085eb518b196de9b3264188c668f9b239d05672"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/chunk_audit.json": {
+      "bytes": 341,
+      "sha256": "98a742d93f98d11fbf9b05da099a8c9f511e4c5fddd5f6007c70bd9641d5a0d6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/complete.json": {
+      "bytes": 3680,
+      "sha256": "50e8edf0bdaeff7513621708d65b9de27607bba2a2f4941628b8c729216060d7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/ecp_records.json": {
+      "bytes": 10498,
+      "sha256": "717f65693e98dc97801114bb7e532b8148a45c25d3cfd0327dd83325658a2e4f"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/final_eval_results.npz": {
+      "bytes": 45874,
+      "sha256": "064877908f44ef4393be51ef1aff641aedadc34db6f54a1341271e376a9727b6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "7f702de8759e9f571a889ea59a3ae61c91bd79ce040c1a79e98aa6e2f66a961d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/logs.json": {
+      "bytes": 4938,
+      "sha256": "b08211894c2bebf228c956bab99dcd07b7976986b88f4144f080995000c91566"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/prefix_reuse.json": {
+      "bytes": 1689,
+      "sha256": "0ac1ff735398f8af396f760bdee55189873e1f2c78312121d5290ae3606a4a5e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/rope_metrics.npz": {
+      "bytes": 24145,
+      "sha256": "2f60004c8dfabb17507c392ad103935c57a19a13c12b85b365cfee4309252492"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_01/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "2da2baac7a1bd4d457d120b63bc3d49dff71016ad89e217f98386ecf26e14d69"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/chunk_audit.json": {
+      "bytes": 341,
+      "sha256": "5ff80dbb7ebdd688c0374c59d796b648a3ab5872e94442a45cfce97293e85623"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/complete.json": {
+      "bytes": 3677,
+      "sha256": "3c77c5130465ee4660f692fd2fca52d833080568ee011c3a3d5bc417224fe6a1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/ecp_records.json": {
+      "bytes": 10464,
+      "sha256": "d98dcd57efdb5a9254aaa3163dab806193e3c2b3a0c1eb7a463a4c3bfa6070e0"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/final_eval_results.npz": {
+      "bytes": 46015,
+      "sha256": "7a3d2fed876820fb8f9b5358efc5a97f75e4ae7699f3bf877d9e3c5ace6ac608"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "4a0e58fb047e66e3414bb58c0a8c86bed1e78627bc896539ba59de64d853a6aa"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/logs.json": {
+      "bytes": 4934,
+      "sha256": "37078314fe67100c2b2f5144eae8368b5c9099831e194714440ddb189241406b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/prefix_reuse.json": {
+      "bytes": 1689,
+      "sha256": "0ac1ff735398f8af396f760bdee55189873e1f2c78312121d5290ae3606a4a5e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/rope_metrics.npz": {
+      "bytes": 24597,
+      "sha256": "10aa428ef68045d2e83956d560b4691ed53c329c347f872e4122b6b8d4bf1155"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_02/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "0bf6a27b13ddd3a6f4efaac66775c9c12c28cd1a656214628a233702217a4bcc"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "07d009adf1c437c6dafb1bc5170b6a4c9bfe650cd141ad3a653b87bcc4118742"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/complete.json": {
+      "bytes": 3678,
+      "sha256": "9b3bbdde7208abba7fb4c31112c44133cd9d956df89d893794e1ca99cd4a627b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/ecp_records.json": {
+      "bytes": 2193,
+      "sha256": "97645031784a1b29ba61c63752912d3bcb9680ef4b04a739cb485d5df36d5331"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/final_eval_results.npz": {
+      "bytes": 46798,
+      "sha256": "0bb5bf78085e752d43f536126f643791f30c1f7c8d54adaeed6e36c7d9bd5155"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "e51e845f6ccd937839ebf3ec51901f40601b0683bcd1e6eb53d8fd7103132fe6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/logs.json": {
+      "bytes": 1451,
+      "sha256": "9c349995b7b9cb73ba30d865234609a0cbfc8d4f2da93a215e8ab1be4d359934"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/prefix_reuse.json": {
+      "bytes": 422,
+      "sha256": "5a024e783900d41d6a99e3aff97b356b2219ed2718acc5c2aa4d630ef47e3b5a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/rope_metrics.npz": {
+      "bytes": 25114,
+      "sha256": "dff5091f2c799efd309249d6f2f6cf5db70bd967089d66e2badc72f1d75a53f5"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_03/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "19a0f5ab388e69b70425bf4b6c85fa339156b3a251e43082280dafa3d4d24e4d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/chunk_audit.json": {
+      "bytes": 325,
+      "sha256": "b32bfd9cca691035d2cd9db61a2ef979975368660f32667e85bf1c6371def247"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/complete.json": {
+      "bytes": 3677,
+      "sha256": "b953218e6437617118ad3686d908af50d445630fe5a34e274e4f2f73eb6995f1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/ecp_records.json": {
+      "bytes": 5019,
+      "sha256": "75c3c1c1699c1e2acc8f95ed0d93f5c547a6bd48ad3cee9737411f741505cf25"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/final_eval_results.npz": {
+      "bytes": 46652,
+      "sha256": "1115eea0caabbf0f1626c1bf1cde8c7f3c937ac6b2462c6ea9a77ad3b990ee04"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "8c920456d5f58021d468c8b13e4c2eb136bf7c53642a49be49ab9d079567864d"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/logs.json": {
+      "bytes": 2607,
+      "sha256": "e11219cd3d23473d9529ec6b4b449aafcaf0f5829aed7433b53c2af5015d1bae"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/prefix_reuse.json": {
+      "bytes": 841,
+      "sha256": "82ceffed7bc1e7d5ddfb9cd70fa6d842667745f5af5233d71855a02f976b660b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/rope_metrics.npz": {
+      "bytes": 25195,
+      "sha256": "016dd71b435b2f0a808c571b67c4cd63c402ebcf103c6a5ba43893d1f2393c72"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_04/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "3df35e6269738db2996cdaa467ce17b1a843bb68017b94100982dbb1384cdb18"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/chunk_audit.json": {
+      "bytes": 325,
+      "sha256": "ffd756c12a727b0b289d0e33395fe4fba2d00e9d1684f63488105af5d352c194"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/complete.json": {
+      "bytes": 3677,
+      "sha256": "90403f8d20d7198f3cf9a2a72c78bcf7587c4f4d7e1628c041285bd3b5e4cc79"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/ecp_records.json": {
+      "bytes": 2755,
+      "sha256": "342915e85411a817f0ea6ebde7afdd5ef172c8f56144f4e08b5edde40d679bca"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/final_eval_results.npz": {
+      "bytes": 46282,
+      "sha256": "a07ec7591e6b6627b0f5190738bf6404ba5ae5697bc81cfcfe2c9378fb0b66db"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "8f34200bc96c601dc57f24beaadd9213a9010c199fa94f93b499cd3bc01f641c"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/logs.json": {
+      "bytes": 1681,
+      "sha256": "7041c8ba0cdb07207441c9c0587ae121fecfa808ada2be27669dbe88232b461b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/prefix_reuse.json": {
+      "bytes": 505,
+      "sha256": "33008e60988971ef10c69749fc6f6fb72a3c2bdc83d13899865b8a5f86e90fd2"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/rope_metrics.npz": {
+      "bytes": 25122,
+      "sha256": "32236a8fff9bd05135647758e0fad338233ac1a2bb94711af5c0c0f1a30a60c9"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_05/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "4c0c34a7adef36c7873bef67b6586c32a9a7b398f0122a572f65603a82e273b4"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/chunk_audit.json": {
+      "bytes": 333,
+      "sha256": "b69197661544fdfc1a4522cc5569528a9e25a6c72630c29dc3a9b16c54a670ff"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/complete.json": {
+      "bytes": 3676,
+      "sha256": "05d14803e6490880ac9d6c6e6ceba9be66d0fe59c579759c995e23afdc209f40"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/ecp_records.json": {
+      "bytes": 7298,
+      "sha256": "7ee1fb0acd5c77cb34a7d82b36c7e760576f8eef3cc8871c1f9c70f1c2b91728"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/final_eval_results.npz": {
+      "bytes": 45746,
+      "sha256": "fb0e1ebb838207a938ec4eac15386144302815a7a4c975edf97356abbc2dfd34"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "ec21221aa13ca9d52033eb884b2cfc8f4ec8a054c1baeb592a11735d9574681b"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/logs.json": {
+      "bytes": 3549,
+      "sha256": "27afd141887740a54ea17791694e24a2fc445e278e2bf917fd153bff267091ce"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/prefix_reuse.json": {
+      "bytes": 1180,
+      "sha256": "4322162332b5d2769239005fa2588c5255e96fd28ade2507d1bc1f46634137be"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/rope_metrics.npz": {
+      "bytes": 24477,
+      "sha256": "aa81da82b35c4082be467596c6124eb74776686e0e648e0b8762a80187898230"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_06/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "8cbea13cf8e4e7af9bb12c001a75d00f244265db0fd29f3d83de3c643abcf13a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/chunk_audit.json": {
+      "bytes": 341,
+      "sha256": "3a92cc142932f0ab553ea83669ee085fd528ce87e03e3678f1a5ff5b2ea94ce7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/complete.json": {
+      "bytes": 3676,
+      "sha256": "56dc391da530b5bb976b431209d2c9278407c9fce1f386d0518dd422482d7a69"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/ecp_records.json": {
+      "bytes": 10503,
+      "sha256": "2320070cad27df0432e875a579174c706f395c32d749d6118e50532b20613da6"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/final_eval_results.npz": {
+      "bytes": 47082,
+      "sha256": "e74e741445c79a53e6b7ea413f6ac9ecdfc8fc4bd4055784d9e6a6ccaae1af04"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "579aed99108df9b9e1246106464f5c339182ef386ad8a2c3e69044d8d068ccc7"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/logs.json": {
+      "bytes": 4952,
+      "sha256": "cf00ef18417bbb7947146cd947ecd51449f0e527cbb0f02d331bf295bb0de47e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/prefix_reuse.json": {
+      "bytes": 1689,
+      "sha256": "0ac1ff735398f8af396f760bdee55189873e1f2c78312121d5290ae3606a4a5e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/rope_metrics.npz": {
+      "bytes": 25431,
+      "sha256": "116ed123fbccdef6d4f485f27886fb587f8877a662c8437d1460331d64e8e3b2"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_07/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "54f8212fe140fdca9bef677ab75783a587c8600380a15526841ca70cad6bb2c8"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "74e63f246457c7f85fffcc99aabf392a287ef415e3df72d99555ea459cbed2b1"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/complete.json": {
+      "bytes": 3678,
+      "sha256": "ef77e2b21db369c2776c3de6b3a6aef2730674e95271ee313d38450cb8af18c9"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/ecp_records.json": {
+      "bytes": 1628,
+      "sha256": "49ba35033139cafaf7acea855fce111ea4b416e7db726912daf8bfe9c6928118"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/final_eval_results.npz": {
+      "bytes": 46440,
+      "sha256": "88f1e5e554e04a99ed99a7a9eb2b859a47523fdc49d58c1801a51930bee48dfd"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "a2d346537f415b2e366ad24ea95d2a4ce5a77e2380c9902251e66b457f68d1e3"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/logs.json": {
+      "bytes": 1218,
+      "sha256": "7b35ed4de6285650a045c01f3acba749ef5a2c3eaf782684a8bb6e3781284dcc"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/prefix_reuse.json": {
+      "bytes": 338,
+      "sha256": "e02c82b10e14038bd855242aa6ed46902c30b4996fa1087724f11a5839320f41"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/rope_metrics.npz": {
+      "bytes": 25234,
+      "sha256": "19166edff765984733a9eefb74f18cd057250b6646792fa6a6461c7c93a9fbb8"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_08/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "0bdeaf1919a5e79c8a191a49064a2880a70b9fccef68a115f4b24f319017190a"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/chunk_audit.json": {
+      "bytes": 341,
+      "sha256": "d264dbbc58a5effc5803aa93cdab59ed4a1d238cd12da3ac5def7fbea71c1f5c"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/complete.json": {
+      "bytes": 3679,
+      "sha256": "c494a10bf29665770635c7df42123047c1ebbe4908a50932b02e248fa9109aa5"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/ecp_records.json": {
+      "bytes": 10363,
+      "sha256": "2df6e45687ca0fd9141a1ca12673c54bd9a4ae59fbd5d39546b5e11e69223576"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/final_eval_results.npz": {
+      "bytes": 46042,
+      "sha256": "1595669de1858e085abeb6b5bc300d15f948eb725e37f04c08f57a6edc3b75de"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "3e64f6cc3179a1a15639113a2c229bb6836b570c1cd3c31f85f27de23f52c719"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/logs.json": {
+      "bytes": 4946,
+      "sha256": "7923b016b8834f1b27ce67bfb3d6dca6c7290e4d2c7a5d3822fcd384bbc4abbb"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/prefix_reuse.json": {
+      "bytes": 1689,
+      "sha256": "0ac1ff735398f8af396f760bdee55189873e1f2c78312121d5290ae3606a4a5e"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/rope_metrics.npz": {
+      "bytes": 24352,
+      "sha256": "bc9ade8e3754642d81ac0e7c7ef584d095e6ba8df0a4157a3726b74a37c88618"
+    },
+    "eval_outputs/rope_chunk3_strength_v2/native5/sample_09/run_manifest.json": {
+      "bytes": 3345,
+      "sha256": "45168bd0a91cb349d6b7b279d2ef5d93b575c6676848e06c04d19225ce62ac42"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/chunk_audit.json": {
+      "bytes": 341,
+      "sha256": "2a46eed313257108216befa12230393e7479f1e0aa77edda32ca431b848a16f4"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/complete.json": {
+      "bytes": 3765,
+      "sha256": "abfe9b43f9595c37f421bce046183dc94c49e67df14a41ecfa1b6d8d2f5093a1"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/ecp_costs.json": {
+      "bytes": 398,
+      "sha256": "a7d4aa0f8fd95017067668cdecc457d1306b752f584338c0062b714f608d64f3"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/ecp_records.json": {
+      "bytes": 7653,
+      "sha256": "33482effd6768960dd65b69d237d4c219258b986e74e6f8f291fbee891a6be69"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/final_eval_results.npz": {
+      "bytes": 45768,
+      "sha256": "9034d93768cdea92515f62a1e047bb15c712c4772dccc7f2f1b40f8a013d88f6"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "036bb14b1b1f8bf77324bee5d6416824112ae8361d6e70101832c2339995dfb9"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/logs.json": {
+      "bytes": 3795,
+      "sha256": "c15b505497e559f75ebec94abda3cf2c656b85bb3769df53804d2a5405bee95a"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/prefix_reuse.json": {
+      "bytes": 1085,
+      "sha256": "29f20fdadbd2b6b39d6a31c25d4691c0ca7172163be25cbf85945e636e4c7786"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/rope_metrics.npz": {
+      "bytes": 24292,
+      "sha256": "ba14b4448deaa418efa55a12e18088c215b41048a289810717bbc891b50fee37"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_00/run_manifest.json": {
+      "bytes": 3431,
+      "sha256": "1affb81c807a1ecbf32df4e4733a676a2e17d925807482810158d7aa80281901"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/chunk_audit.json": {
+      "bytes": 347,
+      "sha256": "8ddaa5b536886064f5fa2b2497227fefa48eabec8b72d8831b190e518f834f5a"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/complete.json": {
+      "bytes": 3765,
+      "sha256": "cd76261deeb3b03c9c1adfb5deb462d19a8c9e1f4139bae0f675859338a83cb1"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/ecp_records.json": {
+      "bytes": 7675,
+      "sha256": "15cd6871ffa4224da7775a20e3dbdf6f6ca82af3b0918055362709eeffac5e1d"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/final_eval_results.npz": {
+      "bytes": 45789,
+      "sha256": "577855b096d504d7244ff3ed33028bfe7ee1beead6e399742649dc383243cc98"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/frozen_model_audit.json": {
+      "bytes": 735,
+      "sha256": "4f6af329ef7e07ebec3f7f60ec3ce70d3a61d744f2dbcb5a84a1658780712fc3"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/logs.json": {
+      "bytes": 3774,
+      "sha256": "5a92a9c0acd9b03726fa526a4c51938bc20459e239f02f720b5b85bc4112be40"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/prefix_reuse.json": {
+      "bytes": 818,
+      "sha256": "d131cd9c590b4d166d5a115ec44e12ca94df07e791cae4ad4e1d8bcb2589b7ce"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/rope_metrics.npz": {
+      "bytes": 24724,
+      "sha256": "17c29e9171af0b2a0ca18ec3f09082897dc5590b8df72b077a0fe3bcfb062f95"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_01/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "fa6771d644ea72b84fb671f6d9066d0df94b2555dd020e93d194f7c9ef9e80fe"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/chunk_audit.json": {
+      "bytes": 344,
+      "sha256": "aebeefa7b9008ccdf04a7c65c9c65e46073c1639955601112f3a32ccebd2ba6e"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/complete.json": {
+      "bytes": 3768,
+      "sha256": "4cbc1c31e1c7b363e3819f77470ba4061bc2ba472ec40d00eb2bea4be2b93cb5"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/ecp_costs.json": {
+      "bytes": 270,
+      "sha256": "746d3f61365daf55ea90fa2b01249fbd5da91b98a778d41a5cdee7efa275eb20"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/ecp_records.json": {
+      "bytes": 7633,
+      "sha256": "21e78be0a81f2049550dc656c4a7a9cbe6b864064bf52dce7c4c5a1a0a2018a8"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/final_eval_results.npz": {
+      "bytes": 45933,
+      "sha256": "0a4e1ccb2c7d70d1fb6b0557851715ce26a3190794e9c71ad89f0d7c1bb61c74"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "00fccecdacb41bc6da90b678371d6df9b958c277248bcd2db356a01f9d689648"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/logs.json": {
+      "bytes": 3797,
+      "sha256": "4023c8253e4abfcde2e662652aaa718abede27e90ac3c039fa013b47932360cc"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/prefix_reuse.json": {
+      "bytes": 996,
+      "sha256": "735f78f4628f4d6e6ca0ada0d97d8199bc1a0a8e53dfd5f0c47498b814562e9c"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/rope_metrics.npz": {
+      "bytes": 25073,
+      "sha256": "f34fa5baf1838c6f2a30f69c5602345b7446762a6a468c46c36a426e8f29cc2d"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_02/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "b454ca0633f7c0db0b813af31918a5fc0cc01674b40b418cc26f7c4720023eba"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "3f468a85fa43689f2a6f663311cb67a72d0c6d9356fd4cacea5636a82299b2e9"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/complete.json": {
+      "bytes": 3768,
+      "sha256": "b789a7d8e64e50f116251d63a4f7aa7646a677a603ec62094a29172587d31936"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "c0340c1b75433edfe813be726762dd87255ba209af989f5abb17f91fad9998bf"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/final_eval_results.npz": {
+      "bytes": 46763,
+      "sha256": "b3fe2a2688380e25476f5b6a20c7626caefb3208172836f948d5f278835d067a"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/frozen_model_audit.json": {
+      "bytes": 735,
+      "sha256": "1c518df45c73fe6c53d2261dcb8a0109ade41305cf02e52d2d128c5e78fc5a74"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/logs.json": {
+      "bytes": 985,
+      "sha256": "860d17f5e48a0a2508ea881bd2c79ec3446b9dd04b359bf3a2d76527f03d99c3"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/rope_metrics.npz": {
+      "bytes": 25172,
+      "sha256": "f4518bfba28503a522458f8c5f53d3ea56404bef74ba84f3b9a754b997e6a03c"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_03/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "b57e4f3be3b7f3fbd1187bd94a6210077137b23576bb692cc42cc9f97bef66c0"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "b9b781116b49e945b22de19681f8b38a5551bfbaa4685c7596539eb77c07223d"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/complete.json": {
+      "bytes": 3767,
+      "sha256": "da008fa555e93a45d99185a182ab1dc90563e27098ff07e1ac7a2fce85262106"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "744d7390f6bb2da7b9600860b02f41801770d340a732b24820698f8c13d5a0c0"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/final_eval_results.npz": {
+      "bytes": 46532,
+      "sha256": "f58800eea06b515ce85d67e1b432c77527094f177e40d3a2703731a3503ea303"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/frozen_model_audit.json": {
+      "bytes": 735,
+      "sha256": "e560902cab8df413259fca26fc74d28e908a9a749a834ed054854cc6b3c63208"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/logs.json": {
+      "bytes": 986,
+      "sha256": "9372359c30a3f649b920114aec1529e878f3cb1316b3b3ab0cfe71054be0bbac"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/rope_metrics.npz": {
+      "bytes": 24921,
+      "sha256": "1979160adfd5bc24f3344c69b53e2ec8f5f9aee90e9b7a8d2497b64ea604394c"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_04/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "ad3d696b2f8d0e8b4db4fd3261ddaa1de449bc8b2b4506d3ac9c9f88c08ea79d"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/chunk_audit.json": {
+      "bytes": 339,
+      "sha256": "3b2df36550fdcc0b814ee79e6000f1be58a0143371f688d41ca931b46112765c"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/complete.json": {
+      "bytes": 3767,
+      "sha256": "dc6811272ab55efb1680361d33f6ea0a2e65f88b0258ffe3ffd630c06bda7d91"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/ecp_records.json": {
+      "bytes": 5007,
+      "sha256": "b9d963fccc92274e3c367bbff55e0e817f6ab6f86858e5df3aa5d39e15152052"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/final_eval_results.npz": {
+      "bytes": 46351,
+      "sha256": "c2d39b1739a42744c67a1782456f4299f28fccfcf786c40063d25b130d28fa3e"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "2b65ee52f27da2ff2daca1c5f052538fee63c52ecfc1c18853123299959bed55"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/logs.json": {
+      "bytes": 2610,
+      "sha256": "257fd9559840007fb63487d3f9bef1d84cb02c9456849d6b129cf8395153614a"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/prefix_reuse.json": {
+      "bytes": 543,
+      "sha256": "59432010c725115f0cb5caf80107063a6120a9d6c206f71ee4df1e1e66bcf5de"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/rope_metrics.npz": {
+      "bytes": 25033,
+      "sha256": "9c1cb1545e76f28165c9939aaed3654d720b9bff7341e50c85e3851fa9148221"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_05/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "0f721a317e94f756e8cf4564c87f2db38ccf89c3574d6a69c75211a092ff727f"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/chunk_audit.json": {
+      "bytes": 332,
+      "sha256": "dfa3c50548a5e1e4d82a900c93928dcdc69989ec9e3278bbf7b75f4b1c997413"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/complete.json": {
+      "bytes": 3766,
+      "sha256": "3e70d71bbdda638ec1f595cde523fb5b310a1ff7c9149f7dab6f4d344dcc3d7e"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/ecp_records.json": {
+      "bytes": 4444,
+      "sha256": "5bae3d98a235e4e3f63b19ba228129f6099b762162d292b0b6cf39be80f1b5a3"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/final_eval_results.npz": {
+      "bytes": 45662,
+      "sha256": "7d86723e734bd3e5f6b4d7162ceddc6a1acbeef6d3f3fbed05f6a8efc952d271"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "266b6a920144a54dabb62869c2ec6f9178827e8f8bf7babd87918a7bd29b8d26"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/logs.json": {
+      "bytes": 2382,
+      "sha256": "fbebfe1cdadb5d4c3ee2c34351483d0fcf775584ff13e0da0e4a7a85e9bdb1cb"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/prefix_reuse.json": {
+      "bytes": 489,
+      "sha256": "7846538d70101f2964ff6ac12698b6a9a35118fd7f965e789eaa57fae2b292ef"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/rope_metrics.npz": {
+      "bytes": 25032,
+      "sha256": "0406a89c69fb957867007860083982ff0ffeef8626e75c13bf4f18f4010ff02a"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_06/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "4e7356f852392acac5b52090d03c6de20edb4848a7fb65469100ad933636cbb1"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/chunk_audit.json": {
+      "bytes": 325,
+      "sha256": "a164077277ed82fa120c9701a3d298d669bb411ee8a889ca3f72a4479814d98f"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/complete.json": {
+      "bytes": 3768,
+      "sha256": "e92dd80c281fb5adeece937e37721dffcc4c8049860d9a978c88f1a4f928af3a"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/ecp_records.json": {
+      "bytes": 2738,
+      "sha256": "25478b9c84e8f9767e775e9777bfe72d01597ff94682c076b3ecca0f09f70699"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/final_eval_results.npz": {
+      "bytes": 46844,
+      "sha256": "d93005e6f12d6da0a1acd7ee99b82f217613f7cbfd5bb8db3e258c860a968ccb"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "819dbfd7c3fa20cf36be825b0b1ddeb9f3de4c5397003c27cbbd7993f928afcf"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/logs.json": {
+      "bytes": 1684,
+      "sha256": "3b3b36c3fd29e9badeb051b713011bf13ed5b5018dcd875ada89536adad47850"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/prefix_reuse.json": {
+      "bytes": 327,
+      "sha256": "d6bf89d2ccec7339c6e04049f214fdcd2d3404b3402703d0323969ae2e95dd2b"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/rope_metrics.npz": {
+      "bytes": 25089,
+      "sha256": "3ffa52d65e12b23e65505de5ef8d9a843997384ff7952fcb18933e30fd4ba74e"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_07/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "8b66d86f62c46d93a556f7f2339d5a0a972e62946046b5d50ba6b9c4ebefe118"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "f0ce90cf5057aac5af517730d851d15b001d5410da45a7cf105a30592a8b4bbf"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/complete.json": {
+      "bytes": 3767,
+      "sha256": "02855d2e6743f2e727a0097cc9f7abe1227e821c46593c389a27313e3a908350"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/ecp_records.json": {
+      "bytes": 1224,
+      "sha256": "6158ba9324a3dea3d0ffb05b4ef8898dc3f3bff1408d6d16a1bac6b89a9706f1"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/final_eval_results.npz": {
+      "bytes": 46424,
+      "sha256": "3b0055e1a31cb40c90e4ab17dc6049c476b72b113e8184e746bafc5a70bf7748"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/frozen_model_audit.json": {
+      "bytes": 735,
+      "sha256": "879aa3792b82bd38a06f5755f13d74c4506931c9491211cc76ef454eeb11b3c3"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/logs.json": {
+      "bytes": 982,
+      "sha256": "70191303c5bea5cdfe95af7fdbc10ce3923cc6fd0613ea4dbe2d71b70de9c9f0"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/rope_metrics.npz": {
+      "bytes": 25264,
+      "sha256": "314ebe635d8410a0c5e5b9201e48a847ea5cc5737569105bf5071338d94718b7"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_08/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "4e2c58084cf3df0d5169a3419bc280829894ecc1cb91e7a67e2bbf14e9a43fc2"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/chunk_audit.json": {
+      "bytes": 344,
+      "sha256": "09e90e07bfb65053d57243d7c37baada51349824111a959bde525b2fe8285639"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/complete.json": {
+      "bytes": 3768,
+      "sha256": "f0da9fd5917959a8aadf24ae0d310f67365e1ca5533f94751a69c51d26c2ba87"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/ecp_costs.json": {
+      "bytes": 273,
+      "sha256": "78c00b464a302b1ba3fbb61d6d5bf3bf040f7da1e14699c2fa715fca78e4b88d"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/ecp_records.json": {
+      "bytes": 7638,
+      "sha256": "03549de43c4095e148587d9ad7085be187ed900086a5599e8cd33779ffa4291e"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/final_eval_results.npz": {
+      "bytes": 45956,
+      "sha256": "da328c01b98acc99c5ba06a889c5ad326f927abc111218393c294f640747a3c3"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "dbc1cfbbaf7dea184172caa4d3c4a25fa416484aad80167e9e259deae45c0562"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/logs.json": {
+      "bytes": 3795,
+      "sha256": "71333dfcbc792fee31783187c9b9290c1bd9d784e78c00c4be9b76335d848a4b"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/prefix_reuse.json": {
+      "bytes": 996,
+      "sha256": "735f78f4628f4d6e6ca0ada0d97d8199bc1a0a8e53dfd5f0c47498b814562e9c"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/rope_metrics.npz": {
+      "bytes": 25007,
+      "sha256": "24692269400a65a1d58ea4fca41147e8e9bc5d481b57a5fe9ed7e784b0f59a95"
+    },
+    "eval_outputs/rope_chunk3_cap15/dynamic3/sample_09/run_manifest.json": {
+      "bytes": 3434,
+      "sha256": "6dbd3303fe01cf90aad3c18a9d7e7fca5a1b86e1ec625a0ce1a9ea49b7c34749"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/chunk_audit.json": {
+      "bytes": 331,
+      "sha256": "807946966d476efa640c96b6e8db20b6093bf88779af1ad4ec54b7a42136f647"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/complete.json": {
+      "bytes": 3755,
+      "sha256": "284c34e138e0282a21c796f91024627a7ff2cf74e772ff6934760c0ec108be6f"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/ecp_costs.json": {
+      "bytes": 267,
+      "sha256": "1a903a913c7ee57d9d6b7cc876a7fa619b3f80ba4fe92908501f66852661e90b"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/ecp_records.json": {
+      "bytes": 6127,
+      "sha256": "5a88b5960b761c0d938e13a01e18eaad98f1d48e41867ad443eb295007c66bfc"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/final_eval_results.npz": {
+      "bytes": 45718,
+      "sha256": "f06082b1db45ff6b87babf9b3f748db158016b59c6d5fd9f739d588aeaf45491"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "5f16b0e402041bcdcb21da45cddcfa79620869dffd06ee55f26a59c2626ab61a"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/logs.json": {
+      "bytes": 3090,
+      "sha256": "64e667725a0f2ac4e382fe2001206c6e20a24e1262bd0270b49dbe13d3e624c3"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/prefix_reuse.json": {
+      "bytes": 831,
+      "sha256": "e52d6af45de27824fde11f79ad404a366ae3b3993944b68e632cff5c446634db"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/rope_metrics.npz": {
+      "bytes": 23924,
+      "sha256": "d3ee0cd9dff8a20c547edc05862d6f034f30ceefa9458940a373147b5f5e876f"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_00/run_manifest.json": {
+      "bytes": 3423,
+      "sha256": "0d214c5505be7e4d1d68b67580500627ef4a2d3a37a6d4c153fcbe9980e3519d"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/chunk_audit.json": {
+      "bytes": 345,
+      "sha256": "31e5ca7b4fc13ddadb72dcf9ab06071e2cb51915654cf609a4d010987f9b309b"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/complete.json": {
+      "bytes": 3757,
+      "sha256": "5968bbfbb7a5e0c31d377f032c13279fb540da74465d00d66918c3ca3b3fcf38"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/ecp_records.json": {
+      "bytes": 7676,
+      "sha256": "afbc26b5af790f4d5f079c038ac6f51ea5bd4894cbe56e2714674ec419b7d6e3"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/final_eval_results.npz": {
+      "bytes": 45789,
+      "sha256": "577855b096d504d7244ff3ed33028bfe7ee1beead6e399742649dc383243cc98"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/frozen_model_audit.json": {
+      "bytes": 735,
+      "sha256": "13cc8fdfc2c158607a4ab3587ae672024b89eb0b63f3ba3f6689482b003d9ea4"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/logs.json": {
+      "bytes": 3774,
+      "sha256": "5a92a9c0acd9b03726fa526a4c51938bc20459e239f02f720b5b85bc4112be40"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/prefix_reuse.json": {
+      "bytes": 818,
+      "sha256": "d131cd9c590b4d166d5a115ec44e12ca94df07e791cae4ad4e1d8bcb2589b7ce"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/rope_metrics.npz": {
+      "bytes": 24724,
+      "sha256": "17c29e9171af0b2a0ca18ec3f09082897dc5590b8df72b077a0fe3bcfb062f95"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_01/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "9b190c5491dd6e823993386325c3c1e680ed1820e20450406b9786e4a42e102c"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/chunk_audit.json": {
+      "bytes": 342,
+      "sha256": "7b69668f47d0c2df2cd1834911f57b34d460376c2529cbcd7e3194d7bd756541"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/complete.json": {
+      "bytes": 3760,
+      "sha256": "77c62ed77f9f19ea1d298333fda07cdc24055c077ca6d53cb382115941d3e77a"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/ecp_costs.json": {
+      "bytes": 270,
+      "sha256": "746d3f61365daf55ea90fa2b01249fbd5da91b98a778d41a5cdee7efa275eb20"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/ecp_records.json": {
+      "bytes": 7633,
+      "sha256": "ef7c25f333ee5143b7a6885b094c05e2395c04b4bf9f29b0d1e698be7c374484"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/final_eval_results.npz": {
+      "bytes": 45933,
+      "sha256": "0a4e1ccb2c7d70d1fb6b0557851715ce26a3190794e9c71ad89f0d7c1bb61c74"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "f13998098aab23505d91b5bd786d7791090367e9de259e810b893c590d774697"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/logs.json": {
+      "bytes": 3797,
+      "sha256": "4023c8253e4abfcde2e662652aaa718abede27e90ac3c039fa013b47932360cc"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/prefix_reuse.json": {
+      "bytes": 996,
+      "sha256": "735f78f4628f4d6e6ca0ada0d97d8199bc1a0a8e53dfd5f0c47498b814562e9c"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/rope_metrics.npz": {
+      "bytes": 25073,
+      "sha256": "f34fa5baf1838c6f2a30f69c5602345b7446762a6a468c46c36a426e8f29cc2d"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_02/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "c0711c5c01745eb8795975726b36a16a1b3163542c1593ec3eb9e2c9639a84f3"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/chunk_audit.json": {
+      "bytes": 316,
+      "sha256": "d54382017ff2375b85f422cfffaf1cfa74c6575246174b4e0495bec36b6ee11f"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/complete.json": {
+      "bytes": 3760,
+      "sha256": "1739cf43e71d9bffd9d7f86f7d98778f9662731574266e75dcfd628ef74e5555"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/ecp_records.json": {
+      "bytes": 1225,
+      "sha256": "bc41349522a47c6ba281897f3cd6d5da29aee82f463aaa5a942618dd90baef77"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/final_eval_results.npz": {
+      "bytes": 46763,
+      "sha256": "b3fe2a2688380e25476f5b6a20c7626caefb3208172836f948d5f278835d067a"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/frozen_model_audit.json": {
+      "bytes": 735,
+      "sha256": "8e46db00fb50c4705e4b5ae9f444dd61e1a723e5750c98165a878e8901e71cb4"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/logs.json": {
+      "bytes": 985,
+      "sha256": "860d17f5e48a0a2508ea881bd2c79ec3446b9dd04b359bf3a2d76527f03d99c3"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/rope_metrics.npz": {
+      "bytes": 25172,
+      "sha256": "f4518bfba28503a522458f8c5f53d3ea56404bef74ba84f3b9a754b997e6a03c"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_03/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "ee6ef503a4e85132415cb5325581d715ccfcd7501c1fddc801ca6cc8cea00269"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/chunk_audit.json": {
+      "bytes": 316,
+      "sha256": "26f4f1a71e09fa9b3561682f01a10d1943ac098ed6f05ef91b56bb988721ac12"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/complete.json": {
+      "bytes": 3759,
+      "sha256": "6872e0e95102e52f1260c22b9bf59ece8d7f2c63b0b6538b5974959efdcb0005"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "76ae253ea58177f6b01b314fde907484f65f16939864729315f263859698a964"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/final_eval_results.npz": {
+      "bytes": 46532,
+      "sha256": "f58800eea06b515ce85d67e1b432c77527094f177e40d3a2703731a3503ea303"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/frozen_model_audit.json": {
+      "bytes": 735,
+      "sha256": "7b2a6d3805f0d09072b4124f3104f29b7a4585817cab2125eadafc8ec7898766"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/logs.json": {
+      "bytes": 986,
+      "sha256": "9372359c30a3f649b920114aec1529e878f3cb1316b3b3ab0cfe71054be0bbac"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/rope_metrics.npz": {
+      "bytes": 24921,
+      "sha256": "1979160adfd5bc24f3344c69b53e2ec8f5f9aee90e9b7a8d2497b64ea604394c"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_04/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "05954ed9b20984a7b965021142e7aa68df712a2eeee62a49a6fb5ba06cad550c"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/chunk_audit.json": {
+      "bytes": 337,
+      "sha256": "49bf875df50fa6f868c3eeb117a79636c1c4321047b5faf19e3aad405f1c7a93"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/complete.json": {
+      "bytes": 3759,
+      "sha256": "a75b10af7ae07afc3f240720596c3f9568bfb7717e7562671d799a0b455ffe83"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/ecp_records.json": {
+      "bytes": 5010,
+      "sha256": "59d8c5f82ab2eb55f47604275f625899e0216a3f8cd00319eabbc5469a5eb23c"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/final_eval_results.npz": {
+      "bytes": 46351,
+      "sha256": "c2d39b1739a42744c67a1782456f4299f28fccfcf786c40063d25b130d28fa3e"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/frozen_model_audit.json": {
+      "bytes": 735,
+      "sha256": "337d5a72ca75bb25248af07ce26225366b6a5f687bc9f885c0e90a25a112264e"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/logs.json": {
+      "bytes": 2610,
+      "sha256": "257fd9559840007fb63487d3f9bef1d84cb02c9456849d6b129cf8395153614a"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/prefix_reuse.json": {
+      "bytes": 543,
+      "sha256": "59432010c725115f0cb5caf80107063a6120a9d6c206f71ee4df1e1e66bcf5de"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/rope_metrics.npz": {
+      "bytes": 25033,
+      "sha256": "9c1cb1545e76f28165c9939aaed3654d720b9bff7341e50c85e3851fa9148221"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_05/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "c9f869489b1a0aa1c8e0781c79d8a135002e298e7c5b7c0aaf706d5c3a413d62"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/chunk_audit.json": {
+      "bytes": 330,
+      "sha256": "bb5344f71eacfbcfd4c4e63fd28e4cdaa54718629322b2bde1f1838bb4bca69a"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/complete.json": {
+      "bytes": 3758,
+      "sha256": "32097d24ef0a193198033cb46ef86b4e704456dbdc77d4f8e8e6bac770d7ccb1"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/ecp_records.json": {
+      "bytes": 4444,
+      "sha256": "da954872f4795980100ac8fba77127330586abbe46ddb77443f25e783eac1325"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/final_eval_results.npz": {
+      "bytes": 45662,
+      "sha256": "7d86723e734bd3e5f6b4d7162ceddc6a1acbeef6d3f3fbed05f6a8efc952d271"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "154236da670eaa6df3b67d11dce7dbb9bdd088cb1d0644bc82ed477d9ef5ba1c"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/logs.json": {
+      "bytes": 2382,
+      "sha256": "fbebfe1cdadb5d4c3ee2c34351483d0fcf775584ff13e0da0e4a7a85e9bdb1cb"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/prefix_reuse.json": {
+      "bytes": 489,
+      "sha256": "7846538d70101f2964ff6ac12698b6a9a35118fd7f965e789eaa57fae2b292ef"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/rope_metrics.npz": {
+      "bytes": 25032,
+      "sha256": "0406a89c69fb957867007860083982ff0ffeef8626e75c13bf4f18f4010ff02a"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_06/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "130cd720fa2a7dbca50f4c5c3027ef969f6ab6bf93b658642548dbdc1c2537b4"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/chunk_audit.json": {
+      "bytes": 323,
+      "sha256": "4868a2825aef3b2b8e178e31c2f0e73d1953b4858f02186c2a6aef1206a6fde1"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/complete.json": {
+      "bytes": 3760,
+      "sha256": "1a177b001cc2526bfadf3f6646a90d947cdf88ca731cc995d9dddd635fdc6f01"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/ecp_records.json": {
+      "bytes": 2736,
+      "sha256": "5c29d2c4c573ba8fc31ee567012695ff146fd383509c7714237abe773da08c30"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/final_eval_results.npz": {
+      "bytes": 46844,
+      "sha256": "d93005e6f12d6da0a1acd7ee99b82f217613f7cbfd5bb8db3e258c860a968ccb"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "4b2800c1a80cc2b8e09dc32ea1eb2dd50cc3b6b6d7f61e641ad897e1518ea1ea"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/logs.json": {
+      "bytes": 1684,
+      "sha256": "3b3b36c3fd29e9badeb051b713011bf13ed5b5018dcd875ada89536adad47850"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/prefix_reuse.json": {
+      "bytes": 327,
+      "sha256": "d6bf89d2ccec7339c6e04049f214fdcd2d3404b3402703d0323969ae2e95dd2b"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/rope_metrics.npz": {
+      "bytes": 25089,
+      "sha256": "3ffa52d65e12b23e65505de5ef8d9a843997384ff7952fcb18933e30fd4ba74e"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_07/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "98f6adb09f795a7a9ebb29fbd6bc27e12d5bb41ca048fa145d583be32ffd5667"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/chunk_audit.json": {
+      "bytes": 316,
+      "sha256": "c89400798ee004bada261b7fb9a1c24f0fbe3ada72f376a209ce107caedb7720"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/complete.json": {
+      "bytes": 3759,
+      "sha256": "abf1a9b0b8b66c7eb3bf68869361d2793370a41e70edc58f5fa29f104f0f36c6"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/ecp_records.json": {
+      "bytes": 1224,
+      "sha256": "679cbce3dfda44f8dd03ab5fe85ead2058439cb9c55b372fc7706c75fe58cec7"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/final_eval_results.npz": {
+      "bytes": 46424,
+      "sha256": "3b0055e1a31cb40c90e4ab17dc6049c476b72b113e8184e746bafc5a70bf7748"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/frozen_model_audit.json": {
+      "bytes": 734,
+      "sha256": "5423b76ebe1e1dfc73af9e66dd08a4c0a53d359585d2422d5c782fac20bb5668"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/logs.json": {
+      "bytes": 982,
+      "sha256": "70191303c5bea5cdfe95af7fdbc10ce3923cc6fd0613ea4dbe2d71b70de9c9f0"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/prefix_reuse.json": {
+      "bytes": 165,
+      "sha256": "fe360159f209637eda56462fa4eefd4c9a203093ad80474f893272524e619bbb"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/rope_metrics.npz": {
+      "bytes": 25264,
+      "sha256": "314ebe635d8410a0c5e5b9201e48a847ea5cc5737569105bf5071338d94718b7"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_08/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "a5fb59ae914d6c038223e8f936e70d0e650149c2e6263252a72de0c2facf0920"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/chunk_audit.json": {
+      "bytes": 342,
+      "sha256": "4f43cb9f96fcd4122bc6e4432059ddc3572f9feee4b6b532164024f75d7e6c96"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/complete.json": {
+      "bytes": 3758,
+      "sha256": "455663c0f5c349c4fcb0da0713cdb7e3f29c0c4d8525a33010ee734385355bee"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/ecp_costs.json": {
+      "bytes": 274,
+      "sha256": "87005004fd9d5fb30ce78915e4f8887efc294af6551e3f749eff7952df4c7c86"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/ecp_records.json": {
+      "bytes": 7637,
+      "sha256": "445c66701aa6894661f4ff84d5a17ba628f095e2cc8352957a77ba02731afff7"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/final_eval_results.npz": {
+      "bytes": 45956,
+      "sha256": "b6ce8ca8e1d6f9c8326988f6990fae2d926510028a555c0cbb1cf9d8b8922936"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/frozen_model_audit.json": {
+      "bytes": 736,
+      "sha256": "6204a5fb9744fb1dd3a6e609e5982c65c80ae5187c5f33a5d24e515dc5118920"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/logs.json": {
+      "bytes": 3783,
+      "sha256": "c1066ce1708f19a2a25e46e5c4beb832011639a73920cf7675e7ae08507c69b0"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/prefix_reuse.json": {
+      "bytes": 996,
+      "sha256": "735f78f4628f4d6e6ca0ada0d97d8199bc1a0a8e53dfd5f0c47498b814562e9c"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/rope_metrics.npz": {
+      "bytes": 25370,
+      "sha256": "3923453778c07ba234094323dd083e2acb3f6aa0ace49edba37e8ae8a37cb64f"
+    },
+    "eval_outputs/rope_chunk3_cap15/fixed3/sample_09/run_manifest.json": {
+      "bytes": 3426,
+      "sha256": "96fe6021c23dabd0bd33a212a372932c2ee9c8f5ccf7e68aef950e87be64cb4e"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/chunk_audit.json": {
+      "bytes": 336,
+      "sha256": "6faecb821e3d32342a0c3cf48b5f9ed31b8119e15e88f835fc553dfd3d2999a6"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/complete.json": {
+      "bytes": 3663,
+      "sha256": "66ee29aa412fc11fa7b55b9b68a6cd1412804bb53241164a063a8bab13468714"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/ecp_records.json": {
+      "bytes": 6116,
+      "sha256": "900e6845949ed38e55a9ead3cf7bfea493b0a106abf90dfbd09362063395b03a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/final_eval_results.npz": {
+      "bytes": 45717,
+      "sha256": "7a54c70d24274a8549a128d5460d3efc63fae2996cbe7e0267f0cfd3eb7f8948"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "84a5070baed62c8004345a5e52a1fbf1a65a57169de4fb10b0c77b26881eb997"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/logs.json": {
+      "bytes": 3087,
+      "sha256": "3370e70ae452d6926e7a60383bbe5110b84d6e9b2d5b6f6458e28083916270c6"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/prefix_reuse.json": {
+      "bytes": 1009,
+      "sha256": "9348fa7aac1bea15bc34a194fab4d2f05d3dce2a90b10eb496e38c1c50e93fcc"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/rope_metrics.npz": {
+      "bytes": 23886,
+      "sha256": "930b98f3967c794a34917e90f0558f0f62a8db09f2749ef6dfef1a9db009e6a0"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_00/run_manifest.json": {
+      "bytes": 3330,
+      "sha256": "f64f467761acb71a1db63575e9593be1307304c8d1a2897d767c1c708aee2b29"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/chunk_audit.json": {
+      "bytes": 347,
+      "sha256": "8ddaa5b536886064f5fa2b2497227fefa48eabec8b72d8831b190e518f834f5a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/complete.json": {
+      "bytes": 3664,
+      "sha256": "e8eac1db10016cf192a3d88b1c0f3a3bad7ed24e45f5d7cfc7e2fb3f40287cef"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/ecp_records.json": {
+      "bytes": 7678,
+      "sha256": "43456efb0442e8ef2714a6239f5ad60f6275bf5ef511bb50ffffd4f54e7c3b35"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/final_eval_results.npz": {
+      "bytes": 45789,
+      "sha256": "577855b096d504d7244ff3ed33028bfe7ee1beead6e399742649dc383243cc98"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "475de5fc603fb45ca7a7627f2abf409aea5b7a3ce2ce3dcd3bd7774db241a3b0"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/logs.json": {
+      "bytes": 3774,
+      "sha256": "5a92a9c0acd9b03726fa526a4c51938bc20459e239f02f720b5b85bc4112be40"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/prefix_reuse.json": {
+      "bytes": 1263,
+      "sha256": "3765fa8f066ef4f5c11237dcdb7a26d407e9554233f6d67130531fffacb83e7a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/rope_metrics.npz": {
+      "bytes": 24724,
+      "sha256": "17c29e9171af0b2a0ca18ec3f09082897dc5590b8df72b077a0fe3bcfb062f95"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_01/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "0f7d65534cbf7d2e191fe2276eddac113fb6afedc25cfae8640da46912c81195"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/chunk_audit.json": {
+      "bytes": 347,
+      "sha256": "96ae0207acc3a982357b33d1d3309726c109518f86ee35296171e730af25eecd"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/complete.json": {
+      "bytes": 3665,
+      "sha256": "5c82e31e375172fac119a9080eb48f7509df100fe7a2d5f39ea1f2b7d207e188"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/ecp_records.json": {
+      "bytes": 7555,
+      "sha256": "af2bb375934fe83d99fc23d3c7e5fc9a1dddcc8032949efa975bd5bca64d9ae0"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/final_eval_results.npz": {
+      "bytes": 45933,
+      "sha256": "ab9b8cb1b854b927b07e9491ed27a3a725b644237ebb9b4415def27380e9c89a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "ced5ff0f061b6cfdafcd3a0046557866cebd5fba47a2d5e837c5cb877a603ab2"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/logs.json": {
+      "bytes": 3791,
+      "sha256": "211ddaab481f588011ae3508bb2463e70178df338cc0f24a5680cbcb236551da"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/prefix_reuse.json": {
+      "bytes": 1263,
+      "sha256": "3765fa8f066ef4f5c11237dcdb7a26d407e9554233f6d67130531fffacb83e7a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/rope_metrics.npz": {
+      "bytes": 24845,
+      "sha256": "7f1ea1523b3d812a7ad8b2518d56f4219eaf145c8ea52467fa6563930cbb370a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_02/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "e5cf66ffd4fe37f98fcadb2bdb4b06bde611b680cf2737aa67cb1d91226c0184"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "3f468a85fa43689f2a6f663311cb67a72d0c6d9356fd4cacea5636a82299b2e9"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/complete.json": {
+      "bytes": 3667,
+      "sha256": "eaf30c0ad218fe637ba303b19fe546e05dc90a1dcdd595e27408ed6151546aae"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/ecp_records.json": {
+      "bytes": 1225,
+      "sha256": "7e20a80d46c13bd85be4e40ed6ea53ac22a8630a60cd173bc949aa82258f7f6f"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/final_eval_results.npz": {
+      "bytes": 46763,
+      "sha256": "b3fe2a2688380e25476f5b6a20c7626caefb3208172836f948d5f278835d067a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "cab51dae42c30f8f911adeabd66d06dc84faca25e5c32c54f48b088a5b2e03a4"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/logs.json": {
+      "bytes": 985,
+      "sha256": "860d17f5e48a0a2508ea881bd2c79ec3446b9dd04b359bf3a2d76527f03d99c3"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/prefix_reuse.json": {
+      "bytes": 254,
+      "sha256": "19b98b961b1082839fa27b392df85fa960488c946d8b29f36f2049bb8f02e064"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/rope_metrics.npz": {
+      "bytes": 25172,
+      "sha256": "f4518bfba28503a522458f8c5f53d3ea56404bef74ba84f3b9a754b997e6a03c"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_03/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "406d86759167ae50826fa6766d4dcab99e8d9d2fb126bcc4040c0ffb6f588434"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "b9b781116b49e945b22de19681f8b38a5551bfbaa4685c7596539eb77c07223d"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/complete.json": {
+      "bytes": 3666,
+      "sha256": "cc6007febadc198e904cf55290fcc7abdc9f4a421e3ee104ba05a28750b2294d"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/ecp_records.json": {
+      "bytes": 1222,
+      "sha256": "85f9cb3cb45081fbca1aa37fad4ad0c770bee62629628fb3abfba31d26cd797c"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/final_eval_results.npz": {
+      "bytes": 46532,
+      "sha256": "f58800eea06b515ce85d67e1b432c77527094f177e40d3a2703731a3503ea303"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "21717fd0b6543f41ecf6cb3f2da733994e8f83e5ea304b3914f30c1b777d2e74"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/logs.json": {
+      "bytes": 986,
+      "sha256": "9372359c30a3f649b920114aec1529e878f3cb1316b3b3ab0cfe71054be0bbac"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/prefix_reuse.json": {
+      "bytes": 254,
+      "sha256": "19b98b961b1082839fa27b392df85fa960488c946d8b29f36f2049bb8f02e064"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/rope_metrics.npz": {
+      "bytes": 24921,
+      "sha256": "1979160adfd5bc24f3344c69b53e2ec8f5f9aee90e9b7a8d2497b64ea604394c"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_04/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "493d9fca86f818ef4290f0b49a599482947d0d527511e23d6d892f8d46302cb4"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/chunk_audit.json": {
+      "bytes": 339,
+      "sha256": "3b2df36550fdcc0b814ee79e6000f1be58a0143371f688d41ca931b46112765c"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/complete.json": {
+      "bytes": 3666,
+      "sha256": "692ce28345c97b9351e660f41ae4c559218953ba1629ce9d1063627a6eb96c2e"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/ecp_records.json": {
+      "bytes": 5007,
+      "sha256": "4d89f3a23eb6a692a5fabb86c0fa99fa79ad1f8245b6179430f0be4e31e58884"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/final_eval_results.npz": {
+      "bytes": 46351,
+      "sha256": "c2d39b1739a42744c67a1782456f4299f28fccfcf786c40063d25b130d28fa3e"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "468226c58e204da8db93584ebf01c557ff711057735425774c7fd51848e43ca9"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/logs.json": {
+      "bytes": 2610,
+      "sha256": "257fd9559840007fb63487d3f9bef1d84cb02c9456849d6b129cf8395153614a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/prefix_reuse.json": {
+      "bytes": 839,
+      "sha256": "231c757db34726848dcf9c111bb06ac5a1d823956dc00ce8eadd6e42e056cf8c"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/rope_metrics.npz": {
+      "bytes": 25033,
+      "sha256": "9c1cb1545e76f28165c9939aaed3654d720b9bff7341e50c85e3851fa9148221"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_05/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "233d36f037f65410ddf207a39d94b753e43c38bf6dbd1e547a6c9978077fe58f"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/chunk_audit.json": {
+      "bytes": 332,
+      "sha256": "dfa3c50548a5e1e4d82a900c93928dcdc69989ec9e3278bbf7b75f4b1c997413"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/complete.json": {
+      "bytes": 3665,
+      "sha256": "b85ba3760f1c0f5a6a3b2f902a2660be68c9eacbb2393efca5fd6c8ede666ae4"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/ecp_records.json": {
+      "bytes": 4447,
+      "sha256": "ca33c5518932d0587aa94b70baa574666f8953dc418e34ebabe5ccf9552dba14"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/final_eval_results.npz": {
+      "bytes": 45662,
+      "sha256": "7d86723e734bd3e5f6b4d7162ceddc6a1acbeef6d3f3fbed05f6a8efc952d271"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "7e99e6444c469ee939ec965e0acc40663ab02084a250c3efaf977eb919d50d59"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/logs.json": {
+      "bytes": 2382,
+      "sha256": "fbebfe1cdadb5d4c3ee2c34351483d0fcf775584ff13e0da0e4a7a85e9bdb1cb"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/prefix_reuse.json": {
+      "bytes": 756,
+      "sha256": "eaac0e9663e442dc00aadd67c61ed10177255cc1a5453491dc4393ca1c96ff28"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/rope_metrics.npz": {
+      "bytes": 25032,
+      "sha256": "0406a89c69fb957867007860083982ff0ffeef8626e75c13bf4f18f4010ff02a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_06/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "793fda9e1741200892e845fd2ccee32831e9aed5fa74cd3adca77c20b480d2ff"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/chunk_audit.json": {
+      "bytes": 325,
+      "sha256": "a164077277ed82fa120c9701a3d298d669bb411ee8a889ca3f72a4479814d98f"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/complete.json": {
+      "bytes": 3667,
+      "sha256": "b53723dbef26839b6b8b34dc5a41866a08c5cad7de9c176f06face4787a3f87c"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/ecp_records.json": {
+      "bytes": 2735,
+      "sha256": "d2ac7971454e063925e85111dbed78b94bbd79aa306a30c2f81d29489547c574"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/final_eval_results.npz": {
+      "bytes": 46844,
+      "sha256": "d93005e6f12d6da0a1acd7ee99b82f217613f7cbfd5bb8db3e258c860a968ccb"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "63bda62e7d0a0d8f16db3bf6d97f1e3a9d124169863f95dd2f6237b5b17f801a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/logs.json": {
+      "bytes": 1684,
+      "sha256": "3b3b36c3fd29e9badeb051b713011bf13ed5b5018dcd875ada89536adad47850"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/prefix_reuse.json": {
+      "bytes": 505,
+      "sha256": "806274852ed516a46cddc3136c72d92ba61b8854d7e54bb81a7c52e86847efc4"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/rope_metrics.npz": {
+      "bytes": 25089,
+      "sha256": "3ffa52d65e12b23e65505de5ef8d9a843997384ff7952fcb18933e30fd4ba74e"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_07/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "e3fa4fa58daf7afa382668c4d1dcd4d9a5a2a946f954b728e791d6e4dd3f02e9"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/chunk_audit.json": {
+      "bytes": 318,
+      "sha256": "f0ce90cf5057aac5af517730d851d15b001d5410da45a7cf105a30592a8b4bbf"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/complete.json": {
+      "bytes": 3666,
+      "sha256": "82534779d874133211127e2d3c51d67af95e9d147f0b900ab7d305f94583d402"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/ecp_records.json": {
+      "bytes": 1221,
+      "sha256": "535e656a9c72916f99f087a0273dd94fd89280809b074530586147555c1fdc8c"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/final_eval_results.npz": {
+      "bytes": 46424,
+      "sha256": "3b0055e1a31cb40c90e4ab17dc6049c476b72b113e8184e746bafc5a70bf7748"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/frozen_model_audit.json": {
+      "bytes": 642,
+      "sha256": "4c6a8e5d8b4b95e7456a5ab77e73a069a61e8bce35fcb32a392c188f6cf2c5f3"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/logs.json": {
+      "bytes": 982,
+      "sha256": "70191303c5bea5cdfe95af7fdbc10ce3923cc6fd0613ea4dbe2d71b70de9c9f0"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/prefix_reuse.json": {
+      "bytes": 254,
+      "sha256": "19b98b961b1082839fa27b392df85fa960488c946d8b29f36f2049bb8f02e064"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/rope_metrics.npz": {
+      "bytes": 25264,
+      "sha256": "314ebe635d8410a0c5e5b9201e48a847ea5cc5737569105bf5071338d94718b7"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_08/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "a400f319ea5b5d1f7f91196c3e5fa5211758e327b8e0cd508c65c25144761069"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/chunk_audit.json": {
+      "bytes": 347,
+      "sha256": "37ced45a2b0a7f8c6181f3d9dd40850ffa5d7ad9ef2ffe1896df260d2eb15e21"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/complete.json": {
+      "bytes": 3666,
+      "sha256": "4e02051de8e4ffecc72a3e5c2f4174defd0bf7538c67bbeb15f01c650586bf61"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/ecp_costs.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/ecp_records.json": {
+      "bytes": 7583,
+      "sha256": "4f390efeef03f13a553b33079b32bc5df30cd9f47c17324f02c7849a6aa1c751"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/encoder_audit.json": {
+      "bytes": 259,
+      "sha256": "33ef0630e011417e5c99c42f7e839280b7aae670c805983ef53916add3de61df"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/final_eval_results.npz": {
+      "bytes": 45955,
+      "sha256": "a1614d830c94594eb51b39fa94c0358b99770908b7f69ff1a4fc67f61b4be309"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/frozen_model_audit.json": {
+      "bytes": 643,
+      "sha256": "c8a4d33cc59f9ff13f1d3817baf373ee9306945d5550adfddf04be4863b51634"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/logs.json": {
+      "bytes": 3793,
+      "sha256": "39b968aed05d68362070053d6aab7fc32183dda1152b3dbebc23438cd8662507"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/prefix_reuse.json": {
+      "bytes": 1263,
+      "sha256": "3765fa8f066ef4f5c11237dcdb7a26d407e9554233f6d67130531fffacb83e7a"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/rope_metrics.npz": {
+      "bytes": 25268,
+      "sha256": "a98de11595ad67e0de0c45185b1efde0650aad6a5b66b99a4124cacdb87821ac"
+    },
+    "eval_outputs/rope_chunk3_cap15/native3/sample_09/run_manifest.json": {
+      "bytes": 3333,
+      "sha256": "0ca1b4c3c907588dd5cf6d94068476697cd2af44c72409f5f7a72c566a4c1e24"
+    }
+  }
+}

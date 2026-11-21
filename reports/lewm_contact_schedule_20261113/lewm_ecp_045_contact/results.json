@@ -1,0 +1,111 @@
+{
+  "total": {
+    "native": 215,
+    "regularizer": 216,
+    "combined": 217,
+    "proprio": 217,
+    "contact": 215,
+    "tasks": 350,
+    "rescues_vs_native": 2,
+    "regressions_vs_native": 2,
+    "rescues_vs_proprio": 1,
+    "regressions_vs_proprio": 3
+  },
+  "by_shape": {
+    "I": {
+      "native": 10,
+      "regularizer": 10,
+      "combined": 9,
+      "proprio": 9,
+      "contact": 9,
+      "tasks": 50,
+      "rescues_vs_native": 0,
+      "regressions_vs_native": 1,
+      "rescues_vs_proprio": 0,
+      "regressions_vs_proprio": 0
+    },
+    "L": {
+      "native": 40,
+      "regularizer": 40,
+      "combined": 40,
+      "proprio": 41,
+      "contact": 40,
+      "tasks": 50,
+      "rescues_vs_native": 0,
+      "regressions_vs_native": 0,
+      "rescues_vs_proprio": 0,
+      "regressions_vs_proprio": 1
+    },
+    "square": {
+      "native": 20,
+      "regularizer": 20,
+      "combined": 21,
+      "proprio": 21,
+      "contact": 20,
+      "tasks": 50,
+      "rescues_vs_native": 0,
+      "regressions_vs_native": 0,
+      "rescues_vs_proprio": 0,
+      "regressions_vs_proprio": 1
+    },
+    "Z": {
+      "native": 37,
+      "regularizer": 37,
+      "combined": 37,
+      "proprio": 37,
+      "contact": 37,
+      "tasks": 50,
+      "rescues_vs_native": 0,
+      "regressions_vs_native": 0,
+      "rescues_vs_proprio": 0,
+      "regressions_vs_proprio": 0
+    },
+    "small_tee": {
+      "native": 36,
+      "regularizer": 36,
+      "combined": 37,
+      "proprio": 36,
+      "contact": 36,
+      "tasks": 50,
+      "rescues_vs_native": 0,
+      "regressions_vs_native": 0,
+      "rescues_vs_proprio": 0,
+      "regressions_vs_proprio": 0
+    },
+    "plus": {
+      "native": 35,
+      "regularizer": 36,
+      "combined": 36,
+      "proprio": 36,
+      "contact": 36,
+      "tasks": 50,
+      "rescues_vs_native": 1,
+      "regressions_vs_native": 0,
+      "rescues_vs_proprio": 1,
+      "regressions_vs_proprio": 1
+    },
+    "T": {
+      "native": 37,
+      "regularizer": 37,
+      "combined": 37,
+      "proprio": 37,
+      "contact": 37,
+      "tasks": 50,
+      "rescues_vs_native": 1,
+      "regressions_vs_native": 1,
+      "rescues_vs_proprio": 0,
+      "regressions_vs_proprio": 0
+    }
+  },
+  "bias_events_by_phase": {
+    "approach_contact": 481,
+    "push": 3,
+    "pusher_goal": 2
+  },
+  "biased_tasks_by_phase": {
+    "approach_contact": 136,
+    "push": 3,
+    "pusher_goal": 1
+  },
+  "proprio_replans": 5
+}

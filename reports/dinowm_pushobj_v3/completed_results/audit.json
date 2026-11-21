@@ -1,0 +1,3756 @@
+{
+  "status": "passed",
+  "audited_utc": "2026-11-11T02:12:23.276904+00:00",
+  "chunks": 140,
+  "task_runs": 1400,
+  "results": {
+    "ordinary_native": {
+      "n": 350,
+      "successes": 86,
+      "success_rate": 0.24571428571428572,
+      "triggered": 2,
+      "trigger_rate": 0.005714285714285714,
+      "triggers": [
+        {
+          "chunk": "chunk_12_square",
+          "sample_idx": 4,
+          "seed": 401,
+          "success": false,
+          "replans": 6,
+          "first_trigger": 4,
+          "mem_n": 2,
+          "mem_w_sum": 0.9082
+        },
+        {
+          "chunk": "chunk_23_small_tee",
+          "sample_idx": 5,
+          "seed": 501,
+          "success": false,
+          "replans": 6,
+          "first_trigger": 5,
+          "mem_n": 1,
+          "mem_w_sum": 0.3086
+        }
+      ],
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 4,
+          "success_rate": 0.08
+        },
+        "L": {
+          "n": 50,
+          "successes": 21,
+          "success_rate": 0.42
+        },
+        "square": {
+          "n": 50,
+          "successes": 2,
+          "success_rate": 0.04
+        },
+        "Z": {
+          "n": 50,
+          "successes": 10,
+          "success_rate": 0.2
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 12,
+          "success_rate": 0.24
+        },
+        "plus": {
+          "n": 50,
+          "successes": 17,
+          "success_rate": 0.34
+        },
+        "T": {
+          "n": 50,
+          "successes": 20,
+          "success_rate": 0.4
+        }
+      },
+      "mean_planning_seconds": 6.295463349428213,
+      "median_failed_episode_minimum_movement_ratio": 0.480985,
+      "failed_tasks_with_at_least_one_nonprogress_window": 168,
+      "offline_threshold_counts": [
+        {
+          "gamma_hi": 0.15,
+          "failed_tasks_firing": 2,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.2,
+          "failed_tasks_firing": 8,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.3,
+          "failed_tasks_firing": 41,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.4,
+          "failed_tasks_firing": 97,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.5,
+          "failed_tasks_firing": 144,
+          "successful_tasks_firing": 1
+        }
+      ],
+      "offline_analysis_note": "Counts describe saved native trajectories, not success after changing the controller; not an independent calibration set."
+    },
+    "ordinary_ecp": {
+      "n": 350,
+      "successes": 86,
+      "success_rate": 0.24571428571428572,
+      "triggered": 2,
+      "trigger_rate": 0.005714285714285714,
+      "triggers": [
+        {
+          "chunk": "chunk_12_square",
+          "sample_idx": 4,
+          "seed": 401,
+          "success": false,
+          "replans": 6,
+          "first_trigger": 4,
+          "mem_n": 1,
+          "mem_w_sum": 0.4325
+        },
+        {
+          "chunk": "chunk_23_small_tee",
+          "sample_idx": 5,
+          "seed": 501,
+          "success": false,
+          "replans": 6,
+          "first_trigger": 5,
+          "mem_n": 1,
+          "mem_w_sum": 0.3086
+        }
+      ],
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 4,
+          "success_rate": 0.08
+        },
+        "L": {
+          "n": 50,
+          "successes": 21,
+          "success_rate": 0.42
+        },
+        "square": {
+          "n": 50,
+          "successes": 2,
+          "success_rate": 0.04
+        },
+        "Z": {
+          "n": 50,
+          "successes": 10,
+          "success_rate": 0.2
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 12,
+          "success_rate": 0.24
+        },
+        "plus": {
+          "n": 50,
+          "successes": 17,
+          "success_rate": 0.34
+        },
+        "T": {
+          "n": 50,
+          "successes": 20,
+          "success_rate": 0.4
+        }
+      },
+      "mean_planning_seconds": 6.302231115385489,
+      "median_failed_episode_minimum_movement_ratio": 0.480985,
+      "failed_tasks_with_at_least_one_nonprogress_window": 168,
+      "offline_threshold_counts": [
+        {
+          "gamma_hi": 0.15,
+          "failed_tasks_firing": 2,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.2,
+          "failed_tasks_firing": 8,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.3,
+          "failed_tasks_firing": 41,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.4,
+          "failed_tasks_firing": 97,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.5,
+          "failed_tasks_firing": 144,
+          "successful_tasks_firing": 1
+        }
+      ],
+      "offline_analysis_note": "Counts describe saved native trajectories, not success after changing the controller; not an independent calibration set."
+    },
+    "augmented_native": {
+      "n": 350,
+      "successes": 171,
+      "success_rate": 0.48857142857142855,
+      "triggered": 1,
+      "trigger_rate": 0.002857142857142857,
+      "triggers": [
+        {
+          "chunk": "chunk_12_square",
+          "sample_idx": 9,
+          "seed": 901,
+          "success": false,
+          "replans": 6,
+          "first_trigger": 3,
+          "mem_n": 1,
+          "mem_w_sum": 0.3914
+        }
+      ],
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 8,
+          "success_rate": 0.16
+        },
+        "L": {
+          "n": 50,
+          "successes": 36,
+          "success_rate": 0.72
+        },
+        "square": {
+          "n": 50,
+          "successes": 7,
+          "success_rate": 0.14
+        },
+        "Z": {
+          "n": 50,
+          "successes": 23,
+          "success_rate": 0.46
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 28,
+          "success_rate": 0.56
+        },
+        "plus": {
+          "n": 50,
+          "successes": 33,
+          "success_rate": 0.66
+        },
+        "T": {
+          "n": 50,
+          "successes": 36,
+          "success_rate": 0.72
+        }
+      },
+      "mean_planning_seconds": 6.2927095873813945,
+      "median_failed_episode_minimum_movement_ratio": 0.47341,
+      "failed_tasks_with_at_least_one_nonprogress_window": 97,
+      "offline_threshold_counts": [
+        {
+          "gamma_hi": 0.15,
+          "failed_tasks_firing": 1,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.2,
+          "failed_tasks_firing": 4,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.3,
+          "failed_tasks_firing": 28,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.4,
+          "failed_tasks_firing": 66,
+          "successful_tasks_firing": 1
+        },
+        {
+          "gamma_hi": 0.5,
+          "failed_tasks_firing": 108,
+          "successful_tasks_firing": 1
+        }
+      ],
+      "offline_analysis_note": "Counts describe saved native trajectories, not success after changing the controller; not an independent calibration set."
+    },
+    "augmented_ecp": {
+      "n": 350,
+      "successes": 171,
+      "success_rate": 0.48857142857142855,
+      "triggered": 1,
+      "trigger_rate": 0.002857142857142857,
+      "triggers": [
+        {
+          "chunk": "chunk_12_square",
+          "sample_idx": 9,
+          "seed": 901,
+          "success": false,
+          "replans": 6,
+          "first_trigger": 3,
+          "mem_n": 1,
+          "mem_w_sum": 0.3914
+        }
+      ],
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 8,
+          "success_rate": 0.16
+        },
+        "L": {
+          "n": 50,
+          "successes": 36,
+          "success_rate": 0.72
+        },
+        "square": {
+          "n": 50,
+          "successes": 7,
+          "success_rate": 0.14
+        },
+        "Z": {
+          "n": 50,
+          "successes": 23,
+          "success_rate": 0.46
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 28,
+          "success_rate": 0.56
+        },
+        "plus": {
+          "n": 50,
+          "successes": 33,
+          "success_rate": 0.66
+        },
+        "T": {
+          "n": 50,
+          "successes": 36,
+          "success_rate": 0.72
+        }
+      },
+      "mean_planning_seconds": 6.300785766906033,
+      "median_failed_episode_minimum_movement_ratio": 0.47341,
+      "failed_tasks_with_at_least_one_nonprogress_window": 97,
+      "offline_threshold_counts": [
+        {
+          "gamma_hi": 0.15,
+          "failed_tasks_firing": 1,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.2,
+          "failed_tasks_firing": 4,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.3,
+          "failed_tasks_firing": 28,
+          "successful_tasks_firing": 0
+        },
+        {
+          "gamma_hi": 0.4,
+          "failed_tasks_firing": 66,
+          "successful_tasks_firing": 1
+        },
+        {
+          "gamma_hi": 0.5,
+          "failed_tasks_firing": 108,
+          "successful_tasks_firing": 1
+        }
+      ],
+      "offline_analysis_note": "Counts describe saved native trajectories, not success after changing the controller; not an independent calibration set."
+    }
+  },
+  "pairing": {
+    "ordinary": {
+      "n": 350,
+      "targets_identical": true,
+      "pretrigger_mismatches": [],
+      "identical_full_action_sequences": 348,
+      "rescues": [],
+      "regressions": []
+    },
+    "augmented": {
+      "n": 350,
+      "targets_identical": true,
+      "pretrigger_mismatches": [],
+      "identical_full_action_sequences": 349,
+      "rescues": [],
+      "regressions": []
+    }
+  },
+  "source_hashes": [
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_00_I/complete.json",
+      "sha256": "79f3d77258709712edd3cf5ab5960ae817e242ad7fd30f41bfe02db3a2685aed"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_00_I/final_eval_results.npz",
+      "sha256": "53dfeb67d6c86b264218ddf4c9aa9ad658e0fc48881766cfb21c43c3746a4417"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_00_I/stag_episodes.jsonl",
+      "sha256": "ca3a5f9cb524e232260f3aea814611deb55167f0f392e816858d44665e799c64"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_00_I/per_iter_logs.json",
+      "sha256": "9d6fa5992b6fbb976f92bf08c792cbfc096d259b1cbe9ed7ed90a942133c187f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_00_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_00_I/cem_timings.jsonl",
+      "sha256": "9a9888e5ebbafbd9f4cea3e62e0161c7099b997bd53f48de924a2158af6e0f36"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_01_I/complete.json",
+      "sha256": "9dc161323fc7149eaf7ea8ebf11c978846f26a39cc6bb5e02528ff0f30049465"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_01_I/final_eval_results.npz",
+      "sha256": "b45a4be1d80d24910b4f77772cf972a8c40407da81f0e9951ef93e6a26eda7b9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_01_I/stag_episodes.jsonl",
+      "sha256": "36b848267344fcb3efea1d2e90c070ded28f73a840cd05576145212196cfd7f9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_01_I/per_iter_logs.json",
+      "sha256": "15151b831a718544407c67b5b9ead277de570b01c50526cabdee70a4c96da0ba"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_01_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_01_I/cem_timings.jsonl",
+      "sha256": "4ba905d72cee0e4871eb51a2b5075cea554572ddcf91478d76e63afaf0e8a2d3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_02_I/complete.json",
+      "sha256": "fe00fb515080b71cfdd406687a2e7bb30dcd18ec4d84514eda7009bb9f0a7be8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_02_I/final_eval_results.npz",
+      "sha256": "e339ab313d2794540825efa7b1e85cfe051f99c872cc053f126e363f35746abe"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_02_I/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_02_I/per_iter_logs.json",
+      "sha256": "f9712e9d209af82e2987ae1eaea7ecf587ebf8dcabdbd5cb9cb459e834c23ce0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_02_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_02_I/cem_timings.jsonl",
+      "sha256": "e97db32643e35e701031f7ea924d6dc5355d7c811ff0692d0c9f5e4c187d97ea"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_03_I/complete.json",
+      "sha256": "fbd84688d6f48337e016510fb83e3c0fd6827882f676bf3c669ddde56579de9e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_03_I/final_eval_results.npz",
+      "sha256": "a739f89b0d61d387ed97f8ccb8591a2f24667010add9d2c7a97c1660f15bac7d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_03_I/stag_episodes.jsonl",
+      "sha256": "ad58b4f17773c04f1a72c181bed694c824aa7fd5b5ba8c6c86dc07a0d995be7b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_03_I/per_iter_logs.json",
+      "sha256": "5bd166774a14d92bde530075550b0fdf3c8db6bff9160a2cd8118ce5899cc525"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_03_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_03_I/cem_timings.jsonl",
+      "sha256": "90c7699d93acd8f537e3676cf766b6e7e7dd3d69ad7067e138ddfba861440514"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_04_I/complete.json",
+      "sha256": "19207093d07676ce044f9df191c1a5c5f1c7e2559745f5d589d6c1b4822746a4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_04_I/final_eval_results.npz",
+      "sha256": "3bb665b22a013a2ca824ac3e11d60ff32497a5c5566dc01229b39b1dc7c302b7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_04_I/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_04_I/per_iter_logs.json",
+      "sha256": "de37f8dc0f7c97738a0d49cc514346d5c48ad674f0b258d316e92c5a520ab795"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_04_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_04_I/cem_timings.jsonl",
+      "sha256": "1d9ace5c8ae9ed22f34f76b16eddcfa6dc15182e605595cf36dc075095e4ad01"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_05_L/complete.json",
+      "sha256": "143a539ce29dc7789ae35229cae3495bf20cfd274d4a2660d11e6ba408aaf1db"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_05_L/final_eval_results.npz",
+      "sha256": "4ec4f16608d446c5b140bbc0f3daa5a4c9c6141282b3ce8c4f2ae4f95247c4ee"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_05_L/stag_episodes.jsonl",
+      "sha256": "07b66f1dfe73ffc5305ab3ad8098f8009f5701b7261132ad8b8d7ba07d977937"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_05_L/per_iter_logs.json",
+      "sha256": "3e58ce3b401988366abc14e5253edc6818357fe8b82f040dd256c3f2f3d233c8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_05_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_05_L/cem_timings.jsonl",
+      "sha256": "49740bafbab6044a7197cb47364d339e4ec921ad110871e384e636bb934f4068"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_06_L/complete.json",
+      "sha256": "35c0786005e8a426f49991461ba62a85a4d951cb6342a27418b0dfada495a6ad"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_06_L/final_eval_results.npz",
+      "sha256": "a37cd80802d22efbf4d0bdfdc305a80d093f95fbcaadbb82c3f3f81363b87463"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_06_L/stag_episodes.jsonl",
+      "sha256": "17b55a31e9ddf56730e56e363b4773b52d4af0270720b8582ca5b8ad39fe8336"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_06_L/per_iter_logs.json",
+      "sha256": "7ac2581f6f92d2d73426b93e5f4a8bf9edf1c3b98e7670503dfd160832ddd650"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_06_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_06_L/cem_timings.jsonl",
+      "sha256": "58be881bef2335e69fa83938a0381849c7a9806c6873e1f86e20fa8e4d3f8ece"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_07_L/complete.json",
+      "sha256": "49f2e3386a4e6a4a77ba9ab4a85d634d40838618658983459595d643c9194dfb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_07_L/final_eval_results.npz",
+      "sha256": "49700f96f0a0a2fec3de59c109e151af6035e1179d69bd780af7d6fdd5de021b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_07_L/stag_episodes.jsonl",
+      "sha256": "f2b131e5a00802a22c31285836854ff50f86a65152f3f4ccb6308af63e7f739f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_07_L/per_iter_logs.json",
+      "sha256": "632154b2a09e28c8ce049b64cd4c381517560fba4d183e6eb33c31d6c4800288"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_07_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_07_L/cem_timings.jsonl",
+      "sha256": "f496430ae4e8d956d42afe772b7ec6961a35665147b531dcc8c827027636097c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_08_L/complete.json",
+      "sha256": "899858542709b7ee0feaee981a98ba26a50cd68598811e71cd5ddd1b104c393a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_08_L/final_eval_results.npz",
+      "sha256": "b13edf183f65016cacfab286d4243ec7d1ac3ae6bdb8cfcb962fb10c2fdccb62"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_08_L/stag_episodes.jsonl",
+      "sha256": "76957a6fc9617a2f3a4fc32fe1cd4e6fcf02c31e9aece64b9efe7267b38c6eb0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_08_L/per_iter_logs.json",
+      "sha256": "029ebc84ef5c2eac275c714af03bae38a54b9b00acdcb531b8a5cf54c173178c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_08_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_08_L/cem_timings.jsonl",
+      "sha256": "c67d069c34b98f522d04c985db47218deb1494755619625efc4170e961025d56"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_09_L/complete.json",
+      "sha256": "4ab13e37662408c2d450bf474036b176501049f0f7d0bcd409c427741c80a5bc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_09_L/final_eval_results.npz",
+      "sha256": "d2ac2ec6d11786b98b257503477512b456dfd12899d6a8dfdb14439708950280"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_09_L/stag_episodes.jsonl",
+      "sha256": "e177c37b2dbb0f360eeb37e98031494d7c537b24bb2ab5a535d9d010765b259b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_09_L/per_iter_logs.json",
+      "sha256": "5f0965f2d6add272c59078f67d5eced1fd6783ed8607ffbb25704f7dc473172c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_09_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_09_L/cem_timings.jsonl",
+      "sha256": "2a6280a5b3d9a1bf1f067379e4a9bf4c0e8dcac1bde4592d3e442c65a0d66fe3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_10_square/complete.json",
+      "sha256": "d37884167196ec40b7ac676f71f998987dc6d655e6a456f518deeb543ce4e988"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_10_square/final_eval_results.npz",
+      "sha256": "ae3ad4a369f9eee7c079c24dd9e47584e94999222d32b48d9bfd5efd5d934465"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_10_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_10_square/per_iter_logs.json",
+      "sha256": "c8fed1bd42c23cf0c7593caca75028af35c8e9070bc3645048a89f168fbace6a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_10_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_10_square/cem_timings.jsonl",
+      "sha256": "4902b6abcbbf1e3236b57b261135a46c3b68c56801cfad13686f1422736f5658"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_11_square/complete.json",
+      "sha256": "81d8d8ff015d36c40337efde2da5c7d88833ca0073fb068cefd61c970d0d9ad3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_11_square/final_eval_results.npz",
+      "sha256": "2c1be22df8f690496d65755679101670282017a379eed80e768b35157e460f76"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_11_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_11_square/per_iter_logs.json",
+      "sha256": "0630fee9dbf19e598c8cf4a842b3fbaede2e7683aca035d5fa20ebb255adc5b7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_11_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_11_square/cem_timings.jsonl",
+      "sha256": "8732d677c34f700d8d100604fb2effa73e3e10d93625fd4919206fd04e9704b1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_12_square/complete.json",
+      "sha256": "fc9884b094d37bd836ebfe97645ffa59d3d65d9df5b4a19b72b0a00b36cca516"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_12_square/final_eval_results.npz",
+      "sha256": "3bdbbc2f858ba0fc7073359db5967e73e63c7f682a44db896d686a1b0d744f35"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_12_square/stag_episodes.jsonl",
+      "sha256": "e056568549b94de41536a92034ad4c31bb1031adfc3c51034491992a4b2ad330"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_12_square/per_iter_logs.json",
+      "sha256": "40d1ac1f53d6629ee853bc18815dbb7cfa6367802c49a132286eebb71eb67741"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_12_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_12_square/cem_timings.jsonl",
+      "sha256": "32250ee4d4d58c1303afbaa8de8267581a91bdb5c4718ff596f68e509ea3c7c1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_13_square/complete.json",
+      "sha256": "a3f0ee12fccc5847c32bed4aee856b6c46cb981647f3ebdd171648e63c4f88d9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_13_square/final_eval_results.npz",
+      "sha256": "702cc1b58eab1e500c2b85018ed24537b81f253b007b7aa71551ab20495bbd0c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_13_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_13_square/per_iter_logs.json",
+      "sha256": "c146fd45c7380d2aecfdac8c7874004a3342d825b9bf1f7acab5b98ce9f6f89d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_13_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_13_square/cem_timings.jsonl",
+      "sha256": "ea2033d83af27b856942a0111d2fa1c8491977f8c4c185dc9605a4a62800aa9c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_14_square/complete.json",
+      "sha256": "e0259fa7e292257a372f5e2771925d4c812c204d052f68c15a41cf7a47dd6f9e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_14_square/final_eval_results.npz",
+      "sha256": "ac782988fd17e1dbb9d0080f67b25766ca917372af78c5bac2ab401b36b9977a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_14_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_14_square/per_iter_logs.json",
+      "sha256": "572efd398ea408d4b43b3892ad200ffc20415f6d446924ab76c07bfdfd6611fd"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_14_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_14_square/cem_timings.jsonl",
+      "sha256": "78ecea4e0a4121819aa09cdbd2d76d8ab17508c05bc24a9d479c01fbb8ab0bef"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_15_Z/complete.json",
+      "sha256": "204b81a17f5d07fdcbc94e4b7f34baaa96c1bce3c41235590c1cd816c1e49905"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_15_Z/final_eval_results.npz",
+      "sha256": "1c0242551d34fc345756aeae00406efb3c393fe91d2306275531a888c05ec698"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_15_Z/stag_episodes.jsonl",
+      "sha256": "611b58feb8a3490df02a991ef99ab0d6ba1ee0a34c599d5bbd2f46e513b85613"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_15_Z/per_iter_logs.json",
+      "sha256": "bfea499d036f4d514084a4c277239a6df55f8af65153db8e4be0f9d54ffe43c4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_15_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_15_Z/cem_timings.jsonl",
+      "sha256": "03f54078778a496d889b5f33ddb72815f060578e17fdc14fb386b6042eb1eed3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_16_Z/complete.json",
+      "sha256": "c8e26bac68e993256f3f00d0910f42f40cfbf24ead9dd88ecf70b4cc6dec7bc6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_16_Z/final_eval_results.npz",
+      "sha256": "eea1f1ef6ce6a3b00c4fc2aff1b7a26588706a4c899276e9132275aef680d143"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_16_Z/stag_episodes.jsonl",
+      "sha256": "7a1c3f3af95daa20827b6230c9b73641d68cd398efec4f9d2dc75cd050f50031"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_16_Z/per_iter_logs.json",
+      "sha256": "8947067c5c8c2ed3ec6448a12c1490805b40710099cee880859a678052bc64a2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_16_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_16_Z/cem_timings.jsonl",
+      "sha256": "2708606b20cfdce407d91d0b1544454c7ef1f57e216bfad5124816b8cc477842"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_17_Z/complete.json",
+      "sha256": "de28e4770c0a5b32bdf4879015df500bb11f488021dd996c0c097c0e360a5073"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_17_Z/final_eval_results.npz",
+      "sha256": "2f86dddcf145187f4b3166aabee6c968f02d2dcb0999618963d9618508706881"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_17_Z/stag_episodes.jsonl",
+      "sha256": "f42358ec96e02058f09b716e7d8c4ff3c6249ce450cf635675c22a59e9ef685e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_17_Z/per_iter_logs.json",
+      "sha256": "2ef6e3eaabf4bbe6e89875c0b5565d9ef877390ce9e085bc3e207bd98fe29621"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_17_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_17_Z/cem_timings.jsonl",
+      "sha256": "3a4cba360f8d7cdaba1489ea4fad42dde244d18bd1265a5567e1370de347910a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_18_Z/complete.json",
+      "sha256": "45189bfbdd5cff9cc016602cd618858e9af8d1316cc912783d6b152e3f93c502"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_18_Z/final_eval_results.npz",
+      "sha256": "d2f1fc596edef796d8a9222bcdeab37db72a7ef07e454b527649d6a0c2d6e121"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_18_Z/stag_episodes.jsonl",
+      "sha256": "90406e59611caf7c0b0b59402f3e206ffe79c2390aefe0af47ecb442d032be69"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_18_Z/per_iter_logs.json",
+      "sha256": "7a766eed669f60e8bc64749c705924656b64aa550b570b57ea8df9deb3f22e01"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_18_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_18_Z/cem_timings.jsonl",
+      "sha256": "d04c5bccb95ef567ff1586d7f2dd5912d93a5b2baf7a6e04e1ff4abc5cc0c17c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_19_Z/complete.json",
+      "sha256": "1bc3a643b4daa97de67acdab9909e360484ebc989654cc0f03bf67cb59a81ffc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_19_Z/final_eval_results.npz",
+      "sha256": "44794f89c5205d7424727bebe0343bf0bd6a2de5fc81bf6465847c924a3fb734"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_19_Z/stag_episodes.jsonl",
+      "sha256": "16759ea9f9bb7fda74c9033d6388b5d7fc429b108e8d9fbbc6e14b66066642cc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_19_Z/per_iter_logs.json",
+      "sha256": "5a7aec9d668c3e00fc606ee687239594f93b2e3a33f0c200783b6983b45011e3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_19_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_19_Z/cem_timings.jsonl",
+      "sha256": "faaf69e950fbb136110e042e32b1764f21a7ec61b4fdac572e131d0d31f02203"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_20_small_tee/complete.json",
+      "sha256": "21388479072cebfb2ed71b8c098da283bab7049658dd4c2167da76da5a557659"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_20_small_tee/final_eval_results.npz",
+      "sha256": "5600a42f6188896069383ee618b32c64a394e7392cb36ef1fb4b1939b9a5a94c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_20_small_tee/stag_episodes.jsonl",
+      "sha256": "1421bae51c7e53ce3c8891ede18a43bf04a894b6404a5a53a3ecb30d2cc3e939"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_20_small_tee/per_iter_logs.json",
+      "sha256": "63f08f88ae83c91d9898f363c81fb42b32dca9f47313b684dd1341dc9b783fcc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_20_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_20_small_tee/cem_timings.jsonl",
+      "sha256": "2cf2d968af477dc8c98395c18e22e7465a7d54462ac8809980f221d42cc0a9c0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_21_small_tee/complete.json",
+      "sha256": "6258a1665e832f1e8f3e0e9ca723e4635099acba3154f2e8f6e208c6f5d1506b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_21_small_tee/final_eval_results.npz",
+      "sha256": "8bf0de7e9bfb211d46e4db994b5a465c2ec8451df4d51e00db9abcc8ca165f28"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_21_small_tee/stag_episodes.jsonl",
+      "sha256": "ad58b4f17773c04f1a72c181bed694c824aa7fd5b5ba8c6c86dc07a0d995be7b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_21_small_tee/per_iter_logs.json",
+      "sha256": "6c8c00ae51dd3bdcca2999f474696ff72b31ad526ac0ef0558a82a022199415e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_21_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_21_small_tee/cem_timings.jsonl",
+      "sha256": "11a06890c479f199c448213e8b4792516ff581bb8abdef1a5959a270171fa7f5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_22_small_tee/complete.json",
+      "sha256": "bc7af3e5b735bc1a226a06668fed7bb0c4f3d4cf7687606bd59840e36cd7cfc2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_22_small_tee/final_eval_results.npz",
+      "sha256": "284eb04a8e24ae14b9ac4716938dc305b8b9dbc0ddf64eff50aadad016109e24"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_22_small_tee/stag_episodes.jsonl",
+      "sha256": "e474aba537eb20cbc30972a3f4427a4214e1db948773813dc472680f2123000a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_22_small_tee/per_iter_logs.json",
+      "sha256": "ca828317805df3a121d908a2fcdb6b9ea362e56b73ffca090400cd55f1dc4ca1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_22_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_22_small_tee/cem_timings.jsonl",
+      "sha256": "318187f057e4521c54940408ab1d15773b62b43fd485f2779eb4ecd863de9fc2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_23_small_tee/complete.json",
+      "sha256": "62961369d0906ec1de6a49b09aed68e1dfdbba7f18d697cd330bc92368b6a0bb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_23_small_tee/final_eval_results.npz",
+      "sha256": "f69cd9f0b3eb76f7509a5ddc685206dda9e6796e5c13f5b4e07935cd7328ade4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_23_small_tee/stag_episodes.jsonl",
+      "sha256": "574d019c8e8303b014ea2d9b6815f6f013f7cf802e8fddbfb5582bb09997fb78"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_23_small_tee/per_iter_logs.json",
+      "sha256": "1f751b2b0983d8c293d97f1756339b3ed247d12ab2d8f5080b2ad3af24513293"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_23_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_23_small_tee/cem_timings.jsonl",
+      "sha256": "f95f03499e3ddbb3fada66aa5367d0d1b7395110f294245c34094471c12cab56"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_24_small_tee/complete.json",
+      "sha256": "16a2af6b3d5e3bd98759618cb160f8a8d4b993d7347be6d5417a8801324c8775"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_24_small_tee/final_eval_results.npz",
+      "sha256": "28d467a584482760c4d0ec592ecb13f129b36f810ecb38ad52f2852ec2d5b3f2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_24_small_tee/stag_episodes.jsonl",
+      "sha256": "19472be51b1d35fcd091fd9b3520362e3840e00a298a31d569417ccbe756eb59"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_24_small_tee/per_iter_logs.json",
+      "sha256": "8471feb933ad47d152dad3dce3858325525d286a039d369aa828f7ee657bff24"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_24_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_24_small_tee/cem_timings.jsonl",
+      "sha256": "55320564a8823689fcae5645c4ca62fad71ed969217d31e83aafce2c5ab5fa79"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_25_plus/complete.json",
+      "sha256": "a45d2cdf4a35a9bd5b503d5aaba2df7d5b48db50e998c166ead86a80feb4776c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_25_plus/final_eval_results.npz",
+      "sha256": "998ee4210917bae738d91869631c91a483dd927ba802f1c3236957ef87b56f87"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_25_plus/stag_episodes.jsonl",
+      "sha256": "c009648663e4c5bce3a727b8a268e73e2a48a88934c9d7997b18153a320bc692"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_25_plus/per_iter_logs.json",
+      "sha256": "f9104ec3aa4731275ee68c4e97b34ee60163e4ddadf4ffe8b355ac9300c82029"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_25_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_25_plus/cem_timings.jsonl",
+      "sha256": "53a28c2e9134ee8534cd48a82db9633eccad7e45645b089ba95ed52cc35bdf2a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_26_plus/complete.json",
+      "sha256": "ff246343ffb7aeb276030696d30e546cece1364eb3a5b1fffc5e92cbcdada431"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_26_plus/final_eval_results.npz",
+      "sha256": "4e24c970bfd579db06219106215ceab16e114fb86862c9ab58cf800d4187a572"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_26_plus/stag_episodes.jsonl",
+      "sha256": "5bfd5c650767a7ba4352101d4ab34f236e525b3a86749aa538b4db6f46730892"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_26_plus/per_iter_logs.json",
+      "sha256": "c503342ab981f82c298235aa4636de4380d9c977a49804fe674818cf1a4fd575"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_26_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_26_plus/cem_timings.jsonl",
+      "sha256": "977f5c135af5cb729f696e3a91fcba30731dcf3120b155c641792e011edeed1d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_27_plus/complete.json",
+      "sha256": "67458fbd607b8b9beb07b8f95796d76973ea88c2a7f1dc6c471f9f98e471ee38"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_27_plus/final_eval_results.npz",
+      "sha256": "581cd2f3a3eff0e7f079a5c65b112f97ef5dde64fd23c7e5470bdcf527e9de15"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_27_plus/stag_episodes.jsonl",
+      "sha256": "5ef67a856bba358be449e48429a98ba08f48c53829fb0eabe8a0e410fc64ba5e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_27_plus/per_iter_logs.json",
+      "sha256": "f517fdad1bdc4ae34f002946a50b3b6463781a31a3a921e1c52f561b3cb4d03a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_27_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_27_plus/cem_timings.jsonl",
+      "sha256": "efafbde61b5832f5a68b9fcde1118c5dc8c11c9af58a5454046d7f4cece73d63"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_28_plus/complete.json",
+      "sha256": "bb930731ae0d744dee485e9471281abf167e8427afbee09b8e1df9961b86e75f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_28_plus/final_eval_results.npz",
+      "sha256": "4c69d8830c8c03b8da1a80e2cb1aa96bd2a2fa253ff33e9233d92171ad7b5a2f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_28_plus/stag_episodes.jsonl",
+      "sha256": "e79d71e832143ee6569b1f33429118035355bac8edc26d496a72b28a6f892d93"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_28_plus/per_iter_logs.json",
+      "sha256": "ce01ce26cce9b924375988ba205ac4ce5bc746435f6b13c175cf4cd6de3d6b3b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_28_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_28_plus/cem_timings.jsonl",
+      "sha256": "d50b6ff4f2eb334d4c4accc9a430d0836b0e8e87c24c92df55ec2c82956b5b05"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_29_plus/complete.json",
+      "sha256": "8654ad81ae26736e6542191cedac7bc4fbb8b82a83a2e49b44a59f5c95d3abf5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_29_plus/final_eval_results.npz",
+      "sha256": "69abdecfc78b22395c6815f3af8cc16ad0219eb97471211a43a30cbcf02c2ea3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_29_plus/stag_episodes.jsonl",
+      "sha256": "0315a59d99c9bf0891ba4769c3b9a68064487f003e8c5f80ca202662efba6cf3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_29_plus/per_iter_logs.json",
+      "sha256": "39b5761b68cd746a9fc209e9c1d87ec6b49cbb1159f6f1c3286bb21a624e38fe"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_29_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_29_plus/cem_timings.jsonl",
+      "sha256": "a7c5345abb7883d40839d8bf52df8fd3960b3e85974c882527b74a25dfd1016f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_30_T/complete.json",
+      "sha256": "c081b71c2c866010e505e9d7af03b02744eee21ea1e55bb1edd896ef07d9b3d0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_30_T/final_eval_results.npz",
+      "sha256": "dbb68789dfc83d9352f7d79b72706f5bae7a5f51e9cb298e5c2fcde5a94f1a18"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_30_T/stag_episodes.jsonl",
+      "sha256": "dd4049bb7bf98e5c2cb541d81c83edde8c8aac47236633a4985535b208756ef9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_30_T/per_iter_logs.json",
+      "sha256": "fc2fedb7ae4a0ccedad8d9066e43e6865c9d36652d8f2f303aebd52cb835f92e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_30_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_30_T/cem_timings.jsonl",
+      "sha256": "fafa99a5f90b1df60901ba821463d846ae94c19efa63c7394420632032a3ed6f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_31_T/complete.json",
+      "sha256": "6427d6c0b98f7e6d7d0140f2c43afe17c542c972f7c45d520996fa6cf8d55f55"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_31_T/final_eval_results.npz",
+      "sha256": "68162df1497a0329dd7ad3d3ffe3ef333586408fd6fafdbe66c99edebc37b4f9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_31_T/stag_episodes.jsonl",
+      "sha256": "9b5e2e8d01a54d21468941fd26196a67afc32a9ae1aefbfda28d04a429cb9e36"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_31_T/per_iter_logs.json",
+      "sha256": "e72b3a063b2e919f91348727462fd246dafaaa8ac025ac50184485dabf07ee6d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_31_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_31_T/cem_timings.jsonl",
+      "sha256": "c86c169742420c1e8e975d6f8a22925bc441134ace06de338d84ceda07aaae65"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_32_T/complete.json",
+      "sha256": "135eee9c4bf89c1a4e75d03ce4bf96ead9732080ab576f969e155cdafef4eab3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_32_T/final_eval_results.npz",
+      "sha256": "96d4abdcefc59335d64726faf5b592c603cdb4f4e341f0f382428b181f1f62a3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_32_T/stag_episodes.jsonl",
+      "sha256": "e107b559c90d56a203d1ba01af394aaa344a9aa754aeb2ad875be4b4ff815622"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_32_T/per_iter_logs.json",
+      "sha256": "0521b128da82737b3d52d788ecb4a55cb3ec87ee04134e9755ac7fc997977c5a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_32_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_32_T/cem_timings.jsonl",
+      "sha256": "aa9f6cfd481fc695bc0b909ec4dc6db17a921729d730707bc2b157d06f4524ff"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_33_T/complete.json",
+      "sha256": "a43f18686c39b5ff5500c5de258da3dd17ee5f0bac7cec34dd937417a28913c4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_33_T/final_eval_results.npz",
+      "sha256": "21a6a7ce6303a3f0f630031945c9053933449e4b2081d2580812dc558c7ac3e3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_33_T/stag_episodes.jsonl",
+      "sha256": "f757a01e409a6d01648f5814f489c625dc7a3e721b56fe54d25a0f4f11286ffc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_33_T/per_iter_logs.json",
+      "sha256": "48cc68cbad453e5f66ed65cd9167904347578822922f1c68c7052ae25f8da504"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_33_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_33_T/cem_timings.jsonl",
+      "sha256": "506cd51b85925d844ba338af6620919d66c298a82b42205b05dabaade1b3f68f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_34_T/complete.json",
+      "sha256": "745b7c8fb587a97c44f48b33552c5a5ac3e613558eb7a8398cbf3ff7b15c23ae"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_34_T/final_eval_results.npz",
+      "sha256": "cbe32a1b633c8c4b1a0a0d455ab086647d8c0ab94ad1970079c7aa6ed312a833"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_34_T/stag_episodes.jsonl",
+      "sha256": "292b2444a7ed3047699dfc6deee671f07f71143db16d92140543dbe22cb4d181"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_34_T/per_iter_logs.json",
+      "sha256": "c80c18e69d99abf2beff596f70223ac34efb388da0cb15fd9373ac2e1d437c77"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_34_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_34_T/cem_timings.jsonl",
+      "sha256": "96c4cbd7db826dc5a45953bf2aba055455c806f4a55096f29824299ad57886fa"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_00_I/complete.json",
+      "sha256": "182c2db9783e35a08e986f5bd18150610932bd2c7b6e4f901ec31771c8576715"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_00_I/final_eval_results.npz",
+      "sha256": "53dfeb67d6c86b264218ddf4c9aa9ad658e0fc48881766cfb21c43c3746a4417"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_00_I/stag_episodes.jsonl",
+      "sha256": "ca3a5f9cb524e232260f3aea814611deb55167f0f392e816858d44665e799c64"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_00_I/per_iter_logs.json",
+      "sha256": "dd668bb4c65ce928fc5d6059a8eda1d9bf54e25f4011230b6b900447cb9b8550"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_00_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_00_I/cem_timings.jsonl",
+      "sha256": "253297896316aabb93060facebdd67cef4fc9c5610fce0b6b3a8fc2050e92551"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_01_I/complete.json",
+      "sha256": "eca6ee77840a528bb897d5053e554cb1d352bdd6f7eaf7fa50a02404f3f42781"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_01_I/final_eval_results.npz",
+      "sha256": "b45a4be1d80d24910b4f77772cf972a8c40407da81f0e9951ef93e6a26eda7b9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_01_I/stag_episodes.jsonl",
+      "sha256": "36b848267344fcb3efea1d2e90c070ded28f73a840cd05576145212196cfd7f9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_01_I/per_iter_logs.json",
+      "sha256": "bf2e94d16f27d22fe3aa5f34c2ec425ba6f64fe81a57bc4d82cc1b9efa8efbb5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_01_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_01_I/cem_timings.jsonl",
+      "sha256": "5f9e219f275db81889557a0206ab1e1f8fd27cfa3e046fe704a5154650d1c49d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_02_I/complete.json",
+      "sha256": "0d3465c4e33e06721d6315879db1a0c22f9efb33c3d5bf0e303aaa9b092bc201"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_02_I/final_eval_results.npz",
+      "sha256": "e339ab313d2794540825efa7b1e85cfe051f99c872cc053f126e363f35746abe"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_02_I/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_02_I/per_iter_logs.json",
+      "sha256": "072409818303b6371d4847f0e2734525650f85b88dfa7440c82d923076469c9a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_02_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_02_I/cem_timings.jsonl",
+      "sha256": "34b54c1a16034fbc4671ece5997db2c7f367556d0f40a3302285583186c0dff0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_03_I/complete.json",
+      "sha256": "85e1d08bf1f2db14febdf6daac6a9bc7166809b95e312ec55211bd464129d699"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_03_I/final_eval_results.npz",
+      "sha256": "a739f89b0d61d387ed97f8ccb8591a2f24667010add9d2c7a97c1660f15bac7d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_03_I/stag_episodes.jsonl",
+      "sha256": "ad58b4f17773c04f1a72c181bed694c824aa7fd5b5ba8c6c86dc07a0d995be7b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_03_I/per_iter_logs.json",
+      "sha256": "456abd128a9e572e03b86211294ebc62d2a53ebeb967bc3ed418d2df64567721"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_03_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_03_I/cem_timings.jsonl",
+      "sha256": "50d1b954271af8a95398ad024d35f6b674daafb4d287018c22fd7fe9d9b0a702"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_04_I/complete.json",
+      "sha256": "adece1e474134b620272f53b4c21276f15924698b0305af12534d110fe7570fa"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_04_I/final_eval_results.npz",
+      "sha256": "3bb665b22a013a2ca824ac3e11d60ff32497a5c5566dc01229b39b1dc7c302b7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_04_I/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_04_I/per_iter_logs.json",
+      "sha256": "5eae89bc77b2cc550a84b0753760d39b2921206e176ffacf55ae1ccd482ca86c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_04_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_04_I/cem_timings.jsonl",
+      "sha256": "99f5883bcddd8c6a6d6090268b2d4689d727f79e13c08352762f78160b1e2f00"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_05_L/complete.json",
+      "sha256": "4599ced18e459a29701b25736487266636ced818a2bebc257a88934addb18a65"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_05_L/final_eval_results.npz",
+      "sha256": "4ec4f16608d446c5b140bbc0f3daa5a4c9c6141282b3ce8c4f2ae4f95247c4ee"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_05_L/stag_episodes.jsonl",
+      "sha256": "07b66f1dfe73ffc5305ab3ad8098f8009f5701b7261132ad8b8d7ba07d977937"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_05_L/per_iter_logs.json",
+      "sha256": "a828346b8bbbd10b3393abd4f518b736ea7844b1523882f1835b9e7d06634d39"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_05_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_05_L/cem_timings.jsonl",
+      "sha256": "17b417cacd2e453d122839d003e5751e3c00d0f4d5c0a9410d58ea0aa8d25783"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_06_L/complete.json",
+      "sha256": "ce78eed59a7ce59a75cb3ec1fb2eedb8ac2458a27db990e7a5af98c3e622b628"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_06_L/final_eval_results.npz",
+      "sha256": "a37cd80802d22efbf4d0bdfdc305a80d093f95fbcaadbb82c3f3f81363b87463"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_06_L/stag_episodes.jsonl",
+      "sha256": "17b55a31e9ddf56730e56e363b4773b52d4af0270720b8582ca5b8ad39fe8336"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_06_L/per_iter_logs.json",
+      "sha256": "3a69c02dbe88ec9b698a4a9b072fc45c62152be884ec440ece257a42c5e4fe27"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_06_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_06_L/cem_timings.jsonl",
+      "sha256": "b91f4bfc7ca39ba05b594df9155ed91545dffef740041f04334c2aeef69e52a1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_07_L/complete.json",
+      "sha256": "cc0374e371a10d1ba6abb478fab9b61706f0949e851e9b8c29dc0130af909d9c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_07_L/final_eval_results.npz",
+      "sha256": "49700f96f0a0a2fec3de59c109e151af6035e1179d69bd780af7d6fdd5de021b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_07_L/stag_episodes.jsonl",
+      "sha256": "f2b131e5a00802a22c31285836854ff50f86a65152f3f4ccb6308af63e7f739f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_07_L/per_iter_logs.json",
+      "sha256": "7bac330e8f9103215f03ea109557edde5a684423a9c032c1ee5aa713ff82e57c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_07_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_07_L/cem_timings.jsonl",
+      "sha256": "cede80c5543ab39277e5752f538bc80fa05a921b8af4091f7fbcd9d05690b77d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_08_L/complete.json",
+      "sha256": "1a7902ef7f66d9c057b8725d0c961e126230f131a2b70f89a635bf4dfbaf8d83"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_08_L/final_eval_results.npz",
+      "sha256": "b13edf183f65016cacfab286d4243ec7d1ac3ae6bdb8cfcb962fb10c2fdccb62"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_08_L/stag_episodes.jsonl",
+      "sha256": "76957a6fc9617a2f3a4fc32fe1cd4e6fcf02c31e9aece64b9efe7267b38c6eb0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_08_L/per_iter_logs.json",
+      "sha256": "8c0b43ec01a65bf85d0e4ae6cd3f5a50069bfb362fdd7b01709ec8a783fa9186"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_08_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_08_L/cem_timings.jsonl",
+      "sha256": "9704929767b1420eb3d49bdeee22e1744690c4b327e0b713aae9a8efe0ef74ac"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_09_L/complete.json",
+      "sha256": "5ab845a3a53abd56b9fe7fd4dd3252cdcb2d4350badd9ef7495658915e9e99c8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_09_L/final_eval_results.npz",
+      "sha256": "d2ac2ec6d11786b98b257503477512b456dfd12899d6a8dfdb14439708950280"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_09_L/stag_episodes.jsonl",
+      "sha256": "e177c37b2dbb0f360eeb37e98031494d7c537b24bb2ab5a535d9d010765b259b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_09_L/per_iter_logs.json",
+      "sha256": "3c665d99a515cff3d11bf027187c9681bfb6424e09a85172e008b0d99cd95c38"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_09_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_09_L/cem_timings.jsonl",
+      "sha256": "00728f5e070f38c9d22fff81653d9df30cedd842d850ecdaf613f4d199ceedd5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_10_square/complete.json",
+      "sha256": "139baea16746afb0dfcf72e9fb6d61832abe7b9b9d8d3a00ca38e13d4ca846a5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_10_square/final_eval_results.npz",
+      "sha256": "ae3ad4a369f9eee7c079c24dd9e47584e94999222d32b48d9bfd5efd5d934465"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_10_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_10_square/per_iter_logs.json",
+      "sha256": "2e492fb4485ea2a41f3709dd2ff21e9414f82eaf9d069e210f5859f70c7c8861"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_10_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_10_square/cem_timings.jsonl",
+      "sha256": "b96de6b5ff0c89cb26c85cc07ae5e86b92d93b8732ec7391786d2dd47ef88a57"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_11_square/complete.json",
+      "sha256": "ac5312b8adc46e8c3fdc4a91652853d428ea73f35364b2272f62673a7d95d730"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_11_square/final_eval_results.npz",
+      "sha256": "2c1be22df8f690496d65755679101670282017a379eed80e768b35157e460f76"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_11_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_11_square/per_iter_logs.json",
+      "sha256": "2b0d1035296bdb707f48bdb93f58dcf88035f72a3c067ff467f768282ca50543"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_11_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_11_square/cem_timings.jsonl",
+      "sha256": "602f3661c8db78d7cd31bff28bf749287114a91297f03b2ea61125b50566cfba"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_12_square/complete.json",
+      "sha256": "a073272a4cb4bcec1a3664d88438228e51cc1dd1b1397ace045bbcc6ad2e3420"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_12_square/final_eval_results.npz",
+      "sha256": "4a54ae064f01699f8747254c0d1a7fbc3933aa7ca46ed14967adce94d6b649f3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_12_square/stag_episodes.jsonl",
+      "sha256": "890b9c054a16ea733d43aed9edf229d79a9fdb9ad15da2db88a88bb1dca224af"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_12_square/per_iter_logs.json",
+      "sha256": "9f130d78a3e32919d7fad7cda4d02a823161ce334e0bf63fb8eceab0bd7fed93"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_12_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_12_square/cem_timings.jsonl",
+      "sha256": "02c473add7218a7460515d850f56a5c5679b352c41a7728b04515c925eecb858"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_13_square/complete.json",
+      "sha256": "7f319c009393fced8eea543b65f9367686a15f0736a2f73e5d82bc823d6296ab"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_13_square/final_eval_results.npz",
+      "sha256": "702cc1b58eab1e500c2b85018ed24537b81f253b007b7aa71551ab20495bbd0c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_13_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_13_square/per_iter_logs.json",
+      "sha256": "94e08716755c29b1a76b422c3f5dd1eff17e99056881a0002550dc5df00d0610"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_13_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_13_square/cem_timings.jsonl",
+      "sha256": "f1fecdec0d7228ac405b9a386a70b61fa916c2b9472217ef052d9688bd80f9a6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_14_square/complete.json",
+      "sha256": "21881e3a17b08d06c6e5710de8a937c21e23bda6562f0ee27f91eed20a4eb4f1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_14_square/final_eval_results.npz",
+      "sha256": "ac782988fd17e1dbb9d0080f67b25766ca917372af78c5bac2ab401b36b9977a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_14_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_14_square/per_iter_logs.json",
+      "sha256": "d8a6fd1f8e49962443450196fd43c7321e077750bfaac460b2d14e67d7a21987"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_14_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_14_square/cem_timings.jsonl",
+      "sha256": "316992d0eee0918762c663cb26945848bc95e4e4dad1dd537f9774fbb86699a0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_15_Z/complete.json",
+      "sha256": "de6e559193bb2c8d9c9b846563ed908bbaffe9a0c036d65bbd82e12caa0f86ea"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_15_Z/final_eval_results.npz",
+      "sha256": "1c0242551d34fc345756aeae00406efb3c393fe91d2306275531a888c05ec698"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_15_Z/stag_episodes.jsonl",
+      "sha256": "611b58feb8a3490df02a991ef99ab0d6ba1ee0a34c599d5bbd2f46e513b85613"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_15_Z/per_iter_logs.json",
+      "sha256": "320b192416ce51484c9c90d880239ae8f13b5573436d8f1c0256fc79194566e9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_15_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_15_Z/cem_timings.jsonl",
+      "sha256": "28f7f24c5f735aa9bbfdf53e2128740fd81309c73b073f6032e82ccabc18dc53"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_16_Z/complete.json",
+      "sha256": "6c65e47084415d6c69462d11e20a4f0d513062fe9e4007f1063bb657c494fef1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_16_Z/final_eval_results.npz",
+      "sha256": "eea1f1ef6ce6a3b00c4fc2aff1b7a26588706a4c899276e9132275aef680d143"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_16_Z/stag_episodes.jsonl",
+      "sha256": "7a1c3f3af95daa20827b6230c9b73641d68cd398efec4f9d2dc75cd050f50031"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_16_Z/per_iter_logs.json",
+      "sha256": "3ac929427c3d839a1d597aa1e792d6e121dbdf52f26ba69a8b2b4bb9a2d8cec5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_16_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_16_Z/cem_timings.jsonl",
+      "sha256": "97c41022be068d52ea2d3411b597f49bf287c7ddf77364f50d6d4ecd57800530"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_17_Z/complete.json",
+      "sha256": "183667f829ebdfd34ffcff56ead565e5646b5d99b50b37c0688328f6c4314feb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_17_Z/final_eval_results.npz",
+      "sha256": "2f86dddcf145187f4b3166aabee6c968f02d2dcb0999618963d9618508706881"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_17_Z/stag_episodes.jsonl",
+      "sha256": "f42358ec96e02058f09b716e7d8c4ff3c6249ce450cf635675c22a59e9ef685e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_17_Z/per_iter_logs.json",
+      "sha256": "47d6290e9a570fb78baab1731f7b6094d81c96408293b77f9e7ccb6bf45de5d7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_17_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_17_Z/cem_timings.jsonl",
+      "sha256": "b53cac0ca08e9b8e45a0907ec92aa88a86b57350af4703d313c1dc33a13af953"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_18_Z/complete.json",
+      "sha256": "935e56d2418f3af9656b2721ae0485bab78ac9c2c4b5744ae3c2caf0ce568c41"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_18_Z/final_eval_results.npz",
+      "sha256": "d2f1fc596edef796d8a9222bcdeab37db72a7ef07e454b527649d6a0c2d6e121"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_18_Z/stag_episodes.jsonl",
+      "sha256": "90406e59611caf7c0b0b59402f3e206ffe79c2390aefe0af47ecb442d032be69"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_18_Z/per_iter_logs.json",
+      "sha256": "e5203b29a25a19185302ed0efc20be911c49c675e322ce17870baa5f05fb4d01"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_18_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_18_Z/cem_timings.jsonl",
+      "sha256": "670cb5c3b3fd6ee8244cab93ce7a918cc4bc67b164afe5e72336b5aa99934351"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_19_Z/complete.json",
+      "sha256": "9134a1ad606c8e4ab1e8d41c7b675c64013691988384edcdf743729575e98699"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_19_Z/final_eval_results.npz",
+      "sha256": "44794f89c5205d7424727bebe0343bf0bd6a2de5fc81bf6465847c924a3fb734"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_19_Z/stag_episodes.jsonl",
+      "sha256": "16759ea9f9bb7fda74c9033d6388b5d7fc429b108e8d9fbbc6e14b66066642cc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_19_Z/per_iter_logs.json",
+      "sha256": "315cebfe7b9a29cd331e0e70691fd6e37f942a98282f2dcb51afed281f34305a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_19_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_19_Z/cem_timings.jsonl",
+      "sha256": "bb9d53b6b4fc6593b5344393a0f51af8e76ac8f647c10e15b6b1ac26563cf4de"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_20_small_tee/complete.json",
+      "sha256": "68d6c31d5bbac37b35e4e5d8e4b2b2e9a9e0a764bafdf81be66221583b2f6cf4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_20_small_tee/final_eval_results.npz",
+      "sha256": "5600a42f6188896069383ee618b32c64a394e7392cb36ef1fb4b1939b9a5a94c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_20_small_tee/stag_episodes.jsonl",
+      "sha256": "1421bae51c7e53ce3c8891ede18a43bf04a894b6404a5a53a3ecb30d2cc3e939"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_20_small_tee/per_iter_logs.json",
+      "sha256": "0ec5951d3f0b5ce3cfac49eec2624fb14a023473463ebdc463787e1d08571c07"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_20_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_20_small_tee/cem_timings.jsonl",
+      "sha256": "11604b8edf64087e2d2b0cc83e5c46675d7da00715e3a7dbb918cac73a86edf2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_21_small_tee/complete.json",
+      "sha256": "2368fcef9565ced505044eb17d537aad0570fe9eba0ea14c5cd5388200c4d017"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_21_small_tee/final_eval_results.npz",
+      "sha256": "8bf0de7e9bfb211d46e4db994b5a465c2ec8451df4d51e00db9abcc8ca165f28"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_21_small_tee/stag_episodes.jsonl",
+      "sha256": "ad58b4f17773c04f1a72c181bed694c824aa7fd5b5ba8c6c86dc07a0d995be7b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_21_small_tee/per_iter_logs.json",
+      "sha256": "c1620d8fbdcd0236ac5a312cb5e7638e229f7856c901c71e331861908bbcc88b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_21_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_21_small_tee/cem_timings.jsonl",
+      "sha256": "085bc362c9f85344cf6f2fdf82c336b76a95ee3c1f359b81617a2688a051a436"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_22_small_tee/complete.json",
+      "sha256": "e60c16f07848337b73a949f77ed6a5ec053a494cc481385b7df315919c40697a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_22_small_tee/final_eval_results.npz",
+      "sha256": "284eb04a8e24ae14b9ac4716938dc305b8b9dbc0ddf64eff50aadad016109e24"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_22_small_tee/stag_episodes.jsonl",
+      "sha256": "e474aba537eb20cbc30972a3f4427a4214e1db948773813dc472680f2123000a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_22_small_tee/per_iter_logs.json",
+      "sha256": "1b23e38285c53c92e4f7fc9b260f43e15013a87f35db515b10fcc1523ee1aa1e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_22_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_22_small_tee/cem_timings.jsonl",
+      "sha256": "6b0dc6b7b9d67733e3bdd88f0af5bd3b6da107e9a9cfca0b0d7317edc96997d2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_23_small_tee/complete.json",
+      "sha256": "2e427113902bbe66768fb5cda03d28d099936d86ef5312fd8f0cb547bfc2f6e6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_23_small_tee/final_eval_results.npz",
+      "sha256": "c533fda91e0068c8b742258776fd8dc37ab1306ba2af321cb1d8038a8397d643"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_23_small_tee/stag_episodes.jsonl",
+      "sha256": "574d019c8e8303b014ea2d9b6815f6f013f7cf802e8fddbfb5582bb09997fb78"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_23_small_tee/per_iter_logs.json",
+      "sha256": "ba12733eea9abd58e21da731d892152e56a617afe2a079742fadd5eb34afb3fe"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_23_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_23_small_tee/cem_timings.jsonl",
+      "sha256": "dd7fba9f7fca5580cc89f7588b659d9443891fa82ded2a4ed1d48aedd61a350b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_24_small_tee/complete.json",
+      "sha256": "efa03547f0c3431f17e9bda969e192f2d66408d1effbe5542c0e0cee8d58704c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_24_small_tee/final_eval_results.npz",
+      "sha256": "28d467a584482760c4d0ec592ecb13f129b36f810ecb38ad52f2852ec2d5b3f2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_24_small_tee/stag_episodes.jsonl",
+      "sha256": "19472be51b1d35fcd091fd9b3520362e3840e00a298a31d569417ccbe756eb59"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_24_small_tee/per_iter_logs.json",
+      "sha256": "f0e1a8a994069d337d7a5769c1d92877cb1753f15351ebfdb0658f2aeb7e6875"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_24_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_24_small_tee/cem_timings.jsonl",
+      "sha256": "71fd5eedfdd68efc48bc750ff6aceff47d134e499659e1c36bd697a2e9ce895c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_25_plus/complete.json",
+      "sha256": "2b00e96344ae8f7411bfc3d1e8c7464ffc0239afba9d3b3274c63c07af7b5044"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_25_plus/final_eval_results.npz",
+      "sha256": "998ee4210917bae738d91869631c91a483dd927ba802f1c3236957ef87b56f87"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_25_plus/stag_episodes.jsonl",
+      "sha256": "c009648663e4c5bce3a727b8a268e73e2a48a88934c9d7997b18153a320bc692"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_25_plus/per_iter_logs.json",
+      "sha256": "e7f211ee44c136700c091219929b7bead2798eace0b2b29c240634d9c1e2094b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_25_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_25_plus/cem_timings.jsonl",
+      "sha256": "d0a4b6b7e195de045094b73eea976c4e0caf12c618114b671c4a0b3c3063d75a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_26_plus/complete.json",
+      "sha256": "3cf92c092a31550edb300126e99fccefb8aff49daa02bebfcf223b031f0b055f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_26_plus/final_eval_results.npz",
+      "sha256": "4e24c970bfd579db06219106215ceab16e114fb86862c9ab58cf800d4187a572"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_26_plus/stag_episodes.jsonl",
+      "sha256": "5bfd5c650767a7ba4352101d4ab34f236e525b3a86749aa538b4db6f46730892"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_26_plus/per_iter_logs.json",
+      "sha256": "2da94d2d4431ce0dbdd53979441ec1295629a3a3f36f68966039e167cb0a259d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_26_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_26_plus/cem_timings.jsonl",
+      "sha256": "a823cbba205a6b6f9c0cf3dbe5859b0899a033f4df486bb8bd2db8959ab9f4d8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_27_plus/complete.json",
+      "sha256": "8bf756d72accdeecfa83454fa91a5eb156c73e165bc779970dee393a4d5e25a1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_27_plus/final_eval_results.npz",
+      "sha256": "581cd2f3a3eff0e7f079a5c65b112f97ef5dde64fd23c7e5470bdcf527e9de15"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_27_plus/stag_episodes.jsonl",
+      "sha256": "5ef67a856bba358be449e48429a98ba08f48c53829fb0eabe8a0e410fc64ba5e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_27_plus/per_iter_logs.json",
+      "sha256": "be9ffd17b11642d75800e5c413028f2b7d5b57d7fa529f476d25fe1872cd212c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_27_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_27_plus/cem_timings.jsonl",
+      "sha256": "b28b05606a120aa08ac94468c66da78a6a2b092c6e2e11c8a59c0ae5c84be35a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_28_plus/complete.json",
+      "sha256": "28a04b13ee24072cf2f6d7683cc4a1b56b9bb780988ffc9937de92de29ee9458"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_28_plus/final_eval_results.npz",
+      "sha256": "4c69d8830c8c03b8da1a80e2cb1aa96bd2a2fa253ff33e9233d92171ad7b5a2f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_28_plus/stag_episodes.jsonl",
+      "sha256": "e79d71e832143ee6569b1f33429118035355bac8edc26d496a72b28a6f892d93"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_28_plus/per_iter_logs.json",
+      "sha256": "458a017f10a3cd597874aa4262ac206f58ff8c11cf765979192a5877c16a43bb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_28_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_28_plus/cem_timings.jsonl",
+      "sha256": "52c00a0462e2a9aee8def505501a9312a6e56171b78a70f5acdc93f35b92ccef"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_29_plus/complete.json",
+      "sha256": "9029f70af81b8801d4e419ac55f3bf78d98fb1e61a1c9e424105ce5765ebec19"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_29_plus/final_eval_results.npz",
+      "sha256": "69abdecfc78b22395c6815f3af8cc16ad0219eb97471211a43a30cbcf02c2ea3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_29_plus/stag_episodes.jsonl",
+      "sha256": "0315a59d99c9bf0891ba4769c3b9a68064487f003e8c5f80ca202662efba6cf3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_29_plus/per_iter_logs.json",
+      "sha256": "86e4df51c3656e7f25cad2ed4a380766343f45b96596cbbabcbc11d3fb914179"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_29_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_29_plus/cem_timings.jsonl",
+      "sha256": "c782762c63c4306892b841b5739bea4b6bd49c9e862d4e757b5afac21af3ff31"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_30_T/complete.json",
+      "sha256": "4f6826e5c143a2115cc80dddc1c4ef6d3802c3163b3e84eb96d4a67c17f728af"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_30_T/final_eval_results.npz",
+      "sha256": "dbb68789dfc83d9352f7d79b72706f5bae7a5f51e9cb298e5c2fcde5a94f1a18"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_30_T/stag_episodes.jsonl",
+      "sha256": "dd4049bb7bf98e5c2cb541d81c83edde8c8aac47236633a4985535b208756ef9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_30_T/per_iter_logs.json",
+      "sha256": "c5bb824119f56e4af12ffbb56564e71bb902517a6d526b4a63d1fdf3b4a5cb0e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_30_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_30_T/cem_timings.jsonl",
+      "sha256": "3997eb72b4fc2bf4203ca8c3ce9fe5d34af8fa01581d0937bceefb0f9ccf7910"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_31_T/complete.json",
+      "sha256": "f057fc04be30e9e51ba1521794abfdbc7f0e67dc03871de75fc9ef64bac408c6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_31_T/final_eval_results.npz",
+      "sha256": "68162df1497a0329dd7ad3d3ffe3ef333586408fd6fafdbe66c99edebc37b4f9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_31_T/stag_episodes.jsonl",
+      "sha256": "9b5e2e8d01a54d21468941fd26196a67afc32a9ae1aefbfda28d04a429cb9e36"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_31_T/per_iter_logs.json",
+      "sha256": "1146c0ea928aef740e2829267a8659afc715e9e0f0d71747aa300e60a757abbb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_31_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_31_T/cem_timings.jsonl",
+      "sha256": "5fb17ef9ff2c5888c756598c72fb8fdb59e957a1ccd09ef935a6730cc3994bed"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_32_T/complete.json",
+      "sha256": "5b8c442217e8d533fd57ed99fee456cbf7eac6204643b960b46394c8a3c8b170"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_32_T/final_eval_results.npz",
+      "sha256": "96d4abdcefc59335d64726faf5b592c603cdb4f4e341f0f382428b181f1f62a3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_32_T/stag_episodes.jsonl",
+      "sha256": "e107b559c90d56a203d1ba01af394aaa344a9aa754aeb2ad875be4b4ff815622"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_32_T/per_iter_logs.json",
+      "sha256": "1ef7cae4e1ef7fbba3e38ebc41ebc33e864e3711e34aae1ed9c16f68dbda670b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_32_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_32_T/cem_timings.jsonl",
+      "sha256": "29a1ba5b05aa30fa8eaaca35dbd4f8b93482b07070e214c0af11e4854b1fd02c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_33_T/complete.json",
+      "sha256": "16575f779deba95c95e32a9123177550b24e505436e4106b3576e694b5c201bb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_33_T/final_eval_results.npz",
+      "sha256": "21a6a7ce6303a3f0f630031945c9053933449e4b2081d2580812dc558c7ac3e3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_33_T/stag_episodes.jsonl",
+      "sha256": "f757a01e409a6d01648f5814f489c625dc7a3e721b56fe54d25a0f4f11286ffc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_33_T/per_iter_logs.json",
+      "sha256": "3fb467b7b6f48d3ea662c0b35a13f830f0d109f363872466879a6d8c22bd8edc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_33_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_33_T/cem_timings.jsonl",
+      "sha256": "4ca44febc372d8245cadcd9da11e55888ba18e707803dbf45375d1ab9d8ea1bf"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_34_T/complete.json",
+      "sha256": "6cb5ccda2e8afad86c652dff3381b619b311d881dd92bde3efc914f29c4523e1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_34_T/final_eval_results.npz",
+      "sha256": "cbe32a1b633c8c4b1a0a0d455ab086647d8c0ab94ad1970079c7aa6ed312a833"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_34_T/stag_episodes.jsonl",
+      "sha256": "292b2444a7ed3047699dfc6deee671f07f71143db16d92140543dbe22cb4d181"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_34_T/per_iter_logs.json",
+      "sha256": "da74a7c057c818b9ce59e796b724aeddcf265aa66e9824b525946055150e504e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_34_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_34_T/cem_timings.jsonl",
+      "sha256": "73355faa771bca21a70798fb539eb84e4e072d0dcfce844b72e8e313b9f37522"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_00_I/complete.json",
+      "sha256": "aaa4b6c56b7674831e98acd906e6a7704e8432b3f4dede82b7b48d51e6b2dc6e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_00_I/final_eval_results.npz",
+      "sha256": "5ee6973c6e72df55f878008af1d8234f1cc829308052233d8e459bc65c549b88"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_00_I/stag_episodes.jsonl",
+      "sha256": "ad58b4f17773c04f1a72c181bed694c824aa7fd5b5ba8c6c86dc07a0d995be7b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_00_I/per_iter_logs.json",
+      "sha256": "c20cbf6b88b51e00b17e194dc2c3a028872dc3381e0d5d39cbf16a2f95d606e6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_00_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_00_I/cem_timings.jsonl",
+      "sha256": "a49c83e1e4cbd47cbb35eae5d44aa1d91673d32b4580a18c82e1c43d2e9641cb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_01_I/complete.json",
+      "sha256": "83d22fe4aa3f41f273ec2fe100557013d1e2b38b0279e0a1e9287275717e5a35"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_01_I/final_eval_results.npz",
+      "sha256": "6a72e40a68054326b61af474a6bee1a0b165b0acf7ed20d2994b5639e66bb7e9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_01_I/stag_episodes.jsonl",
+      "sha256": "36b848267344fcb3efea1d2e90c070ded28f73a840cd05576145212196cfd7f9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_01_I/per_iter_logs.json",
+      "sha256": "276360f7144deb5140a7d748f72da00892f8dada703da47828be92937e52fdc4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_01_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_01_I/cem_timings.jsonl",
+      "sha256": "1f647879c30e8d5bd7f3f28553a6fc10ef8a9df16642172add86f9d6586494e7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_02_I/complete.json",
+      "sha256": "12d55fc5e15e06f91db87fe23870889f5fa500ce96880f206d16194feb13f881"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_02_I/final_eval_results.npz",
+      "sha256": "42228417d79e8b384f97296e2a530d08194b64af0e0ee8cc1fd6c0211068cd8f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_02_I/stag_episodes.jsonl",
+      "sha256": "7a1c3f3af95daa20827b6230c9b73641d68cd398efec4f9d2dc75cd050f50031"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_02_I/per_iter_logs.json",
+      "sha256": "09f81b6ee26c96ee1d43be4e7d71f7790dc9f678996f29310305711830f3760c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_02_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_02_I/cem_timings.jsonl",
+      "sha256": "d9a055992fbe6b7db5cfa7f210029e64c91e935abfba47d27a524790855977e2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_03_I/complete.json",
+      "sha256": "2b5848b1432cf5789eccd44bb417ae77d72e4d74ff506794ef4037c767a4a4fd"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_03_I/final_eval_results.npz",
+      "sha256": "441b695b2b496e7c47dea18d11069fc7d8206035fcbe5fb4be760f9c96179e3e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_03_I/stag_episodes.jsonl",
+      "sha256": "ad58b4f17773c04f1a72c181bed694c824aa7fd5b5ba8c6c86dc07a0d995be7b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_03_I/per_iter_logs.json",
+      "sha256": "0af30a2252f45ecdf054f4c449c51e141c158db8b8a784ac7256da831e712b76"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_03_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_03_I/cem_timings.jsonl",
+      "sha256": "4a4f91cedef5f22ba9cf056b1d75b7da45260b2a4aed94fbe27ebf2fff04635c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_04_I/complete.json",
+      "sha256": "defdafe6d1c964ec8f383ccf230b0ce59affb1d7e6f9a9b3812b0e6ee4ae3b75"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_04_I/final_eval_results.npz",
+      "sha256": "697695791dab4272ed8631df655b2457878e51c45e61fc3eb32f87254a276548"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_04_I/stag_episodes.jsonl",
+      "sha256": "f40decf0b5ac97c3135867500161c5b86f71d33118cc5afdacec205550674f66"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_04_I/per_iter_logs.json",
+      "sha256": "c134452e1a3a3c28a23e2f4b28476d4cf137f2e8a8981e9ea64e326c14df3203"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_04_I/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_04_I/cem_timings.jsonl",
+      "sha256": "1c6da454cd38a9a7b8b2de548e91e629824b87e07edfcd61e63392e2dc31da47"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_05_L/complete.json",
+      "sha256": "73ff5544c34c133ec042074d454fef730063db9ada5e95a83fd729c10e081806"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_05_L/final_eval_results.npz",
+      "sha256": "f54915278b1925e7fe8b2819fee0949bedbdcb08080bd3a955a8e18dc85bc67a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_05_L/stag_episodes.jsonl",
+      "sha256": "50d9735d7cfaf83e3b122cc522d78366ead29542a7d16c52d9fe8c6da5ac2254"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_05_L/per_iter_logs.json",
+      "sha256": "770e9e825966d216e1a567709f6b948788f356733181b7b16db6dba0a383614f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_05_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_05_L/cem_timings.jsonl",
+      "sha256": "2a7889d658810c36b79dbc15f8a74d87b841a775b7331da5d42a5bb8c67b4578"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_06_L/complete.json",
+      "sha256": "32f0678c2abc965286183ad446de86ae500ad0fa103a648c98dda469dab48710"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_06_L/final_eval_results.npz",
+      "sha256": "3027d354368eb6769e7e3170d237c516cd353cca4998310f79d9de31c9aee630"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_06_L/stag_episodes.jsonl",
+      "sha256": "43d0a4892e5f702001793f58561921fc5889adbeced65b76ba111c191ebf188c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_06_L/per_iter_logs.json",
+      "sha256": "33aca249298040971e7bc03484eae16e21286d0a24e72d0e1066e1887ac3428c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_06_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_06_L/cem_timings.jsonl",
+      "sha256": "5d52e9519e2a55e39c4ef44add6fe54200e050adb96f3ae65e9502248b6dc1c8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_07_L/complete.json",
+      "sha256": "e39b693f55626ef8baff4122f276bf305e940889e9d5a1c418e0c684c20b3380"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_07_L/final_eval_results.npz",
+      "sha256": "9afa7666ed11bc2f9f07995d95870ab83e005ccde9a7f1287177a5636afd9efa"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_07_L/stag_episodes.jsonl",
+      "sha256": "6c56618b63243ded96c3ac90573430fca0fdb0ac73f4a1cdf4e386fdccb92673"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_07_L/per_iter_logs.json",
+      "sha256": "7c44f01d1d3264e795a2bc7e0f998a30ae6379bb43dc91d2daaed9da0a1d25a1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_07_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_07_L/cem_timings.jsonl",
+      "sha256": "267a524638f54348f4e0b478bee693bed7e55465d0c5518accdfcb1a986cc293"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_08_L/complete.json",
+      "sha256": "7ab3c2d945d01afd025e089b154486018388221db3850cd012da7a95b0b787ba"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_08_L/final_eval_results.npz",
+      "sha256": "2550415a1dafd1ad237b2d2af6850d7f047c19fbd20b40ea8f0e996cdfbfac5a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_08_L/stag_episodes.jsonl",
+      "sha256": "b0e55b33680b553c71519a17667a8fe6472ebcccd305ba0c5c2d661be5458d59"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_08_L/per_iter_logs.json",
+      "sha256": "2f66c33381ef91181f334aaf14fd0fbaec30b98c130ff108e8a74a236ac7c1d2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_08_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_08_L/cem_timings.jsonl",
+      "sha256": "864d019b613451c76296e27f6eb0134fa7fa39e335dd07fda3a580ebd04edb35"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_09_L/complete.json",
+      "sha256": "91b404f765a1c3f2bc8cfa51e885ae1b19071578bf76fc216a9c2fc266799bc1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_09_L/final_eval_results.npz",
+      "sha256": "d2f6e4a28a43ae5661d2a1a15b9d5e8e9116d95b8ea256a6f0e6adb56b9108ce"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_09_L/stag_episodes.jsonl",
+      "sha256": "bf93d5b3e35fd6acadad0df8567d8dc6e4e19d9e6591f737b5574468c8a1473f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_09_L/per_iter_logs.json",
+      "sha256": "fdc6e255fa0b459734efb25178d0f7ba3f41fbb92de13f18c1b241c649bfd90f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_09_L/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_09_L/cem_timings.jsonl",
+      "sha256": "741c25ad649838109b8767d86e9316892fc8c16b546f24f99205d017c532a07a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_10_square/complete.json",
+      "sha256": "260588f2d0bfd903dc4545ef7af3de49fd01fc1859d120d36fa911836c1f4ee5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_10_square/final_eval_results.npz",
+      "sha256": "514e45677e9aeff016b3a6f82c146416a335f48541e41feae720b29fa593e72f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_10_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_10_square/per_iter_logs.json",
+      "sha256": "6e522afab57951271a645e76223eb990ae8e252018c106ab0f460091f75e5a62"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_10_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_10_square/cem_timings.jsonl",
+      "sha256": "390f754b10d1f2674a4a22a22c6f5170cef14a8a462523f2d67bd2c438f43a21"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_11_square/complete.json",
+      "sha256": "9f03db2a2250915d0efcf46fdf362368d070336a5517621f674721cefdbd5191"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_11_square/final_eval_results.npz",
+      "sha256": "6e715fd10412cba6a76e69fd7d1ea94425258ad4bc7bd54123356c6b587eb5a1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_11_square/stag_episodes.jsonl",
+      "sha256": "cdb6ecd07321dbc242a8f68b2d43d7db36fbf04dd7558335edbbdf1f2626c1a0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_11_square/per_iter_logs.json",
+      "sha256": "8440bcdb8e92da9c6c83f214e1107b8d729b13766f5f6f0a9487292b4f4e24c1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_11_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_11_square/cem_timings.jsonl",
+      "sha256": "4c5ef7e0ddfae50f8d4734f5105cbfe1498b951081984d153298ef4cd1d86773"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_12_square/complete.json",
+      "sha256": "7c69cbebc22b57d0c98820763b0ab0fb83ecf20989bede4481728f947ee7fe08"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_12_square/final_eval_results.npz",
+      "sha256": "a1515bed8fc08ba13da99159139e090655daa3a3241f6b0670c07840a7969cf3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_12_square/stag_episodes.jsonl",
+      "sha256": "767cfb8012587e13786619ffcfb84df2e62399f490fdb6c286d8cc11861dc565"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_12_square/per_iter_logs.json",
+      "sha256": "d260064884569c895e5ce3fb885e847d38450d06217c33a575bde156ada8032a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_12_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_12_square/cem_timings.jsonl",
+      "sha256": "33fdfaaaf8e6b02d85f84bcc44da2960b6fde25ed2fb1592ff9ce4ac45084751"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_13_square/complete.json",
+      "sha256": "bb760fc5328a5ccfb1a8a031518d307d96b3b5ebf845db33e9637c21b0bf49bc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_13_square/final_eval_results.npz",
+      "sha256": "8296e7146ba0e7122b38af19fe3024a7b60e86c43730df4afc0059885dba3429"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_13_square/stag_episodes.jsonl",
+      "sha256": "791e7547fcf4f17edf9cc0b161005b2bc6fd20d8c68e34b2355dd3b23363e7e8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_13_square/per_iter_logs.json",
+      "sha256": "9fc8792254c417989fa3b0d1a394c39e6ad13836573d3abc2c1f1576fd9761c7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_13_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_13_square/cem_timings.jsonl",
+      "sha256": "a35e83ae917f283d249984c263b8262cc9c6710d589813a1ce98b75f86b0a006"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_14_square/complete.json",
+      "sha256": "6d9dac13e61bdba9ef5cf893890716c8c381d0ddd2fc0bedda7ad247ef992425"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_14_square/final_eval_results.npz",
+      "sha256": "7204a23ae2c82fd8e995775d30a9bb2635f581b41d9685b6d0bb48d3bc0a7cf2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_14_square/stag_episodes.jsonl",
+      "sha256": "d623b75732d6120077bfad3a352012e5358eb479f2d2c04397e040b499f88a68"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_14_square/per_iter_logs.json",
+      "sha256": "f4fb2c56303edfa9784aa39e6df39c624f3ec65b972fed65905f4900418c654c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_14_square/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_14_square/cem_timings.jsonl",
+      "sha256": "8a2be75915ba165bcc127bfdc6526e74800e63cab03ab6fe4530a760023c131d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_15_Z/complete.json",
+      "sha256": "16f2b9186fb5e15a4df785582d2616f1c2cfce305457004fdd1613160757ca61"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_15_Z/final_eval_results.npz",
+      "sha256": "14abd781e0c069476812acff45993dfe35b0d657a70f7d85fb71c94d91ac5790"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_15_Z/stag_episodes.jsonl",
+      "sha256": "bd0361c9330e45c385ca5a766a7dc010660a52f7dbb0dc6dbf3ab76d8f267e8a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_15_Z/per_iter_logs.json",
+      "sha256": "a60b5525a18988a4bf6cb0fcbb1e477e934ee80e0ffc5fa234f5bb74fb7b8364"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_15_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_15_Z/cem_timings.jsonl",
+      "sha256": "24b032394ae5d4b5efc203b46f6ac568f54ec829651d9a93ae947e4cefa83c2f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_16_Z/complete.json",
+      "sha256": "e8493b3bc5035dbccdf696b53bc0d334f1620b7018304f799c0bf7b44b4a705a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_16_Z/final_eval_results.npz",
+      "sha256": "80ec3b24ab83dd11a40bd4421a79803c1bc2f4cc0945d7c64cb2cb747f02f59d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_16_Z/stag_episodes.jsonl",
+      "sha256": "dc261ba9d3f434d2818477bb078e84ee592aa88237acbfba3f783c03f41e1799"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_16_Z/per_iter_logs.json",
+      "sha256": "8ea7ab5f61f911c0907d2d4be270d4c4af0f2613e9419cb7de2763418f9aef0e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_16_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_16_Z/cem_timings.jsonl",
+      "sha256": "28778b7ca51518e8759232d8e42fdd1bb39a06d7adcc8a3e1b21217a0203fe8a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_17_Z/complete.json",
+      "sha256": "b9f8690ee7a5eee77d89827170977941e09ce013013befea05b79e7c6360e7a6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_17_Z/final_eval_results.npz",
+      "sha256": "0207145b20595e27e3b473bbc1873e230b5e6ce096b3fb588236b6b3ffd6b7d6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_17_Z/stag_episodes.jsonl",
+      "sha256": "2d54e3c301cd602ea5c415933b65bbff044fcbb9e5dd8b07707799e5b0e90dcc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_17_Z/per_iter_logs.json",
+      "sha256": "fadaa4586eb06eeed7cd36059bec847ba8f815a9ba441353c31456fc440c3542"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_17_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_17_Z/cem_timings.jsonl",
+      "sha256": "f871719674f96ae28078d90bba71c9e19c320dc7f458156c761779ef8b622e10"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_18_Z/complete.json",
+      "sha256": "51313898ae5f892b2f6d31e4e23cc82104981ff470a5ede39d456d454aa28f8f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_18_Z/final_eval_results.npz",
+      "sha256": "6a6ec8305923f82d9f5c1b84b4be52ae555ee6e73066d0a741b1b16a5434d667"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_18_Z/stag_episodes.jsonl",
+      "sha256": "011788729bd833ceeabfeccbc363fede3fdcbf269b4c5f7b0819f9b045774292"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_18_Z/per_iter_logs.json",
+      "sha256": "bc23ccca882b5deca5321bfc4ec2af113ef579f1ac6f532fba42a2a9426ccd9d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_18_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_18_Z/cem_timings.jsonl",
+      "sha256": "7efb0c7ff8dece11cddaf84e3d4bafa4cf662f73e0c3950e8732ad509b748aeb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_19_Z/complete.json",
+      "sha256": "31ac0ecbec32a6a06e198961af298d7e4361f4ceaa2256238d08c9b84aa1300e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_19_Z/final_eval_results.npz",
+      "sha256": "8152cdc13efc6c61500a8c1697e7ab4bf7c9d28fc22e01a31a431bb4f455e240"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_19_Z/stag_episodes.jsonl",
+      "sha256": "4c8a02385fbefcf3fefe569f1a9475d849c4ac872942fdb0ec915ec348c58ab7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_19_Z/per_iter_logs.json",
+      "sha256": "a754192f04d64b2a19a355350452a95bfb30d930b6669ef5bcbc3c15f2e80093"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_19_Z/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_19_Z/cem_timings.jsonl",
+      "sha256": "7b58ac08c905c8ed77cce108705c14562e11360cd1a689fd600f4fcf2138d258"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_20_small_tee/complete.json",
+      "sha256": "ed0b1704c5d3ee63f7e43a081a1114086919223487014c97620fe0b2f5f91d83"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_20_small_tee/final_eval_results.npz",
+      "sha256": "cb5c2f7824c73246a021a1cd7116bbcd86e73582ec268bf845eee525a6e375d9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_20_small_tee/stag_episodes.jsonl",
+      "sha256": "b29425e0accbb4d88d4f384a1479f5ed92cb80dce80d97503fd5cd3c1a425ffc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_20_small_tee/per_iter_logs.json",
+      "sha256": "e794b21cc7bbcec19792bc2a6a38b61e97ce111f3e91322d50aec4f89bad0653"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_20_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_20_small_tee/cem_timings.jsonl",
+      "sha256": "a2570a5a24f5ecf38fc03e04005b585f8b9f104aa5a22f327b76ce8c7ac2b26d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_21_small_tee/complete.json",
+      "sha256": "6006495fedeaf651571f18c36e0b865118a222aead5ea1dc23660fdcd52443f3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_21_small_tee/final_eval_results.npz",
+      "sha256": "4097d0650c36a7227d9f369fc2bcd86fcb9edcc088b51bbcab3e973a712db061"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_21_small_tee/stag_episodes.jsonl",
+      "sha256": "e911b01fcbd2ed52dc1cf8ae78e04c140c9d34836f881a2be1b3433695854557"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_21_small_tee/per_iter_logs.json",
+      "sha256": "74a251ea1a8171b164ca492e854ae2fbc0ac934b68efa703013fb6509b8c9f41"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_21_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_21_small_tee/cem_timings.jsonl",
+      "sha256": "4eee2117bc06b8c2cc9e97811b8d13c197354b4554871eddea78804a772751a4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_22_small_tee/complete.json",
+      "sha256": "95c31c90024e1e76b984efab1b0db1c5944a0f5b47fc57a7fda89fc99c2e561f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_22_small_tee/final_eval_results.npz",
+      "sha256": "d8628c9ffc435dde1d709dc182d8f503582b1a623630ce645e0af31e6348afd3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_22_small_tee/stag_episodes.jsonl",
+      "sha256": "9b71eb34cd43bc20664254bfa2f493d798c93d8fedbfefdc176b5b29efa8b6d4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_22_small_tee/per_iter_logs.json",
+      "sha256": "55b8b0afacc569a37cd4bd6f533b5ee802f7f51f5af0b1556c5aee8a19c75970"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_22_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_22_small_tee/cem_timings.jsonl",
+      "sha256": "7c5c9b9aa685fd3e9bcaf103d7c26c89fc4cc4445b14cd0352f0689fc92fdc2a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_23_small_tee/complete.json",
+      "sha256": "1a60a138161c4a6af3604b30016ef86abc624bb6e0257167e8de0b85a2cc8ce6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_23_small_tee/final_eval_results.npz",
+      "sha256": "9081eb5d233009b1c18e91445ce823305a085147c497cdbb99915e1e16e70d22"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_23_small_tee/stag_episodes.jsonl",
+      "sha256": "628c98d882cbc4de93a95ce43c5e077301d22d8b5aaa3561362bdc7bcd279407"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_23_small_tee/per_iter_logs.json",
+      "sha256": "c1f821357618e166e2c9ffb1e3943255c1e8ecbbf1d6b4538e1989b4f1434d0b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_23_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_23_small_tee/cem_timings.jsonl",
+      "sha256": "dca62556d67be89bcdb64752e34ab03246d42a5b0e3df4127587e92c2044d56c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_24_small_tee/complete.json",
+      "sha256": "775b3d4395cd0acc4a0e9aad2779f39bdc375617baf4e7c340b2f8a5ebca7e15"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_24_small_tee/final_eval_results.npz",
+      "sha256": "46b41e0f9aa9a351fa8a6261d973a77c4df2241085a02d4340c3664ea752569a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_24_small_tee/stag_episodes.jsonl",
+      "sha256": "6cfdebdec379908967f375a58736757ab117b694944328c6e10d612cd046ae6f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_24_small_tee/per_iter_logs.json",
+      "sha256": "d99306e113fe379a1db48177076f849aa397fc3a8a1d60d4555f612174cb8812"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_24_small_tee/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_24_small_tee/cem_timings.jsonl",
+      "sha256": "31fbd27c8345c8de106eb3906902dcb72ae5b4534bf7874c3f02730804291d81"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_25_plus/complete.json",
+      "sha256": "904e41b2c55c2e0d57145fd9194c6c349de76acee712e997a00656adc65b16df"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_25_plus/final_eval_results.npz",
+      "sha256": "2309374a91589b3178ca1e29a4cdf0d06d345ac83680df0d08786a0cd1e67990"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_25_plus/stag_episodes.jsonl",
+      "sha256": "8b60c200d98191282b72be1be33d980aed6b4dcdbc612420101870d4b2e11ccf"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_25_plus/per_iter_logs.json",
+      "sha256": "016f6ae8b2528b31a0c69b6bc7143e81b4ccafa13c1c6409bbb8359e0d398e1f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_25_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_25_plus/cem_timings.jsonl",
+      "sha256": "1dba402a48b1f57d4ca7f713ed07e61338059f1dd76f210a3412a36ce2ef9aa5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_26_plus/complete.json",
+      "sha256": "92575209ab3504c8aeb8d82b06f5430cea98c48e8ed70339b92d1a840ae94427"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_26_plus/final_eval_results.npz",
+      "sha256": "8ffd9a388de8ba896b56f731e32391ae36c65285af6bd8e70c7a62576061460f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_26_plus/stag_episodes.jsonl",
+      "sha256": "494e031abec4fbaacd5ee0e02a5e99356a2aa1d1f5bdeb8a522e2fb975ec46c3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_26_plus/per_iter_logs.json",
+      "sha256": "ed9394b73805927b6444c213e22f5fe457101a931b70434f5ae2f4782443704c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_26_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_26_plus/cem_timings.jsonl",
+      "sha256": "bb52085d6a8305431af46f09a93ab0974020cd9d7a073e667c03d4aab1c6825b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_27_plus/complete.json",
+      "sha256": "75227f93acca269e5804caa37eb3ff843b116b017adf832a9b655c2b93f34363"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_27_plus/final_eval_results.npz",
+      "sha256": "fcd33bbb0b0e5f8802eca8d7d54e6dc1468ee5ff9412a8c6938b6a7d933fbd65"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_27_plus/stag_episodes.jsonl",
+      "sha256": "fec813903ce0de6af7a3f504b4b306c2196cd9ea09124bcd3c6306239bd3b453"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_27_plus/per_iter_logs.json",
+      "sha256": "c51066afa865ee03b0812e015c2a13ebbdcf33290341bcb00c457a4ed4c89b6a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_27_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_27_plus/cem_timings.jsonl",
+      "sha256": "c3da3fe70fe9d0f9c49acf51eb87fabcd14cdebff62d22e45f13d83ba4e2e98d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_28_plus/complete.json",
+      "sha256": "8e1a038648d61f0a2d5eeb25e56007f4d8d06689ccaf30e2734721386cdd5b7e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_28_plus/final_eval_results.npz",
+      "sha256": "34068353044a85f58f91a83c3a1b089243c81b5b007c8a0ebc14893c8cc9b214"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_28_plus/stag_episodes.jsonl",
+      "sha256": "61741d58a65c05dae4254780100f21f22da86f3a10f5dee6191576293710ba54"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_28_plus/per_iter_logs.json",
+      "sha256": "26be6d4b1da8aa7b10d18328d37d7e6db5433f4f40060979bf7b018f3c9f36ef"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_28_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_28_plus/cem_timings.jsonl",
+      "sha256": "3e229faf074a1e575fc0eb9dc7f11723e3dac084dc15fc269657d607903b800a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_29_plus/complete.json",
+      "sha256": "ea70fb648c8749a891ae9895e85d62ac44549b34595ea1d69797f83d7f62488d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_29_plus/final_eval_results.npz",
+      "sha256": "dca06caaea47d6c82214c374d688c78f38e78a5cd0cdae74bc0f322f337c2b89"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_29_plus/stag_episodes.jsonl",
+      "sha256": "abbb3f62220f00bac25a50a3e34ebef17490ba305da8596e77b3f4c0f921d353"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_29_plus/per_iter_logs.json",
+      "sha256": "1360fa45223a923e3e1a534dda97016e6a4545d7da0d750eef0c5fcb2a4ffa9f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_29_plus/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_29_plus/cem_timings.jsonl",
+      "sha256": "546ae35b5139ebc573c486f9da46a28ca9742908be1994af2c658da8442deb5c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_30_T/complete.json",
+      "sha256": "231e9b8e89db89df0cfadf28e5a5e622244e1ebc178d87418143e2f1f74cc2bd"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_30_T/final_eval_results.npz",
+      "sha256": "f370581048bb62af1cfbd2d1117bdd0e119fb66c745a3e77f4a3cafc68bcff3c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_30_T/stag_episodes.jsonl",
+      "sha256": "4889cb6b463252f81c1180f1ea80b403f187374212c49e0a30672fc6a9fcb9f0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_30_T/per_iter_logs.json",
+      "sha256": "ae36c3ae4cf8d881d91ba94e694a4b8b35378387af1a1a40ed5bed67fbb3c948"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_30_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_30_T/cem_timings.jsonl",
+      "sha256": "a22ac0fe40d2d11858503c587491bd708e80d55053234573a4486b7ad47c353d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_31_T/complete.json",
+      "sha256": "2de22710589273142296dde59c35f153dbbe5ded75c9bc7771645dd0754ad648"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_31_T/final_eval_results.npz",
+      "sha256": "a0448531691feb39e1d33ad3a84af7ea9cca371f9ade40c980bef4c45da3ae99"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_31_T/stag_episodes.jsonl",
+      "sha256": "477a8e48005a7d6a2f9fd273b13e2099f4f068de980df4b7f92b914a18de9608"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_31_T/per_iter_logs.json",
+      "sha256": "ca161ef9f3968d69a3f33ee17b720e4716a8b61b19edfdc09befb5e304b751ec"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_31_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_31_T/cem_timings.jsonl",
+      "sha256": "93dc97ee59358a9cd92fc8ad69dc05501c1e422350923a25aadabea25bbefbfb"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_32_T/complete.json",
+      "sha256": "bf9d3fb4fa6c533d502dbaefab538e6c73f6d22311fa0a9236247e1b71db1188"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_32_T/final_eval_results.npz",
+      "sha256": "2eea638734eb3eaa221a476d1138cb8b389a98e4d468986aebcf07431e2ed66d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_32_T/stag_episodes.jsonl",
+      "sha256": "31020877a83d0b733703d0089c5ddfe496bd0250495985002441bb1d0790aaf7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_32_T/per_iter_logs.json",
+      "sha256": "f950fc09d380214019e6f0b3fd8e359165dfe909f2b874e485ed6276b7012066"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_32_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_32_T/cem_timings.jsonl",
+      "sha256": "ea0dd953165e40637e3348859f1f65adb2d2038756bf27c675985417934c98c9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_33_T/complete.json",
+      "sha256": "f7b4f2c639e4e883a310425c2d26634772e5cb30883d00df149a6cc4df7c266b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_33_T/final_eval_results.npz",
+      "sha256": "2da8639c9814b53842911bfa60b5a6a1a0fd7929899953be4240c2a4faec2d30"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_33_T/stag_episodes.jsonl",
+      "sha256": "604eea673adbecca439468754be338930f35d730bc51e91d5b87478e41482992"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_33_T/per_iter_logs.json",
+      "sha256": "adc7db6031bc028abf9828448a2e7051c6f408355e7ac390ea463ebc91e5de90"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_33_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_33_T/cem_timings.jsonl",
+      "sha256": "025122eb397a9e178f61d8c0ec1eaa94ac6a8d4502f343a84a309cc2bf77bbe6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_34_T/complete.json",
+      "sha256": "4cc55ca285acf37e2e792dac456cdefdeb8268e68dcf6f17c07344d46b5096f4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_34_T/final_eval_results.npz",
+      "sha256": "dce8347dc4d4742ae530ea5e9e0d2cf5803f4c17e69a0d38a057f8e621f3fd95"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_34_T/stag_episodes.jsonl",
+      "sha256": "d7a7b219100f4a73caa8924faf7c4d9dce4c4de541d8f91cfe7b9d31e8a3f495"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_34_T/per_iter_logs.json",
+      "sha256": "d56e2cbeee48e865cfa83bfef4fe8d75794c45348dcd7d7a11d02a2cdc63252a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_34_T/stag_meta.json",
+      "sha256": "4c987314551b79fc3da005997fbb37ff3724704ad6093cf1e8ad483cf47bb500"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_34_T/cem_timings.jsonl",
+      "sha256": "bf35d731f260f734b02454524c91a31e0d5e8d31d3a967186f368f36156ffa3b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_00_I/complete.json",
+      "sha256": "d82ad6dba6fe853cc0f3da7bd31ab905c825534f7f3939589c673c85eb0a7f49"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_00_I/final_eval_results.npz",
+      "sha256": "5ee6973c6e72df55f878008af1d8234f1cc829308052233d8e459bc65c549b88"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_00_I/stag_episodes.jsonl",
+      "sha256": "ad58b4f17773c04f1a72c181bed694c824aa7fd5b5ba8c6c86dc07a0d995be7b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_00_I/per_iter_logs.json",
+      "sha256": "57212180565e141b7660eac5fa0f199cbf80969ef7e312abe342e7ff9c24880f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_00_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_00_I/cem_timings.jsonl",
+      "sha256": "176197c07474a398e84f915384820b640d399ad5d98a526cf51830bbe3db9144"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_01_I/complete.json",
+      "sha256": "223f1ee41f5a91f4e5fe4c9e8ebb49e20e8995764117b4819eb49ee4e1f4cf47"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_01_I/final_eval_results.npz",
+      "sha256": "6a72e40a68054326b61af474a6bee1a0b165b0acf7ed20d2994b5639e66bb7e9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_01_I/stag_episodes.jsonl",
+      "sha256": "36b848267344fcb3efea1d2e90c070ded28f73a840cd05576145212196cfd7f9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_01_I/per_iter_logs.json",
+      "sha256": "48993f1f3fa099dfac94faf24971832cd5a0b6f4179adde378704b638ae72758"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_01_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_01_I/cem_timings.jsonl",
+      "sha256": "97077ee08ed529fca75c3096e66d48be9500ae1995cf9b3651a668e2d86c1d89"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_02_I/complete.json",
+      "sha256": "0a1e4da67070094c88bcf0d786b4bac5da535cc9fecea8916bcbe1b2c8ff7f22"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_02_I/final_eval_results.npz",
+      "sha256": "42228417d79e8b384f97296e2a530d08194b64af0e0ee8cc1fd6c0211068cd8f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_02_I/stag_episodes.jsonl",
+      "sha256": "7a1c3f3af95daa20827b6230c9b73641d68cd398efec4f9d2dc75cd050f50031"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_02_I/per_iter_logs.json",
+      "sha256": "3ad1c1140b1fa1ad2e1432fabbba96945ad625c70a222634f88fd1b38180ef96"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_02_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_02_I/cem_timings.jsonl",
+      "sha256": "a9e616b8330cf9212e1c4e9b8e4d8e9f4a9c4349c376b2b578a71fcf62b92cc6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_03_I/complete.json",
+      "sha256": "0a8b5a9b08511faa65e437574a09e9a7f5e60c8e75ea52ac7100308ee02a7a8a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_03_I/final_eval_results.npz",
+      "sha256": "441b695b2b496e7c47dea18d11069fc7d8206035fcbe5fb4be760f9c96179e3e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_03_I/stag_episodes.jsonl",
+      "sha256": "ad58b4f17773c04f1a72c181bed694c824aa7fd5b5ba8c6c86dc07a0d995be7b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_03_I/per_iter_logs.json",
+      "sha256": "5a34096adc1bb1e2dc1d035a0d1f9736dd8c167fd33f50bfa1ce708217d1df48"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_03_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_03_I/cem_timings.jsonl",
+      "sha256": "35797e0957fe768c4e265f205bee1fc174595bc338833ece20e145ee5a2698fd"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_04_I/complete.json",
+      "sha256": "e8ea90f02912165e6e975f9c15addc69b4f8fed95f99430b8aeb01d685bd8740"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_04_I/final_eval_results.npz",
+      "sha256": "697695791dab4272ed8631df655b2457878e51c45e61fc3eb32f87254a276548"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_04_I/stag_episodes.jsonl",
+      "sha256": "f40decf0b5ac97c3135867500161c5b86f71d33118cc5afdacec205550674f66"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_04_I/per_iter_logs.json",
+      "sha256": "56e3c117506024037a26b073719b513df2782a9d3168c08a77e17e4d42b8ffbd"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_04_I/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_04_I/cem_timings.jsonl",
+      "sha256": "0a89bb219996d1326464cdde94674e63cac7d835cba911a578fde6e414888514"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_05_L/complete.json",
+      "sha256": "0ae6dac95750baec492b7e918be71caa4e37d73433836e104e383f548fdba64e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_05_L/final_eval_results.npz",
+      "sha256": "f54915278b1925e7fe8b2819fee0949bedbdcb08080bd3a955a8e18dc85bc67a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_05_L/stag_episodes.jsonl",
+      "sha256": "50d9735d7cfaf83e3b122cc522d78366ead29542a7d16c52d9fe8c6da5ac2254"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_05_L/per_iter_logs.json",
+      "sha256": "cf57504e15189a541e7ea63c0b3d0fd6abe4558abec092860a40485a56fe70ac"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_05_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_05_L/cem_timings.jsonl",
+      "sha256": "4a40b4669e441a59b354832c0a49b90a4206378f331072e98dba62069a4480e1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_06_L/complete.json",
+      "sha256": "7a01d61c1b98620e2296b386b3a863eed33540fd19c4e32b62cd2211a839f544"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_06_L/final_eval_results.npz",
+      "sha256": "3027d354368eb6769e7e3170d237c516cd353cca4998310f79d9de31c9aee630"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_06_L/stag_episodes.jsonl",
+      "sha256": "43d0a4892e5f702001793f58561921fc5889adbeced65b76ba111c191ebf188c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_06_L/per_iter_logs.json",
+      "sha256": "7f6586bc12aa7a060ded831bc812f366be97b921e8671e541602a91827c8027a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_06_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_06_L/cem_timings.jsonl",
+      "sha256": "96b84c7d964fbc85fb6ea5193cb2d2f647a568c3859c233ba49bb200bad24202"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_07_L/complete.json",
+      "sha256": "29c00e17a20009fbe59080ea894722d70d14114a3e67ea51880c8de60532992d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_07_L/final_eval_results.npz",
+      "sha256": "9afa7666ed11bc2f9f07995d95870ab83e005ccde9a7f1287177a5636afd9efa"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_07_L/stag_episodes.jsonl",
+      "sha256": "6c56618b63243ded96c3ac90573430fca0fdb0ac73f4a1cdf4e386fdccb92673"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_07_L/per_iter_logs.json",
+      "sha256": "0bc0e0af3a7e03eba62d6f36de1e5cc0c13208c5fd41f27bbe1b053c5ac27183"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_07_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_07_L/cem_timings.jsonl",
+      "sha256": "caeb796af2eada8c7c3be2897c51a05fca5e38d7fd9f1b8128926fbfa3cdee2f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_08_L/complete.json",
+      "sha256": "b6bd0321fb048e8f50f242793f5889165d3fe9ea1b094ad3062a920e2e979a35"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_08_L/final_eval_results.npz",
+      "sha256": "2550415a1dafd1ad237b2d2af6850d7f047c19fbd20b40ea8f0e996cdfbfac5a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_08_L/stag_episodes.jsonl",
+      "sha256": "b0e55b33680b553c71519a17667a8fe6472ebcccd305ba0c5c2d661be5458d59"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_08_L/per_iter_logs.json",
+      "sha256": "4aea60dab055187af5229f6b82acaecc7f8217f957c9a76a0b040ce983065082"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_08_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_08_L/cem_timings.jsonl",
+      "sha256": "19b7538507b6c79b2aeeead8978b233bd596f16b07507dce144f306d5e4a2cf4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_09_L/complete.json",
+      "sha256": "b03e01fbde1696b18538ca0dff752cf3dda52ec4d5fa20286961b3ab3397422f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_09_L/final_eval_results.npz",
+      "sha256": "d2f6e4a28a43ae5661d2a1a15b9d5e8e9116d95b8ea256a6f0e6adb56b9108ce"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_09_L/stag_episodes.jsonl",
+      "sha256": "bf93d5b3e35fd6acadad0df8567d8dc6e4e19d9e6591f737b5574468c8a1473f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_09_L/per_iter_logs.json",
+      "sha256": "523442bb97ca60820df6d6e5c1f0d592db884012ee82e8ed92e0b975f6f6cdf8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_09_L/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_09_L/cem_timings.jsonl",
+      "sha256": "47674499d88b21121c188b760ce2f539079b74e6160104c6bff234c1ea118606"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_10_square/complete.json",
+      "sha256": "defdd786f08b80da35e81b3a992f97965fb49c1614d015ffae7e47a5a7aa1d10"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_10_square/final_eval_results.npz",
+      "sha256": "514e45677e9aeff016b3a6f82c146416a335f48541e41feae720b29fa593e72f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_10_square/stag_episodes.jsonl",
+      "sha256": "627b42130f0dd80275cb8242ba4cb14a2091107caed6fae9695c029bc10b1fbc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_10_square/per_iter_logs.json",
+      "sha256": "753f8b0d0dff012083bbfacbc8931fe9c3e5f98509a3921ac2aea6801ab4956f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_10_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_10_square/cem_timings.jsonl",
+      "sha256": "ec943f94b73c6e2d98b99c61bc77e23b915267f9a7b205b86dbbfef836192f58"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_11_square/complete.json",
+      "sha256": "142e76648fc2a29361ff419e9373888a3e60460b538d4c89df05742340dacf07"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_11_square/final_eval_results.npz",
+      "sha256": "6e715fd10412cba6a76e69fd7d1ea94425258ad4bc7bd54123356c6b587eb5a1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_11_square/stag_episodes.jsonl",
+      "sha256": "cdb6ecd07321dbc242a8f68b2d43d7db36fbf04dd7558335edbbdf1f2626c1a0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_11_square/per_iter_logs.json",
+      "sha256": "1fd253fb9e84253d73cb6382d692c3a84fde9aeb3971005ef8b88491833f6951"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_11_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_11_square/cem_timings.jsonl",
+      "sha256": "bdbe062963d71caf615d20ce3c1b9fc9eeec3d852f5da729f3b75a074313131b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_12_square/complete.json",
+      "sha256": "1c7af5eec6e84db8044d5c3bc4940aa646bcf225e94c830f92a790e02618537b"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_12_square/final_eval_results.npz",
+      "sha256": "9efe90351b4659b0261039ccad75d74067f67244a63602aa3e3b53cd1c0484d5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_12_square/stag_episodes.jsonl",
+      "sha256": "767cfb8012587e13786619ffcfb84df2e62399f490fdb6c286d8cc11861dc565"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_12_square/per_iter_logs.json",
+      "sha256": "20ebc49a140b19ebd673c0da752276991d2a61ce6838f87e3031465e19563318"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_12_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_12_square/cem_timings.jsonl",
+      "sha256": "3c6b41350e2f1e6f169ccce4714ad01f15fdd61dab6b2466091903dd8361a775"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_13_square/complete.json",
+      "sha256": "9bc2b4f14cb03927f8ba63f517d9addd173ca7c6bd0628ce6c5adfc3d65e1555"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_13_square/final_eval_results.npz",
+      "sha256": "8296e7146ba0e7122b38af19fe3024a7b60e86c43730df4afc0059885dba3429"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_13_square/stag_episodes.jsonl",
+      "sha256": "791e7547fcf4f17edf9cc0b161005b2bc6fd20d8c68e34b2355dd3b23363e7e8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_13_square/per_iter_logs.json",
+      "sha256": "dcb190a33660eef1772451b580560b2ac6804c0b07b3d3f297d91714796656fc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_13_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_13_square/cem_timings.jsonl",
+      "sha256": "2c9d8500a4f3fe8ed94070dca66ac222bcade485eda84e028a8384f50bfeca81"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_14_square/complete.json",
+      "sha256": "86ff2c1350fdb04a7cf84a8f280d3a2f0e40cd6b0fda83222efb10d884cb7607"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_14_square/final_eval_results.npz",
+      "sha256": "7204a23ae2c82fd8e995775d30a9bb2635f581b41d9685b6d0bb48d3bc0a7cf2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_14_square/stag_episodes.jsonl",
+      "sha256": "d623b75732d6120077bfad3a352012e5358eb479f2d2c04397e040b499f88a68"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_14_square/per_iter_logs.json",
+      "sha256": "f06afbbfb392014c89ecb4b968d24eeb8453b35b96a7f93b576f2f2ffb930c51"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_14_square/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_14_square/cem_timings.jsonl",
+      "sha256": "6abf5c3b11a1ad70587e29b1698147a9124033975bb04aded4222121f5305b55"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_15_Z/complete.json",
+      "sha256": "f4566c9e8343df1010e401dd413f7bb2d08be352f842a30caf5419f45f9813a0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_15_Z/final_eval_results.npz",
+      "sha256": "14abd781e0c069476812acff45993dfe35b0d657a70f7d85fb71c94d91ac5790"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_15_Z/stag_episodes.jsonl",
+      "sha256": "bd0361c9330e45c385ca5a766a7dc010660a52f7dbb0dc6dbf3ab76d8f267e8a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_15_Z/per_iter_logs.json",
+      "sha256": "260d93ea407d452b0899940fa8d5f11d826c6a3174682872cb52af6afcefb868"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_15_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_15_Z/cem_timings.jsonl",
+      "sha256": "e1abecd9b8f54a46a48a591816ac93c6a444a326837db802c17229fba79feab1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_16_Z/complete.json",
+      "sha256": "bd4f83be3c01f17c9842b923bdc8b443878afda05f6917e750d571ecf177a7e3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_16_Z/final_eval_results.npz",
+      "sha256": "80ec3b24ab83dd11a40bd4421a79803c1bc2f4cc0945d7c64cb2cb747f02f59d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_16_Z/stag_episodes.jsonl",
+      "sha256": "dc261ba9d3f434d2818477bb078e84ee592aa88237acbfba3f783c03f41e1799"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_16_Z/per_iter_logs.json",
+      "sha256": "a1208eacd2968ef2ee55770432ab9d545e640fdacf75aba3f5b4acc460346be7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_16_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_16_Z/cem_timings.jsonl",
+      "sha256": "00289cbe77fcc15306ab8b854b48d7a5e06b3cce44fc5b1609d352afe5be8055"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_17_Z/complete.json",
+      "sha256": "d36c9886e50bb74bb8b59bea36a0a138c932051a4c67164dfec7f13260336216"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_17_Z/final_eval_results.npz",
+      "sha256": "0207145b20595e27e3b473bbc1873e230b5e6ce096b3fb588236b6b3ffd6b7d6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_17_Z/stag_episodes.jsonl",
+      "sha256": "2d54e3c301cd602ea5c415933b65bbff044fcbb9e5dd8b07707799e5b0e90dcc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_17_Z/per_iter_logs.json",
+      "sha256": "392cd9be49f109dd6196acdb890a9f7028fb64c0bdf0c0844707eec9642636d2"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_17_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_17_Z/cem_timings.jsonl",
+      "sha256": "8e11d547572224d43cdf7ce7cbb0db9c8a3ae780e7276623b3f1ce083aefffc5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_18_Z/complete.json",
+      "sha256": "e1026438ce0feefeb910d8f9b73eae711ce1ed62fa6f724a0c07498cc77fe9d5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_18_Z/final_eval_results.npz",
+      "sha256": "6a6ec8305923f82d9f5c1b84b4be52ae555ee6e73066d0a741b1b16a5434d667"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_18_Z/stag_episodes.jsonl",
+      "sha256": "011788729bd833ceeabfeccbc363fede3fdcbf269b4c5f7b0819f9b045774292"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_18_Z/per_iter_logs.json",
+      "sha256": "af32ae3f31713788361ae2907504305dc72619b9081846d08cb7d9af47892b01"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_18_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_18_Z/cem_timings.jsonl",
+      "sha256": "3b166c49ba6305bb30c295226dea0d4498e916c451d450730835d1321de7f90a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_19_Z/complete.json",
+      "sha256": "5e46db0d198debb35ec8fe1ae87564733b3410d00b5264656dbab17b69038ecc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_19_Z/final_eval_results.npz",
+      "sha256": "8152cdc13efc6c61500a8c1697e7ab4bf7c9d28fc22e01a31a431bb4f455e240"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_19_Z/stag_episodes.jsonl",
+      "sha256": "4c8a02385fbefcf3fefe569f1a9475d849c4ac872942fdb0ec915ec348c58ab7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_19_Z/per_iter_logs.json",
+      "sha256": "973cdaaf1a296e021f677c856218ce7c36eb784852d2c20779f7033d436e101a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_19_Z/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_19_Z/cem_timings.jsonl",
+      "sha256": "11054425482914c0f781d2175c578f5b9176cee2684bb4165e36ef9bb41b0d03"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_20_small_tee/complete.json",
+      "sha256": "e43fb3bc8696e066c0d8aa3c8fbda5b331efad27df4b693285e6a602fb0cab90"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_20_small_tee/final_eval_results.npz",
+      "sha256": "cb5c2f7824c73246a021a1cd7116bbcd86e73582ec268bf845eee525a6e375d9"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_20_small_tee/stag_episodes.jsonl",
+      "sha256": "b29425e0accbb4d88d4f384a1479f5ed92cb80dce80d97503fd5cd3c1a425ffc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_20_small_tee/per_iter_logs.json",
+      "sha256": "bcd1a50c80d7d9540f01433b380d0880a45b9bcbea0cb2e5e21ec40d0f0c35c3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_20_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_20_small_tee/cem_timings.jsonl",
+      "sha256": "6903ac0cfeef5c327f40250a47151b05e5cfb82b78fdec1ebf3815b8b659c6d6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_21_small_tee/complete.json",
+      "sha256": "7c7d79d4df0f55217637daab237b0623d89873c95343bdef5baf2d5bb387d241"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_21_small_tee/final_eval_results.npz",
+      "sha256": "4097d0650c36a7227d9f369fc2bcd86fcb9edcc088b51bbcab3e973a712db061"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_21_small_tee/stag_episodes.jsonl",
+      "sha256": "e911b01fcbd2ed52dc1cf8ae78e04c140c9d34836f881a2be1b3433695854557"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_21_small_tee/per_iter_logs.json",
+      "sha256": "3f501f94d6c00c27121a913302f4d0ed688f4f411e9ce1a11e6df216457870b5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_21_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_21_small_tee/cem_timings.jsonl",
+      "sha256": "94d47fc442a9f5fa614711bc5282f08d5dbfbe0982d33094533155e7b204f5a5"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_22_small_tee/complete.json",
+      "sha256": "76a2df4e2e2fb3879e4cde80ea7f0ab46606e495936fe56be5cf3bb8cc0b0394"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_22_small_tee/final_eval_results.npz",
+      "sha256": "d8628c9ffc435dde1d709dc182d8f503582b1a623630ce645e0af31e6348afd3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_22_small_tee/stag_episodes.jsonl",
+      "sha256": "9b71eb34cd43bc20664254bfa2f493d798c93d8fedbfefdc176b5b29efa8b6d4"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_22_small_tee/per_iter_logs.json",
+      "sha256": "8f0396391b52518836c2bc5e10d27006411e058c4592fb8ea999ebb6ab59770f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_22_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_22_small_tee/cem_timings.jsonl",
+      "sha256": "17424d5a024708aaaed720c3acbc8a63659d679411e2c1dbdfc419993b6dbf05"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_23_small_tee/complete.json",
+      "sha256": "f8ba32e71cb4ce7b54bd30951ea08570d3af4f60646c75baf87dec6ac28cd889"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_23_small_tee/final_eval_results.npz",
+      "sha256": "9081eb5d233009b1c18e91445ce823305a085147c497cdbb99915e1e16e70d22"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_23_small_tee/stag_episodes.jsonl",
+      "sha256": "628c98d882cbc4de93a95ce43c5e077301d22d8b5aaa3561362bdc7bcd279407"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_23_small_tee/per_iter_logs.json",
+      "sha256": "80869ca5d1863d4462d993824deb76cc2ec06362074e80ae7f78654cfe54db35"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_23_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_23_small_tee/cem_timings.jsonl",
+      "sha256": "e797cad14fece0187feec18f3c46b2c47873054a340d4ded34ba49688d8ac0c6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_24_small_tee/complete.json",
+      "sha256": "4750be7f87338bd43f1c28c49a8ac8b2e1188caf94dce8157df33da24c653caa"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_24_small_tee/final_eval_results.npz",
+      "sha256": "46b41e0f9aa9a351fa8a6261d973a77c4df2241085a02d4340c3664ea752569a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_24_small_tee/stag_episodes.jsonl",
+      "sha256": "6cfdebdec379908967f375a58736757ab117b694944328c6e10d612cd046ae6f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_24_small_tee/per_iter_logs.json",
+      "sha256": "d16860866e5cb660cdbc3c943d06bb1912529993d448f2fddb65609e7fd55f75"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_24_small_tee/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_24_small_tee/cem_timings.jsonl",
+      "sha256": "99cbeec63f5e764aba44a914a59dbf41bc5097bd32bdd72afb40f0905247346e"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_25_plus/complete.json",
+      "sha256": "20eb37d446309dc028be313512cf2073a19da5b96f47395a3e9368fb889b75ce"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_25_plus/final_eval_results.npz",
+      "sha256": "2309374a91589b3178ca1e29a4cdf0d06d345ac83680df0d08786a0cd1e67990"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_25_plus/stag_episodes.jsonl",
+      "sha256": "8b60c200d98191282b72be1be33d980aed6b4dcdbc612420101870d4b2e11ccf"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_25_plus/per_iter_logs.json",
+      "sha256": "a41a81f08a1af9e0330f0dace196bebac2e5f43d132740747d50e95a077f4b01"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_25_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_25_plus/cem_timings.jsonl",
+      "sha256": "df3a71ffcf35d01c0f938c96a67048e207ee9ba018b43c82df69ccdd84638163"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_26_plus/complete.json",
+      "sha256": "115290d395affa7cb124463c0beac5a45307eee4e0ed4f9015330cc00156aab6"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_26_plus/final_eval_results.npz",
+      "sha256": "8ffd9a388de8ba896b56f731e32391ae36c65285af6bd8e70c7a62576061460f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_26_plus/stag_episodes.jsonl",
+      "sha256": "494e031abec4fbaacd5ee0e02a5e99356a2aa1d1f5bdeb8a522e2fb975ec46c3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_26_plus/per_iter_logs.json",
+      "sha256": "3704e494bdaa154c031e277b5cf0a51191ef9466149462a41d182256f080546a"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_26_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_26_plus/cem_timings.jsonl",
+      "sha256": "7040d2e76622422f2a31bfce809e992287c04cc6160d290ed72867798598fcad"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_27_plus/complete.json",
+      "sha256": "7392db38f58511fd7497e63b4fa02d22ce9451d3a3416960f30f3b3944176ee7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_27_plus/final_eval_results.npz",
+      "sha256": "fcd33bbb0b0e5f8802eca8d7d54e6dc1468ee5ff9412a8c6938b6a7d933fbd65"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_27_plus/stag_episodes.jsonl",
+      "sha256": "fec813903ce0de6af7a3f504b4b306c2196cd9ea09124bcd3c6306239bd3b453"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_27_plus/per_iter_logs.json",
+      "sha256": "9cebed84e77fc5884354ded3337c70180d18c9bc5fb298623c04696ab06bc961"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_27_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_27_plus/cem_timings.jsonl",
+      "sha256": "958a043b584d30ee95fe0f07a8251de608cef4e0a606eb5cb0b0bf9a193ebcdc"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_28_plus/complete.json",
+      "sha256": "544c12d94c691ec7cd11d45aa7c21cb532a188ee22a95b1081151e634be59ef0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_28_plus/final_eval_results.npz",
+      "sha256": "34068353044a85f58f91a83c3a1b089243c81b5b007c8a0ebc14893c8cc9b214"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_28_plus/stag_episodes.jsonl",
+      "sha256": "61741d58a65c05dae4254780100f21f22da86f3a10f5dee6191576293710ba54"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_28_plus/per_iter_logs.json",
+      "sha256": "e6f30d726359487258ea29fa8d63083cf8715a5b0b3ba9c4f9dd095ff3ece310"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_28_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_28_plus/cem_timings.jsonl",
+      "sha256": "e815a345bd2b45221f2121ca6a74a891a62916b9b8f63bae63782d179b1316d1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_29_plus/complete.json",
+      "sha256": "fbf3c5b58f5ea5d3ca1adf18e057ef777a11a548a5e6ae02e3f340bbc739522d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_29_plus/final_eval_results.npz",
+      "sha256": "dca06caaea47d6c82214c374d688c78f38e78a5cd0cdae74bc0f322f337c2b89"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_29_plus/stag_episodes.jsonl",
+      "sha256": "abbb3f62220f00bac25a50a3e34ebef17490ba305da8596e77b3f4c0f921d353"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_29_plus/per_iter_logs.json",
+      "sha256": "2d3c98949805f1513ab7859f23d0bcab5e2d6b21493eca1224ccd0bdffe990c0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_29_plus/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_29_plus/cem_timings.jsonl",
+      "sha256": "7533343780648e6bcfc8ed6a409f2a392ba4db44a351c05af63d44a42b444e96"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_30_T/complete.json",
+      "sha256": "640fe2abc197f718dddb0ba12ec736c50659d14ffa817e531b9b1101470d1bad"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_30_T/final_eval_results.npz",
+      "sha256": "f370581048bb62af1cfbd2d1117bdd0e119fb66c745a3e77f4a3cafc68bcff3c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_30_T/stag_episodes.jsonl",
+      "sha256": "4889cb6b463252f81c1180f1ea80b403f187374212c49e0a30672fc6a9fcb9f0"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_30_T/per_iter_logs.json",
+      "sha256": "656e5b80d9455aa2587aa22f0f481228ea0a7146bec0b8314f706a124e4f754f"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_30_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_30_T/cem_timings.jsonl",
+      "sha256": "1831ff00a3200bfac41936b6302243a95df7c6f537fc1ae6d2784fdd84451fc1"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_31_T/complete.json",
+      "sha256": "a8ff1bc722e8bdb7a0aa0255d6507ab663a520a61e037ab5ddf0ce520e246b8c"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_31_T/final_eval_results.npz",
+      "sha256": "a0448531691feb39e1d33ad3a84af7ea9cca371f9ade40c980bef4c45da3ae99"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_31_T/stag_episodes.jsonl",
+      "sha256": "477a8e48005a7d6a2f9fd273b13e2099f4f068de980df4b7f92b914a18de9608"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_31_T/per_iter_logs.json",
+      "sha256": "1f94747c162a110d293262c04bdfcf5344d9dba9d416323e6defb830ef11527d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_31_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_31_T/cem_timings.jsonl",
+      "sha256": "d0b333396c4bcaf48c0f0c8331821e0fb94973e1b7a2fe99b98266be725c1977"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_32_T/complete.json",
+      "sha256": "1681ce245b200e1e315771f5cf5173c289a156478f44300120d07a8f28c8ea65"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_32_T/final_eval_results.npz",
+      "sha256": "2eea638734eb3eaa221a476d1138cb8b389a98e4d468986aebcf07431e2ed66d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_32_T/stag_episodes.jsonl",
+      "sha256": "31020877a83d0b733703d0089c5ddfe496bd0250495985002441bb1d0790aaf7"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_32_T/per_iter_logs.json",
+      "sha256": "cb08bb01e0bf8e1d811dae11744e21e1476582d2961c691a792a6e8650bd9dce"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_32_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_32_T/cem_timings.jsonl",
+      "sha256": "1f6e62b4f48a48f192dcc6d122702516a05b135660ad93e6d3ab3c84a915b7ba"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_33_T/complete.json",
+      "sha256": "28d26c03c83f142f20cfe2e74e65b111206fc6f5706544a5b29a8dd7a84bcf34"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_33_T/final_eval_results.npz",
+      "sha256": "2da8639c9814b53842911bfa60b5a6a1a0fd7929899953be4240c2a4faec2d30"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_33_T/stag_episodes.jsonl",
+      "sha256": "604eea673adbecca439468754be338930f35d730bc51e91d5b87478e41482992"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_33_T/per_iter_logs.json",
+      "sha256": "b920b073d22a1f4e2b1fe2bc83bfeeafda5b91d0110b9754a8c52a8b23cb5ca3"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_33_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_33_T/cem_timings.jsonl",
+      "sha256": "d04d50b2c7c5b213f919effaf905756a7636b62c1d46a31e8dc12e644cd07113"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_34_T/complete.json",
+      "sha256": "5f3408e21b02cda9d1ff71e39640a4cadaf5a40397793bff960009ba820874f8"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_34_T/final_eval_results.npz",
+      "sha256": "dce8347dc4d4742ae530ea5e9e0d2cf5803f4c17e69a0d38a057f8e621f3fd95"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_34_T/stag_episodes.jsonl",
+      "sha256": "d7a7b219100f4a73caa8924faf7c4d9dce4c4de541d8f91cfe7b9d31e8a3f495"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_34_T/per_iter_logs.json",
+      "sha256": "644123eb8ea140530698c90364f1ab80fc42e0b555ff51db2497d21e262faedf"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_34_T/stag_meta.json",
+      "sha256": "8ba6895d4e8f41a12c95119e3e7c9ed6a660ed73700f2a36f806eac2f93f2f3d"
+    },
+    {
+      "path": "eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_34_T/cem_timings.jsonl",
+      "sha256": "37b4840a666b72e8922d6232cdb328b868c60da1e278a50364761284082a9a0b"
+    }
+  ]
+}

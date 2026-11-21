@@ -1,0 +1,64 @@
+{
+  "base_commit": "7cad748a11d56d98796a3de3b5da94d1a9e56ea8",
+  "change": "Add 8pt below Table 5 before the existing paragraph spacing.",
+  "body_pages": 8,
+  "total_pages": 22,
+  "all_prose_figures_tables_and_references_unchanged": true,
+  "crossrefs": {
+    "before": {
+      "total_reference_targets": 82,
+      "main_reference_targets": 33,
+      "main_to_appendix_targets": 16,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "sec:cost",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 82,
+      "main_reference_targets": 33,
+      "main_to_appendix_targets": 16,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "sec:cost",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "settings_parameter_table_references": 0,
+    "pdf_internal_links_checked": 368,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 179,
+    "label_destinations_checked": 76,
+    "headline_and_trajectory_figures_unchanged": true,
+    "bibliography_unchanged": false
+  }
+}

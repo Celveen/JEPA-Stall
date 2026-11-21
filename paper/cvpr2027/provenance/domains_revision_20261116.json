@@ -1,0 +1,43 @@
+{
+  "updated_utc": "2026-11-16T09:19:03.240844+00:00",
+  "remote_commits_imported": [
+    "4a7533b",
+    "9b01e93ef0644e67bbb280efd7c69d528c830ad3"
+  ],
+  "remote_fast_forward_preserved_local_paper_edits": true,
+  "changes": [
+    "Abstract and introduction explicitly use inspired by.",
+    "Figure 3 step 3 now includes PushObj, Maze, PushT color shift and recorded Rope execution.",
+    "Figure 4 reduces PushObj from six to two cases; includes two cases each for PushObj, PushT, Maze, Rope.",
+    "Captions and appendix distinguish native state renders from stored RGB, and disclose Rope cadence confound, untriggered improved case, and regression."
+  ],
+  "table_sources_unchanged": true,
+  "bibliography_unchanged": true,
+  "new_model_evaluations": false,
+  "assets": "figures/domains_20261116",
+  "case_provenance": "provenance/domain_visuals_20261116.json",
+  "figure4": "provenance/domain_figure4_manifest.json",
+  "build": {
+    "abstract_words_whitespace": 205,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 10,
+    "combined_pages": 20,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
+  },
+  "fonts": {
+    "fonts_checked": 40,
+    "all_fonts_embedded": true,
+    "type3_fonts": false,
+    "references": 45,
+    "pages": 20
+  },
+  "visual_review": "Rendered every page; inspected Figures 3/4 at page size; verified no clipped labels or orphan final text."
+}

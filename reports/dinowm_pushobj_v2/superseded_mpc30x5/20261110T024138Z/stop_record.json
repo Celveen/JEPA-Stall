@@ -1,0 +1,56 @@
+{
+  "status": "superseded_by_user_requested_cadence",
+  "updated_utc": "2026-11-10T02:41:39.782584+00:00",
+  "reason": "Keep 150 environment controls; 25 executed per plan, at most 6 MPC replans. CEM 200x10 retained.",
+  "archive": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/superseded_mpc30x5/20261110T024138Z",
+  "stopped": [
+    {
+      "pid": 116960,
+      "kind": "dispatcher",
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/pipeline_launcher.json",
+      "state_after_stop": "exited"
+    },
+    {
+      "pid": 118536,
+      "kind": "dispatcher",
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/precision_confirmation_launcher.json",
+      "state_after_stop": "exited"
+    },
+    {
+      "pid": 116988,
+      "kind": "worker",
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/ordinary_ecp/chunk_00_I/launcher.json",
+      "state_after_stop": "exited"
+    },
+    {
+      "pid": 116989,
+      "kind": "worker",
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/augmented_native/chunk_00_I/launcher.json",
+      "state_after_stop": "exited"
+    },
+    {
+      "pid": 116991,
+      "kind": "worker",
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/augmented_ecp/chunk_00_I/launcher.json",
+      "state_after_stop": "exited"
+    },
+    {
+      "pid": 116990,
+      "kind": "worker",
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/ordinary_native/chunk_00_I/launcher.json",
+      "state_after_stop": "exited"
+    },
+    {
+      "pid": 116992,
+      "kind": "worker",
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/ordinary_native/chunk_05_L/launcher.json",
+      "state_after_stop": "exited"
+    },
+    {
+      "pid": 138817,
+      "kind": "worker",
+      "launcher": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/precision_confirmation/ordinary/chunk_05_L/launcher.json",
+      "state_after_stop": "exited"
+    }
+  ]
+}

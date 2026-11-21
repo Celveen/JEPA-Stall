@@ -1,0 +1,78 @@
+{
+  "source_folder": "https://drive.google.com/drive/folders/1rX_j5PoKSooXvhdQ-EmcGvd9bfBA19O4",
+  "all_sha256sums_verified": true,
+  "files": [
+    {
+      "path": "SHA256SUMS",
+      "drive_id": "1yQPfTJJEZU6sLzJkltSJ6kDy6wp_kWZN",
+      "bytes": 939,
+      "sha256": "ac1ca14b0e6c20e4874d7d6ec909245f04cc8207d46904258f9d317df2d263a7"
+    },
+    {
+      "path": "load_validation.json",
+      "drive_id": "1I1BwXCITzz-i42ZMh2NgiRycjCW_Zjkd",
+      "bytes": 166,
+      "sha256": "5e72a57b1d3edd38529e2fcd88d3336c0ccf4490dff3b3991c99ceba75dbcd57"
+    },
+    {
+      "path": "README.md",
+      "drive_id": "1EzIC0pY6TEpbrKwF7qF2_ERwD_kxoNMS",
+      "bytes": 3323,
+      "sha256": "8ba42c97ca8914ece60b55561098cf8150c5d67e257e1c67e54dd552a36cc175"
+    },
+    {
+      "path": "manifest.json",
+      "drive_id": "1UCZo3GIiVza5oGx0tVynBBHZxXG1jGn4",
+      "bytes": 2654,
+      "sha256": "5aca43263906896d5867fd8419d8e0a741b36b18dbb2bc3f427768df760b0c28"
+    },
+    {
+      "path": "hydra.yaml",
+      "drive_id": "1I4TvvnMa1lpr4XsLrsm9LO8kNPLuMOGL",
+      "bytes": 1064,
+      "sha256": "8a2a8371730b1cc2a7059ec371a65949c3eaefa66442aed84db497f25e3b7c83"
+    },
+    {
+      "path": "DATA_REGENERATION.txt",
+      "drive_id": "16agN5XfD1nQPVDs-Ism9pxwO7dtlmcX5",
+      "bytes": 474,
+      "sha256": "38f8d1db98fd2555adc526b3b80bea8b00b14da5ded4a6cf3a45898c5a12767e"
+    },
+    {
+      "path": "data_generation_config.json",
+      "drive_id": "1xYsUaleYsfx_9YQWvUtyeLoJuqnOz651",
+      "bytes": 2258,
+      "sha256": "c93a31cabfe4f8aa74227e38c15538b298b516fd83c7775cddd9d74f88218871"
+    },
+    {
+      "path": "train_lewm.py",
+      "drive_id": "1udbFl31W-lSTglOzMsGwPegQmuo-d1fa",
+      "bytes": 7516,
+      "sha256": "770e24c7bfea5560eb4be8294f68c17cf3d9b56b4a399017a419994f05a65132"
+    },
+    {
+      "path": "training_config.yaml",
+      "drive_id": "1fwtGF313HmcH0LQd3-EZj6psD2cn9G8W",
+      "bytes": 1364,
+      "sha256": "2feb7943a714c6ef01b1b0d96aceb8fe869239870087bbb3c9619a54222f3985"
+    },
+    {
+      "path": "model_code/lewm.py",
+      "drive_id": "1IK-OO8l3zXOaNZA_-IfCUm4M3bAzejMR",
+      "bytes": 16135,
+      "sha256": "1f36bbf4411408be468b44dc20261969436256e168d0097b1b9b98aa75f05355"
+    },
+    {
+      "path": "model_code/UPSTREAM_LICENSE",
+      "drive_id": "1k9ZCJn1WFypdImsI6fO0VN-4GKgBkMdV",
+      "bytes": 1067,
+      "sha256": "4882021920cbd61e050e4dc2e02440e9bd36ea4cbc5803e738a2ee3d63502e07"
+    },
+    {
+      "path": "checkpoints/model_10.pth",
+      "drive_id": "1DBVNBwOihCfxWcZm5mPQFlHthLQyNeIR",
+      "bytes": 72267462,
+      "sha256": "077d55daa795c627a9eca3d7e3a86ba7b98a843f6043a7e61b67a17bba8805a6"
+    }
+  ]
+}

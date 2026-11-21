@@ -1,0 +1,157 @@
+{
+  "status": "passed",
+  "task_runs": 700,
+  "chunks": 70,
+  "outcomes": {
+    "adajepa_aug_g060": {
+      "counts": {
+        "native": 262,
+        "ecp": 271,
+        "triggered": 111
+      },
+      "rescues": [
+        "chunk_04_I:4",
+        "chunk_06_L:0",
+        "chunk_06_L:1",
+        "chunk_11_square:2",
+        "chunk_15_Z:7",
+        "chunk_16_Z:3",
+        "chunk_16_Z:4",
+        "chunk_27_plus:3",
+        "chunk_31_T:3",
+        "chunk_32_T:6",
+        "chunk_34_T:7"
+      ],
+      "regressions": [
+        "chunk_14_square:7",
+        "chunk_20_small_tee:1"
+      ],
+      "median_first_trigger": 10.0,
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 27
+        },
+        "L": {
+          "n": 50,
+          "successes": 46
+        },
+        "square": {
+          "n": 50,
+          "successes": 25
+        },
+        "Z": {
+          "n": 50,
+          "successes": 50
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 35
+        },
+        "plus": {
+          "n": 50,
+          "successes": 43
+        },
+        "T": {
+          "n": 50,
+          "successes": 45
+        }
+      },
+      "versus_ada045": {
+        "successes": 272,
+        "rescues": [
+          "chunk_04_I:4",
+          "chunk_11_square:2",
+          "chunk_19_Z:0"
+        ],
+        "regressions": [
+          "chunk_02_I:2",
+          "chunk_14_square:7",
+          "chunk_20_small_tee:1",
+          "chunk_28_plus:9"
+        ]
+      }
+    },
+    "frozen_aug_g045": {
+      "counts": {
+        "native": 214,
+        "ecp": 253,
+        "triggered": 136
+      },
+      "rescues": [
+        "chunk_00_I:6",
+        "chunk_00_I:7",
+        "chunk_01_I:3",
+        "chunk_01_I:5",
+        "chunk_02_I:2",
+        "chunk_02_I:9",
+        "chunk_04_I:5",
+        "chunk_06_L:9",
+        "chunk_07_L:4",
+        "chunk_07_L:5",
+        "chunk_09_L:6",
+        "chunk_09_L:7",
+        "chunk_09_L:9",
+        "chunk_11_square:7",
+        "chunk_12_square:2",
+        "chunk_15_Z:6",
+        "chunk_16_Z:4",
+        "chunk_17_Z:3",
+        "chunk_17_Z:8",
+        "chunk_18_Z:1",
+        "chunk_18_Z:2",
+        "chunk_18_Z:3",
+        "chunk_18_Z:4",
+        "chunk_19_Z:1",
+        "chunk_19_Z:5",
+        "chunk_20_small_tee:1",
+        "chunk_22_small_tee:3",
+        "chunk_27_plus:2",
+        "chunk_27_plus:3",
+        "chunk_27_plus:5",
+        "chunk_28_plus:6",
+        "chunk_28_plus:8",
+        "chunk_29_plus:1",
+        "chunk_29_plus:7",
+        "chunk_30_T:6",
+        "chunk_32_T:0",
+        "chunk_33_T:0",
+        "chunk_33_T:3",
+        "chunk_34_T:2"
+      ],
+      "regressions": [],
+      "median_first_trigger": 10.0,
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 23
+        },
+        "L": {
+          "n": 50,
+          "successes": 42
+        },
+        "square": {
+          "n": 50,
+          "successes": 23
+        },
+        "Z": {
+          "n": 50,
+          "successes": 46
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 31
+        },
+        "plus": {
+          "n": 50,
+          "successes": 44
+        },
+        "T": {
+          "n": 50,
+          "successes": 44
+        }
+      }
+    }
+  },
+  "scope": "Exploratory threshold comparison on the same fixed EVAL50 task set"
+}

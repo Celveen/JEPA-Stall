@@ -1,0 +1,230 @@
+{
+  "source_evidence": {
+    "path": "paper/cvpr2027/provenance/evidence.json",
+    "sha256": "1db116b897f14ea1d321ea382f5dd12688fe0a90009616db5879bfe228128bf7"
+  },
+  "budget_replans": 30,
+  "pushobj": {
+    "n": 350,
+    "settings": [
+      {
+        "checkpoint": "official",
+        "planner": "frozen"
+      },
+      {
+        "checkpoint": "bias16k",
+        "planner": "frozen"
+      },
+      {
+        "checkpoint": "official",
+        "planner": "adajepa"
+      },
+      {
+        "checkpoint": "bias16k",
+        "planner": "adajepa"
+      }
+    ],
+    "native": [
+      153,
+      214,
+      243,
+      262
+    ],
+    "P": [
+      210,
+      253,
+      255,
+      270
+    ],
+    "PS": [
+      209,
+      253,
+      256,
+      269
+    ]
+  },
+  "maze": {
+    "n": 100,
+    "budget_replans": 30,
+    "baseline_success": 63,
+    "success": 66,
+    "wins": 3,
+    "losses": 0,
+    "p_exact_unadjusted": 0.25,
+    "rerun": 51
+  },
+  "distance_trace": {
+    "task": "chunk_04_I/sample_5",
+    "trigger_after_replan": 15,
+    "threshold_px": 20,
+    "traces": {
+      "ref": {
+        "replans": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "position_error_px": [
+          290.4275817871094,
+          248.81789667207607,
+          163.21120356691796,
+          108.66995285557215,
+          163.9339137083194,
+          88.69412147399856,
+          91.1634778697039,
+          70.8931868988154,
+          54.21063552792246,
+          46.94658154840259,
+          38.65778497473382,
+          42.53677415385769,
+          44.57349275049147,
+          45.39100550452108,
+          45.655012546229315,
+          45.4541437475586,
+          45.66048834737257,
+          45.70857098803239,
+          45.63927348623098,
+          45.493112742541314,
+          45.55912235882529,
+          45.29054389493991,
+          44.56218266284607,
+          45.34897765364831,
+          45.9821977182365,
+          45.85256274560221,
+          45.477241941423756,
+          45.43557890477896,
+          45.45851033943777,
+          45.264592974224165,
+          45.52570328308496
+        ],
+        "success": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "T0SP": {
+        "replans": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "position_error_px": [
+          290.4275817871094,
+          248.81789667207607,
+          163.21120356691796,
+          108.66995285557215,
+          163.9339137083194,
+          88.69412147399856,
+          91.1634778697039,
+          70.8931868988154,
+          54.21063552792246,
+          46.94658154840259,
+          38.65778497473382,
+          42.53677415385769,
+          44.57349275049147,
+          45.39100550452108,
+          45.655012546229315,
+          45.4541437475586,
+          24.949830558839434,
+          10.992799798989363
+        ],
+        "success": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    "sources": {
+      "eval_outputs/stag_frozen_bias16k_it40/ref/chunk_04_I/per_iter_logs.json": "44978dbf73acce4946ed7f49632073afa5f5353501c4917725bfcfb176408017",
+      "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_04_I/per_iter_logs.json": "ea670cc20f87736fbaaaf9821ebad0a68029ce0f1dd6d0bb2f3e6534fce1292a"
+    }
+  }
+}

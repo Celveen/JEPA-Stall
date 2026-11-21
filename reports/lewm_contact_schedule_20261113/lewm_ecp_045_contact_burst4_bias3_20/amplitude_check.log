@@ -1,0 +1,3 @@
+PASS: vector-norm floor 3, cap 20, sign and direction preserved, zero direction skipped.
+PASS: only first five executed controls change; completed and budget-exhausted tasks untouched.
+Measured amplitudes: [3.0, 10.0, 20.0, 20.0]

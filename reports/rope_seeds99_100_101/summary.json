@@ -1,0 +1,307 @@
+{
+  "seeds": [
+    99,
+    100,
+    101
+  ],
+  "unique_targets": 20,
+  "runs_per_arm": 60,
+  "total_runs": 240,
+  "maximum_pushes": 20,
+  "success_rule": "CD < 0.3",
+  "source_summary_sha256": {
+    "reports/rope_formal20_native3/summary.json": "659efb82fff6874e27de242cb449e95440a88fcb673f242862c0870978b3b92e",
+    "reports/rope_seed100_20/summary.json": "c1b6672e51103131bd7923ab97ca2226dec31130720fa44c16d27264c849d197",
+    "reports/rope_seed101_20/summary.json": "75d892577bb27800e0ca6949b05586381a7a68f07362d71109ec12f5819883e2"
+  },
+  "paired_targets_verified": true,
+  "original_aggregates_recomputed": true,
+  "seed_sd_definition": "Sample SD (ddof=1) of the three seed-level mean CDs, not a confidence interval.",
+  "dependence": "The same 20 targets were repeated under three seeds; these are not 60 distinct targets. Descriptive statistics only.",
+  "action_definition": "Denormalized 4D physical controls; L2 difference >1e-6 over the common actually executed prefix.",
+  "action_limit": "Independent physics can diverge before S; observed action changes are not a causal attribution to S.",
+  "conditions": [
+    {
+      "arm": "native3",
+      "runs": 60,
+      "unique_targets": 20,
+      "mean_cd": 0.6864581634387983,
+      "seed_mean_cd_sd": 0.09661118436941467,
+      "median_cd": 0.2694438770315051,
+      "p90_cd": 1.686722090749196,
+      "failed_run_mean_cd": 1.3064677048442663,
+      "successes": 33,
+      "success_rate": 0.55,
+      "mean_pushes": 12.683333333333334,
+      "S_trigger_events": 0,
+      "triggered_runs": 0,
+      "applied_runs": 0,
+      "used_trigger_memories": 0,
+      "used_fractional_strength_memories": 0,
+      "cd_reduction_vs_native_pct": 0.0,
+      "push_reduction_vs_native_pct": 0.0,
+      "success_gain_vs_native_pp": 0.0
+    },
+    {
+      "arm": "fixed3",
+      "runs": 60,
+      "unique_targets": 20,
+      "mean_cd": 0.4792646551396854,
+      "seed_mean_cd_sd": 0.12864936738283358,
+      "median_cd": 0.20824686023989653,
+      "p90_cd": 1.3799815210151927,
+      "failed_run_mean_cd": 1.238084095171118,
+      "successes": 43,
+      "success_rate": 0.7166666666666667,
+      "mean_pushes": 11.3,
+      "S_trigger_events": 146,
+      "triggered_runs": 27,
+      "applied_runs": 24,
+      "used_trigger_memories": 134,
+      "used_fractional_strength_memories": 0,
+      "cd_reduction_vs_native_pct": 30.182976812626308,
+      "push_reduction_vs_native_pct": 10.906701708278577,
+      "success_gain_vs_native_pp": 16.666666666666664
+    },
+    {
+      "arm": "dynamic3",
+      "runs": 60,
+      "unique_targets": 20,
+      "mean_cd": 0.572009625366295,
+      "seed_mean_cd_sd": 0.054817371405996705,
+      "median_cd": 0.25628726324220363,
+      "p90_cd": 1.6246874662493058,
+      "failed_run_mean_cd": 1.2379704750256375,
+      "successes": 38,
+      "success_rate": 0.6333333333333333,
+      "mean_pushes": 11.683333333333334,
+      "S_trigger_events": 152,
+      "triggered_runs": 27,
+      "applied_runs": 25,
+      "used_trigger_memories": 140,
+      "used_fractional_strength_memories": 6,
+      "cd_reduction_vs_native_pct": 16.672325302269797,
+      "push_reduction_vs_native_pct": 7.884362680683311,
+      "success_gain_vs_native_pp": 8.333333333333325
+    },
+    {
+      "arm": "fixed3_nowarm",
+      "runs": 60,
+      "unique_targets": 20,
+      "mean_cd": 0.5517771725655668,
+      "seed_mean_cd_sd": 0.23425876808882465,
+      "median_cd": 0.2585989810643162,
+      "p90_cd": 1.529206516351084,
+      "failed_run_mean_cd": 1.409897865626081,
+      "successes": 42,
+      "success_rate": 0.7,
+      "mean_pushes": 12.05,
+      "S_trigger_events": 192,
+      "triggered_runs": 32,
+      "applied_runs": 28,
+      "used_trigger_memories": 179,
+      "used_fractional_strength_memories": 0,
+      "cd_reduction_vs_native_pct": 19.61969396627899,
+      "push_reduction_vs_native_pct": 4.993429697766094,
+      "success_gain_vs_native_pp": 14.999999999999991
+    }
+  ],
+  "by_seed": [
+    {
+      "seed": 99,
+      "arm": "native3",
+      "mean_cd": 0.7546801521887649,
+      "successes": 10,
+      "S_trigger_events": 0,
+      "applied_samples": 0,
+      "total_pushes": 287
+    },
+    {
+      "seed": 100,
+      "arm": "native3",
+      "mean_cd": 0.5759073814299485,
+      "successes": 13,
+      "S_trigger_events": 0,
+      "applied_samples": 0,
+      "total_pushes": 235
+    },
+    {
+      "seed": 101,
+      "arm": "native3",
+      "mean_cd": 0.7287869566976812,
+      "successes": 10,
+      "S_trigger_events": 0,
+      "applied_samples": 0,
+      "total_pushes": 239
+    },
+    {
+      "seed": 99,
+      "arm": "fixed3",
+      "mean_cd": 0.6112380077540654,
+      "successes": 13,
+      "S_trigger_events": 59,
+      "applied_samples": 9,
+      "total_pushes": 252
+    },
+    {
+      "seed": 100,
+      "arm": "fixed3",
+      "mean_cd": 0.35421923369010627,
+      "successes": 16,
+      "S_trigger_events": 39,
+      "applied_samples": 7,
+      "total_pushes": 207
+    },
+    {
+      "seed": 101,
+      "arm": "fixed3",
+      "mean_cd": 0.47233672397488463,
+      "successes": 14,
+      "S_trigger_events": 48,
+      "applied_samples": 8,
+      "total_pushes": 219
+    },
+    {
+      "seed": 99,
+      "arm": "dynamic3",
+      "mean_cd": 0.5151827050870776,
+      "successes": 12,
+      "S_trigger_events": 50,
+      "applied_samples": 9,
+      "total_pushes": 250
+    },
+    {
+      "seed": 100,
+      "arm": "dynamic3",
+      "mean_cd": 0.5762783126441102,
+      "successes": 12,
+      "S_trigger_events": 51,
+      "applied_samples": 8,
+      "total_pushes": 237
+    },
+    {
+      "seed": 101,
+      "arm": "dynamic3",
+      "mean_cd": 0.624567858367697,
+      "successes": 14,
+      "S_trigger_events": 51,
+      "applied_samples": 8,
+      "total_pushes": 214
+    },
+    {
+      "seed": 99,
+      "arm": "fixed3_nowarm",
+      "mean_cd": 0.5833716809067212,
+      "successes": 13,
+      "S_trigger_events": 67,
+      "applied_samples": 10,
+      "total_pushes": 271
+    },
+    {
+      "seed": 100,
+      "arm": "fixed3_nowarm",
+      "mean_cd": 0.3033245709204382,
+      "successes": 16,
+      "S_trigger_events": 51,
+      "applied_samples": 8,
+      "total_pushes": 223
+    },
+    {
+      "seed": 101,
+      "arm": "fixed3_nowarm",
+      "mean_cd": 0.7686352658695411,
+      "successes": 13,
+      "S_trigger_events": 74,
+      "applied_samples": 10,
+      "total_pushes": 229
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "left": "native3",
+      "right": "fixed3",
+      "mean_cd_delta_right_minus_left": -0.20719350829911276,
+      "lower_cd": 35,
+      "higher_cd": 23,
+      "equal_cd": 2,
+      "gained_successes": 12,
+      "lost_successes": 2
+    },
+    {
+      "left": "native3",
+      "right": "dynamic3",
+      "mean_cd_delta_right_minus_left": -0.11444853807250327,
+      "lower_cd": 29,
+      "higher_cd": 28,
+      "equal_cd": 3,
+      "gained_successes": 8,
+      "lost_successes": 3
+    },
+    {
+      "left": "native3",
+      "right": "fixed3_nowarm",
+      "mean_cd_delta_right_minus_left": -0.13468099087323143,
+      "lower_cd": 33,
+      "higher_cd": 25,
+      "equal_cd": 2,
+      "gained_successes": 10,
+      "lost_successes": 1
+    },
+    {
+      "left": "fixed3",
+      "right": "dynamic3",
+      "mean_cd_delta_right_minus_left": 0.09274497022660949,
+      "lower_cd": 26,
+      "higher_cd": 32,
+      "equal_cd": 2,
+      "gained_successes": 3,
+      "lost_successes": 8
+    },
+    {
+      "left": "fixed3",
+      "right": "fixed3_nowarm",
+      "mean_cd_delta_right_minus_left": 0.07251251742588133,
+      "lower_cd": 26,
+      "higher_cd": 30,
+      "equal_cd": 4,
+      "gained_successes": 6,
+      "lost_successes": 7
+    },
+    {
+      "left": "dynamic3",
+      "right": "fixed3_nowarm",
+      "mean_cd_delta_right_minus_left": -0.02023245280072816,
+      "lower_cd": 37,
+      "higher_cd": 21,
+      "equal_cd": 2,
+      "gained_successes": 10,
+      "lost_successes": 6
+    }
+  ],
+  "action_summaries": [
+    {
+      "arm": "fixed3",
+      "changed_runs": 43,
+      "changed_pushes": 424,
+      "common_pushes": 648,
+      "difference_before_or_without_S": 36,
+      "changed_pushes_at_or_after_S": 202
+    },
+    {
+      "arm": "dynamic3",
+      "changed_runs": 44,
+      "changed_pushes": 451,
+      "common_pushes": 664,
+      "difference_before_or_without_S": 39,
+      "changed_pushes_at_or_after_S": 219
+    },
+    {
+      "arm": "fixed3_nowarm",
+      "changed_runs": 46,
+      "changed_pushes": 488,
+      "common_pushes": 692,
+      "difference_before_or_without_S": 36,
+      "changed_pushes_at_or_after_S": 270
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "method": "LeWM",
+  "planner": "CEM",
+  "condition": "clean",
+  "successes": 36,
+  "episodes": 50,
+  "success_percent": 72.0,
+  "train_seconds": 4446.966821432114,
+  "evaluation_seconds": 961.6606364250183,
+  "validation_by_epoch": [
+    {
+      "epoch": 1,
+      "step": 12759,
+      "val": {
+        "loss": 0.25360730290412903,
+        "pred_loss": 0.02777722477912903,
+        "sigreg_loss": 2.5091404914855957
+      },
+      "hours": 0.408609253499243
+    },
+    {
+      "epoch": 2,
+      "step": 25518,
+      "val": {
+        "loss": 0.2254333794116974,
+        "pred_loss": 0.02053106762468815,
+        "sigreg_loss": 2.2766406536102295
+      },
+      "hours": 0.8173383641242981
+    },
+    {
+      "epoch": 3,
+      "step": 38277,
+      "val": {
+        "loss": 0.20756253600120544,
+        "pred_loss": 0.01641991175711155,
+        "sigreg_loss": 2.123593807220459
+      },
+      "hours": 1.2286221156517665
+    }
+  ],
+  "checkpoint_sha256": "9e2b8afee10e46f3b7ae2bd5a9b67ebc28e86af0ccc0d0d293e2fd77471d2576",
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "paired_initial_and_goal_states_exact": true,
+  "frozen_weights_verified": true,
+  "raw_npz_sha256": "ed78a34f53aaadb30167b3d5ec22837e6b712fbcf4e5fbbfdf76c132f7116b93",
+  "checkpoint_provenance": "Clean uses the newly trained T-only model; historical shifted-condition scores retain their archived checkpoint."
+}

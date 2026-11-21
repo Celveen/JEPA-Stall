@@ -1,0 +1,646 @@
+{
+  "kind": "archived native scores, not new ECP results",
+  "comparison_scope": "Separate historical task sets; do not merge with external50 formal comparison",
+  "rows": [
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "clean",
+      "seed": 100,
+      "n": 50,
+      "successes": 42,
+      "success_rate": 0.84,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/default/frozen/final_eval_results.npz",
+      "sha256": "3fe7ed0554321bc09ee375033afc3214488f261c941777eb3da3d0c4da9582e4",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "clean",
+      "seed": 100,
+      "n": 50,
+      "successes": 46,
+      "success_rate": 0.92,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/default/adajepa/final_eval_results.npz",
+      "sha256": "c9b295583fbbdb0123a9f8c0a561035155031ad59b12d484480b0e08c64cae75",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redBlock",
+      "seed": 100,
+      "n": 50,
+      "successes": 5,
+      "success_rate": 0.1,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/redBlock/frozen/final_eval_results.npz",
+      "sha256": "6c0ed1ba622b23784bc64f4830a1fc3c213f03768db527f74ecf72337fa42e71",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redBlock",
+      "seed": 100,
+      "n": 50,
+      "successes": 12,
+      "success_rate": 0.24,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/redBlock/adajepa/final_eval_results.npz",
+      "sha256": "2248b7af75ae8b65b698e07ce647696601f7b8ae51dc087b75730887df2963a5",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redAnchor",
+      "seed": 100,
+      "n": 50,
+      "successes": 9,
+      "success_rate": 0.18,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/redAnchor/frozen/final_eval_results.npz",
+      "sha256": "3c29fb8693ddeedbde32e105b473e551c65639f1b4f24ca981c2baf80f402b0f",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redAnchor",
+      "seed": 100,
+      "n": 50,
+      "successes": 23,
+      "success_rate": 0.46,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/redAnchor/adajepa/final_eval_results.npz",
+      "sha256": "2ed11baf61a6873954b4b512b9ebf2830cfade7b9d646180b6d012b8aa91a75a",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redAgent",
+      "seed": 100,
+      "n": 50,
+      "successes": 22,
+      "success_rate": 0.44,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/redAgent/frozen/final_eval_results.npz",
+      "sha256": "366b2b1107deeec40cdd84491c307317dd162129ef2e3b8945e4339238ee6a13",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redAgent",
+      "seed": 100,
+      "n": 50,
+      "successes": 37,
+      "success_rate": 0.74,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/redAgent/adajepa/final_eval_results.npz",
+      "sha256": "93d820c8ed73ac11b69d23dce5848bbb2d578710d90a92320739ce17e5ea3274",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "blur",
+      "seed": 100,
+      "n": 50,
+      "successes": 27,
+      "success_rate": 0.54,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/blur/frozen/final_eval_results.npz",
+      "sha256": "68bd2ce77e0ef930b11f562e8facea58b851c322dda968fd2b20231a7ddaa475",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "blur",
+      "seed": 100,
+      "n": 50,
+      "successes": 42,
+      "success_rate": 0.84,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/blur/adajepa/final_eval_results.npz",
+      "sha256": "f383973c7d766a25282ddd1f760926f015c6745c664cecade4e3faafc9028ae5",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "snp",
+      "seed": 100,
+      "n": 50,
+      "successes": 26,
+      "success_rate": 0.52,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/snp/frozen/final_eval_results.npz",
+      "sha256": "4c699bf48b781fa0e1cadab3eb2faa3673831532ec2aa87668e0f017f00018d2",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "snp",
+      "seed": 100,
+      "n": 50,
+      "successes": 46,
+      "success_rate": 0.92,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/snp/adajepa/final_eval_results.npz",
+      "sha256": "41acd5ad8686d121df545375b3e06a0db9ce5d16bb2810e7e18f11765b852c27",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "dark",
+      "seed": 100,
+      "n": 50,
+      "successes": 39,
+      "success_rate": 0.78,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/dark/frozen/final_eval_results.npz",
+      "sha256": "14f21b0a2564fa751e4d23e0da87d2933fb403fc5097bdbba8f9d6e58b08982f",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "dark",
+      "seed": 100,
+      "n": 50,
+      "successes": 46,
+      "success_rate": 0.92,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3/dark/adajepa/final_eval_results.npz",
+      "sha256": "8bcc51be504b42cec05d125a169f214f5b87c4aeeac8a97853c4ece74347af1a",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "clean",
+      "seed": 200,
+      "n": 50,
+      "successes": 42,
+      "success_rate": 0.84,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/default/frozen/final_eval_results.npz",
+      "sha256": "2207e5258f1744a1cf2444d6b17db27ddc13f67e5a46ac129fb581556dd1221b",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "clean",
+      "seed": 200,
+      "n": 50,
+      "successes": 46,
+      "success_rate": 0.92,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/default/adajepa/final_eval_results.npz",
+      "sha256": "bdbdd5708d948fdb1844d3ce7a7d5657fcd3777ed7860c6ab31c74f9911aa53c",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redBlock",
+      "seed": 200,
+      "n": 50,
+      "successes": 6,
+      "success_rate": 0.12,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/redBlock/frozen/final_eval_results.npz",
+      "sha256": "7479ea61b77c1eb7a45cf6fca543c116e1cb7e2bcd81e549e9f27fb329c3a8d9",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redBlock",
+      "seed": 200,
+      "n": 50,
+      "successes": 14,
+      "success_rate": 0.28,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/redBlock/adajepa/final_eval_results.npz",
+      "sha256": "cce0b4d915b9f7e260944d4d1ad2a34f433e540bb4e14224b72b07ab01d2ea3e",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redAnchor",
+      "seed": 200,
+      "n": 50,
+      "successes": 10,
+      "success_rate": 0.2,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/redAnchor/frozen/final_eval_results.npz",
+      "sha256": "762e2c451d7e86766be8553a53f4fd0c6ea187f699fb73f2a22915e2272a4f9a",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redAnchor",
+      "seed": 200,
+      "n": 50,
+      "successes": 21,
+      "success_rate": 0.42,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/redAnchor/adajepa/final_eval_results.npz",
+      "sha256": "5363eba7d5fa3906e801c0648f1e92c2e6873c98a39ec921e4a765bc55b250a4",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redAgent",
+      "seed": 200,
+      "n": 50,
+      "successes": 31,
+      "success_rate": 0.62,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/redAgent/frozen/final_eval_results.npz",
+      "sha256": "85b6ed8e73bb6882d91496e05d203816fee6d1755abc54aff75cf327c096365b",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redAgent",
+      "seed": 200,
+      "n": 50,
+      "successes": 35,
+      "success_rate": 0.7,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/redAgent/adajepa/final_eval_results.npz",
+      "sha256": "e9c3761289b5331b304629509cdb0fe9649225f68f69a0f97a4276cacf42120a",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "blur",
+      "seed": 200,
+      "n": 50,
+      "successes": 32,
+      "success_rate": 0.64,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/blur/frozen/final_eval_results.npz",
+      "sha256": "9f469c393b1ef51d7cd0eb7d35f6b5b61adffbe2e3691fbb0010f2b1439e2796",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "blur",
+      "seed": 200,
+      "n": 50,
+      "successes": 47,
+      "success_rate": 0.94,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/blur/adajepa/final_eval_results.npz",
+      "sha256": "17a51ef40adadaf0cdee432160cfd349f558ce0e4363ac3dc495fffb65c02b2f",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "snp",
+      "seed": 200,
+      "n": 50,
+      "successes": 33,
+      "success_rate": 0.66,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/snp/frozen/final_eval_results.npz",
+      "sha256": "db059f586a09bfb057ff7db4437cb39a7b9b12c67f91736e818ac00e12992de2",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "snp",
+      "seed": 200,
+      "n": 50,
+      "successes": 45,
+      "success_rate": 0.9,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/snp/adajepa/final_eval_results.npz",
+      "sha256": "7681f98898c73d763c96dfb44717a76c438f50e9c03195a46550aecf63d949f6",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "dark",
+      "seed": 200,
+      "n": 50,
+      "successes": 40,
+      "success_rate": 0.8,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/dark/frozen/final_eval_results.npz",
+      "sha256": "678d284522e2237f0d1f2118e19ce5978a3a521ea17bf5c86883f40005ff22c3",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "dark",
+      "seed": 200,
+      "n": 50,
+      "successes": 48,
+      "success_rate": 0.96,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed200/dark/adajepa/final_eval_results.npz",
+      "sha256": "244e4ca43e1164b649c02812481c31ad18540472c6efd83f963b058385a09b68",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "clean",
+      "seed": 300,
+      "n": 50,
+      "successes": 39,
+      "success_rate": 0.78,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/default/frozen/final_eval_results.npz",
+      "sha256": "b540922bb3bdab165c869b01bdc4f4a07b32dd9c817e9949d486a3bcfbc07f93",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "clean",
+      "seed": 300,
+      "n": 50,
+      "successes": 44,
+      "success_rate": 0.88,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/default/adajepa/final_eval_results.npz",
+      "sha256": "cde2659344178934683244039d3655ead83fca84e53b970b7bdbe52df51e472e",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redBlock",
+      "seed": 300,
+      "n": 50,
+      "successes": 4,
+      "success_rate": 0.08,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/redBlock/frozen/final_eval_results.npz",
+      "sha256": "9763871b1a64765f56b6a4c353acc6d8693aba8b1c636a13bc8f725cce316832",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redBlock",
+      "seed": 300,
+      "n": 50,
+      "successes": 11,
+      "success_rate": 0.22,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/redBlock/adajepa/final_eval_results.npz",
+      "sha256": "2df48885f4b8e8daf00b6a41cb02943acc25eef213489385b9ac25d6e3556f32",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redAnchor",
+      "seed": 300,
+      "n": 50,
+      "successes": 8,
+      "success_rate": 0.16,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/redAnchor/frozen/final_eval_results.npz",
+      "sha256": "51fa465bb3fd03ffb26178e7ef09a70da37308b12a81cd87a8a5151cccd1eed9",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redAnchor",
+      "seed": 300,
+      "n": 50,
+      "successes": 13,
+      "success_rate": 0.26,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/redAnchor/adajepa/final_eval_results.npz",
+      "sha256": "085f510a261f610aa9690395b52720a2d9de80af2d69ac78b9e1cac4fe745a23",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "redAgent",
+      "seed": 300,
+      "n": 50,
+      "successes": 25,
+      "success_rate": 0.5,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/redAgent/frozen/final_eval_results.npz",
+      "sha256": "0e14e52319aff937e5df11e10415dcae55460a274d69ad9e701923da227da5da",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "redAgent",
+      "seed": 300,
+      "n": 50,
+      "successes": 29,
+      "success_rate": 0.58,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/redAgent/adajepa/final_eval_results.npz",
+      "sha256": "366886874cffd1e5814030090da8220babd02805fa23b66160944016a486b66a",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "blur",
+      "seed": 300,
+      "n": 50,
+      "successes": 28,
+      "success_rate": 0.56,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/blur/frozen/final_eval_results.npz",
+      "sha256": "fa42ebee512a24835214cbe34520ff4e1bd7e5a267dde6dc72beafa8a1f023ee",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "blur",
+      "seed": 300,
+      "n": 50,
+      "successes": 45,
+      "success_rate": 0.9,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/blur/adajepa/final_eval_results.npz",
+      "sha256": "5d6cb065d85c453d5ba25c59cdf47983b8160ab156a8ce99ee7ce405dff61323",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "snp",
+      "seed": 300,
+      "n": 50,
+      "successes": 34,
+      "success_rate": 0.68,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/snp/frozen/final_eval_results.npz",
+      "sha256": "c188057373ae96b0825c90af978d49a7f6b79f42e13f0747d1ccfbb3a4d4032d",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "snp",
+      "seed": 300,
+      "n": 50,
+      "successes": 44,
+      "success_rate": 0.88,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/snp/adajepa/final_eval_results.npz",
+      "sha256": "2b74e1ab07ed80bc20b324a313c79a6d28bbef1f56091041507eac0dcbdecc32",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "frozen",
+      "ecp": false,
+      "condition": "dark",
+      "seed": 300,
+      "n": 50,
+      "successes": 34,
+      "success_rate": 0.68,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/dark/frozen/final_eval_results.npz",
+      "sha256": "6fb096e44bb8951d92dcc890a54ffbdd5090d4e9f12d62801291d608afff46cf",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    },
+    {
+      "weights": "augmented",
+      "base": "adajepa",
+      "ecp": false,
+      "condition": "dark",
+      "seed": 300,
+      "n": 50,
+      "successes": 44,
+      "success_rate": 0.88,
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/pushobj_T16k_bias_e3_seed300/dark/adajepa/final_eval_results.npz",
+      "sha256": "40a3a682254fe6cb411fc9635bb4f2060ffb93d606c983d7c17fb8240ed954f4",
+      "protocol": "historical legacy_pool random target selection; native planner"
+    }
+  ],
+  "aggregates": [
+    {
+      "condition": "clean",
+      "frozen": {
+        "n": 150,
+        "successes": 123,
+        "success_rate": 0.82
+      },
+      "adajepa": {
+        "n": 150,
+        "successes": 136,
+        "success_rate": 0.9066666666666666
+      }
+    },
+    {
+      "condition": "redBlock",
+      "frozen": {
+        "n": 150,
+        "successes": 15,
+        "success_rate": 0.1
+      },
+      "adajepa": {
+        "n": 150,
+        "successes": 37,
+        "success_rate": 0.24666666666666667
+      }
+    },
+    {
+      "condition": "redAnchor",
+      "frozen": {
+        "n": 150,
+        "successes": 27,
+        "success_rate": 0.18
+      },
+      "adajepa": {
+        "n": 150,
+        "successes": 57,
+        "success_rate": 0.38
+      }
+    },
+    {
+      "condition": "redAgent",
+      "frozen": {
+        "n": 150,
+        "successes": 78,
+        "success_rate": 0.52
+      },
+      "adajepa": {
+        "n": 150,
+        "successes": 101,
+        "success_rate": 0.6733333333333333
+      }
+    },
+    {
+      "condition": "blur",
+      "frozen": {
+        "n": 150,
+        "successes": 87,
+        "success_rate": 0.58
+      },
+      "adajepa": {
+        "n": 150,
+        "successes": 134,
+        "success_rate": 0.8933333333333333
+      }
+    },
+    {
+      "condition": "snp",
+      "frozen": {
+        "n": 150,
+        "successes": 93,
+        "success_rate": 0.62
+      },
+      "adajepa": {
+        "n": 150,
+        "successes": 135,
+        "success_rate": 0.9
+      }
+    },
+    {
+      "condition": "dark",
+      "frozen": {
+        "n": 150,
+        "successes": 113,
+        "success_rate": 0.7533333333333333
+      },
+      "adajepa": {
+        "n": 150,
+        "successes": 138,
+        "success_rate": 0.92
+      }
+    }
+  ],
+  "missing": []
+}

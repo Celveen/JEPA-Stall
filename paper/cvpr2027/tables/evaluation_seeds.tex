@@ -1,0 +1,15 @@
+\captionof{table}{\textbf{PushObj sensitivity to evaluation randomness.} Success (mean \% $\pm$ sample SD) on the same 350 tasks across three evaluation seeds. Aug. denotes interaction-biased training.}
+\label{tab:eval-seeds}
+\small
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llr@{}}
+\toprule
+Controller & Training / planning & Success (\%)\\
+\midrule
+Frozen (ResNet) & Aug. + ECP (ours) & $72.29\pm0.00$\\
+LeWM & Aug. + ECP (ours) & $66.00\pm0.00$\\
+\midrule
+AdaJEPA & Base data & $68.76\pm1.41$\\
+AdaJEPA & Augmented data & $73.90\pm1.19$\\
+AdaJEPA & \textbf{Aug. + ECP (ours)} & \textbf{76.86}$\pm1.03$\\
+\bottomrule
+\end{tabular*}

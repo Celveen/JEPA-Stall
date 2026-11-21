@@ -1,0 +1,72 @@
+{
+  "source_data": "plot_data.json",
+  "source_data_sha256": "6454e88947b53eb00a3e8289909ee363049ee805809dcb7d19d2aaf4e4894335",
+  "script_sha256": "f40b079ee3b1a0f782ae4872f54508a1994e7298d76167c564e11a08dc859ec0",
+  "palette": {
+    "native_fill": "#A8B9C8",
+    "weighting_fill": "#477C82",
+    "memory_fill": "#D99270",
+    "native_line": "#62849F",
+    "correction_line": "#B56E4F",
+    "ink": "#2C4C63",
+    "grid": "#E6EBEF",
+    "muted": "#798791"
+  },
+  "bar_fill": "solid for every bar; no hollow bars",
+  "results_canvas_inches": [
+    6.875,
+    2.75
+  ],
+  "distance_canvas_inches": [
+    3.25,
+    1.9
+  ],
+  "results_y_limits_percent": [
+    0,
+    100
+  ],
+  "minimum_font_pt": 8.0,
+  "no_error_bars": "single recorded intervention runs; no invented uncertainty",
+  "grayscale_encoding": "fixed left-to-right series order and labels; curve styles plus square/circle markers",
+  "maze_variant": "gated memory only; no proprioceptive boost; not highlighted as a large gain",
+  "count_validation": {
+    "n": 350,
+    "settings": [
+      {
+        "checkpoint": "official",
+        "planner": "frozen"
+      },
+      {
+        "checkpoint": "bias16k",
+        "planner": "frozen"
+      },
+      {
+        "checkpoint": "official",
+        "planner": "adajepa"
+      },
+      {
+        "checkpoint": "bias16k",
+        "planner": "adajepa"
+      }
+    ],
+    "native": [
+      153,
+      214,
+      243,
+      262
+    ],
+    "P": [
+      210,
+      253,
+      255,
+      270
+    ],
+    "PS": [
+      209,
+      253,
+      256,
+      269
+    ]
+  },
+  "changes": "Visual rendering only; underlying archived counts and trace samples unchanged."
+}

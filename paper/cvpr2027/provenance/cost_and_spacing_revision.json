@@ -1,0 +1,151 @@
+{
+  "base_commit": "32db049e2261fe7770a822441c2f32f38d7c3ea2",
+  "new_experiments_run": false,
+  "abstract_introduction_conclusion_and_equations_unchanged": true,
+  "all_existing_figures_and_table_values_unchanged": true,
+  "main_cost_conclusion": "2.8% per-replan overhead is offset by 12.4% fewer replans, reducing mean task-loop time by 12.1%; memory use increases.",
+  "appendix_cost_table": {
+    "number": "17",
+    "page": 17
+  },
+  "spacing": {
+    "before": {
+      "figure5_caption_to_body_pt": 53.32659912109375,
+      "table5_last_row_to_body_pt": 67.56301879882812
+    },
+    "after": {
+      "figure5_caption_to_body_pt": 15.19061279296875,
+      "table5_last_row_to_body_pt": 18.2900390625
+    }
+  },
+  "text_edits": [
+    {
+      "file": "main.tex",
+      "old": "\\input{sections/analysis}",
+      "new": "\\raggedbottom\n\\input{sections/analysis}"
+    },
+    {
+      "file": "main.tex",
+      "old": "\\input{sections/conclusion}\n\\clearpage",
+      "new": "\\input{sections/conclusion}\n\\clearpage\n\\flushbottom"
+    },
+    {
+      "file": "sections/rope_results_panel.tex",
+      "old": "\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=0.90\\textwidth]{figures/fig_rope_main_rollout.pdf}\n\\caption{\\textbf{Rope recovery at matched push counts.} DINO-WM runs share the start and goal; Ours adds fixed-strength ECP after five warm-up pushes. Pale blue marks the goal rope; labels give Chamfer distance (CD). Only ECP reaches CD $<0.3$ at push 20.}\n\\label{fig:rope-main-rollout}\n\\par\\vspace{2pt}\n\\begin{minipage}[t]{0.485\\textwidth}\\vspace{0pt}\n\\centering\n\\captionof{table}{\\textbf{ECP improves Rope planning.} Fixed DINO-WM, three pushes per plan. Ours adds fixed-strength memory after five warm-up pushes. Twenty targets repeat under three seeds (60 runs). CD is mean final Chamfer distance; success requires CD $<0.3$. Pushes averages all runs, including failures capped at 20.}\n\\label{tab:rope}\n\\small\n\\begin{tabular*}{\\linewidth}{@{\\extracolsep{\\fill}}lrrr@{}}\n\\toprule\nMethod & CD $\\downarrow$ & Success (\\%) $\\uparrow$ & Pushes $\\downarrow$\\\\\n\\midrule\nDINO-WM (native) &0.6865&55.0&12.68\\\\\nDINO-WM (ours) &\\textbf{0.4793}&\\textbf{71.7}&\\textbf{11.30}\\\\\n\\bottomrule\n\\end{tabular*}\n\\end{minipage}\n\\hfill\n\\begin{minipage}[t]{0.485\\textwidth}\\vspace{0pt}\n\\centering\n\\includegraphics[width=\\linewidth]{figures/fig_rope_cd_pushes.pdf}\n\\captionof{figure}{\\textbf{Faster Rope error reduction.} DINO-WM with three pushes per plan; 20 targets under three seeds. Ours uses fixed-strength memory with five warm-up pushes.}\n\\label{fig:rope-cd}\n\\end{minipage}\n\\end{figure*}\n",
+      "new": "\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=0.90\\textwidth]{figures/fig_rope_main_rollout.pdf}\n\\caption{\\textbf{Rope recovery at matched push counts.} DINO-WM runs share the start and goal; Ours adds fixed-strength ECP after five warm-up pushes. Pale blue marks the goal rope; labels give Chamfer distance (CD). Only ECP reaches CD $<0.3$ at push 20.}\n\\label{fig:rope-main-rollout}\n\\end{figure*}\n"
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "\\paragraph{Conditional correction outperforms permanent reweighting and deeper search.}",
+      "new": "\\input{sections/rope_pair_results}\n\n\\paragraph{Conditional correction outperforms permanent reweighting and deeper search.}"
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "\\subsection{Qualitative and behavioral recovery}",
+      "new": "\\paragraph{Computational cost.}\nOn 350 paired PushObj tasks with a fixed ResNet, ECP adds 2.8\\% per-replan latency but reduces replans by 12.4\\%, lowering mean task-loop time by 12.1\\%. Peak allocated GPU memory increases by 0.145~GiB. Recovery thus lowers average task cost despite the planning overhead (\\cref{sec:cost}).\n\n\\subsection{Qualitative and behavioral recovery}"
+    },
+    {
+      "file": "sections/appendix.tex",
+      "old": "\\section{Maze navigation ablations}",
+      "new": "\\input{sections/cost_details}\n\n\\section{Maze navigation ablations}"
+    },
+    {
+      "file": "main.tex",
+      "old": "\\raggedbottom",
+      "new": "\\begingroup\n\\raggedbottom\n\\setlength{\\textfloatsep}{12pt plus 2pt minus 2pt}\n\\setlength{\\dbltextfloatsep}{12pt plus 2pt minus 2pt}"
+    },
+    {
+      "file": "main.tex",
+      "old": "\\flushbottom",
+      "new": "\\endgroup\n\\flushbottom"
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "On 350 paired PushObj tasks with a fixed ResNet, ECP adds 2.8\\% per-replan latency but reduces replans by 12.4\\%, lowering mean task-loop time by 12.1\\%. Peak allocated GPU memory increases by 0.145~GiB. Recovery thus lowers average task cost despite the planning overhead (\\cref{sec:cost}).",
+      "new": "On 350 paired PushObj tasks (fixed ResNet), ECP's 2.8\\% per-replan overhead is offset by 12.4\\% fewer replans, reducing mean task-loop time by 12.1\\%. Memory use increases; detailed measurements appear in \\cref{sec:cost}."
+    },
+    {
+      "file": "sections/analysis.tex",
+      "old": "Memory use increases; detailed measurements appear in \\cref{sec:cost}.",
+      "new": "Memory use increases (\\cref{sec:cost})."
+    },
+    {
+      "file": "main.tex",
+      "old": "\\setlength{\\dbltextfloatsep}{12pt plus 2pt minus 2pt}",
+      "new": "\\setlength{\\dbltextfloatsep}{9pt plus 2pt minus 2pt}"
+    }
+  ],
+  "build": {
+    "engine": "pdflatex",
+    "abstract_words_whitespace": 231,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 12,
+    "combined_pages": 22,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": null
+  },
+  "crossrefs": {
+    "before": {
+      "total_reference_targets": 80,
+      "main_reference_targets": 32,
+      "main_to_appendix_targets": 15,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 82,
+      "main_reference_targets": 33,
+      "main_to_appendix_targets": 16,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "sec:cost",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "settings_parameter_table_references": 0,
+    "pdf_internal_links_checked": 230,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 191,
+    "label_destinations_checked": 76,
+    "headline_and_trajectory_figures_unchanged": true,
+    "bibliography_unchanged": true
+  },
+  "layout": "Independent table and curve columns beneath the full-width Rope strip; bounded float spacing without stretched paragraph gaps. Official font sizes, line leading and page geometry unchanged."
+}

@@ -1,0 +1,5 @@
+--- worker_before.py
++++ worker_native3.py
+@@ -21 +21 @@
+-    parser.add_argument('--arm', choices=('native5', 'fixed3', 'dynamic3', 'fixed3_nowarm'), required=True)
++    parser.add_argument('--arm', choices=('native5', 'native3', 'fixed3', 'dynamic3', 'fixed3_nowarm'), required=True)

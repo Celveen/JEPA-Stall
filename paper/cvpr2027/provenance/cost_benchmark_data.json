@@ -1,0 +1,130 @@
+{
+  "source_repository_commit": "32db049e2261fe7770a822441c2f32f38d7c3ea2",
+  "source_directory": "reports/frozen_ecp_cost_20261117",
+  "source_sha256": {
+    "summary.json": "e1cf8f98c8c1836d41a612248c1629cb404d6c320eec440699302e561875c18f",
+    "per_task_cost.csv": "cdd79da6a25a4222c6b45680752fbdc811f457cfc0b91080d40d6c2b7c3dea2e",
+    "manifest.json": "cc40df978374fa797859985a140b4dd13c327c0dd9f02820d33a6c1f1909a8da",
+    "checksums.json": "48ffae0e31db0a1d83f16008793e0916db62e017da4e2a4647b2b6416f1eba1f",
+    "raw_results.tar.gz": "6de9038619f2772d49f4d4312b2a7a5fea575c24300637d5d753c71290d70708",
+    "runtime_sources.tar.gz": "90125713858b5a5b4e7c0ad16195e3ee903ebebe36c91e2427e8e86cc383d4cf"
+  },
+  "verification": "verify_results.py passed: 35 pairs, 70 jobs and 700 task evaluations; independently recomputed summaries and per-task table match.",
+  "new_experiments_run": false,
+  "summary": {
+    "state": "complete",
+    "completed_pairs": 35,
+    "total_pairs": 35,
+    "paired_tasks_per_arm": 350,
+    "arms": {
+      "off": {
+        "tasks": 350,
+        "successes": 214,
+        "success_percent": 61.142857142857146,
+        "replans": 5458,
+        "mean_replans": 15.594285714285714,
+        "mean_controls": 77.97142857142858,
+        "total_episode_wall_seconds": 5336.158788358793,
+        "mean_episode_wall_seconds": 15.246167966739408,
+        "median_episode_wall_seconds": 6.53607081528753,
+        "p95_episode_wall_seconds": 31.60171073237434,
+        "total_planner_seconds": 4078.4546987768263,
+        "mean_planner_ms_per_replan": 747.2434405967069,
+        "total_gd_seconds": 4077.9147714395076,
+        "mean_gd_ms_per_replan": 747.144516570082,
+        "p95_gd_ms_per_replan": 793.2410886511207,
+        "common_diagnostic_feedback_seconds": 161.82884062081575,
+        "ecp_memory_build_seconds": 0.0,
+        "ecp_detector_seconds": 0.0,
+        "ecp_active_replans": 0,
+        "peak_allocated_gib": 0.822603702545166,
+        "peak_reserved_gib": 1.341796875,
+        "cold_pipeline_seconds_excluding_hash": 5421.665147088468,
+        "model_parameters": 34295767
+      },
+      "on": {
+        "tasks": 350,
+        "successes": 253,
+        "success_percent": 72.28571428571429,
+        "replans": 4780,
+        "mean_replans": 13.657142857142857,
+        "mean_controls": 68.28571428571429,
+        "total_episode_wall_seconds": 4692.56804586947,
+        "mean_episode_wall_seconds": 13.40733727391277,
+        "median_episode_wall_seconds": 6.455297532491386,
+        "p95_episode_wall_seconds": 32.490357814542946,
+        "total_planner_seconds": 3672.317707862705,
+        "mean_planner_ms_per_replan": 768.2673029001475,
+        "total_gd_seconds": 3596.403119519353,
+        "mean_gd_ms_per_replan": 752.3855898576052,
+        "p95_gd_ms_per_replan": 802.2629532031715,
+        "common_diagnostic_feedback_seconds": 139.6647561378777,
+        "ecp_memory_build_seconds": 31.01566527225077,
+        "ecp_detector_seconds": 9.869580378755927,
+        "ecp_active_replans": 1914,
+        "peak_allocated_gib": 0.967134952545166,
+        "peak_reserved_gib": 1.46875,
+        "cold_pipeline_seconds_excluding_hash": 4776.482602218166,
+        "model_parameters": 34295767
+      }
+    },
+    "comparison": {
+      "rescues": 39,
+      "regressions": 0,
+      "success_gain_pp": 11.142857142857146,
+      "mean_episode_wall_seconds_change_percent": -12.060936865172788,
+      "mean_planner_ms_per_replan_change_percent": 2.813522496316878,
+      "mean_gd_ms_per_replan_change_percent": 0.7014805263623414,
+      "total_planner_seconds_change_percent": -9.95810964961622,
+      "mean_replans_change_percent": -12.422132649322105,
+      "peak_allocated_gib_change_percent": 17.56997319034852
+    },
+    "notes": [
+      "One timing pass over 350 fixed tasks; task variation is not timing repeat uncertainty.",
+      "GPU-synchronized wall timers; same physical GPU for each paired chunk; alternating order.",
+      "Both arms use the same GD100 CUDA Graph backend; per-replan costs include graph capture.",
+      "No-ECP uses EscapeMPCPlanner with escape disabled, avoiding inactive ECP detector bookkeeping.",
+      "Episode wall includes simulator prefix replay and shared diagnostics, excludes model loading and independent audit.",
+      "PyTorch memory peaks include model tensors and graph pools; reserved memory differs from allocated memory.",
+      "Five concurrent dedicated benchmark GPUs; CPU is shared. No single-GPU isolation or energy measurement is claimed."
+    ]
+  },
+  "table_metrics": [
+    {
+      "key": "success_percent",
+      "decimals": 2
+    },
+    {
+      "key": "mean_replans",
+      "decimals": 2
+    },
+    {
+      "key": "mean_planner_ms_per_replan",
+      "decimals": 2
+    },
+    {
+      "key": "mean_gd_ms_per_replan",
+      "decimals": 2
+    },
+    {
+      "key": "mean_episode_wall_seconds",
+      "decimals": 2
+    },
+    {
+      "key": "p95_episode_wall_seconds",
+      "decimals": 2
+    },
+    {
+      "key": "total_planner_seconds",
+      "decimals": 2
+    },
+    {
+      "key": "peak_allocated_gib",
+      "decimals": 3
+    },
+    {
+      "key": "peak_reserved_gib",
+      "decimals": 3
+    }
+  ]
+}
