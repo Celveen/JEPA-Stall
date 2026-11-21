@@ -1,0 +1,100 @@
+{
+  "arm": "native5",
+  "sample": 3,
+  "global_sample": 13,
+  "target_chunk": 1,
+  "target_index": 3,
+  "config": {
+    "model_epoch": "latest",
+    "n_evals": 1,
+    "goal_source": "file",
+    "goal_H": 5,
+    "num_start_frames": 1,
+    "debug_dset_init": false,
+    "decode_for_viz": false,
+    "n_plot_samples": 0,
+    "wandb_logging": false,
+    "objective": {
+      "_target_": "planning.objectives.create_objective_fn",
+      "alpha": 1,
+      "base": 2,
+      "mode": "last"
+    },
+    "planner": {
+      "_target_": "chunk_planner.ObservedChunkPlanner",
+      "success_cd": 0.3,
+      "name": "mpc_cem",
+      "max_iter": 20,
+      "n_taken_actions": 1,
+      "reuse_actions": true,
+      "resim_from_start": false,
+      "sub_planner": {
+        "target": "rope_ecp.ContextCEMPlanner",
+        "horizon": 5,
+        "topk": 30,
+        "num_samples": 300,
+        "var_scale": 1,
+        "opt_steps": 10,
+        "eval_every": -1
+      },
+      "ecp": {
+        "kappa": 0.0,
+        "warmup_pushes": 5,
+        "window_pushes": 3,
+        "gamma_lo": 0.05,
+        "gamma_hi": 0.15,
+        "beta": 0.25,
+        "alpha": 1.0,
+        "base": 2.0,
+        "component": "S-only",
+        "objective_scale": "terminal",
+        "independent_execution": true
+      },
+      "chunk_size": 5,
+      "strength_mode": "dynamic",
+      "episode_seed": 1288,
+      "planning_seed": 112
+    },
+    "ckpt_base_path": "/data/zjc/JEPA-Stall/checkpoints/rope_dino_h1_fs1_e100_seed0",
+    "seed": 99,
+    "goal_file_path": "/data/zjc/JEPA-Stall/eval_outputs/rope_qualitative20/native5/sample_03/target.pkl",
+    "saved_folder": "/data/zjc/JEPA-Stall/eval_outputs/rope_qualitative20/native5/sample_03"
+  },
+  "full_target_sha256": "acba118201257f05ecf7578f7ffe9600b2cfce064d75afab8851c1c79b1fe15c",
+  "checkpoint_sha256": "d8f0af314f651b6265bf33359f2b8a55b5cf05e58edacdf127780d28a4948515",
+  "encoder_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+  "implementation_sha256": {
+    "experiments/rope_formal20/worker.py": "31162a4856e5a8debf9e36c489ba5010a142ffc7040e17ccaae10d07aee903c3",
+    "experiments/rope_chunk3/chunk_planner.py": "e9c61354604ba57194361fd2fb8e75d6fdc40e2de6ccf73efa47e42bc0e65a67",
+    "experiments/rope_feedback/run.py": "fa6851d1f51b60a4b0214b9a2fcb662291e2b3eb98b4c89aecf495f8c2dce83c",
+    "experiments/rope_feedback/feedback_planner.py": "5665c38f936a753ce80a119f19e5ad9f3b1fd19b9a521fbde70a2633d6cf2466",
+    "experiments/rope_feedback/protocol.yaml": "6727bcc3df99b195be84be329bb03070709776d340a4f64c26d727bee5fc001a",
+    "experiments/rope_ecp_20261110/rope_ecp.py": "e673c989d1fd1fd3a873336ae6922be06f66018aded99ea0eff5ee8724c6325d",
+    "eval_outputs/rope_local/runtime/plan.py": "cd601abccce6c160b9614940793fd93dc91d0bf7b44d148ce4b4312eb414eb3d",
+    "eval_outputs/rope_local/runtime/planning/evaluator.py": "275412752b4b0724ddca70165739861a29d4acc7d5da45e2c33ed1045a4905eb",
+    "eval_outputs/rope_local/runtime/models/visual_world_model.py": "3837a2feb6ef9654a075b24223a3f1116795c96b83ddc3b839edfa8e81abda94"
+  },
+  "action_mean": [
+    0.01266330387443304,
+    -0.1220608651638031,
+    -0.0023628182243555784,
+    -0.021762890741229057
+  ],
+  "action_std": [
+    2.809385061264038,
+    2.169008255004883,
+    0.8589053750038147,
+    0.8438628911972046
+  ],
+  "physical_gpu": "GPU-835b9c0f-52c7-b2b9-eef0-4a4f2e1e9168",
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "final_logs": {
+    "final_eval/success_rate": 0.0,
+    "final_eval/mean_chamfer_distance": 0.7160015106201172,
+    "final_eval/mean_visual_dist": 0.5272307991981506,
+    "final_eval/mean_proprio_dist": 0.0,
+    "final_eval/mean_div_visual_emb": 121.558349609375,
+    "final_eval/mean_div_proprio_emb": 0.007231734227389097
+  }
+}

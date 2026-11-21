@@ -1,0 +1,137 @@
+{
+  "case_count": 8,
+  "raw_png_count": 1490,
+  "comparison_png_count": 948,
+  "checks": [
+    {
+      "case": "pushobj_ablation",
+      "arm": 0,
+      "frames": 151,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": false,
+      "capture": "real simulator saved-action replay validated against logged five-control endpoints"
+    },
+    {
+      "case": "pushobj_ablation",
+      "arm": 1,
+      "frames": 71,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": false,
+      "capture": "real simulator saved-action replay validated against logged five-control endpoints"
+    },
+    {
+      "case": "pushobj_methods",
+      "arm": 0,
+      "frames": 151,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": false,
+      "capture": "real simulator saved-action replay validated against logged five-control endpoints"
+    },
+    {
+      "case": "pushobj_methods",
+      "arm": 1,
+      "frames": 71,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": false,
+      "capture": "real simulator saved-action replay validated against logged five-control endpoints"
+    },
+    {
+      "case": "pusht_ablation",
+      "arm": 0,
+      "frames": 151,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "pusht_ablation",
+      "arm": 1,
+      "frames": 66,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "pusht_methods",
+      "arm": 0,
+      "frames": 151,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": false,
+      "capture": "real simulator saved-action replay validated against logged five-control endpoints"
+    },
+    {
+      "case": "pusht_methods",
+      "arm": 1,
+      "frames": 66,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "rope_ablation",
+      "arm": 0,
+      "frames": 21,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "rope_ablation",
+      "arm": 1,
+      "frames": 21,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "rope_methods",
+      "arm": 0,
+      "frames": 21,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "rope_methods",
+      "arm": 1,
+      "frames": 5,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "maze_ablation",
+      "arm": 0,
+      "frames": 151,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "maze_ablation",
+      "arm": 1,
+      "frames": 111,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "maze_methods",
+      "arm": 0,
+      "frames": 151,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    },
+    {
+      "case": "maze_methods",
+      "arm": 1,
+      "frames": 131,
+      "hashes_verified": true,
+      "pixel_exact_to_recording": true,
+      "capture": "original recorded simulator observations"
+    }
+  ],
+  "all_paired_initial_rgb_equal": true,
+  "all_terminal_outcomes_independently_verified": true
+}

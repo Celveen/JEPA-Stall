@@ -1,0 +1,1437 @@
+{
+  "key": "maze_methods",
+  "domain": "Maze",
+  "purpose": "Method comparison",
+  "notes": "Seed100 medium maze target13; gamma_hi=.45, gamma_lo=.05; real replay observations at every control. Path inset uses simulator world coordinates.",
+  "unit": "Control",
+  "arms": [
+    {
+      "name": "Frozen MPC",
+      "source": "eval_outputs/maze_medium20_s100_g045/frozen/recorded_execution.npz",
+      "success": false,
+      "metrics": {},
+      "capture": "original recorded simulator observations",
+      "last_step": 150
+    },
+    {
+      "name": "Ours | AdaJEPA + gated ECP",
+      "source": "eval_outputs/maze_medium20_s100_g045/adajepa_s/recorded_execution.npz",
+      "success": true,
+      "metrics": {},
+      "capture": "original recorded simulator observations",
+      "last_step": 130
+    }
+  ],
+  "frames": [
+    {
+      "path": "maze_methods/baseline/frame_0000.png",
+      "step": 0,
+      "sha256": "3c9846df77c595b960f996b42964dd97eecb692c6fda2a668f6dfb9fa9c04e2c"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0001.png",
+      "step": 1,
+      "sha256": "e95b3952d6e1f14c48a9b0e225c2421ce79fc4d2d77afc38703fb73857b9b031"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0002.png",
+      "step": 2,
+      "sha256": "58f38ab87be603b2164d57bbd58a05582cc3a27a973bd3a5851010e1104db51f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0003.png",
+      "step": 3,
+      "sha256": "a638185a4ee67b7cc92aebc5b47b9fd7ab104674cd198b117bb26c2c9ad7ba3f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0004.png",
+      "step": 4,
+      "sha256": "2350118c4aae8f12ef56a32025d0b514f94b731cf57ba7ef64ecf6b393f905ef"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0005.png",
+      "step": 5,
+      "sha256": "c636a91c35ac6fbd6db0d56990627557cb917850c2122db61da28850ec2535d7"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0006.png",
+      "step": 6,
+      "sha256": "7c2ba194bd86475e367b38a24178935abecf9ef192fa7a3ab86420cd961778f6"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0007.png",
+      "step": 7,
+      "sha256": "f4484588db4a2444089e33c1a6d636cf5a056d2625dc346c7bd22aef4624747a"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0008.png",
+      "step": 8,
+      "sha256": "78519cc1ca6e3bb5c1277bc1652d6c64df12f4b3063056d2563d8ac1362756c7"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0009.png",
+      "step": 9,
+      "sha256": "e50a01e84a117d1ce0f52416febf3b9b96fd670386b7845d52651033e337a5f4"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0010.png",
+      "step": 10,
+      "sha256": "0cdab569c06d94d5445f66eae25d3c7427b4178551ccd1074a559481c9a60c1b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0011.png",
+      "step": 11,
+      "sha256": "240c63f547425256560ab5839631794f29e4f2da79c3adb0c66851e6505f767e"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0012.png",
+      "step": 12,
+      "sha256": "06c34a03980ac669f4e67fdf3dd35951b12eb0dc5c0e46c9bd4541d9ac824f05"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0013.png",
+      "step": 13,
+      "sha256": "7f12170ea79c0b544078978be91d206689fd44f7ca009f931b5a000e7a516529"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0014.png",
+      "step": 14,
+      "sha256": "24c01c970e1c80d82e74ebd00ce9e9a2fcf682eea1de6b06ccb8d90dbeb5316d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0015.png",
+      "step": 15,
+      "sha256": "24022eea436edaad4bc7329efe1bbf716cf5c108868efb072a6ba66a4d6b61ab"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0016.png",
+      "step": 16,
+      "sha256": "f7b71140cf40eda54625fea55fc6ce2ae3249ac3ae76efe4b3c85a8cd12fc9e7"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0017.png",
+      "step": 17,
+      "sha256": "b9e1f021c9cdfa2d5cbb0efe3872cb8766bcc5ba887a7057a30be5f30e95c940"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0018.png",
+      "step": 18,
+      "sha256": "1b12d2ced86e7cfc0d50d05935c4d56c930293b0c82a9ce7f86f4289d6b16337"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0019.png",
+      "step": 19,
+      "sha256": "8d46f5ef41ff1ff122607cc4a158f26878c23a9c657e276b1056ff650d1e950e"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0020.png",
+      "step": 20,
+      "sha256": "a03956c53e366610c397f1014eff0dc41922beccadb5e3237e5b4b0e83076939"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0021.png",
+      "step": 21,
+      "sha256": "f09271393de3ea3a5dabbcd40b19f09323eb1954ff2caf13090bd2a91de467f7"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0022.png",
+      "step": 22,
+      "sha256": "2a542c632b8a97f70c490d07811165a00cb13122410b0f09c3c88a9125c71edc"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0023.png",
+      "step": 23,
+      "sha256": "0ea5216d7ab702a9937b2a3b0fca689baf451f52eb7fb81072faa3e6cfddf2ec"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0024.png",
+      "step": 24,
+      "sha256": "44c12f40fbcd9e926ab6b3b3d15f1e5efd247dc9ad03589acc1dd14a3e11e2a2"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0025.png",
+      "step": 25,
+      "sha256": "e520d690a480218b92bff100f8fa6927a76e290db548172fff2f527fb25be74e"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0026.png",
+      "step": 26,
+      "sha256": "3087430222bd9b8f6e0f579144d7df4da9b146b692d72cca82fc88f797dce50f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0027.png",
+      "step": 27,
+      "sha256": "0a1e65824bee6f56ce7af6c3d3a519de9210aec4c87030797a7fb1cb24bd1670"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0028.png",
+      "step": 28,
+      "sha256": "fcc7f2f4c86d2c895021db10803634653b0912425f0a2dee519b3a04d99b8161"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0029.png",
+      "step": 29,
+      "sha256": "724d0bf9656ca883131fbbfe39498c0396d1c7a517769430be1c1b3f886fd8f1"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0030.png",
+      "step": 30,
+      "sha256": "b659dee4720b051712d41ce8a3ea02f4490d3a9853575b428eed7348f66f06df"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0031.png",
+      "step": 31,
+      "sha256": "4e9e1988ab9c3cfcbbb7c30a48f827714a8778bf1f8f599eeff0be3e98e91cab"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0032.png",
+      "step": 32,
+      "sha256": "94a84dbd45cb4a58affa6ab271669c12dc17b8fc37a42883a3abe310132aa2c2"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0033.png",
+      "step": 33,
+      "sha256": "e772e37bab81927a3e3dd6db7d5558e2fc9c4413691dd4811729ef90a1be556f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0034.png",
+      "step": 34,
+      "sha256": "a2ecdd01aad2b2b260f0e7662b360283c4d369b4bdcc2f338e45e5b31faab0bd"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0035.png",
+      "step": 35,
+      "sha256": "0949b26f56f71a47211964baba50abca3eb7b3f08ebaeabaeef8237cb9491c00"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0036.png",
+      "step": 36,
+      "sha256": "a9d98d8052c3fef52c13da33192118ffc5f5a826500c3b6add33dd220124a60d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0037.png",
+      "step": 37,
+      "sha256": "abf63f857ed2c9fae2141069815dbc7be6c297a9cade80aa9b0a0f8f4667060b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0038.png",
+      "step": 38,
+      "sha256": "04e4ee8ef0d030e502edbd96e3ace6c829429143b0918ac76ee9f50e60a6cd5b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0039.png",
+      "step": 39,
+      "sha256": "c5b244ddd9eac0bdb1e8137ac92cb206d97891bf45fecc552885b928ea4abcc7"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0040.png",
+      "step": 40,
+      "sha256": "111153bed6924210977dd072117a12dee888bb5130ec2216ac630fbe06f95b5c"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0041.png",
+      "step": 41,
+      "sha256": "285707ed4e5f1363ec36811692e788452430f75a8146fe8753274eda293309e1"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0042.png",
+      "step": 42,
+      "sha256": "b1bfcd7928e54370da707e160e2c7a0567a2d67dc62fedd20998e1d34061f98d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0043.png",
+      "step": 43,
+      "sha256": "4171075528f33ca529df2dde9f3f84e38f3068341949d24edddfe3146bfcb3a6"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0044.png",
+      "step": 44,
+      "sha256": "50837acdc20457a0ea6153e107bd732cf037ad096913187dfbf039208f70a5bc"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0045.png",
+      "step": 45,
+      "sha256": "6f25c2ebb6587a03e40b825f45ef3e54a7b2b30611353432257e62234baf6719"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0046.png",
+      "step": 46,
+      "sha256": "4153d5b34ab600a3ee0836f154ab015cae4876bdf0a8d98b29a93202f519b6d7"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0047.png",
+      "step": 47,
+      "sha256": "bc96b5ea6b49c6711ec4903cd28b2af0696cf9bd4738296a9348a93f155ef02c"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0048.png",
+      "step": 48,
+      "sha256": "829fe84277e2aef7c32eea198f1405cb164b82ecff7542724c2aae23b12cee76"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0049.png",
+      "step": 49,
+      "sha256": "e75b0246c145c948a4f62788dd3f63ef7ca251e264cc6fadf10dca8d9bc0187b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0050.png",
+      "step": 50,
+      "sha256": "58f59c89fcc46ce730a3c892161be7d2cfa957e759e907c8cb5a63310a7bd46f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0051.png",
+      "step": 51,
+      "sha256": "526f524a627dd741a563793a087cdaa6c37b8c471d29555549bedeb059370325"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0052.png",
+      "step": 52,
+      "sha256": "f4da1fa5e3f54a71957c0728cbddd0f213e98928d44259d64f24af7a6ddf4b72"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0053.png",
+      "step": 53,
+      "sha256": "3b27dfc81712b27ef74e6d1e30d5ed04c69cb84a18887eb159c2ae596faa2a25"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0054.png",
+      "step": 54,
+      "sha256": "e09a39269c5ac184f0fae9bfeea0e78ff5077098f4da95ccc35f27a28f646c45"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0055.png",
+      "step": 55,
+      "sha256": "fafc325d691b56ab7966fb4742344d80cc6f58f5441c96427bac831f625940ea"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0056.png",
+      "step": 56,
+      "sha256": "7134f8057866784b0abefd9e824fe6b6388654b56364419ad372d74acb8e680c"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0057.png",
+      "step": 57,
+      "sha256": "d47525eec6e238d11b3988807605356ecba4d86a4330c898b044f016302225f2"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0058.png",
+      "step": 58,
+      "sha256": "c2fd10e706aecb4d20563deebe013fa2c2fa4080bb1266c4047b61c097729854"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0059.png",
+      "step": 59,
+      "sha256": "fb1c7c3902e381b94c0c060347cb60ce89e9aec3c13bedee4b5906cd4e3c2b61"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0060.png",
+      "step": 60,
+      "sha256": "a014c401f9628b133b9a7be7cba324befb3ae0da012ed1b1612a42d1f3b7d350"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0061.png",
+      "step": 61,
+      "sha256": "ff0e2d122eb9e532e713f8d2cf8b1428cb424176f578317c825e67a788b0c9c0"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0062.png",
+      "step": 62,
+      "sha256": "1f787da25d51a17a673779687120ea11fb42ea8edba313611f81cc2e6ee441a3"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0063.png",
+      "step": 63,
+      "sha256": "f9264cbffa2637d73d9133052f6fa650cb5dbc1d733699e929c47062921daacf"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0064.png",
+      "step": 64,
+      "sha256": "a467e536321b663118a146749a011b686e4ede3cfa88440509a58832717e21ff"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0065.png",
+      "step": 65,
+      "sha256": "905f7177c189b299addcb6a04c86bf0a51fb15f7acb0b39638220f5348aedb73"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0066.png",
+      "step": 66,
+      "sha256": "df0e8ab8566c98cb2e78e76265c1b732d44e056274afd0df42ec6b175f982ac1"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0067.png",
+      "step": 67,
+      "sha256": "2b1b083274ab8646e0108d433e37920c91a4d15cdf384da7ce72c7108ac5cad1"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0068.png",
+      "step": 68,
+      "sha256": "3405b1dbdd7a6d3d82f38e167ef779f00d8f9819fb056488228e3aa3f8db1917"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0069.png",
+      "step": 69,
+      "sha256": "80d35071f1f7c54941c66cabdb93060cb36cf70b834ecc3da24ebec244562cbf"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0070.png",
+      "step": 70,
+      "sha256": "5eac98eeeac675eee0eb9057a1a39ecc2b59593b286ef65621238d24bfda0ddc"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0071.png",
+      "step": 71,
+      "sha256": "fff0896f78bd464c66ca92f9bb29e1aebe66f10c7769cd6a702c6de0482726d1"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0072.png",
+      "step": 72,
+      "sha256": "f019fbf2bd073a08feae27b6fba4ff0ee36d86010276c7f669cc54f510478f6f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0073.png",
+      "step": 73,
+      "sha256": "493e42985b9881fbd7fd3eadfd6ab1e0072a34bf29dd8758c34692183c2fd31d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0074.png",
+      "step": 74,
+      "sha256": "caa842f52bb39cb705a4e61a416ce9e7da485edce5e52a4dbc97b24db32b79fe"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0075.png",
+      "step": 75,
+      "sha256": "f8a83bfa0de4a5d303ebe08fdae184abe639e2f29ffac758e0b1e1f37604ac4f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0076.png",
+      "step": 76,
+      "sha256": "f8a83bfa0de4a5d303ebe08fdae184abe639e2f29ffac758e0b1e1f37604ac4f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0077.png",
+      "step": 77,
+      "sha256": "78946246417d56e4305252d9a4208520fb3de81f45a95b370291cc7ec53c4d18"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0078.png",
+      "step": 78,
+      "sha256": "f817a22daa8bbccf1a004652c66112d64f8da1e720c12f068e1ad2464c2f091e"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0079.png",
+      "step": 79,
+      "sha256": "9a17eb2b20ae82b9f92a93ecf0c551f064cef4585a3712821fe4e097347adc7f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0080.png",
+      "step": 80,
+      "sha256": "30a8e5a2b2cf0110a71db5aca92c928d35e2b220ee8f530bf4740d71964ae925"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0081.png",
+      "step": 81,
+      "sha256": "b6dd371fe500ce28847a87426421c2f3c4f27dc3056e296be79ffa90a7ca3dc9"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0082.png",
+      "step": 82,
+      "sha256": "8f0d88c0c5afea6e2653316fc30c8682d99b81bf8bfca63607013c840977fa9d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0083.png",
+      "step": 83,
+      "sha256": "28fb785b20471c038370dd5f5d307cd2bfcf28477237690ee06fec2c717d91dc"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0084.png",
+      "step": 84,
+      "sha256": "161cc7f6baf1af54bd8fa10457dc2bf73007d7a5ae25c1959a396c6be4a14917"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0085.png",
+      "step": 85,
+      "sha256": "870fdac312a2fc32baa823b1105f9262ffab5b39f2dfd331102243adcc786006"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0086.png",
+      "step": 86,
+      "sha256": "b40a85bec8a17478772797595d441a05a69d151f693f995b451df27ab9211616"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0087.png",
+      "step": 87,
+      "sha256": "33364324b53c34703bf2fe50aa53674920a34faea9fe38822ff4e1e3cd7e82c0"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0088.png",
+      "step": 88,
+      "sha256": "91c4edb9c96e3326ad3feb0fbacdcc64e5da2b1fcff9f788c5778597879d514d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0089.png",
+      "step": 89,
+      "sha256": "dcaf46e866231bb068543f0a4b041202b837b64106e8dcc556a6fa0918b6ac7f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0090.png",
+      "step": 90,
+      "sha256": "7e575c1a16e25c032868baecb0a16fa8098e5137a7acb32e3c5b836850a00896"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0091.png",
+      "step": 91,
+      "sha256": "a4cde6976e3b10a8c98804605d54d31824ea6aa583d22beed5402fa819f663fe"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0092.png",
+      "step": 92,
+      "sha256": "dfd48e1218e4a5c234a6ae2386a93f735d4c1719ec3a5731c6e88d30fa44a784"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0093.png",
+      "step": 93,
+      "sha256": "a54b84e5a31f896daa237bda3ceb0861346492f41f9452145f681add58427648"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0094.png",
+      "step": 94,
+      "sha256": "9a8bc5345d4331ee3d253e65c345820503cfcd966f4981494b18c9c4e33ea25c"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0095.png",
+      "step": 95,
+      "sha256": "40ef5285f82ac5352c5997ab2b6cf9f28e21ce0cd8931526c052172436e91d85"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0096.png",
+      "step": 96,
+      "sha256": "f048838328ef2c78ae5e309662003c6195a6f602ab629887343097fc5f9c0b8b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0097.png",
+      "step": 97,
+      "sha256": "7b4742578c118c200d1e128732cef5e5ba0c22b26aef30a185a0ecd03c8008e1"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0098.png",
+      "step": 98,
+      "sha256": "1f5e4c5596b34ba784d716492f5e048d9f756fb3cb31046d24ec945a886fa384"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0099.png",
+      "step": 99,
+      "sha256": "997ee059590c99251b6af216736cf402fcdc430132277c6a1c6ae07b6f8e9294"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0100.png",
+      "step": 100,
+      "sha256": "6a1321257077297ef920678884735fb082bad83d37798a51b4351cb67b84a7eb"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0101.png",
+      "step": 101,
+      "sha256": "5a7f5fae95ee9090682e7c968bc8f5b6435f95b7d864c9d03e1e96a4d42906ce"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0102.png",
+      "step": 102,
+      "sha256": "1225a8a395a7801c39bf2a20451db971f36f24b7b9f3d892cfb12ae0192cda7b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0103.png",
+      "step": 103,
+      "sha256": "27d2bdf7ed79fd0e045304a9f6cc2783c1f5ba10c5f935d72fb0a96c2936a79d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0104.png",
+      "step": 104,
+      "sha256": "bdc16d78776a1573ee121a94d0f53b02096a644cb51cb3fc7642fc3ea74ac834"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0105.png",
+      "step": 105,
+      "sha256": "0fbda93f683968100c173a33a6d356af6b8154591f6fbbcb42205505a34fff60"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0106.png",
+      "step": 106,
+      "sha256": "0b7e15b8a3b80eee221cc060d667834a37dd0a29d034595ed0041b0dc599b883"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0107.png",
+      "step": 107,
+      "sha256": "6427715dc997617aafb867e66abe267c97d2f2b5ffdb987f0a4ef940f0e0d52d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0108.png",
+      "step": 108,
+      "sha256": "e83c1cf44a3429aab8fe0f1f122ec1af034c41bf468e726a239defa2f344b4da"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0109.png",
+      "step": 109,
+      "sha256": "b70cedadfcf8c99185b29ac8e7f635e2870dc0d873182bc19be942bed2ab47ba"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0110.png",
+      "step": 110,
+      "sha256": "44e64128bd030853cbd62e5a49eb34a2e3286643b3deb567468c9857e95ffc9b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0111.png",
+      "step": 111,
+      "sha256": "7f31fce2edc3690f6665742958a4e094260d70eb0a0829734a8ef313382a7d4b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0112.png",
+      "step": 112,
+      "sha256": "f55d56b44754414d437033e6ec5958ef802122c873e1c70c3be2af42683ccd3f"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0113.png",
+      "step": 113,
+      "sha256": "5e94cb346a01b7f65b4d0ef919cbdcf6a2a92ee3060107c6310d13ff31983a9c"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0114.png",
+      "step": 114,
+      "sha256": "e2f51da9ae633a3d96e643c02c0809e521b89470b2cc11a41725f72bf17e0dbc"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0115.png",
+      "step": 115,
+      "sha256": "a202284d4e827309bb251fcdc3486d237728f3b50741f16bd821ca2147225142"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0116.png",
+      "step": 116,
+      "sha256": "8fa4377a622f197ab76ec2078e841a82dd92dae89a7d3794982a3841a2b67d56"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0117.png",
+      "step": 117,
+      "sha256": "9da2e931d8bd5c281d4f5fcc3ec0c125079c9b96b955986426147001348e3c04"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0118.png",
+      "step": 118,
+      "sha256": "1f113d83466c69f3bccc29ee6099ca12e212de0ba0aa5d72aea5af1bb51ada62"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0119.png",
+      "step": 119,
+      "sha256": "38a9cd060633a8497b70e3fe400246dacd1f40d4d1b2e0e1301a90c244689d0e"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0120.png",
+      "step": 120,
+      "sha256": "db68fe40c38303f0fc233cb2d51a635c007ad191f63ea41a784f2d6e51b573eb"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0121.png",
+      "step": 121,
+      "sha256": "95d3b8ca1fc6ae0c6e38bf4c32b3ae2dd9f0d1bc1942894662962ac06d33074b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0122.png",
+      "step": 122,
+      "sha256": "d3117cd577718cf934a21ce0199d11f1deb0f5dd959d4ffda908d9c759b84139"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0123.png",
+      "step": 123,
+      "sha256": "25e8b4912fdab68489dd90f6b56659443149ce00550ac12fa9ab1787f34e40cb"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0124.png",
+      "step": 124,
+      "sha256": "ec3c2b8f203c1fab4384eece79e34557fac0dc8f71270629c1f06fa6f7a7aacf"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0125.png",
+      "step": 125,
+      "sha256": "72f0e88c4ef9e0c1140ef10fd90bfb8f1a0438f394658599d49d651d1a6d091c"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0126.png",
+      "step": 126,
+      "sha256": "ea59cbefe1111d26a8256675890d5119ac60bbe59ab95a8a04a23ae339d63e43"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0127.png",
+      "step": 127,
+      "sha256": "ccdafc7c69b7ea9169c4b1dda5317d03bc902484115219371519bd47d6ecb888"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0128.png",
+      "step": 128,
+      "sha256": "5ae85aa27eaca52c35885737a0003eee1acd52273a63999c57c8a47388173c60"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0129.png",
+      "step": 129,
+      "sha256": "edb30c8a8e108a80f6997759f955271fd4f26926926c25d66d536ac407ba7425"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0130.png",
+      "step": 130,
+      "sha256": "9a1f4ac5ec58c62680fd923234a70f458fa6bf71b45f8ed84db700b2ab067a19"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0131.png",
+      "step": 131,
+      "sha256": "6019d45f702fa805228870ca17b9801773aa4c5f910643b6607492ae5096d92d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0132.png",
+      "step": 132,
+      "sha256": "b31862ee2d9f1bba7347db85769830d55dbad0afaa4344091ae02f09da1c42c9"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0133.png",
+      "step": 133,
+      "sha256": "fda349063164b147614b63e63fc44b7a5a1b7c23794281ef310763b93b681c96"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0134.png",
+      "step": 134,
+      "sha256": "9438f55d6d0bacea712d955555fd7eb060aa2460634db41680f7934b51141bb2"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0135.png",
+      "step": 135,
+      "sha256": "4c8ea03d5fddf055f37161a9cfb769c4bf53bdeb81949561dc8f8c01e2c5c9eb"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0136.png",
+      "step": 136,
+      "sha256": "fb5c9ce2b6fd454a61d1bf262f50420f5c8def10443d568df490b8a27b476e7d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0137.png",
+      "step": 137,
+      "sha256": "1e98c28a7f199452827cca085f37771c46a4311f8888b62e7566aa89b3255949"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0138.png",
+      "step": 138,
+      "sha256": "3a642438f4608895c9bf50fa7f6c6239c251ebc338c42989ac0dcdc5efafb2b7"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0139.png",
+      "step": 139,
+      "sha256": "d31a045e9502c836f6998b8c5641409f0470f04a8aacf2cac12d2fc28762f014"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0140.png",
+      "step": 140,
+      "sha256": "05e3bbbfb43d4c94e3e2adc605715e4977645581ca703b906a2582e3369a19d6"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0141.png",
+      "step": 141,
+      "sha256": "7fb4eab1c007ba63585a77f8e1b16b931290deea2ae4396c60d7c82f2b6fd25d"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0142.png",
+      "step": 142,
+      "sha256": "d4f32f78b0c71d39a35271c35e3ccc75ccec2f8de20daa1a8b8f8eb1bc3a0a07"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0143.png",
+      "step": 143,
+      "sha256": "5505b23eed83c30aafcc796efa2afbbc1d846572e55324ed54a51ff63b7286f1"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0144.png",
+      "step": 144,
+      "sha256": "800e408df78441e11dc3a7ef62cc12ab3787cff8518847a7bd9ce5e75833fe0b"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0145.png",
+      "step": 145,
+      "sha256": "622e26d7da7e6a2eb46e0703a9a4278119188f4a1bae2a19853c5bb6566218ff"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0146.png",
+      "step": 146,
+      "sha256": "f02acdfb5c2fa75d0a3632fd0b087ae8bb27060fbed6f3c4a6b2ba606a32f8cb"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0147.png",
+      "step": 147,
+      "sha256": "c2413f88b991788a87ef71bab05188e09cbefcd4779d7c47baae8c6c6c9e6717"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0148.png",
+      "step": 148,
+      "sha256": "ba849ccdf7fec6ae8e56a76a56d867fb635cf389452f681466e459089cf10719"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0149.png",
+      "step": 149,
+      "sha256": "4d1ba2441a3a3ed3fcd58551c3095f5b39d93c1f82c6aab8e0b8c5164f1c53b4"
+    },
+    {
+      "path": "maze_methods/baseline/frame_0150.png",
+      "step": 150,
+      "sha256": "d82ee1e9de0dd04566292575a4557279f317b67044232f48c584952660221d94"
+    },
+    {
+      "path": "maze_methods/ours/frame_0000.png",
+      "step": 0,
+      "sha256": "3c9846df77c595b960f996b42964dd97eecb692c6fda2a668f6dfb9fa9c04e2c"
+    },
+    {
+      "path": "maze_methods/ours/frame_0001.png",
+      "step": 1,
+      "sha256": "e95b3952d6e1f14c48a9b0e225c2421ce79fc4d2d77afc38703fb73857b9b031"
+    },
+    {
+      "path": "maze_methods/ours/frame_0002.png",
+      "step": 2,
+      "sha256": "58f38ab87be603b2164d57bbd58a05582cc3a27a973bd3a5851010e1104db51f"
+    },
+    {
+      "path": "maze_methods/ours/frame_0003.png",
+      "step": 3,
+      "sha256": "a638185a4ee67b7cc92aebc5b47b9fd7ab104674cd198b117bb26c2c9ad7ba3f"
+    },
+    {
+      "path": "maze_methods/ours/frame_0004.png",
+      "step": 4,
+      "sha256": "2350118c4aae8f12ef56a32025d0b514f94b731cf57ba7ef64ecf6b393f905ef"
+    },
+    {
+      "path": "maze_methods/ours/frame_0005.png",
+      "step": 5,
+      "sha256": "c636a91c35ac6fbd6db0d56990627557cb917850c2122db61da28850ec2535d7"
+    },
+    {
+      "path": "maze_methods/ours/frame_0006.png",
+      "step": 6,
+      "sha256": "c1b5de67c8d421889d510d48797a02011fc16bb9faa18741f754e5849496e6ec"
+    },
+    {
+      "path": "maze_methods/ours/frame_0007.png",
+      "step": 7,
+      "sha256": "259328d91a64f207b662ed5896f2b86447478920c43f106232554a8513b2b338"
+    },
+    {
+      "path": "maze_methods/ours/frame_0008.png",
+      "step": 8,
+      "sha256": "cbb208d97e0de18cccfadb195e9e61b69fe040eaab35f5087224d75b0bbb3c1d"
+    },
+    {
+      "path": "maze_methods/ours/frame_0009.png",
+      "step": 9,
+      "sha256": "543f7bc7bff9da433aad6b9f3a22232d9fd794986afee1dccb4d6dcb73c30755"
+    },
+    {
+      "path": "maze_methods/ours/frame_0010.png",
+      "step": 10,
+      "sha256": "be39760731a61b0ff3772c1347fe825e7c217baaff676872aa1a6e6782b8e0bd"
+    },
+    {
+      "path": "maze_methods/ours/frame_0011.png",
+      "step": 11,
+      "sha256": "3da8b2c54c2d275365443ef144b5390e413ab2065442156982a0a4b4ff6c0157"
+    },
+    {
+      "path": "maze_methods/ours/frame_0012.png",
+      "step": 12,
+      "sha256": "f6b87ed83cbaa5d85eb5664a0a3a3b880de6cd1108819fd5153bbaa2e2e97d76"
+    },
+    {
+      "path": "maze_methods/ours/frame_0013.png",
+      "step": 13,
+      "sha256": "a6af326274a13b877f6cfc6084705f3c4d46a0c5f0bbe837aba32b5ace537478"
+    },
+    {
+      "path": "maze_methods/ours/frame_0014.png",
+      "step": 14,
+      "sha256": "fb4228dfdd901ee28b0f0faa8d1d80919e9ebc062c8193630bfc39c596e32396"
+    },
+    {
+      "path": "maze_methods/ours/frame_0015.png",
+      "step": 15,
+      "sha256": "65f264496fccd3d0651b6794152f48dee1591dc21096512af6c9495964ee6578"
+    },
+    {
+      "path": "maze_methods/ours/frame_0016.png",
+      "step": 16,
+      "sha256": "4c66f2a8f6cd6cce0deb012c0794d2aea3ba618029f489d1d7cc9d69478046d6"
+    },
+    {
+      "path": "maze_methods/ours/frame_0017.png",
+      "step": 17,
+      "sha256": "4ad41a0a577f3757ed6b9978a2ef557f4face00aad6e883a28f239a4ce2242d8"
+    },
+    {
+      "path": "maze_methods/ours/frame_0018.png",
+      "step": 18,
+      "sha256": "8bd4270c43f583aaea9d1c109ad8cb0f966320d5b6dd0cfbfa95675adeebe52d"
+    },
+    {
+      "path": "maze_methods/ours/frame_0019.png",
+      "step": 19,
+      "sha256": "84fee2abd6fcb1d5bb4088a76d09ffd851932c1ecb6641c657ef3c3ced277892"
+    },
+    {
+      "path": "maze_methods/ours/frame_0020.png",
+      "step": 20,
+      "sha256": "806071173a09152db074e64e7caa83e3f2e34cbf6ddf3c63d4d08e586025529d"
+    },
+    {
+      "path": "maze_methods/ours/frame_0021.png",
+      "step": 21,
+      "sha256": "2e2905f9256410966e98402af112e1d5c85d81767d194f161108c8809d180359"
+    },
+    {
+      "path": "maze_methods/ours/frame_0022.png",
+      "step": 22,
+      "sha256": "99874eb50fabc744e2321818fdd24ee8b632f667af667fb7450fbd359cd6084a"
+    },
+    {
+      "path": "maze_methods/ours/frame_0023.png",
+      "step": 23,
+      "sha256": "69d2629737c5771474d14c63a5307f43436eb3dbc9df960682e3f4b55e3aa590"
+    },
+    {
+      "path": "maze_methods/ours/frame_0024.png",
+      "step": 24,
+      "sha256": "ae17efa0d4c2255d2133cd1aae3484d5b142235d164eab7181870e820af50568"
+    },
+    {
+      "path": "maze_methods/ours/frame_0025.png",
+      "step": 25,
+      "sha256": "8fa241a807e3ea34d95ed85cc120e5a4e7b3a7d9ccff368a6e35b413d0626a14"
+    },
+    {
+      "path": "maze_methods/ours/frame_0026.png",
+      "step": 26,
+      "sha256": "a14aae4e1337be0f23d33f78a1e79d0f94760da9f0f77e22eb79af7d46fbccb6"
+    },
+    {
+      "path": "maze_methods/ours/frame_0027.png",
+      "step": 27,
+      "sha256": "7dc7f47d45cce7356db3d4422e8773b79be184598389bc3b5e21df40646bb9c6"
+    },
+    {
+      "path": "maze_methods/ours/frame_0028.png",
+      "step": 28,
+      "sha256": "1d07a4be3de2a7b6357d8238618d2f2e67fd0d98b9c76da99c79051a4f26c4dc"
+    },
+    {
+      "path": "maze_methods/ours/frame_0029.png",
+      "step": 29,
+      "sha256": "2ac2660f0324ca23552e40f52d36a6e6935a8a73907d336a1c8c4532effe606a"
+    },
+    {
+      "path": "maze_methods/ours/frame_0030.png",
+      "step": 30,
+      "sha256": "6336726737aa48ce71a612d2c1cd93aff2a6780c3d444d3bc6533f38825918fe"
+    },
+    {
+      "path": "maze_methods/ours/frame_0031.png",
+      "step": 31,
+      "sha256": "3a6e3d753c2c315acd1b86b7ddf3aee3bbc59919dda6c08074cc80cf98430855"
+    },
+    {
+      "path": "maze_methods/ours/frame_0032.png",
+      "step": 32,
+      "sha256": "abf3204eb781c80038a737d7cde30ea7d7e9b337b67472231c9d7b1271b72d81"
+    },
+    {
+      "path": "maze_methods/ours/frame_0033.png",
+      "step": 33,
+      "sha256": "f1ec825479d731df3e037515d9ee131725ddf6407b8750bc6f83d0a3618e0886"
+    },
+    {
+      "path": "maze_methods/ours/frame_0034.png",
+      "step": 34,
+      "sha256": "69742d9d41568be0948097a449745aacf62e87ff32aedf0abce552d5be73458f"
+    },
+    {
+      "path": "maze_methods/ours/frame_0035.png",
+      "step": 35,
+      "sha256": "604f92198734396d19bc8022d7ddfd23ac7f9e8e6422d5cce8e75d78b8661e0c"
+    },
+    {
+      "path": "maze_methods/ours/frame_0036.png",
+      "step": 36,
+      "sha256": "db772677b6b39652de6456b374f4e1f6c26c8ed6ad933a045bb15acdae933ce5"
+    },
+    {
+      "path": "maze_methods/ours/frame_0037.png",
+      "step": 37,
+      "sha256": "b4be2302cbddc76cd968a974d187c04cb693625bf0d582ff908ba8c38cfd6250"
+    },
+    {
+      "path": "maze_methods/ours/frame_0038.png",
+      "step": 38,
+      "sha256": "23a6084e25af9e209f3794baa1879d2c6a6b76e36e79bcd774c197f2b4de16ae"
+    },
+    {
+      "path": "maze_methods/ours/frame_0039.png",
+      "step": 39,
+      "sha256": "1107ffaaf86478d07c648f8cb3063c1b742ddfe528c44b7c33622c6409c924df"
+    },
+    {
+      "path": "maze_methods/ours/frame_0040.png",
+      "step": 40,
+      "sha256": "d347f2f78abae6ea1f57be8251f2cc5c9cf9ff1b60e78ee178d780d40cb9b6b2"
+    },
+    {
+      "path": "maze_methods/ours/frame_0041.png",
+      "step": 41,
+      "sha256": "fa806dd4baeedcf72ba3df74cc9b3b27b387e83b5f820096060064b27a1c40d2"
+    },
+    {
+      "path": "maze_methods/ours/frame_0042.png",
+      "step": 42,
+      "sha256": "2c33784099f24646f91d99901811a457442cf88b8c02ac90c2452fa7ab574d6c"
+    },
+    {
+      "path": "maze_methods/ours/frame_0043.png",
+      "step": 43,
+      "sha256": "d6450b65d9d56747f50dc9b73fef95779c0f0f21068a57ed5cd0bc82d1b2263a"
+    },
+    {
+      "path": "maze_methods/ours/frame_0044.png",
+      "step": 44,
+      "sha256": "64184427b55d4c07f94975b506306fda50a03b3030f41066b5a7a3cfe468ace8"
+    },
+    {
+      "path": "maze_methods/ours/frame_0045.png",
+      "step": 45,
+      "sha256": "18ddab37ca73fc003017d59c4cc284b0d8e0f328dd5961e2f3b428ccf8de15af"
+    },
+    {
+      "path": "maze_methods/ours/frame_0046.png",
+      "step": 46,
+      "sha256": "34770800f00a2505cd489b00a6a16157b63a8b5aa83192c1fb0d8e39637e27b1"
+    },
+    {
+      "path": "maze_methods/ours/frame_0047.png",
+      "step": 47,
+      "sha256": "0b7879dcf9f045630b078ec0186a083ba5b20999b740fb9b074fa54d9ad0c5c1"
+    },
+    {
+      "path": "maze_methods/ours/frame_0048.png",
+      "step": 48,
+      "sha256": "f312de4a85de1d6f9c7090968e2f1e27e13bb3684ab94ca96fe56248bb4ae491"
+    },
+    {
+      "path": "maze_methods/ours/frame_0049.png",
+      "step": 49,
+      "sha256": "ff4da4086c01985cf102010b40667a38a539dbb09808088a880ddfa43cb6810c"
+    },
+    {
+      "path": "maze_methods/ours/frame_0050.png",
+      "step": 50,
+      "sha256": "1115fd9cf1f62cdbe37a4a86feddc583c10cb9c445dd709a1f3afa8ecb0c5810"
+    },
+    {
+      "path": "maze_methods/ours/frame_0051.png",
+      "step": 51,
+      "sha256": "efd0af13600584f34f368ac98860046ff9fc83af58398a1fdc1b90c19e3bff8c"
+    },
+    {
+      "path": "maze_methods/ours/frame_0052.png",
+      "step": 52,
+      "sha256": "380e6becb64830640786e12dfdc64b8d0523e2c61465e4a07267d95466dad867"
+    },
+    {
+      "path": "maze_methods/ours/frame_0053.png",
+      "step": 53,
+      "sha256": "b8460fb0bad0c622f56d8fcb409d1f734047d99336be4cbf95118b574f26af23"
+    },
+    {
+      "path": "maze_methods/ours/frame_0054.png",
+      "step": 54,
+      "sha256": "7a90cad5fe877087706fa1ab9ca5e11c1c79c6cac983466b09b12a7a59cb2b85"
+    },
+    {
+      "path": "maze_methods/ours/frame_0055.png",
+      "step": 55,
+      "sha256": "cc099760a3365e642f3cc907fbdb42a5c6187f156c16b468a276b132be386bbd"
+    },
+    {
+      "path": "maze_methods/ours/frame_0056.png",
+      "step": 56,
+      "sha256": "0018d20f9e29f06646bbbec16b54f4810376634fe7e7281906f86c2b77c95181"
+    },
+    {
+      "path": "maze_methods/ours/frame_0057.png",
+      "step": 57,
+      "sha256": "15b7ccd799c28fd19767f8a2dfccaa3463059fad989cea21a3a3324b2d56207f"
+    },
+    {
+      "path": "maze_methods/ours/frame_0058.png",
+      "step": 58,
+      "sha256": "1dcfcdf52a7d13483328c05613a2e32e400fcabdfc71bb5c922371540fc57ba7"
+    },
+    {
+      "path": "maze_methods/ours/frame_0059.png",
+      "step": 59,
+      "sha256": "4abdaa600b39d2920e180d030a4a252630d3d37ea435c4766c84ccb0ba213617"
+    },
+    {
+      "path": "maze_methods/ours/frame_0060.png",
+      "step": 60,
+      "sha256": "33fb97d16488798d933002053a66c94726ed8d2ee37c62a6b5f155d88c959562"
+    },
+    {
+      "path": "maze_methods/ours/frame_0061.png",
+      "step": 61,
+      "sha256": "dee78e9307952519ccd021ec3d216159f6c4606d35a95a14b346663d235d2a2d"
+    },
+    {
+      "path": "maze_methods/ours/frame_0062.png",
+      "step": 62,
+      "sha256": "0bf1412873d4ffa212500f5d040adee81d759ded115fbc41750b653e3d8e16fd"
+    },
+    {
+      "path": "maze_methods/ours/frame_0063.png",
+      "step": 63,
+      "sha256": "e74c764fcddf2b7c3737848a359bb69710cff818514d7e4c79ace3eea836300a"
+    },
+    {
+      "path": "maze_methods/ours/frame_0064.png",
+      "step": 64,
+      "sha256": "e075124abbadedfb3907e74cbf5855f0cdf59169ce6a7f799ebb3e2be902181b"
+    },
+    {
+      "path": "maze_methods/ours/frame_0065.png",
+      "step": 65,
+      "sha256": "4803ae8d7dca77f0d853693a61d4bae9f182b567459de587f37a85281b5ef1f1"
+    },
+    {
+      "path": "maze_methods/ours/frame_0066.png",
+      "step": 66,
+      "sha256": "dc1b9265f851497c9d46bd08bd9e3eb637f391d7d05f2e6885dc7047a0a16382"
+    },
+    {
+      "path": "maze_methods/ours/frame_0067.png",
+      "step": 67,
+      "sha256": "69b6ab5355d8f0db711952473c3338f1ac68527708810ee738cde9d45dfd3f84"
+    },
+    {
+      "path": "maze_methods/ours/frame_0068.png",
+      "step": 68,
+      "sha256": "554ae008f841c5c3059dde786f391189f79494b8e7413d6ffee1bfd9534f9d6f"
+    },
+    {
+      "path": "maze_methods/ours/frame_0069.png",
+      "step": 69,
+      "sha256": "5539e789a4c3dcd3385fa0318e96e6206bccbe3bc416547f9e05aadc0bf8f1a2"
+    },
+    {
+      "path": "maze_methods/ours/frame_0070.png",
+      "step": 70,
+      "sha256": "5d1f3cbbb53cdcececee4459f428a96805f3b65f18d2293e5ce772baa0673a8d"
+    },
+    {
+      "path": "maze_methods/ours/frame_0071.png",
+      "step": 71,
+      "sha256": "8cc615e7eac5005486ddc1f18a8c17ed8970fedb12c59f1222c6d8431d1160c7"
+    },
+    {
+      "path": "maze_methods/ours/frame_0072.png",
+      "step": 72,
+      "sha256": "d8fe4b6b630107c8eba13021a8d576632823f5d079abc8639b77ec8025ad230c"
+    },
+    {
+      "path": "maze_methods/ours/frame_0073.png",
+      "step": 73,
+      "sha256": "7404c7d14cdf85cc2441277fc012fef12d56a786e533a280e7082df55bf54798"
+    },
+    {
+      "path": "maze_methods/ours/frame_0074.png",
+      "step": 74,
+      "sha256": "907953d478bceaef5818cc64489e04640ca30765631f91590498ade6d26ac3f1"
+    },
+    {
+      "path": "maze_methods/ours/frame_0075.png",
+      "step": 75,
+      "sha256": "d12318043509a4528007f1d0ecdd0cfaafadbd75545707ff393b8947c3eb38d2"
+    },
+    {
+      "path": "maze_methods/ours/frame_0076.png",
+      "step": 76,
+      "sha256": "7eb4f6030432abc992a202742bbfa38094524413f61dc87c48702c6c2943eab7"
+    },
+    {
+      "path": "maze_methods/ours/frame_0077.png",
+      "step": 77,
+      "sha256": "148d5924ea1b2970fe237d960c0cffd1c250373b5ae2d63d379fdd5df38c3bad"
+    },
+    {
+      "path": "maze_methods/ours/frame_0078.png",
+      "step": 78,
+      "sha256": "1e4085d84d773114dae3b6d478d2153003bec29668b230ff748790158b643219"
+    },
+    {
+      "path": "maze_methods/ours/frame_0079.png",
+      "step": 79,
+      "sha256": "f0b3468c242dd7c829f2f0837827ebd2c382d1686b297d9fb3deb086b23e6df2"
+    },
+    {
+      "path": "maze_methods/ours/frame_0080.png",
+      "step": 80,
+      "sha256": "380fc7a41be1068b0a4465bbb3a01c4c577772f587825d17e44d82843aea4989"
+    },
+    {
+      "path": "maze_methods/ours/frame_0081.png",
+      "step": 81,
+      "sha256": "7c5124480a26fea1d6586e0041867b73d99ec23c6a0cffd9ebff4953a1c0eb0c"
+    },
+    {
+      "path": "maze_methods/ours/frame_0082.png",
+      "step": 82,
+      "sha256": "f2b465344881474e08278b65521ff16f3d0c91d709e7165ba87d6c75d5b5fc66"
+    },
+    {
+      "path": "maze_methods/ours/frame_0083.png",
+      "step": 83,
+      "sha256": "0576dc07879bd60d3f2e19c2396c821117e80f27c9954d41d49a9434cc502ae6"
+    },
+    {
+      "path": "maze_methods/ours/frame_0084.png",
+      "step": 84,
+      "sha256": "e9ed7374acd142758d5b89c1a33cdb7db73fc2c54ebe80180791421a6fb9caa3"
+    },
+    {
+      "path": "maze_methods/ours/frame_0085.png",
+      "step": 85,
+      "sha256": "f2a02061e18dfdd3ed6ceb4371c0eb8a6a8bb1fdd70509c0c60b55b6ee55aa43"
+    },
+    {
+      "path": "maze_methods/ours/frame_0086.png",
+      "step": 86,
+      "sha256": "fb455523b06efda699b32259c07902680bbeb9ee417abae95e717d125707ce21"
+    },
+    {
+      "path": "maze_methods/ours/frame_0087.png",
+      "step": 87,
+      "sha256": "ec0e91aaa88f667ea732e83845d318cd59911d7cfeb51eeb35d442b4fc63e9b5"
+    },
+    {
+      "path": "maze_methods/ours/frame_0088.png",
+      "step": 88,
+      "sha256": "1bbaf4c96a767fc769ae7bc78ffb7ed7beae450cf4062bd73527b0be5cdfb211"
+    },
+    {
+      "path": "maze_methods/ours/frame_0089.png",
+      "step": 89,
+      "sha256": "802dacc95d8810b53814084a995b8e44ce67073561615c8e83f5a6f6f841def0"
+    },
+    {
+      "path": "maze_methods/ours/frame_0090.png",
+      "step": 90,
+      "sha256": "51fe2d54bf8975993144d4e4bee6ac4e733ac6f54a7742b11e90295b9d5e670b"
+    },
+    {
+      "path": "maze_methods/ours/frame_0091.png",
+      "step": 91,
+      "sha256": "0f264209c9f66c1bd0f1aa2ae707fb689a3df0a05998195880b7b232e75921f5"
+    },
+    {
+      "path": "maze_methods/ours/frame_0092.png",
+      "step": 92,
+      "sha256": "5b6cc95d992ca4cd2e8d13bef8793a3ea62ec0d27b6084c547fcf1f172b2ce4e"
+    },
+    {
+      "path": "maze_methods/ours/frame_0093.png",
+      "step": 93,
+      "sha256": "c5f17b52d6d00fb79bb1dc6d3ffe2ee1941ffe740a079094c358a8047c13b759"
+    },
+    {
+      "path": "maze_methods/ours/frame_0094.png",
+      "step": 94,
+      "sha256": "5c7606fa12830f10d7a6463b91e647f104721cf720eb92f6c961108b1da69a42"
+    },
+    {
+      "path": "maze_methods/ours/frame_0095.png",
+      "step": 95,
+      "sha256": "fbd9bfd54d26ca0edec6ec72cfd435d3938564458eee2a85331b6157da604a79"
+    },
+    {
+      "path": "maze_methods/ours/frame_0096.png",
+      "step": 96,
+      "sha256": "6b3361f8897b59080c1c749183ed48e25970e596bced506d00cdc608b96be566"
+    },
+    {
+      "path": "maze_methods/ours/frame_0097.png",
+      "step": 97,
+      "sha256": "28b749b54b78e9f73d9272c5cbb6816ccff3e184e0258e197c0800fdac86215e"
+    },
+    {
+      "path": "maze_methods/ours/frame_0098.png",
+      "step": 98,
+      "sha256": "8513549be356db393ed297dfa784fb39543e231c3994847185f14ec821718b98"
+    },
+    {
+      "path": "maze_methods/ours/frame_0099.png",
+      "step": 99,
+      "sha256": "ea6025b81b3914c36963df33c0986719f2a82bd31a48c84ef82f2c6335006d13"
+    },
+    {
+      "path": "maze_methods/ours/frame_0100.png",
+      "step": 100,
+      "sha256": "7766fb343522c8d620fbd053614246621cdfdccf2eb0b00cb1aadb875657d831"
+    },
+    {
+      "path": "maze_methods/ours/frame_0101.png",
+      "step": 101,
+      "sha256": "5915a743d3cc19c6a8580c8bd363939029d2f439c9ec89917855526437257eab"
+    },
+    {
+      "path": "maze_methods/ours/frame_0102.png",
+      "step": 102,
+      "sha256": "d60137c0ed93a566be51352f89407cba2d2e072c252fe36b2117e7b6ff1ecca2"
+    },
+    {
+      "path": "maze_methods/ours/frame_0103.png",
+      "step": 103,
+      "sha256": "2f771966ff383d9a8bc4c317aa09af07b54a874109e4fd7696689d52c8d5d93f"
+    },
+    {
+      "path": "maze_methods/ours/frame_0104.png",
+      "step": 104,
+      "sha256": "2e50deef0ee0f4d3463e97b2d6fa84ea0bf988c938117ce126611a4ee7718bc3"
+    },
+    {
+      "path": "maze_methods/ours/frame_0105.png",
+      "step": 105,
+      "sha256": "7d430a37341fec3baa629a64bceabcd8da182806488cd52d84d44e351c42a23e"
+    },
+    {
+      "path": "maze_methods/ours/frame_0106.png",
+      "step": 106,
+      "sha256": "1f763d003d3d1212da657a3b66b7cc4bcc36e3bddcf8c4f6b2202612ac27c285"
+    },
+    {
+      "path": "maze_methods/ours/frame_0107.png",
+      "step": 107,
+      "sha256": "db77acb57a6e250e85e9a6668012386064a367d88e197f557cd848e6172c3fba"
+    },
+    {
+      "path": "maze_methods/ours/frame_0108.png",
+      "step": 108,
+      "sha256": "78375b0e280b803a5485c23575661b1a775fa36b0851e76178cd1c6d981e46aa"
+    },
+    {
+      "path": "maze_methods/ours/frame_0109.png",
+      "step": 109,
+      "sha256": "65f4c920c8ee8434807574806bf794353ce6608eb1f3030f38175c1ea22aaf2e"
+    },
+    {
+      "path": "maze_methods/ours/frame_0110.png",
+      "step": 110,
+      "sha256": "1c5e9628334ff5c44405c07488013f573646ccf6b810e04972d14420d8da4032"
+    },
+    {
+      "path": "maze_methods/ours/frame_0111.png",
+      "step": 111,
+      "sha256": "2fcfb8157b63dae39b5ee261b902f0e212e051d24a8caba5c66dcfa716665376"
+    },
+    {
+      "path": "maze_methods/ours/frame_0112.png",
+      "step": 112,
+      "sha256": "8cc5b8d33df9caf6dfe83fe3e38086f8da5d3939ed528584c3b43297c7d9b471"
+    },
+    {
+      "path": "maze_methods/ours/frame_0113.png",
+      "step": 113,
+      "sha256": "44781448d89c343a2deed6ef7e7a33c42b4d223ca68532f15bd70a7c47235ba1"
+    },
+    {
+      "path": "maze_methods/ours/frame_0114.png",
+      "step": 114,
+      "sha256": "e3b20eb961c7d3b74f6f86144b6ce54214b4ccf9095572327cc3d8636b000176"
+    },
+    {
+      "path": "maze_methods/ours/frame_0115.png",
+      "step": 115,
+      "sha256": "1375a91ec339498041e6d120031c9ac570ab9ed4a92e837a2ceea31b568c54c5"
+    },
+    {
+      "path": "maze_methods/ours/frame_0116.png",
+      "step": 116,
+      "sha256": "97f6044cf496f1424978fc99f64f5fa08bd4de5dc7a115520acff2f6c4e60acb"
+    },
+    {
+      "path": "maze_methods/ours/frame_0117.png",
+      "step": 117,
+      "sha256": "0b02e10480d81f88dcbd79a176c4de173c37d347df9fe8de94f9442c9231e273"
+    },
+    {
+      "path": "maze_methods/ours/frame_0118.png",
+      "step": 118,
+      "sha256": "440770c77fbf0ccf3f8970a160742f9d9faebd05b1419253b00142d5cd63a7e9"
+    },
+    {
+      "path": "maze_methods/ours/frame_0119.png",
+      "step": 119,
+      "sha256": "938c409820301f7c4462660cb9b8ac8542d42438b20ab310db1e35dd79bced74"
+    },
+    {
+      "path": "maze_methods/ours/frame_0120.png",
+      "step": 120,
+      "sha256": "203df01c600f90762b5b1343683c86520c74eaac7e5516ac6050e339fa884e66"
+    },
+    {
+      "path": "maze_methods/ours/frame_0121.png",
+      "step": 121,
+      "sha256": "084cf2ab2fb272c3c0f2fa23aa2cac2d0c0c8caa8bab116931725bb5d4abee4d"
+    },
+    {
+      "path": "maze_methods/ours/frame_0122.png",
+      "step": 122,
+      "sha256": "022297044075142848f55a25cbb16b2a385fbe341bb785a656480691d2a7356d"
+    },
+    {
+      "path": "maze_methods/ours/frame_0123.png",
+      "step": 123,
+      "sha256": "e71191c4657cc3ec34b12d46647fc2375ef02ca0b3876ac401e9e472afea0322"
+    },
+    {
+      "path": "maze_methods/ours/frame_0124.png",
+      "step": 124,
+      "sha256": "8f9aa1f902aad0ac54d2e6a9ff29f289bb9b68a4933d088e4be3001029df7610"
+    },
+    {
+      "path": "maze_methods/ours/frame_0125.png",
+      "step": 125,
+      "sha256": "3d78ede477d688299a1046ba7fa9685d465a36aa0b9e65ef00896d039d464fd8"
+    },
+    {
+      "path": "maze_methods/ours/frame_0126.png",
+      "step": 126,
+      "sha256": "e41188ff76e6a43729292f3c3e0c8774d955c26b4734d5ce88805b15094b79cc"
+    },
+    {
+      "path": "maze_methods/ours/frame_0127.png",
+      "step": 127,
+      "sha256": "5e828f7b145dbbc695d43e2b66e96769224776929ae725c61da47bf32f69585f"
+    },
+    {
+      "path": "maze_methods/ours/frame_0128.png",
+      "step": 128,
+      "sha256": "b7c5314a4b9ae63b30ad475e252a1f36893a11c455d761994553d54155b9bcf0"
+    },
+    {
+      "path": "maze_methods/ours/frame_0129.png",
+      "step": 129,
+      "sha256": "cee4438f76aafb725809e9cd2fd3717cfbdce0a8032877f6939328d7470d47c5"
+    },
+    {
+      "path": "maze_methods/ours/frame_0130.png",
+      "step": 130,
+      "sha256": "54a96abc4b13165fd271a2d08b026a175b82952a5911b5c974ecd53f88bb3be0"
+    }
+  ]
+}

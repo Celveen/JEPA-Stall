@@ -1,0 +1,85 @@
+ckpt_base_path: /home/appuser/workspace/project/multimodal-test/adajepa/checkpoints/pushobj_bias_16k_e3_seed0
+model_name: null
+model_epoch: 3
+seed: 100
+n_evals: 10
+segments_order: file
+goal_source: segments
+eval_data_path: /home/appuser/workspace/project/multimodal-test/adajepa/worktrees/paper2_repo/data/targets/EVAL50/chunk_24_small_tee.pkl
+ood_corruption: null
+ood_level: null
+env_kwargs_override: null
+goal_H: 25
+n_plot_samples: 10
+decode_for_viz: false
+num_start_frames: 1
+debug_dset_init: false
+objective:
+  _target_: planning.objectives.create_objective_fn
+  alpha: 1
+  base: 2
+  mode: staged
+planner:
+  _target_: planning.stagnation.StagnationMPCPlanner
+  max_iter: 40
+  n_taken_actions: 5
+  adapt:
+    lr: 0.0005
+    steps: 1
+    optimizer: adam
+    finetune_every: 1
+    replay_buffer: recent5
+    finetune_encoder: true
+    encoder_lr: 1.0e-05
+    last_layer_only: true
+    encoder_last_layer_only: true
+  probe:
+    seed: 0
+    mode: none
+  escape:
+    mode: none
+    start: 10
+    window: 3
+    stall_px: 10.0
+    max_n: 5
+    gap: null
+    kick_px: 10.0
+    restarts: 8
+    proprio_boost: 1.0
+    object_scale: 0.0
+    object_escapes: 1
+    boost_replans: 0
+    workspace_clip: false
+    ws_lo: 22.0
+    ws_hi: 489.0
+    action_cap_px: 0.0
+    seed: 0
+  reuse_actions: true
+  sub_planner:
+    target: planning.gd.GDPlanner
+    lr: 0.1
+    sample_type: zero
+    action_noise: 0
+    horizon: 25
+    var_scale: 1
+    opt_steps: 100
+    eval_every: -1
+  name: escape_plan_gd_pushobj
+  stag:
+    only_samples:
+    - 2
+    - 3
+    - 4
+    - 8
+    - 9
+    kappa: 2.0
+    start: 10
+    prop_boost: 10.0
+    space: latent
+    window: 3
+    gamma_lo: 0.05
+    gamma_hi: 0.15
+    beta: 0.25
+    alpha: 1
+    base: 2
+wandb_logging: false

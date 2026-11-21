@@ -1,0 +1,280 @@
+{
+  "cases": [
+    {
+      "key": "pushobj_ablation",
+      "domain": "PushObj",
+      "purpose": "ECP escape",
+      "notes": "Matched Frozen checkpoint and planner, gamma_hi=.45. Shape Z, chunk16 sample4; selected from all 350 paired tasks by object-distance improvement.",
+      "unit": "Control",
+      "arms": [
+        {
+          "name": "Frozen MPC | ECP off",
+          "success": false,
+          "source": "reports/frozen_ecp_cost_20261117/raw_results.tar.gz::runs/chunk_16_Z/off",
+          "metrics": {
+            "max_logged_endpoint_error": 0.0004981079101611385
+          },
+          "capture": "real simulator saved-action replay validated against logged five-control endpoints",
+          "last_step": 150
+        },
+        {
+          "name": "Ours | Frozen + ECP",
+          "success": true,
+          "source": "reports/frozen_ecp_cost_20261117/raw_results.tar.gz::runs/chunk_16_Z/on",
+          "metrics": {
+            "max_logged_endpoint_error": 0.0004855957031111302
+          },
+          "capture": "real simulator saved-action replay validated against logged five-control endpoints",
+          "last_step": 70
+        }
+      ]
+    },
+    {
+      "key": "pushobj_methods",
+      "domain": "PushObj",
+      "purpose": "Method comparison",
+      "notes": "Same target and initial state; replay every saved physical control. Frozen+ECP versus AdaJEPA compares full methods.",
+      "unit": "Control",
+      "arms": [
+        {
+          "name": "AdaJEPA",
+          "success": false,
+          "source": "reports/publication_v14/archives/main_pushobj_adajepa.tar.gz::eval_outputs/stag_adajepa_bias16k_it40/ref/chunk_24_small_tee",
+          "metrics": {
+            "max_logged_endpoint_error": 0.0004902648925764197
+          },
+          "capture": "real simulator saved-action replay validated against logged five-control endpoints",
+          "last_step": 150
+        },
+        {
+          "name": "Ours | Frozen + ECP",
+          "success": true,
+          "source": "reports/publication_v14/archives/main_pushobj_frozen.tar.gz::eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_24_small_tee",
+          "metrics": {
+            "max_logged_endpoint_error": 0.0004943847656306843
+          },
+          "capture": "real simulator saved-action replay validated against logged five-control endpoints",
+          "last_step": 70
+        }
+      ]
+    },
+    {
+      "key": "pusht_ablation",
+      "domain": "PushT",
+      "purpose": "Intervention escape",
+      "notes": "Selected joint pusher/object goal rescue. LeWM intervention includes latent memory and contact/proprio objectives using object pose and geometry. Goal is the separate observation, not the fixed red anchor.",
+      "unit": "Control",
+      "arms": [
+        {
+          "name": "LeWM | intervention off",
+          "source": "eval_outputs/lewm_shift_visuals_20261116/red_goal_native/recorded_execution.npz",
+          "success": false,
+          "metrics": {},
+          "capture": "original recorded simulator observations",
+          "last_step": 150
+        },
+        {
+          "name": "Ours | LeWM + intervention",
+          "source": "eval_outputs/lewm_shift_visuals_20261116/red_goal_ours/recorded_execution.npz",
+          "success": true,
+          "metrics": {},
+          "capture": "original recorded simulator observations",
+          "last_step": 65
+        }
+      ]
+    },
+    {
+      "key": "pusht_methods",
+      "domain": "PushT",
+      "purpose": "Method comparison",
+      "notes": "Selected joint pusher/object goal rescue. LeWM intervention includes latent memory and contact/proprio objectives using object pose and geometry. Goal is the separate observation, not the fixed red anchor. Compared with augmented AdaJEPA, same external target 6.",
+      "unit": "Control",
+      "arms": [
+        {
+          "name": "AdaJEPA",
+          "success": false,
+          "source": "reports/publication_v14/archives/pusht_visual_complete.tar.gz::eval_outputs/pusht_visual_v8/augmented/redAnchor/seed100/adajepa/attempts/001",
+          "metrics": {
+            "max_logged_endpoint_error": 0.0004976749420166904
+          },
+          "capture": "real simulator saved-action replay validated against logged five-control endpoints",
+          "last_step": 150
+        },
+        {
+          "name": "Ours | LeWM + intervention",
+          "source": "eval_outputs/lewm_shift_visuals_20261116/red_goal_ours/recorded_execution.npz",
+          "success": true,
+          "metrics": {},
+          "capture": "original recorded simulator observations",
+          "last_step": 65
+        }
+      ]
+    },
+    {
+      "key": "rope_ablation",
+      "domain": "Rope",
+      "purpose": "ECP escape",
+      "notes": "Seed101 target15, matched 3/3 cadence. First ECP application at push7. One frame per executed push.",
+      "unit": "Push",
+      "arms": [
+        {
+          "name": "DINO-WM 3/3 | ECP off",
+          "source": "eval_outputs/rope_seed101_20/native3/sample_05/recorded_execution.npz",
+          "success": false,
+          "metrics": {
+            "arm": "native3",
+            "sample": "5",
+            "global_sample": "15",
+            "base_seed": "101",
+            "initial_cd": "1.8230674619020233",
+            "final_cd": "1.7939197385826178",
+            "success": "False",
+            "actual_pushes": "20",
+            "optimizer_calls": "7",
+            "S_trigger_events": "0",
+            "used_trigger_memories": "0",
+            "first_S_application_push": "",
+            "used_fractional_strength_memories": "0",
+            "positive_penalty_evaluations": "0",
+            "elapsed_s": "220.21065680100583"
+          },
+          "capture": "original recorded simulator observations",
+          "last_step": 20,
+          "independently_verified_final_cd": 1.7939197385826178
+        },
+        {
+          "name": "Ours | DINO-WM 3/3 + ECP",
+          "source": "eval_outputs/rope_seed101_20/fixed3/sample_05/recorded_execution.npz",
+          "success": true,
+          "metrics": {
+            "arm": "fixed3",
+            "sample": "5",
+            "global_sample": "15",
+            "base_seed": "101",
+            "initial_cd": "1.8230674619020233",
+            "final_cd": "0.16810256511376237",
+            "success": "True",
+            "actual_pushes": "20",
+            "optimizer_calls": "7",
+            "S_trigger_events": "5",
+            "used_trigger_memories": "5",
+            "first_S_application_push": "7",
+            "used_fractional_strength_memories": "0",
+            "positive_penalty_evaluations": "1689",
+            "elapsed_s": "226.67503435298568"
+          },
+          "capture": "original recorded simulator observations",
+          "last_step": 20,
+          "independently_verified_final_cd": 0.16810256511376237
+        }
+      ]
+    },
+    {
+      "key": "rope_methods",
+      "domain": "Rope",
+      "purpose": "Method comparison",
+      "notes": "Separate recorded visualization, target13. Full planner comparison with native 5/5 versus Ours 3/3 cadence. ECP has zero triggers in this example; the matched-cadence ablation is provided separately.",
+      "unit": "Push",
+      "arms": [
+        {
+          "name": "DINO-WM native 5/5",
+          "source": "eval_outputs/rope_qualitative20/native5/sample_03/recorded_execution.npz",
+          "success": false,
+          "metrics": {
+            "success": "False",
+            "final_cd": 0.7160015128332525
+          },
+          "capture": "original recorded simulator observations",
+          "last_step": 20,
+          "independently_verified_final_cd": 0.7160015128332525
+        },
+        {
+          "name": "Ours | DINO-WM 3/3 + ECP",
+          "source": "eval_outputs/rope_qualitative20/fixed3/sample_03/recorded_execution.npz",
+          "success": true,
+          "metrics": {
+            "success": "True",
+            "final_cd": 0.08355946106268575
+          },
+          "capture": "original recorded simulator observations",
+          "last_step": 4,
+          "independently_verified_final_cd": 0.08355946106268575
+        }
+      ]
+    },
+    {
+      "key": "maze_ablation",
+      "domain": "Maze",
+      "purpose": "ECP escape",
+      "notes": "Seed100 medium maze target17; gamma_hi=.45, gamma_lo=.05; real replay observations at every control. Path inset uses simulator world coordinates.",
+      "unit": "Control",
+      "arms": [
+        {
+          "name": "AdaJEPA | ECP off",
+          "source": "eval_outputs/maze_medium20_s100_g045/adajepa/recorded_execution.npz",
+          "success": false,
+          "metrics": {},
+          "capture": "original recorded simulator observations",
+          "last_step": 150
+        },
+        {
+          "name": "Ours | AdaJEPA + gated ECP",
+          "source": "eval_outputs/maze_medium20_s100_g045/adajepa_s/recorded_execution.npz",
+          "success": true,
+          "metrics": {},
+          "capture": "original recorded simulator observations",
+          "last_step": 110
+        }
+      ]
+    },
+    {
+      "key": "maze_methods",
+      "domain": "Maze",
+      "purpose": "Method comparison",
+      "notes": "Seed100 medium maze target13; gamma_hi=.45, gamma_lo=.05; real replay observations at every control. Path inset uses simulator world coordinates.",
+      "unit": "Control",
+      "arms": [
+        {
+          "name": "Frozen MPC",
+          "source": "eval_outputs/maze_medium20_s100_g045/frozen/recorded_execution.npz",
+          "success": false,
+          "metrics": {},
+          "capture": "original recorded simulator observations",
+          "last_step": 150
+        },
+        {
+          "name": "Ours | AdaJEPA + gated ECP",
+          "source": "eval_outputs/maze_medium20_s100_g045/adajepa_s/recorded_execution.npz",
+          "success": true,
+          "metrics": {},
+          "capture": "original recorded simulator observations",
+          "last_step": 130
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "env/pusht/pusht_env.py": "e76a4cf6d1dd143156dcfa25076371c76a238f6d523415ae74a387b7b0919378",
+    "paper/cvpr2027/provenance/replayed_paths_v12.json": "d29dcedb58c545ff5dd84a109a4892b63d21f9224d47645b75e0ac6b9d9cfe1b",
+    "reports/publication_v14/archives/main_pushobj_adajepa.tar.gz": "ec9d7e29df18899f3791a5600e6d2973e2869239acd34aa27d26898ae43238e4",
+    "reports/publication_v14/archives/main_pushobj_frozen.tar.gz": "10ae6bb63556ed53c2f5382427929542a7e6af2713da5828ac0a498f799400dc",
+    "reports/frozen_ecp_cost_20261117/raw_results.tar.gz": "6de9038619f2772d49f4d4312b2a7a5fea575c24300637d5d753c71290d70708",
+    "eval_outputs/lewm_shift_visuals_20261116/red_goal_native/recorded_execution.npz": "e79ac90ffbd7fc294db38278dd8a1008939234387e50ba8e32a4bab9acdbaaac",
+    "eval_outputs/lewm_shift_visuals_20261116/red_goal_ours/recorded_execution.npz": "34b7c22f5f72264359276062d33631ef2dc970e9f023889c47f3c69c22d8b5eb",
+    "reports/publication_v14/archives/pusht_visual_complete.tar.gz": "77e4d0956f96ea4eb0d93a58d0570dcdb1be34c6358ae6b0601d52187a0e5049",
+    "reports/rope_seed101_20/per_sample.csv": "7d708e13c1d3f11848722359d263967f347a1bd35207855bcb2dd0ddb0c03d77",
+    "eval_outputs/rope_seed101_20/native3/sample_05/recorded_execution.npz": "2cef0816384406f2e4735fbe300fa7230b6d3d64f404cd1eea2cb0a1f7364917",
+    "eval_outputs/rope_seed101_20/fixed3/sample_05/recorded_execution.npz": "d2922de3e660be746aeac4c23c60eb7ac11f9e0db3b98f9e444de9b584f9b6b2",
+    "eval_outputs/rope_seed101_20/native3/sample_05/target.pkl": "5e51cf46e231a7104df398d853772921cd855a4945d3849506b56896013ab363",
+    "reports/rope_formal20/visuals/provenance.json": "0609a01f033e3396e9143f601f3e320d736310659c782ef05d1dba2413588af0",
+    "eval_outputs/rope_qualitative20/native5/sample_03/recorded_execution.npz": "de359b54374c61bdb56c0f028e1ebc6529ffe6001995f42503c4a2e7f97d105e",
+    "eval_outputs/rope_qualitative20/fixed3/sample_03/recorded_execution.npz": "24a37ec957ea21f9d79208801641eeeda51ef69087ad7e2a9b080fdbee5d7b97",
+    "eval_outputs/rope_qualitative20/native5/sample_03/target.pkl": "e1894b77488b9e2f61760d6ef4a1c1150d5b90c9067fa4160e8bed8269a9b58c",
+    "eval_outputs/maze_medium20_s100_g045/adajepa/recorded_execution.npz": "3019cd2cf5b4818b32c9c58a91a2b135b5db3400a7ca1cc50b783f5dd5563c44",
+    "eval_outputs/maze_medium20_s100_g045/adajepa_s/recorded_execution.npz": "d0286a8469898146e686232247df7d694ba39feee58b9c60b3958a50b9646055",
+    "eval_outputs/maze_medium20_s100_g045/frozen/recorded_execution.npz": "1ceff1159ba19ac7a95734df62d4ce6a705d8a5b360d62d8be33f0f580568ed2",
+    "media/community_simulations/export_frames.py": "5225620ed1383cffc569f713802b98a983b4de61282fc3962fd788d51ee66de6",
+    "media/community_simulations/verify_and_index.py": "f3e6223e499092528d8292747847ed8a1f95afcb46e196453cf801e291d4839d"
+  },
+  "selection": "Purposefully selected qualitative paired examples with visible outcome differences."
+}

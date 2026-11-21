@@ -1,0 +1,163 @@
+{
+  "key": "rope_methods",
+  "domain": "Rope",
+  "purpose": "Method comparison",
+  "notes": "Separate recorded visualization, target13. Full planner comparison with native 5/5 versus Ours 3/3 cadence. ECP has zero triggers in this example; the matched-cadence ablation is provided separately.",
+  "unit": "Push",
+  "arms": [
+    {
+      "name": "DINO-WM native 5/5",
+      "source": "eval_outputs/rope_qualitative20/native5/sample_03/recorded_execution.npz",
+      "success": false,
+      "metrics": {
+        "success": "False",
+        "final_cd": 0.7160015128332525
+      },
+      "capture": "original recorded simulator observations",
+      "last_step": 20
+    },
+    {
+      "name": "Ours | DINO-WM 3/3 + ECP",
+      "source": "eval_outputs/rope_qualitative20/fixed3/sample_03/recorded_execution.npz",
+      "success": true,
+      "metrics": {
+        "success": "True",
+        "final_cd": 0.08355946106268575
+      },
+      "capture": "original recorded simulator observations",
+      "last_step": 4
+    }
+  ],
+  "frames": [
+    {
+      "path": "rope_methods/baseline/frame_0000.png",
+      "step": 0,
+      "sha256": "8ab982187fb1f93d61cfe63d52ebd054af2261685adc2686ba9aea4b95a8c79a"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0001.png",
+      "step": 1,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0002.png",
+      "step": 2,
+      "sha256": "3e6328f7dd3f6bd5fd4084e3fd8193f6219114eb0890a0b96d8dfce3872ca6c2"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0003.png",
+      "step": 3,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0004.png",
+      "step": 4,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0005.png",
+      "step": 5,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0006.png",
+      "step": 6,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0007.png",
+      "step": 7,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0008.png",
+      "step": 8,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0009.png",
+      "step": 9,
+      "sha256": "3e6328f7dd3f6bd5fd4084e3fd8193f6219114eb0890a0b96d8dfce3872ca6c2"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0010.png",
+      "step": 10,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0011.png",
+      "step": 11,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0012.png",
+      "step": 12,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0013.png",
+      "step": 13,
+      "sha256": "a5b974accb9c175e250f9cff96624f5ae5d7cbec1b04516ebe0eb9a3844c59c9"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0014.png",
+      "step": 14,
+      "sha256": "a5b974accb9c175e250f9cff96624f5ae5d7cbec1b04516ebe0eb9a3844c59c9"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0015.png",
+      "step": 15,
+      "sha256": "a5b974accb9c175e250f9cff96624f5ae5d7cbec1b04516ebe0eb9a3844c59c9"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0016.png",
+      "step": 16,
+      "sha256": "a5b974accb9c175e250f9cff96624f5ae5d7cbec1b04516ebe0eb9a3844c59c9"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0017.png",
+      "step": 17,
+      "sha256": "4ad8dc66f5ae0c3580d50173cd50f839166d5737b9783c465d7b17de382da48a"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0018.png",
+      "step": 18,
+      "sha256": "4ad8dc66f5ae0c3580d50173cd50f839166d5737b9783c465d7b17de382da48a"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0019.png",
+      "step": 19,
+      "sha256": "c6583af6ccfd5ee8e8c7689e321c2fa309495a1d175a510aa085b843fef9a13e"
+    },
+    {
+      "path": "rope_methods/baseline/frame_0020.png",
+      "step": 20,
+      "sha256": "43fd25e40fdcbfaa38af36fe7cf399ad52b24e1f0084f297521dff201f155cab"
+    },
+    {
+      "path": "rope_methods/ours/frame_0000.png",
+      "step": 0,
+      "sha256": "8ab982187fb1f93d61cfe63d52ebd054af2261685adc2686ba9aea4b95a8c79a"
+    },
+    {
+      "path": "rope_methods/ours/frame_0001.png",
+      "step": 1,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/ours/frame_0002.png",
+      "step": 2,
+      "sha256": "a580a09119b51df7a23bc82b4024cb5e4427c65abaf74929b71974aa40b8cf98"
+    },
+    {
+      "path": "rope_methods/ours/frame_0003.png",
+      "step": 3,
+      "sha256": "c187105425046b9742459a74d607e085a844e5a70be9d98cdaa3a328ab5811ab"
+    },
+    {
+      "path": "rope_methods/ours/frame_0004.png",
+      "step": 4,
+      "sha256": "5040ace6a88843deff06e5286972af58feebd7d02b6a59d08247cea41bba7293"
+    }
+  ]
+}

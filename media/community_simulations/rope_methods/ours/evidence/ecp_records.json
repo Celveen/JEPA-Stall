@@ -1,0 +1,84 @@
+[
+  {
+    "completed_replans": 1,
+    "completed_pushes": 1,
+    "cd": [
+      0.8436568492578707
+    ],
+    "planning_s": 6.533314580039587,
+    "detector_eligible": false,
+    "severity_weight": 0.0,
+    "new_memory_strength": 0.0,
+    "chunk_query": true,
+    "next_chunk_push_one_based": 4,
+    "success": [
+      false
+    ],
+    "actual_pushes": [
+      1
+    ],
+    "newly_successful": []
+  },
+  {
+    "completed_replans": 2,
+    "completed_pushes": 2,
+    "cd": [
+      0.8436568452905024
+    ],
+    "planning_s": 3.878399729728699e-05,
+    "detector_eligible": false,
+    "severity_weight": 0.0,
+    "new_memory_strength": 0.0,
+    "chunk_query": false,
+    "next_chunk_push_one_based": 4,
+    "success": [
+      false
+    ],
+    "actual_pushes": [
+      2
+    ],
+    "newly_successful": []
+  },
+  {
+    "completed_replans": 3,
+    "completed_pushes": 3,
+    "cd": [
+      0.6705911280969454
+    ],
+    "planning_s": 4.544295370578766e-05,
+    "detector_eligible": false,
+    "severity_weight": 0.0,
+    "new_memory_strength": 0.0,
+    "chunk_query": false,
+    "next_chunk_push_one_based": 4,
+    "success": [
+      false
+    ],
+    "actual_pushes": [
+      3
+    ],
+    "newly_successful": []
+  },
+  {
+    "completed_replans": 4,
+    "completed_pushes": 4,
+    "cd": [
+      0.08355946106268575
+    ],
+    "planning_s": 6.40068603301188,
+    "detector_eligible": false,
+    "severity_weight": 0.0,
+    "new_memory_strength": 0.0,
+    "chunk_query": true,
+    "next_chunk_push_one_based": 7,
+    "success": [
+      true
+    ],
+    "actual_pushes": [
+      4
+    ],
+    "newly_successful": [
+      0
+    ]
+  }
+]

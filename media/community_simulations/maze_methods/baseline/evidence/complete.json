@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "diagnostic_only": false,
+  "arm": "frozen",
+  "tasks": 20,
+  "gamma_hi": 0.45,
+  "gamma_lo": 0.05,
+  "maximum_replans": 30,
+  "action_repeat": 4,
+  "success_rule": "position distance strictly <0.5",
+  "successes": 9,
+  "elapsed_s": 2976.8412797059864,
+  "checkpoint": {
+    "epoch": 3,
+    "encoder": "SmallResNet",
+    "checkpoint_sha256": "ea178401f573406e91f9df49836c85e9d51726a51756217918c4dcd62ec4e562"
+  },
+  "model_audit": {
+    "frameskip": 5,
+    "model_horizon": 5,
+    "executed_model_steps": 1,
+    "weights_before": "d3e535c1f03ffb0c986db4bdbd4548fd204e5c5fd888d688de070a700a56a68a",
+    "weights_after": "d3e535c1f03ffb0c986db4bdbd4548fd204e5c5fd888d688de070a700a56a68a",
+    "model_restored_after_tasks": true
+  },
+  "adaptation_updates": [],
+  "protocol": "paper medium BFS 6\u20139; GD100; horizon25/execute5; independent per-task model reset",
+  "renderer": "MuJoCo 2.1 OSMesa",
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "runner_sha256": "f448b9e32fa11bada367ee60f12310752907173c831a47a88c611afefa1dd6a5"
+}

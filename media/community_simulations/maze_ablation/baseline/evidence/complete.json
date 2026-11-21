@@ -1,0 +1,2649 @@
+{
+  "status": "complete",
+  "diagnostic_only": false,
+  "arm": "adajepa",
+  "tasks": 20,
+  "gamma_hi": 0.45,
+  "gamma_lo": 0.05,
+  "maximum_replans": 30,
+  "action_repeat": 4,
+  "success_rule": "position distance strictly <0.5",
+  "successes": 10,
+  "elapsed_s": 3104.8460164080025,
+  "checkpoint": {
+    "epoch": 3,
+    "encoder": "SmallResNet",
+    "checkpoint_sha256": "ea178401f573406e91f9df49836c85e9d51726a51756217918c4dcd62ec4e562"
+  },
+  "model_audit": {
+    "frameskip": 5,
+    "model_horizon": 5,
+    "executed_model_steps": 1,
+    "weights_before": "d3e535c1f03ffb0c986db4bdbd4548fd204e5c5fd888d688de070a700a56a68a",
+    "weights_after": "d3e535c1f03ffb0c986db4bdbd4548fd204e5c5fd888d688de070a700a56a68a",
+    "model_restored_after_tasks": true
+  },
+  "adaptation_updates": [
+    {
+      "losses": [
+        0.15095868706703186
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.14211884140968323
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.15225368738174438
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.12614452838897705
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.10240323841571808
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06560226529836655
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.09389179944992065
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.08453015238046646
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06743879616260529
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05492323637008667
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04610498994588852
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04376788064837456
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.052192479372024536
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.048837266862392426
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03863120824098587
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03549463674426079
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03319975733757019
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.030650481581687927
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024939492344856262
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024424243718385696
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02063644491136074
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022501327097415924
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018123213201761246
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018266288563609123
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017298564314842224
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016917696222662926
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016286130994558334
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016352226957678795
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.015831641852855682
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.015009107999503613
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.013632143847644329
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0157672930508852
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.014793045818805695
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016467347741127014
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.15306352078914642
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.10096263140439987
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.09777577221393585
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07251559942960739
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06585787981748581
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0533074289560318
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.052677035331726074
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.038908831775188446
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.037025753408670425
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03697885572910309
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03666631504893303
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03270361199975014
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.033437564969062805
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03510911762714386
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0295800119638443
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.030749788507819176
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026056785136461258
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024088134989142418
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0929424986243248
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06933598965406418
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.11998574435710907
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.10898462682962418
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.08514583855867386
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06822091341018677
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05158577859401703
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.040670957416296005
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03310813754796982
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03049565479159355
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023191582411527634
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024492232128977776
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023788180202245712
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021952679380774498
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022147800773382187
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02345169149339199
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.020982962101697922
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018260501325130463
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018129058182239532
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02053064852952957
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018956147134304047
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018620017915964127
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018848523497581482
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019772082567214966
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021053552627563477
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.020524021238088608
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021178092807531357
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01814946159720421
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016638347879052162
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016730479896068573
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01598740741610527
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016998693346977234
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07499172538518906
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07331322133541107
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.058209117501974106
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04374561086297035
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03610723093152046
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.038461197167634964
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04142722487449646
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04044697806239128
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03480667993426323
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03721192479133606
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03562980517745018
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0438871756196022
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.046119242906570435
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.040565125644207
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03403761610388756
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03509901091456413
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022716592997312546
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02556515857577324
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02298562042415142
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022719305008649826
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02686300501227379
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026781907305121422
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023248758167028427
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02265184186398983
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022792790085077286
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024362504482269287
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026748433709144592
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022313570603728294
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0204551350325346
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02057173289358616
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07063474506139755
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0658508688211441
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.054458726197481155
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04813510552048683
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.12383323907852173
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.1339653581380844
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.09836707264184952
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0868721678853035
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06786870956420898
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06320042908191681
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05745510384440422
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04115656018257141
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.034327298402786255
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.031363680958747864
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.028395352885127068
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03129638731479645
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0312628410756588
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03085280954837799
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.030030805617570877
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02504175901412964
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.028730209916830063
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025286853313446045
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02741250954568386
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023283179849386215
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022685309872031212
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024615194648504257
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.029799513518810272
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.031141435727477074
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.037938568741083145
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03566977381706238
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03517323359847069
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03257846459746361
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02854720503091812
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.028560850769281387
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.09318120032548904
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06752868741750717
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05419845134019852
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0428442507982254
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.11140469461679459
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.10153037309646606
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.08990934491157532
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07279869168996811
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05582590028643608
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05123741552233696
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.041500791907310486
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03569905459880829
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0288020521402359
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02732335589826107
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.027346542105078697
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02685333415865898
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026499902829527855
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026590770110487938
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026539241895079613
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.027260860428214073
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025239532813429832
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0242563858628273
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022312354296445847
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02288658730685711
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02196284756064415
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.020192500203847885
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02040179632604122
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.020996227860450745
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021331703290343285
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025447992607951164
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026442933827638626
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.028423819690942764
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03142690286040306
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.08781902492046356
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06806538254022598
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.049927953630685806
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.040244027972221375
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03602958470582962
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0319756381213665
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03220221772789955
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.028324753046035767
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026718012988567352
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02365713380277157
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02326425537467003
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02075781486928463
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02094564400613308
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022129584103822708
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018449433147907257
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02075585536658764
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01981697976589203
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019922254607081413
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02053305134177208
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024267321452498436
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0295172780752182
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04054303839802742
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.033272769302129745
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02956606075167656
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.027150586247444153
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0288173109292984
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025090456008911133
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022405024617910385
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024015411734580994
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025753093883395195
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.10603503882884979
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07292637974023819
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04613029584288597
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03991430997848511
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03319305554032326
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026503434404730797
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024894442409276962
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0234142504632473
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02563575655221939
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024546286091208458
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025149531662464142
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.020363179966807365
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019870327785611153
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022388935089111328
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018171634525060654
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.020746003836393356
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021206891164183617
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.12383916974067688
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.1020846888422966
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.08573293685913086
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.08422264456748962
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07060965895652771
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07080797106027603
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06848232448101044
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.050825320184230804
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05820250138640404
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04882480949163437
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05879724770784378
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.047407012432813644
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04270511120557785
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0366194024682045
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.032609306275844574
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03241228312253952
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03496183082461357
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.042277947068214417
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03866990655660629
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.038206443190574646
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.037659741938114166
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0328194797039032
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.028597623109817505
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03080832213163376
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.030956825241446495
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.033450957387685776
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03456045687198639
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04151368886232376
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.034263402223587036
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03673475980758667
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0758824273943901
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06823202222585678
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.053744517266750336
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.049345336854457855
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04392382130026817
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04104804992675781
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03310532122850418
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026137232780456543
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02003113552927971
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02008391171693802
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021841442212462425
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02577780745923519
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022146910429000854
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02207055315375328
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019047975540161133
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02277393266558647
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0297124944627285
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03282255679368973
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0329238623380661
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03363035246729851
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.029207050800323486
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02227955125272274
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02688288316130638
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026011651381850243
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.027428507804870605
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0346982516348362
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.16285786032676697
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.12245286256074905
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07809606194496155
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06894458085298538
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0508015938103199
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0475773960351944
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03936545550823212
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04040546342730522
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03293068706989288
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.030075011774897575
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025510355830192566
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022926397621631622
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021525006741285324
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022348677739501
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02207150310277939
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02193017303943634
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023714464157819748
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.027663379907608032
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.037888303399086
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03618691861629486
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03391247242689133
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0274099912494421
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025798462331295013
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025855310261249542
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021322576329112053
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016704175621271133
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019489623606204987
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018039608374238014
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017234018072485924
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017651841044425964
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017169270664453506
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018044328317046165
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.09303435683250427
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06627407670021057
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05102033540606499
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04285415634512901
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03662572056055069
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.035409148782491684
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02949356660246849
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.025974400341510773
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021559014916419983
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023393407464027405
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024033892899751663
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022264141589403152
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018157020211219788
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018405530601739883
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019146911799907684
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019461318850517273
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018174730241298676
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.015991387888789177
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01916489005088806
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017136892303824425
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016932012513279915
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017231037840247154
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017195124179124832
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016197774559259415
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.013951560482382774
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017534596845507622
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01389348041266203
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.014839330688118935
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017654335126280785
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016171012073755264
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.12761442363262177
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.12021642178297043
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.1026163324713707
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.10025408864021301
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07861661911010742
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06557580828666687
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05227181315422058
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04820981249213219
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.050261240452528
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04979279264807701
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05210644751787186
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04653996229171753
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.040365781635046005
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04196618124842644
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05052807927131653
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.054875947535037994
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04480898007750511
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04146964102983475
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.029968123883008957
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026163920760154724
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.026974443346261978
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03414072096347809
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.029335707426071167
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02591780573129654
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023889636620879173
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022589191794395447
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022540923207998276
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019397474825382233
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.024288605898618698
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019453953951597214
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06588190048933029
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.06972572952508926
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05948152765631676
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.054342545568943024
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.042971253395080566
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03452347218990326
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.031147535890340805
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023282386362552643
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02165268361568451
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02185468003153801
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021353399381041527
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.023334510624408722
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019001252949237823
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018922192975878716
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01812160760164261
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018465664237737656
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.015163680538535118
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016370728611946106
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0179183017462492
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017862003296613693
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018185315653681755
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.016662508249282837
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01708265207707882
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021120913326740265
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01990235224366188
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.020304881036281586
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.019614320248365402
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01841171830892563
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0188607107847929
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021396305412054062
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.13462583720684052
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.1218452975153923
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.11120156198740005
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0932646095752716
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.07859960198402405
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0724332332611084
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05908495932817459
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.05286332592368126
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.046671025454998016
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04654103145003319
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.041209910064935684
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04086381196975708
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.035099759697914124
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03373950719833374
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.033008817583322525
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.03667619079351425
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.04105686768889427
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.0449308305978775
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.043142177164554596
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02899971976876259
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.022737309336662292
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.020815163850784302
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.021599752828478813
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.02095293626189232
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.018752388656139374
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017713159322738647
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01687253639101982
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.017130106687545776
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.015617343597114086
+      ],
+      "changed_parameter_tensors": 19
+    },
+    {
+      "losses": [
+        0.01627810113132
+      ],
+      "changed_parameter_tensors": 19
+    }
+  ],
+  "protocol": "paper medium BFS 6\u20139; GD100; horizon25/execute5; independent per-task model reset",
+  "renderer": "MuJoCo 2.1 OSMesa",
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "runner_sha256": "f448b9e32fa11bada367ee60f12310752907173c831a47a88c611afefa1dd6a5"
+}

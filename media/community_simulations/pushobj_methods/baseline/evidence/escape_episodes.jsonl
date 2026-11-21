@@ -1,0 +1,10 @@
+{"sample_idx": 0, "seed": 1, "success": true, "replans": 6, "n_escapes": 0, "escape_iters": [], "stalled_iters": [], "ws_clipped_iters": []}
+{"sample_idx": 1, "seed": 101, "success": true, "replans": 9, "n_escapes": 0, "escape_iters": [], "stalled_iters": [], "ws_clipped_iters": []}
+{"sample_idx": 2, "seed": 201, "success": false, "replans": 40, "n_escapes": 0, "escape_iters": [], "stalled_iters": [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], "ws_clipped_iters": []}
+{"sample_idx": 3, "seed": 301, "success": false, "replans": 40, "n_escapes": 0, "escape_iters": [], "stalled_iters": [11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], "ws_clipped_iters": []}
+{"sample_idx": 4, "seed": 401, "success": false, "replans": 40, "n_escapes": 0, "escape_iters": [], "stalled_iters": [10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], "ws_clipped_iters": []}
+{"sample_idx": 5, "seed": 501, "success": true, "replans": 6, "n_escapes": 0, "escape_iters": [], "stalled_iters": [], "ws_clipped_iters": []}
+{"sample_idx": 6, "seed": 601, "success": true, "replans": 7, "n_escapes": 0, "escape_iters": [], "stalled_iters": [], "ws_clipped_iters": []}
+{"sample_idx": 7, "seed": 701, "success": true, "replans": 7, "n_escapes": 0, "escape_iters": [], "stalled_iters": [], "ws_clipped_iters": []}
+{"sample_idx": 8, "seed": 801, "success": false, "replans": 40, "n_escapes": 0, "escape_iters": [], "stalled_iters": [11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 32, 33, 34, 35, 36, 37, 38, 39], "ws_clipped_iters": []}
+{"sample_idx": 9, "seed": 901, "success": false, "replans": 40, "n_escapes": 0, "escape_iters": [], "stalled_iters": [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], "ws_clipped_iters": []}

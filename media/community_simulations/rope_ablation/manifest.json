@@ -1,0 +1,269 @@
+{
+  "key": "rope_ablation",
+  "domain": "Rope",
+  "purpose": "ECP escape",
+  "notes": "Seed101 target15, matched 3/3 cadence. First ECP application at push7. One frame per executed push.",
+  "unit": "Push",
+  "arms": [
+    {
+      "name": "DINO-WM 3/3 | ECP off",
+      "source": "eval_outputs/rope_seed101_20/native3/sample_05/recorded_execution.npz",
+      "success": false,
+      "metrics": {
+        "arm": "native3",
+        "sample": "5",
+        "global_sample": "15",
+        "base_seed": "101",
+        "initial_cd": "1.8230674619020233",
+        "final_cd": "1.7939197385826178",
+        "success": "False",
+        "actual_pushes": "20",
+        "optimizer_calls": "7",
+        "S_trigger_events": "0",
+        "used_trigger_memories": "0",
+        "first_S_application_push": "",
+        "used_fractional_strength_memories": "0",
+        "positive_penalty_evaluations": "0",
+        "elapsed_s": "220.21065680100583"
+      },
+      "capture": "original recorded simulator observations",
+      "last_step": 20
+    },
+    {
+      "name": "Ours | DINO-WM 3/3 + ECP",
+      "source": "eval_outputs/rope_seed101_20/fixed3/sample_05/recorded_execution.npz",
+      "success": true,
+      "metrics": {
+        "arm": "fixed3",
+        "sample": "5",
+        "global_sample": "15",
+        "base_seed": "101",
+        "initial_cd": "1.8230674619020233",
+        "final_cd": "0.16810256511376237",
+        "success": "True",
+        "actual_pushes": "20",
+        "optimizer_calls": "7",
+        "S_trigger_events": "5",
+        "used_trigger_memories": "5",
+        "first_S_application_push": "7",
+        "used_fractional_strength_memories": "0",
+        "positive_penalty_evaluations": "1689",
+        "elapsed_s": "226.67503435298568"
+      },
+      "capture": "original recorded simulator observations",
+      "last_step": 20
+    }
+  ],
+  "frames": [
+    {
+      "path": "rope_ablation/baseline/frame_0000.png",
+      "step": 0,
+      "sha256": "c6156797b4f0c2ae73bca50a84b46a56557062d9369a446a12f3b76079f7e4c7"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0001.png",
+      "step": 1,
+      "sha256": "e4a3a986b8ad58b87dc8a0ab4c45aeacf9aaf731a9d1f5f96fff8b6127adc7bb"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0002.png",
+      "step": 2,
+      "sha256": "e4a3a986b8ad58b87dc8a0ab4c45aeacf9aaf731a9d1f5f96fff8b6127adc7bb"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0003.png",
+      "step": 3,
+      "sha256": "e4a3a986b8ad58b87dc8a0ab4c45aeacf9aaf731a9d1f5f96fff8b6127adc7bb"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0004.png",
+      "step": 4,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0005.png",
+      "step": 5,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0006.png",
+      "step": 6,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0007.png",
+      "step": 7,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0008.png",
+      "step": 8,
+      "sha256": "4417fc67f9ba5b76bb406bda73cefdebd09d998e47078a13c80ea3356989ebad"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0009.png",
+      "step": 9,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0010.png",
+      "step": 10,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0011.png",
+      "step": 11,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0012.png",
+      "step": 12,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0013.png",
+      "step": 13,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0014.png",
+      "step": 14,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0015.png",
+      "step": 15,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0016.png",
+      "step": 16,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0017.png",
+      "step": 17,
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0018.png",
+      "step": 18,
+      "sha256": "2627051bba2d1c46a635074b4c05a6640413da47c11642a547b7a219e977313f"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0019.png",
+      "step": 19,
+      "sha256": "2627051bba2d1c46a635074b4c05a6640413da47c11642a547b7a219e977313f"
+    },
+    {
+      "path": "rope_ablation/baseline/frame_0020.png",
+      "step": 20,
+      "sha256": "60b360d3b1e48fe4c4dc38985de741e467a6fb4245f4134adb8f7ecad5e1dd29"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0000.png",
+      "step": 0,
+      "sha256": "c6156797b4f0c2ae73bca50a84b46a56557062d9369a446a12f3b76079f7e4c7"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0001.png",
+      "step": 1,
+      "sha256": "223a81e98821a5a208445ecf6f10ff894477ff594a4b908d99a029aa4cefaf7f"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0002.png",
+      "step": 2,
+      "sha256": "e4a3a986b8ad58b87dc8a0ab4c45aeacf9aaf731a9d1f5f96fff8b6127adc7bb"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0003.png",
+      "step": 3,
+      "sha256": "e4a3a986b8ad58b87dc8a0ab4c45aeacf9aaf731a9d1f5f96fff8b6127adc7bb"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0004.png",
+      "step": 4,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0005.png",
+      "step": 5,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0006.png",
+      "step": 6,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0007.png",
+      "step": 7,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0008.png",
+      "step": 8,
+      "sha256": "68bfde5a48e4b8472457514cf7a6af07c52c62adc47c89c3ad178f7546b767e4"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0009.png",
+      "step": 9,
+      "sha256": "afe0c72ca5421b488e09b1e9259b78561afa8f534b95954e8282ce1eb37bc987"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0010.png",
+      "step": 10,
+      "sha256": "afe0c72ca5421b488e09b1e9259b78561afa8f534b95954e8282ce1eb37bc987"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0011.png",
+      "step": 11,
+      "sha256": "fd0ec1cc310cc12917fe1bc9c6e2f434f53674bf76d19e5d6fb28617a5537ef5"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0012.png",
+      "step": 12,
+      "sha256": "d0c900a3d97f5aa53c3ac3ae23bebffed25806d3d0d31d7d440b0e49d88ea567"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0013.png",
+      "step": 13,
+      "sha256": "5955cea979f3d0b4ca9f0fb0af1817c18c76c8ae4b185eb6108c2138a3fa908c"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0014.png",
+      "step": 14,
+      "sha256": "4329ca703f830bb1e0fa7af71e2c811fa3b6f03d0c11252968ac84441bec2352"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0015.png",
+      "step": 15,
+      "sha256": "620d9096179a65eb6001dee0259bd374692f22178d87570a64ea7d45a4d1136d"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0016.png",
+      "step": 16,
+      "sha256": "4329ca703f830bb1e0fa7af71e2c811fa3b6f03d0c11252968ac84441bec2352"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0017.png",
+      "step": 17,
+      "sha256": "4329ca703f830bb1e0fa7af71e2c811fa3b6f03d0c11252968ac84441bec2352"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0018.png",
+      "step": 18,
+      "sha256": "fd854d881ba7b7f38ce74eee2f9ec8e83b1f5e2c508c2aac3fca3dc902df4ab9"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0019.png",
+      "step": 19,
+      "sha256": "bbac5bee3fa0147c2314b8ec3e7c9b50046619d0db12cdeb54188c4e38cf021e"
+    },
+    {
+      "path": "rope_ablation/ours/frame_0020.png",
+      "step": 20,
+      "sha256": "92231e9ede3fb0e88f81ff38a7223dac5c31b86ef6177ebefc80d68f6897c18f"
+    }
+  ]
+}
