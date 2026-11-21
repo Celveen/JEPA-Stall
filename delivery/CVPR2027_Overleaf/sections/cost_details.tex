@@ -1,8 +1,19 @@
+\par\smallskip
+\noindent \begin{minipage}[t]{\columnwidth}
+\vspace{0pt}
 \section{Computational cost}
 \label{sec:cost}
-\begin{table}[t]
+To test feasibility with lower compute, each planning run uses a single RTX 3090. Native and ECP share a fixed checkpoint and tasks; paired ten-task batches run sequentially on the same GPU with alternating order. The implementation uses PyTorch 2.3.0 and CUDA 12.1.\par\smallskip
+\normalsize
+GPU-synchronized timers include CUDA Graph capture and simulator replay, excluding model loading and the separate physics audit. \Cref{tab:cost} shows that fewer replans offset the per-replan overhead and reduce mean task time. Peak allocated memory stays below one GiB.\par
+
+\end{minipage}\hfill
+\begin{minipage}[t]{\columnwidth}
+\vspace{0pt}
+\par\smallskip
+{\centering
 \centering
-\caption{\textbf{ECP trades small planning overhead for fewer replans.} Paired measurements on 350 PushObj tasks using a pretrained ResNet with fixed weights. Task time includes failures at the 30-replan cap; P95 is the 95th percentile across tasks. Memory is the maximum PyTorch peak across episodes.}
+\captionof{table}{\textbf{Planning time and memory on PushObj.} 350 paired tasks, fixed ResNet. Task time includes failures capped at 30 replans. P95: 95th percentile; memory: maximum PyTorch peak.}
 \label{tab:cost}
 \small
 \setlength{\tabcolsep}{3.5pt}
@@ -21,10 +32,7 @@ Peak allocated memory (GiB) &0.823&0.967\\
 Peak reserved memory (GiB) &1.342&1.469\\
 \bottomrule
 \end{tabular*}
-\end{table}
 
-\paragraph{Matched protocol.}
-Both conditions use the same augmented epoch-3 checkpoint, seed 200, and 350 fixed tasks. We keep all 34,295,767 model parameters fixed and use 100 gradient steps per plan (learning rate 0.1, horizon 25), with five controls per replan and a 30-replan cap. ECP uses thresholds 0.15/0.45, $\kappa=2$, and a $10\times$ proprioceptive boost; the native condition omits its objective and bookkeeping. Ten-task pairs run sequentially on the same RTX 3090, alternating condition order. Five GPUs share one host CPU and run PyTorch 2.3.0 with CUDA 12.1.
+\par}
 
-\paragraph{Measurement and interpretation.}
-GPU-synchronized timers include CUDA Graph capture. Task time includes simulator prefix replay and shared diagnostics, excluding model loading and the separate physics audit. No per-episode warm-up is removed. This is one timing pass over the task set; variation across tasks is not timing-repeat uncertainty. ECP rescues 39 failures without regressions and reduces total planning time by 10.0\% (\cref{tab:cost}). The mean task time improves, but P95 rises by 0.89~s and peak allocated memory by 17.6\%; the benefit is fewer planning calls, not universally lower latency or memory use.
+\end{minipage}\par

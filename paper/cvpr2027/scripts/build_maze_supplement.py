@@ -214,6 +214,25 @@ def separate_gallery_inputs(gallery):
             page.draw_line((x, goal.y0 - 12), (x, goal.y1), color=(.80, .83, .84), width=.65)
 
 
+def retain_ten_gallery_panels(gallery):
+    """Remove the last gallery row (k, l), retaining a--j at their native size."""
+    page = gallery[0]
+    labels = {
+        block[4].split(')', 1)[0] + ')': block
+        for block in page.get_text('blocks')
+        if block[4].startswith(('(a)', '(k)'))
+    }
+    cut_y = labels['(k)'][1] - labels['(a)'][1]
+    page.add_redact_annot(
+        pymupdf.Rect(0, cut_y, page.rect.width, page.rect.height),
+        fill=None, cross_out=False,
+    )
+    page.apply_redactions(images=2, graphics=2, text=0)
+    page.set_cropbox(pymupdf.Rect(0, 0, page.rect.width, cut_y))
+    assert '(k)' not in page.get_text() and '(l)' not in page.get_text()
+    assert len(page.get_image_info()) == 40
+
+
 def main():
     plt.rcParams.update({'font.size': 8, 'pdf.fonttype': 42, 'ps.fonttype': 42})
     gallery_runs, _, gallery_goal = read_pair(GALLERY_CASE)
@@ -226,6 +245,7 @@ def main():
                                page.rect.width, page.rect.height)
             separate_gallery_inputs(gallery)
             page.show_pdf_page(box, panel, 0)
+            retain_ten_gallery_panels(gallery)
             gallery.save(FIGURES / 'figS_diverse_execution_maze.pdf', garbage=4, deflate=True)
     rollout_plot()
 
