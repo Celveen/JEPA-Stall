@@ -1,5 +1,5 @@
 \section*{Supplementary Material}
-\Cref{sec:implementation,sec:properties} give the implementation and proofs. The remaining sections document the evaluations, ablations, and simulator rollouts.
+\Cref{sec:implementation,sec:properties} give the implementation and proofs. The remaining sections document the benchmark evaluations, ablations, and simulator rollouts.
 
 \section{Implementation and evaluation details}
 \label{sec:implementation}
@@ -24,10 +24,10 @@ For our augmented-data PushObj checkpoints, we train for 3 epochs with $\lambda_
 For Maze, we directly evaluate the published SmallResNet checkpoint (without GeM pooling, trained with $\lambda_{\rm TS}=0.001$ and identical Transformer dimensions) without any new offline training. Both released checkpoints correspond to epoch~3 snapshots from a configured 5-epoch schedule.
 
 \subsection{Interaction-biased data collection}
-We collect training and validation trajectories for each seen shape using the contact bias and Gaussian noise in \cref{tab:parameters}. Source placements use up to four retries, position jitter of 20 pixels, and orientation jitter of 0.3 radians. The simulator receives pixel displacements divided by 100. We retain valid trajectories with physical contact and displacements under 80 pixels per action block. Training and validation use disjoint source pools. The overlap between the released model's pretraining data and evaluated targets is undocumented.
+We collect training and validation trajectories for each seen shape using the contact bias and Gaussian noise in \cref{tab:parameters}. Source placements use up to four retries, position jitter of 20 pixels, and orientation jitter of 0.3 radians. The simulator receives pixel displacements divided by 100. We retain valid trajectories with physical contact and displacements under 80 pixels per action block. Training and validation use disjoint source pools. Overlap between released pretraining data and evaluated targets is undocumented.
 
 \subsection{Receding-horizon planning and online adaptation}
-MPC optimizes a 25-control horizon and executes the first five controls. Adam runs 100 iterations per replan with a cosine schedule from 0.1 to zero. Planning starts from zero displacements, then warm-starts by shifting the unexecuted suffix and padding with zeros. The optimizer adds no action noise.
+MPC optimizes a 25-control horizon and executes the first five controls. Adam runs 100 iterations per replan with a cosine schedule from 0.1 to zero. Planning starts from zero displacements, then warm-starts by shifting the unexecuted suffix and padding with zeros. No action noise is added.
 
 AdaJEPA updates after each executed block using the five most recent transition segments and one-step prediction loss without straightening. It updates the last Transformer block, final normalization layer, and encoder output projection. Learning rates are $5\times10^{-4}$ for the predictor and $10^{-5}$ for the encoder. Each update starts a fresh Adam optimizer and enables dropout only during adaptation. Each episode starts from the offline checkpoint.
 
@@ -72,14 +72,14 @@ J_{\rm all}(A;\alpha)=
      {(H+1)\sum_{h=0}^{H}2^h}.
 \label{eq:baseexact}
 \end{equation}
-Memory uses the same outer horizon normalization over predicted states.
+Memory applies the same outer horizon normalization to the predicted rollout states.
 
 \paragraph{Feedback order.}
-The controller measures prediction loss, updates AdaJEPA when enabled, then detects stalls with the updated encoder. A detected stall stores the current observation. With first-stall activation, the memory and task-specific correction take effect at the next plan. The loss gate in \cref{eq:gate} releases stored memories once the loss plateaus at a stall. Subsequent stalls renew the temporary reweighting, and stored memories last for the episode. Warm-up is ten replans on PushObj and four in the main Maze gating study.
+The controller measures prediction loss, updates AdaJEPA when enabled, then detects stalls with the updated encoder. A detected stall stores the current observation. With first-stall activation, the memory and task-specific correction take effect at the next plan. The loss gate in \cref{eq:gate} releases stored memories once the loss plateaus at a stall. Subsequent stalls renew the temporary reweighting, and stored memories last for the episode. Warm-up lasts ten replans on PushObj and four in the original loss-gated Maze protocol.
 
 \subsection{Paired evaluation and statistical testing}
 \label{sec:paired}
-On PushObj, PushT, and Maze, paired runs share task instances. The objectives coincide until intervention, and the audit checks that actions and states match over this prefix. We reuse non-triggered trajectories and rerun all tasks for permanent reweighting. The exact two-sided McNemar test compares discordant successes. Rescue and harm count tasks that switch from failure to success and from success to failure, respectively.
+On PushObj, PushT, and Maze, paired runs share task instances. The objectives coincide until intervention, and the audit checks that actions and states match over this prefix. We reuse non-triggered trajectories and rerun all tasks for permanent reweighting. The exact two-sided McNemar test compares discordant successes. Rescue and harm count paired tasks that switch from failure to success and from success to failure, respectively.
 
 \input{tables/pusht_checkpoint_matrix}
 
@@ -110,9 +110,9 @@ Propagating this state gradient back to the candidate action sequence $A$ via th
  \sum_{h=1}^{H}\pi_h G_{t,h}^{\top}
  \sum_{j\in\mathcal M_t}w_js_j\nabla_zK_j(\hat z_{t,h}(A)).
 \end{equation}
-The world-model Jacobian maps the latent repulsion to action gradients. Repeated stalls can add penalties in the same neighborhood.
+The world-model Jacobian maps the latent repulsion to action gradients. Repeated stalls can accumulate penalties in the same region of latent space.
 
-The $\epsilon=10^{-12}$ floor keeps degenerate denominators finite. When it is active, exact goal exclusion need not hold, while the full-latent memory amplitude $s_j$ also vanishes with its goal distance. An explored proprioceptive-space variant replaces only the kernel distance and radius with $\norm{z^p-m^p}^2/d_p$ and $\max\{\beta\norm{m^p-z_g^p}^2/d_p,\epsilon\}$; it retains the full-latent amplitude. All main $S$ results use the full-latent version.
+The $\epsilon=10^{-12}$ floor keeps degenerate denominators finite. When it is active, exact goal exclusion need not hold, while the full-latent memory amplitude $s_j$ also vanishes with its goal distance. An explored proprioceptive-space variant replaces only the kernel distance and radius with $\norm{z^p-m^p}^2/d_p$ and $\max\{\beta\norm{m^p-z_g^p}^2/d_p,\epsilon\}$; it retains the full-latent amplitude. All main $S$ results use the full-latent regularizer defined above.
 
 \section{Benchmark comparison protocols}
 \label{sec:benchmark}
@@ -125,13 +125,13 @@ The $\epsilon=10^{-12}$ floor keeps degenerate denominators finite. When it is a
 The PushT benchmark evaluates a common, fixed list of 50 start--goal pairs across clean observations and six visual distribution shifts: Gaussian blur ($\sigma=2$), salt-and-pepper impulse noise (1\% salt, 1\% pepper), darkened lighting (intensity scale $0.9$), and RGB recoloring (to red) of the pusher agent, manipulated T-block, or background goal anchor. The ResNet ECP configuration is transferred from PushObj ($\gamma_{\rm hi}=0.15$) without tuning.
 
 \paragraph{Controller configurations.}
-All PushT methods share the same tasks and control budget. DINO-WM uses its three-epoch T16k checkpoint and replans every 25 controls with a terminal goal cost. LeWM GD and the ResNet controllers replan every five controls. DINO-WM uses 100 steps in GD or 300 candidates, 30 elites, and 30 iterations in CEM. LeWM CEM and DDP-WM CEM use the PushObj CEM settings. The matched pairs in \cref{tab:pusht-ecp} agree up to the first intervention.
+All PushT methods share the same tasks and control budget. DINO-WM uses its three-epoch T16k checkpoint and replans every 25 controls with a terminal goal cost. LeWM GD and the ResNet controllers replan every five controls. DINO-WM uses 100 steps in GD or 300 candidates, 30 elites, and 30 iterations in CEM. LeWM CEM and DDP-WM CEM use the PushObj CEM settings. For each matched pair in \cref{tab:pusht-ecp}, actions and states agree until the first ECP intervention.
 
 The checkpoint matrix in \cref{tab:pusht-ecp} separates the contribution of data, adaptation, and ECP. Within each block, toggling ECP keeps the checkpoint and update rule fixed; success is preserved or improved across all clean and shifted conditions. Comparing training recipes then shows how interaction-biased data and online correction work together.
 
-The shifts also probe different parts of the visual task. Agent recoloring changes the controlled effector, object recoloring changes the manipulated body, and goal recoloring changes the target cue. Keeping the start--goal pairs fixed makes these conditions directly comparable. The common stopping rule evaluates physical alignment, so improvement reflects completed interactions under the altered observations.
+The shifts also probe different parts of the visual task. Agent recoloring changes the controlled effector, object recoloring changes the manipulated body, and goal recoloring changes the target cue. Keeping the start--goal pairs fixed makes these conditions directly comparable. The common stopping rule evaluates physical alignment, so improvement reflects completed interactions when the controller receives visually shifted observations.
 
-The strongest shifted-condition average combines augmented training, adaptation, and ECP. Gains with frozen weights show that correction works without online learning; the matched AdaJEPA rows establish its added contribution during adaptation.
+The strongest shifted-condition average combines augmented training, adaptation, and ECP. Gains with frozen weights show that correction works without online learning; the matched AdaJEPA rows establish its added contribution alongside online model adaptation.
 
 % Keep supplementary figure pages aligned to the same top margin as text pages.
 \makeatletter
@@ -163,14 +163,14 @@ These controls change the visual representation while keeping the planning budge
 \subsection{Transfer to LeWorldModel (LeWM)}
 We train matched random-action and interaction-biased LeWM models~\cite{maes2026lewm} with the same data volume and schedule. This comparison separates learning from more useful interactions from correcting a stall at test time.\par\smallskip
 \normalsize
-For LeWM, ECP guides the pusher toward a contact waypoint after a stall. This tests whether a correction tied to the unfinished physical interaction can turn latent planning into object motion. The waypoint uses the observed object pose and geometry:
+For LeWM, ECP guides the pusher toward a contact waypoint after a stall. This tests whether a correction tied to the unfinished physical interaction can turn latent planning into object motion. The contact waypoint is computed from the observed object pose and its geometry:
 \[
  J_{\rm contact}(A)=10\operatorname{mean}_{k=1,\ldots,5;\,d=x,y}
  \left(\frac{\hat p_{k,d}(A)-q_d}{\sigma_{p,d}}\right)^2.
 \]
-Here $q$ is the waypoint and $\sigma_p$ scales each position coordinate by its dataset standard deviation. The five predicted pusher positions follow differentiable PD dynamics. Guidance lasts four replans per trigger, with at most seven guided replans per episode.
+Here $q$ is the waypoint and $\sigma_p$ scales each position coordinate by its dataset standard deviation. The five predicted pusher positions follow differentiable PD dynamics. Guidance lasts four replans per trigger, with at most seven guided replans across the entire episode.
 
-\Cref{tab:lewm-contact} holds model weights fixed during evaluation. Interaction-biased training improves native planning, and triggered contact guidance adds a further gain under both data recipes. Thus the training data and the execution-conditioned objective contribute at different stages of the controller.\par
+\Cref{tab:lewm-contact} holds model weights fixed during evaluation. Interaction-biased training improves native planning, and triggered contact guidance adds a further gain under both data recipes. Thus the training recipe and execution-conditioned objective contribute at different stages: offline learning and online planning.\par
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
@@ -202,7 +202,7 @@ Contact weight 20 &227&64.9\\
 \par}
 \par\smallskip
 \normalsize
-The contact audit checks how that gain arises. Among 134 stalled tasks, guidance increases contact within 15 controls from 46 to 82 tasks, while cases reducing object error by more than five pixels increase from 11 to 34. Tracking both outcomes connects the correction to useful object motion. The offset controls test a prescribed displacement; the strongest result comes from optimizing contact guidance within planning. This lets the controller select actions under the world model while execution determines when to intervene.\par
+The contact audit checks how that gain arises. Among 134 stalled tasks, guidance increases contact within 15 controls from 46 to 82 tasks, while cases reducing object error by more than five pixels increase from 11 to 34. Tracking both outcomes connects the correction to useful object motion. The offset controls test a prescribed displacement; the strongest result comes from optimizing contact guidance within planning. The controller thus selects actions through the world model, with intervention timed by feedback collected along the executed trajectory.\par
 \end{minipage}\par
 \par\smallskip
 \noindent \begin{minipage}[t]{\columnwidth}
@@ -211,7 +211,7 @@ The contact audit checks how that gain arises. Among 134 stalled tasks, guidance
 \label{sec:dinowm}
 \Cref{tab:dinowm-aug} changes the training actions while holding the DINO-WM architecture, training schedule, and CEM planner fixed. The tested variable is the interaction data.\par\smallskip
 \normalsize
-Augmentation improves every evaluated shape, showing that the data benefit transfers beyond the ResNet controller. This comparison uses native planning with six replans of 25 controls, isolating the offline data contribution from ECP intervention.\par
+Augmentation improves every evaluated shape, showing that the data benefit transfers beyond the ResNet controller. This comparison uses native planning with six replans of 25 controls, separating offline data benefits from correction applied during execution.\par
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
@@ -252,7 +252,7 @@ These controls separate representation, data, and planning gains. We next examin
 \label{sec:threshold-details}
 This sweep tests robustness to detection sensitivity. The checkpoint, tasks, and planner stay fixed while the high threshold varies over a fourfold range.\par\smallskip
 \normalsize
-Larger thresholds detect stalls earlier and in more episodes. Success remains above native planning throughout the sweep, while the rescue/harm counts show that the gain comes from recovering stalled tasks with few regressions. \Cref{tab:threshold-shape} locates this effect by shape: frozen ECP improves both seen and unseen groups, and AdaJEPA gains concentrate on seen shapes.\par
+Larger thresholds detect stalls earlier and in more episodes. Success remains above native planning throughout the sweep, while the rescue/harm counts show that the gain comes from recovering stalled tasks with few regressions. \Cref{tab:threshold-shape} locates this effect by shape: frozen ECP improves both seen and unseen groups, while AdaJEPA improves most on the shapes seen during training.\par
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
@@ -278,7 +278,7 @@ Native &74.9&---&---&---\\
 \end{minipage}\par
 \par\smallskip
 {\centering
-\captionof{table}{\textbf{PushObj threshold sweep by shape.} Success (\%) on 50 tasks per shape over 30 replans. Frozen fixes an augmented-data ResNet, and AdaJEPA updates it online. ECP uses memory and goal reweighting. Seen averages L, Z, $+$, T. Unseen averages I, square (Sq.), small-T (sT).}
+\captionof{table}{\textbf{PushObj threshold sweep by shape.} Success (\%) on 50 tasks per shape, 30 replans. Augmented-data ResNet; Frozen fixes weights, and AdaJEPA updates them. ECP uses memory and goal reweighting. Seen: L, Z, $+$, T; unseen: I, square (Sq.), small-T (sT).}
 \label{tab:threshold-shape}
 \small
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll*{10}{r}@{}}
@@ -302,7 +302,7 @@ AdaJEPA & Native & 52 & 88 & 50 & 94 & 72 & 84 & 84 & 87.5 & 58.0 & 74.9\\
 \section{Additional PushObj ablations and controls}
 \label{sec:additional-controls}
 \subsection{Memory and planning controls}
-\Cref{tab:memory-strength} tests what a memory should represent. Joint visual--proprioceptive memory can distinguish scenes with the same pusher position but different object configurations. It improves success over proprioception-only memory at each tested strength.\par\smallskip
+\Cref{tab:memory-strength} tests what a memory should represent. Joint visual--proprioceptive memory can distinguish scenes with the same pusher position but different object configurations. It improves success over proprioception-only memory across all tested penalty strengths.\par\smallskip
 \normalsize
 The search controls (\cref{tab:timing}) use eight two-step prefixes or a ten-step triggered continuation, with three interventions separated by four replans. ECP alone recovers the most tasks while preserving native successes.\par
 \end{minipage}\hfill
@@ -336,7 +336,7 @@ Joint latent &75.4&76.0&75.7\\
 \vspace{0pt}
 \par\smallskip
 {\centering
-\captionof{table}{\textbf{Training-seed variability on PushObj.} Native success (mean \% $\pm$ sample SD) across three augmented-data ResNet checkpoints. Frozen fixes weights, and AdaJEPA updates them online.}
+\captionof{table}{\textbf{Training-seed variability on PushObj.} Native success (mean \% $\pm$ sample SD) across three augmented-data ResNet checkpoints. Frozen fixes weights; AdaJEPA adapts them online.}
 \label{tab:training}
 \small
 \begin{tabular}{lrr}
@@ -395,7 +395,7 @@ After ten warm-up replans, movement below 10 pixels over three replans triggers 
 \vspace{0pt}
 \section{Maze navigation ablations}
 \label{sec:maze-details}
-The original 100-route study uses high/low thresholds of 0.15/0.05.\par\smallskip
+The original study evaluates 100 navigation routes with high/low stall thresholds of 0.15/0.05.\par\smallskip
 {\centering\input{tables/maze_controls}\par}\par
 
 \end{minipage}\hfill
@@ -403,7 +403,7 @@ The original 100-route study uses high/low thresholds of 0.15/0.05.\par\smallski
 \vspace{0pt}
 \par\smallskip
 {\centering
-\captionof{table}{\textbf{Memory complements continued adaptation on Maze.} AdaJEPA success counts on 100 tasks at 20/50 replans. $S/P$: memory/goal reweighting. Freeze stops updates. Rescue/harm and the exact two-sided McNemar $p$ compare with native at 50 replans.}
+\captionof{table}{\textbf{Memory complements continued adaptation on Maze.} AdaJEPA success counts on 100 tasks at 20/50 replans. $S/P$: memory/goal reweighting. Freeze stops updates. Rescue/harm and the exact two-sided McNemar $p$ compare each intervention with native planning at 50 replans.}
 \label{tab:maze-full}
 \small
 \setlength{\tabcolsep}{2.1pt}
@@ -423,7 +423,7 @@ Freeze, no $S/P$ & Loss gate &53 / 78&2 / 6&0.289\\
 \end{tabular}
 \par}
 \par\smallskip
-Memory redirects repeated corridor visits while AdaJEPA continues learning. Loss-gated memory preserves native successes at 30 replans; longer budgets show the benefit of continued updates. The recorded medium-route examples in \cref{fig:maze-detour} show recovery with either fixed or adapted weights.\par
+Memory redirects repeated corridor visits while AdaJEPA continues learning. Loss-gated memory preserves native successes at 30 replans; longer budgets show the benefit of continued updates. In the recorded medium-route examples (\cref{fig:maze-detour}), memory changes the route with either a frozen or an adapting world model.\par
 
 \end{minipage}\par
 
@@ -434,15 +434,15 @@ Memory redirects repeated corridor visits while AdaJEPA continues learning. Loss
 \noindent \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
 \paragraph{Detection and activation on medium routes.}
-The threshold sweep tests earlier intervention under continuous observation; the fresh-route comparison tests first-stall activation against waiting for prediction loss to plateau. Each block uses matched routes. The detector observes every control, uses a rolling 15-control window, and stores at most one memory per five-control step. The low threshold is one third of the high threshold.
+The threshold sweep tests earlier intervention under continuous observation; the fresh-route comparison tests first-stall activation against waiting for prediction loss to plateau. Each block uses matched routes. The detector observes every control, uses a rolling 15-control window, and stores at most one memory per five-control step. The low threshold remains one third of the high threshold throughout the sweep.
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
-At the selected 0.30 threshold, memory improves success, distance, and steps for both controllers. On fresh routes, first-stall activation reduces distance and steps in every seed and recovers four more routes. We use it for this medium protocol and retain the gate as an ablation; the original protocol above is unchanged. Means include all routes and partial final steps.
+At the selected 0.30 threshold, memory improves success, distance, and steps for both controllers. On fresh routes, first-stall activation reduces distance and steps in every seed and recovers four more routes. We use it for this medium protocol and retain the gate as an ablation; the original protocol above is unchanged. Means include every route and any partial final step taken before success.
 \end{minipage}\par
 \par\smallskip
 {\centering
-\captionof{table}{\textbf{Maze threshold and loss-gate ablations on medium routes.} Each comparison pools 50 matched routes per seed over three seeds. The thresholds and gate are tested on separate route sets. Runs check goal distance after every control and stop below 0.5 or at 30 steps. One step equals five controls.}
+\captionof{table}{\textbf{Maze threshold and loss-gate ablations on medium routes.} Each comparison pools 50 matched routes per seed over three seeds. The thresholds and gate are tested on separate route sets. Runs check goal distance after every control and stop below 0.5 or at 30 steps. One planning step corresponds to five executed controls.}
 \label{tab:maze-medium-threshold}
 \small
 \begin{tabular}{llrrrr}
@@ -468,9 +468,9 @@ AdaJEPA + $S$ & Loss gate & 0.30 & 124/150 & 0.6289 & 12.22 \\
 \vspace{0pt}
 \section{Rope protocol and ablations}
 \label{sec:rope-details}
-All variants use fixed DINO-WM with per-push observation and stopping. CEM uses 300 candidates, 30 elites, and ten iterations. The three-push detector uses thresholds 0.15/0.05. We vary the memory anchor, strength, and warm-up with the planner fixed; dynamic $S$ scales the penalty by the detector weight.\par\smallskip
+All variants use fixed DINO-WM with per-push observation and stopping. CEM uses 300 candidates, 30 elites, and ten iterations. The three-push detector uses thresholds 0.15/0.05. We vary the memory anchor, strength, and warm-up with the planner fixed; dynamic $S$ scales the penalty using the current detector weight.\par\smallskip
 {\centering
-\captionof{table}{\textbf{Rope memory and horizon ablations.} Ours stores fixed-strength memory at the stall. $H$ is pushes predicted/executed per plan; Warm is warm-up pushes. CD is mean final Chamfer distance; success requires CD $<0.3$. Mean pushes includes failures at the 20-push cap.}
+\captionof{table}{\textbf{Rope memory and horizon ablations.} Ours stores fixed-strength memory at the stall. $H$ is pushes predicted/executed per plan; Warm is warm-up pushes. CD is mean final Chamfer distance; success requires CD $<0.3$. Mean pushes averages successful runs and failures capped at 20 pushes.}
 \label{tab:rope-ablation}
 \small\setlength{\tabcolsep}{2pt}
 \begin{tabular}{lrrrrr}
@@ -491,7 +491,7 @@ DINO-WM (native)&5&0&0.5809&70.0\%&12.75\\
 \end{tabular}
 \par}
 \par\smallskip
-The horizon control varies prediction and execution length together. The memory comparison holds three-push blocks fixed, separating ECP's contribution from changes in planning cadence.
+The horizon control varies prediction and execution length together. The memory comparison holds three-push blocks fixed, separating ECP's contribution from a different planning cadence or execution horizon.
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
@@ -502,7 +502,7 @@ The horizon control varies prediction and execution length together. The memory 
 \label{fig:rope-budget}
 \par}
 \par\smallskip
-Fixed memory with warm-up gives the best CD, success, and push count among the matched three-push variants. Anchoring memory at the stall lowers CD in every seed relative to earlier frames, supporting correction at the observed stalled region. More runs reach the goal within the same budget.\par
+Fixed memory with warm-up gives the best CD, success, and push count among the matched three-push variants. Anchoring memory at the stall lowers CD in every seed relative to earlier frames, supporting correction at the observed stalled region. These corrections complete more targets within the available push budget.\par
 
 \par\smallskip
 The terminal-frame objective scales memory by goal distance without horizon averaging. Stored stall observations persist across plans, so the correction continues to discourage returns to the same configuration.
@@ -516,11 +516,11 @@ The terminal-frame objective scales memory by goal distance without horizon aver
 \vspace{0pt}
 \section{Simulator rollouts}
 \label{sec:renderings}
-The visualizations connect the aggregate gains to changes in execution. Rope, PushT, and Maze detour examples use recorded frames; the remaining path panels render logged Pymunk and MuJoCo states. Starts and goals are shared within each pair.
+The visualizations connect the aggregate gains to changes in execution. Rope, PushT, and Maze detour examples use recorded frames; the remaining path panels render logged Pymunk and MuJoCo states. Within each pair, both planners receive the same start and goal observations.
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
-\Cref{fig:rope-rollouts} aligns independently executed runs by push count. This exposes how the rope approaches its target shape under the same action budget. ECP reaches the goal in (a); in (b), its final shape is closer to the target, as reflected by lower Chamfer distance.
+\Cref{fig:rope-rollouts} aligns independently executed runs by push count. This exposes how the rope approaches its target shape under the same action budget. ECP reaches the goal in (a); in (b), its final shape is closer to the target, with lower Chamfer distance at the end of execution.
 \end{minipage}\par
 \par\smallskip
 {\centering
@@ -535,7 +535,7 @@ Rope requires coordinated pushes to change shape. Per-push observation retains e
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
-In \cref{fig:rope-cd}, terminal CD is carried forward after success; shading shows variation across seed means. \Cref{fig:rope-budget} tracks completed targets, complementing geometric progress with completion speed.
+In \cref{fig:rope-cd}, terminal CD is carried forward after success; shading shows variation across seed means. \Cref{fig:rope-budget} tracks completed targets, complementing geometric progress with completion speed under the same push budget.
 \end{minipage}\par
 
 \end{table*}
@@ -544,7 +544,7 @@ In \cref{fig:rope-cd}, terminal CD is carried forward after success; shading sho
 \par\smallskip
 \noindent \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
-\Cref{fig:diverse-execution} compares recovery across object geometries and maze layouts. Shared starts and goals make the change in execution directly visible. Native planning repeats local motion; ECP changes the route under fixed or online-adapted world models.
+\Cref{fig:diverse-execution} compares recovery across object geometries and maze layouts. Shared starts and goals make the change in execution directly visible. Native planning repeats local motion; ECP changes the route with a fixed world model or while its weights adapt online.
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
@@ -565,7 +565,7 @@ Changing the approach to an object can complete alignment; leaving a revisited c
 \vspace{0pt}
 \section{Limitations and future directions}
 \label{sec:pending}
-ECP uses the current representation to identify revisited states. Shift-invariant stall features would extend this mechanism to stronger appearance changes. Source-disjoint tasks and held-out training seeds provide a next test of transfer~\cite{henderson2018matters,agarwal2021statistical}. Recovery trajectories also offer supervision for chunked policies~\cite{zhao2023act}, allowing successful corrections to be reused across episodes.
+ECP uses the current representation to identify revisited states. Shift-invariant features could extend correction to stronger appearance changes. Source-disjoint tasks and held-out training seeds provide a next test of transfer~\cite{henderson2018matters,agarwal2021statistical}. Recovery trajectories also offer supervision for chunked policies~\cite{zhao2023act}, reusing corrections across episodes.
 \end{minipage}\par
 
 \end{table*}
@@ -575,11 +575,11 @@ ECP uses the current representation to identify revisited states. Shift-invarian
 \noindent \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
 \paragraph{Recovery under visual shifts.}
-The PushT pairs in \cref{fig:pusht-rollouts} hold the LeWM weights, task, and execution budget fixed while switching ECP on or off. The red-agent case changes the pusher's appearance; the red-goal case changes the target cue. These examples test whether execution feedback can recover a stalled plan under two distinct visual changes.
+The PushT pairs in \cref{fig:pusht-rollouts} hold the LeWM weights, task, and execution budget fixed while switching ECP on or off. The red-agent case changes the pusher's appearance; the red-goal case changes the target cue. These examples test whether execution feedback can recover a stalled plan when either the pusher or the goal cue changes in appearance.
 \end{minipage}\hfill
 \begin{minipage}[t]{\columnwidth}
 \vspace{0pt}
-ECP completes both tasks while native planning repeats local motion until the control limit. The snapshots show the intervening physical interaction and final alignment, complementing the aggregate visual-shift results. Each sequence ends at its actual stopping point. The shared start and goal occupy the left column, beside four stages of execution.
+ECP completes both tasks while native planning repeats local motion until the control limit. The snapshots show the intervening physical interaction and final alignment, complementing the aggregate visual-shift results. Each sequence ends at its actual stopping point, with the shared start and goal in the left column and four aligned execution frames displayed to its right.
 \end{minipage}\par
 \par\smallskip
 {\centering
