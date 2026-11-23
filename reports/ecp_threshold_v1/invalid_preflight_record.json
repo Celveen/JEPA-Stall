@@ -1,0 +1,15 @@
+[
+  {
+    "directory": "20261111T015901Z",
+    "excluded_from_benchmark": true,
+    "reason": "Initial evaluator sys.path preferred v1 CEM, so requested BF16 settings were not applied. Detected before first chunk completion; all initial chunks stopped and archived.",
+    "stopped_pids": [
+      2001514,
+      2001584,
+      2001585,
+      2001586,
+      2001587
+    ],
+    "fix": "Prefer v3 module; assert actual module path and precision signature; validate per-plan precision records."
+  }
+]

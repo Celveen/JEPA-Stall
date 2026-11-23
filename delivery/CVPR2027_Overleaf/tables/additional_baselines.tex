@@ -1,0 +1,12 @@
+\captionof{table}{\textbf{Representation baselines on shifted PushT.} Success (\%) on 50 matched tasks per condition, with fixed weights, CEM, and 150 controls. S\&P denotes salt-and-pepper noise; Agent/Object/Goal recolor that component red. Avg. is the mean over six shifts, excluding clean observations.}
+\label{tab:extra-baselines}
+\small\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Method & Blur & S\&P & Dark & Agent & Object & Goal & Avg.\\
+\midrule
+R3M &30&16&2&32&32&18&21.7\\
+DINO CLS &30&16&56&42&22&42&34.7\\
+DDP-WM &56&22&66&62&42&68&52.7\\
+\bottomrule
+\end{tabular}

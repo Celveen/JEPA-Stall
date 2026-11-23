@@ -1,0 +1,222 @@
+{
+  "source": "reports/rope_seed100_20",
+  "base_seed": 100,
+  "protocol": "Both arms predict and execute three pushes, observe after each push, stop at CD < 0.3 or 20 pushes; dynamic ECP starts after five warm-up pushes.",
+  "selection": "Illustrative lower-CD cases at equal final push counts with memory actually applied; not representative of the full second-seed outcome.",
+  "aggregate_caveat": "Across all 20 targets dynamic ECP does not improve CD on seed 100; reported separately in the manuscript.",
+  "archives": {
+    "reports/rope_seed100_20/native3_evidence.tar.gz": "0a0b95a3471fa7fdfa68f3e1cd75333b4ef23787a467c1a49e0c99dcf2de29af",
+    "reports/rope_seed100_20/dynamic3_evidence.tar.gz": "05dc219095399dcbbad08d8064bf4998078977f0948d810fd44d4f9621ab2ecc"
+  },
+  "files": {
+    "figures/recorded_rollouts/rope_seed100_t13_native_000.png": {
+      "sha256": "4496272120ce492a47e5f5c02a91046ec446d11d74b1f69908a8089df3a2d96e",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_03/recorded_execution.npz",
+      "step": 0,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t13_native_006.png": {
+      "sha256": "3205ec55f9f39a7aeb8868c753e1f711d3f21bfd766721db78a8f580db828ee7",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_03/recorded_execution.npz",
+      "step": 6,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t13_native_007.png": {
+      "sha256": "3a45a3be51c7be46f7810b4c723da8cd103c75ce222717c153f41f3372a1aace",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_03/recorded_execution.npz",
+      "step": 7,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t13_native_010.png": {
+      "sha256": "4e598f705820f7ef0eab9de3b15501639aec63ddc2f68cf73bc5458b9d11d4fb",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_03/recorded_execution.npz",
+      "step": 10,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t13_ours_000.png": {
+      "sha256": "4496272120ce492a47e5f5c02a91046ec446d11d74b1f69908a8089df3a2d96e",
+      "archive": "dynamic3_evidence.tar.gz",
+      "member": "dynamic3/sample_03/recorded_execution.npz",
+      "step": 0,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t13_ours_006.png": {
+      "sha256": "3d2eacc19b3c581c589e28c9d6d240e3fab518e7cf02dfaedbe49882881dbecf",
+      "archive": "dynamic3_evidence.tar.gz",
+      "member": "dynamic3/sample_03/recorded_execution.npz",
+      "step": 6,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t13_ours_007.png": {
+      "sha256": "3f9d10fa3f5d68a9388d2ecf869c7ff895e5e861d2342c0e8b84e1c326b0054a",
+      "archive": "dynamic3_evidence.tar.gz",
+      "member": "dynamic3/sample_03/recorded_execution.npz",
+      "step": 7,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t13_ours_010.png": {
+      "sha256": "785e1ad94633755cbd37582e191ac80cc1061af4009d47d24053b5337042b9dc",
+      "archive": "dynamic3_evidence.tar.gz",
+      "member": "dynamic3/sample_03/recorded_execution.npz",
+      "step": 10,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t13_goal.png": {
+      "sha256": "351502fe48c1a6826ddf2de3a822bbea3fc5652a375603f92e311522229e0f4b",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_03/target.pkl",
+      "step": null,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t16_native_020.png": {
+      "sha256": "44cdd456ad2cb5ef8ad59bee52fdb10b3b9c375b7419a7b8f4b36c8d28dd277e",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_06/recorded_execution.npz",
+      "step": 20,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t16_ours_020.png": {
+      "sha256": "045d7057677ad780c54a87d910bd5633037da6ddfeb5ff5967b5f080c8776dea",
+      "archive": "dynamic3_evidence.tar.gz",
+      "member": "dynamic3/sample_06/recorded_execution.npz",
+      "step": 20,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed100_t16_goal.png": {
+      "sha256": "47815d51b5f0d0a5253da6fb658c2df9ebe3e99e8033f6ece9a2b8d8dda61aa5",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_06/target.pkl",
+      "step": null,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    }
+  },
+  "cases": [
+    {
+      "dataset": "Rope",
+      "backbone": "DINO-WM",
+      "target": 13,
+      "sample": 3,
+      "steps": [
+        0,
+        6,
+        7,
+        10
+      ],
+      "rows": [
+        {
+          "arm": "native",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t13_native_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t13_native_006.png",
+              "step": 6
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t13_native_007.png",
+              "step": 7
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t13_native_010.png",
+              "step": 10
+            }
+          ],
+          "final_cd": 0.12180174899569081,
+          "actual_pushes": 10,
+          "success": true,
+          "recorded_execution_sha256": "de4db886415fcdb8e808de38237bb4db46a20caa497734bc344c87d3104d0f4f"
+        },
+        {
+          "arm": "ours",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t13_ours_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t13_ours_006.png",
+              "step": 6
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t13_ours_007.png",
+              "step": 7
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t13_ours_010.png",
+              "step": 10
+            }
+          ],
+          "final_cd": 0.05693124181032217,
+          "actual_pushes": 10,
+          "success": true,
+          "recorded_execution_sha256": "129af884199886282bce7f095da126bef60434e26447d3b7f82cdbf5b40d0644"
+        }
+      ],
+      "unit": "Push",
+      "hide_border": 0,
+      "first_S_application_push": 7,
+      "used_trigger_memories": 1,
+      "goal": "figures/recorded_rollouts/rope_seed100_t13_goal.png"
+    },
+    {
+      "dataset": "Rope",
+      "backbone": "DINO-WM",
+      "target": 16,
+      "sample": 6,
+      "steps": [
+        20
+      ],
+      "rows": [
+        {
+          "arm": "native",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t16_native_020.png",
+              "step": 20
+            }
+          ],
+          "final_cd": 0.8197950838867127,
+          "actual_pushes": 20,
+          "success": false,
+          "recorded_execution_sha256": "78720785fc31009833b839e3421111a4e67d73506b07d6eb278a4d8b97bc85ed"
+        },
+        {
+          "arm": "ours",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_seed100_t16_ours_020.png",
+              "step": 20
+            }
+          ],
+          "final_cd": 0.35120754278456157,
+          "actual_pushes": 20,
+          "success": false,
+          "recorded_execution_sha256": "16333e40d1d4b4691c84ad962b19645cd389d4f70bb02549f03bb7314c3378e7"
+        }
+      ],
+      "unit": "Push",
+      "hide_border": 0,
+      "first_S_application_push": 7,
+      "used_trigger_memories": 6,
+      "goal": "figures/recorded_rollouts/rope_seed100_t16_goal.png"
+    }
+  ]
+}

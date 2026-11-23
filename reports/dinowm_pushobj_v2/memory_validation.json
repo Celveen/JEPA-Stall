@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "candidate_batch": 64,
+  "horizon_model_steps": 5,
+  "memory_entries": 20,
+  "reserved_model_allowance_gib": 1,
+  "memory_limit_gib": 8,
+  "peak_allocated_gib": 4.703157901763916,
+  "finite_penalty": true,
+  "stay_penalty": 0.3333333432674408,
+  "goal_penalty": 0.0
+}

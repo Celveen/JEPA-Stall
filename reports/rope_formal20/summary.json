@@ -1,0 +1,97 @@
+{
+  "status": "complete",
+  "samples_per_condition": 20,
+  "maximum_pushes": 20,
+  "success_rule": "CD < 0.3",
+  "target_chunks": [
+    1,
+    2
+  ],
+  "conditions": {
+    "native5": {
+      "mean_cd": 0.5808864409095109,
+      "std_cd_across_targets": 0.7801709478897733,
+      "successes": 14,
+      "total_pushes": 255,
+      "optimizer_calls": 53,
+      "S_trigger_events": 0,
+      "triggered_samples": 0,
+      "used_trigger_memories": 0,
+      "used_fractional_strength_memories": 0,
+      "applied_samples": 0,
+      "fractional_strength_events": 0,
+      "positive_penalty_evaluations": 0,
+      "elapsed_s_sum": 2932.3974155930337
+    },
+    "fixed3": {
+      "mean_cd": 0.6112380077540654,
+      "std_cd_across_targets": 0.6911111295207619,
+      "successes": 13,
+      "total_pushes": 252,
+      "optimizer_calls": 89,
+      "S_trigger_events": 59,
+      "triggered_samples": 9,
+      "used_trigger_memories": 56,
+      "used_fractional_strength_memories": 0,
+      "applied_samples": 9,
+      "fractional_strength_events": 0,
+      "positive_penalty_evaluations": 4552,
+      "elapsed_s_sum": 3532.851551574073
+    },
+    "dynamic3": {
+      "mean_cd": 0.5151827050870776,
+      "std_cd_across_targets": 0.7126991521335607,
+      "successes": 12,
+      "total_pushes": 250,
+      "optimizer_calls": 89,
+      "S_trigger_events": 50,
+      "triggered_samples": 10,
+      "used_trigger_memories": 46,
+      "used_fractional_strength_memories": 2,
+      "applied_samples": 9,
+      "fractional_strength_events": 2,
+      "positive_penalty_evaluations": 8190,
+      "elapsed_s_sum": 3471.8237264518975
+    },
+    "fixed3_nowarm": {
+      "mean_cd": 0.5833716809067212,
+      "std_cd_across_targets": 0.8013128388473246,
+      "successes": 13,
+      "total_pushes": 271,
+      "optimizer_calls": 97,
+      "S_trigger_events": 67,
+      "triggered_samples": 11,
+      "used_trigger_memories": 63,
+      "used_fractional_strength_memories": 0,
+      "applied_samples": 10,
+      "fractional_strength_events": 0,
+      "positive_penalty_evaluations": 5226,
+      "elapsed_s_sum": 3936.376287061139
+    }
+  },
+  "fixed_dynamic_strength_contrast_exercised": true,
+  "paired_vs_native5": {
+    "fixed3": {
+      "lower_cd": 11,
+      "higher_cd": 9,
+      "equal_cd": 0,
+      "gained_successes": 3,
+      "lost_successes": 4
+    },
+    "dynamic3": {
+      "lower_cd": 10,
+      "higher_cd": 10,
+      "equal_cd": 0,
+      "gained_successes": 3,
+      "lost_successes": 5
+    },
+    "fixed3_nowarm": {
+      "lower_cd": 10,
+      "higher_cd": 10,
+      "equal_cd": 0,
+      "gained_successes": 4,
+      "lost_successes": 5
+    }
+  },
+  "action_comparison_limit": "All arms execute independent physics. Native uses 5/5, S uses 3/3; there is no matched Native-3 control. Action differences from Native-5 cannot isolate S effects."
+}

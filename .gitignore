@@ -21,3 +21,9 @@ reports/**/*.lock
 !reports/**/*.sh
 dist
 worktrees
+
+# macOS Finder metadata
+.DS_Store
+
+# Keep the complete, directly importable Overleaf delivery sources
+!delivery/CVPR2027_Overleaf/figures/

@@ -1,0 +1,222 @@
+{
+  "snapshot_utc": "2026-11-10T04:26:51.589308+00:00",
+  "archives": [
+    {
+      "file": "archives/pusht_visual_complete.tar.gz",
+      "classification": "complete: 56 primary jobs, 2800 task runs; smoke separate",
+      "files": 1064,
+      "bytes": 26407201,
+      "sha256": "77e4d0956f96ea4eb0d93a58d0570dcdb1be34c6358ae6b0601d52187a0e5049"
+    },
+    {
+      "file": "archives/maze_frozen_complete.tar.gz",
+      "classification": "complete: both S and SP controls, 100 tasks each including verified inactive reuse",
+      "files": 281,
+      "bytes": 1526004,
+      "sha256": "8b5d928c1d34f3668020129efd074306eab43abc30b744aab02c0577992f6eb9"
+    },
+    {
+      "file": "archives/dinowm_pushobj_training_and_validation.tar.gz",
+      "classification": "training complete at epoch 3; integration and precision diagnostics; logs of superseded protocols retained",
+      "files": 499,
+      "bytes": 500858,
+      "sha256": "c3769ee12d68e72b1abd6f5c02f33522a96a4866ff78f17917f30de81e8f168c"
+    },
+    {
+      "file": "archives/dinowm_pushobj_v3_progress.tar.gz",
+      "classification": "in-progress snapshot, not final benchmark results",
+      "files": 1150,
+      "bytes": 3274688,
+      "sha256": "5e60a6546b5f3cdd43c56146c528a73bcc7dc8f3a2a794729f13141307552471"
+    },
+    {
+      "file": "archives/dinowm_superseded_evaluations.tar.gz",
+      "classification": "superseded partial evaluations; not pooled with v3",
+      "files": 122,
+      "bytes": 485432,
+      "sha256": "6142df0a3090b14aa0d66791178f8fc95d7295c7480ee4cb30aa7a61828a4619"
+    },
+    {
+      "file": "archives/main_pushobj_frozen.tar.gz",
+      "classification": "completed source runs for main PushObj Frozen comparison and component ablations; paper uses declared budget cutoffs",
+      "files": 6578,
+      "bytes": 47584726,
+      "sha256": "10ae6bb63556ed53c2f5382427929542a7e6af2713da5828ac0a498f799400dc"
+    },
+    {
+      "file": "archives/main_pushobj_adajepa.tar.gz",
+      "classification": "completed source runs for main PushObj AdaJEPA comparison and component ablations; paper uses declared budget cutoffs",
+      "files": 3328,
+      "bytes": 24500424,
+      "sha256": "ec9d7e29df18899f3791a5600e6d2973e2869239acd34aa27d26898ae43238e4"
+    },
+    {
+      "file": "archives/main_maze_and_additional_controls.tar.gz",
+      "classification": "completed main Maze native/adaptive/control records and additional action-space studies; task groups and budget cutoffs remain distinct",
+      "files": 5403,
+      "bytes": 57584836,
+      "sha256": "b8f515d1628b3638f08bfc3961623073ea59c85df232e6110d6f4345f28609b6"
+    }
+  ],
+  "scope": "Numerical results, complete raw actions/states, configurations, run and training logs, validation/provenance, and dataset/checkpoint metadata. No model weights or image training corpora.",
+  "omitted_reconstructible_files": [
+    "observation/image pickle caches",
+    "videos and per-run rendered previews",
+    "automatically generated old paper copies"
+  ],
+  "current_dinowm_status": {
+    "status": "evaluating",
+    "target_epochs": 3,
+    "completed_chunks": 92,
+    "total_chunks": 140,
+    "episodes_per_condition": 350,
+    "precision": "bf16",
+    "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16",
+    "workers": {
+      "0": {
+        "status": "running",
+        "pid": 292859,
+        "gpu": 0,
+        "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_13_square",
+        "command": [
+          "/home/appuser/anaconda3/envs/ts/bin/python",
+          "-u",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/evaluate.py",
+          "--repo",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+          "--checkpoint",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented",
+          "--epoch",
+          "3",
+          "--n-evals",
+          "10",
+          "--targets",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_13_square.pkl",
+          "--output",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_native/chunk_13_square",
+          "--precision",
+          "bf16",
+          "--candidate-batch",
+          "64"
+        ],
+        "started_utc": "2026-11-10T04:22:43.667422+00:00"
+      },
+      "1": {
+        "status": "running",
+        "pid": 290703,
+        "gpu": 1,
+        "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_13_square",
+        "command": [
+          "/home/appuser/anaconda3/envs/ts/bin/python",
+          "-u",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/evaluate.py",
+          "--repo",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+          "--checkpoint",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/ordinary",
+          "--epoch",
+          "3",
+          "--n-evals",
+          "10",
+          "--targets",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_13_square.pkl",
+          "--output",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_ecp/chunk_13_square",
+          "--precision",
+          "bf16",
+          "--candidate-batch",
+          "64",
+          "--ecp"
+        ],
+        "started_utc": "2026-11-10T04:21:44.974118+00:00"
+      },
+      "3": {
+        "status": "running",
+        "pid": 295969,
+        "gpu": 3,
+        "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_18_Z",
+        "command": [
+          "/home/appuser/anaconda3/envs/ts/bin/python",
+          "-u",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/evaluate.py",
+          "--repo",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+          "--checkpoint",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/ordinary",
+          "--epoch",
+          "3",
+          "--n-evals",
+          "10",
+          "--targets",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_18_Z.pkl",
+          "--output",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_18_Z",
+          "--precision",
+          "bf16",
+          "--candidate-batch",
+          "64"
+        ],
+        "started_utc": "2026-11-10T04:24:41.228985+00:00"
+      },
+      "5": {
+        "status": "running",
+        "pid": 295258,
+        "gpu": 5,
+        "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_13_square",
+        "command": [
+          "/home/appuser/anaconda3/envs/ts/bin/python",
+          "-u",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/evaluate.py",
+          "--repo",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+          "--checkpoint",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/augmented",
+          "--epoch",
+          "3",
+          "--n-evals",
+          "10",
+          "--targets",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_13_square.pkl",
+          "--output",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/augmented_ecp/chunk_13_square",
+          "--precision",
+          "bf16",
+          "--candidate-batch",
+          "64",
+          "--ecp"
+        ],
+        "started_utc": "2026-11-10T04:24:13.685578+00:00"
+      },
+      "6": {
+        "status": "running",
+        "pid": 289908,
+        "gpu": 6,
+        "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_13_square",
+        "command": [
+          "/home/appuser/anaconda3/envs/ts/bin/python",
+          "-u",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/evaluate.py",
+          "--repo",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+          "--checkpoint",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/dinowm_pushobj_v1/ordinary",
+          "--epoch",
+          "3",
+          "--n-evals",
+          "10",
+          "--targets",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_13_square.pkl",
+          "--output",
+          "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v3_cem200x10_mpc6x25_bf16/ordinary_native/chunk_13_square",
+          "--precision",
+          "bf16",
+          "--candidate-batch",
+          "64"
+        ],
+        "started_utc": "2026-11-10T04:21:34.608959+00:00"
+      }
+    },
+    "failures": [],
+    "updated_utc": "2026-11-10T04:26:42.816627+00:00"
+  }
+}

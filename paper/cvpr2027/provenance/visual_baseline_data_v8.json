@@ -1,0 +1,85 @@
+{
+  "task": "PushT",
+  "n": 50,
+  "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "condition_order": [
+    "clean",
+    "blur",
+    "snp",
+    "dark",
+    "red_agent",
+    "red_object",
+    "red_goal"
+  ],
+  "rows": [
+    {
+      "method": "DINO-WM",
+      "planner": "GD",
+      "success_percent": [
+        50,
+        44,
+        8,
+        50,
+        44,
+        36,
+        46
+      ]
+    },
+    {
+      "method": "LeWM",
+      "planner": "GD",
+      "success_percent": [
+        64,
+        62,
+        62,
+        58,
+        4,
+        16,
+        34
+      ]
+    },
+    {
+      "method": "DINO-WM",
+      "planner": "CEM",
+      "success_percent": [
+        null,
+        66,
+        4,
+        76,
+        74,
+        46,
+        76
+      ]
+    },
+    {
+      "method": "LeWM",
+      "planner": "CEM",
+      "success_percent": [
+        null,
+        66,
+        64,
+        64,
+        2,
+        20,
+        26
+      ]
+    },
+    {
+      "method": "DDP-WM",
+      "planner": "CEM",
+      "success_percent": [
+        null,
+        56,
+        22,
+        66,
+        62,
+        42,
+        68
+      ]
+    }
+  ],
+  "metric": "joint pusher/object position <20px and wrapped object-angle error <pi/9",
+  "protocol_note": "150 physical steps. DINO-WM GD uses6x25; other rows30x5. DINO-WM GD/CEM differ in checkpoint. Shared task states; independently drawn corruption realizations.",
+  "new_ecp_results": null,
+  "detailed_audit": "../../../reports/pusht_visual_v8/baseline_audit.json"
+}

@@ -1,0 +1,49 @@
+{
+  "sample": 0,
+  "comparison": "original 20-push Native-3 versus fresh 15-push Native-3",
+  "frames": [
+    {
+      "observation_index": 0,
+      "changed_RGB_values": 0,
+      "changed_pixels": 0,
+      "max_pixel_delta": 0.0,
+      "max_particle_state_delta": 0.0
+    },
+    {
+      "observation_index": 1,
+      "changed_RGB_values": 3,
+      "changed_pixels": 1,
+      "max_pixel_delta": 117.0,
+      "max_particle_state_delta": 3.5762786865234375e-07
+    },
+    {
+      "observation_index": 2,
+      "changed_RGB_values": 3,
+      "changed_pixels": 1,
+      "max_pixel_delta": 117.0,
+      "max_particle_state_delta": 2.384185791015625e-07
+    },
+    {
+      "observation_index": 3,
+      "changed_RGB_values": 3,
+      "changed_pixels": 1,
+      "max_pixel_delta": 117.0,
+      "max_particle_state_delta": 4.172325134277344e-07
+    }
+  ],
+  "first_three_controls_identical": true,
+  "cpu_rng_prefix_identical": true,
+  "cuda_rng_prefix_identical": true,
+  "original_fourth_control": [
+    2.64534592628479,
+    0.8844443559646606,
+    -1.977077603340149,
+    -1.7379519939422607
+  ],
+  "rerun_fourth_control": [
+    2.704378604888916,
+    1.7369513511657715,
+    0.052659109234809875,
+    -1.4826152324676514
+  ]
+}

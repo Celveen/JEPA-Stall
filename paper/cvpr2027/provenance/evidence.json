@@ -1,0 +1,1664 @@
+{
+  "date": "2026-11-05",
+  "root": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+  "audit": "Read-only CPU aggregation of existing logs; no model inference or new rollouts.",
+  "pushobj_main30": [
+    {
+      "model": "official",
+      "base": "frozen",
+      "source": {
+        "path": "reports/stag_step1/official_frozen_it30.json",
+        "sha256": "f0a3ca46e2b21a390b70839281b138e2b5097785aa0267b3769e2711558fb323"
+      },
+      "raw_reference": "eval_outputs/stag_frozen_official_it40/ref",
+      "arms": {
+        "SZ_mid": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 153,
+          "success": 157,
+          "wins": 4,
+          "losses": 0,
+          "p_exact_unadjusted": 0.125,
+          "rerun": 195,
+          "seen_success": 107,
+          "unseen_success": 50
+        },
+        "T0P": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 153,
+          "success": 210,
+          "wins": 57,
+          "losses": 0,
+          "p_exact_unadjusted": 1.3877787807814457e-17,
+          "rerun": 195,
+          "seen_success": 138,
+          "unseen_success": 72
+        },
+        "T0SP": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 153,
+          "success": 209,
+          "wins": 56,
+          "losses": 0,
+          "p_exact_unadjusted": 2.7755575615628914e-17,
+          "rerun": 195,
+          "seen_success": 138,
+          "unseen_success": 71
+        }
+      },
+      "baseline_success": 153
+    },
+    {
+      "model": "official",
+      "base": "adajepa",
+      "source": {
+        "path": "reports/stag_step1/official_adajepa_it30.json",
+        "sha256": "28e8ba584b0d01de58a68aa125cc0cfc17764ca2f54cb8cc6969b6d79b9b7e5e"
+      },
+      "raw_reference": "eval_outputs/stag_adajepa_official_it40/ref",
+      "arms": {
+        "SZ_mid": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 243,
+          "success": 250,
+          "wins": 7,
+          "losses": 0,
+          "p_exact_unadjusted": 0.015625,
+          "rerun": 109,
+          "seen_success": 169,
+          "unseen_success": 81
+        },
+        "T0P": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 243,
+          "success": 255,
+          "wins": 13,
+          "losses": 1,
+          "p_exact_unadjusted": 0.0018310546875,
+          "rerun": 109,
+          "seen_success": 173,
+          "unseen_success": 82
+        },
+        "T0SP": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 243,
+          "success": 256,
+          "wins": 13,
+          "losses": 0,
+          "p_exact_unadjusted": 0.000244140625,
+          "rerun": 109,
+          "seen_success": 174,
+          "unseen_success": 82
+        }
+      },
+      "baseline_success": 243
+    },
+    {
+      "model": "bias16k",
+      "base": "frozen",
+      "source": {
+        "path": "reports/stag_step1/bias16k_T0P_it30.json",
+        "sha256": "6c8a3d7fe6496b7c7ce8602f05aaa0584d001b158583b19567c866470659422d"
+      },
+      "raw_reference": "eval_outputs/stag_frozen_bias16k_it40/ref",
+      "arms": {
+        "SZ_mid": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 214,
+          "success": 219,
+          "wins": 5,
+          "losses": 0,
+          "p_exact_unadjusted": 0.0625,
+          "rerun": 134,
+          "seen_success": 153,
+          "unseen_success": 66
+        },
+        "T0P": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 214,
+          "success": 253,
+          "wins": 39,
+          "losses": 0,
+          "p_exact_unadjusted": 3.637978807091713e-12,
+          "rerun": 134,
+          "seen_success": 174,
+          "unseen_success": 79
+        },
+        "T0SP": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 214,
+          "success": 253,
+          "wins": 39,
+          "losses": 0,
+          "p_exact_unadjusted": 3.637978807091713e-12,
+          "rerun": 134,
+          "seen_success": 174,
+          "unseen_success": 79
+        }
+      },
+      "baseline_success": 214
+    },
+    {
+      "model": "bias16k",
+      "base": "adajepa",
+      "source": {
+        "path": "reports/stag_step1/bias16k_adajepa_it30.json",
+        "sha256": "e720f7679e6174b43599b7d7c289f3b1e8e7639ba2050de639304d43ffb3e67c"
+      },
+      "raw_reference": "eval_outputs/stag_adajepa_bias16k_it40/ref",
+      "arms": {
+        "SZ_mid": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 262,
+          "success": 266,
+          "wins": 4,
+          "losses": 0,
+          "p_exact_unadjusted": 0.125,
+          "rerun": 92,
+          "seen_success": 179,
+          "unseen_success": 87
+        },
+        "T0P": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 262,
+          "success": 270,
+          "wins": 9,
+          "losses": 1,
+          "p_exact_unadjusted": 0.021484375,
+          "rerun": 92,
+          "seen_success": 181,
+          "unseen_success": 89
+        },
+        "T0SP": {
+          "n": 350,
+          "budget_replans": 30,
+          "baseline_success": 262,
+          "success": 269,
+          "wins": 8,
+          "losses": 1,
+          "p_exact_unadjusted": 0.0390625,
+          "rerun": 92,
+          "seen_success": 180,
+          "unseen_success": 89
+        }
+      },
+      "baseline_success": 262
+    }
+  ],
+  "pushobj_ablation30": {
+    "SZ_mid": {
+      "n": 350,
+      "budget_replans": 30,
+      "baseline_success": 214,
+      "success": 219,
+      "wins": 5,
+      "losses": 0,
+      "p_exact_unadjusted": 0.0625,
+      "rerun": 134
+    },
+    "T0P": {
+      "n": 350,
+      "budget_replans": 30,
+      "baseline_success": 214,
+      "success": 253,
+      "wins": 39,
+      "losses": 0,
+      "p_exact_unadjusted": 3.637978807091713e-12,
+      "rerun": 134
+    },
+    "T0SP": {
+      "n": 350,
+      "budget_replans": 30,
+      "baseline_success": 214,
+      "success": 253,
+      "wins": 39,
+      "losses": 0,
+      "p_exact_unadjusted": 3.637978807091713e-12,
+      "rerun": 134
+    },
+    "ALPHA10": {
+      "n": 350,
+      "budget_replans": 30,
+      "baseline_success": 214,
+      "success": 232,
+      "wins": 50,
+      "losses": 32,
+      "p_exact_unadjusted": 0.05980833833431617,
+      "rerun": 350
+    },
+    "T0SPL": {
+      "n": 350,
+      "budget_replans": 30,
+      "baseline_success": 214,
+      "success": 243,
+      "wins": 29,
+      "losses": 0,
+      "p_exact_unadjusted": 3.725290298461914e-09,
+      "rerun": 134
+    },
+    "LA_start": {
+      "n": 350,
+      "budget_replans": 30,
+      "baseline_success": 214,
+      "success": 221,
+      "wins": 34,
+      "losses": 27,
+      "p_exact_unadjusted": 0.4426260049464714,
+      "rerun": 350
+    }
+  },
+  "pushobj_ablation30_source": {
+    "path": "reports/stag_step2/bias16k_it30.json",
+    "sha256": "295fb88b8dbc2d1cd259ed97f67c86298962332cd15a4507196ab7fcec5cc3f9"
+  },
+  "maze_e3": {
+    "source": {
+      "path": "reports/e3/medium_s100/stage2.json",
+      "sha256": "9be761b634c6d6651c3d36e1a6df2b2b8057c618abe909381a732626ce977331"
+    },
+    "raw_reference": "eval_outputs/stag_maze100_ar4/medium/adajepa/ref",
+    "n": 100,
+    "seed": 100,
+    "checkpoint": "checkpoints/diversemaze_layout_shift",
+    "layouts": 5,
+    "tasks_per_layout": 20,
+    "bfs_distance_blocks": [
+      6,
+      9
+    ],
+    "action_repeat": 4,
+    "environment_calls_per_replan": 5,
+    "base_environment_steps_per_replan": 20,
+    "planning_horizon_control_calls": 25,
+    "planning_horizon_base_steps": 100,
+    "frameskip": 5,
+    "model_steps_executed_per_replan": 1,
+    "model_horizon": 5,
+    "raw_budget": 50,
+    "arms": {
+      "R-trig": {
+        "20": {
+          "n": 100,
+          "budget_replans": 20,
+          "baseline_success": 51,
+          "success": 50,
+          "wins": 2,
+          "losses": 3,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 51
+        },
+        "30": {
+          "n": 100,
+          "budget_replans": 30,
+          "baseline_success": 63,
+          "success": 66,
+          "wins": 7,
+          "losses": 4,
+          "p_exact_unadjusted": 0.548828125,
+          "rerun": 51
+        },
+        "50": {
+          "n": 100,
+          "budget_replans": 50,
+          "baseline_success": 82,
+          "success": 83,
+          "wins": 5,
+          "losses": 4,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 51
+        }
+      },
+      "R-switch": {
+        "20": {
+          "n": 100,
+          "budget_replans": 20,
+          "baseline_success": 51,
+          "success": 52,
+          "wins": 1,
+          "losses": 0,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 51
+        },
+        "30": {
+          "n": 100,
+          "budget_replans": 30,
+          "baseline_success": 63,
+          "success": 65,
+          "wins": 2,
+          "losses": 0,
+          "p_exact_unadjusted": 0.5,
+          "rerun": 51
+        },
+        "50": {
+          "n": 100,
+          "budget_replans": 50,
+          "baseline_success": 82,
+          "success": 85,
+          "wins": 4,
+          "losses": 1,
+          "p_exact_unadjusted": 0.375,
+          "rerun": 51
+        }
+      },
+      "R-delay": {
+        "20": {
+          "n": 100,
+          "budget_replans": 20,
+          "baseline_success": 51,
+          "success": 51,
+          "wins": 0,
+          "losses": 0,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 51
+        },
+        "30": {
+          "n": 100,
+          "budget_replans": 30,
+          "baseline_success": 63,
+          "success": 61,
+          "wins": 2,
+          "losses": 4,
+          "p_exact_unadjusted": 0.6875,
+          "rerun": 51
+        },
+        "50": {
+          "n": 100,
+          "budget_replans": 50,
+          "baseline_success": 82,
+          "success": 83,
+          "wins": 5,
+          "losses": 4,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 51
+        }
+      },
+      "SZ-switch": {
+        "20": {
+          "n": 100,
+          "budget_replans": 20,
+          "baseline_success": 51,
+          "success": 53,
+          "wins": 2,
+          "losses": 0,
+          "p_exact_unadjusted": 0.5,
+          "rerun": 51
+        },
+        "30": {
+          "n": 100,
+          "budget_replans": 30,
+          "baseline_success": 63,
+          "success": 66,
+          "wins": 3,
+          "losses": 0,
+          "p_exact_unadjusted": 0.25,
+          "rerun": 51
+        },
+        "50": {
+          "n": 100,
+          "budget_replans": 50,
+          "baseline_success": 82,
+          "success": 87,
+          "wins": 6,
+          "losses": 1,
+          "p_exact_unadjusted": 0.125,
+          "rerun": 51
+        }
+      },
+      "P-switch": {
+        "20": {
+          "n": 100,
+          "budget_replans": 20,
+          "baseline_success": 51,
+          "success": 52,
+          "wins": 1,
+          "losses": 0,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 51
+        },
+        "30": {
+          "n": 100,
+          "budget_replans": 30,
+          "baseline_success": 63,
+          "success": 64,
+          "wins": 1,
+          "losses": 0,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 51
+        },
+        "50": {
+          "n": 100,
+          "budget_replans": 50,
+          "baseline_success": 82,
+          "success": 84,
+          "wins": 4,
+          "losses": 2,
+          "p_exact_unadjusted": 0.6875,
+          "rerun": 51
+        }
+      },
+      "F-trig": {
+        "20": {
+          "n": 100,
+          "budget_replans": 20,
+          "baseline_success": 51,
+          "success": 47,
+          "wins": 2,
+          "losses": 6,
+          "p_exact_unadjusted": 0.2890625,
+          "rerun": 51
+        },
+        "30": {
+          "n": 100,
+          "budget_replans": 30,
+          "baseline_success": 63,
+          "success": 55,
+          "wins": 3,
+          "losses": 11,
+          "p_exact_unadjusted": 0.057373046875,
+          "rerun": 51
+        },
+        "50": {
+          "n": 100,
+          "budget_replans": 50,
+          "baseline_success": 82,
+          "success": 60,
+          "wins": 2,
+          "losses": 24,
+          "p_exact_unadjusted": 1.049041748046875e-05,
+          "rerun": 51
+        }
+      },
+      "F-switch": {
+        "20": {
+          "n": 100,
+          "budget_replans": 20,
+          "baseline_success": 51,
+          "success": 53,
+          "wins": 2,
+          "losses": 0,
+          "p_exact_unadjusted": 0.5,
+          "rerun": 51
+        },
+        "30": {
+          "n": 100,
+          "budget_replans": 30,
+          "baseline_success": 63,
+          "success": 63,
+          "wins": 2,
+          "losses": 2,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 51
+        },
+        "50": {
+          "n": 100,
+          "budget_replans": 50,
+          "baseline_success": 82,
+          "success": 78,
+          "wins": 2,
+          "losses": 6,
+          "p_exact_unadjusted": 0.2890625,
+          "rerun": 51
+        }
+      }
+    }
+  },
+  "pushobj_s7": {
+    "source": {
+      "path": "reports/e3/pushobj_S7/stage1.json",
+      "sha256": "576fb160bd6f859cd8400d84bca50c9420d20d3426b7e08a83c1c1b911c02ad6"
+    },
+    "arms": {
+      "R-trig": {
+        "20": {
+          "n": 280,
+          "budget_replans": 20,
+          "baseline_success": 214,
+          "success": 219,
+          "wins": 5,
+          "losses": 0,
+          "p_exact_unadjusted": 0.0625,
+          "rerun": 78
+        },
+        "30": {
+          "n": 280,
+          "budget_replans": 30,
+          "baseline_success": 217,
+          "success": 222,
+          "wins": 5,
+          "losses": 0,
+          "p_exact_unadjusted": 0.0625,
+          "rerun": 78
+        },
+        "50": {
+          "n": 280,
+          "budget_replans": 50,
+          "baseline_success": 217,
+          "success": 224,
+          "wins": 7,
+          "losses": 0,
+          "p_exact_unadjusted": 0.015625,
+          "rerun": 78
+        }
+      },
+      "R-switch": {
+        "20": {
+          "n": 280,
+          "budget_replans": 20,
+          "baseline_success": 214,
+          "success": 215,
+          "wins": 1,
+          "losses": 0,
+          "p_exact_unadjusted": 1.0,
+          "rerun": 78
+        },
+        "30": {
+          "n": 280,
+          "budget_replans": 30,
+          "baseline_success": 217,
+          "success": 220,
+          "wins": 3,
+          "losses": 0,
+          "p_exact_unadjusted": 0.25,
+          "rerun": 78
+        },
+        "50": {
+          "n": 280,
+          "budget_replans": 50,
+          "baseline_success": 217,
+          "success": 224,
+          "wins": 7,
+          "losses": 0,
+          "p_exact_unadjusted": 0.015625,
+          "rerun": 78
+        }
+      }
+    }
+  },
+  "action_offset30": {
+    "escape_EVAL50_r30": {
+      "source": {
+        "path": "reports/escape_EVAL50_r30/summary.json",
+        "sha256": "68ac7d3040fe304deca81eae90eafd86d711f19ff2ea2ffd2c09c959a5e59af0"
+      },
+      "n": 350,
+      "arms": {
+        "none": {
+          "success": 74.85714285714286,
+          "only_arm": 0,
+          "only_none": 0,
+          "p": 1.0,
+          "seen": 87.5,
+          "unseen": 57.99999999999999,
+          "budget": {
+            "10": 65.71428571428571,
+            "20": 74.28571428571429,
+            "30": 74.85714285714286
+          }
+        },
+        "K2P_7x15": {
+          "success": 77.14285714285715,
+          "only_arm": 10,
+          "only_none": 2,
+          "p": 0.03857421875,
+          "seen": 90.0,
+          "unseen": 60.0,
+          "budget": {
+            "10": 65.71428571428571,
+            "20": 76.57142857142857,
+            "30": 77.14285714285715
+          }
+        },
+        "K2P_short2": {
+          "success": 77.42857142857143,
+          "only_arm": 10,
+          "only_none": 1,
+          "p": 0.01171875,
+          "seen": 90.0,
+          "unseen": 60.66666666666667,
+          "budget": {
+            "10": 65.71428571428571,
+            "20": 76.57142857142857,
+            "30": 77.42857142857143
+          }
+        },
+        "K2P_short2_ws_cap60": {
+          "success": 78.28571428571428,
+          "only_arm": 16,
+          "only_none": 4,
+          "p": 0.01181793212890625,
+          "seen": 91.5,
+          "unseen": 60.66666666666667,
+          "budget": {
+            "10": 66.57142857142857,
+            "20": 77.71428571428571,
+            "30": 78.28571428571428
+          }
+        },
+        "K2P_short2_ws_cap70": {
+          "success": 78.0,
+          "only_arm": 15,
+          "only_none": 4,
+          "p": 0.0192108154296875,
+          "seen": 92.0,
+          "unseen": 59.333333333333336,
+          "budget": {
+            "10": 66.57142857142857,
+            "20": 77.71428571428571,
+            "30": 78.0
+          }
+        },
+        "none_ws": {
+          "success": 75.14285714285714,
+          "only_arm": 1,
+          "only_none": 0,
+          "p": 1.0,
+          "seen": 88.0,
+          "unseen": 57.99999999999999,
+          "budget": {
+            "10": 65.71428571428571,
+            "20": 74.28571428571429,
+            "30": 75.14285714285714
+          }
+        }
+      }
+    },
+    "escape_EVAL50s200": {
+      "source": {
+        "path": "reports/escape_EVAL50s200/summary.json",
+        "sha256": "5f49fb5688d4edf46033dec4356b3a0a963b2b8e36dea6553abefcefd1756f1f"
+      },
+      "n": 350,
+      "arms": {
+        "none": {
+          "success": 74.28571428571429,
+          "only_arm": 0,
+          "only_none": 0,
+          "p": 1.0,
+          "seen": 91.0,
+          "unseen": 52.0,
+          "budget": {
+            "10": 65.42857142857143,
+            "20": 72.57142857142857,
+            "30": 74.28571428571429
+          }
+        },
+        "K2P_short2": {
+          "success": 78.85714285714286,
+          "only_arm": 16,
+          "only_none": 0,
+          "p": 3.0517578125e-05,
+          "seen": 93.5,
+          "unseen": 59.333333333333336,
+          "budget": {
+            "10": 65.42857142857143,
+            "20": 78.0,
+            "30": 78.85714285714286
+          }
+        },
+        "K2P_short2_ws": {
+          "success": 79.14285714285715,
+          "only_arm": 18,
+          "only_none": 1,
+          "p": 7.62939453125e-05,
+          "seen": 93.5,
+          "unseen": 60.0,
+          "budget": {
+            "10": 65.42857142857143,
+            "20": 78.28571428571428,
+            "30": 79.14285714285715
+          }
+        }
+      }
+    }
+  },
+  "target_overlap": {
+    "identity": "shape, author ep_idx, segment offset",
+    "streams": {
+      "S7": {
+        "slots": 280,
+        "unique_segments": 280,
+        "unique_source_episodes": 280
+      },
+      "EVAL50": {
+        "slots": 350,
+        "unique_segments": 350,
+        "unique_source_episodes": 346
+      },
+      "EVAL50s200": {
+        "slots": 350,
+        "unique_segments": 350,
+        "unique_source_episodes": 344
+      }
+    },
+    "pairwise": [
+      {
+        "a": "S7",
+        "b": "EVAL50",
+        "shared_segments": 0,
+        "shared_source_episodes": 0
+      },
+      {
+        "a": "S7",
+        "b": "EVAL50s200",
+        "shared_segments": 0,
+        "shared_source_episodes": 0
+      },
+      {
+        "a": "EVAL50",
+        "b": "EVAL50s200",
+        "shared_segments": 35,
+        "shared_source_episodes": 41
+      }
+    ]
+  },
+  "training_data_recipe": {
+    "config": {
+      "source": "data/pusht_noise_meta",
+      "out_dir": "data/pushobj_bias_16k",
+      "shapes": "T,L,Z,+",
+      "train_per_shape": 4000,
+      "val_per_shape": 1000,
+      "train_pool": 16000,
+      "contact_retries": 4,
+      "jitter_px": 20.0,
+      "jitter_rad": 0.3,
+      "max_penetration": 3.0,
+      "max_block_step": 80.0,
+      "action_bias_px": 9.0,
+      "action_noise_px": 10.0,
+      "placement": "source",
+      "train_oversample": 1.4,
+      "val_oversample": 2.0,
+      "n_workers": 64,
+      "fps": 10,
+      "seed": 0,
+      "method": "AdaJEPA App. A.2: pusht_noise replay with swapped shape + contact bias (placement: source, action bias/noise px: 9.0/10.0) + quality gate",
+      "source_episodes": 18685,
+      "source_excluded_agent_leaves_frame": 535,
+      "action_units": "pixel delta (env input = action / 100)",
+      "state_alignment": "observation/state before action at same index",
+      "summary": {
+        "train": {
+          "episodes": 16000,
+          "frames": 1934266,
+          "max_len": 246,
+          "shapes": {
+            "T": 4000,
+            "L": 4000,
+            "Z": 4000,
+            "+": 4000
+          },
+          "episodes_with_contact": 1.0,
+          "mean_contact_steps": 60.557875,
+          "retry_used": 4669,
+          "candidates": {
+            "T": 5600,
+            "L": 5600,
+            "Z": 5600,
+            "+": 5600
+          },
+          "candidates_dropped_by_quality_gate": {
+            "T": 730,
+            "L": 935,
+            "Z": 884,
+            "+": 992
+          },
+          "kept_with_rejected_placement": 4659,
+          "max_block_step": 79.35474395751953
+        },
+        "val": {
+          "episodes": 4000,
+          "frames": 479951,
+          "max_len": 229,
+          "shapes": {
+            "T": 1000,
+            "L": 1000,
+            "Z": 1000,
+            "+": 1000
+          },
+          "episodes_with_contact": 1.0,
+          "mean_contact_steps": 59.65725,
+          "retry_used": 1462,
+          "candidates": {
+            "T": 2000,
+            "L": 2000,
+            "Z": 2000,
+            "+": 2000
+          },
+          "candidates_dropped_by_quality_gate": {
+            "T": 200,
+            "L": 276,
+            "Z": 284,
+            "+": 376
+          },
+          "kept_with_rejected_placement": 1462,
+          "max_block_step": 79.63868713378906
+        }
+      }
+    },
+    "source": {
+      "path": "data/pushobj_bias_16k/generation_config.json",
+      "sha256": "dbf17181327cec41ac52a6d440521397332ce1b9ea3bcaee97dd4e4aa05cfeec"
+    },
+    "formula": "a_exec = a_source + 9 * (object_CoG - pusher) / norm(object_CoG - pusher) + 10 * Normal(0,I_2) [pixels]; environment input = a_exec / 100; store executed actions.",
+    "training_seed_results": {
+      "0": {
+        "test100_it20": {
+          "x": 0.6057142857142858,
+          "y": 0.7285714285714285,
+          "y_only": 55,
+          "x_only": 12,
+          "p": 1.0273195443541005e-07,
+          "n": 350
+        },
+        "test200_300_it30": {
+          "x": 0.6171428571428571,
+          "y": 0.74,
+          "y_only": 109,
+          "x_only": 23,
+          "p": 1.3865723932093643e-14,
+          "n": 700
+        }
+      },
+      "1": {
+        "test100_it20": {
+          "x": 0.5885714285714285,
+          "y": 0.6914285714285714,
+          "y_only": 53,
+          "x_only": 17,
+          "p": 1.919969240032143e-05,
+          "n": 350
+        },
+        "test200_300_it30": {
+          "x": 0.57,
+          "y": 0.7,
+          "y_only": 110,
+          "x_only": 19,
+          "p": 9.106243483273274e-17,
+          "n": 700
+        }
+      },
+      "2": {
+        "test100_it20": {
+          "x": 0.5628571428571428,
+          "y": 0.6857142857142857,
+          "y_only": 56,
+          "x_only": 13,
+          "p": 1.6837633430122172e-07,
+          "n": 350
+        },
+        "test200_300_it30": {
+          "x": 0.55,
+          "y": 0.6957142857142857,
+          "y_only": 126,
+          "x_only": 24,
+          "p": 6.6898397723462276e-18,
+          "n": 700
+        }
+      }
+    },
+    "across_training_seeds": {
+      "test100_it20": {
+        "seen": {
+          "frozen": [
+            0.74,
+            0.745,
+            0.675
+          ],
+          "adajepa": [
+            0.875,
+            0.855,
+            0.845
+          ],
+          "frozen_mean": 0.7200000000000001,
+          "adajepa_mean": 0.8583333333333334,
+          "frozen_sd": 0.03905124837953324,
+          "adajepa_sd": 0.01527525231651948
+        },
+        "unseen": {
+          "frozen": [
+            0.4266666666666667,
+            0.38,
+            0.41333333333333333
+          ],
+          "adajepa": [
+            0.5333333333333333,
+            0.47333333333333333,
+            0.47333333333333333
+          ],
+          "frozen_mean": 0.4066666666666667,
+          "adajepa_mean": 0.49333333333333335,
+          "frozen_sd": 0.02403700850309327,
+          "adajepa_sd": 0.034641016151377546
+        },
+        "all": {
+          "frozen": [
+            0.6057142857142858,
+            0.5885714285714285,
+            0.5628571428571428
+          ],
+          "adajepa": [
+            0.7285714285714285,
+            0.6914285714285714,
+            0.6857142857142857
+          ],
+          "frozen_mean": 0.5857142857142857,
+          "adajepa_mean": 0.7019047619047619,
+          "frozen_sd": 0.02157095552934503,
+          "adajepa_sd": 0.023270079472134494
+        }
+      },
+      "test200_300_it30": {
+        "seen": {
+          "frozen": [
+            0.7425,
+            0.73,
+            0.6725
+          ],
+          "adajepa": [
+            0.8775,
+            0.84,
+            0.85
+          ],
+          "frozen_mean": 0.715,
+          "adajepa_mean": 0.8558333333333333,
+          "frozen_sd": 0.03733296130767022,
+          "adajepa_sd": 0.019418633662885057,
+          "paper_frozen": 0.4975,
+          "paper_adajepa": 0.84
+        },
+        "unseen": {
+          "frozen": [
+            0.45,
+            0.3566666666666667,
+            0.38666666666666666
+          ],
+          "adajepa": [
+            0.5566666666666666,
+            0.5133333333333333,
+            0.49
+          ],
+          "frozen_mean": 0.3977777777777778,
+          "adajepa_mean": 0.5199999999999999,
+          "frozen_sd": 0.04764840364975904,
+          "adajepa_sd": 0.03382963855030739,
+          "paper_frozen": 0.31,
+          "paper_adajepa": 0.5033333333333334
+        },
+        "all": {
+          "frozen": [
+            0.6171428571428571,
+            0.57,
+            0.55
+          ],
+          "adajepa": [
+            0.74,
+            0.7,
+            0.6957142857142857
+          ],
+          "frozen_mean": 0.579047619047619,
+          "adajepa_mean": 0.7119047619047619,
+          "frozen_sd": 0.034473691043310946,
+          "adajepa_sd": 0.024425368768061256,
+          "paper_frozen": 0.41714285714285715,
+          "paper_adajepa": 0.6957142857142857
+        }
+      }
+    },
+    "released": {
+      "seen": {
+        "frozen_test100_200_300": 0.46,
+        "adajepa_test100": 0.835
+      },
+      "unseen": {
+        "frozen_test100_200_300": 0.3111111111111111,
+        "adajepa_test100": 0.42
+      },
+      "all": {
+        "frozen_test100_200_300": 0.3961904761904762,
+        "adajepa_test100": 0.6571428571428571
+      }
+    },
+    "statistics_source": {
+      "path": "reports/pushobj_bias_16k/train_seed_summary.json",
+      "sha256": "e7aef2f41769d3e04db37fc290fb3b7e218880b1a9c6c5aad7ea7f61e80d1606"
+    }
+  },
+  "b_training_screen": {
+    "source": {
+      "path": "reports/effect_b_20261103/summary.json",
+      "sha256": "8c3a91ef7b2a991c684ca936c7c8d0651087cee3505d07a42bc6363018c2592e"
+    },
+    "arms": {
+      "B0": {
+        "groups": {
+          "all": {
+            "n": 350,
+            "success20": 217,
+            "success30": 220,
+            "rate20": 0.62,
+            "rate30": 0.6285714285714286,
+            "mean_first_success_replan_among_successes": 6.804545454545455,
+            "mean_physical_stall_env_steps": 33.84285714285714
+          },
+          "seen": {
+            "n": 200,
+            "success20": 147,
+            "success30": 149,
+            "rate20": 0.735,
+            "rate30": 0.745,
+            "mean_first_success_replan_among_successes": 6.543624161073826,
+            "mean_physical_stall_env_steps": 25.45
+          },
+          "unseen": {
+            "n": 150,
+            "success20": 70,
+            "success30": 71,
+            "rate20": 0.4666666666666667,
+            "rate30": 0.47333333333333333,
+            "mean_first_success_replan_among_successes": 7.352112676056338,
+            "mean_physical_stall_env_steps": 45.03333333333333
+          },
+          "+": {
+            "n": 50,
+            "success20": 36,
+            "success30": 36,
+            "rate20": 0.72,
+            "rate30": 0.72,
+            "mean_first_success_replan_among_successes": 6.0,
+            "mean_physical_stall_env_steps": 28.6
+          },
+          "I": {
+            "n": 50,
+            "success20": 20,
+            "success30": 20,
+            "rate20": 0.4,
+            "rate30": 0.4,
+            "mean_first_success_replan_among_successes": 6.95,
+            "mean_physical_stall_env_steps": 54.3
+          },
+          "L": {
+            "n": 50,
+            "success20": 37,
+            "success30": 37,
+            "rate20": 0.74,
+            "rate30": 0.74,
+            "mean_first_success_replan_among_successes": 6.513513513513513,
+            "mean_physical_stall_env_steps": 22.3
+          },
+          "T": {
+            "n": 50,
+            "success20": 35,
+            "success30": 36,
+            "rate20": 0.7,
+            "rate30": 0.72,
+            "mean_first_success_replan_among_successes": 6.5,
+            "mean_physical_stall_env_steps": 28.3
+          },
+          "Z": {
+            "n": 50,
+            "success20": 39,
+            "success30": 40,
+            "rate20": 0.78,
+            "rate30": 0.8,
+            "mean_first_success_replan_among_successes": 7.1,
+            "mean_physical_stall_env_steps": 22.6
+          },
+          "small_tee": {
+            "n": 50,
+            "success20": 30,
+            "success30": 31,
+            "rate20": 0.6,
+            "rate30": 0.62,
+            "mean_first_success_replan_among_successes": 7.580645161290323,
+            "mean_physical_stall_env_steps": 32.3
+          },
+          "square": {
+            "n": 50,
+            "success20": 20,
+            "success30": 20,
+            "rate20": 0.4,
+            "rate30": 0.4,
+            "mean_first_success_replan_among_successes": 7.4,
+            "mean_physical_stall_env_steps": 48.5
+          }
+        },
+        "paired_vs_B0": {},
+        "candidate_diagnostics": {
+          "model": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/effect_b_20261103/B0",
+          "epoch": "3",
+          "candidate_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f",
+          "latent_visual_mean_norm": 20.844514846801758,
+          "latent_visual_mean_variance": 1.0317126512527466,
+          "latent_visual_effective_rank": 56.17243576049805,
+          "decisions": 64,
+          "latent_proprio_mean_variance": 0.47802114486694336,
+          "scoring_code_sha256": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+          "scale_matching_reference": "B0",
+          "scale_matching_factors": {
+            "visual": 1.0,
+            "proprio": 1.0
+          },
+          "mean_standardized_prediction_MSE": {
+            "visual": 0.10368503630161285,
+            "proprio": 0.0032598948391751037
+          },
+          "mean_rank_pred_encoded": 0.7994944852941177,
+          "mean_rank_pred_physical": 0.7472426470588236,
+          "mean_rank_encoded_physical": 0.8963694852941176,
+          "selected_pred_success_end_count": 24,
+          "selected_encoded_success_end_count": 38,
+          "any_success_candidate_end_count": 42
+        }
+      },
+      "B1": {
+        "groups": {
+          "all": {
+            "n": 350,
+            "success20": 217,
+            "success30": 217,
+            "rate20": 0.62,
+            "rate30": 0.62,
+            "mean_first_success_replan_among_successes": 6.410138248847926,
+            "mean_physical_stall_env_steps": 32.3
+          },
+          "seen": {
+            "n": 200,
+            "success20": 152,
+            "success30": 152,
+            "rate20": 0.76,
+            "rate30": 0.76,
+            "mean_first_success_replan_among_successes": 6.342105263157895,
+            "mean_physical_stall_env_steps": 22.0
+          },
+          "unseen": {
+            "n": 150,
+            "success20": 65,
+            "success30": 65,
+            "rate20": 0.43333333333333335,
+            "rate30": 0.43333333333333335,
+            "mean_first_success_replan_among_successes": 6.569230769230769,
+            "mean_physical_stall_env_steps": 46.03333333333333
+          },
+          "+": {
+            "n": 50,
+            "success20": 36,
+            "success30": 36,
+            "rate20": 0.72,
+            "rate30": 0.72,
+            "mean_first_success_replan_among_successes": 6.111111111111111,
+            "mean_physical_stall_env_steps": 24.7
+          },
+          "I": {
+            "n": 50,
+            "success20": 21,
+            "success30": 21,
+            "rate20": 0.42,
+            "rate30": 0.42,
+            "mean_first_success_replan_among_successes": 7.285714285714286,
+            "mean_physical_stall_env_steps": 46.1
+          },
+          "L": {
+            "n": 50,
+            "success20": 38,
+            "success30": 38,
+            "rate20": 0.76,
+            "rate30": 0.76,
+            "mean_first_success_replan_among_successes": 6.2105263157894735,
+            "mean_physical_stall_env_steps": 19.8
+          },
+          "T": {
+            "n": 50,
+            "success20": 39,
+            "success30": 39,
+            "rate20": 0.78,
+            "rate30": 0.78,
+            "mean_first_success_replan_among_successes": 6.358974358974359,
+            "mean_physical_stall_env_steps": 22.2
+          },
+          "Z": {
+            "n": 50,
+            "success20": 39,
+            "success30": 39,
+            "rate20": 0.78,
+            "rate30": 0.78,
+            "mean_first_success_replan_among_successes": 6.666666666666667,
+            "mean_physical_stall_env_steps": 21.3
+          },
+          "small_tee": {
+            "n": 50,
+            "success20": 26,
+            "success30": 26,
+            "rate20": 0.52,
+            "rate30": 0.52,
+            "mean_first_success_replan_among_successes": 6.115384615384615,
+            "mean_physical_stall_env_steps": 45.9
+          },
+          "square": {
+            "n": 50,
+            "success20": 18,
+            "success30": 18,
+            "rate20": 0.36,
+            "rate30": 0.36,
+            "mean_first_success_replan_among_successes": 6.388888888888889,
+            "mean_physical_stall_env_steps": 46.1
+          }
+        },
+        "paired_vs_B0": {
+          "20": {
+            "rescued": 40,
+            "harmed": 40
+          },
+          "30": {
+            "rescued": 38,
+            "harmed": 41
+          }
+        },
+        "candidate_diagnostics": {
+          "model": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/effect_b_20261103/B1",
+          "epoch": "3",
+          "candidate_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f",
+          "latent_visual_mean_norm": 20.84885025024414,
+          "latent_visual_mean_variance": 1.0419331789016724,
+          "latent_visual_effective_rank": 55.99451446533203,
+          "decisions": 64,
+          "latent_proprio_mean_variance": 0.48213833570480347,
+          "scoring_code_sha256": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+          "scale_matching_reference": "B0",
+          "scale_matching_factors": {
+            "visual": 0.9901908031571665,
+            "proprio": 0.9914605611440511
+          },
+          "mean_standardized_prediction_MSE": {
+            "visual": 0.10624558488052571,
+            "proprio": 0.003727475910636713
+          },
+          "mean_rank_pred_encoded": 0.7965533088235295,
+          "mean_rank_pred_physical": 0.7506433823529411,
+          "mean_rank_encoded_physical": 0.8979319852941177,
+          "selected_pred_success_end_count": 29,
+          "selected_encoded_success_end_count": 38,
+          "any_success_candidate_end_count": 42
+        }
+      },
+      "B2": {
+        "groups": {
+          "all": {
+            "n": 350,
+            "success20": 116,
+            "success30": 116,
+            "rate20": 0.3314285714285714,
+            "rate30": 0.3314285714285714,
+            "mean_first_success_replan_among_successes": 6.112068965517241,
+            "mean_physical_stall_env_steps": 61.98571428571429
+          },
+          "seen": {
+            "n": 200,
+            "success20": 80,
+            "success30": 80,
+            "rate20": 0.4,
+            "rate30": 0.4,
+            "mean_first_success_replan_among_successes": 6.175,
+            "mean_physical_stall_env_steps": 57.475
+          },
+          "unseen": {
+            "n": 150,
+            "success20": 36,
+            "success30": 36,
+            "rate20": 0.24,
+            "rate30": 0.24,
+            "mean_first_success_replan_among_successes": 5.972222222222222,
+            "mean_physical_stall_env_steps": 68.0
+          },
+          "+": {
+            "n": 50,
+            "success20": 19,
+            "success30": 19,
+            "rate20": 0.38,
+            "rate30": 0.38,
+            "mean_first_success_replan_among_successes": 6.105263157894737,
+            "mean_physical_stall_env_steps": 58.3
+          },
+          "I": {
+            "n": 50,
+            "success20": 5,
+            "success30": 5,
+            "rate20": 0.1,
+            "rate30": 0.1,
+            "mean_first_success_replan_among_successes": 6.2,
+            "mean_physical_stall_env_steps": 81.3
+          },
+          "L": {
+            "n": 50,
+            "success20": 18,
+            "success30": 18,
+            "rate20": 0.36,
+            "rate30": 0.36,
+            "mean_first_success_replan_among_successes": 6.444444444444445,
+            "mean_physical_stall_env_steps": 60.4
+          },
+          "T": {
+            "n": 50,
+            "success20": 24,
+            "success30": 24,
+            "rate20": 0.48,
+            "rate30": 0.48,
+            "mean_first_success_replan_among_successes": 5.916666666666667,
+            "mean_physical_stall_env_steps": 51.2
+          },
+          "Z": {
+            "n": 50,
+            "success20": 19,
+            "success30": 19,
+            "rate20": 0.38,
+            "rate30": 0.38,
+            "mean_first_success_replan_among_successes": 6.315789473684211,
+            "mean_physical_stall_env_steps": 60.0
+          },
+          "small_tee": {
+            "n": 50,
+            "success20": 22,
+            "success30": 22,
+            "rate20": 0.44,
+            "rate30": 0.44,
+            "mean_first_success_replan_among_successes": 5.954545454545454,
+            "mean_physical_stall_env_steps": 51.3
+          },
+          "square": {
+            "n": 50,
+            "success20": 9,
+            "success30": 9,
+            "rate20": 0.18,
+            "rate30": 0.18,
+            "mean_first_success_replan_among_successes": 5.888888888888889,
+            "mean_physical_stall_env_steps": 71.4
+          }
+        },
+        "paired_vs_B0": {
+          "20": {
+            "rescued": 23,
+            "harmed": 124
+          },
+          "30": {
+            "rescued": 22,
+            "harmed": 126
+          }
+        },
+        "candidate_diagnostics": {
+          "model": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/effect_b_20261103/B2",
+          "epoch": "3",
+          "candidate_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f",
+          "latent_visual_mean_norm": 19.78005599975586,
+          "latent_visual_mean_variance": 0.16471454501152039,
+          "latent_visual_effective_rank": 16.05406951904297,
+          "decisions": 64,
+          "latent_proprio_mean_variance": 0.8408852815628052,
+          "scoring_code_sha256": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+          "scale_matching_reference": "B0",
+          "scale_matching_factors": {
+            "visual": 6.263640233961045,
+            "proprio": 0.5684736733392809
+          },
+          "mean_standardized_prediction_MSE": {
+            "visual": 0.0054951585889284615,
+            "proprio": 0.00042750178249661985
+          },
+          "mean_rank_pred_encoded": 0.9754595588235294,
+          "mean_rank_pred_physical": 0.6806525735294118,
+          "mean_rank_encoded_physical": 0.7020220588235293,
+          "selected_pred_success_end_count": 22,
+          "selected_encoded_success_end_count": 28,
+          "any_success_candidate_end_count": 42
+        }
+      },
+      "B3": {
+        "groups": {
+          "all": {
+            "n": 350,
+            "success20": 134,
+            "success30": 134,
+            "rate20": 0.38285714285714284,
+            "rate30": 0.38285714285714284,
+            "mean_first_success_replan_among_successes": 6.268656716417911,
+            "mean_physical_stall_env_steps": 52.91428571428571
+          },
+          "seen": {
+            "n": 200,
+            "success20": 100,
+            "success30": 100,
+            "rate20": 0.5,
+            "rate30": 0.5,
+            "mean_first_success_replan_among_successes": 6.12,
+            "mean_physical_stall_env_steps": 46.25
+          },
+          "unseen": {
+            "n": 150,
+            "success20": 34,
+            "success30": 34,
+            "rate20": 0.22666666666666666,
+            "rate30": 0.22666666666666666,
+            "mean_first_success_replan_among_successes": 6.705882352941177,
+            "mean_physical_stall_env_steps": 61.8
+          },
+          "+": {
+            "n": 50,
+            "success20": 17,
+            "success30": 17,
+            "rate20": 0.34,
+            "rate30": 0.34,
+            "mean_first_success_replan_among_successes": 5.588235294117647,
+            "mean_physical_stall_env_steps": 60.9
+          },
+          "I": {
+            "n": 50,
+            "success20": 8,
+            "success30": 8,
+            "rate20": 0.16,
+            "rate30": 0.16,
+            "mean_first_success_replan_among_successes": 7.375,
+            "mean_physical_stall_env_steps": 59.7
+          },
+          "L": {
+            "n": 50,
+            "success20": 30,
+            "success30": 30,
+            "rate20": 0.6,
+            "rate30": 0.6,
+            "mean_first_success_replan_among_successes": 6.133333333333334,
+            "mean_physical_stall_env_steps": 37.0
+          },
+          "T": {
+            "n": 50,
+            "success20": 32,
+            "success30": 32,
+            "rate20": 0.64,
+            "rate30": 0.64,
+            "mean_first_success_replan_among_successes": 5.84375,
+            "mean_physical_stall_env_steps": 26.2
+          },
+          "Z": {
+            "n": 50,
+            "success20": 21,
+            "success30": 21,
+            "rate20": 0.42,
+            "rate30": 0.42,
+            "mean_first_success_replan_among_successes": 6.9523809523809526,
+            "mean_physical_stall_env_steps": 60.9
+          },
+          "small_tee": {
+            "n": 50,
+            "success20": 20,
+            "success30": 20,
+            "rate20": 0.4,
+            "rate30": 0.4,
+            "mean_first_success_replan_among_successes": 6.65,
+            "mean_physical_stall_env_steps": 47.8
+          },
+          "square": {
+            "n": 50,
+            "success20": 6,
+            "success30": 6,
+            "rate20": 0.12,
+            "rate30": 0.12,
+            "mean_first_success_replan_among_successes": 6.0,
+            "mean_physical_stall_env_steps": 77.9
+          }
+        },
+        "paired_vs_B0": {
+          "20": {
+            "rescued": 26,
+            "harmed": 109
+          },
+          "30": {
+            "rescued": 25,
+            "harmed": 111
+          }
+        },
+        "candidate_diagnostics": {
+          "model": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/effect_b_20261103/B3",
+          "epoch": "3",
+          "candidate_sha256": "a71426cf7175564f542cb4f2293aa90f6ed9f57abe72c2993bf51816c6ab9d4f",
+          "latent_visual_mean_norm": 20.616966247558594,
+          "latent_visual_mean_variance": 1.0407257080078125,
+          "latent_visual_effective_rank": 141.8238983154297,
+          "decisions": 64,
+          "latent_proprio_mean_variance": 0.046124786138534546,
+          "scoring_code_sha256": "2ed0a362c17c4c2c7549308834dd49e46fbebd3014490d44a53770053e3904d9",
+          "scale_matching_reference": "B0",
+          "scale_matching_factors": {
+            "visual": 0.9913396424382377,
+            "proprio": 10.36365010845188
+          },
+          "mean_standardized_prediction_MSE": {
+            "visual": 0.27244915114715695,
+            "proprio": 0.06226250377949327
+          },
+          "mean_rank_pred_encoded": 0.7577665441176471,
+          "mean_rank_pred_physical": 0.6955422794117647,
+          "mean_rank_encoded_physical": 0.85078125,
+          "selected_pred_success_end_count": 28,
+          "selected_encoded_success_end_count": 38,
+          "any_success_candidate_end_count": 42
+        }
+      }
+    },
+    "settings": "seed0, 3epochs, effective batch64, TS0.01, no decoder, identical initial backbone parameters and sampler order; EVAL50 development targets, 30 replans, frozen model; no planning correction.",
+    "calibration": {
+      "idm": {
+        "mode": "idm",
+        "lambda": 0.418538541733931,
+        "batches": 100,
+        "batch_size": 64,
+        "microbatch": 16,
+        "gradient_parameters": "visual encoder only",
+        "mean_jepa_encoder_grad_norm": 2.7988127517700194,
+        "mean_aux_encoder_grad_norm": 0.6687108767032623,
+        "target_gradient_ratio": 0.1,
+        "state_unchanged": true,
+        "rng_restored": true,
+        "train_windows_sha256": "fac37355fc7e81996d43ef3d11378a7d3100d03633004fb179482d180366aa3d",
+        "unique_source_windows": 4000,
+        "window_draws": 6400,
+        "aux_parameters": 103690,
+        "idm_head_linear_forward_MACs_per_pair": 103424
+      },
+      "effect": {
+        "mode": "effect",
+        "lambda": 2.4677111194988774,
+        "batches": 100,
+        "batch_size": 64,
+        "microbatch": 16,
+        "gradient_parameters": "visual encoder only",
+        "mean_jepa_encoder_grad_norm": 2.7988127517700194,
+        "mean_aux_encoder_grad_norm": 0.11341735787689686,
+        "target_gradient_ratio": 0.1,
+        "state_unchanged": true,
+        "rng_restored": true,
+        "train_windows_sha256": "fac37355fc7e81996d43ef3d11378a7d3100d03633004fb179482d180366aa3d",
+        "unique_source_windows": 4000,
+        "window_draws": 6400,
+        "aux_parameters": 0,
+        "idm_head_linear_forward_MACs_per_pair": 0
+      },
+      "wall_seconds": 68.3601206522435
+    },
+    "B1_formula": "Per5-step prediction pair, w=1+I[visual_effect OR proprio_effect], normalized by global batch mean; replace JEPA prediction MSE by weighted MSE; TS unchanged. Coverage98.10% in final training epoch.",
+    "B2_formula": "L_IDM=mean||g([meanpatch(v[t+1]-v[t]),p[t+1]-p[t]])-a[t:t+5]||^2; g=MLP394->256->10 with GELU; use real encoded frames at0,5,10,15 and each corresponding5executed actions. No action embedding input. lambda=.418538541733931.",
+    "B3_formula": "For branches visual/proprio, layer-normalize each per-sample embedding without affine parameters (eps1e-5). D_b(i,j)=mean((LN(z_b[i])-LN(z_b[j]))^2), NOT RMS distance. Loss=global positive-branch-pair mean of [max(0,.2-D_b(i,j))]^2 for pairs(0,5),(5,10),(10,15),(0,15). No negative/static contraction term. lambda=2.4677111194988774."
+  },
+  "method": {
+    "distance": "D_alpha(z,zprime)=mean((visual-visualprime)^2)+alpha*mean((proprio-proprioprime)^2), alpha=1; latent has visual and proprio branches; proprio may encode velocity.",
+    "trigger": "r_t=sqrt(D(z_t,z_{t-W})/max(D(z_t,z_goal),1e-12)), W=3; w_t=clip((0.15-r_t)/(0.15-0.05),0,1). Store observation and w whenever positive; re-encode all memory observations with current adapted encoder every replan.",
+    "regularizer": "P(A)=sum_h c_h sum_j [w_j D(m_j,g)/(H+1)] [max(0,1-D_sp(z_h,m_j)/(beta D_sp(m_j,g)))]^2 / sum_h c_h; c_h=2^h, beta=.25, kappa=2. Distances/rho clamped at1e-12. Sum over memories (not averaged), persistent memory until episode reset, no deduplication.",
+    "radius": "beta multiplies squared distance; corresponding Euclidean radius is sqrt(beta)=0.5 times goal distance. Goal outside each memory support when beta<1. At exact center a squared radial kernel has zero own gradient; no escape guarantee.",
+    "proprio": "Boost alpha by10 for the next3 plan calls after a trigger, renewed each trigger. Implementation scales both predicted and target proprio bysqrt(10) before original objective. Baseline trigger distance uses alpha1 even during boost.",
+    "switch": "If stalled and (bar_l[t-W]-bar_l[t])/max(bar_l[t-W],1e-12)<theta=.05, activate corrections; bar_l[t]=(l[t-2]+l[t-1]+l[t])/3, W=3, K=1. l is newest not-yet-updated transition prediction MSE. Switch occurs after env feedback and effects begin next plan. Once switched remains active; updates CONTINUE unless freeze control explicitly true.",
+    "objective": "Maze: weighted all-frame objective including context, weights normalized then averaged over T=H+1 frames. PushObj: last-frame objective for MPC iter<H, then same all-frame objective. GD Adam lr.1,100 iterations,zero init, warm starts unexecuted actions.",
+    "action_offset": "K2P uses physical pusher displacement<10px over3 replans, checks start=10 (next plan is eleventh execution), min gap4, max7 escapes. On escape add v/||v||*min(15px,||v||/5) to each of5 executed env actions, v=goal pusher position-current pusher; prop boost10 for kick plus2 replans. This is a separate physical trigger branch, NOT combined with latent-memory main T0SP arm.",
+    "training": "Bias data collection can use simulator object CoG. Deployed latent trigger/regularizer/proprio weight use observed images/proprio and goal observation, no oracle object state. K2P uses pusher goal proprio. Training observer B labels also not the same as online stall trigger.",
+    "provenance": [
+      {
+        "path": "planning/stagnation.py",
+        "sha256": "c237297896be7be77d9e8962bdf292d05cd1022bc8d527addd709827c0bcfce0"
+      },
+      {
+        "path": "planning/switch.py",
+        "sha256": "bcafc9b41566be8670d0a40749289e626887530901ffc7130aa78f8246ccdfc3"
+      },
+      {
+        "path": "planning/escape.py",
+        "sha256": "61a0ae3d650330000f6b43e08b2553bcdd40610f5c79b61f2ed5bad71db4a2ae"
+      },
+      {
+        "path": "planning/objectives.py",
+        "sha256": "3d45b48728cdded0ff4bc75cc28f57e9a8db71b7d49681069216967f6f64d0c1"
+      },
+      {
+        "path": "scripts/e3_run.py",
+        "sha256": "eeaed5af2cd83d1252fec5a5d1b73d21409ff243cf00699a7f6841b93deacbf0"
+      },
+      {
+        "path": "scripts/stag_base_run.py",
+        "sha256": "2e1bf4c1f20327c9f79e1a41287f7adb82897656d6c21a14497a036006609bf0"
+      },
+      {
+        "path": "scripts/gen_pushobj_dataset.py",
+        "sha256": "fd75f3bbd6e36fecde0ddf145944e06777d8e3fdc573cb04a0a89c6c758fb111"
+      }
+    ]
+  },
+  "limitations": [
+    "All intervention comparisons are repeatedly used development targets; no independent confirmatory holdout or new multi-seed intervention result exists.",
+    "PushObj four checkpoint/planner combinations share the same350 tasks; cannot pool as1400 independent episodes or four independent replications.",
+    "Maze best SZ-switch selected among several developer arms:30replans66/100 vs63/100;50replans87/100 vs82/100, p=.125 at50. No statistically significant general Maze improvement demonstrated.",
+    "SZ-switch is penalty-only and has no PushObj counterpart in E3; strongest PushObj result uses proprio reweighting. Do not present per-domain selected maxima as one tested fixed policy.",
+    "Old Maze action_repeat1 failures and corrected action_repeat4 E3 run are different temporal protocols. All arms within E3 use4.",
+    "Training recipe combines action bias9px, noise10px, original-source placement with retries/jitter, contact selection and filtering; historical released-model comparison does not isolate action bias or match all training factors.",
+    "Historical report.md source-placement description is stale; generation_config.json is actual recipe. Bias/noise parameters calibrated with author released evaluation-segment statistics; targets are development data.",
+    "Author training-source/test-source overlap cannot be ruled out; source training/own validation pools are separated, but original author evaluation ancestry is unverified.",
+    "Three historical training seeds exist; four B training-screen arms and intervention studies use one training seed. Historical bias16k seed0 differs from new B0 (no decoder, initialization/runtime differences); do not combine B0 62.86 with old corrected72.29 as a paired gain.",
+    "Negative B2/B3 do not causally establish collapse, goal conflict, or impossibility of representation regularization. Common-candidate diagnostics are fixed candidate choice, not MPC success nor an oracle reachability bound.",
+    "Moving losses are on different transitions; loss gate is not a convergence/overfitting/learnability detector. Freezing controls lower Maze success; adaptation should continue.",
+    "Planning-stage gain is largely pusher-goal completion: old40replan T0SP rescues37/54 object-already-tolerant failures and2/78 object-not-at-goal failures. This breakdown is40budget and should not be silently called30budget.",
+    "Penalty is a compact-support latent repulsion, not demonstrated learned geodesic distance, progress guarantee, globally optimal planning, or novel general potential-field principle.",
+    "B3 positive-effect separation differs from planning-stage stagnation memory regularizer; failure of one does not test the other."
+  ],
+  "pending_experiments": [
+    "Independent held-out task stream and Maze seeds with frozen hyperparameters",
+    "Matched collection ablation separating action bias/noise/contact selection while fixing source episodes, sample count and training schedule",
+    "Three-seed intervention replication",
+    "Complete shared intervention-component matrix across both domains",
+    "Task-completion breakdown at matched budgets and long-horizon/contact-specific goals"
+  ]
+}

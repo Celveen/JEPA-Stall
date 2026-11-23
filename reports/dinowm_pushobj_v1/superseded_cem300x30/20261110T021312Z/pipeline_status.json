@@ -1,0 +1,26 @@
+{
+  "status": "evaluating",
+  "target_epochs": 3,
+  "updated_utc": "2026-11-10T01:01:19.989621+00:00",
+  "completed_chunks": 4,
+  "total_chunks": 140,
+  "episodes_per_condition": 350,
+  "training": {
+    "ordinary": {
+      "status": "complete",
+      "phase": "validation",
+      "epoch": 3,
+      "global_step": 152838,
+      "validation_loss": 0.07044585794210434,
+      "epoch_seconds": 8035.208715431392
+    },
+    "augmented": {
+      "status": "complete",
+      "phase": "validation",
+      "epoch": 3,
+      "global_step": 152838,
+      "validation_loss": 0.0864248126745224,
+      "epoch_seconds": 9777.189658576623
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "revision": "v13",
+  "checked_utc": "2026-11-10T03:22:48.684270+00:00",
+  "format": {
+    "abstract_words_whitespace": 183,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 9,
+    "appendix_pages": 10,
+    "combined_pages": 19,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
+  },
+  "official_style_hashes": {
+    "cvpr.sty": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
+    "ieeenat_fullname.bst": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
+  },
+  "all_fonts_embedded": true,
+  "type3_fonts": false,
+  "author_project_identity_in_pdf": false,
+  "new_model_experiments": false,
+  "primary_jobs_complete": 56,
+  "paired_episodes_verified": 1400,
+  "raw_results_audit": "results_audit_v13.json",
+  "figures_unchanged_from_v12": true,
+  "previous_figure_audit": "integrity_v12.json",
+  "visual_inspection": [
+    "main comparison table on PDF page 6",
+    "complete checkpoint matrix and pending-study table on PDF page 19"
+  ],
+  "pending_scores_not_fabricated": true,
+  "pushobj_task_lists_not_pooled": true
+}

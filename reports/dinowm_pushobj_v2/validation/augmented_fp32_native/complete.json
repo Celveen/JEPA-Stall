@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "epoch": 3,
+  "n": 2,
+  "successes": 0,
+  "ecp": false,
+  "wall_seconds": 172.84029924310744,
+  "frozen_weights_unchanged": true,
+  "model_sha256": "46d741495bcd4184bf1adf70d4f1d70f39607ea8d986c56ebfabe6197e364152",
+  "checkpoint_sha256": "35ecac035f6494068b2124a40383483eb5b241860d04b1f5b1d7144ba0796dad",
+  "targets_sha256": "fc093468046f52dc5cceb2e50493938f5780a10fdc3726698407597874dff581",
+  "is_smoke": false,
+  "is_validation": true,
+  "precision": "fp32",
+  "candidate_batch": 64,
+  "cem_candidates": 200,
+  "cem_iterations": 10,
+  "cem_elites": 30,
+  "max_mpc_replans": 4,
+  "executed_physical_steps_per_replan": 5,
+  "objective_mode": "last",
+  "source_sha256": {
+    "evaluate.py": "168391723115db6769381cf30da102375cf3e733d542f367c093108dd280a11c",
+    "cem_memory.py": "3cb8e27dbd55a4c4ed94bfca1c68cae3149899f481f85a9db84f9bfe52ef3cc5"
+  }
+}

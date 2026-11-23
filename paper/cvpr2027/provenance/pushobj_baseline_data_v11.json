@@ -1,0 +1,194 @@
+{
+  "task_set": "A",
+  "n": 350,
+  "matched_reference_states": true,
+  "target_state_sha256": "51b8e2bea8b6706a1957f4036c36a6aa4d814b33c513b8f2ae977d637b0cdff7",
+  "distinct_from_main_ECP_task_set": true,
+  "rows": [
+    {
+      "method": "DINO-WM",
+      "planner": "GD",
+      "n": 350,
+      "successes": 172,
+      "success_percent": 49.142857142857146,
+      "files": [
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_00_I/final_eval_results.npz",
+          "sha256": "f0552e61a3d4f67a730ebd555b0f556bc257a848e8a504ec753c51c00a18d714"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_01_L/final_eval_results.npz",
+          "sha256": "b6e42a557f956ac0f24e14f4fe6c624ee50a09198cd8eb9c6dae71ece0551544"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_02_square/final_eval_results.npz",
+          "sha256": "466a9e595811d9b440ce4de75777b85890460e270b584a82cfbf8224b5ccb333"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_03_Z/final_eval_results.npz",
+          "sha256": "ff58b84a985b218623b838fc019bdaa5802e07ae47e61fbd1348b841cb915076"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_04_small_tee/final_eval_results.npz",
+          "sha256": "6b4efa766184ecf4713dc067a18a54c917bdacdd8a71c6cd71a8b00b93fc2a1a"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_05_plus/final_eval_results.npz",
+          "sha256": "1852d5aaccfa925ef7aeb15f6279ec920cc19f1343872e3667915b1323283ec5"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_06_T/final_eval_results.npz",
+          "sha256": "c199dd1bdf07b658eff69a74a7fe113f200c2b19c6e8fffc4dd92fd09e085230"
+        }
+      ]
+    },
+    {
+      "method": "LeWM",
+      "planner": "GD",
+      "n": 350,
+      "successes": 212,
+      "success_percent": 60.57142857142858,
+      "files": [
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_00_I/final_eval_results.npz",
+          "sha256": "bc2d47c9c20cd072a806903f2574024e64bcc04e198776e87e516a55abbdb69c"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_01_L/final_eval_results.npz",
+          "sha256": "7ad9935d99362d4b4abfdfb28bee317e12a67f2e0833c83dfe4cd08be368dd02"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_02_square/final_eval_results.npz",
+          "sha256": "6d52e50f81eaec353b440641e96935d8ac237e01ffd10a99abfc8785d3d19263"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_03_Z/final_eval_results.npz",
+          "sha256": "afbc7fac3bd0d2353efdce70aab0c106d3ab4f70adcaf6e63e85d8b649f04440"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_04_small_tee/final_eval_results.npz",
+          "sha256": "2c9cb1c5136c9cc883e9766284bcfec06684a19d74bad75c1f74d47c6370564c"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_05_plus/final_eval_results.npz",
+          "sha256": "d74efba38326bbc8292f439a97b2548611779eb76a6453894d4a3f2e54d47ded"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_06_T/final_eval_results.npz",
+          "sha256": "bf009235c7cedb7c7db804eb1d164856acdffe5e4527816d5df1a70b93ed1f6e"
+        }
+      ]
+    },
+    {
+      "method": "DINO-WM",
+      "planner": "CEM",
+      "n": 350,
+      "successes": 217,
+      "success_percent": 62.0,
+      "files": [
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_00_I/final_eval_results.npz",
+          "sha256": "9ba1d86cc52d2516ee0a146f60fb096d8dc428307727d25b04c636690a1979ef"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_01_L/final_eval_results.npz",
+          "sha256": "639784d2c501ff98c7bceae31723ecdef3269e13cfc3b56893dac56953ff52d1"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_02_square/final_eval_results.npz",
+          "sha256": "9926f095aae456905a40043b4368ba4405b52ef3c17a2cb0e2be71518e643868"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_03_Z/final_eval_results.npz",
+          "sha256": "030d9004ec7d89a0f7cea4f7e3a60697ab9a53804b4d5efef12f06c78ea8eee6"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_04_small_tee/final_eval_results.npz",
+          "sha256": "8e38a9bc136e128428ba978aa74af9a7d9dabb11b334ec70fde77d602071ddb7"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_05_plus/final_eval_results.npz",
+          "sha256": "26e28a139e7e291009f392be41f0d42c35e4ec4c6b7e540da42016600f16f243"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_06_T/final_eval_results.npz",
+          "sha256": "c8fe56f335227facc81d0b8b2eeba28bd3971c848e642b7b45092ab7d3f32fa5"
+        }
+      ]
+    },
+    {
+      "method": "LeWM",
+      "planner": "CEM",
+      "n": 350,
+      "successes": 224,
+      "success_percent": 64.0,
+      "files": [
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3/chunk_00_I/final_eval_results.npz",
+          "sha256": "3fa6841f706bb9018ea569c92c75ee790cfe6c11b7c582eca92190ae182435fc"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3/chunk_01_L/final_eval_results.npz",
+          "sha256": "8adb1b362945eaf5846bf01e58690a9ac121a1e2c4eb4933e084b186fbb6fc0a"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3/chunk_02_square/final_eval_results.npz",
+          "sha256": "81841a2f7ef46fe4454b3e269eeb5ce588807ef5e1d18d51c5b0f97de8ff554a"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3/chunk_03_Z/final_eval_results.npz",
+          "sha256": "5712d519828de990cd13f83b4419029be05cc863779cf50cf4a8046d16240083"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3/chunk_04_small_tee/final_eval_results.npz",
+          "sha256": "0d99e9d5567f757a1ad81c7c9af538d1da8febef81dccc53d130231c5f38b59c"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3/chunk_05_plus/final_eval_results.npz",
+          "sha256": "9683eba4bc7333ca8ec56eaba58ec41bd1b390759d17c9f1593a95dbe1594c66"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3/chunk_06_T/final_eval_results.npz",
+          "sha256": "8d78209452d53c4f7eee831bfb78d46d8b8159fc50435a670e35fe27eee5a155"
+        }
+      ]
+    },
+    {
+      "method": "DDP-WM",
+      "planner": "CEM",
+      "n": 350,
+      "successes": 202,
+      "success_percent": 57.714285714285715,
+      "files": [
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_00_I/final_eval_results.npz",
+          "sha256": "b041af8a7163d0a4fbfefed28eb1b44c73736b4a4f1d2e35e7ba27219c7ead99"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_01_L/final_eval_results.npz",
+          "sha256": "71eeebb0ce3bde06fa72ea263c2d68935c8b546068561dbb7a382848bcffa103"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_02_square/final_eval_results.npz",
+          "sha256": "c63dfa3460b28231a155c8acae869e6ffd0894b89cd64cc22a5a60facacd213f"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_03_Z/final_eval_results.npz",
+          "sha256": "1b22ba5c1551b38dd06a5cee0e14c185624fbeebcf21588f2c657b57f5361e60"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_04_small_tee/final_eval_results.npz",
+          "sha256": "06d7b68aeb246884c180c91bb46c3f4d2fa9258a73125042a8692a369d42af96"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_05_plus/final_eval_results.npz",
+          "sha256": "422277c7c04a9f7efac73a9edec36fa2b38fb522d53a4c89d5e039a6970e17d1"
+        },
+        {
+          "path": "reports/pusht_visual_v8/raw_baselines/research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_06_T/final_eval_results.npz",
+          "sha256": "33954d453b21cd7b1229f099c0556374502acdfc25b7308a18a4260922058842"
+        }
+      ]
+    }
+  ]
+}

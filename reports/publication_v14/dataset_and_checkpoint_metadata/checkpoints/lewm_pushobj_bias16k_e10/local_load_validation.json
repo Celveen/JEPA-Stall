@@ -1,0 +1,12 @@
+{
+  "device": "cpu",
+  "weights_only_deserialization": true,
+  "strict_load": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "epoch": 10,
+  "step": 127360,
+  "parameter_count": 18034478,
+  "all_tensors_finite": true,
+  "training_or_evaluation_started": false
+}

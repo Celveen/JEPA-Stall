@@ -1,0 +1,43 @@
+{
+  "canvas_inches": [
+    3.25,
+    2.25
+  ],
+  "minimum_font_size_points": 8.2,
+  "data_file": "headline_data_v6.json",
+  "data_sha256": "958d4fe36b1bc21fab94a46ec0d7bc58334e230e6e9bc06767199cab886950bb",
+  "success_rates_percent": [
+    [
+      43.714285714285715,
+      61.142857142857146,
+      72.28571428571429
+    ],
+    [
+      69.42857142857143,
+      74.85714285714286,
+      76.85714285714286
+    ]
+  ],
+  "gain_from_exact_counts_percentage_points": [
+    28.571428571428573,
+    7.428571428571429
+  ],
+  "y_axis": [
+    0,
+    100
+  ],
+  "outputs": [
+    {
+      "file": "fig0_headline.pdf",
+      "sha256": "c089fa979043771a90af9295955b0a83b99be49b9e5a46880b1481efc618cdb1"
+    },
+    {
+      "file": "fig0_headline.svg",
+      "sha256": "48eecad65f8a4d97cd8d3499814a1f5205735dd26baf21d6e0f70bd8c848d725"
+    },
+    {
+      "file": "fig0_headline.png",
+      "sha256": "aa8a777e7be8c7742f53c6816a734f03e37db42a5b58e7ebae40b5607b83952c"
+    }
+  ]
+}

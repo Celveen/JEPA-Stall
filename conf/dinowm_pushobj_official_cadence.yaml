@@ -1,0 +1,38 @@
+# Shared DINO-WM PushObj deployment protocol. Time values below are environment controls.
+# Official execution cadence; the approved 200x10 CEM budget is retained.
+protocol_id: dinowm_pushobj_cem200x10_mpc6x25_v1
+goal_H: 25
+objective:
+  mode: last
+planner:
+  _target_: physical_stagnation.PhysicalTimeStagnationMPCPlanner
+  max_iter: 6
+  n_taken_actions: 25
+  control_timing:
+    executed_controls: 25
+    warmup_controls: 50
+    history_stride_controls: 5
+    boost_controls: 15
+  sub_planner:
+    target: cem_memory.ChunkedCEMPlanner
+    horizon: 25
+    num_samples: 200
+    opt_steps: 10
+    topk: 30
+    var_scale: 1
+    eval_every: -1
+    candidate_batch: 64
+    precision: bf16
+    timing_path: cem_timings.jsonl
+  stag:
+    space: latent
+    kappa: 2.0
+    start: 2               # 50 controls / 25 controls per replan
+    window: 3              # 3 observation intervals x 5 controls = 15 controls
+    gamma_lo: 0.05
+    gamma_hi: 0.15
+    beta: 0.25
+    prop_boost: 10.0
+    boost_replans: 0        # current 25-control plan only; 15 controls rounds up to one plan
+    alpha: 1.0
+    base: 2.0

@@ -1,0 +1,28 @@
+[
+  {
+    "arm": "ordinary",
+    "gpu": 0,
+    "pid": 101782,
+    "command": [
+      "/home/appuser/anaconda3/envs/ts/bin/python",
+      "-u",
+      "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/validate_precision.py",
+      "--arm",
+      "ordinary"
+    ],
+    "started_utc": "2026-11-10T02:15:45.225791+00:00"
+  },
+  {
+    "arm": "augmented",
+    "gpu": 1,
+    "pid": 101783,
+    "command": [
+      "/home/appuser/anaconda3/envs/ts/bin/python",
+      "-u",
+      "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/validate_precision.py",
+      "--arm",
+      "augmented"
+    ],
+    "started_utc": "2026-11-10T02:15:45.226599+00:00"
+  }
+]

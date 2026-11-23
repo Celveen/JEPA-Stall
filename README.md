@@ -1,5 +1,10 @@
 # Stalls in latent world-model MPC
 
+## CVPR 2027 manuscript and results
+
+The current draft and reproducible result package are on this branch: [paper PDF](paper/cvpr2027/paper_v14.pdf), [editable source](paper/cvpr2027/README.md), and [evaluation data and logs](reports/publication_v14/README.md). The paper includes the completed Frozen/AdaJEPA evaluation and the random-data epoch-3 DINO-WM CEM PushT baseline. The three-epoch DINO-WM PushObj evaluation is complete: [results, raw logs, and reproducible audit](reports/dinowm_pushobj_v3/completed_results/README.md).
+
+
 Research code for studying why test-time-adapted latent world-model MPC gets stuck ("stalls") and how a
 planner can detect and escape it. Experiments run on PushObj (shape shift), the multi-layout point maze, and the standard Wall baseline.
 
@@ -15,7 +20,43 @@ planner can detect and escape it. Experiments run on PushObj (shape shift), the 
 | `models/`, `datasets/`, `env/`, `train.py`, `plan.py` | World-model training and planning infrastructure |
 | `data/targets/` | Evaluation target sets (ordered chunks of plan targets) used by the runners |
 
-## Latest results (2026-11-05)
+## Latest results (2026-11-17)
+
+- [Frozen ECP paired cost analysis](reports/frozen_ecp_cost_20261117/README.md): 350 matched tasks per arm with GD100 + CUDA Graph. ECP increases success from **61.14% to 72.29%**, adds **2.81%** per-replan latency, and reduces mean task-loop wall time by **12.06%**; peak allocated GPU memory rises from **0.823 to 0.967 GiB**. Includes all 700 task measurements, raw actions/replays, configurations, source snapshots and a CPU-only verifier.
+
+- [Figure 1 additional evaluation seeds](reports/figure1_eval_seeds_20261117/README.md): all three AdaJEPA conditions now have seeds 100/200/300: **68.76 ± 1.41%** (base), **73.90 ± 1.19%** (augmentation), and **76.86 ± 1.03%** (augmentation + ECP). Frozen + ECP is **72.29 ± 0.00%** and LeWM + ECP is **66.00 ± 0.00%**. Includes 3,500 additional-seed task evaluations, physical-replay records and 125 exact eager/CUDA Graph action/RNG comparisons. These are fixed-task evaluation-seed repeats, not independent training seeds; the four other Frozen/LeWM conditions retain their original single-seed results.
+
+
+- [Rope three-seed aggregate (99, 100, 101)](reports/rope_seeds99_100_101/README.md): four matched 3/3 conditions, 20 targets repeated under three seeds (240 runs). **Fixed S with five-push warmup reduces mean CD from 0.6865 to 0.4793 (30.2%) and mean executed pushes from 12.68 to 11.30 (10.9%), while increasing success from 33/60 to 43/60 (55.0% to 71.7%).** Both CD and push count improve over the matched Native control in every seed. Includes all four conditions, seed sensitivity, paired outcomes, executed-action comparisons, and the newly completed [seed-101 evidence](reports/rope_seed101_20/README.md). Push counts average all runs under the same 20-push cap and CD <0.3 stopping rule.
+
+- [Completed Rope seed-100 repeat](reports/rope_seed100_20/SEED_COMPARISON.md): four 3/3 arms × 20 matched targets. Native: **CD 0.5759, 13/20**; fixed S: **0.3542, 16/20**; dynamic S: **0.5763, 12/20**; fixed S without extra warmup: **0.3033, 16/20**. Includes the seed-99 comparison, trigger/application counts, uniformly recomputed actual-control differences, and all 80 recorded trajectories. Fixed S improves on Native in this repeat; the earlier dynamic-S advantage does not persist.
+
+- [Real LeWM red-goal / red-agent comparisons](reports/lewm_shift_visuals_20261116/README.md): same frozen checkpoint with intervention off/on, ten fixed targets per condition. GD success counts are **4→5/10** for red goal and **0→1/10** for red agent, with no regressions. Includes one selected rescue per condition, unmodified simulator screenshots, full playback, every-three-control sequences and all 40 recorded trajectories. The LeWM contact intervention uses observed simulator object pose and known geometry.
+
+- [Completed LeWM PushT clean CEM evaluation](reports/lewm_pusht_clean_20261116/README.md): **36/50 (72%)**, now filled in the main table. T-only training and the 50-target evaluation are complete; raw outcomes, training logs, checkpoint identity and frozen-weight checks are included.
+
+- [Complete five-condition Rope comparison](reports/rope_formal20_native3/RESULTS.md): the matched **Native 3/3** control is now complete at **CD 0.7547, 10/20 successes**. Fixed S, dynamic S and fixed S without extra warmup reach **0.6112 / 13**, **0.5152 / 12** and **0.5834 / 13** successes out of 20, respectively. All three improve on Native 3/3 in this run; Native 5/5 retains the highest success count, **14/20**. Includes paired action comparisons, per-push CD, raw evidence and source compatibility checks.
+- [Additional real Rope comparisons](reports/rope_formal20/visuals_extra/README.md): two preselected targets, four independently recorded executions, with every-three-push sequences and all raw frames. Ours has lower final CD in both reruns; target 15 uses S but takes more pushes, while target 24 finishes earlier without an S trigger. These illustrative runs are excluded from formal statistics.
+
+- [Completed Rope formal evaluation and real simulator images](reports/rope_formal20/README.md): four conditions × 20 targets, maximum 20 pushes, stopping at CD < 0.3. Native 5/5: **0.5809, 14/20**; fixed S 3/3: **0.6112, 13/20**; dynamic S 3/3: **0.5152, 12/20**; fixed S without extra warmup: **0.5834, 13/20**. Dynamic S lowers mean CD but no S condition improves success rate. Includes [complete three-push image sequences](reports/rope_formal20/visuals/README.md) from separately recorded executions, favorable and unfavorable examples, and the full raw evidence package.
+
+- [PushT clean-data audit](reports/pusht_clean_audit_20261116/README.md): LeWM-GD clean is **32/50 (64%)** and already populated. The archive search found neither CEM clean record; LeWM has since been measured above, while DDP-WM remains unmeasured.
+
+The [complete Rope follow-up summary and raw evidence](reports/rope_followup_20261116/README.md) collect all ten completed conditions, 100 episode-condition results, per-sample measurements, and the encoder/protocol audits.
+
+- [Completed Rope 15-push rerun](reports/rope_chunk3_cap15_20261116/BUDGET_COMPARISON.md): three groups of ten targets at 3/3 cadence give Native CD **0.4206**, fixed S **0.4117**, and dynamic S **0.4178**, all **7/10** successful. Each S arm triggers ten times and changes three tasks' controls; strengths again saturate, so this does not distinguish fixed from dynamic strength. Truncating the earlier 20-push trajectories at 15 yields **6/10**, versus **8/10** after 20: two successes require the extra budget. The independent rerun and same-trajectory budget comparison are reported separately because physics variation can change later plans.
+
+- [Completed Rope ten-target chunk and strength pilot](reports/rope_chunk3_strength_20261116/RESULTS.md): with observation after every push, a 20-push limit, and stopping at CD < 0.3, Native-3 reaches mean CD **0.3119 (8/10)**, fixed-strength S **0.2430 (8/10)**, dynamic-strength S **0.3109 (8/10)**, and Native-5 **0.6715 (7/10)**. Both S variants change actions in four tasks, but all trigger strengths saturate at the same value; their CD difference does **not** establish a fixed-versus-dynamic advantage. [The encoder audit](reports/rope_encoder_audit_20261116/DIAGNOSIS.md) invalidates the old Rope pilot that accidentally used a random DINO encoder. [Protocol and run instructions](experiments/rope_chunk3/README.md).
+
+- Completed Rope per-push replanning controls, ten targets each: Native CD **1.0046**, [S with three-push warmup](reports/rope_feedback_pretrained_20261116/warmup3/RESULTS.md) **1.0794**, and [S with five-push warmup](reports/rope_feedback_pretrained_20261116/warmup5/RESULTS.md) **1.0070**; all solve **4/10**. Each S arm changes one task's actions without improving its final CD. No trigger occurs during the interval distinguished by the warmup settings; their later CD difference follows independent physics branches and is not evidence of a warmup advantage.
+
+- [Completed ECP threshold and cadence follow-up](reports/ecp_threshold_v1/README.md): 1,400 task runs and complete logs. Raising the threshold to 0.30 gives **77.4%** for augmented AdaJEPA (previous ECP: 76.9%); DINO-WM remains **48.9%** at 6 x 25 and **20.6%** at 30 x 5, with a matched native control at each cadence.
+
+- [Completed AdaJEPA 0.45 threshold ablation](reports/ecp_threshold_v2/RESULTS_ADA045.md): **272/350 (77.7%)** on the same PushObj tasks, versus 271/350 (77.4%) at 0.30. The 350-task paired audit and complete raw logs are included; the planned DINO-WM follow-up was stopped before a full evaluation.
+
+- [Completed AdaJEPA 0.60 and in-house Frozen 0.45 follow-up](reports/ecp_threshold_v3/RESULTS.md): both 350-task runs finished and passed a 700-task paired audit. AdaJEPA 0.60 scores **271/350 (77.4%)**, one task below 0.45; Frozen 0.45 scores **253/350 (72.3%)**, 39 tasks above its matched native planner with no regressions. Full logs and configurations are included.
+
+- [Completed DINO-WM PushObj evaluation](reports/dinowm_pushobj_v3/completed_results/README.md): all 1,400 task runs finished. Augmentation improves frozen CEM from **86/350 (24.6%)** to **171/350 (48.9%)**. ECP at the original threshold triggers in only 2 ordinary-data and 1 augmented-data tasks, with no changed success labels. Full logs, per-shape counts and independently verified action-prefix pairs are included.
 
 - [PushObj training A/B screen and complete logs](reports/effect_b_20261103/results.md): all four 3-epoch runs and 1,400 frozen MPC tasks completed. At 30 replans, B0 **220/350**, B1 **217/350**, B2 **116/350**, B3 **134/350**. None improved over B0; original logs, diagnostic data, configs, hashes and the **52.78 GPU-hour** ledger are archived.
 - [Wall public-checkpoint baseline](reports/wall_dinowm_20261103/report.md): open-loop CEM **26/50**, capped MPC **46/50**; paired episode outputs and complete success curves included. These runs do not use adaptation or stall regularisation.

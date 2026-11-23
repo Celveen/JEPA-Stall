@@ -1,0 +1,46 @@
+{
+  "ordinary_native": {
+    "episode_count": 10,
+    "logged_replans": 300,
+    "max_steps_per_episode": 30,
+    "wall_seconds": 31639.603688038886,
+    "planning_seconds": 31546.423444304615,
+    "planning_fraction": 0.997054949086815,
+    "mean_replan_seconds": 105.15474481434872,
+    "nonplanning_seconds": 93.18024373427033,
+    "max_parameter_displacement": 0.0
+  },
+  "ordinary_ecp": {
+    "episode_count": 10,
+    "logged_replans": 300,
+    "max_steps_per_episode": 30,
+    "wall_seconds": 31590.076083363965,
+    "planning_seconds": 31498.182157894596,
+    "planning_fraction": 0.9970910508342282,
+    "mean_replan_seconds": 104.99394052631533,
+    "nonplanning_seconds": 91.8939254693687,
+    "max_parameter_displacement": 0.0
+  },
+  "augmented_native": {
+    "episode_count": 10,
+    "logged_replans": 300,
+    "max_steps_per_episode": 30,
+    "wall_seconds": 31221.84997308813,
+    "planning_seconds": 31129.514671958983,
+    "planning_fraction": 0.9970426063411125,
+    "mean_replan_seconds": 103.76504890652994,
+    "nonplanning_seconds": 92.33530112914741,
+    "max_parameter_displacement": 0.0
+  },
+  "augmented_ecp": {
+    "episode_count": 10,
+    "logged_replans": 300,
+    "max_steps_per_episode": 30,
+    "wall_seconds": 31002.99003403634,
+    "planning_seconds": 30912.134967077523,
+    "planning_fraction": 0.9970694740455979,
+    "mean_replan_seconds": 103.04044989025842,
+    "nonplanning_seconds": 90.85506695881486,
+    "max_parameter_displacement": 0.0
+  }
+}

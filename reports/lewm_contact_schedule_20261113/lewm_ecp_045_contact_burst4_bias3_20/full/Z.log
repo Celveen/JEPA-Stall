@@ -1,0 +1,768 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/home/appuser/anaconda3/envs/ts/lib/python3.9/site-packages/wandb/util.py:118: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+  sentry_hub = sentry_sdk.Hub(sentry_client)
+/home/appuser/anaconda3/envs/ts/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py:30: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import parse_version
+/home/appuser/anaconda3/envs/ts/lib/python3.9/site-packages/pkg_resources/__init__.py:2825: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('mpl_toolkits')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/appuser/anaconda3/envs/ts/lib/python3.9/site-packages/pkg_resources/__init__.py:2825: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/appuser/anaconda3/envs/ts/lib/python3.9/site-packages/Cython/Distutils/old_build_ext.py:15: DeprecationWarning: dep_util is Deprecated. Use functions from setuptools instead.
+  from distutils.dep_util import newer, newer_group
+/tmp/lewm_ecp_045_contact_burst4_bias3_20/source/env/__init__.py:7: UserWarning: point_maze envs unavailable (mujoco_py missing): 
+Missing path to your environment variable. 
+Current values LD_LIBRARY_PATH=/home/appuser/anaconda3/envs/ts/lib/python3.9/site-packages/cv2/../../lib64:
+Please add following line to .bashrc:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/appuser/.mujoco/mujoco210/bin
+  warnings.warn(f"point_maze envs unavailable (mujoco_py missing): {_e}")
+/tmp/lewm_ecp_045_contact_burst4_bias3_20/source/custom_resolvers.py:4: UserWarning: 
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path=None)
+Loading LeWM from epoch 10: /home/appuser/workspace/project/multimodal-test/JEPA-Stall/checkpoints/lewm_pushobj_bias16k_e10/checkpoints/model_10.pth
+[timing] setup_model_s=0.933
+eval_seed:  [1, 2001, 4001, 6001, 8001, 10001, 12001, 14001, 16001, 18001, 20001, 22001, 24001, 26001, 28001, 30001, 32001, 34001, 36001, 38001, 40001, 42001, 44001, 46001, 48001, 50001, 52001, 54001, 56001, 58001, 60001, 62001, 64001, 66001, 68001, 70001, 72001, 74001, 76001, 78001, 80001, 82001, 84001, 86001, 88001, 90001, 92001, 94001, 96001, 98001]
+Dumped plan targets to /tmp/lewm_ecp_045_contact_burst4_bias3_20/full/Z/plan_targets.pkl
+[timing] setup_workspace_s=3.644
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:14,  6.69it/s]  4%|▍         | 4/100 [00:00<00:06, 15.03it/s]  7%|▋         | 7/100 [00:00<00:05, 17.91it/s] 10%|█         | 10/100 [00:00<00:04, 19.32it/s] 13%|█▎        | 13/100 [00:00<00:04, 20.07it/s] 16%|█▌        | 16/100 [00:00<00:04, 20.50it/s] 19%|█▉        | 19/100 [00:00<00:03, 20.88it/s] 22%|██▏       | 22/100 [00:01<00:03, 21.06it/s] 25%|██▌       | 25/100 [00:01<00:03, 21.20it/s] 28%|██▊       | 28/100 [00:01<00:03, 20.92it/s] 31%|███       | 31/100 [00:01<00:03, 21.04it/s] 34%|███▍      | 34/100 [00:01<00:03, 21.22it/s] 37%|███▋      | 37/100 [00:01<00:02, 21.34it/s] 40%|████      | 40/100 [00:01<00:02, 21.25it/s] 43%|████▎     | 43/100 [00:02<00:02, 21.71it/s] 46%|████▌     | 46/100 [00:02<00:02, 22.23it/s] 49%|████▉     | 49/100 [00:02<00:02, 22.06it/s] 52%|█████▏    | 52/100 [00:02<00:02, 22.47it/s] 55%|█████▌    | 55/100 [00:02<00:01, 22.76it/s] 58%|█████▊    | 58/100 [00:02<00:01, 22.97it/s] 61%|██████    | 61/100 [00:02<00:01, 23.12it/s] 64%|██████▍   | 64/100 [00:03<00:01, 23.24it/s] 67%|██████▋   | 67/100 [00:03<00:01, 23.30it/s] 70%|███████   | 70/100 [00:03<00:01, 23.40it/s] 73%|███████▎  | 73/100 [00:03<00:01, 23.43it/s] 76%|███████▌  | 76/100 [00:03<00:01, 23.45it/s] 79%|███████▉  | 79/100 [00:03<00:00, 23.48it/s] 82%|████████▏ | 82/100 [00:03<00:00, 23.53it/s] 85%|████████▌ | 85/100 [00:03<00:00, 21.71it/s] 88%|████████▊ | 88/100 [00:04<00:00, 19.44it/s] 91%|█████████ | 91/100 [00:04<00:00, 18.49it/s] 93%|█████████▎| 93/100 [00:04<00:00, 17.40it/s] 96%|█████████▌| 96/100 [00:04<00:00, 18.59it/s] 99%|█████████▉| 99/100 [00:04<00:00, 19.57it/s]100%|██████████| 100/100 [00:04<00:00, 20.82it/s]
+MPC iter 0 Eval ------- 
+Success rate:  0.0
+{'success': array([False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False]), 'state_dist': array([350.88828, 299.7485 , 234.00966, 273.8598 , 257.20822, 185.67432,
+       402.17163, 194.70961, 141.69612, 152.43187, 235.01578, 333.41528,
+       303.4026 , 361.49136,  98.53757, 213.63857, 476.01123, 239.68681,
+       257.50204, 250.81131, 176.46674, 214.57642, 272.39523, 250.84407,
+       186.91037, 441.73145, 217.5104 , 360.76672, 208.46558, 262.60812,
+       177.30806, 273.5442 , 356.08035, 248.40044, 344.9568 , 172.8656 ,
+       178.90637, 220.8962 ,  67.46643, 275.8722 , 339.27548, 382.9588 ,
+       209.32005, 236.72452, 513.8317 , 284.7837 , 212.38914, 328.74844,
+        78.95313, 405.68893], dtype=float32)}
+self.is_success:  [False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.51it/s]  6%|▌         | 6/100 [00:00<00:04, 20.92it/s]  9%|▉         | 9/100 [00:00<00:04, 21.21it/s] 12%|█▏        | 12/100 [00:00<00:04, 21.30it/s] 15%|█▌        | 15/100 [00:00<00:03, 21.38it/s] 18%|█▊        | 18/100 [00:00<00:03, 21.36it/s] 21%|██        | 21/100 [00:00<00:03, 21.39it/s] 24%|██▍       | 24/100 [00:01<00:03, 21.35it/s] 27%|██▋       | 27/100 [00:01<00:03, 21.34it/s] 30%|███       | 30/100 [00:01<00:03, 21.36it/s] 33%|███▎      | 33/100 [00:01<00:03, 21.51it/s] 36%|███▌      | 36/100 [00:01<00:02, 21.54it/s] 39%|███▉      | 39/100 [00:01<00:02, 21.54it/s] 42%|████▏     | 42/100 [00:01<00:02, 21.63it/s] 45%|████▌     | 45/100 [00:02<00:02, 21.64it/s] 48%|████▊     | 48/100 [00:02<00:02, 21.48it/s] 51%|█████     | 51/100 [00:02<00:02, 21.59it/s] 54%|█████▍    | 54/100 [00:02<00:02, 21.61it/s] 57%|█████▋    | 57/100 [00:02<00:01, 21.67it/s] 60%|██████    | 60/100 [00:02<00:01, 21.75it/s] 63%|██████▎   | 63/100 [00:02<00:01, 21.52it/s] 66%|██████▌   | 66/100 [00:03<00:01, 21.64it/s] 69%|██████▉   | 69/100 [00:03<00:01, 21.70it/s] 72%|███████▏  | 72/100 [00:03<00:01, 20.42it/s] 75%|███████▌  | 75/100 [00:03<00:01, 20.56it/s] 78%|███████▊  | 78/100 [00:03<00:01, 20.73it/s] 81%|████████  | 81/100 [00:03<00:00, 21.11it/s] 84%|████████▍ | 84/100 [00:03<00:00, 21.31it/s] 87%|████████▋ | 87/100 [00:04<00:00, 21.57it/s] 90%|█████████ | 90/100 [00:04<00:00, 21.56it/s] 93%|█████████▎| 93/100 [00:04<00:00, 21.55it/s] 96%|█████████▌| 96/100 [00:04<00:00, 19.92it/s] 99%|█████████▉| 99/100 [00:04<00:00, 20.41it/s]100%|██████████| 100/100 [00:04<00:00, 21.23it/s]
+MPC iter 1 Eval ------- 
+Success rate:  0.0
+{'success': array([False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False]), 'state_dist': array([251.47694 , 241.78654 , 174.89702 , 220.32457 , 233.16696 ,
+       139.80782 , 410.21243 , 162.772   , 153.23596 , 121.47651 ,
+       180.83493 , 289.31906 , 279.8434  , 375.31677 , 123.409294,
+       167.23375 , 545.37317 , 291.4358  , 273.045   , 230.47403 ,
+       169.3345  , 183.74191 , 263.35184 , 237.09648 , 180.35329 ,
+       658.1778  , 168.5132  , 298.8041  , 178.24155 , 214.73137 ,
+       139.44348 , 240.73819 , 310.53818 , 253.32986 , 347.2076  ,
+       121.76763 , 165.16266 , 140.4562  ,  74.50167 , 223.60107 ,
+       286.10828 , 676.34753 , 276.61304 , 199.58882 , 632.9339  ,
+       226.1069  , 185.21342 , 302.48126 ,  56.437122, 397.64438 ],
+      dtype=float32)}
+self.is_success:  [False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 21.45it/s]  6%|▌         | 6/100 [00:00<00:04, 21.51it/s]  9%|▉         | 9/100 [00:00<00:04, 21.56it/s] 12%|█▏        | 12/100 [00:00<00:04, 21.60it/s] 15%|█▌        | 15/100 [00:00<00:03, 21.57it/s] 18%|█▊        | 18/100 [00:00<00:03, 21.63it/s] 21%|██        | 21/100 [00:00<00:03, 21.67it/s] 24%|██▍       | 24/100 [00:01<00:03, 21.69it/s] 27%|██▋       | 27/100 [00:01<00:03, 21.79it/s] 30%|███       | 30/100 [00:01<00:03, 21.78it/s] 33%|███▎      | 33/100 [00:01<00:03, 21.79it/s] 36%|███▌      | 36/100 [00:01<00:02, 21.80it/s] 39%|███▉      | 39/100 [00:01<00:02, 21.49it/s] 42%|████▏     | 42/100 [00:01<00:02, 21.60it/s] 45%|████▌     | 45/100 [00:02<00:02, 21.69it/s] 48%|████▊     | 48/100 [00:02<00:02, 21.73it/s] 51%|█████     | 51/100 [00:02<00:02, 21.79it/s] 54%|█████▍    | 54/100 [00:02<00:02, 21.83it/s] 57%|█████▋    | 57/100 [00:02<00:01, 21.61it/s] 60%|██████    | 60/100 [00:02<00:01, 21.64it/s] 63%|██████▎   | 63/100 [00:02<00:01, 20.85it/s] 66%|██████▌   | 66/100 [00:03<00:01, 21.40it/s] 69%|██████▉   | 69/100 [00:03<00:01, 22.08it/s] 72%|███████▏  | 72/100 [00:03<00:01, 22.64it/s] 75%|███████▌  | 75/100 [00:03<00:01, 23.06it/s] 78%|███████▊  | 78/100 [00:03<00:00, 23.23it/s] 81%|████████  | 81/100 [00:03<00:00, 22.64it/s] 84%|████████▍ | 84/100 [00:03<00:00, 21.52it/s] 87%|████████▋ | 87/100 [00:03<00:00, 22.00it/s] 90%|█████████ | 90/100 [00:04<00:00, 22.53it/s] 93%|█████████▎| 93/100 [00:04<00:00, 22.89it/s] 96%|█████████▌| 96/100 [00:04<00:00, 22.43it/s] 99%|█████████▉| 99/100 [00:04<00:00, 22.71it/s]100%|██████████| 100/100 [00:04<00:00, 21.99it/s]
+MPC iter 2 Eval ------- 
+Success rate:  0.02
+{'success': array([False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False,  True, False]), 'state_dist': array([161.69188 , 233.25864 , 170.0005  , 156.68114 , 164.69276 ,
+        85.34836 , 458.92923 , 117.6892  , 167.05882 ,  57.05228 ,
+       142.8954  , 267.5053  , 248.48656 , 390.68445 , 111.92676 ,
+       147.27907 , 832.8112  , 373.55695 , 261.42645 , 191.06044 ,
+       170.28387 , 125.754196, 252.61366 , 226.75238 , 177.09894 ,
+       661.3007  , 125.914246, 206.08034 , 150.04793 , 151.54047 ,
+       106.989296, 200.29518 , 252.96672 , 248.2328  , 356.3688  ,
+        82.90234 , 186.18924 , 103.687004, 100.91531 , 154.34444 ,
+       239.70644 , 651.90546 , 302.6682  , 135.43425 , 671.40784 ,
+       173.07396 , 152.59685 , 293.05707 ,  58.827854, 435.76978 ],
+      dtype=float32)}
+self.is_success:  [False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 22.70it/s]  6%|▌         | 6/100 [00:00<00:04, 22.99it/s]  9%|▉         | 9/100 [00:00<00:03, 23.15it/s] 12%|█▏        | 12/100 [00:00<00:03, 23.18it/s] 15%|█▌        | 15/100 [00:00<00:03, 23.24it/s] 18%|█▊        | 18/100 [00:00<00:03, 22.98it/s] 21%|██        | 21/100 [00:00<00:03, 23.08it/s] 24%|██▍       | 24/100 [00:01<00:03, 23.10it/s] 27%|██▋       | 27/100 [00:01<00:03, 23.14it/s] 30%|███       | 30/100 [00:01<00:03, 23.16it/s] 33%|███▎      | 33/100 [00:01<00:02, 23.14it/s] 36%|███▌      | 36/100 [00:01<00:02, 23.29it/s] 39%|███▉      | 39/100 [00:01<00:02, 23.29it/s] 42%|████▏     | 42/100 [00:01<00:02, 23.28it/s] 45%|████▌     | 45/100 [00:01<00:02, 23.27it/s] 48%|████▊     | 48/100 [00:02<00:02, 23.26it/s] 51%|█████     | 51/100 [00:02<00:02, 23.10it/s] 54%|█████▍    | 54/100 [00:02<00:01, 23.15it/s] 57%|█████▋    | 57/100 [00:02<00:01, 23.21it/s] 60%|██████    | 60/100 [00:02<00:01, 23.23it/s] 63%|██████▎   | 63/100 [00:02<00:01, 23.37it/s] 66%|██████▌   | 66/100 [00:02<00:01, 23.55it/s] 69%|██████▉   | 69/100 [00:02<00:01, 23.58it/s] 72%|███████▏  | 72/100 [00:03<00:01, 21.34it/s] 75%|███████▌  | 75/100 [00:03<00:01, 21.35it/s] 78%|███████▊  | 78/100 [00:03<00:01, 21.76it/s] 81%|████████  | 81/100 [00:03<00:00, 22.29it/s] 84%|████████▍ | 84/100 [00:03<00:00, 22.00it/s] 87%|████████▋ | 87/100 [00:03<00:00, 22.44it/s] 90%|█████████ | 90/100 [00:03<00:00, 22.67it/s] 93%|█████████▎| 93/100 [00:04<00:00, 22.96it/s] 96%|█████████▌| 96/100 [00:04<00:00, 23.23it/s] 99%|█████████▉| 99/100 [00:04<00:00, 22.22it/s]100%|██████████| 100/100 [00:04<00:00, 22.84it/s]
+MPC iter 3 Eval ------- 
+Success rate:  0.06
+{'success': array([False, False, False, False, False, False, False, False, False,
+        True, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False,  True,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False,  True, False]), 'state_dist': array([ 132.38223 ,  181.68947 ,  170.15694 ,   94.62528 ,   89.67288 ,
+         70.81659 ,  605.69946 ,   87.60313 ,  220.57936 ,  109.53074 ,
+        103.28543 ,  206.3097  ,  190.08022 ,  414.2093  ,   85.49725 ,
+         97.537506, 1267.9418  ,  439.01633 ,  208.68918 ,  179.04704 ,
+        183.32191 ,   76.60472 ,  186.25974 ,  201.18947 ,  128.60458 ,
+        656.59814 ,   93.82785 ,  110.17417 ,  134.23216 ,   75.37572 ,
+         74.44956 ,  286.13144 ,  180.85742 ,  160.3786  ,  338.47696 ,
+         86.48401 ,  180.15366 ,  115.63099 ,  131.67215 ,   98.65931 ,
+        196.10284 , 1096.4552  ,  205.13423 ,   45.982758,  696.42773 ,
+        134.05545 ,  142.03423 ,  268.84482 ,   58.827854,  559.2494  ],
+      dtype=float32)}
+self.is_success:  [False False False False False False False False False  True False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False  True
+ False False False False False False False False False False False False
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 23.34it/s]  6%|▌         | 6/100 [00:00<00:04, 22.89it/s]  9%|▉         | 9/100 [00:00<00:03, 23.05it/s] 12%|█▏        | 12/100 [00:00<00:03, 23.14it/s] 15%|█▌        | 15/100 [00:00<00:03, 23.25it/s] 18%|█▊        | 18/100 [00:00<00:03, 23.32it/s] 21%|██        | 21/100 [00:00<00:03, 23.33it/s] 24%|██▍       | 24/100 [00:01<00:03, 23.32it/s] 27%|██▋       | 27/100 [00:01<00:03, 23.33it/s] 30%|███       | 30/100 [00:01<00:03, 23.22it/s] 33%|███▎      | 33/100 [00:01<00:02, 23.23it/s] 36%|███▌      | 36/100 [00:01<00:02, 23.28it/s] 39%|███▉      | 39/100 [00:01<00:02, 23.28it/s] 42%|████▏     | 42/100 [00:01<00:02, 23.28it/s] 45%|████▌     | 45/100 [00:01<00:02, 23.36it/s] 48%|████▊     | 48/100 [00:02<00:02, 23.38it/s] 51%|█████     | 51/100 [00:02<00:02, 23.37it/s] 54%|█████▍    | 54/100 [00:02<00:01, 23.42it/s] 57%|█████▋    | 57/100 [00:02<00:01, 23.40it/s] 60%|██████    | 60/100 [00:02<00:01, 23.43it/s] 63%|██████▎   | 63/100 [00:02<00:01, 23.58it/s] 66%|██████▌   | 66/100 [00:02<00:01, 23.03it/s] 69%|██████▉   | 69/100 [00:02<00:01, 23.20it/s] 72%|███████▏  | 72/100 [00:03<00:01, 23.50it/s] 75%|███████▌  | 75/100 [00:03<00:01, 19.65it/s] 78%|███████▊  | 78/100 [00:03<00:01, 20.03it/s] 81%|████████  | 81/100 [00:03<00:00, 19.52it/s] 84%|████████▍ | 84/100 [00:03<00:00, 20.58it/s] 87%|████████▋ | 87/100 [00:03<00:00, 20.68it/s] 90%|█████████ | 90/100 [00:04<00:00, 21.52it/s] 93%|█████████▎| 93/100 [00:04<00:00, 22.24it/s] 96%|█████████▌| 96/100 [00:04<00:00, 22.72it/s] 99%|█████████▉| 99/100 [00:04<00:00, 23.00it/s]100%|██████████| 100/100 [00:04<00:00, 22.62it/s]
+MPC iter 4 Eval ------- 
+Success rate:  0.2
+{'success': array([ True, False, False, False,  True,  True, False, False, False,
+        True, False,  True,  True, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False,  True, False, False, False,  True, False,  True,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False,  True, False]), 'state_dist': array([ 113.56056 ,  132.34949 ,  368.77344 ,   70.04951 ,   84.52782 ,
+        178.92738 ,  675.6964  ,  130.92035 ,  340.22168 ,  109.53074 ,
+         76.559555,  164.30438 ,  213.24945 ,  392.18848 ,   45.830444,
+         89.82015 ,  845.2693  ,  324.1573  ,  125.49696 ,  106.7576  ,
+        179.92169 ,   27.128948,   81.90901 ,  161.80913 ,   46.480156,
+        568.1763  ,   70.61505 ,   33.266327,  112.035194,  116.39668 ,
+         53.718285,  225.288   ,  169.6302  ,   63.05774 , 1040.0502  ,
+         86.48401 ,  209.6614  ,   66.96979 ,  105.1008  ,  160.42003 ,
+         91.46844 , 1266.2584  ,  158.33383 ,   82.7965  ,  806.3727  ,
+        138.9623  ,  144.4023  ,  242.79665 ,   58.827854,  611.8785  ],
+      dtype=float32)}
+self.is_success:  [ True False False False  True  True False False False  True False  True
+  True False False False False False False False False False False False
+ False False False False False  True False False False  True False  True
+ False False False False False False False False False False False False
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:05, 19.08it/s]  5%|▌         | 5/100 [00:00<00:04, 20.58it/s]  8%|▊         | 8/100 [00:00<00:04, 20.51it/s] 11%|█         | 11/100 [00:00<00:04, 20.77it/s] 14%|█▍        | 14/100 [00:00<00:04, 21.07it/s] 17%|█▋        | 17/100 [00:00<00:03, 21.14it/s] 20%|██        | 20/100 [00:00<00:03, 20.96it/s] 23%|██▎       | 23/100 [00:01<00:03, 20.93it/s] 26%|██▌       | 26/100 [00:01<00:03, 21.10it/s] 29%|██▉       | 29/100 [00:01<00:03, 21.14it/s] 32%|███▏      | 32/100 [00:01<00:03, 21.23it/s] 35%|███▌      | 35/100 [00:01<00:03, 21.16it/s] 38%|███▊      | 38/100 [00:01<00:02, 21.25it/s] 41%|████      | 41/100 [00:01<00:02, 21.13it/s] 44%|████▍     | 44/100 [00:02<00:02, 21.18it/s] 47%|████▋     | 47/100 [00:02<00:02, 21.32it/s] 50%|█████     | 50/100 [00:02<00:02, 21.13it/s] 53%|█████▎    | 53/100 [00:02<00:02, 21.25it/s] 56%|█████▌    | 56/100 [00:02<00:02, 21.43it/s] 59%|█████▉    | 59/100 [00:02<00:01, 21.51it/s] 62%|██████▏   | 62/100 [00:02<00:01, 21.41it/s] 65%|██████▌   | 65/100 [00:03<00:01, 18.75it/s] 68%|██████▊   | 68/100 [00:03<00:01, 19.51it/s] 71%|███████   | 71/100 [00:03<00:01, 20.02it/s] 74%|███████▍  | 74/100 [00:03<00:01, 20.44it/s] 77%|███████▋  | 77/100 [00:03<00:01, 20.59it/s] 80%|████████  | 80/100 [00:03<00:00, 20.87it/s] 83%|████████▎ | 83/100 [00:03<00:00, 21.13it/s] 86%|████████▌ | 86/100 [00:04<00:00, 21.13it/s] 89%|████████▉ | 89/100 [00:04<00:00, 21.25it/s] 92%|█████████▏| 92/100 [00:04<00:00, 21.32it/s] 95%|█████████▌| 95/100 [00:04<00:00, 18.89it/s] 98%|█████████▊| 98/100 [00:04<00:00, 19.64it/s]100%|██████████| 100/100 [00:04<00:00, 20.68it/s]
+MPC iter 5 Eval ------- 
+Success rate:  0.46
+{'success': array([ True, False,  True,  True,  True,  True, False,  True, False,
+        True, False,  True,  True, False,  True,  True, False, False,
+       False, False, False,  True, False, False,  True, False, False,
+        True, False,  True, False, False,  True,  True, False,  True,
+       False,  True, False, False, False, False,  True,  True, False,
+       False, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  101.29957 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1239.6337  ,  254.25372 ,  191.59322 ,  109.53074 ,
+         44.887527,  164.30438 ,  213.24945 ,  599.3541  ,   66.77571 ,
+        129.49084 ,  788.1697  ,  257.39252 ,   71.14694 ,  178.46118 ,
+        194.11722 ,   72.34862 ,   42.872482,  102.778656,   91.290276,
+        377.67557 ,   35.320206,  158.43599 ,   55.00328 ,  116.39668 ,
+         50.926212,  200.28902 ,   77.3794  ,   63.05774 ,  453.66687 ,
+         86.48401 ,   68.21086 ,   84.00635 ,   91.889946,   38.51584 ,
+        136.91731 ,  963.05505 ,  139.3808  ,   30.44182 , 1014.70886 ,
+        172.65018 ,   93.185104,   76.67634 ,   58.827854,  884.67615 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True False  True False  True
+  True False  True  True False False False False False  True False False
+  True False False  True False  True False False  True  True False  True
+ False  True False False False False  True  True False False False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 21.17it/s]  6%|▌         | 6/100 [00:00<00:04, 21.48it/s]  9%|▉         | 9/100 [00:00<00:04, 21.43it/s] 12%|█▏        | 12/100 [00:00<00:04, 21.04it/s] 15%|█▌        | 15/100 [00:00<00:04, 21.17it/s] 18%|█▊        | 18/100 [00:00<00:03, 21.10it/s] 21%|██        | 21/100 [00:00<00:03, 21.24it/s] 24%|██▍       | 24/100 [00:01<00:03, 21.28it/s] 27%|██▋       | 27/100 [00:01<00:03, 21.38it/s] 30%|███       | 30/100 [00:01<00:03, 21.22it/s] 33%|███▎      | 33/100 [00:01<00:03, 21.41it/s] 36%|███▌      | 36/100 [00:01<00:03, 21.27it/s] 39%|███▉      | 39/100 [00:01<00:02, 21.40it/s] 42%|████▏     | 42/100 [00:01<00:02, 21.35it/s] 45%|████▌     | 45/100 [00:02<00:02, 21.55it/s] 48%|████▊     | 48/100 [00:02<00:02, 20.67it/s] 51%|█████     | 51/100 [00:02<00:02, 18.40it/s] 54%|█████▍    | 54/100 [00:02<00:02, 19.38it/s] 57%|█████▋    | 57/100 [00:02<00:02, 20.35it/s] 60%|██████    | 60/100 [00:02<00:01, 20.90it/s] 63%|██████▎   | 63/100 [00:03<00:01, 21.20it/s] 66%|██████▌   | 66/100 [00:03<00:01, 21.81it/s] 69%|██████▉   | 69/100 [00:03<00:01, 22.24it/s] 72%|███████▏  | 72/100 [00:03<00:01, 22.34it/s] 75%|███████▌  | 75/100 [00:03<00:01, 20.71it/s] 78%|███████▊  | 78/100 [00:03<00:01, 20.83it/s] 81%|████████  | 81/100 [00:03<00:00, 21.66it/s] 84%|████████▍ | 84/100 [00:03<00:00, 22.19it/s] 87%|████████▋ | 87/100 [00:04<00:00, 22.67it/s] 90%|█████████ | 90/100 [00:04<00:00, 22.74it/s] 93%|█████████▎| 93/100 [00:04<00:00, 22.99it/s] 96%|█████████▌| 96/100 [00:04<00:00, 23.13it/s] 99%|█████████▉| 99/100 [00:04<00:00, 23.27it/s]100%|██████████| 100/100 [00:04<00:00, 21.53it/s]
+MPC iter 6 Eval ------- 
+Success rate:  0.6
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True, False,  True,  True, False,  True,  True, False, False,
+       False, False,  True,  True, False,  True,  True, False,  True,
+        True, False,  True,  True, False,  True,  True, False,  True,
+        True,  True, False, False, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   32.761272,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  956.3975  ,  254.25372 ,   23.549639,  109.53074 ,
+         39.386925,  164.30438 ,  213.24945 ,  174.97134 ,   66.77571 ,
+        129.49084 ,  820.29083 ,  593.01276 ,   69.40545 ,  130.62367 ,
+         91.443726,   72.34862 ,   59.92682 ,  121.54842 ,   91.290276,
+        577.20166 ,   38.42851 ,  158.43599 ,   60.222363,  116.39668 ,
+         70.20573 ,  191.75252 ,   77.3794  ,   63.05774 ,  369.46237 ,
+         86.48401 ,   79.865425,   84.00635 ,  121.438644,   93.34364 ,
+        104.43492 , 1120.1963  ,  139.3808  ,   30.44182 , 1212.0583  ,
+        178.87631 ,   82.39363 ,   76.67634 ,   58.827854,  792.98926 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True False  True
+  True False  True  True False False False False  True  True False  True
+  True False  True  True False  True  True False  True  True False  True
+  True  True False False False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:05, 18.82it/s]  5%|▌         | 5/100 [00:00<00:04, 20.75it/s]  8%|▊         | 8/100 [00:00<00:04, 20.80it/s] 11%|█         | 11/100 [00:00<00:04, 21.12it/s] 14%|█▍        | 14/100 [00:00<00:04, 21.01it/s] 17%|█▋        | 17/100 [00:00<00:03, 21.18it/s] 20%|██        | 20/100 [00:00<00:03, 21.20it/s] 23%|██▎       | 23/100 [00:01<00:03, 21.17it/s] 26%|██▌       | 26/100 [00:01<00:03, 21.24it/s] 29%|██▉       | 29/100 [00:01<00:03, 21.37it/s] 32%|███▏      | 32/100 [00:01<00:03, 21.43it/s] 35%|███▌      | 35/100 [00:01<00:03, 21.45it/s] 38%|███▊      | 38/100 [00:01<00:02, 21.30it/s] 41%|████      | 41/100 [00:01<00:02, 21.43it/s] 44%|████▍     | 44/100 [00:02<00:02, 21.35it/s] 47%|████▋     | 47/100 [00:02<00:02, 21.44it/s] 50%|█████     | 50/100 [00:02<00:02, 21.35it/s] 53%|█████▎    | 53/100 [00:02<00:02, 16.71it/s] 55%|█████▌    | 55/100 [00:02<00:02, 17.29it/s] 58%|█████▊    | 58/100 [00:02<00:02, 18.18it/s] 61%|██████    | 61/100 [00:03<00:02, 19.39it/s] 64%|██████▍   | 64/100 [00:03<00:01, 20.20it/s] 67%|██████▋   | 67/100 [00:03<00:01, 20.97it/s] 70%|███████   | 70/100 [00:03<00:01, 21.71it/s] 73%|███████▎  | 73/100 [00:03<00:01, 22.16it/s] 76%|███████▌  | 76/100 [00:03<00:01, 22.09it/s] 79%|███████▉  | 79/100 [00:03<00:00, 21.69it/s] 82%|████████▏ | 82/100 [00:03<00:00, 22.07it/s] 85%|████████▌ | 85/100 [00:04<00:00, 22.52it/s] 88%|████████▊ | 88/100 [00:04<00:00, 22.85it/s] 91%|█████████ | 91/100 [00:04<00:00, 23.05it/s] 94%|█████████▍| 94/100 [00:04<00:00, 22.98it/s] 97%|█████████▋| 97/100 [00:04<00:00, 23.08it/s]100%|██████████| 100/100 [00:04<00:00, 23.15it/s]100%|██████████| 100/100 [00:04<00:00, 21.24it/s]
+MPC iter 7 Eval ------- 
+Success rate:  0.72
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True, False, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  142.57796 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1130.7147  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,   92.36867 ,   66.77571 ,
+        129.49084 ,  502.4198  ,  370.31772 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        485.76474 ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  143.541   ,   77.3794  ,   63.05774 ,  909.4066  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,  115.1424  ,
+        175.24586 , 1083.7319  ,  139.3808  ,   30.44182 ,  949.9729  ,
+        178.87631 ,   85.747185,   76.67634 ,   58.827854,  611.8022  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True False False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:05, 17.02it/s]  5%|▌         | 5/100 [00:00<00:04, 19.11it/s]  8%|▊         | 8/100 [00:00<00:04, 20.00it/s] 11%|█         | 11/100 [00:00<00:04, 20.27it/s] 14%|█▍        | 14/100 [00:00<00:04, 20.50it/s] 17%|█▋        | 17/100 [00:00<00:04, 20.59it/s] 20%|██        | 20/100 [00:00<00:03, 20.73it/s] 23%|██▎       | 23/100 [00:01<00:03, 20.90it/s] 26%|██▌       | 26/100 [00:01<00:03, 21.08it/s] 29%|██▉       | 29/100 [00:01<00:03, 21.01it/s] 32%|███▏      | 32/100 [00:01<00:03, 21.17it/s] 35%|███▌      | 35/100 [00:01<00:03, 21.12it/s] 38%|███▊      | 38/100 [00:01<00:02, 21.23it/s] 41%|████      | 41/100 [00:01<00:02, 21.14it/s] 44%|████▍     | 44/100 [00:02<00:02, 21.30it/s] 47%|████▋     | 47/100 [00:02<00:02, 21.35it/s] 50%|█████     | 50/100 [00:02<00:02, 21.48it/s] 53%|█████▎    | 53/100 [00:02<00:02, 21.26it/s] 56%|█████▌    | 56/100 [00:02<00:02, 17.16it/s] 58%|█████▊    | 58/100 [00:02<00:02, 17.16it/s] 60%|██████    | 60/100 [00:03<00:02, 17.55it/s] 62%|██████▏   | 62/100 [00:03<00:02, 17.85it/s] 64%|██████▍   | 64/100 [00:03<00:01, 18.23it/s] 66%|██████▌   | 66/100 [00:03<00:01, 18.55it/s] 69%|██████▉   | 69/100 [00:03<00:01, 19.39it/s] 71%|███████   | 71/100 [00:03<00:01, 19.51it/s] 73%|███████▎  | 73/100 [00:03<00:01, 19.49it/s] 75%|███████▌  | 75/100 [00:03<00:01, 19.43it/s] 77%|███████▋  | 77/100 [00:03<00:01, 19.58it/s] 80%|████████  | 80/100 [00:04<00:00, 20.06it/s] 83%|████████▎ | 83/100 [00:04<00:00, 20.63it/s] 86%|████████▌ | 86/100 [00:04<00:00, 20.71it/s] 89%|████████▉ | 89/100 [00:04<00:00, 21.07it/s] 92%|█████████▏| 92/100 [00:04<00:00, 21.27it/s] 95%|█████████▌| 95/100 [00:04<00:00, 20.99it/s] 98%|█████████▊| 98/100 [00:04<00:00, 21.27it/s]100%|██████████| 100/100 [00:04<00:00, 20.20it/s]
+MPC iter 8 Eval ------- 
+Success rate:  0.72
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True, False, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  118.89891 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  961.0589  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  162.61458 ,   66.77571 ,
+        129.49084 ,  286.2665  ,  510.16672 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        617.19727 ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  178.9755  ,   77.3794  ,   63.05774 ,  809.9881  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   78.19786 ,
+        207.49889 , 1134.914   ,  139.3808  ,   30.44182 , 1130.4607  ,
+        178.87631 ,   84.96886 ,   76.67634 ,   58.827854,  463.6797  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True False False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:06, 14.07it/s]  5%|▌         | 5/100 [00:00<00:05, 18.24it/s]  8%|▊         | 8/100 [00:00<00:05, 17.14it/s] 10%|█         | 10/100 [00:00<00:05, 15.24it/s] 13%|█▎        | 13/100 [00:00<00:05, 17.34it/s] 16%|█▌        | 16/100 [00:00<00:04, 18.73it/s] 19%|█▉        | 19/100 [00:01<00:04, 19.49it/s] 22%|██▏       | 22/100 [00:01<00:03, 20.12it/s] 25%|██▌       | 25/100 [00:01<00:03, 20.52it/s] 28%|██▊       | 28/100 [00:01<00:03, 20.85it/s] 31%|███       | 31/100 [00:01<00:03, 20.80it/s] 34%|███▍      | 34/100 [00:01<00:03, 20.75it/s] 37%|███▋      | 37/100 [00:01<00:03, 20.98it/s] 40%|████      | 40/100 [00:02<00:02, 21.12it/s] 43%|████▎     | 43/100 [00:02<00:02, 21.15it/s] 46%|████▌     | 46/100 [00:02<00:02, 19.49it/s] 48%|████▊     | 48/100 [00:02<00:02, 17.90it/s] 50%|█████     | 50/100 [00:02<00:02, 17.79it/s] 52%|█████▏    | 52/100 [00:02<00:02, 17.59it/s] 55%|█████▌    | 55/100 [00:02<00:02, 18.67it/s] 58%|█████▊    | 58/100 [00:03<00:02, 19.24it/s] 60%|██████    | 60/100 [00:03<00:02, 19.19it/s] 62%|██████▏   | 62/100 [00:03<00:02, 16.88it/s] 65%|██████▌   | 65/100 [00:03<00:01, 17.89it/s] 68%|██████▊   | 68/100 [00:03<00:01, 18.86it/s] 71%|███████   | 71/100 [00:03<00:01, 19.48it/s] 74%|███████▍  | 74/100 [00:03<00:01, 20.13it/s] 77%|███████▋  | 77/100 [00:04<00:01, 20.25it/s] 80%|████████  | 80/100 [00:04<00:00, 20.70it/s] 83%|████████▎ | 83/100 [00:04<00:00, 20.90it/s] 86%|████████▌ | 86/100 [00:04<00:00, 21.27it/s] 89%|████████▉ | 89/100 [00:04<00:00, 21.50it/s] 92%|█████████▏| 92/100 [00:04<00:00, 21.52it/s] 95%|█████████▌| 95/100 [00:04<00:00, 21.38it/s] 98%|█████████▊| 98/100 [00:04<00:00, 21.50it/s]100%|██████████| 100/100 [00:05<00:00, 19.72it/s]
+MPC iter 9 Eval ------- 
+Success rate:  0.72
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True, False, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   43.158195,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  647.36316 ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  160.48096 ,   66.77571 ,
+        129.49084 ,  159.42403 ,  508.62137 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        519.71796 ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  168.40996 ,   77.3794  ,   63.05774 ,  631.327   ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   67.21001 ,
+        143.86142 , 1235.2295  ,  139.3808  ,   30.44182 , 1071.9318  ,
+        178.87631 ,   90.22458 ,   76.67634 ,   58.827854,  502.53177 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True False False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:06, 16.30it/s]  4%|▍         | 4/100 [00:00<00:05, 17.93it/s]  6%|▌         | 6/100 [00:00<00:05, 18.62it/s]  9%|▉         | 9/100 [00:00<00:04, 19.52it/s] 11%|█         | 11/100 [00:00<00:04, 19.62it/s] 14%|█▍        | 14/100 [00:00<00:04, 20.06it/s] 17%|█▋        | 17/100 [00:00<00:04, 18.89it/s] 19%|█▉        | 19/100 [00:01<00:04, 16.34it/s] 21%|██        | 21/100 [00:01<00:04, 16.74it/s] 24%|██▍       | 24/100 [00:01<00:04, 18.11it/s] 27%|██▋       | 27/100 [00:01<00:03, 19.10it/s] 30%|███       | 30/100 [00:01<00:03, 19.77it/s] 33%|███▎      | 33/100 [00:01<00:03, 20.12it/s] 36%|███▌      | 36/100 [00:01<00:03, 20.21it/s] 39%|███▉      | 39/100 [00:02<00:02, 20.52it/s] 42%|████▏     | 42/100 [00:02<00:02, 19.91it/s] 44%|████▍     | 44/100 [00:02<00:02, 19.85it/s] 47%|████▋     | 47/100 [00:02<00:02, 20.35it/s] 50%|█████     | 50/100 [00:02<00:02, 20.84it/s] 53%|█████▎    | 53/100 [00:02<00:02, 21.02it/s] 56%|█████▌    | 56/100 [00:02<00:02, 21.39it/s] 59%|█████▉    | 59/100 [00:03<00:02, 17.29it/s] 61%|██████    | 61/100 [00:03<00:02, 15.97it/s] 63%|██████▎   | 63/100 [00:03<00:03, 12.32it/s] 66%|██████▌   | 66/100 [00:03<00:02, 14.47it/s] 69%|██████▉   | 69/100 [00:03<00:01, 16.48it/s] 72%|███████▏  | 72/100 [00:03<00:01, 18.09it/s] 75%|███████▌  | 75/100 [00:04<00:01, 19.43it/s] 78%|███████▊  | 78/100 [00:04<00:01, 20.44it/s] 81%|████████  | 81/100 [00:04<00:00, 21.20it/s] 84%|████████▍ | 84/100 [00:04<00:00, 21.19it/s] 87%|████████▋ | 87/100 [00:04<00:00, 21.13it/s] 90%|█████████ | 90/100 [00:04<00:00, 20.96it/s] 93%|█████████▎| 93/100 [00:04<00:00, 20.89it/s] 96%|█████████▌| 96/100 [00:05<00:00, 20.96it/s] 99%|█████████▉| 99/100 [00:05<00:00, 21.08it/s]100%|██████████| 100/100 [00:05<00:00, 19.15it/s]
+MPC iter 10 Eval ------- 
+Success rate:  0.72
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True, False, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   52.720966,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  925.76044 ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  181.94424 ,   66.77571 ,
+        129.49084 ,  247.8589  ,  483.3784  ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        669.807   ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  174.21982 ,   77.3794  ,   63.05774 ,  843.5887  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,  139.55478 ,
+        167.1978  , 1409.7397  ,  139.3808  ,   30.44182 ,  996.8725  ,
+        178.87631 ,  100.058945,   76.67634 ,   58.827854,  661.2588  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True False False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.73it/s]  6%|▌         | 6/100 [00:00<00:04, 20.99it/s]  9%|▉         | 9/100 [00:00<00:05, 17.26it/s] 11%|█         | 11/100 [00:00<00:04, 17.86it/s] 13%|█▎        | 13/100 [00:00<00:04, 18.35it/s] 15%|█▌        | 15/100 [00:00<00:04, 18.19it/s] 18%|█▊        | 18/100 [00:00<00:04, 18.90it/s] 21%|██        | 21/100 [00:01<00:04, 19.68it/s] 24%|██▍       | 24/100 [00:01<00:03, 20.44it/s] 27%|██▋       | 27/100 [00:01<00:03, 21.03it/s] 30%|███       | 30/100 [00:01<00:03, 21.26it/s] 33%|███▎      | 33/100 [00:01<00:03, 21.73it/s] 36%|███▌      | 36/100 [00:01<00:02, 22.02it/s] 39%|███▉      | 39/100 [00:01<00:02, 22.47it/s] 42%|████▏     | 42/100 [00:02<00:03, 17.47it/s] 44%|████▍     | 44/100 [00:02<00:03, 16.35it/s] 47%|████▋     | 47/100 [00:02<00:02, 18.03it/s] 50%|█████     | 50/100 [00:02<00:02, 19.38it/s] 53%|█████▎    | 53/100 [00:02<00:02, 19.84it/s] 56%|█████▌    | 56/100 [00:02<00:02, 20.20it/s] 59%|█████▉    | 59/100 [00:02<00:01, 20.83it/s] 62%|██████▏   | 62/100 [00:03<00:02, 18.20it/s] 64%|██████▍   | 64/100 [00:03<00:02, 17.72it/s] 67%|██████▋   | 67/100 [00:03<00:01, 19.00it/s] 70%|███████   | 70/100 [00:03<00:01, 20.03it/s] 73%|███████▎  | 73/100 [00:03<00:01, 20.88it/s] 76%|███████▌  | 76/100 [00:03<00:01, 21.55it/s] 79%|███████▉  | 79/100 [00:03<00:00, 21.95it/s] 82%|████████▏ | 82/100 [00:04<00:00, 22.11it/s] 85%|████████▌ | 85/100 [00:04<00:00, 22.41it/s] 88%|████████▊ | 88/100 [00:04<00:00, 22.51it/s] 91%|█████████ | 91/100 [00:04<00:00, 22.61it/s] 94%|█████████▍| 94/100 [00:04<00:00, 22.61it/s] 97%|█████████▋| 97/100 [00:04<00:00, 22.68it/s]100%|██████████| 100/100 [00:04<00:00, 22.68it/s]100%|██████████| 100/100 [00:04<00:00, 20.38it/s]
+MPC iter 11 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  113.31781 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  791.784   ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  166.71127 ,   66.77571 ,
+        129.49084 ,  146.70119 ,  421.24915 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        930.09375 ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  111.81938 ,   77.3794  ,   63.05774 ,  919.79584 ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        164.05128 , 1061.4075  ,  139.3808  ,   30.44182 ,  726.96606 ,
+        178.87631 ,  167.66855 ,   76.67634 ,   58.827854,  884.33356 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 22.81it/s]  6%|▌         | 6/100 [00:00<00:04, 22.85it/s]  9%|▉         | 9/100 [00:00<00:03, 22.89it/s] 12%|█▏        | 12/100 [00:00<00:03, 22.87it/s] 15%|█▌        | 15/100 [00:00<00:03, 22.85it/s] 18%|█▊        | 18/100 [00:00<00:03, 22.89it/s] 21%|██        | 21/100 [00:00<00:03, 22.95it/s] 24%|██▍       | 24/100 [00:01<00:03, 23.20it/s] 27%|██▋       | 27/100 [00:01<00:03, 23.01it/s] 30%|███       | 30/100 [00:01<00:03, 22.89it/s] 33%|███▎      | 33/100 [00:01<00:02, 22.81it/s] 36%|███▌      | 36/100 [00:01<00:02, 23.02it/s] 39%|███▉      | 39/100 [00:01<00:02, 22.69it/s] 42%|████▏     | 42/100 [00:01<00:02, 20.77it/s] 45%|████▌     | 45/100 [00:02<00:02, 18.40it/s] 47%|████▋     | 47/100 [00:02<00:03, 17.57it/s] 49%|████▉     | 49/100 [00:02<00:02, 17.67it/s] 51%|█████     | 51/100 [00:02<00:02, 16.98it/s] 53%|█████▎    | 53/100 [00:02<00:03, 14.56it/s] 55%|█████▌    | 55/100 [00:02<00:03, 14.42it/s] 57%|█████▋    | 57/100 [00:02<00:02, 15.65it/s] 60%|██████    | 60/100 [00:03<00:02, 17.63it/s] 62%|██████▏   | 62/100 [00:03<00:02, 16.76it/s] 64%|██████▍   | 64/100 [00:03<00:02, 16.57it/s] 66%|██████▌   | 66/100 [00:03<00:02, 16.77it/s] 69%|██████▉   | 69/100 [00:03<00:01, 18.08it/s] 72%|███████▏  | 72/100 [00:03<00:01, 19.03it/s] 75%|███████▌  | 75/100 [00:03<00:01, 19.80it/s] 78%|███████▊  | 78/100 [00:03<00:01, 20.36it/s] 81%|████████  | 81/100 [00:04<00:00, 20.55it/s] 84%|████████▍ | 84/100 [00:04<00:00, 20.83it/s] 87%|████████▋ | 87/100 [00:04<00:00, 20.96it/s] 90%|█████████ | 90/100 [00:04<00:00, 21.01it/s] 93%|█████████▎| 93/100 [00:04<00:00, 21.06it/s] 96%|█████████▌| 96/100 [00:04<00:00, 21.04it/s] 99%|█████████▉| 99/100 [00:04<00:00, 21.09it/s]100%|██████████| 100/100 [00:05<00:00, 19.99it/s]
+MPC iter 12 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  139.67181 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  796.71783 ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  133.01633 ,   66.77571 ,
+        129.49084 ,  116.73451 ,  427.2023  ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1176.232   ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  191.3956  ,   77.3794  ,   63.05774 ,  855.2515  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        195.49548 , 1263.2634  ,  139.3808  ,   30.44182 ,  507.95203 ,
+        178.87631 ,   85.99812 ,   76.67634 ,   58.827854, 1076.1323  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 21.12it/s]  6%|▌         | 6/100 [00:00<00:04, 21.70it/s]  9%|▉         | 9/100 [00:00<00:04, 22.21it/s] 12%|█▏        | 12/100 [00:00<00:03, 22.26it/s] 15%|█▌        | 15/100 [00:00<00:03, 22.19it/s] 18%|█▊        | 18/100 [00:00<00:03, 22.12it/s] 21%|██        | 21/100 [00:00<00:03, 21.98it/s] 24%|██▍       | 24/100 [00:01<00:03, 22.34it/s] 27%|██▋       | 27/100 [00:01<00:03, 22.28it/s] 30%|███       | 30/100 [00:01<00:03, 22.47it/s] 33%|███▎      | 33/100 [00:01<00:02, 22.52it/s] 36%|███▌      | 36/100 [00:01<00:02, 22.36it/s] 39%|███▉      | 39/100 [00:01<00:02, 22.50it/s] 42%|████▏     | 42/100 [00:01<00:02, 22.19it/s] 45%|████▌     | 45/100 [00:02<00:02, 20.92it/s] 48%|████▊     | 48/100 [00:02<00:03, 16.43it/s] 50%|█████     | 50/100 [00:02<00:03, 14.02it/s] 52%|█████▏    | 52/100 [00:02<00:03, 14.07it/s] 54%|█████▍    | 54/100 [00:02<00:03, 15.15it/s] 57%|█████▋    | 57/100 [00:02<00:02, 16.66it/s] 60%|██████    | 60/100 [00:03<00:02, 17.87it/s] 62%|██████▏   | 62/100 [00:03<00:02, 17.57it/s] 64%|██████▍   | 64/100 [00:03<00:02, 16.67it/s] 66%|██████▌   | 66/100 [00:03<00:02, 15.02it/s] 68%|██████▊   | 68/100 [00:03<00:02, 15.67it/s] 71%|███████   | 71/100 [00:03<00:01, 17.41it/s] 74%|███████▍  | 74/100 [00:03<00:01, 18.42it/s] 77%|███████▋  | 77/100 [00:04<00:01, 19.40it/s] 80%|████████  | 80/100 [00:04<00:01, 19.82it/s] 83%|████████▎ | 83/100 [00:04<00:00, 20.40it/s] 86%|████████▌ | 86/100 [00:04<00:00, 20.57it/s] 89%|████████▉ | 89/100 [00:04<00:00, 20.72it/s] 92%|█████████▏| 92/100 [00:04<00:00, 20.87it/s] 95%|█████████▌| 95/100 [00:04<00:00, 20.81it/s] 98%|█████████▊| 98/100 [00:05<00:00, 20.95it/s]100%|██████████| 100/100 [00:05<00:00, 19.50it/s]
+MPC iter 13 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  116.939384,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  878.48224 ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  149.88724 ,   66.77571 ,
+        129.49084 ,  121.52367 ,  372.5741  ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1086.5178  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  145.41696 ,   77.3794  ,   63.05774 ,  585.8886  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        160.23854 , 1218.6359  ,  139.3808  ,   30.44182 ,  556.447   ,
+        178.87631 ,  148.61206 ,   76.67634 ,   58.827854, 1007.9509  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.40it/s]  6%|▌         | 6/100 [00:00<00:04, 20.66it/s]  9%|▉         | 9/100 [00:00<00:04, 20.71it/s] 12%|█▏        | 12/100 [00:00<00:04, 20.76it/s] 15%|█▌        | 15/100 [00:00<00:04, 20.74it/s] 18%|█▊        | 18/100 [00:00<00:03, 20.86it/s] 21%|██        | 21/100 [00:01<00:03, 20.98it/s] 24%|██▍       | 24/100 [00:01<00:03, 20.49it/s] 27%|██▋       | 27/100 [00:01<00:03, 20.44it/s] 30%|███       | 30/100 [00:01<00:03, 20.60it/s] 33%|███▎      | 33/100 [00:01<00:03, 20.69it/s] 36%|███▌      | 36/100 [00:01<00:03, 20.60it/s] 39%|███▉      | 39/100 [00:01<00:03, 18.64it/s] 41%|████      | 41/100 [00:02<00:04, 14.07it/s] 43%|████▎     | 43/100 [00:02<00:04, 13.07it/s] 46%|████▌     | 46/100 [00:02<00:03, 15.02it/s] 49%|████▉     | 49/100 [00:02<00:03, 16.93it/s] 52%|█████▏    | 52/100 [00:02<00:02, 18.40it/s] 55%|█████▌    | 55/100 [00:02<00:02, 19.47it/s] 58%|█████▊    | 58/100 [00:03<00:02, 20.51it/s] 61%|██████    | 61/100 [00:03<00:01, 20.11it/s] 64%|██████▍   | 64/100 [00:03<00:01, 20.27it/s] 67%|██████▋   | 67/100 [00:03<00:01, 20.75it/s] 70%|███████   | 70/100 [00:03<00:01, 21.30it/s] 73%|███████▎  | 73/100 [00:03<00:01, 21.76it/s] 76%|███████▌  | 76/100 [00:03<00:01, 21.83it/s] 79%|███████▉  | 79/100 [00:04<00:00, 22.09it/s] 82%|████████▏ | 82/100 [00:04<00:00, 22.44it/s] 85%|████████▌ | 85/100 [00:04<00:00, 19.84it/s] 88%|████████▊ | 88/100 [00:04<00:00, 18.41it/s] 91%|█████████ | 91/100 [00:04<00:00, 19.43it/s] 94%|█████████▍| 94/100 [00:04<00:00, 19.90it/s] 97%|█████████▋| 97/100 [00:04<00:00, 20.63it/s]100%|██████████| 100/100 [00:05<00:00, 21.20it/s]100%|██████████| 100/100 [00:05<00:00, 19.68it/s]
+MPC iter 14 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   60.17804 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  860.66205 ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  160.30319 ,   66.77571 ,
+        129.49084 ,  123.59342 ,  397.76077 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        684.3188  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  147.0805  ,   77.3794  ,   63.05774 , 1580.4205  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        162.80989 , 1401.5879  ,  139.3808  ,   30.44182 ,  549.14154 ,
+        178.87631 ,  100.76241 ,   76.67634 ,   58.827854,  519.95886 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:06, 14.57it/s]  4%|▍         | 4/100 [00:00<00:06, 14.14it/s]  6%|▌         | 6/100 [00:00<00:05, 16.24it/s]  9%|▉         | 9/100 [00:00<00:04, 18.87it/s] 12%|█▏        | 12/100 [00:00<00:04, 20.27it/s] 15%|█▌        | 15/100 [00:00<00:03, 21.33it/s] 18%|█▊        | 18/100 [00:00<00:03, 21.69it/s] 21%|██        | 21/100 [00:01<00:03, 21.79it/s] 24%|██▍       | 24/100 [00:01<00:03, 19.58it/s] 27%|██▋       | 27/100 [00:01<00:03, 18.65it/s] 30%|███       | 30/100 [00:01<00:03, 19.85it/s] 33%|███▎      | 33/100 [00:01<00:03, 20.48it/s] 36%|███▌      | 36/100 [00:01<00:03, 18.99it/s] 38%|███▊      | 38/100 [00:02<00:03, 17.47it/s] 41%|████      | 41/100 [00:02<00:03, 18.82it/s] 44%|████▍     | 44/100 [00:02<00:02, 20.00it/s] 47%|████▋     | 47/100 [00:02<00:02, 18.91it/s] 49%|████▉     | 49/100 [00:02<00:03, 16.38it/s] 51%|█████     | 51/100 [00:02<00:03, 14.98it/s] 53%|█████▎    | 53/100 [00:02<00:03, 13.68it/s] 55%|█████▌    | 55/100 [00:03<00:03, 14.83it/s] 58%|█████▊    | 58/100 [00:03<00:02, 17.09it/s] 61%|██████    | 61/100 [00:03<00:02, 18.76it/s] 64%|██████▍   | 64/100 [00:03<00:01, 19.96it/s] 67%|██████▋   | 67/100 [00:03<00:01, 20.66it/s] 70%|███████   | 70/100 [00:03<00:01, 21.21it/s] 73%|███████▎  | 73/100 [00:03<00:01, 21.64it/s] 76%|███████▌  | 76/100 [00:04<00:01, 20.40it/s] 79%|███████▉  | 79/100 [00:04<00:01, 20.12it/s] 82%|████████▏ | 82/100 [00:04<00:00, 20.09it/s] 85%|████████▌ | 85/100 [00:04<00:00, 20.22it/s] 88%|████████▊ | 88/100 [00:04<00:00, 20.83it/s] 91%|█████████ | 91/100 [00:04<00:00, 21.29it/s] 94%|█████████▍| 94/100 [00:04<00:00, 21.67it/s] 97%|█████████▋| 97/100 [00:05<00:00, 18.95it/s] 99%|█████████▉| 99/100 [00:05<00:00, 17.37it/s]100%|██████████| 100/100 [00:05<00:00, 18.91it/s]
+MPC iter 15 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   37.95378 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 ,  900.03296 ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  145.15701 ,   66.77571 ,
+        129.49084 ,  119.60545 ,  400.89807 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1049.8685  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  181.79198 ,   77.3794  ,   63.05774 , 1320.5758  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        262.13336 , 1784.315   ,  139.3808  ,   30.44182 , 1165.5022  ,
+        178.87631 ,  130.53546 ,   76.67634 ,   58.827854,  571.2107  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:06, 15.60it/s]  4%|▍         | 4/100 [00:00<00:05, 17.28it/s]  6%|▌         | 6/100 [00:00<00:05, 18.32it/s]  9%|▉         | 9/100 [00:00<00:04, 20.32it/s] 12%|█▏        | 12/100 [00:00<00:04, 21.04it/s] 15%|█▌        | 15/100 [00:00<00:03, 21.49it/s] 18%|█▊        | 18/100 [00:00<00:04, 19.27it/s] 20%|██        | 20/100 [00:01<00:04, 19.11it/s] 23%|██▎       | 23/100 [00:01<00:03, 19.94it/s] 26%|██▌       | 26/100 [00:01<00:03, 20.83it/s] 29%|██▉       | 29/100 [00:01<00:03, 21.33it/s] 32%|███▏      | 32/100 [00:01<00:03, 21.71it/s] 35%|███▌      | 35/100 [00:01<00:02, 22.00it/s] 38%|███▊      | 38/100 [00:01<00:02, 21.87it/s] 41%|████      | 41/100 [00:01<00:02, 21.95it/s] 44%|████▍     | 44/100 [00:02<00:02, 22.17it/s] 47%|████▋     | 47/100 [00:02<00:02, 22.38it/s] 50%|█████     | 50/100 [00:02<00:02, 19.30it/s] 53%|█████▎    | 53/100 [00:02<00:03, 12.56it/s] 55%|█████▌    | 55/100 [00:03<00:03, 12.95it/s] 57%|█████▋    | 57/100 [00:03<00:03, 14.07it/s] 59%|█████▉    | 59/100 [00:03<00:02, 15.20it/s] 62%|██████▏   | 62/100 [00:03<00:02, 16.80it/s] 65%|██████▌   | 65/100 [00:03<00:01, 18.12it/s] 68%|██████▊   | 68/100 [00:03<00:01, 19.08it/s] 71%|███████   | 71/100 [00:03<00:01, 19.72it/s] 74%|███████▍  | 74/100 [00:03<00:01, 20.38it/s] 77%|███████▋  | 77/100 [00:04<00:01, 20.79it/s] 80%|████████  | 80/100 [00:04<00:00, 21.14it/s] 83%|████████▎ | 83/100 [00:04<00:00, 21.23it/s] 86%|████████▌ | 86/100 [00:04<00:00, 21.31it/s] 89%|████████▉ | 89/100 [00:04<00:00, 21.38it/s] 92%|█████████▏| 92/100 [00:04<00:00, 21.40it/s] 95%|█████████▌| 95/100 [00:04<00:00, 21.47it/s] 98%|█████████▊| 98/100 [00:05<00:00, 21.45it/s]100%|██████████| 100/100 [00:05<00:00, 19.54it/s]
+MPC iter 16 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   33.604134,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1081.2704  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  173.97427 ,   66.77571 ,
+        129.49084 ,  110.379105,  404.19495 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1418.2859  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  177.86966 ,   77.3794  ,   63.05774 , 1272.407   ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        153.82144 , 1341.497   ,  139.3808  ,   30.44182 ,  922.0795  ,
+        178.87631 ,  144.81775 ,   76.67634 ,   58.827854,  621.49457 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 22.22it/s]  6%|▌         | 6/100 [00:00<00:04, 22.97it/s]  9%|▉         | 9/100 [00:00<00:03, 22.76it/s] 12%|█▏        | 12/100 [00:00<00:03, 22.14it/s] 15%|█▌        | 15/100 [00:00<00:03, 22.37it/s] 18%|█▊        | 18/100 [00:00<00:03, 22.08it/s] 21%|██        | 21/100 [00:00<00:03, 21.95it/s] 24%|██▍       | 24/100 [00:01<00:03, 22.32it/s] 27%|██▋       | 27/100 [00:01<00:03, 22.44it/s] 30%|███       | 30/100 [00:01<00:03, 22.51it/s] 33%|███▎      | 33/100 [00:01<00:02, 22.59it/s] 36%|███▌      | 36/100 [00:01<00:02, 22.52it/s] 39%|███▉      | 39/100 [00:01<00:02, 22.65it/s] 42%|████▏     | 42/100 [00:01<00:02, 21.85it/s] 45%|████▌     | 45/100 [00:02<00:02, 21.67it/s] 48%|████▊     | 48/100 [00:02<00:02, 22.17it/s] 51%|█████     | 51/100 [00:02<00:02, 21.63it/s] 54%|█████▍    | 54/100 [00:02<00:02, 19.91it/s] 57%|█████▋    | 57/100 [00:02<00:02, 18.61it/s] 59%|█████▉    | 59/100 [00:02<00:02, 18.69it/s] 62%|██████▏   | 62/100 [00:02<00:01, 19.15it/s] 65%|██████▌   | 65/100 [00:03<00:01, 20.05it/s] 68%|██████▊   | 68/100 [00:03<00:01, 20.62it/s] 71%|███████   | 71/100 [00:03<00:01, 17.12it/s] 73%|███████▎  | 73/100 [00:03<00:01, 15.85it/s] 75%|███████▌  | 75/100 [00:03<00:01, 16.25it/s] 78%|███████▊  | 78/100 [00:03<00:01, 18.06it/s] 81%|████████  | 81/100 [00:03<00:00, 19.49it/s] 84%|████████▍ | 84/100 [00:04<00:00, 20.17it/s] 87%|████████▋ | 87/100 [00:04<00:00, 21.07it/s] 90%|█████████ | 90/100 [00:04<00:00, 21.39it/s] 93%|█████████▎| 93/100 [00:04<00:00, 21.31it/s] 96%|█████████▌| 96/100 [00:04<00:00, 21.43it/s] 99%|█████████▉| 99/100 [00:04<00:00, 21.42it/s]100%|██████████| 100/100 [00:04<00:00, 20.69it/s]
+MPC iter 17 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   56.73718 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1114.9808  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  135.57661 ,   66.77571 ,
+        129.49084 ,  118.95114 ,  397.48325 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        869.09186 ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  174.75192 ,   77.3794  ,   63.05774 ,  964.75616 ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        133.22687 , 1128.4291  ,  139.3808  ,   30.44182 ,  930.0957  ,
+        178.87631 ,  148.44075 ,   76.67634 ,   58.827854,  853.9589  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.86it/s]  6%|▌         | 6/100 [00:00<00:04, 20.86it/s]  9%|▉         | 9/100 [00:00<00:04, 20.50it/s] 12%|█▏        | 12/100 [00:00<00:04, 21.28it/s] 15%|█▌        | 15/100 [00:00<00:03, 21.89it/s] 18%|█▊        | 18/100 [00:00<00:03, 22.05it/s] 21%|██        | 21/100 [00:00<00:03, 22.35it/s] 24%|██▍       | 24/100 [00:01<00:03, 22.35it/s] 27%|██▋       | 27/100 [00:01<00:04, 15.89it/s] 29%|██▉       | 29/100 [00:01<00:04, 15.46it/s] 32%|███▏      | 32/100 [00:01<00:03, 17.30it/s] 35%|███▌      | 35/100 [00:01<00:03, 18.79it/s] 38%|███▊      | 38/100 [00:01<00:03, 19.83it/s] 41%|████      | 41/100 [00:02<00:02, 20.78it/s] 44%|████▍     | 44/100 [00:02<00:02, 21.51it/s] 47%|████▋     | 47/100 [00:02<00:02, 22.06it/s] 50%|█████     | 50/100 [00:02<00:02, 17.11it/s] 52%|█████▏    | 52/100 [00:02<00:02, 16.48it/s] 55%|█████▌    | 55/100 [00:02<00:02, 17.95it/s] 58%|█████▊    | 58/100 [00:03<00:02, 19.13it/s] 61%|██████    | 61/100 [00:03<00:01, 20.13it/s] 64%|██████▍   | 64/100 [00:03<00:01, 20.69it/s] 67%|██████▋   | 67/100 [00:03<00:01, 21.44it/s] 70%|███████   | 70/100 [00:03<00:01, 19.36it/s] 73%|███████▎  | 73/100 [00:03<00:01, 17.60it/s] 76%|███████▌  | 76/100 [00:03<00:01, 18.73it/s] 79%|███████▉  | 79/100 [00:04<00:01, 19.52it/s] 82%|████████▏ | 82/100 [00:04<00:00, 19.95it/s] 85%|████████▌ | 85/100 [00:04<00:00, 20.83it/s] 88%|████████▊ | 88/100 [00:04<00:00, 21.36it/s] 91%|█████████ | 91/100 [00:04<00:00, 21.76it/s] 94%|█████████▍| 94/100 [00:04<00:00, 22.15it/s] 97%|█████████▋| 97/100 [00:04<00:00, 22.44it/s]100%|██████████| 100/100 [00:05<00:00, 21.14it/s]100%|██████████| 100/100 [00:05<00:00, 19.90it/s]
+MPC iter 18 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  177.21832 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1092.8822  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  124.42997 ,   66.77571 ,
+        129.49084 ,  159.17174 ,  389.50766 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        702.4346  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  175.25578 ,   77.3794  ,   63.05774 , 1320.5812  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        180.81767 , 1023.4839  ,  139.3808  ,   30.44182 ,  752.15704 ,
+        178.87631 ,  146.46252 ,   76.67634 ,   58.827854,  885.72595 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.97it/s]  6%|▌         | 6/100 [00:00<00:04, 20.81it/s]  9%|▉         | 9/100 [00:00<00:04, 20.90it/s] 12%|█▏        | 12/100 [00:00<00:04, 20.88it/s] 15%|█▌        | 15/100 [00:00<00:04, 20.68it/s] 18%|█▊        | 18/100 [00:00<00:04, 20.48it/s] 21%|██        | 21/100 [00:01<00:03, 20.64it/s] 24%|██▍       | 24/100 [00:01<00:03, 20.82it/s] 27%|██▋       | 27/100 [00:01<00:03, 19.64it/s] 29%|██▉       | 29/100 [00:01<00:04, 15.65it/s] 31%|███       | 31/100 [00:01<00:04, 14.05it/s] 33%|███▎      | 33/100 [00:01<00:04, 14.27it/s] 35%|███▌      | 35/100 [00:01<00:04, 15.10it/s] 37%|███▋      | 37/100 [00:02<00:04, 15.70it/s] 40%|████      | 40/100 [00:02<00:03, 17.24it/s] 43%|████▎     | 43/100 [00:02<00:03, 18.39it/s] 46%|████▌     | 46/100 [00:02<00:02, 19.16it/s] 49%|████▉     | 49/100 [00:02<00:02, 19.54it/s] 51%|█████     | 51/100 [00:02<00:02, 19.49it/s] 53%|█████▎    | 53/100 [00:02<00:02, 18.81it/s] 56%|█████▌    | 56/100 [00:03<00:02, 19.37it/s] 59%|█████▉    | 59/100 [00:03<00:02, 19.84it/s] 61%|██████    | 61/100 [00:03<00:02, 18.39it/s] 63%|██████▎   | 63/100 [00:03<00:02, 17.93it/s] 66%|██████▌   | 66/100 [00:03<00:01, 19.21it/s] 68%|██████▊   | 68/100 [00:03<00:01, 16.56it/s] 70%|███████   | 70/100 [00:03<00:01, 15.25it/s] 73%|███████▎  | 73/100 [00:04<00:01, 16.96it/s] 76%|███████▌  | 76/100 [00:04<00:01, 17.90it/s] 79%|███████▉  | 79/100 [00:04<00:01, 19.07it/s] 82%|████████▏ | 82/100 [00:04<00:00, 20.25it/s] 85%|████████▌ | 85/100 [00:04<00:00, 21.03it/s] 88%|████████▊ | 88/100 [00:04<00:00, 21.66it/s] 91%|█████████ | 91/100 [00:04<00:00, 22.10it/s] 94%|█████████▍| 94/100 [00:04<00:00, 22.41it/s] 97%|█████████▋| 97/100 [00:05<00:00, 21.61it/s]100%|██████████| 100/100 [00:05<00:00, 15.60it/s]100%|██████████| 100/100 [00:05<00:00, 18.38it/s]
+MPC iter 19 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   44.240173,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1143.8647  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  133.32935 ,   66.77571 ,
+        129.49084 ,  137.54225 ,  372.60794 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        605.80804 ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  167.67497 ,   77.3794  ,   63.05774 , 1072.0499  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        162.54414 , 1146.1672  ,  139.3808  ,   30.44182 ,  713.42346 ,
+        178.87631 ,  154.46794 ,   76.67634 ,   58.827854,  344.5249  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:05, 19.43it/s]  5%|▌         | 5/100 [00:00<00:04, 19.79it/s]  8%|▊         | 8/100 [00:00<00:04, 20.22it/s] 11%|█         | 11/100 [00:00<00:04, 20.39it/s] 14%|█▍        | 14/100 [00:00<00:04, 19.12it/s] 16%|█▌        | 16/100 [00:00<00:04, 17.32it/s] 18%|█▊        | 18/100 [00:00<00:04, 16.97it/s] 20%|██        | 20/100 [00:01<00:04, 17.68it/s] 22%|██▏       | 22/100 [00:01<00:04, 18.17it/s] 24%|██▍       | 24/100 [00:01<00:04, 18.08it/s] 27%|██▋       | 27/100 [00:01<00:03, 19.29it/s] 30%|███       | 30/100 [00:01<00:03, 20.40it/s] 33%|███▎      | 33/100 [00:01<00:03, 21.06it/s] 36%|███▌      | 36/100 [00:01<00:02, 21.73it/s] 39%|███▉      | 39/100 [00:01<00:02, 22.03it/s] 42%|████▏     | 42/100 [00:02<00:02, 22.30it/s] 45%|████▌     | 45/100 [00:02<00:02, 22.01it/s] 48%|████▊     | 48/100 [00:02<00:02, 22.12it/s] 51%|█████     | 51/100 [00:02<00:02, 22.33it/s] 54%|█████▍    | 54/100 [00:02<00:02, 22.68it/s] 57%|█████▋    | 57/100 [00:02<00:01, 22.44it/s] 60%|██████    | 60/100 [00:02<00:01, 22.56it/s] 63%|██████▎   | 63/100 [00:03<00:01, 22.72it/s] 66%|██████▌   | 66/100 [00:03<00:01, 21.98it/s] 69%|██████▉   | 69/100 [00:03<00:02, 15.38it/s] 71%|███████   | 71/100 [00:03<00:02, 13.78it/s] 74%|███████▍  | 74/100 [00:03<00:01, 15.44it/s] 77%|███████▋  | 77/100 [00:03<00:01, 16.85it/s] 80%|████████  | 80/100 [00:04<00:01, 17.95it/s] 83%|████████▎ | 83/100 [00:04<00:00, 18.84it/s] 86%|████████▌ | 86/100 [00:04<00:00, 19.22it/s] 88%|████████▊ | 88/100 [00:04<00:00, 18.67it/s] 90%|█████████ | 90/100 [00:04<00:00, 16.84it/s] 92%|█████████▏| 92/100 [00:04<00:00, 15.59it/s] 94%|█████████▍| 94/100 [00:04<00:00, 15.70it/s] 96%|█████████▌| 96/100 [00:05<00:00, 16.20it/s] 99%|█████████▉| 99/100 [00:05<00:00, 17.68it/s]100%|██████████| 100/100 [00:05<00:00, 18.92it/s]
+MPC iter 20 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   44.84608 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1293.3691  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  142.63911 ,   66.77571 ,
+        129.49084 ,  141.10674 ,  345.22534 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        611.9943  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  164.14624 ,   77.3794  ,   63.05774 , 1101.3339  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        191.36429 , 1709.7094  ,  139.3808  ,   30.44182 ,  737.3405  ,
+        178.87631 ,  207.33704 ,   76.67634 ,   58.827854,  362.45352 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.58it/s]  6%|▌         | 6/100 [00:00<00:04, 18.92it/s]  8%|▊         | 8/100 [00:00<00:05, 16.76it/s] 10%|█         | 10/100 [00:00<00:05, 15.57it/s] 12%|█▏        | 12/100 [00:00<00:05, 16.18it/s] 15%|█▌        | 15/100 [00:00<00:04, 17.76it/s] 18%|█▊        | 18/100 [00:01<00:04, 18.93it/s] 21%|██        | 21/100 [00:01<00:04, 18.49it/s] 23%|██▎       | 23/100 [00:01<00:04, 16.50it/s] 25%|██▌       | 25/100 [00:01<00:04, 15.06it/s] 27%|██▋       | 27/100 [00:01<00:04, 15.44it/s] 29%|██▉       | 29/100 [00:01<00:04, 16.13it/s] 31%|███       | 31/100 [00:01<00:04, 16.90it/s] 33%|███▎      | 33/100 [00:01<00:03, 17.57it/s] 36%|███▌      | 36/100 [00:02<00:03, 18.77it/s] 39%|███▉      | 39/100 [00:02<00:03, 20.00it/s] 42%|████▏     | 42/100 [00:02<00:02, 21.05it/s] 45%|████▌     | 45/100 [00:02<00:03, 17.74it/s] 47%|████▋     | 47/100 [00:02<00:03, 16.82it/s] 50%|█████     | 50/100 [00:02<00:02, 18.49it/s] 53%|█████▎    | 53/100 [00:02<00:02, 19.39it/s] 55%|█████▌    | 55/100 [00:03<00:02, 18.91it/s] 57%|█████▋    | 57/100 [00:03<00:02, 18.57it/s] 59%|█████▉    | 59/100 [00:03<00:02, 18.09it/s] 61%|██████    | 61/100 [00:03<00:02, 18.48it/s] 64%|██████▍   | 64/100 [00:03<00:01, 19.92it/s] 67%|██████▋   | 67/100 [00:03<00:01, 20.80it/s] 70%|███████   | 70/100 [00:03<00:01, 21.48it/s] 73%|███████▎  | 73/100 [00:03<00:01, 21.94it/s] 76%|███████▌  | 76/100 [00:04<00:01, 22.23it/s] 79%|███████▉  | 79/100 [00:04<00:00, 22.62it/s] 82%|████████▏ | 82/100 [00:04<00:00, 22.66it/s] 85%|████████▌ | 85/100 [00:04<00:00, 22.77it/s] 88%|████████▊ | 88/100 [00:04<00:00, 20.15it/s] 91%|█████████ | 91/100 [00:04<00:00, 16.62it/s] 93%|█████████▎| 93/100 [00:05<00:00, 17.12it/s] 96%|█████████▌| 96/100 [00:05<00:00, 18.05it/s] 99%|█████████▉| 99/100 [00:05<00:00, 18.85it/s]100%|██████████| 100/100 [00:05<00:00, 18.69it/s]
+MPC iter 21 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   52.722866,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1408.1069  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  140.39072 ,   66.77571 ,
+        129.49084 ,  133.64388 ,  288.51447 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        793.3006  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  180.3788  ,   77.3794  ,   63.05774 , 1231.1981  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        195.09006 , 1219.8314  ,  139.3808  ,   30.44182 ,  935.9822  ,
+        178.87631 ,  122.491905,   76.67634 ,   58.827854,  332.10886 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.88it/s]  6%|▌         | 6/100 [00:00<00:04, 21.03it/s]  9%|▉         | 9/100 [00:00<00:04, 20.87it/s] 12%|█▏        | 12/100 [00:00<00:04, 21.27it/s] 15%|█▌        | 15/100 [00:00<00:04, 20.72it/s] 18%|█▊        | 18/100 [00:01<00:06, 13.46it/s] 20%|██        | 20/100 [00:01<00:06, 12.01it/s] 22%|██▏       | 22/100 [00:01<00:05, 13.01it/s] 24%|██▍       | 24/100 [00:01<00:05, 14.21it/s] 26%|██▌       | 26/100 [00:01<00:04, 15.27it/s] 28%|██▊       | 28/100 [00:01<00:04, 16.22it/s] 30%|███       | 30/100 [00:01<00:04, 16.89it/s] 32%|███▏      | 32/100 [00:01<00:03, 17.13it/s] 35%|███▌      | 35/100 [00:02<00:03, 18.29it/s] 38%|███▊      | 38/100 [00:02<00:03, 18.34it/s] 40%|████      | 40/100 [00:02<00:03, 16.63it/s] 42%|████▏     | 42/100 [00:02<00:03, 15.89it/s] 45%|████▌     | 45/100 [00:02<00:03, 17.24it/s] 48%|████▊     | 48/100 [00:02<00:03, 16.99it/s] 50%|█████     | 50/100 [00:03<00:03, 15.25it/s] 52%|█████▏    | 52/100 [00:03<00:03, 14.54it/s] 55%|█████▌    | 55/100 [00:03<00:02, 16.32it/s] 58%|█████▊    | 58/100 [00:03<00:02, 17.88it/s] 61%|██████    | 61/100 [00:03<00:02, 19.13it/s] 64%|██████▍   | 64/100 [00:03<00:01, 20.28it/s] 67%|██████▋   | 67/100 [00:03<00:01, 21.06it/s] 70%|███████   | 70/100 [00:04<00:01, 21.68it/s] 73%|███████▎  | 73/100 [00:04<00:01, 22.11it/s] 76%|███████▌  | 76/100 [00:04<00:01, 22.24it/s] 79%|███████▉  | 79/100 [00:04<00:00, 22.35it/s] 82%|████████▏ | 82/100 [00:04<00:00, 22.47it/s] 85%|████████▌ | 85/100 [00:04<00:00, 21.68it/s] 88%|████████▊ | 88/100 [00:04<00:00, 19.07it/s] 90%|█████████ | 90/100 [00:05<00:00, 18.22it/s] 93%|█████████▎| 93/100 [00:05<00:00, 19.29it/s] 96%|█████████▌| 96/100 [00:05<00:00, 20.24it/s] 99%|█████████▉| 99/100 [00:05<00:00, 20.86it/s]100%|██████████| 100/100 [00:05<00:00, 18.23it/s]
+MPC iter 22 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   61.052208,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1426.905   ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  130.29054 ,   66.77571 ,
+        129.49084 ,  132.60297 ,  284.40976 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+        921.66797 ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  164.36009 ,   77.3794  ,   63.05774 , 1823.3889  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        166.65283 , 1236.338   ,  139.3808  ,   30.44182 , 1018.4148  ,
+        178.87631 ,  146.35077 ,   76.67634 ,   58.827854,  388.33978 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:04, 19.90it/s]  5%|▌         | 5/100 [00:00<00:04, 20.65it/s]  8%|▊         | 8/100 [00:00<00:05, 17.58it/s] 10%|█         | 10/100 [00:00<00:06, 14.78it/s] 12%|█▏        | 12/100 [00:00<00:06, 14.23it/s] 15%|█▌        | 15/100 [00:00<00:05, 16.34it/s] 17%|█▋        | 17/100 [00:01<00:05, 15.72it/s] 19%|█▉        | 19/100 [00:01<00:05, 14.66it/s] 21%|██        | 21/100 [00:01<00:05, 15.80it/s] 24%|██▍       | 24/100 [00:01<00:04, 17.21it/s] 27%|██▋       | 27/100 [00:01<00:03, 18.51it/s] 30%|███       | 30/100 [00:01<00:03, 19.42it/s] 33%|███▎      | 33/100 [00:01<00:03, 19.87it/s] 36%|███▌      | 36/100 [00:02<00:03, 18.46it/s] 38%|███▊      | 38/100 [00:02<00:04, 14.62it/s] 40%|████      | 40/100 [00:02<00:04, 12.86it/s] 42%|████▏     | 42/100 [00:02<00:04, 13.54it/s] 44%|████▍     | 44/100 [00:02<00:03, 14.80it/s] 47%|████▋     | 47/100 [00:02<00:03, 16.54it/s] 50%|█████     | 50/100 [00:03<00:02, 17.88it/s] 53%|█████▎    | 53/100 [00:03<00:02, 18.83it/s] 56%|█████▌    | 56/100 [00:03<00:02, 19.34it/s] 59%|█████▉    | 59/100 [00:03<00:02, 19.84it/s] 62%|██████▏   | 62/100 [00:03<00:01, 20.14it/s] 65%|██████▌   | 65/100 [00:03<00:01, 20.35it/s] 68%|██████▊   | 68/100 [00:03<00:01, 20.68it/s] 71%|███████   | 71/100 [00:04<00:01, 20.98it/s] 74%|███████▍  | 74/100 [00:04<00:01, 21.08it/s] 77%|███████▋  | 77/100 [00:04<00:01, 21.02it/s] 80%|████████  | 80/100 [00:04<00:00, 21.12it/s] 83%|████████▎ | 83/100 [00:04<00:00, 18.13it/s] 85%|████████▌ | 85/100 [00:04<00:00, 16.30it/s] 87%|████████▋ | 87/100 [00:04<00:00, 16.79it/s] 89%|████████▉ | 89/100 [00:05<00:00, 17.48it/s] 92%|█████████▏| 92/100 [00:05<00:00, 18.42it/s] 94%|█████████▍| 94/100 [00:05<00:00, 18.72it/s] 97%|█████████▋| 97/100 [00:05<00:00, 19.47it/s] 99%|█████████▉| 99/100 [00:05<00:00, 19.34it/s]100%|██████████| 100/100 [00:05<00:00, 17.79it/s]
+MPC iter 23 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   83.79379 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1457.274   ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  125.25298 ,   66.77571 ,
+        129.49084 ,  133.11462 ,  255.8261  ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1097.742   ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  171.1296  ,   77.3794  ,   63.05774 , 2012.961   ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        151.55782 , 1280.858   ,  139.3808  ,   30.44182 , 1201.6686  ,
+        178.87631 ,  154.15063 ,   76.67634 ,   58.827854,  322.82083 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:05, 18.40it/s]  4%|▍         | 4/100 [00:00<00:05, 18.53it/s]  6%|▌         | 6/100 [00:00<00:05, 18.44it/s]  9%|▉         | 9/100 [00:00<00:04, 19.48it/s] 12%|█▏        | 12/100 [00:00<00:04, 19.93it/s] 15%|█▌        | 15/100 [00:00<00:04, 19.18it/s] 17%|█▋        | 17/100 [00:00<00:04, 17.13it/s] 19%|█▉        | 19/100 [00:01<00:05, 15.52it/s] 21%|██        | 21/100 [00:01<00:05, 14.50it/s] 23%|██▎       | 23/100 [00:01<00:05, 14.30it/s] 25%|██▌       | 25/100 [00:01<00:05, 13.99it/s] 27%|██▋       | 27/100 [00:01<00:05, 14.15it/s] 29%|██▉       | 29/100 [00:01<00:05, 13.38it/s] 31%|███       | 31/100 [00:02<00:05, 11.57it/s] 33%|███▎      | 33/100 [00:02<00:05, 12.78it/s] 35%|███▌      | 35/100 [00:02<00:04, 14.07it/s] 38%|███▊      | 38/100 [00:02<00:03, 16.17it/s] 41%|████      | 41/100 [00:02<00:03, 17.68it/s] 44%|████▍     | 44/100 [00:02<00:02, 18.75it/s] 47%|████▋     | 47/100 [00:02<00:02, 19.30it/s] 50%|█████     | 50/100 [00:03<00:02, 19.97it/s] 53%|█████▎    | 53/100 [00:03<00:02, 20.30it/s] 56%|█████▌    | 56/100 [00:03<00:02, 20.55it/s] 59%|█████▉    | 59/100 [00:03<00:01, 20.73it/s] 62%|██████▏   | 62/100 [00:03<00:01, 20.94it/s] 65%|██████▌   | 65/100 [00:03<00:01, 21.15it/s] 68%|██████▊   | 68/100 [00:03<00:01, 21.28it/s] 71%|███████   | 71/100 [00:04<00:01, 21.21it/s] 74%|███████▍  | 74/100 [00:04<00:01, 19.18it/s] 76%|███████▌  | 76/100 [00:04<00:01, 17.18it/s] 78%|███████▊  | 78/100 [00:04<00:01, 16.14it/s] 81%|████████  | 81/100 [00:04<00:01, 17.43it/s] 84%|████████▍ | 84/100 [00:04<00:00, 18.28it/s] 87%|████████▋ | 87/100 [00:04<00:00, 19.02it/s] 90%|█████████ | 90/100 [00:05<00:00, 19.70it/s] 93%|█████████▎| 93/100 [00:05<00:00, 20.21it/s] 96%|█████████▌| 96/100 [00:05<00:00, 20.51it/s] 99%|█████████▉| 99/100 [00:05<00:00, 20.71it/s]100%|██████████| 100/100 [00:05<00:00, 17.99it/s]
+MPC iter 24 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  131.76024 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1646.4618  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  156.58385 ,   66.77571 ,
+        129.49084 ,  139.51804 ,  308.67648 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1267.1398  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  156.28288 ,   77.3794  ,   63.05774 , 1814.8489  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        173.40923 , 1308.2512  ,  139.3808  ,   30.44182 , 1354.4218  ,
+        178.87631 ,  162.23979 ,   76.67634 ,   58.827854,  264.06345 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:05, 17.10it/s]  4%|▍         | 4/100 [00:00<00:05, 16.70it/s]  7%|▋         | 7/100 [00:00<00:04, 18.88it/s]  9%|▉         | 9/100 [00:00<00:04, 19.25it/s] 11%|█         | 11/100 [00:00<00:05, 17.67it/s] 13%|█▎        | 13/100 [00:00<00:06, 13.39it/s] 15%|█▌        | 15/100 [00:01<00:10,  7.83it/s] 17%|█▋        | 17/100 [00:01<00:09,  8.69it/s] 19%|█▉        | 19/100 [00:01<00:07, 10.17it/s] 22%|██▏       | 22/100 [00:01<00:06, 12.81it/s] 25%|██▌       | 25/100 [00:01<00:04, 15.22it/s] 28%|██▊       | 28/100 [00:02<00:04, 16.89it/s] 31%|███       | 31/100 [00:02<00:03, 17.95it/s] 34%|███▍      | 34/100 [00:02<00:03, 18.76it/s] 36%|███▌      | 36/100 [00:02<00:03, 18.97it/s] 39%|███▉      | 39/100 [00:02<00:03, 19.69it/s] 42%|████▏     | 42/100 [00:02<00:02, 20.58it/s] 45%|████▌     | 45/100 [00:02<00:02, 21.36it/s] 48%|████▊     | 48/100 [00:02<00:02, 21.97it/s] 51%|█████     | 51/100 [00:03<00:02, 22.20it/s] 54%|█████▍    | 54/100 [00:03<00:02, 22.50it/s] 57%|█████▋    | 57/100 [00:03<00:01, 22.82it/s] 60%|██████    | 60/100 [00:03<00:01, 23.08it/s] 63%|██████▎   | 63/100 [00:03<00:01, 23.04it/s] 66%|██████▌   | 66/100 [00:03<00:01, 23.03it/s] 69%|██████▉   | 69/100 [00:03<00:01, 23.03it/s] 72%|███████▏  | 72/100 [00:03<00:01, 22.85it/s] 75%|███████▌  | 75/100 [00:04<00:01, 22.07it/s] 78%|███████▊  | 78/100 [00:04<00:01, 20.96it/s] 81%|████████  | 81/100 [00:04<00:00, 20.91it/s] 84%|████████▍ | 84/100 [00:04<00:00, 21.28it/s] 87%|████████▋ | 87/100 [00:04<00:00, 21.70it/s] 90%|█████████ | 90/100 [00:04<00:00, 22.15it/s] 93%|█████████▎| 93/100 [00:04<00:00, 22.40it/s] 96%|█████████▌| 96/100 [00:05<00:00, 22.56it/s] 99%|█████████▉| 99/100 [00:05<00:00, 22.84it/s]100%|██████████| 100/100 [00:05<00:00, 18.96it/s]
+MPC iter 25 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  117.05595 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1742.639   ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  126.44408 ,   66.77571 ,
+        129.49084 ,  134.95709 ,  321.7843  ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1319.7545  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  166.83961 ,   77.3794  ,   63.05774 , 1894.1638  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        161.62682 , 1262.9009  ,  139.3808  ,   30.44182 , 1377.9639  ,
+        178.87631 ,  161.35034 ,   76.67634 ,   58.827854,  248.31992 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:05, 18.96it/s]  5%|▌         | 5/100 [00:00<00:04, 20.17it/s]  8%|▊         | 8/100 [00:00<00:04, 20.16it/s] 11%|█         | 11/100 [00:00<00:04, 19.64it/s] 14%|█▍        | 14/100 [00:00<00:04, 20.12it/s] 17%|█▋        | 17/100 [00:00<00:04, 20.25it/s] 20%|██        | 20/100 [00:01<00:04, 19.93it/s] 22%|██▏       | 22/100 [00:01<00:04, 17.19it/s] 24%|██▍       | 24/100 [00:01<00:04, 15.52it/s] 26%|██▌       | 26/100 [00:01<00:04, 15.39it/s] 28%|██▊       | 28/100 [00:01<00:04, 16.39it/s] 30%|███       | 30/100 [00:01<00:04, 15.31it/s] 32%|███▏      | 32/100 [00:01<00:04, 14.78it/s] 34%|███▍      | 34/100 [00:02<00:04, 14.07it/s] 36%|███▌      | 36/100 [00:02<00:04, 14.63it/s] 38%|███▊      | 38/100 [00:02<00:04, 15.26it/s] 40%|████      | 40/100 [00:02<00:04, 14.70it/s] 42%|████▏     | 42/100 [00:02<00:04, 13.75it/s] 44%|████▍     | 44/100 [00:02<00:03, 14.12it/s] 47%|████▋     | 47/100 [00:02<00:03, 16.16it/s] 50%|█████     | 50/100 [00:03<00:02, 17.64it/s] 53%|█████▎    | 53/100 [00:03<00:02, 18.80it/s] 56%|█████▌    | 56/100 [00:03<00:02, 19.41it/s] 59%|█████▉    | 59/100 [00:03<00:02, 19.92it/s] 62%|██████▏   | 62/100 [00:03<00:01, 20.25it/s] 65%|██████▌   | 65/100 [00:03<00:01, 20.65it/s] 68%|██████▊   | 68/100 [00:03<00:01, 20.82it/s] 71%|███████   | 71/100 [00:03<00:01, 20.94it/s] 74%|███████▍  | 74/100 [00:04<00:01, 20.91it/s] 77%|███████▋  | 77/100 [00:04<00:01, 20.96it/s] 80%|████████  | 80/100 [00:04<00:01, 19.09it/s] 82%|████████▏ | 82/100 [00:04<00:01, 17.33it/s] 84%|████████▍ | 84/100 [00:04<00:01, 15.60it/s] 87%|████████▋ | 87/100 [00:04<00:00, 17.31it/s] 90%|█████████ | 90/100 [00:05<00:00, 18.53it/s] 93%|█████████▎| 93/100 [00:05<00:00, 19.20it/s] 96%|█████████▌| 96/100 [00:05<00:00, 19.69it/s] 99%|█████████▉| 99/100 [00:05<00:00, 20.27it/s]100%|██████████| 100/100 [00:05<00:00, 18.06it/s]
+MPC iter 26 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  149.2567  ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1751.3223  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  183.70668 ,   66.77571 ,
+        129.49084 ,  130.08032 ,  333.14417 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1439.1998  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  164.72237 ,   77.3794  ,   63.05774 , 2033.4354  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        107.38292 , 1177.8284  ,  139.3808  ,   30.44182 , 1557.8257  ,
+        178.87631 ,  170.86485 ,   76.67634 ,   58.827854,  241.97997 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.24it/s]  6%|▌         | 6/100 [00:00<00:04, 19.69it/s]  8%|▊         | 8/100 [00:00<00:04, 19.26it/s] 10%|█         | 10/100 [00:00<00:04, 19.14it/s] 12%|█▏        | 12/100 [00:00<00:04, 18.95it/s] 14%|█▍        | 14/100 [00:00<00:04, 19.00it/s] 16%|█▌        | 16/100 [00:00<00:04, 19.22it/s] 18%|█▊        | 18/100 [00:00<00:04, 19.41it/s] 20%|██        | 20/100 [00:01<00:04, 19.52it/s] 23%|██▎       | 23/100 [00:01<00:03, 20.19it/s] 26%|██▌       | 26/100 [00:01<00:04, 17.50it/s] 28%|██▊       | 28/100 [00:01<00:04, 16.52it/s] 30%|███       | 30/100 [00:01<00:04, 15.30it/s] 32%|███▏      | 32/100 [00:01<00:04, 16.20it/s] 34%|███▍      | 34/100 [00:01<00:04, 15.36it/s] 36%|███▌      | 36/100 [00:02<00:05, 12.23it/s] 38%|███▊      | 38/100 [00:02<00:06, 10.32it/s] 40%|████      | 40/100 [00:02<00:05, 10.99it/s] 42%|████▏     | 42/100 [00:02<00:04, 12.45it/s] 44%|████▍     | 44/100 [00:02<00:04, 13.79it/s] 47%|████▋     | 47/100 [00:02<00:03, 16.02it/s] 49%|████▉     | 49/100 [00:03<00:03, 16.83it/s] 51%|█████     | 51/100 [00:03<00:02, 16.95it/s] 53%|█████▎    | 53/100 [00:03<00:02, 17.01it/s] 55%|█████▌    | 55/100 [00:03<00:02, 17.08it/s] 57%|█████▋    | 57/100 [00:03<00:02, 17.18it/s] 59%|█████▉    | 59/100 [00:03<00:02, 17.27it/s] 61%|██████    | 61/100 [00:03<00:02, 17.66it/s] 63%|██████▎   | 63/100 [00:03<00:02, 17.97it/s] 65%|██████▌   | 65/100 [00:03<00:01, 17.84it/s] 67%|██████▋   | 67/100 [00:04<00:01, 18.08it/s] 69%|██████▉   | 69/100 [00:04<00:01, 17.34it/s] 71%|███████   | 71/100 [00:04<00:01, 16.28it/s] 73%|███████▎  | 73/100 [00:04<00:01, 15.62it/s] 75%|███████▌  | 75/100 [00:04<00:01, 15.48it/s] 77%|███████▋  | 77/100 [00:04<00:01, 16.11it/s] 80%|████████  | 80/100 [00:04<00:01, 17.33it/s] 82%|████████▏ | 82/100 [00:04<00:01, 17.66it/s] 85%|████████▌ | 85/100 [00:05<00:00, 18.42it/s] 87%|████████▋ | 87/100 [00:05<00:00, 18.48it/s] 90%|█████████ | 90/100 [00:05<00:00, 18.95it/s] 93%|█████████▎| 93/100 [00:05<00:00, 19.36it/s] 95%|█████████▌| 95/100 [00:05<00:00, 19.37it/s] 97%|█████████▋| 97/100 [00:05<00:00, 19.34it/s] 99%|█████████▉| 99/100 [00:05<00:00, 19.21it/s]100%|██████████| 100/100 [00:05<00:00, 16.92it/s]
+MPC iter 27 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,   86.10902 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 1915.4735  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  180.4379  ,   66.77571 ,
+        129.49084 ,  121.567894,  317.4829  ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1689.7579  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  155.42407 ,   77.3794  ,   63.05774 , 2275.1843  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        138.58755 , 1530.4988  ,  139.3808  ,   30.44182 , 1746.4707  ,
+        178.87631 ,  186.46536 ,   76.67634 ,   58.827854,  300.42288 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:04, 20.52it/s]  6%|▌         | 6/100 [00:00<00:05, 18.66it/s]  8%|▊         | 8/100 [00:00<00:04, 18.46it/s] 10%|█         | 10/100 [00:00<00:04, 18.15it/s] 12%|█▏        | 12/100 [00:00<00:04, 18.21it/s] 14%|█▍        | 14/100 [00:00<00:04, 18.48it/s] 16%|█▌        | 16/100 [00:00<00:04, 18.51it/s] 18%|█▊        | 18/100 [00:00<00:04, 18.80it/s] 20%|██        | 20/100 [00:01<00:05, 15.19it/s] 22%|██▏       | 22/100 [00:01<00:06, 11.93it/s] 24%|██▍       | 24/100 [00:01<00:07, 10.56it/s] 26%|██▌       | 26/100 [00:01<00:07, 10.05it/s] 28%|██▊       | 28/100 [00:01<00:06, 11.34it/s] 30%|███       | 30/100 [00:02<00:05, 11.71it/s] 32%|███▏      | 32/100 [00:02<00:05, 11.94it/s] 34%|███▍      | 34/100 [00:02<00:04, 13.39it/s] 37%|███▋      | 37/100 [00:02<00:04, 15.43it/s] 40%|████      | 40/100 [00:02<00:03, 16.92it/s] 43%|████▎     | 43/100 [00:02<00:03, 18.00it/s] 46%|████▌     | 46/100 [00:03<00:02, 18.76it/s] 49%|████▉     | 49/100 [00:03<00:02, 19.32it/s] 51%|█████     | 51/100 [00:03<00:02, 17.93it/s] 53%|█████▎    | 53/100 [00:03<00:02, 15.85it/s] 55%|█████▌    | 55/100 [00:03<00:03, 14.96it/s] 57%|█████▋    | 57/100 [00:03<00:03, 14.04it/s] 59%|█████▉    | 59/100 [00:03<00:02, 14.13it/s] 61%|██████    | 61/100 [00:04<00:02, 14.38it/s] 63%|██████▎   | 63/100 [00:04<00:02, 15.10it/s] 66%|██████▌   | 66/100 [00:04<00:02, 16.85it/s] 69%|██████▉   | 69/100 [00:04<00:01, 18.14it/s] 72%|███████▏  | 72/100 [00:04<00:01, 18.85it/s] 75%|███████▌  | 75/100 [00:04<00:01, 19.38it/s] 77%|███████▋  | 77/100 [00:04<00:01, 19.36it/s] 79%|███████▉  | 79/100 [00:04<00:01, 19.49it/s] 81%|████████  | 81/100 [00:05<00:00, 19.61it/s] 83%|████████▎ | 83/100 [00:05<00:00, 19.57it/s] 86%|████████▌ | 86/100 [00:05<00:00, 19.69it/s] 89%|████████▉ | 89/100 [00:05<00:00, 19.25it/s] 91%|█████████ | 91/100 [00:05<00:00, 17.40it/s] 93%|█████████▎| 93/100 [00:05<00:00, 16.03it/s] 95%|█████████▌| 95/100 [00:05<00:00, 15.07it/s] 97%|█████████▋| 97/100 [00:06<00:00, 15.39it/s] 99%|█████████▉| 99/100 [00:06<00:00, 16.43it/s]100%|██████████| 100/100 [00:06<00:00, 16.15it/s]
+MPC iter 28 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  119.9578  ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 2022.7603  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  168.74301 ,   66.77571 ,
+        129.49084 ,  123.49781 ,  299.61237 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       1937.2743  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  167.4396  ,   77.3794  ,   63.05774 , 2584.3406  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        172.32736 , 1537.0973  ,  139.3808  ,   30.44182 , 1929.8574  ,
+        178.87631 ,  192.48947 ,   76.67634 ,   58.827854,  380.2563  ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+  0%|          | 0/100 [00:00<?, ?it/s]  2%|▏         | 2/100 [00:00<00:07, 12.35it/s]  4%|▍         | 4/100 [00:00<00:08, 11.60it/s]  6%|▌         | 6/100 [00:00<00:08, 11.67it/s]  8%|▊         | 8/100 [00:00<00:07, 12.39it/s] 10%|█         | 10/100 [00:00<00:08, 10.33it/s] 12%|█▏        | 12/100 [00:01<00:08, 10.19it/s] 14%|█▍        | 14/100 [00:01<00:08, 10.21it/s] 16%|█▌        | 16/100 [00:01<00:07, 11.28it/s] 18%|█▊        | 18/100 [00:01<00:06, 12.57it/s] 20%|██        | 20/100 [00:01<00:05, 13.96it/s] 22%|██▏       | 22/100 [00:01<00:05, 15.20it/s] 24%|██▍       | 24/100 [00:01<00:04, 16.25it/s] 26%|██▌       | 26/100 [00:02<00:05, 14.65it/s] 28%|██▊       | 28/100 [00:02<00:05, 13.67it/s] 30%|███       | 30/100 [00:02<00:05, 12.94it/s] 33%|███▎      | 33/100 [00:02<00:04, 15.07it/s] 35%|███▌      | 35/100 [00:02<00:04, 15.88it/s] 37%|███▋      | 37/100 [00:02<00:03, 15.93it/s] 39%|███▉      | 39/100 [00:02<00:03, 15.79it/s] 41%|████      | 41/100 [00:03<00:03, 14.89it/s] 43%|████▎     | 43/100 [00:03<00:04, 13.56it/s] 45%|████▌     | 45/100 [00:03<00:04, 11.29it/s] 47%|████▋     | 47/100 [00:03<00:05,  9.56it/s] 49%|████▉     | 49/100 [00:03<00:05,  9.94it/s] 51%|█████     | 51/100 [00:04<00:04, 11.38it/s] 53%|█████▎    | 53/100 [00:04<00:03, 12.93it/s] 55%|█████▌    | 55/100 [00:04<00:03, 14.41it/s] 57%|█████▋    | 57/100 [00:04<00:02, 15.30it/s] 59%|█████▉    | 59/100 [00:04<00:02, 15.90it/s] 61%|██████    | 61/100 [00:04<00:02, 16.56it/s] 64%|██████▍   | 64/100 [00:04<00:02, 16.47it/s] 66%|██████▌   | 66/100 [00:04<00:02, 14.34it/s] 68%|██████▊   | 68/100 [00:05<00:02, 11.38it/s] 70%|███████   | 70/100 [00:05<00:02, 12.44it/s] 73%|███████▎  | 73/100 [00:05<00:01, 14.51it/s] 75%|███████▌  | 75/100 [00:05<00:01, 15.50it/s] 77%|███████▋  | 77/100 [00:05<00:01, 16.40it/s] 79%|███████▉  | 79/100 [00:05<00:01, 16.95it/s] 81%|████████  | 81/100 [00:05<00:01, 17.66it/s] 84%|████████▍ | 84/100 [00:06<00:00, 18.58it/s] 86%|████████▌ | 86/100 [00:06<00:00, 17.32it/s] 88%|████████▊ | 88/100 [00:06<00:00, 17.98it/s] 90%|█████████ | 90/100 [00:06<00:00, 17.13it/s] 92%|█████████▏| 92/100 [00:06<00:00, 17.20it/s] 95%|█████████▌| 95/100 [00:06<00:00, 18.59it/s] 98%|█████████▊| 98/100 [00:06<00:00, 19.51it/s]100%|██████████| 100/100 [00:06<00:00, 14.40it/s]
+MPC iter 29 Eval ------- 
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  126.01837 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 2115.8477  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  175.9652  ,   66.77571 ,
+        129.49084 ,  122.78322 ,  303.83206 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       2243.9124  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  169.89473 ,   77.3794  ,   63.05774 , 2547.1953  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        171.9958  , 1397.3811  ,  139.3808  ,   30.44182 , 2058.9153  ,
+        178.87631 ,  180.28123 ,   76.67634 ,   58.827854,  561.09656 ],
+      dtype=float32)}
+self.is_success:  [ True False  True  True  True  True False  True  True  True  True  True
+  True False  True  True False False  True  True  True  True  True  True
+  True False  True  True  True  True  True False  True  True False  True
+  True  True  True  True False False  True  True False  True False  True
+  True False]
+Success rate:  0.74
+{'success': array([ True, False,  True,  True,  True,  True, False,  True,  True,
+        True,  True,  True,  True, False,  True,  True, False, False,
+        True,  True,  True,  True,  True,  True,  True, False,  True,
+        True,  True,  True,  True, False,  True,  True, False,  True,
+        True,  True,  True,  True, False, False,  True,  True, False,
+        True, False,  True,  True, False]), 'state_dist': array([ 113.56056 ,  126.01837 ,  148.89082 ,   42.05787 ,   84.52782 ,
+        178.92738 , 2115.8477  ,  254.25372 ,   23.549639,  109.53074 ,
+         38.698444,  164.30438 ,  213.24945 ,  175.9652  ,   66.77571 ,
+        129.49084 ,  122.78322 ,  303.83206 ,   53.49327 ,  122.21585 ,
+         91.443726,   72.34862 ,  147.21019 ,  121.54842 ,   91.290276,
+       2243.9124  ,   38.42851 ,  158.43599 ,   63.583755,  116.39668 ,
+         70.20573 ,  169.89473 ,   77.3794  ,   63.05774 , 2547.1953  ,
+         86.48401 ,   79.865425,   84.00635 ,   39.999546,   71.16662 ,
+        171.9958  , 1397.3811  ,  139.3808  ,   30.44182 , 2058.9153  ,
+        178.87631 ,  180.28123 ,   76.67634 ,   58.827854,  561.09656 ],
+      dtype=float32)}
+[timing] perform_planning_s=204.138
+[timing] total_planning_main_s=208.716

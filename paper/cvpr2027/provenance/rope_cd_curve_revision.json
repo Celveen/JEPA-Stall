@@ -1,0 +1,104 @@
+{
+  "base_commit": "8f3261cbf5eaa5d07cc8894c3795ba9ab35a756c",
+  "new_experiments_run": false,
+  "changes": [
+    "Add a main-text Rope CD versus pushes curve for native DINO-WM and fixed-strength ECP with five warm-up pushes.",
+    "Use all 20 targets under seeds 99, 100 and 101; verify every observation against original NPZ archives.",
+    "Hold successful terminal CD at later budgets, retain measured fluctuations, and shade sample SD across seed means.",
+    "State the observed mean-CD milestone: below 0.7 at 12 pushes for ECP versus 14 for native.",
+    "Fit the new Figure 6 at the bottom of page 8 without changing the template or protected narrative."
+  ],
+  "curve_data": "provenance/rope_cd_curve_data.json",
+  "observed_cd_values_verified": 1559,
+  "all_existing_figures_tables_equations_and_captions_unchanged": true,
+  "abstract_introduction_conclusion_and_appendix_source_unchanged": true,
+  "text_edits": {
+    "experiments": [
+      "Across three seeds with the same three-push horizon, fixed-strength ECP lowers mean final CD from 0.6865 to 0.4793 (30.2\\%) and raises success from 55.0\\% to 71.7\\%. Mean pushes fall from 12.68 to 11.30, including unsuccessful runs (\\cref{tab:rope}). Strength and warm-up ablations appear in \\cref{sec:rope-details}.",
+      "Across three seeds, fixed-strength ECP lowers mean final CD from 0.6865 to 0.4793 (30.2\\%) and raises success from 55.0\\% to 71.7\\%. Mean pushes fall from 12.68 to 11.30, including unsuccessful runs (\\cref{tab:rope}). Mean CD falls below 0.7 after 12 pushes, versus 14 for native planning (\\cref{fig:rope-cd})."
+    ],
+    "added_figure": "\n\\begin{figure}[b]\n\\centering\n\\includegraphics[width=0.95\\columnwidth]{figures/fig_rope_cd_pushes.pdf}\n\\caption{\\textbf{Faster Rope error reduction.} DINO-WM with three pushes per plan; 20 targets under three seeds. Ours uses fixed-strength memory with five warm-up pushes. Mean Chamfer distance (CD), with $\\pm1$ SD across seed means; successful runs retain terminal CD.}\n\\label{fig:rope-cd}\n\\end{figure}\n"
+  },
+  "build": {
+    "engine": "pdflatex",
+    "abstract_words_whitespace": 231,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 12,
+    "combined_pages": 22,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": null
+  },
+  "crossrefs": {
+    "before": {
+      "total_reference_targets": 80,
+      "main_reference_targets": 31,
+      "main_to_appendix_targets": 16,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact",
+        "sec:rope-details"
+      ],
+      "missing_labels": []
+    },
+    "after": {
+      "total_reference_targets": 80,
+      "main_reference_targets": 31,
+      "main_to_appendix_targets": 15,
+      "main_to_appendix_labels": [
+        "sec:properties",
+        "sec:implementation",
+        "tab:dinowm-aug",
+        "tab:training",
+        "tab:maze-controls",
+        "tab:memory-strength",
+        "tab:action",
+        "tab:threshold-shape",
+        "tab:maze-controls",
+        "tab:maze-full",
+        "fig:push-distance",
+        "sec:behavior",
+        "tab:pusht-ecp",
+        "tab:extra-baselines",
+        "tab:lewm-contact"
+      ],
+      "missing_labels": []
+    },
+    "settings_parameter_table_references": 0,
+    "pdf_internal_links_checked": 226,
+    "invalid_pdf_internal_links": 0,
+    "named_destinations": 185,
+    "label_destinations_checked": 73,
+    "headline_and_trajectory_figures_unchanged": true,
+    "bibliography_unchanged": true
+  },
+  "endpoints": {
+    "native3": 0.6864581634387982,
+    "fixed3": 0.47926465513968547
+  },
+  "first_mean_cd_below_0_7": {
+    "native3": 14,
+    "fixed3": 12
+  },
+  "band_definition": "Sample SD (ddof=1) of three seed-level means; not a confidence interval.",
+  "stopped_run_handling": "Carry terminal observed CD forward at subsequent push budgets."
+}

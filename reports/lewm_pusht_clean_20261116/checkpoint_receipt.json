@@ -1,0 +1,10 @@
+{
+  "epoch": 3,
+  "step": 38277,
+  "strict_load": true,
+  "all_tensors_finite": true,
+  "checkpoint": "/data/zjc/JEPA-Stall/checkpoints/lewm_pusht_tonly_e3_4gpu_20261116/checkpoints/model_3.pth",
+  "checkpoint_sha256": "9e2b8afee10e46f3b7ae2bd5a9b67ebc28e86af0ccc0d0d293e2fd77471d2576",
+  "hydra_sha256": "10635ce01a5a84fc550a83b708a6ccf4dc4cfb0993c41836aa2e63b6ea8047eb",
+  "latest_tensors_match": true
+}

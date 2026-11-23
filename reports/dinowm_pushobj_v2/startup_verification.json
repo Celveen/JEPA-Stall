@@ -1,0 +1,44 @@
+{
+  "verified_utc": "2026-11-10T02:27:44.049936+00:00",
+  "pipeline_status": "evaluating",
+  "failures": [],
+  "worker_timings": [
+    {
+      "gpu": 1,
+      "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/ordinary_ecp/chunk_00_I",
+      "completed_replans": 18,
+      "median_cem_seconds": 6.271516039036214
+    },
+    {
+      "gpu": 3,
+      "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/augmented_native/chunk_00_I",
+      "completed_replans": 18,
+      "median_cem_seconds": 6.265572339296341
+    },
+    {
+      "gpu": 0,
+      "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/ordinary_native/chunk_00_I",
+      "completed_replans": 18,
+      "median_cem_seconds": 6.274793792515993
+    },
+    {
+      "gpu": 5,
+      "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/augmented_ecp/chunk_00_I",
+      "completed_replans": 18,
+      "median_cem_seconds": 6.265852362848818
+    },
+    {
+      "gpu": 6,
+      "job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/dinowm_pushobj_3epoch_v2_cem200x10_bf16/ordinary_native/chunk_05_L",
+      "completed_replans": 18,
+      "median_cem_seconds": 6.226168784312904
+    }
+  ],
+  "primary_eta_hours_estimate": [
+    16,
+    20
+  ],
+  "estimate_basis": "Initial live per-replan throughput, 1400 tasks x at most 30 replans across 5 GPUs; not completion guarantee.",
+  "fp32_confirmation_tasks": 14,
+  "fp32_confirmation_status": "running_fp32_checks"
+}

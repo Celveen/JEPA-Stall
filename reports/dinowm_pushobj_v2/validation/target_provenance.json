@@ -1,0 +1,15 @@
+{
+  "kind": "integration_only",
+  "samples": [
+    {
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_00_I.pkl",
+      "source_sha256": "713e89ed146994300ef5951798e5ed147bf134aac9457032b9c919fda2268ed7",
+      "index": 0
+    },
+    {
+      "source": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/targets/EVAL50/chunk_30_T.pkl",
+      "source_sha256": "8dcc71f3b05e08f29d63997f0a2afe8e959f9857a1c7d292bd8c909739e28e95",
+      "index": 0
+    }
+  ]
+}

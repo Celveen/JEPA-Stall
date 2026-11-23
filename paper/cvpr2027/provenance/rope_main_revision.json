@@ -1,0 +1,116 @@
+{
+  "updated_utc": "2026-11-16T14:53:25.220944+00:00",
+  "repository_commit": "6cd42f3ab8c8c76c5675d4bd992dccfcb7b97456",
+  "changes": [
+    "Table 1 groups GD/CEM and released/Ours variants contiguously, with no divider inside the method rows.",
+    "DDP-WM is removed from Table 1 because clean is unavailable; its complete six-shift record is retained in the appendix.",
+    "R3M and DINO CLS six-shift results are imported from SE-JEPA baselines after exact initial/goal state checks; clean remains unavailable.",
+    "Main Table 5 combines Maze and Rope with explicit metric directions.",
+    "Rope main comparison is native DINO-WM versus dynamic S, both predicting and executing three pushes, observing after every push; Ours uses five warm-up pushes.",
+    "Rope five-push native, fixed S and fixed S without additional warm-up are appendix ablations.",
+    "Abstract, introduction, experiment setup/results and conclusion include Rope; no 3/3 or 5/5 protocol shorthand is used.",
+    "Existing Rope images remain fixed-S visualization runs, identified in the caption and appendix; all figure assets are unchanged.",
+    "The appendix distance plot precedes the wide galleries to avoid an isolated mostly empty page; cross-references update automatically."
+  ],
+  "new_experiments_run": false,
+  "rope_sources": {
+    "rope_formal_summary.json": {
+      "repository_path": "reports/rope_formal20_native3/summary.json",
+      "sha256": "659efb82fff6874e27de242cb449e95440a88fcb673f242862c0870978b3b92e"
+    },
+    "rope_formal_per_sample.csv": {
+      "repository_path": "reports/rope_formal20_native3/per_sample.csv",
+      "sha256": "499fd5071a088688106e693c09d45649b79b90d123e79d5377c7b273f1dc015c"
+    },
+    "rope_formal_protocol_audit.json": {
+      "repository_path": "reports/rope_formal20_native3/protocol_audit.json",
+      "sha256": "a636019a264eac89b6b899ef34e6b2c06eaa00e29fc467db118037774ce985a2"
+    },
+    "rope_formal_action_comparisons.csv": {
+      "repository_path": "reports/rope_formal20_native3/action_comparisons.csv",
+      "sha256": "8451c47108d1ac4a29023ab7ecc9e8ae6390ebe0e7d8323859116f2c15e41d16"
+    }
+  },
+  "rope_main": {
+    "tasks": 20,
+    "prediction_pushes": 3,
+    "executed_pushes_per_plan": 3,
+    "observation_and_success_check": "after every push, terminate early on success",
+    "maximum_pushes": 20,
+    "success_cd_threshold": 0.3,
+    "ours": "dynamic S, strength 2*w_t, five-push warm-up",
+    "native": {
+      "mean_cd": 0.7546801521887649,
+      "successes": 10,
+      "success_percent": 50
+    },
+    "ours_results": {
+      "mean_cd": 0.5151827050870776,
+      "successes": 12,
+      "success_percent": 60
+    },
+    "cd_reduction_percent": 31.7,
+    "numerical_execution_caveat": "Independent physics executions may differ before the first memory intervention; aggregate matched-protocol results are reported."
+  },
+  "additional_baselines": {
+    "audit": "provenance/additional_baseline_audit.json",
+    "source_repository": "https://github.com/Celveen/SE-JEPA",
+    "source_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+    "missing_clean": [
+      "R3M",
+      "DINO CLS",
+      "DDP-WM"
+    ],
+    "rows": {
+      "r3m": {
+        "success_percent": [
+          30,
+          16,
+          2,
+          32,
+          32,
+          18
+        ],
+        "mean_percent": 21.666666666666668,
+        "paired_initial_and_goal_states_match": true
+      },
+      "dino_cls": {
+        "success_percent": [
+          30,
+          16,
+          56,
+          42,
+          22,
+          42
+        ],
+        "mean_percent": 34.666666666666664,
+        "paired_initial_and_goal_states_match": true
+      }
+    },
+    "placement": "appendix six-shift table; no missing clean cell added to Table 1"
+  },
+  "all_figure_assets_unchanged": true,
+  "build": {
+    "abstract_words_whitespace": 210,
+    "abstract_page": 1,
+    "figure_one_page": 1,
+    "headline_on_first_page_right_column": true,
+    "trajectory_figure_page": 2,
+    "body_pages": 8,
+    "main_with_statement_and_references_pages": 10,
+    "appendix_pages": 11,
+    "combined_pages": 21,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "build_runs_experiments": false,
+    "known_upstream_warning": "lineno.sty has an invalid UTF-8 byte in a source comment; rendered output is unaffected."
+  },
+  "qa": {
+    "fonts_checked": 40,
+    "all_fonts_embedded": true,
+    "type3_fonts": false,
+    "references": 47,
+    "pages": 21
+  },
+  "visual_review": "Rendered all 21 pages; inspected Table 1, combined Table 5, extra baseline table, Rope ablation and final appendix pages. No overlaps or clipped text."
+}

@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "epoch": 3,
+  "n": 1,
+  "successes": 1,
+  "ecp": false,
+  "wall_seconds": 23.194768587127328,
+  "frozen_weights_unchanged": true,
+  "model_sha256": "46d741495bcd4184bf1adf70d4f1d70f39607ea8d986c56ebfabe6197e364152",
+  "checkpoint_sha256": "35ecac035f6494068b2124a40383483eb5b241860d04b1f5b1d7144ba0796dad",
+  "targets_sha256": "1bbe330be183c24141ff53f1a8c0551d1041bc347e5c3f987d10d2d9a917a581",
+  "is_smoke": false,
+  "is_validation": true,
+  "precision": "fp32",
+  "memory_limit_gib": 8.0,
+  "candidate_batch": 64,
+  "cem_candidates": 200,
+  "cem_iterations": 10,
+  "cem_elites": 30,
+  "max_mpc_replans": 6,
+  "executed_physical_steps_per_replan": 25,
+  "executed_model_steps_per_replan": 5,
+  "max_environment_controls": 150,
+  "protocol_id": "dinowm_pushobj_cem200x10_mpc6x25_v1",
+  "protocol_sha256": "054170296d39ff40e4a528cb39b3ea0cb3d2d86c34efdf934120e4fdceced7c4",
+  "objective_mode": "last",
+  "source_sha256": {
+    "evaluate.py": "cfc892501825f55cb54217b6a7bcfeaa0e3f93ace408a61380feb1bf4aa534cb",
+    "cem_memory.py": "3cb8e27dbd55a4c4ed94bfca1c68cae3149899f481f85a9db84f9bfe52ef3cc5",
+    "physical_stagnation.py": "919cdc9f67b9129097fc308c118773280035cc1f142e5fe2f051c0f2c786a63c"
+  }
+}

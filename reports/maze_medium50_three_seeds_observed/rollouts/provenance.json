@@ -1,0 +1,226 @@
+{
+  "adajepa_seed100_sample29": {
+    "seed": 100,
+    "sample_idx": 28,
+    "sample_number": 29,
+    "map_idx": 3,
+    "bfs_distance": 8,
+    "gamma_hi": 0.3,
+    "gamma_lo": 0.1,
+    "controls_per_step": 5,
+    "rgb_source": {
+      "adajepa": {
+        "original_recording": "eval_outputs/maze_medium50_s100_g030_observed/adajepa/episodes/sample_028.npz",
+        "published_recording": "raw/adajepa_seed100_sample29/native.npz",
+        "sha256": "cab5ca156bc283e8a85545e7918e201868a05aac710692a90b79440553040647"
+      },
+      "adajepa_s": {
+        "original_recording": "eval_outputs/maze_medium50_s100_g030_observed/adajepa_s/episodes/sample_028.npz",
+        "published_recording": "raw/adajepa_seed100_sample29/plus_s.npz",
+        "sha256": "92632dbccac42f42bb0232b916a65fe1323f97b8d00b1eb11dd163ecfb1cd49a"
+      }
+    },
+    "result": {
+      "adajepa": {
+        "success": false,
+        "controls": 150,
+        "steps": 30.0,
+        "distance": 2.29825758934021
+      },
+      "adajepa_s": {
+        "success": true,
+        "controls": 97,
+        "steps": 19.4,
+        "distance": 0.4601706266403198
+      }
+    },
+    "plotted_frames": {
+      "adajepa": [
+        0,
+        35,
+        65,
+        97,
+        150
+      ],
+      "adajepa_s": [
+        0,
+        35,
+        65,
+        97
+      ]
+    },
+    "first_different_physical_control": 36,
+    "common_prefix_images_verified_through": 35,
+    "trace_source": "reports/maze_medium50_s100_g030_observed/per_control.jsonl.gz",
+    "frame_archive": "raw/adajepa_seed100_sample29/frames.tar.gz",
+    "trajectory_csv": "raw/adajepa_seed100_sample29/trajectory.csv"
+  },
+  "adajepa_seed101_sample25": {
+    "seed": 101,
+    "sample_idx": 24,
+    "sample_number": 25,
+    "map_idx": 4,
+    "bfs_distance": 8,
+    "gamma_hi": 0.3,
+    "gamma_lo": 0.1,
+    "controls_per_step": 5,
+    "rgb_source": {
+      "adajepa": {
+        "original_recording": "eval_outputs/maze_medium50_s101_g030_observed/adajepa/episodes/sample_024.npz",
+        "published_recording": "raw/adajepa_seed101_sample25/native.npz",
+        "sha256": "8f64d02db3d80b0c9ec1d5cf9132b2057707456ce5cfb7d572daf7c8a294b9f0"
+      },
+      "adajepa_s": {
+        "original_recording": "eval_outputs/maze_medium50_s101_g030_observed/adajepa_s/episodes/sample_024.npz",
+        "published_recording": "raw/adajepa_seed101_sample25/plus_s.npz",
+        "sha256": "bc6e3cc20155666f3484429a607da1697e1f5bee2d272289b3c63cc31a7f699f"
+      }
+    },
+    "result": {
+      "adajepa": {
+        "success": false,
+        "controls": 150,
+        "steps": 30.0,
+        "distance": 2.528900623321533
+      },
+      "adajepa_s": {
+        "success": true,
+        "controls": 111,
+        "steps": 22.2,
+        "distance": 0.46040108799934387
+      }
+    },
+    "plotted_frames": {
+      "adajepa": [
+        0,
+        30,
+        80,
+        111,
+        150
+      ],
+      "adajepa_s": [
+        0,
+        30,
+        80,
+        111
+      ]
+    },
+    "first_different_physical_control": 31,
+    "common_prefix_images_verified_through": 30,
+    "trace_source": "reports/maze_medium50_s101_g030_observed/per_control.jsonl.gz",
+    "frame_archive": "raw/adajepa_seed101_sample25/frames.tar.gz",
+    "trajectory_csv": "raw/adajepa_seed101_sample25/trajectory.csv"
+  },
+  "adajepa_seed102_sample13": {
+    "seed": 102,
+    "sample_idx": 12,
+    "sample_number": 13,
+    "map_idx": 2,
+    "bfs_distance": 9,
+    "gamma_hi": 0.3,
+    "gamma_lo": 0.1,
+    "controls_per_step": 5,
+    "rgb_source": {
+      "adajepa": {
+        "original_recording": "eval_outputs/maze_medium50_s102_g030_observed/adajepa/episodes/sample_012.npz",
+        "published_recording": "raw/adajepa_seed102_sample13/native.npz",
+        "sha256": "1d8d91b954991204054e89e06939035fededea14713d00c21a71b4ec5340fde0"
+      },
+      "adajepa_s": {
+        "original_recording": "eval_outputs/maze_medium50_s102_g030_observed/adajepa_s/episodes/sample_012.npz",
+        "published_recording": "raw/adajepa_seed102_sample13/plus_s.npz",
+        "sha256": "bbd7c39f43bd6e1fc43f5b74da00f8f6d783a0c3fcced5c43519143c4cdf06df"
+      }
+    },
+    "result": {
+      "adajepa": {
+        "success": false,
+        "controls": 150,
+        "steps": 30.0,
+        "distance": 4.7098588943481445
+      },
+      "adajepa_s": {
+        "success": true,
+        "controls": 90,
+        "steps": 18.0,
+        "distance": 0.17436064779758453
+      }
+    },
+    "plotted_frames": {
+      "adajepa": [
+        0,
+        30,
+        70,
+        90,
+        150
+      ],
+      "adajepa_s": [
+        0,
+        30,
+        70,
+        90
+      ]
+    },
+    "first_different_physical_control": 31,
+    "common_prefix_images_verified_through": 30,
+    "trace_source": "reports/maze_medium50_s102_g030_observed/per_control.jsonl.gz",
+    "frame_archive": "raw/adajepa_seed102_sample13/frames.tar.gz",
+    "trajectory_csv": "raw/adajepa_seed102_sample13/trajectory.csv"
+  },
+  "frozen_seed101_sample31": {
+    "seed": 101,
+    "sample_idx": 30,
+    "sample_number": 31,
+    "map_idx": 0,
+    "bfs_distance": 9,
+    "gamma_hi": 0.3,
+    "gamma_lo": 0.1,
+    "controls_per_step": 5,
+    "rgb_source": {
+      "frozen": {
+        "original_recording": "eval_outputs/maze_medium50_s101_g030_observed/frozen/episodes/sample_030.npz",
+        "published_recording": "raw/frozen_seed101_sample31/native.npz",
+        "sha256": "2bbfc7390e1cfd7114527aab14817feefdf107a6f633b6683494c86948b8ebf5"
+      },
+      "frozen_s": {
+        "original_recording": "eval_outputs/maze_medium50_s101_g030_observed/frozen_s/episodes/sample_030.npz",
+        "published_recording": "raw/frozen_seed101_sample31/plus_s.npz",
+        "sha256": "3832bc37a8b6b210d98ff0287b92b45382cc6bebda75125ba41446c840f7a443"
+      }
+    },
+    "result": {
+      "frozen": {
+        "success": false,
+        "controls": 150,
+        "steps": 30.0,
+        "distance": 2.78682541847229
+      },
+      "frozen_s": {
+        "success": true,
+        "controls": 43,
+        "steps": 8.6,
+        "distance": 0.4839414954185486
+      }
+    },
+    "plotted_frames": {
+      "frozen": [
+        0,
+        35,
+        40,
+        43,
+        150
+      ],
+      "frozen_s": [
+        0,
+        35,
+        40,
+        43
+      ]
+    },
+    "first_different_physical_control": 36,
+    "common_prefix_images_verified_through": 35,
+    "trace_source": "reports/maze_medium50_s101_g030_observed/per_control.jsonl.gz",
+    "frame_archive": "raw/frozen_seed101_sample31/frames.tar.gz",
+    "trajectory_csv": "raw/frozen_seed101_sample31/trajectory.csv"
+  }
+}

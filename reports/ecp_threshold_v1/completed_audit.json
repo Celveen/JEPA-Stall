@@ -1,0 +1,2467 @@
+{
+  "status": "passed",
+  "audited_utc": "2026-11-11T09:20:52.837195+00:00",
+  "chunks": 140,
+  "task_runs": 1400,
+  "raw_target_and_pretrigger_pairs_verified": 1050,
+  "results": {
+    "adajepa_aug_g030": {
+      "n": 350,
+      "successes": 271,
+      "success_rate": 0.7742857142857142,
+      "triggered": 101,
+      "trigger_rate": 0.2885714285714286,
+      "first_trigger_median": 12.0,
+      "first_trigger_control_median": 60.0,
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 28
+        },
+        "L": {
+          "n": 50,
+          "successes": 46
+        },
+        "square": {
+          "n": 50,
+          "successes": 26
+        },
+        "Z": {
+          "n": 50,
+          "successes": 48
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 35
+        },
+        "plus": {
+          "n": 50,
+          "successes": 43
+        },
+        "T": {
+          "n": 50,
+          "successes": 45
+        }
+      },
+      "actions_changed_vs_native": 101,
+      "paired_rescues": [
+        "chunk_02_I:2",
+        "chunk_04_I:4",
+        "chunk_06_L:0",
+        "chunk_06_L:1",
+        "chunk_11_square:2",
+        "chunk_15_Z:7",
+        "chunk_16_Z:4",
+        "chunk_27_plus:3",
+        "chunk_31_T:3",
+        "chunk_32_T:6",
+        "chunk_34_T:7"
+      ],
+      "paired_regressions": [
+        "chunk_19_Z:0",
+        "chunk_20_small_tee:1"
+      ],
+      "boosted_plans": 831,
+      "median_selected_plan_penalty_to_task_cost": 0.004700185158809287
+    },
+    "dinowm_aug_g030": {
+      "n": 350,
+      "successes": 171,
+      "success_rate": 0.48857142857142855,
+      "triggered": 28,
+      "trigger_rate": 0.08,
+      "first_trigger_median": 3.0,
+      "first_trigger_control_median": 75.0,
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 8
+        },
+        "L": {
+          "n": 50,
+          "successes": 36
+        },
+        "square": {
+          "n": 50,
+          "successes": 7
+        },
+        "Z": {
+          "n": 50,
+          "successes": 23
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 28
+        },
+        "plus": {
+          "n": 50,
+          "successes": 33
+        },
+        "T": {
+          "n": 50,
+          "successes": 36
+        }
+      },
+      "actions_changed_vs_native": 28,
+      "paired_rescues": [],
+      "paired_regressions": [],
+      "boosted_plans": 43,
+      "median_selected_plan_penalty_to_task_cost": 0.005139473508562082
+    },
+    "dinowm_aug_dense_g030": {
+      "n": 350,
+      "successes": 72,
+      "success_rate": 0.2057142857142857,
+      "triggered": 181,
+      "trigger_rate": 0.5171428571428571,
+      "first_trigger_median": 16.0,
+      "first_trigger_control_median": 80.0,
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 4
+        },
+        "L": {
+          "n": 50,
+          "successes": 9
+        },
+        "square": {
+          "n": 50,
+          "successes": 4
+        },
+        "Z": {
+          "n": 50,
+          "successes": 10
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 10
+        },
+        "plus": {
+          "n": 50,
+          "successes": 21
+        },
+        "T": {
+          "n": 50,
+          "successes": 14
+        }
+      },
+      "actions_changed_vs_native": 181,
+      "paired_rescues": [
+        "chunk_23_small_tee:1"
+      ],
+      "paired_regressions": [
+        "chunk_21_small_tee:3"
+      ],
+      "boosted_plans": 909,
+      "median_selected_plan_penalty_to_task_cost": 0.00013186724012010062
+    },
+    "dinowm_aug_dense_native": {
+      "n": 350,
+      "successes": 72,
+      "success_rate": 0.2057142857142857,
+      "triggered": 181,
+      "trigger_rate": 0.5171428571428571,
+      "first_trigger_median": 16.0,
+      "first_trigger_control_median": 80.0,
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 4
+        },
+        "L": {
+          "n": 50,
+          "successes": 9
+        },
+        "square": {
+          "n": 50,
+          "successes": 4
+        },
+        "Z": {
+          "n": 50,
+          "successes": 10
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 10
+        },
+        "plus": {
+          "n": 50,
+          "successes": 21
+        },
+        "T": {
+          "n": 50,
+          "successes": 14
+        }
+      },
+      "actions_changed_vs_native": null,
+      "paired_rescues": null,
+      "paired_regressions": null,
+      "boosted_plans": 0,
+      "median_selected_plan_penalty_to_task_cost": null
+    }
+  },
+  "adajepa_threshold_comparison": {
+    "native_successes": 262,
+    "gamma_015_successes": 269,
+    "gamma_030_successes": 271,
+    "gamma_015_triggered": 90,
+    "gamma_030_triggered": 101,
+    "gamma_015_first_trigger_median": 14.0,
+    "gamma_030_first_trigger_median": 12.0,
+    "earlier": 65,
+    "later": 0,
+    "same": 25,
+    "rescues_vs_old_ecp": [
+      "chunk_06_L:0",
+      "chunk_11_square:2",
+      "chunk_31_T:3"
+    ],
+    "regressions_vs_old_ecp": [
+      "chunk_20_small_tee:1"
+    ]
+  },
+  "source_hashes": [
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_00_I/complete.json",
+      "sha256": "c8441529fed153df6e7e54985fad7c037fce651f3d9a6912dcf1e8bccdffaf48"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_00_I/final_eval_results.npz",
+      "sha256": "2946bc064336a1175d8854f4206cd574ec1899427c2cd96889e08b0641b9fbe9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_00_I/stag_episodes.jsonl",
+      "sha256": "e72de802561f227d33029b50256745445928db77e98357d5d98456e63884a3f7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_00_I/per_iter_logs.json",
+      "sha256": "e10e77f248d2273f9013e49c23c0116c1947ed835a3d5a6edb1337231e3772ae"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_01_I/complete.json",
+      "sha256": "b5a8030c707a21c181761473d18a0ed0d1c246dbfbb8507cae177da0d0b50e3a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_01_I/final_eval_results.npz",
+      "sha256": "dc05b61a4c7435bd4a18ce4a7b61bb56856df2c9d45a9683a0d62793b041234f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_01_I/stag_episodes.jsonl",
+      "sha256": "f793da0b40bc640d2d63b62f0ac851973cbe2d9173d39744a34712dc168bcb41"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_01_I/per_iter_logs.json",
+      "sha256": "b66e18e1ab7e8e3dc121237966af210f6facf4e3dff5eb994523a413b93d499a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_02_I/complete.json",
+      "sha256": "958b6186784e45f94ff41f9d5e5c00ab8978a136b01ad4b13a122543209a67b7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_02_I/final_eval_results.npz",
+      "sha256": "db338bf8cb112e9a2c936b7f12d38f1aa715f232e3cf2a186b4cf6f7af27e5b9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_02_I/stag_episodes.jsonl",
+      "sha256": "bb9a1ad89726100300eef0da2e32803e8f0c5435be49bfa1f7c77bede2753325"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_02_I/per_iter_logs.json",
+      "sha256": "3a932bf079b4a23679229e54e80e91de5b06f3869c401fdbfd5ce0a022fa24f0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_03_I/complete.json",
+      "sha256": "caa1945d22b99e286f99c000cc68be93ef23d01e75914a27a6dea0a3fa41a010"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_03_I/final_eval_results.npz",
+      "sha256": "c7067214201980ea2bef641dd0aa44cb7f998a7257c9971267389d8a7a6616dd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_03_I/stag_episodes.jsonl",
+      "sha256": "8fa50335988e92b02de828c1d3d2f5ff5fd192505521b49b50871ed6e7132e9e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_03_I/per_iter_logs.json",
+      "sha256": "dc9d55d57b1b53069f9b579f536986171890ac3e8de8cf8da6e0bf207708bee1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_04_I/complete.json",
+      "sha256": "3d49ffdfdd8fabea8f6cd0e0665d3e041e3317c643606025fcbc7588e923b7d1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_04_I/final_eval_results.npz",
+      "sha256": "5a7e585e16bc6b4c30f9035ddbc33d109944b991de6267dad303ab4488d4a204"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_04_I/stag_episodes.jsonl",
+      "sha256": "0ff4d9f9a44add69a5605e5a95459e212475186fcc4742454c3beab55200a0f0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_04_I/per_iter_logs.json",
+      "sha256": "f790ecaa9e9532b10f4519f76bf4d0bb588c3b2563a2fd44c28bee6552e4809a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_05_L/complete.json",
+      "sha256": "01e61536b17037a18a6a235d99c8e22fc14d70e50e4686b74fa4294430c1025d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_05_L/final_eval_results.npz",
+      "sha256": "d70e85779ca3f1aee29880b877f858fe3e63c1b59761c8c6078910c1d55a0f6f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_05_L/stag_episodes.jsonl",
+      "sha256": "f9c8314785c0f7a09520643b8d8921e457a78a9d9130ed32a09026073da72665"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_05_L/per_iter_logs.json",
+      "sha256": "09db8ece0856a96657a0f31a0eafbc6338348ab4845b4d955ad27ef7663c49a5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_06_L/complete.json",
+      "sha256": "4357756036152e60d95395546df82a0dfa43b947947ac543e4e2bd8e5961b598"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_06_L/final_eval_results.npz",
+      "sha256": "f06999ce71d7fa27996a6e922b6e9383aa8f45ffdb5414c9484b77a1cd7ad001"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_06_L/stag_episodes.jsonl",
+      "sha256": "35ad41cc46690510f5f301124a5169b6db2d24a4182e04c9b27fcfe1fdc540c7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_06_L/per_iter_logs.json",
+      "sha256": "75b04c14614de04e0853266477c47e53e497d8aff525529430aab3d4b34d2c32"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_07_L/complete.json",
+      "sha256": "436e7801de229256dceaf85466bd797f34fd8b1ea18961fe14095464e6bd82f2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_07_L/final_eval_results.npz",
+      "sha256": "ad32fb5d1ffb4de4902d3e10a57001436d6143fbd7f98eb8759ab797eed9a186"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_07_L/stag_episodes.jsonl",
+      "sha256": "d09caca1c0f922e8ae4d215ef987a21bc3a06236ec3a156a1be16f25a6cfeb2b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_07_L/per_iter_logs.json",
+      "sha256": "7bd76bba03ae56fdf92bf5a48c04a2d4e31c23b932c1a6784048c3607f1d0248"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_08_L/complete.json",
+      "sha256": "eaef330f4c9267bd2fb14dbdbaaf08c130179cd5fb788a4b49c3347948505c27"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_08_L/final_eval_results.npz",
+      "sha256": "5042a95d0a85707831108ba15379c04a5e37a3dfc45f39caa90b24dcc678cc3b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_08_L/stag_episodes.jsonl",
+      "sha256": "9cbbc8e11fb84e1a0fd20e900420bda540bcf8d1e551c42b4428e7552cdacbb7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_08_L/per_iter_logs.json",
+      "sha256": "f9966f8179606b806e3c13a5347bfaccfa4d04adccfd211c1116597f0abe5804"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_09_L/complete.json",
+      "sha256": "1e89a215061a1a7b98a10c7ad57aa17143a1a55916d58e24daccf9767229ae22"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_09_L/final_eval_results.npz",
+      "sha256": "a6e6c77a1d8da3feaafc1abe02f4a501f4e8083807f5c6b3c437b922ac5795e7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_09_L/stag_episodes.jsonl",
+      "sha256": "7d9abab18441053166dad704f00cd98475098695b8c42927a4aebf8ab8f9c73a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_09_L/per_iter_logs.json",
+      "sha256": "fc0266e57225e105635603086cce96b521321920098be9c2de7fc3e996d6aeb6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_10_square/complete.json",
+      "sha256": "9030bb1c1f69529bcf26ad5f5922a12e9fd9b0c7b1d6e783d260eb10c3cf46f3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_10_square/final_eval_results.npz",
+      "sha256": "f23edc5805c27f580c2419ce30d15ebf37c6b5d1ff7c7151ff1bde8f78997947"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_10_square/stag_episodes.jsonl",
+      "sha256": "98ca3b81869520329fcc03948d87511b1e52207e4147845161747094a8506669"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_10_square/per_iter_logs.json",
+      "sha256": "5e45f0d1c1ce421d1b002aaa6d08132f4d4ef8a5f3caddb838c128d821d2eacd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_11_square/complete.json",
+      "sha256": "ef5b408d7c1e5421ddaa4fec6e9b460af142c9fabc5f950ba4dc6452040fb3f6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_11_square/final_eval_results.npz",
+      "sha256": "6dc128cde56444f066a3457e8eb13b4509b70280af2d48afe9ab7ffc73e9e0e1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_11_square/stag_episodes.jsonl",
+      "sha256": "16b17a6628b6b27c78c4d07e4ec9eed8f298f691c35d53ba61cd9b0c1201e5da"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_11_square/per_iter_logs.json",
+      "sha256": "43823a0fd994083546bedd5dd397db87feaf8ee6f1d5032ea23a25f418f98dee"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_12_square/complete.json",
+      "sha256": "b7943736c540226292fcd6d4863dc9652f5614817e4311fc4b0892613307f127"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_12_square/final_eval_results.npz",
+      "sha256": "707af3dac84f2873917b5bc73ac40bb0c920b835d7c71791cb6f0e7dbda0c7a2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_12_square/stag_episodes.jsonl",
+      "sha256": "037b98e84c7ae75b67f8f72692186eefedaf43c9de0b063678f95843f97415ad"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_12_square/per_iter_logs.json",
+      "sha256": "27aef082eb9570d6498a0188ffe1ddf4511bff6e33d1376c812e73bb46282aea"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_13_square/complete.json",
+      "sha256": "6d077785e61d8b97c46f9e42397654e23755b1a9613b1d0be39dcb68ef1cacbb"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_13_square/final_eval_results.npz",
+      "sha256": "d7f67ec3dbce8dbcb5ec8931bcdeb780b1463f5a6e9d027c6279edff7cddd4a6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_13_square/stag_episodes.jsonl",
+      "sha256": "c5e6d110b65e90229fc756175b9f458ba844f8df4a8bad59533f339572b72eb1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_13_square/per_iter_logs.json",
+      "sha256": "11083986da74c912ac9eeeebd190d928d32d6931305ebe8ae24eef7e556abed4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_14_square/complete.json",
+      "sha256": "b8e2a6179fb66783c666aeb9151301d044743b2dbcb403fadbac2a18b3b05e14"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_14_square/final_eval_results.npz",
+      "sha256": "014ef95e6eb3d9c67deeb6a9b2708af7ceedadbb3f791a4de7c0e48f7e2783f9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_14_square/stag_episodes.jsonl",
+      "sha256": "cb8a93befb034b97f49ee945392b652325d6b1688c88f3eb434a6481c3a45804"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_14_square/per_iter_logs.json",
+      "sha256": "87ff6f4b88f6c38cb8f5c473878bb9ac084219da642a1dbfe6ae4cf46b29febd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_15_Z/complete.json",
+      "sha256": "343752ec1b299e10a302761d636309d6201654618535cd2cc0f2978623bb0ed6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_15_Z/final_eval_results.npz",
+      "sha256": "cd143ceff7a09530b02ffcf52a00f1da467cc003332689e02a2234a7da417c42"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_15_Z/stag_episodes.jsonl",
+      "sha256": "f347a7482bcac59bf8b8410cc5cef3b4b113b6dfd71fe88dbb94be7dbb7fa028"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_15_Z/per_iter_logs.json",
+      "sha256": "4b03f133083a3593f1a21df688f1254a20329dbaaddb9e4e313f5d9a25170870"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_16_Z/complete.json",
+      "sha256": "0d935dab51cd8b98aa4febff4a6c83c8ab7f6271f46766b68b68a0dd6fd2ac0e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_16_Z/final_eval_results.npz",
+      "sha256": "a78aec97e6ce6c7b92f1c8770094cd91c5b2aed4b09cde2df47b93587e52cf6e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_16_Z/stag_episodes.jsonl",
+      "sha256": "523b4d24e0f644f639eb61f7a8da2ac53cdd83d8881db248e382773b9556d1b0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_16_Z/per_iter_logs.json",
+      "sha256": "276a840a60d89974d70526dfab386508a1189f0d1f4ec9c6029a1bc38e9c3e34"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_17_Z/complete.json",
+      "sha256": "18c356c08a57df36a44289ed8ba956ddf4dcc323c1fb619eb8aad5a45c0fc068"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_17_Z/final_eval_results.npz",
+      "sha256": "282cf63d1bd7fa3fcb1911ad6b1e2614b1de62e0441f53dfe88639c6bce35998"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_17_Z/stag_episodes.jsonl",
+      "sha256": "c027c7f311281254213ab8bac3b8980a71644fb870cd52826d06f9059e8c274c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_17_Z/per_iter_logs.json",
+      "sha256": "cbcaeee96062a67f19bd13dfa66bd96f45b7d2011386041a516e5eae80bc791e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_18_Z/complete.json",
+      "sha256": "da7ef58c0f2c9e57f4092c504064de38cb75bb283339ac8c5e28aa3e30cd73a1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_18_Z/final_eval_results.npz",
+      "sha256": "12d1673c41c1c1a15afe9e849f91c04b76730523df0fb5be951325bf4b23c560"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_18_Z/stag_episodes.jsonl",
+      "sha256": "cd3cf36574dcdc2ad4172a0ecbc6ee0f5ebe121e8a39d6c964bae7c086491a23"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_18_Z/per_iter_logs.json",
+      "sha256": "195fd4887cf6fe4edf977927a7e71a6be63e6f5a3c0bc5bb579814ad2ba1a4dc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_19_Z/complete.json",
+      "sha256": "67289279038c41d2e0de627d2652379cb352c4335ea5385657e416200c5aff87"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_19_Z/final_eval_results.npz",
+      "sha256": "28eca278993918923ca39697d66ceff8a8bd52d38f88f8634d9420d72326ab6d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_19_Z/stag_episodes.jsonl",
+      "sha256": "ea86d26b355c9d5774cd23a82c74ce83ea3634af4d96a5362fbacf04f909ed4c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_19_Z/per_iter_logs.json",
+      "sha256": "b3ccd0bd6c813bf499e1b40a4d7820bb694562409beb6f652b1375c46329092f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_20_small_tee/complete.json",
+      "sha256": "94362596dee726eb83d0a9b3f24d9e886d5d5ed6884134c9f7d36588fd60c4dc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_20_small_tee/final_eval_results.npz",
+      "sha256": "b8b0ce6831470397bcf1e0e6bd9169e9a35f52e973c76dc4f69e959543179fca"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_20_small_tee/stag_episodes.jsonl",
+      "sha256": "ed5054482abfe565d337f68277691b27acb5d6b86bcdd3810fe88cfd2653c228"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_20_small_tee/per_iter_logs.json",
+      "sha256": "464f39dcd47eb4ea0d7915cd12118a432ee719aa0299ac8aae7a39d9c0775467"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_21_small_tee/complete.json",
+      "sha256": "db00078d7e4c004f29237d3047c3faa09de4b09420f037276d731c8c98f473b0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_21_small_tee/final_eval_results.npz",
+      "sha256": "a16269261b5867954d44e9b0030a195c5e5fce13efe7b8a10e2859c194763655"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_21_small_tee/stag_episodes.jsonl",
+      "sha256": "8feff45bba877cb3ee635945e02b586952890fd3346e1dc28386547f79a6754c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_21_small_tee/per_iter_logs.json",
+      "sha256": "7faa418975b6330aeaf413b3984f2740ce31cc3713ea333dfde6ecac5af9186b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_22_small_tee/complete.json",
+      "sha256": "ad51c8810bfa8d08838216f546d12537effa45dd9383782d0af9991adf4de367"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_22_small_tee/final_eval_results.npz",
+      "sha256": "b7c3337d848bd298baac3e8637e868b90104423b064d699273d545029462d8ec"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_22_small_tee/stag_episodes.jsonl",
+      "sha256": "cb62a2a20cc9389ae3389a06a5ce81aa8d32387673febd3e7cfed503461f504e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_22_small_tee/per_iter_logs.json",
+      "sha256": "ade327b45f6d99e99fb034a94033e17fb79f87cb9f7e102ff854d33c8c39381a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_23_small_tee/complete.json",
+      "sha256": "1bd7ecad434b2b1f4f1e6dbad7884260100fca9dec43bedd80d8ec836e5ab254"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_23_small_tee/final_eval_results.npz",
+      "sha256": "cde0dfe020d52e2ec6dca259727ec6d3c2a60a6312941db2361b7f408831898a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_23_small_tee/stag_episodes.jsonl",
+      "sha256": "d2641e2b6f2fe6cbb6add0e505851506401e45b073d12ffd7dd9e4096974d9ab"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_23_small_tee/per_iter_logs.json",
+      "sha256": "1ce1cb290613c0d2eea80ea191d4d00d8634c02238777292cc41b8462a7fab95"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_24_small_tee/complete.json",
+      "sha256": "9ce90ac5cb1f32f14912981a2bc5ebf4afe0272e3f2e61ec2cb58d6a368d8dd4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_24_small_tee/final_eval_results.npz",
+      "sha256": "6fdb7535180748bdfa0fb0d570ef2c56d3ae1e1898f950c5fcfb787727f19b7c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_24_small_tee/stag_episodes.jsonl",
+      "sha256": "ce4f24469608ea2c17ea3a8d402d63d2724ddbdb56b9f2654d5bd6d0f6f8d216"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_24_small_tee/per_iter_logs.json",
+      "sha256": "3da2267c95a4d454c63e85f71ad08a0fe9aae572f923a55550ee73cbe5c191a9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_25_plus/complete.json",
+      "sha256": "0807b4efd0025ba3b4ad50dea94b2f52809972960c7afe53fc39de4635b7b8bd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_25_plus/final_eval_results.npz",
+      "sha256": "e050ec7bfa1b981f499e4133f8e987a53b15895443631bfac700655d0a6f75da"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_25_plus/stag_episodes.jsonl",
+      "sha256": "c1586f58bf67d470261014eb7fd079d7ac5ed2d1b2c78174dcc0c7d1837a4094"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_25_plus/per_iter_logs.json",
+      "sha256": "1defe80a57f1274dc09b67abab0c7404b3534212398ace19c538626c90816832"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_26_plus/complete.json",
+      "sha256": "450d1a1f959b95b508059a5ea2a1adc5a61c864dd845b253e85c54035d142805"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_26_plus/final_eval_results.npz",
+      "sha256": "2307201efd5d632bb8fc7505db6f1761694b9bde433859584bdc89037654420a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_26_plus/stag_episodes.jsonl",
+      "sha256": "99802cc3cd17e91aff2f65ceb487b3b948abb9abdca9da8c526e8a1997070e55"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_26_plus/per_iter_logs.json",
+      "sha256": "8c0bb261bf0bdc3ee282923e31ef9a65c61410efb4c8f7dcd75484d63ca007ec"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_27_plus/complete.json",
+      "sha256": "a7bb08ef1fb2546a9a0077ae8994f5c53690bb883d8679d1094f9d860fe0f334"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_27_plus/final_eval_results.npz",
+      "sha256": "1f5459b1db51759ea5da6ab070814bf0c5960d4a660bedffe1dc0294ab07c120"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_27_plus/stag_episodes.jsonl",
+      "sha256": "7ef1053f8dda7131d797ca9e8d504a701168fa12e9e6df58a1eab8fe72ee386d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_27_plus/per_iter_logs.json",
+      "sha256": "c8f6d399dd4ed2bd125f6c0fa83ad814fd40a065d0a394a2580c86b93359f7bc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_28_plus/complete.json",
+      "sha256": "b27d4d9e4a0db001232b3cb68f5aa27b0ca98e6eb1305f24a64c9988127522b2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_28_plus/final_eval_results.npz",
+      "sha256": "6ff4176fe46a949907fef429b7ee8b212b1fc200517a07976953baca01d3a80e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_28_plus/stag_episodes.jsonl",
+      "sha256": "a5ea72ead39cbb7d40b0168f34c41c24390764bd316c283c0e1af37b7d513b51"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_28_plus/per_iter_logs.json",
+      "sha256": "8cea9aefd56ab4db7c558d299ab4734a5ec50ab404af79c78cacefb672fe9bfa"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_29_plus/complete.json",
+      "sha256": "ebb2c5f37d0eef106c4ffbbb15263ab13aa729d06056009071e6ea13d6d274e8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_29_plus/final_eval_results.npz",
+      "sha256": "794d57a7d0565c24d77e29d40c07855d898eec9ee32486e1e5088626643495e4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_29_plus/stag_episodes.jsonl",
+      "sha256": "5ca25c61397ef2c892bf1bd9d9624e8669685079e087dedaa0795779203c5a7d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_29_plus/per_iter_logs.json",
+      "sha256": "45248b8e0972029521983447ccb004ed62f16939fa4e5d8d3ad4ee2614dd86ff"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_30_T/complete.json",
+      "sha256": "582f941582deb9ded43613ee153fe978a59431624bfd29b58c17562f301b43de"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_30_T/final_eval_results.npz",
+      "sha256": "045cd7e40f6c725d5cfb876b34e44ce9890e07aef9291aac3c6f04e842c7ff93"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_30_T/stag_episodes.jsonl",
+      "sha256": "f375c77b50b724eb28e7595a94eb1258a57ebde8af075cf8af7e34dece93343b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_30_T/per_iter_logs.json",
+      "sha256": "7ae4e2ba3fd1ed5cab8f38b07679295d335b9a0bb7928375d90fa4325ce38097"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_31_T/complete.json",
+      "sha256": "6fbc39f4b9ff54bb94ab371836a1712212af2f1d17e1007df9611f17aa9422a8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_31_T/final_eval_results.npz",
+      "sha256": "a3855e7ba3ad8e9dac05c695522c14d5d91cb859f0be8dfd23377d9502ed028a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_31_T/stag_episodes.jsonl",
+      "sha256": "691e6517530b37d92a6da925f2cab02a95b6aa97d58d8383d2bcb05d049713a1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_31_T/per_iter_logs.json",
+      "sha256": "a0f4cbdf4469b26e6757ed1c437056fd2a77f834af9a37e1793d02df391ea4c8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_32_T/complete.json",
+      "sha256": "ceb69c12cfc053ba5032f4320de5dc91993e9a73ebc6178a8c6ff153003c9614"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_32_T/final_eval_results.npz",
+      "sha256": "89f02c4e0e587ed6e8b284dc4a2d4b1269899fcd6dd48cd555b6c5ba3e305a02"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_32_T/stag_episodes.jsonl",
+      "sha256": "25ec0ea23ac11b7a848aff3f9d78b0807dc62e7d6dd0fb9038fa3d5653927fc5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_32_T/per_iter_logs.json",
+      "sha256": "c887b9bea3e8d4ce8b26cefa669ffeda4bd80a599fcf2c018570b79febd0da57"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_33_T/complete.json",
+      "sha256": "ebdcea50adb9179c3efa24c53b87b35ebf2796430acdad5d96b2c811e2c036a6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_33_T/final_eval_results.npz",
+      "sha256": "0fd9caa7ae97f67924503b9d176769e609af65574eb2d5c9f246ca6f45981534"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_33_T/stag_episodes.jsonl",
+      "sha256": "7b42728b4e1745be4f090334d8cc25d18970fc9edb29e0adf5feeefba6ee57c1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_33_T/per_iter_logs.json",
+      "sha256": "fdcbc8a954e3279f3c555fc3c854762b18fa69682ceeea445b93ddd2776cc3f6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_34_T/complete.json",
+      "sha256": "bf2a8554faed4b6980a25337d62260efd3133013f2131f26d043178b2acf6d60"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_34_T/final_eval_results.npz",
+      "sha256": "f18159bef3b22967bcead307e557851e27700c30b42273721390cf9572f9d66a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_34_T/stag_episodes.jsonl",
+      "sha256": "f61dd3b449fa384191498c6eb8848b752fffcea0f6fd96fbec5d98855f114776"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/adajepa_aug_g030/chunk_34_T/per_iter_logs.json",
+      "sha256": "bb53538f738308852c1d8b86adf4fec424f69ac7a2c0c983266fb0c526e093e8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_00_I/complete.json",
+      "sha256": "e7ef73fcf8878698878c82e8b06aa336612f0bf86d5541369f6805f1df5a0188"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_00_I/final_eval_results.npz",
+      "sha256": "bb84841fd54e643740c501d43e41fc0c01350011a1d2ca675ef5280125cf6008"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_00_I/stag_episodes.jsonl",
+      "sha256": "2c2b27fc17999e0e9f531a5032304e2b256749b8b2d0a08a0d39b386389fd570"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_00_I/per_iter_logs.json",
+      "sha256": "39908e83e193e437db097c720f38ab40744c03aa0bad56f4ba0cbb7f65d5b1e0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_01_I/complete.json",
+      "sha256": "ee89a3161f95d2075f7133464621436dd8642f875ffb63d42d8f0a415331aac1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_01_I/final_eval_results.npz",
+      "sha256": "ec20884f5e1df430ee70ce37999f9544231797895c271aacf05e4e22ff49f8d3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_01_I/stag_episodes.jsonl",
+      "sha256": "ee79fc59e55e299b0f4360ba381b57c860cef7a5d5361e63cc26def37003da2a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_01_I/per_iter_logs.json",
+      "sha256": "6178ac89454c54ef024c43c74c5b1eb55f7bb628c1e0a57656d837896f82b7e7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_02_I/complete.json",
+      "sha256": "06d8ab99774b4f0ecb8e45383184a931477f86acfb284a0884dd6cc9308f9359"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_02_I/final_eval_results.npz",
+      "sha256": "9e0b7ea684bab4b1b252f861b395ab9092714cebc9b2dde984bb61cc898f4d21"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_02_I/stag_episodes.jsonl",
+      "sha256": "e14c88b970548256044ece65bb864170d6e931f7ea046a5dad8f40e8c92cf91f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_02_I/per_iter_logs.json",
+      "sha256": "8c7326a7127dced646e75ca8ce3cc84262f61a9034b457995dc4f01fdb727fa5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_03_I/complete.json",
+      "sha256": "63a620c72dcd57a04f6fd714048cec754f722d717355a7584f204a8e09e7b42a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_03_I/final_eval_results.npz",
+      "sha256": "26615093cc6b02f4da27f17e4b9fe76db9c1338779c55dcdae5bfa7a8342be0d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_03_I/stag_episodes.jsonl",
+      "sha256": "08946777e76f510909236b1cbe681be850bdf62414128c4a4c952b9d59b7057c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_03_I/per_iter_logs.json",
+      "sha256": "8b1e93ce24d77d573de53e3f17085156bb0e78dd78ce58b796e89270e8d1841c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_04_I/complete.json",
+      "sha256": "5c86a325671d748f8a0024bc99f89c30a9ca69a6381aa3ad9d2e446b1a455f4a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_04_I/final_eval_results.npz",
+      "sha256": "2dced7bd049f8c8a6a4255d7d0705961c4975bd9e854ad47b90de31eb5eb175d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_04_I/stag_episodes.jsonl",
+      "sha256": "81faf1a809e3d581cbafcde62900cfb29ae7a7fdf68662e707f58d40d9d21df2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_04_I/per_iter_logs.json",
+      "sha256": "80bd12274d43d553395a036d5b7a141bd62407b0dcc6b30ebbe9fc76b83a6d1b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_05_L/complete.json",
+      "sha256": "cf21250ee369bb8733c7420cff8981abb8d76d26bf340113f68ed08d6a61d6f4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_05_L/final_eval_results.npz",
+      "sha256": "f54915278b1925e7fe8b2819fee0949bedbdcb08080bd3a955a8e18dc85bc67a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_05_L/stag_episodes.jsonl",
+      "sha256": "50d9735d7cfaf83e3b122cc522d78366ead29542a7d16c52d9fe8c6da5ac2254"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_05_L/per_iter_logs.json",
+      "sha256": "1e6f1854f5a8a42ef8ad3ca449a64ee76ca88420ce06b38d0bfdeac6db1184b1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_06_L/complete.json",
+      "sha256": "2f0af90e42d6355a9cf5d2b3e24bafad245eef53dd008ca6ab15facb2c54cd9c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_06_L/final_eval_results.npz",
+      "sha256": "73771943ab594301863074bd3e423c1b0483cbc86f86ef0a2c87928d1d9e0c59"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_06_L/stag_episodes.jsonl",
+      "sha256": "e195e5734b80234827c85c0a44d866691d420b384501b461f485dc8719ce70d0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_06_L/per_iter_logs.json",
+      "sha256": "538449b927eddc36a688919f72868acdecfebf0a23fd478df5c5a193d630a70f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_07_L/complete.json",
+      "sha256": "9855c7200cd4eb1b0757b2ba4a2b0a2a18b233e8a30cf537bf24576063ba45dc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_07_L/final_eval_results.npz",
+      "sha256": "ded16eeeb6f4dff791604cb1b1f2975cded473a83e6ca36aa98bd93b54e32d26"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_07_L/stag_episodes.jsonl",
+      "sha256": "72b341b2b7d48c5b886662130388c764799386a0697449003dd0b748fd809d1c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_07_L/per_iter_logs.json",
+      "sha256": "eea89f0845f45e38f34e73ef876c51553bd5cfacca4b214b0cb74b1e1f00ae9e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_08_L/complete.json",
+      "sha256": "37c3fc2369df493b8549f045483d6d01dc1f6b80dbb63bc408726300d8a3a9a4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_08_L/final_eval_results.npz",
+      "sha256": "2550415a1dafd1ad237b2d2af6850d7f047c19fbd20b40ea8f0e996cdfbfac5a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_08_L/stag_episodes.jsonl",
+      "sha256": "b0e55b33680b553c71519a17667a8fe6472ebcccd305ba0c5c2d661be5458d59"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_08_L/per_iter_logs.json",
+      "sha256": "6b2deef55278c24b5362749b3f3eccb1520dacd16c5010c632d03f6482ac4e8e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_09_L/complete.json",
+      "sha256": "84110b93149a72687d1643d42b9c1c2801813e6fdd98a105e94fc36b273e7a80"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_09_L/final_eval_results.npz",
+      "sha256": "d2f6e4a28a43ae5661d2a1a15b9d5e8e9116d95b8ea256a6f0e6adb56b9108ce"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_09_L/stag_episodes.jsonl",
+      "sha256": "bf93d5b3e35fd6acadad0df8567d8dc6e4e19d9e6591f737b5574468c8a1473f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_09_L/per_iter_logs.json",
+      "sha256": "7fad02f0ac39ffacb96980e7c653f8dc639f48db38207e502134e44246fb29f5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_10_square/complete.json",
+      "sha256": "5c1e75d26ea895e917ba2b9cbb8c6e78dcd9411dc87889c6edc4319b4a9735fc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_10_square/final_eval_results.npz",
+      "sha256": "4e74bde708a2a96fa5c36365eea7a2d3a3bc7c7f8b5c3658958808906da04c92"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_10_square/stag_episodes.jsonl",
+      "sha256": "7825edccbb943bbca6bc64b0703ac88e4ae956e7685a83d7c16767a9021fe5dd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_10_square/per_iter_logs.json",
+      "sha256": "ecc664b343e99ff846e8ec6f0fc5d964c22809b37eb808d536be3996ddae076c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_11_square/complete.json",
+      "sha256": "d80f9892333739d920f27110c0d790e0e6832027884ca4d2ed3ea51d8c906e27"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_11_square/final_eval_results.npz",
+      "sha256": "fec70839a3cd64b59f635bd3e0065ccd9a3c6b22699bfcffdd4e9ac336f0ca2d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_11_square/stag_episodes.jsonl",
+      "sha256": "24eac2190cc347df1e62a1acae1795cea492e78087e98cd5b9483a4560be60ca"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_11_square/per_iter_logs.json",
+      "sha256": "346af14cf4d1fe146a1c9a13c0a7ef4e210ce63145531b7a2e62eba10f408783"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_12_square/complete.json",
+      "sha256": "9286a326e3a8c7ab99d761e258b8cc47e2c247ac28ee79dbb2a1d6eb61557900"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_12_square/final_eval_results.npz",
+      "sha256": "3e9473b021e6dfc9680df6157e30114c7cb8abf4cb799c1f4d5c8a259a1962a2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_12_square/stag_episodes.jsonl",
+      "sha256": "38465bffb7cf544c33e1e68c11f0787c3522156ec1da6be9e701b167631408e2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_12_square/per_iter_logs.json",
+      "sha256": "c2d3bcfc707b3059c1771915d753083dee01e18da928a0e4c0e25aaa29e0eb48"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_13_square/complete.json",
+      "sha256": "b3ffe7e4de56330dee6fe19462b2f866e7f768755cc6669dcab81094768d3727"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_13_square/final_eval_results.npz",
+      "sha256": "8296e7146ba0e7122b38af19fe3024a7b60e86c43730df4afc0059885dba3429"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_13_square/stag_episodes.jsonl",
+      "sha256": "791e7547fcf4f17edf9cc0b161005b2bc6fd20d8c68e34b2355dd3b23363e7e8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_13_square/per_iter_logs.json",
+      "sha256": "fb61fb0120e8c2b740ceb3199d0dcfa71660948ce0d10e15a2c18d804ab45f5d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_14_square/complete.json",
+      "sha256": "6112b7a260f225d111c5e06849689bf10a04b9d793bb6b23aab0100476f7b147"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_14_square/final_eval_results.npz",
+      "sha256": "4317326932a6a0d02521e46a4f26c96237c5e9ce1009b4136579b82be2a9f381"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_14_square/stag_episodes.jsonl",
+      "sha256": "03a1fdb9ca31c39515cd93c88f7453ad64a160dbe541b4a31ccf37c82c29260f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_14_square/per_iter_logs.json",
+      "sha256": "d2ed681f71487076e033cd78677d9b0fa900bc227701baffb496d4704de62b29"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_15_Z/complete.json",
+      "sha256": "e28d32b59439065a9aa3852bddc8397f8ddb034e6f27b1bc5430116a8670dd3b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_15_Z/final_eval_results.npz",
+      "sha256": "14abd781e0c069476812acff45993dfe35b0d657a70f7d85fb71c94d91ac5790"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_15_Z/stag_episodes.jsonl",
+      "sha256": "bd0361c9330e45c385ca5a766a7dc010660a52f7dbb0dc6dbf3ab76d8f267e8a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_15_Z/per_iter_logs.json",
+      "sha256": "ef48274fdda0405a8d1571f9c25f40a8c8d4aa7fac76c27558d6c24bfae849eb"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_16_Z/complete.json",
+      "sha256": "d58f8d8ed95b7e7338198c5624fd586c76013e97e36843af3e281c5e63ca72a6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_16_Z/final_eval_results.npz",
+      "sha256": "80ec3b24ab83dd11a40bd4421a79803c1bc2f4cc0945d7c64cb2cb747f02f59d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_16_Z/stag_episodes.jsonl",
+      "sha256": "dc261ba9d3f434d2818477bb078e84ee592aa88237acbfba3f783c03f41e1799"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_16_Z/per_iter_logs.json",
+      "sha256": "806e37f8f5b352668bcd5d4a8246772097e205ce5de8f51ed2f95e195a634f93"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_17_Z/complete.json",
+      "sha256": "41794c9d1484c65b7c260db1d104a20fc9fb3a0cbf1942eca25305c1213a2b2e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_17_Z/final_eval_results.npz",
+      "sha256": "1980004f2dcaeffe499acf9fbe42b2b638524c3f3148cf83064be014d43c5bfc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_17_Z/stag_episodes.jsonl",
+      "sha256": "a7f5f1114be198f78f13d4c000443cf5f67afd7dd00c72bf16860be801f538a3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_17_Z/per_iter_logs.json",
+      "sha256": "14bb270e0ab6a1bebed6cca18f2c2dc47ca250b18bb5ef6b66667d32b86a4aa4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_18_Z/complete.json",
+      "sha256": "43c72a091f46b84800d8eaab782972cab6c50eb32fe7d6b6ae663dc3d37676e7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_18_Z/final_eval_results.npz",
+      "sha256": "6a6ec8305923f82d9f5c1b84b4be52ae555ee6e73066d0a741b1b16a5434d667"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_18_Z/stag_episodes.jsonl",
+      "sha256": "011788729bd833ceeabfeccbc363fede3fdcbf269b4c5f7b0819f9b045774292"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_18_Z/per_iter_logs.json",
+      "sha256": "2c42697a3a1941e3b2d4e84344f7bbb7d8a1b39bbf73e07ad4e66d2ab10a1c6b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_19_Z/complete.json",
+      "sha256": "79de730b4df06b29f3572acde2b6fa0ef7d524e5d254c200ce49f70c39b14f48"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_19_Z/final_eval_results.npz",
+      "sha256": "8152cdc13efc6c61500a8c1697e7ab4bf7c9d28fc22e01a31a431bb4f455e240"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_19_Z/stag_episodes.jsonl",
+      "sha256": "4c8a02385fbefcf3fefe569f1a9475d849c4ac872942fdb0ec915ec348c58ab7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_19_Z/per_iter_logs.json",
+      "sha256": "43c83dc49a6a3cdb979292dfbef53e1b28cf6e9a6bf487f0cacd8bf64dffd860"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_20_small_tee/complete.json",
+      "sha256": "008001e9bd61f4f154d5df34c42dbb2a4b27417142239d6830d1c3e6e4be639d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_20_small_tee/final_eval_results.npz",
+      "sha256": "cb5c2f7824c73246a021a1cd7116bbcd86e73582ec268bf845eee525a6e375d9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_20_small_tee/stag_episodes.jsonl",
+      "sha256": "b29425e0accbb4d88d4f384a1479f5ed92cb80dce80d97503fd5cd3c1a425ffc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_20_small_tee/per_iter_logs.json",
+      "sha256": "53f775627fe1531777ac84e8f58c544264721b8534465fa71ac276bc122edf00"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_21_small_tee/complete.json",
+      "sha256": "3caa4169e013104b72bfb7e666164e2b3777f6aec4a6009cf2a6be6a8fe26f25"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_21_small_tee/final_eval_results.npz",
+      "sha256": "da52f7f36f8979cdcc81ad61ed21e73556b9e1a125dffdfb49dd086e2a427615"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_21_small_tee/stag_episodes.jsonl",
+      "sha256": "0cb00543d4ffd0f2147120f642ae488479329f245d3a5f333a730e6f11eb42bf"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_21_small_tee/per_iter_logs.json",
+      "sha256": "e2559e0de3e962187c0321080511b1d163eced3c0dfceff88b98b7abc01b1b8d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_22_small_tee/complete.json",
+      "sha256": "6d660d2bc7fbb7e6c60f8d46db1f24d3d0f4d74b56c968b41a3ab0818f69519b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_22_small_tee/final_eval_results.npz",
+      "sha256": "d8628c9ffc435dde1d709dc182d8f503582b1a623630ce645e0af31e6348afd3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_22_small_tee/stag_episodes.jsonl",
+      "sha256": "9b71eb34cd43bc20664254bfa2f493d798c93d8fedbfefdc176b5b29efa8b6d4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_22_small_tee/per_iter_logs.json",
+      "sha256": "dd485c8b002fa25a8e21406e8504d11e15109731ca5ac99f803f0160508041e0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_23_small_tee/complete.json",
+      "sha256": "788f83d5890521fc5e2b1768a2ea507457c83fbecbfbeea011178ff340caed00"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_23_small_tee/final_eval_results.npz",
+      "sha256": "5137ba0d39fc339d5fe50f0d0281f4796b7a9bd6f9e5288c92976b9dad4b00ea"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_23_small_tee/stag_episodes.jsonl",
+      "sha256": "05ca35023dc900b9882f991991c88f17f2b8e82b6f43d46c6d1251b787146231"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_23_small_tee/per_iter_logs.json",
+      "sha256": "2bd257eafa40680aeb4784cb2988b4fc62e162628587a60e9768fa3c9359bc7a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_24_small_tee/complete.json",
+      "sha256": "efafdd5f09c49a3bcd0133db02a18a10636f6b8054de8498df11f822693bd3fe"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_24_small_tee/final_eval_results.npz",
+      "sha256": "d2499b399f963f899967107f519497aa013d65e9113c3e1562947584dfab1212"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_24_small_tee/stag_episodes.jsonl",
+      "sha256": "ac29fdf04fd6fd26a42d45e03f749ca2c10bf648bce2d922ca556075e0cec314"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_24_small_tee/per_iter_logs.json",
+      "sha256": "45ec0ed6c4adce2f0698004ce834802306921a590770a001ed7c49509a2c2843"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_25_plus/complete.json",
+      "sha256": "ec6462c01422da5cf2741ede6d196e1f6a559e90306e8a7d9054de02d4973b8e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_25_plus/final_eval_results.npz",
+      "sha256": "239852fbb613bc917abd6fbe872c0d0f17871b3d7b9dc290083a8090221bbf4b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_25_plus/stag_episodes.jsonl",
+      "sha256": "5c1911fb0f2d858ef9e4fcd307610dc2eee3d5c3ea68eb864341c274539156af"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_25_plus/per_iter_logs.json",
+      "sha256": "f3830ca53c86df3e2d9edd184f924c9843e66b6c95b40fb119a50d38b7ec30e7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_26_plus/complete.json",
+      "sha256": "f4bff1d52ca75160a5bfda0adfb378b6b0e52d09176c29e80d0d2f3bc55afdb7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_26_plus/final_eval_results.npz",
+      "sha256": "eb9223017a86993e5e717e025b3d2655e88445ab8c67b65379d2ebd66392e955"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_26_plus/stag_episodes.jsonl",
+      "sha256": "97d1661ffcb650456661dc8c7bbc34d1d70996f6ad2efbc93a61fe5e4015febf"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_26_plus/per_iter_logs.json",
+      "sha256": "4ae044e5b777324311718ba197a3cd66832ecc90c806213ed7d83ac24550205e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_27_plus/complete.json",
+      "sha256": "e1aa7ac4f55fc9bcbaadade1f87bc8b8287e5cdd4043392cf354ddc44bb91a71"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_27_plus/final_eval_results.npz",
+      "sha256": "62ae65f239ed3cef38d2c76aa14a686d7e3cfd562ee0c661d3cd88e7d84d9656"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_27_plus/stag_episodes.jsonl",
+      "sha256": "74fe1611b78684c36d2b253bb3b414b2153619a97ba19abf84c44df11833cf07"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_27_plus/per_iter_logs.json",
+      "sha256": "cc7eac289d2bd4ad0b6fc1e891fe032a7cf62bb0e4ab6eb5ea1f50810b25a041"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_28_plus/complete.json",
+      "sha256": "acdf772b8fb41f7a9b283ffd66631adb5695f7bbf96ca3455a4ae163ba323c55"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_28_plus/final_eval_results.npz",
+      "sha256": "34068353044a85f58f91a83c3a1b089243c81b5b007c8a0ebc14893c8cc9b214"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_28_plus/stag_episodes.jsonl",
+      "sha256": "61741d58a65c05dae4254780100f21f22da86f3a10f5dee6191576293710ba54"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_28_plus/per_iter_logs.json",
+      "sha256": "cb06ac0421be9164bd39a49400c857aabe3aecc0212b562ec30323c6b84e6ec2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_29_plus/complete.json",
+      "sha256": "4d2ae9bf9efc7acba7b73500959aef8a03acbce5c7fc50c7ade2c370645c0545"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_29_plus/final_eval_results.npz",
+      "sha256": "dca06caaea47d6c82214c374d688c78f38e78a5cd0cdae74bc0f322f337c2b89"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_29_plus/stag_episodes.jsonl",
+      "sha256": "abbb3f62220f00bac25a50a3e34ebef17490ba305da8596e77b3f4c0f921d353"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_29_plus/per_iter_logs.json",
+      "sha256": "f9d96ef333a2c1273295a87836f2e77c1814b715a92d13cebc0a7f39f3a4da1a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_30_T/complete.json",
+      "sha256": "2f53329bc9f9f17ec4408bebcd00d5ca4301aa0fe224360e4ba7789338e7b335"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_30_T/final_eval_results.npz",
+      "sha256": "f370581048bb62af1cfbd2d1117bdd0e119fb66c745a3e77f4a3cafc68bcff3c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_30_T/stag_episodes.jsonl",
+      "sha256": "4889cb6b463252f81c1180f1ea80b403f187374212c49e0a30672fc6a9fcb9f0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_30_T/per_iter_logs.json",
+      "sha256": "eed4c6a99c631d508a3cd53f8328e0419f019b36c837440b9de79b690d8bf23e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_31_T/complete.json",
+      "sha256": "faa38d9981a279b0f3f1d969be059189fa20ec0952cf70da6a61ad325f6f8ead"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_31_T/final_eval_results.npz",
+      "sha256": "6c59ceb73eb598feec7067050d6f736c9c2743f423e18f69de67379d99632c9c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_31_T/stag_episodes.jsonl",
+      "sha256": "be13b2f6a893117741bcc0403e7fb0d686a6a6226f62ac84815acbb2e5fb9b85"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_31_T/per_iter_logs.json",
+      "sha256": "37d19e2b3477e04404fbcff9872da479224d5f18e244b38ad289d869022f89f0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_32_T/complete.json",
+      "sha256": "2da503918cc280eabba6f5433a857e4d1d8bbb8645167829222327c9db45f046"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_32_T/final_eval_results.npz",
+      "sha256": "2eea638734eb3eaa221a476d1138cb8b389a98e4d468986aebcf07431e2ed66d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_32_T/stag_episodes.jsonl",
+      "sha256": "31020877a83d0b733703d0089c5ddfe496bd0250495985002441bb1d0790aaf7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_32_T/per_iter_logs.json",
+      "sha256": "989c397a953361b923f79d1ae1612c93e9d69b7920c30d1b2deb56dbc7563860"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_33_T/complete.json",
+      "sha256": "991d60ee83caef30864b0c9ad12d4d8e985d7e00178829e42563cc8913ccd8b6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_33_T/final_eval_results.npz",
+      "sha256": "394809878ea9174805422c9ecf86eea8f78b850365b18e0cf0a37325fbabe7aa"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_33_T/stag_episodes.jsonl",
+      "sha256": "b9ab887e865bddcacdc708974b9275050460e903d2b1b29a315325f8c4f4df4d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_33_T/per_iter_logs.json",
+      "sha256": "42a41470db5a082c2a43bdca9722c6d02b92ccda88079b25f0955eac88a7e624"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_34_T/complete.json",
+      "sha256": "08af67443a953b79d9a4b04232052cfd2cb9c01962db31dd515699b6e13a3968"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_34_T/final_eval_results.npz",
+      "sha256": "98c44712addce695fafc1879597bb61c052d9380768b3c3fadee2691c84648d8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_34_T/stag_episodes.jsonl",
+      "sha256": "64d0f30dd0ea5e170afd7cebefa685a6af825d9ab193b11ce6f39952ddce8f1e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_g030/chunk_34_T/per_iter_logs.json",
+      "sha256": "5e37eaca29a377fbcb3acb2f0f380fcfa1bc010ee9f850bb6fc82ee038351f6c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_00_I/complete.json",
+      "sha256": "e467ad4872a00662d24c745d1f984cdad5dc2db7c5ab167728f8581da2358050"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_00_I/final_eval_results.npz",
+      "sha256": "69a366f9942db35f576d8e515a72f27aeae4d02b831dcd3898104dde8f0683f8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_00_I/stag_episodes.jsonl",
+      "sha256": "1543c6fd6a172d2f06265293ad8391fa18dfe81678c32f30766d44839dca5d86"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_00_I/per_iter_logs.json",
+      "sha256": "0e95686a57b7909078bc42ffc554b895939899bb8207227468b21e25b7653944"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_01_I/complete.json",
+      "sha256": "7ac3fe1645c9a911402044c946ed126cf5d05190ae771c0cfca22636cceba572"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_01_I/final_eval_results.npz",
+      "sha256": "8299a7c000f41d02a8be9fb4f641b6ec40c2304358e9db46b9bd05fbfcb9878a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_01_I/stag_episodes.jsonl",
+      "sha256": "356964be7bbc88715740b8cb7ed54e562376280cc5e44abf6ff39881c46f9383"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_01_I/per_iter_logs.json",
+      "sha256": "aab838247f535d37863e4319f3d7f7a973921765fb9d4211da1469a0dc174f14"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_02_I/complete.json",
+      "sha256": "e45b7e91b85752831fea4d43f19d0fc9dedb044d468850bff9bbf6ab5fde5e68"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_02_I/final_eval_results.npz",
+      "sha256": "e7ddca314c74d3d3a6b9c2bf0b3b3b4fe77cbb6dbbc59f3da9ee4bff3cf2180a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_02_I/stag_episodes.jsonl",
+      "sha256": "1b89a1bf0565017885e83f39e692786144e006628774b89560f583d4d6086fae"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_02_I/per_iter_logs.json",
+      "sha256": "0670e8e68e7ed745b01c9858636bde21afe0361fe30e57be46b68d6c27a3eaf5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_03_I/complete.json",
+      "sha256": "20dcd166289e8a47dd0dc02aec4ee834593394ee0eed2a6697f0cf5a9ade0649"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_03_I/final_eval_results.npz",
+      "sha256": "267dc2dd5e999ddc66fd9a0d5d56f00d6055c25a41875eb5b308d66178c3bbff"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_03_I/stag_episodes.jsonl",
+      "sha256": "f4af4b6888160325817257073a0131bde46c7762b896e1a994226c328b2f4b85"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_03_I/per_iter_logs.json",
+      "sha256": "7239c49cdd5c7ca4cb70f96bbba8aadf5fe49f0c1ff4210a482d9eae6d649dcf"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_04_I/complete.json",
+      "sha256": "964fd6b731458beb630eb9135bdeb3c734135a77a4f242b749502d974a49459d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_04_I/final_eval_results.npz",
+      "sha256": "2976de4db66a7f076286861ec545e9bb1103e9cf7af601429dac16e7295b649e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_04_I/stag_episodes.jsonl",
+      "sha256": "0c3d192ac5fcff77333339951a7dcefcba99d2733dfa0f4b2580bc366abb3d4e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_04_I/per_iter_logs.json",
+      "sha256": "801778bd6a957d7ddc50972f132d6e94c81cba6c0bcdeeaeecf3177fb6b7e0b0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_05_L/complete.json",
+      "sha256": "b2d4b50f5197ada9ab8753e74ae74e2948ed9231e4ec5a679c5257a30006b248"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_05_L/final_eval_results.npz",
+      "sha256": "d4e99239ed7a8c6515e86c1ee45dfd881b3822e0b0e3aada4263181ba49f8cc3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_05_L/stag_episodes.jsonl",
+      "sha256": "fde97492fbe9b36c74b112d2dd9de8f3341c1784b913ae48125ec8832374c076"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_05_L/per_iter_logs.json",
+      "sha256": "ab55e06418ec403b180f09d58eae65cf6cb4ac834a31800e318d0e86733e7684"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_06_L/complete.json",
+      "sha256": "adc97ae25cf73b2527a7226b86bc5539a3027ccedbe9e5192757835d3926965d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_06_L/final_eval_results.npz",
+      "sha256": "28393a58792272a8e79b6189eb14dc39af67fe9478e449c7cb0dd59c4bc7cc95"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_06_L/stag_episodes.jsonl",
+      "sha256": "07c6e52d94bae4c7f1e5ad3da9bf386bc9706949b710b784834fc5d6fe2963bc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_06_L/per_iter_logs.json",
+      "sha256": "e9ff2cd12fd369c7794aaf9ee76bd271785a8f8b0a80e068884fff366046a337"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_07_L/complete.json",
+      "sha256": "4dc9ad3f9372f42f806fc131d4df111022360361c51aa00d8b786a1d8fbdc2eb"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_07_L/final_eval_results.npz",
+      "sha256": "6824f0396d7b237591efad9084d8adaa10c72eff3da177f4ff9f9c3318d9e0ac"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_07_L/stag_episodes.jsonl",
+      "sha256": "7642e04fbf2e93d2d8ca12fa5c96ee7e75c458375f0bdf58dab864f4fdec73f3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_07_L/per_iter_logs.json",
+      "sha256": "ad8b27038c026ad3aa6ce589ab485b575b861ca07ac7aaaa99e7d0d29e93f4ee"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_08_L/complete.json",
+      "sha256": "45be7ab2a6d792349112a9a0d24d70bc957fae4794dd984c1538a82ccabb36ef"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_08_L/final_eval_results.npz",
+      "sha256": "844c5f6908eed28c17d3d710efc62902948ec39c2364b894a293e77b02566b4c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_08_L/stag_episodes.jsonl",
+      "sha256": "dadedc6c2f0d9934b62d8b76579eab7b9d09c54e8ea187c2e938adab1a24071f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_08_L/per_iter_logs.json",
+      "sha256": "8b62e0c08f77c6de873e3f90aa532c60957db9d6ad2ccf5b59f41ae221d0fcbf"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_09_L/complete.json",
+      "sha256": "cf30165761afa0c486fd287ed1c274a4461775e823583d5b0cee949425ca4ec6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_09_L/final_eval_results.npz",
+      "sha256": "b7841c2ac33d528157d38e89965b194d169a0348755983ea6044447a32a17593"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_09_L/stag_episodes.jsonl",
+      "sha256": "0743911d05a407deb925c3c1576981003a5e8802c73d5c72cbb50c1778c02688"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_09_L/per_iter_logs.json",
+      "sha256": "06f2beabc58cee925e31b4b48a3d7825c80f2040958c5d430a887379f9821d38"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_10_square/complete.json",
+      "sha256": "5ade68f6bb58e08cbb602c749c9a38ecbe592e7264f9d6aaff26fb9c353ef417"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_10_square/final_eval_results.npz",
+      "sha256": "5084cf0f83e71ee7d1bea505696988b914878e58ae9af155fd5c5bbbd707303f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_10_square/stag_episodes.jsonl",
+      "sha256": "7c70cd091a9bdc2d1bcebe033551ecf8e5a16ff7e1d74810445b98d4b5f12fd0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_10_square/per_iter_logs.json",
+      "sha256": "a6c992b814f303f50aa7904286026d1e8f8259c2259f2642de426a7b766edece"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_11_square/complete.json",
+      "sha256": "90c2a30747611d23b11d8c267bc96fb394080bfe604b6b784210e48151a2425d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_11_square/final_eval_results.npz",
+      "sha256": "5e26d18ed2dd9577974c7db3ca40107c110600b118dcf5c77a5c1d02a7c1ddd8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_11_square/stag_episodes.jsonl",
+      "sha256": "585cc85906bfcdfc4b30fb3e7e7bcb7cd052e305cd72fd553f1fd1878d6b9ad1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_11_square/per_iter_logs.json",
+      "sha256": "825e1a2649105dffbb6b0e91d331272c83d4cf937bd3d01393912e6656ca45f7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_12_square/complete.json",
+      "sha256": "833e6c08735403321896a5de41452dcaabcdddf7cf370413e7a322d4fe52fa45"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_12_square/final_eval_results.npz",
+      "sha256": "6fb2a5e948b7f28549b51ce0dc723db160ef91ba310260f3a89c891c80bc280c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_12_square/stag_episodes.jsonl",
+      "sha256": "81196f6baedb3a58880a0e37851eacdec0125a954aa51576e45989215acc596d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_12_square/per_iter_logs.json",
+      "sha256": "c202918dca1c8f38c91b6eb5a1bfe67a272af26623df001ff16ca40e2669bd5c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_13_square/complete.json",
+      "sha256": "b345c92508dbadd3dad5731c798b081e1c3391d6eed23a95dea40195a6bfc6a0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_13_square/final_eval_results.npz",
+      "sha256": "e013e002b7ad34375a82e5c58fe8201314309b6e6b400ee8224a4a896fd732bd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_13_square/stag_episodes.jsonl",
+      "sha256": "51c2f81c3b40019818617e7c97b6d43764acf135b7a6c403ebf5cd1809621fb2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_13_square/per_iter_logs.json",
+      "sha256": "cdc5ac1709cfd9cd804cfd6071fa0e2c920744b1d4d8a857c631422da3b111c9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_14_square/complete.json",
+      "sha256": "1aee6404299a8a181c51d00189f8c8ef0cbd6509572938cab56b94a27562a9a7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_14_square/final_eval_results.npz",
+      "sha256": "76227571816b2c3d494d04540e735fce15498df7284996fdd88bc0743f9468e6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_14_square/stag_episodes.jsonl",
+      "sha256": "f11871605d0c4f18b5faee59b80d8115eac5af58186c60bde0cbe8b3f5d4f939"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_14_square/per_iter_logs.json",
+      "sha256": "9201c09750317cfd429df8bc0c285fe60b2089816ef409cd8dc7bcc4b65af7fc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_15_Z/complete.json",
+      "sha256": "be6d53800578b6946d26fa2dcef6dd34aa7bac0fe29241b6197c5428f885ab90"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_15_Z/final_eval_results.npz",
+      "sha256": "43c410716fdadb4dbbb3ec6b8e797727afdfc9608fc589181905c49db40b9515"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_15_Z/stag_episodes.jsonl",
+      "sha256": "da0f907e99f0c3d71beca4ffd82c00156e0e18a60ad039d44f6ffd907ebffab0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_15_Z/per_iter_logs.json",
+      "sha256": "6626d36609afd127b345d5e9b3b9fedae7dfb46573d6d35d39348be4062f97db"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_16_Z/complete.json",
+      "sha256": "d2bc8b565ab93595d7e5a07389c7364b0344ceb090ebd7396da1d6828d71995d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_16_Z/final_eval_results.npz",
+      "sha256": "0ac4e2df471b1f2ac5a4397efbab08f3c3420b53bcc5da18e2fbca32e1ccdce3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_16_Z/stag_episodes.jsonl",
+      "sha256": "b815e9bd22acf7312f84892cd55f0a6b64a7fe4926e73934aef700e5ff039038"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_16_Z/per_iter_logs.json",
+      "sha256": "044929ddaf0e73581a106def2809941111c9bb354c0be01b6c16aadb4d8cf60c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_17_Z/complete.json",
+      "sha256": "f2ce4714c6079c51c6ba032b141935bae2c38cf47229844096062c195722c7e4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_17_Z/final_eval_results.npz",
+      "sha256": "8020e48e937acedef3369d06fe90a53541e29e2acf0245909111a7d3e073ff1d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_17_Z/stag_episodes.jsonl",
+      "sha256": "19a6ca633bf864ef8cf92d5647b893b1e55f0064f0964c79a43f01aa647187ae"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_17_Z/per_iter_logs.json",
+      "sha256": "e1aaac726a8fe3259a038d1579a7df8b4f291586b1fc9ccc5d289025d3c0994a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_18_Z/complete.json",
+      "sha256": "38c1baab488f11b35b41cb30f3c167f6e765876db0c61853c640040a35754928"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_18_Z/final_eval_results.npz",
+      "sha256": "a3d203e861249666a9cbec2bad951b98169e224dcc092385b7e18a8a299c517c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_18_Z/stag_episodes.jsonl",
+      "sha256": "ab183095031a1b582d6a6381d52563f35653ae8a501df977631cd5f5210a6532"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_18_Z/per_iter_logs.json",
+      "sha256": "f290ba7f2cc1729a0f04830147a14fec786648754bc95c3e7b1f18952b23ce16"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_19_Z/complete.json",
+      "sha256": "fd4d068ffa614c786bfc45aa579ac74ba0834170157ab18d698c98b131600e8c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_19_Z/final_eval_results.npz",
+      "sha256": "eb9f36c43b19c83776600d7454fb120e79ce21ce0ec7537fddc8ea3abdf64f69"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_19_Z/stag_episodes.jsonl",
+      "sha256": "3bc5ec0aa51f854957689844cbe307987cc9ef2549b99819d9807012fe2057cd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_19_Z/per_iter_logs.json",
+      "sha256": "3fd8a8c34dd9f7d6127c20d4f2b278f3d4887b08f8d81d0059cec555e21f8f27"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_20_small_tee/complete.json",
+      "sha256": "73c5ad8489060ddd4bf40b86b4fb8023492c2dea419aa3288ce51e756a07571f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_20_small_tee/final_eval_results.npz",
+      "sha256": "fa4c42152c7e872a4d8a2fb52f601b17fa8b939af49d87dc6d990641c15522a1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_20_small_tee/stag_episodes.jsonl",
+      "sha256": "e37f8105adaa3a20fb76afaedce66f9ea757845e26df91c507b5a942146dc25e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_20_small_tee/per_iter_logs.json",
+      "sha256": "b2443f11bb9fb439eb566738262c930425fb56bc9253ad84bdfbe06411ed3a6a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_21_small_tee/complete.json",
+      "sha256": "f61a401d7fd97e75530d35525eb5195083bc10a0fbab534626bc655bc38bfdb6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_21_small_tee/final_eval_results.npz",
+      "sha256": "47a1be5f0b6487311617a5ea9783d1a7e92134f849fa15c989d0e343318b09c7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_21_small_tee/stag_episodes.jsonl",
+      "sha256": "bb743e034dcf8ad13924edd28feddf23b7ff41b3833e8e3a7f04776de6235f42"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_21_small_tee/per_iter_logs.json",
+      "sha256": "4e527ec921c6be23eb83ed59aaba9f79689f5ba6afbdd64f282ed8823a66564a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_22_small_tee/complete.json",
+      "sha256": "4359df015630384b3ac302252a7099d9234432f792415a4d12d9e853f4993c3b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_22_small_tee/final_eval_results.npz",
+      "sha256": "0d66ca3da86cf2108025b0ff2059d007309c56d33b4357a875892ddfb6d50560"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_22_small_tee/stag_episodes.jsonl",
+      "sha256": "b6e96715a5f4f2274e135a21319a9688d6621b2a80d5acbb96f3925643065979"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_22_small_tee/per_iter_logs.json",
+      "sha256": "12a97b1bcf943df905d2c6ea243585ccb1b8f7eaa2414a87f6780a13e2007138"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_23_small_tee/complete.json",
+      "sha256": "8b4eeff4bb5df30875fe02bb8484bfed4821a68919cc398470c958f08b75c319"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_23_small_tee/final_eval_results.npz",
+      "sha256": "e3e1dfb7e91d5a51336203b9eaa99687042a8d9170c56cc7d26a183c75c9b5d3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_23_small_tee/stag_episodes.jsonl",
+      "sha256": "a56959ca56487bc630fc4a2637de38fc4a8eeebf6171f9f2bf35b92b3ca0a289"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_23_small_tee/per_iter_logs.json",
+      "sha256": "1b199c0c5d667be8ff9b8cf39d883df8a0b4c4b13bc76b87cb7b405ccd8e1768"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_24_small_tee/complete.json",
+      "sha256": "b886d515a6ef1bf3a7759221ee4c355231fec6ebafb15d4951c0f946d8cae132"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_24_small_tee/final_eval_results.npz",
+      "sha256": "c6aeacf5aeba0a210f973201cbe3044dc02337588a95ef2db62308f003a63c30"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_24_small_tee/stag_episodes.jsonl",
+      "sha256": "9b1ec962ba3f17a59e06aaa8a19faf4ae7271d9e9fd004bc28d720e5dec1b098"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_24_small_tee/per_iter_logs.json",
+      "sha256": "7abedf78be9fa3479322c6d12913824c77687e70630f59365f38c691a82e878b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_25_plus/complete.json",
+      "sha256": "65cb52ba6ded4fe6fec4ae078cb815dc18ae961dfb6bf6b0a6b7217aa54d2ea1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_25_plus/final_eval_results.npz",
+      "sha256": "efe92e29291bd56f09ea4240aef8dd95e290a4cc52bc2584d54beb3d9cebfa3e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_25_plus/stag_episodes.jsonl",
+      "sha256": "102ffbdcdd712d28ee4c9e6bb447847dad94ac602788b45bfde1522e863f1b7f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_25_plus/per_iter_logs.json",
+      "sha256": "1f672a7bca6004bceef507d4445d2b66cd32a7977de7269e0778bb5b85e05222"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_26_plus/complete.json",
+      "sha256": "7a27cbeba0bec10bb2ce73d97e708faa79a26faae71f7f815a1589a03681037a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_26_plus/final_eval_results.npz",
+      "sha256": "a13bd5887e82c5dcb5b33e43496eb3c508e0a51bfa026486245c1bf558cfe10a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_26_plus/stag_episodes.jsonl",
+      "sha256": "5f04a33de0dff00d040730fcb452435033f20edf37c56892a41b4dda17302d3d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_26_plus/per_iter_logs.json",
+      "sha256": "37284f067f8e323384f745eb3eb2a9a8c2e44fdfc73af57a501c270f3ed4cc03"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_27_plus/complete.json",
+      "sha256": "8bb8318561abd3683d30275bacd55453cee0be422ba92bace972d5d8a1e87f62"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_27_plus/final_eval_results.npz",
+      "sha256": "77d166940ebd600ed7f1e4793ce4e6aa317cebb274367761a189d26585b5c1cd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_27_plus/stag_episodes.jsonl",
+      "sha256": "d32cfb1aeb5b54c4178d86ee04162d4f0ad5d7503cf13b3f5d852f5a091de876"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_27_plus/per_iter_logs.json",
+      "sha256": "723f1d5a5d8cbaec28efd61daff741c2da9604b110ac6ae0003b057be13fd5af"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_28_plus/complete.json",
+      "sha256": "feec96d7f4936ba888fc912918f9f833e42822e32f052528d5b8afeece7abc3a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_28_plus/final_eval_results.npz",
+      "sha256": "a4f4a2843605fe00d1dd2d3b44213c73421a02a2ff8de4f7b01721d277991e9d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_28_plus/stag_episodes.jsonl",
+      "sha256": "367190ebe8e6fae7ea587dde91bbfcf81be75f8f66fc02f6d3c397c2e91783fa"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_28_plus/per_iter_logs.json",
+      "sha256": "add5accd5a9581007879acfe2b99aaa9ecf225938299195b9140a18e4cd5f7ec"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_29_plus/complete.json",
+      "sha256": "18250e7a0344d5851fa8d29dd45663bf99883cc9d45c1d6dbb2b35a9a3cbcdcf"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_29_plus/final_eval_results.npz",
+      "sha256": "df455b0340d7ee316b385c09b2b2bd0b404cb2e976e9decebe377b3fe14b611d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_29_plus/stag_episodes.jsonl",
+      "sha256": "83c825241bca9819ce7c0a09a62ca9d0fee93defe2108e445ed2afd553b156e3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_29_plus/per_iter_logs.json",
+      "sha256": "6985d127f7b39e56183134d8e723719f7052ab4665e91c3fc131a9aa82aa5983"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_30_T/complete.json",
+      "sha256": "cbf84acfaaa42b5ac1159610865a1776fa8cb778cf3d9b414cd6b3462cf3c3fd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_30_T/final_eval_results.npz",
+      "sha256": "a8f0a9d723009a053a92a0bc4456b105de985861d7a134ab720a347e380da4fb"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_30_T/stag_episodes.jsonl",
+      "sha256": "e347144409f3fcd96af408da55cf693f726f7cd3481a322be43a04303f28c5d1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_30_T/per_iter_logs.json",
+      "sha256": "8d7c45f0858ff18a8df813282c55cf2d76cad0b6e93e041793505d647f568ece"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_31_T/complete.json",
+      "sha256": "d25ed0647aeeba9a3074c53438479e256ce91e2cb8e813561d2719c93f04e446"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_31_T/final_eval_results.npz",
+      "sha256": "c70a5425b579d83389981e364d28e5d6638809a7205555ba283f85f78a771fe7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_31_T/stag_episodes.jsonl",
+      "sha256": "8b1248cb2b05e230947bb3cf990faac96e16bee8145b7973a5a79ddc9224d4a0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_31_T/per_iter_logs.json",
+      "sha256": "9c7ba92dbd3be20917c222fce4f2850478993a3155d567ce12227d13f3f930a7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_32_T/complete.json",
+      "sha256": "348692854dc023484fec247725895493118919415a87fd2650ac519603ff981a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_32_T/final_eval_results.npz",
+      "sha256": "1ff88075e2547761deb3b1950978094c714b24e20054885974157c76797f571f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_32_T/stag_episodes.jsonl",
+      "sha256": "d82dd1a4636131b2c17eb80afd6e6e8bbf176c1ded08341152e62437205d54af"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_32_T/per_iter_logs.json",
+      "sha256": "ebd7491fde77a18ed931652cc0bb5492869d8abbcd024dd9f801b7325e529e34"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_33_T/complete.json",
+      "sha256": "1b0f590c38fc3417174d581ea755c9d2e59f8e1bcad0f0d54994bc26e8f07d14"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_33_T/final_eval_results.npz",
+      "sha256": "e3ccd201681d216a6c43fdc112a43e65c056d6280752f78f9a9c1f0050e8905d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_33_T/stag_episodes.jsonl",
+      "sha256": "f9ebb6b1a90b337eeab86395daa80e89e53a89cfc228a281bf52e7feb27a65e2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_33_T/per_iter_logs.json",
+      "sha256": "cd5e10cfb426f4622cf9df6a6d8aedff69a3f6672c08f85f2dfdf02bad8bc071"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_34_T/complete.json",
+      "sha256": "39997671e53e882f48d415fed5e6b5763b4af56aa3c26f0ecfe8b4cd18719b6b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_34_T/final_eval_results.npz",
+      "sha256": "15e3e50e983baeb7acafa5d35ab93f247cdb3387159058f38064b58a4e366b1f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_34_T/stag_episodes.jsonl",
+      "sha256": "014ff645f5dd72b7b71949b085724f79734372dd529bf7a3940a916ebba724de"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_g030/chunk_34_T/per_iter_logs.json",
+      "sha256": "3079851ad2f9cb0c77f3e820a7d83193b7f904325bf3920aab70a2fc1df88719"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_00_I/complete.json",
+      "sha256": "b6c13d58af044919585f1a79e66397bb00e1e90c13dd4cac6116bb1aba31b6dc"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_00_I/final_eval_results.npz",
+      "sha256": "e741a48fa513409c73c0a9c38fb7bf9908fcb47d3e76c62800fe533ae5eb4216"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_00_I/stag_episodes.jsonl",
+      "sha256": "037d7f9c762bffe2ccb590adbec7e63489434963bad50fa79bb04fc716638cb6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_00_I/per_iter_logs.json",
+      "sha256": "1aa0433645c9d7a33f5cd97debd9c1be5c4faef1a8441a40051fdf7e51d6d462"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_01_I/complete.json",
+      "sha256": "e470d4d3f5d4e55a78f88d6fa1691940089fd471869d56268e69087222b90bbe"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_01_I/final_eval_results.npz",
+      "sha256": "52661b8fc739c61d5885713948ad16232ea14646bca9eac0b5090e04751b347b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_01_I/stag_episodes.jsonl",
+      "sha256": "0555244a825dd5aa28056fa8debf04ae9b8d8da8ac355523a3e7a598da283b4d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_01_I/per_iter_logs.json",
+      "sha256": "c68d8e6d6f57911b622579aa649e836cdd6b5c366da5e12fec07f315b036d9d2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_02_I/complete.json",
+      "sha256": "fa75fc61c2efbf4e53ec8140728701ba98f93f536e221f0d32f5d30a05a837c7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_02_I/final_eval_results.npz",
+      "sha256": "00c1370cfd7d2d3873041b480ced541d6ee2a481f8025847729525327b4271ac"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_02_I/stag_episodes.jsonl",
+      "sha256": "47543271c7f6414c1a494b4cf4d27971149433f342ef2b2a4a0a5a4f0c17ba93"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_02_I/per_iter_logs.json",
+      "sha256": "6ca443f18d99007936ffa49925d8ffba9afe86f20302562f056d73fb54a4923d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_03_I/complete.json",
+      "sha256": "abc7a2991e9a2a3a145cf20402ab93148cb9237e1db4907f71d6d70464f1749e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_03_I/final_eval_results.npz",
+      "sha256": "aca84f10999a89cea0099654e2422b3036b8cb63da8f64c7205eea35820a1888"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_03_I/stag_episodes.jsonl",
+      "sha256": "746c228ac183baff311139939f352db1ce44362491bb9b07d3341c3c7c80b68b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_03_I/per_iter_logs.json",
+      "sha256": "0efbe87d322dfbe7c93db255b5ef01361a01fd87fcc60bdfa22dfabf4b93793b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_04_I/complete.json",
+      "sha256": "3638818786adefca453aa84f33695a6b2ac2086c465a652502d4c25186e4646c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_04_I/final_eval_results.npz",
+      "sha256": "ecef96b41511787846b24fca7b1a8d96df67ebbe92dc19ccb2759c15fb418ab3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_04_I/stag_episodes.jsonl",
+      "sha256": "5d2cfc412decad7e136ae9e92887f8c300c977e69d529d35a8949044bffbf00e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_04_I/per_iter_logs.json",
+      "sha256": "e84a13ab9260af04200f6b6d7e683e0f61033b922648b46361b1de41905e6e46"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_05_L/complete.json",
+      "sha256": "7d1a1cae0f9efd4ce29ee62621131f0f5565082997b2902df3a460e09a7b4bf5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_05_L/final_eval_results.npz",
+      "sha256": "5180cb89998a6e4b009d59b163dd604a47becdc539943762a640a67c13c56a0f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_05_L/stag_episodes.jsonl",
+      "sha256": "f5327215d7af77b69bd339bd64f3c773b3dcc434be035b7f311be461a5483c09"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_05_L/per_iter_logs.json",
+      "sha256": "4e0c7af38dd7fbb4f600bd80b918eec79bbda450476704dc485d3f86ae65c331"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_06_L/complete.json",
+      "sha256": "e16885407031391cc97cb27840034be5268c7d0b42633ba1184ccc302b3b5520"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_06_L/final_eval_results.npz",
+      "sha256": "625f2ffaaedeadcb423019f6d596770c71cb00e77f4d2c0536285751f03210b9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_06_L/stag_episodes.jsonl",
+      "sha256": "b1f2469e2c3badcdc3c4845f876c185d16e5bb1801849df32b780581b1deba85"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_06_L/per_iter_logs.json",
+      "sha256": "a0210fb21eed68bc4f07dfc000f997c250f9e922c3d34f26815b00dec3743a50"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_07_L/complete.json",
+      "sha256": "caab66085bf3e6de62b6904050dc383680a06316070f200ac9f59ad47d0992d6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_07_L/final_eval_results.npz",
+      "sha256": "f92216367b1777766a35ddf7d23159b9e85c44ef2d231f8191151e8e514e4611"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_07_L/stag_episodes.jsonl",
+      "sha256": "ff1cb25baf7b30c9e547332a80d476543c689b051ca0c45b8f81f2de445249f1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_07_L/per_iter_logs.json",
+      "sha256": "5453feea9e845ecda133bff32ed26c9da7b372b7d2e00b4b5ef0dbdc55d11638"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_08_L/complete.json",
+      "sha256": "b9dc78a1743d5c3d0858827230d2dee2abd8e6e5bd51fb044aee9996266e4500"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_08_L/final_eval_results.npz",
+      "sha256": "d9b05d9d1eb9089ac1bfe47311480a9c5d42ef3110b423676707de663d061610"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_08_L/stag_episodes.jsonl",
+      "sha256": "d50e267d4b13c60a27e06ff12994c2d3e1d6f9e6b0b124d8274a6c27ef3d6bfb"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_08_L/per_iter_logs.json",
+      "sha256": "bde4fe1c8f18b748d02426d65e7e3ce6df497eb4b0c301043cd7b83f0a614aa1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_09_L/complete.json",
+      "sha256": "1d161291631c7f2c3cfa53c74772e83ebfaaa55c7dd63ddd28b5a1b6dfb6a7a5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_09_L/final_eval_results.npz",
+      "sha256": "1f55a892849288d66a1191ba4fb66af9ad0a103fe48519f5468805a5f43a99e6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_09_L/stag_episodes.jsonl",
+      "sha256": "2be35422b10004993b364b310a9897da1a6894f603228c107a0946a91134f76f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_09_L/per_iter_logs.json",
+      "sha256": "ec0e1f40f4e400b58392beb5ea2110741ce3c7e5bc8e281d518801676b58e59b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_10_square/complete.json",
+      "sha256": "24aa1b2596ea21b3fea78eab0cdfa42abb596a5244d29296b4169a607b534140"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_10_square/final_eval_results.npz",
+      "sha256": "ab104ec36615f899a0ebf9a46a39389c27b77d92bd0eee265f51b33ddef5c022"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_10_square/stag_episodes.jsonl",
+      "sha256": "6a4f7aaa9f74553b518edbfb9861236c7bb757c4e66548711b8ec5263f6ec68a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_10_square/per_iter_logs.json",
+      "sha256": "c3d284d7b1a7e13b2897ba29365617e73fc10b45e3e2b6c3de7d45adf3bf65b0"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_11_square/complete.json",
+      "sha256": "d90a686ef8458b996074fb0c0b8a60603d7d72b9f621923117170e6ca1eecb63"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_11_square/final_eval_results.npz",
+      "sha256": "328df71279f86e3ee4a28fe8d7a2f1e1cda4b94e3fe406ee9fa9f9ff3ec81865"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_11_square/stag_episodes.jsonl",
+      "sha256": "f114c884607a8ee8ca2d51c624a0429d3ec1bd2632e320c35342e102661d67d1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_11_square/per_iter_logs.json",
+      "sha256": "7d33223460b9233a70c5e9ea9622768b64a86551a5f178ad0b6dd3af5a6f1539"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_12_square/complete.json",
+      "sha256": "31aac097e6325d78bba47d27fdc5f4d3d8857d2ae1849ee49076656411b379be"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_12_square/final_eval_results.npz",
+      "sha256": "8d8d5439b395a7bd53148fdc3f07073210c01d975a1496b791c80a38afa82983"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_12_square/stag_episodes.jsonl",
+      "sha256": "b350db77336a6459570c64808b60a26bd8d11dd9357e146c2fa3a715945de447"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_12_square/per_iter_logs.json",
+      "sha256": "592d1ff3afa7cd317035becf01346c4cbad9f7b6814026c7ad7c8ca2dcb2a7b3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_13_square/complete.json",
+      "sha256": "ced911d9d34d1e0642d799cb8ea1f2af30b49369e0cae46648b3da74648763db"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_13_square/final_eval_results.npz",
+      "sha256": "8c6956045de24fae485a5626e9ba0b7d386de402a8d73aa4aa81a0c0e2abff82"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_13_square/stag_episodes.jsonl",
+      "sha256": "a058977cd98ec6f8c6b70d3ae1a25a1de88ac72c56fa300fd355c54b17452f91"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_13_square/per_iter_logs.json",
+      "sha256": "1b15426798733ccaed9697573cd5865f28d6cceceaca6f69abd9cf0bb13ef769"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_14_square/complete.json",
+      "sha256": "4be00692430bdb410cf4e104327c3ebe5ed79c6bbe1a3f989fd40cf633ef977c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_14_square/final_eval_results.npz",
+      "sha256": "f2aaf213c58e8b68e527d035fe1c7650e5e1843283445a57bc20449a71c8e039"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_14_square/stag_episodes.jsonl",
+      "sha256": "9fb717b1fb7a4fe78454b5e6aa212acb5502d81ae8d6c2950a4eeff0c1b8bd57"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_14_square/per_iter_logs.json",
+      "sha256": "7b5f7a99f49811c1bbe269b18f504879eb9cf7fb5a0380ab337e9454ff618886"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_15_Z/complete.json",
+      "sha256": "3d3578f37be94ca6d58e3a5333bd4428cffc9f6fbd7a15540bb2424232a68981"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_15_Z/final_eval_results.npz",
+      "sha256": "b1d5c2fbd3ede0ab2e8088000f798f085dbfa334734b53f0c9dfa1923e97abb4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_15_Z/stag_episodes.jsonl",
+      "sha256": "b82f47a9ab5d13c531530cfbf480908aa263be4fbaedf48b92b04151d3a59045"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_15_Z/per_iter_logs.json",
+      "sha256": "356a3760010db59cb512210c62cc6938f4366d7da091b8f9e2cc889ee3aa9d9d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_16_Z/complete.json",
+      "sha256": "00114743431c6f1c1e2696d666e1d2a0812ae4b0734a363fa6eb4ad85426ded5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_16_Z/final_eval_results.npz",
+      "sha256": "b9d752715b86295c4b48cb5a82e16e9e265c0609b0b44b1170f9ff6cc9ed1800"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_16_Z/stag_episodes.jsonl",
+      "sha256": "07d602aae073e4f13700b03af492fb34656ba5f8d433eb66773998c5c02bc90b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_16_Z/per_iter_logs.json",
+      "sha256": "a8ff6294bdd551e85476cc79970fc82d8698015dab0c2740fcb75f2a17aa4abe"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_17_Z/complete.json",
+      "sha256": "1e806c7daf95b786d44dc969fb0d103b573f30c501f84bd7f5faa90beac3e829"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_17_Z/final_eval_results.npz",
+      "sha256": "fc9b781aae0ce80684e0ec2e418552b74cc56d1599ffc56c668e995cb7c48417"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_17_Z/stag_episodes.jsonl",
+      "sha256": "a441375937aa912ae4935db7c6d2a5cd4197b825e45c1242d6cf853fe87b53aa"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_17_Z/per_iter_logs.json",
+      "sha256": "27bba77905528314eb024d0c7cc4d07839a9dd210b38a97b8365ccf9586dc005"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_18_Z/complete.json",
+      "sha256": "8c8ac7039182304b38cacc44c245a1f1d383434ac381c0e7d5645207888ac43b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_18_Z/final_eval_results.npz",
+      "sha256": "33cf5e07b20cdb327f34779c81563a3c349666f538426e68df6082b58a8faee1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_18_Z/stag_episodes.jsonl",
+      "sha256": "92db7399f7ec50ba0353292a732481d85e5cd2e0dcddd57e76ed68358cc8fac2"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_18_Z/per_iter_logs.json",
+      "sha256": "a4c3a4fcdcc380e26ebb05182b0709d337f05ff17d8bf2bc200bcecd557dd866"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_19_Z/complete.json",
+      "sha256": "cc99b8d48bf5de5d32ccd10a9fc73642110b9ffbe5b80caf3e43a7597f55f011"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_19_Z/final_eval_results.npz",
+      "sha256": "3eb292a5e08df24e22288b4d5d4e0c1e3ec50d29d150d6dc6a34284c2058dfaa"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_19_Z/stag_episodes.jsonl",
+      "sha256": "517a29ff9f0fb2f8cc1360e0868e43d82889c0831801e725d254a3564c083512"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_19_Z/per_iter_logs.json",
+      "sha256": "124fd06f763298c7ff3baad3b0e91031e68b98f4a50d1c9ce962cdfad9616e4a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_20_small_tee/complete.json",
+      "sha256": "776283e3486d52ed2dc1bfa640e3b289c3ed3b2ac7a901b3a77e5bfa4578793c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_20_small_tee/final_eval_results.npz",
+      "sha256": "fd6015ae92a409001a51cd065fda5d2ed456aadcf2b1c946150386dce886fcea"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_20_small_tee/stag_episodes.jsonl",
+      "sha256": "d0f6941c1f9f03d9087c2e78db4ede664376217cd1a7efe273f0fadabbaa840b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_20_small_tee/per_iter_logs.json",
+      "sha256": "f62c1aee4bf5330efe0cfc59b069c8bb60a569067b05224570308a610d8a430f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_21_small_tee/complete.json",
+      "sha256": "8ef6ddaf26f741b9ff8598f45da646803659a2f870aaeda404301fc09515fc42"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_21_small_tee/final_eval_results.npz",
+      "sha256": "aa8c6e5d90d40b7a9df4c3462d0617c7f73bc1919603b2319460fafcdfd71ffb"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_21_small_tee/stag_episodes.jsonl",
+      "sha256": "e399229e9de8c2618236fc6c49092a345ed9d1016ae8de28fac1961312feb09c"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_21_small_tee/per_iter_logs.json",
+      "sha256": "a2f5eb30182d24d1ab80f2c355f60da009b52765f8f3af0e8ebbb8895512ea60"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_22_small_tee/complete.json",
+      "sha256": "8970babeb788fdcefe01b42f9918def2701f7454fe6184ab977b5be470b6cceb"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_22_small_tee/final_eval_results.npz",
+      "sha256": "f0007667d607a32e057667c37058c4d0b972ceefcf9cf97e04ff3b7f8d69bc3f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_22_small_tee/stag_episodes.jsonl",
+      "sha256": "262c3cbb079e4837c48c8e8e5aa03032aecb78bf7f4f7845f993f9d4687d2ef1"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_22_small_tee/per_iter_logs.json",
+      "sha256": "912c8dab8f388b8d09271f491b678ea894a8dfc38a3177a315b21f7f0459af50"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_23_small_tee/complete.json",
+      "sha256": "5192fa9e71fb39824b03eb5a871db63b55c9fc4d4d883017771bb26ae2d9733d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_23_small_tee/final_eval_results.npz",
+      "sha256": "28e5e78796d342083b090b21fc99290072e5a05e0b27e3e77a9a28c70c7dcdba"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_23_small_tee/stag_episodes.jsonl",
+      "sha256": "eaf232652d8a8638f408e43c7115c2014dcd778ec6f3993042b6e7aa52787083"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_23_small_tee/per_iter_logs.json",
+      "sha256": "f0b04520e7c09a916fb9bbeba1f98be11a6fd39ac0dfc33bbe93698c191dea2b"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_24_small_tee/complete.json",
+      "sha256": "cb80d0a98f87b65bb53582a5195737d172f84e572219bc62a40d375827270946"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_24_small_tee/final_eval_results.npz",
+      "sha256": "4c786d7428ff1d557ed1f785241cc1e84f1e9ccbe340ca173cb40294ddcf0c81"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_24_small_tee/stag_episodes.jsonl",
+      "sha256": "f9de2a190672a5de574f2e15fb0c51d27986dd10deee141ca6fc54a2ff6f60a4"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_24_small_tee/per_iter_logs.json",
+      "sha256": "d7e86d3ad1ad19ab8229cdc871ccd380f27dc8d7833d8cd923f627eadcfdf86a"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_25_plus/complete.json",
+      "sha256": "7c0fc318f0f1c92384a9af6994072029e46972267d20474b16664a66c2b3f151"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_25_plus/final_eval_results.npz",
+      "sha256": "82842f4f81e4bdfb27e0e62233dc8d498e65712165d8869657810d55e9c33d79"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_25_plus/stag_episodes.jsonl",
+      "sha256": "1259b4cbd881373cd236dab0bdd7361ca97b74f1e793fad7db762575acda6aad"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_25_plus/per_iter_logs.json",
+      "sha256": "a840dfb53018795ae36822028522074fe9c063e972a91f95d00d3fd306437f78"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_26_plus/complete.json",
+      "sha256": "bd3ce9e168ea51b070c37461edd9604123c96500cd7ebb84522f28ba1294f516"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_26_plus/final_eval_results.npz",
+      "sha256": "f5e7e74c4cda7b2c6f8eeaae4527e4c12e456bf93af803021b3d30a37c4ec8b7"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_26_plus/stag_episodes.jsonl",
+      "sha256": "5f04a33de0dff00d040730fcb452435033f20edf37c56892a41b4dda17302d3d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_26_plus/per_iter_logs.json",
+      "sha256": "2aec9bcedeba98f70c3d3677b318b02e004340184a010a236efc11be71f1f32f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_27_plus/complete.json",
+      "sha256": "8c9328a30588026e3247b3a3627252dd9d54f614718e4920178ec7cb4d33fe24"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_27_plus/final_eval_results.npz",
+      "sha256": "29e4ce338fdc535d1a800e40dbb552b761012886b8c1a40c094ef8cde0d88a12"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_27_plus/stag_episodes.jsonl",
+      "sha256": "cac325d9f2a398a6268740b45c634e361d9f3efaca8ad031132e040f18bf7526"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_27_plus/per_iter_logs.json",
+      "sha256": "6f57648244c343dfc9f4ba2f9f8c02ebed1930d406a6f0f619533d413bcccac9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_28_plus/complete.json",
+      "sha256": "06b9cdffe4a750ce9f1dded79b0709ba532e36af26a5c0a50b8bd89ec12dd20e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_28_plus/final_eval_results.npz",
+      "sha256": "dc7149d7444df6678531c60bc0bc34442ab562550e1ae3f6a9ca09e38490c7db"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_28_plus/stag_episodes.jsonl",
+      "sha256": "5e7c9b6de4389d041c36440270d230c118038b4d18f42fc27e679ae65d123c6d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_28_plus/per_iter_logs.json",
+      "sha256": "aa48e897d4e4f569db3eaf9a732b3764467f5881ef8099fb9cda5e778e6da77d"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_29_plus/complete.json",
+      "sha256": "eefc4264ad809f79971aba87d183f4eabf2082d806982842559baf67a52c7886"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_29_plus/final_eval_results.npz",
+      "sha256": "3f42489f9497199e20fbf114738b8d3774516d41391d88c49f2a86d15fef9fce"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_29_plus/stag_episodes.jsonl",
+      "sha256": "a33a30023ef9469f3c654f97439daa20fe41c8274661b62d713f137ba3340127"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_29_plus/per_iter_logs.json",
+      "sha256": "0d65586615e1229a94d866e21cc942c89c0d2a18ea2d05a529128c0c3b2484e5"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_30_T/complete.json",
+      "sha256": "3d5780b17bfde550c7044e16328c2b730c6d6b209c9f9dbc6512e318eec30502"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_30_T/final_eval_results.npz",
+      "sha256": "62639c92bbad95b0605518eaced1c09671a5e8668884a4bb1be1dc40bfec230e"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_30_T/stag_episodes.jsonl",
+      "sha256": "a5573d59cc22268eed1106c9535affc99d0a551f8be2fc6e9de44e49c92c9acd"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_30_T/per_iter_logs.json",
+      "sha256": "b50e1cb95f291b199d8a3a5632bb43ff416137ef4697f99fb6300c19e107b3d9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_31_T/complete.json",
+      "sha256": "f06a48e26a969dc57190c73d38e8aea11325abbbb561a4bafb5dbcf2b53cf287"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_31_T/final_eval_results.npz",
+      "sha256": "e21c5878ae9a4bc9c451f106cac36a88fd7c3816f692feb075d1e738487c2a2f"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_31_T/stag_episodes.jsonl",
+      "sha256": "923f22ff32b92eebe838c14cb59f0d68d61df4660e464891b438087bee54cc75"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_31_T/per_iter_logs.json",
+      "sha256": "8f79546373c6a6c46e368322d100fed90f4a9947df2ff2746325774281faaed6"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_32_T/complete.json",
+      "sha256": "adf6b64cd52027b85fef0900a32838a8b524f930a801f8526f9a0533e3c08176"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_32_T/final_eval_results.npz",
+      "sha256": "f4c35282eb43e29cad51b7f0e7c0ee0f628d77ca9ccb41bb1b2292396f837336"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_32_T/stag_episodes.jsonl",
+      "sha256": "178ffb0b739904460fe8462178f5452220dc4e37ae807e91f1d1f8c0530aa508"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_32_T/per_iter_logs.json",
+      "sha256": "8ae2d00e67c9b719f48e89b8f8e055ad2388e6f27cd90c2ab94c4496906083ec"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_33_T/complete.json",
+      "sha256": "3b9d709cae29c402dfc12c0f93434f41257fc76a4d0e8653d4da499a3ff5b098"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_33_T/final_eval_results.npz",
+      "sha256": "8d33c85cae30368113c6d2b504ad502cdb6b40f731d04e89e1d6d8f6ddc70078"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_33_T/stag_episodes.jsonl",
+      "sha256": "c85ccf3fd51162f92274e7ce969d266bba030c07c21ba5ff50324a152e553eee"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_33_T/per_iter_logs.json",
+      "sha256": "24dedce35bc187063a5fc6ed314a858c9239a810696a319de8344269c1b55b53"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_34_T/complete.json",
+      "sha256": "bba6247d41053aa209f19e14f291a466680c868ce8a213a540faef97195945c9"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_34_T/final_eval_results.npz",
+      "sha256": "d8d9c7b251bfaf4018de03de3a30b6befe68ae59e64ac70a61e0f769dd5321f8"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_34_T/stag_episodes.jsonl",
+      "sha256": "13fa3e53583b865446f0ac665bd211f2565973592f9e8b6ff8dfe75ef78b76d3"
+    },
+    {
+      "path": "eval_outputs/ecp_threshold_v1/dinowm_aug_dense_native/chunk_34_T/per_iter_logs.json",
+      "sha256": "0ee27097168f8bd1a39491a897b98aa5a2a329ca5dd6a6f0973f5d9390bb8b1b"
+    }
+  ],
+  "scope": "Exploratory follow-up on the existing fixed task set. No independent calibration split or repeated training seeds. Dense cadence changes total search computation as well as detection opportunities; its native control is evaluated separately."
+}

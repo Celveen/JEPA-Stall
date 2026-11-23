@@ -1,0 +1,47 @@
+{
+  "state": "complete",
+  "supervisor_pid": 1504488,
+  "started_at": "2026-11-16T10:35:20.056397+08:00",
+  "gpu_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "gpu_uuids": [
+    "GPU-46e54a30-c5f9-0d24-39a5-746dc07e390e",
+    "GPU-759bf33a-347a-f48e-9967-094bef34ca14",
+    "GPU-f15e7c17-9fbd-9e83-163a-6e6b8065a65a",
+    "GPU-35eb1fdc-8b9e-2df5-5cc7-0799c8f77e18",
+    "GPU-c3ef23e1-9594-3fbf-52a7-66336dbb9504",
+    "GPU-fc48c836-1875-f27f-1afc-f42b783c153a",
+    "GPU-906821a0-511f-3f5c-de64-2cbe7d637cf9",
+    "GPU-c5e439ed-8b41-412d-f3ff-3beb5f20c67b"
+  ],
+  "gpu_count": 8,
+  "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/checkpoints/lewm_pushobj_random_matched16k_e10_8gpu_20261116",
+  "target_epochs": 10,
+  "target_steps": 127360,
+  "initialization": "from scratch",
+  "training_pid": 1504490,
+  "updated_at": "2026-11-16T17:16:10.256777+08:00",
+  "latest_metrics": {
+    "epoch": 10,
+    "step": 127360,
+    "val": {
+      "loss": 0.18494746088981628,
+      "pred_loss": 0.008785312995314598,
+      "sigreg_loss": 1.9574217796325684
+    },
+    "hours": 6.67104580965307
+  },
+  "completed_steps": 127360,
+  "elapsed_hours": 6.680611050128936,
+  "exit_code": 0,
+  "epoch": 10,
+  "result": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall-cloud-20261116/experiments/lewm_random_matched16k_8gpu_20261116/training_result.json"
+}

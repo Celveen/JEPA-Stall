@@ -1,0 +1,347 @@
+{
+  "source": "reports/rope_seed101_20",
+  "base_seed": 101,
+  "protocol": "Both arms predict and execute three pushes, observe after each push, stop at CD < 0.3 or 20 pushes; fixed-strength ECP starts after five warm-up pushes.",
+  "selection": "Illustrative lower-CD cases at equal final push counts with memory actually applied; not a substitute for aggregate results.",
+  "aggregate_caveat": "The main result pools the same 20 targets across three seeds; these two cases illustrate fixed-strength ECP.",
+  "archives": {
+    "reports/rope_seed101_20/native3_evidence.tar.gz": "a358914156f1cb4ac05ecbecd67a1b5a2a5e445bbb9e51936f74f2157250636f",
+    "reports/rope_seed101_20/fixed3_evidence.tar.gz": "c1e68ccd3878d8640599f9f3523415590d0d6f2b5b562bfdbaf59935b5cbc710"
+  },
+  "files": {
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_native_000.png": {
+      "sha256": "5b141acb53d1283f55ca731e3dc159d9eb113cff7ec642e69cd7fc17f204efa6",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 0,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_native_006.png": {
+      "sha256": "1bdb93e2f3fc00cd5091d2712b9d7fd379039313b4bd64f3655aa30c8de54d62",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 6,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_native_012.png": {
+      "sha256": "168845a4cf84abd23d2f980ec9b702e0ec7298d71e7ce704b7d2846b4f26a86e",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 12,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_native_016.png": {
+      "sha256": "a9d214a3c903f9767b04ab167421ecef84f3dfa2589d5c96d28cbba634f41869",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 16,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_native_020.png": {
+      "sha256": "404bd499ee7b064bab0af77006ceb832d14fe6ef01db8123054c9fab2d05b2e8",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/recorded_execution.npz",
+      "step": 20,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_000.png": {
+      "sha256": "5b141acb53d1283f55ca731e3dc159d9eb113cff7ec642e69cd7fc17f204efa6",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 0,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_006.png": {
+      "sha256": "1bdb93e2f3fc00cd5091d2712b9d7fd379039313b4bd64f3655aa30c8de54d62",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 6,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_012.png": {
+      "sha256": "d64b72927fe6b1a9be3867abe00a9784ec457001b7dacd62a8a572f1df85b2e0",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 12,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_016.png": {
+      "sha256": "4329ca703f830bb1e0fa7af71e2c811fa3b6f03d0c11252968ac84441bec2352",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 16,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_020.png": {
+      "sha256": "a17b1001469e322a79747be2280f08a2dad9c1fe86c765dac909c22aaaa7237b",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_05/recorded_execution.npz",
+      "step": 20,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t15_goal.png": {
+      "sha256": "d5c155578570201a64c2ef36e8a4104e9b21c02f24f7d5aefe113dec3e87a07b",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_05/target.pkl",
+      "step": null,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_native_000.png": {
+      "sha256": "6781ad758df9fd6474d18d6f1de7aed9959c421e5b18f445ce8c4b3a4ce81154",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_11/recorded_execution.npz",
+      "step": 0,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_native_006.png": {
+      "sha256": "9b9c0792db4cfd9f6c36e08086e00fbf1bca60b558fd06f4c9560b2e1f52e67a",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_11/recorded_execution.npz",
+      "step": 6,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_native_012.png": {
+      "sha256": "9b9c0792db4cfd9f6c36e08086e00fbf1bca60b558fd06f4c9560b2e1f52e67a",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_11/recorded_execution.npz",
+      "step": 12,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_native_016.png": {
+      "sha256": "ede8517f636cd35555e59da2700c69edea110badd66911d0eeec8d15d3fab838",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_11/recorded_execution.npz",
+      "step": 16,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_native_020.png": {
+      "sha256": "95c5adcc9d7151f5e44d56e1ecfcb2136523ed73b905319ecc30f46ccc1d5dda",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_11/recorded_execution.npz",
+      "step": 20,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_000.png": {
+      "sha256": "6781ad758df9fd6474d18d6f1de7aed9959c421e5b18f445ce8c4b3a4ce81154",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_11/recorded_execution.npz",
+      "step": 0,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_006.png": {
+      "sha256": "56a584876bfe361073ff9e6c6140c5089721685277f963ad1570075441e80451",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_11/recorded_execution.npz",
+      "step": 6,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_012.png": {
+      "sha256": "8483b6000101b1e48d196720a870b10199eafb02f94fb83a2c09e81951218288",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_11/recorded_execution.npz",
+      "step": 12,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_016.png": {
+      "sha256": "79e7d8ac95213fdb9e489a03ea069a721fedae5e34278a642e27c8b1ff8ef07e",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_11/recorded_execution.npz",
+      "step": 16,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_020.png": {
+      "sha256": "d1bedab52af0a8749a8c2c25e22b49c60d7fdc52346215df6dda9f5449fdaa00",
+      "archive": "fixed3_evidence.tar.gz",
+      "member": "fixed3/sample_11/recorded_execution.npz",
+      "step": 20,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    },
+    "figures/recorded_rollouts/rope_seed101_fixed_t21_goal.png": {
+      "sha256": "5503371a1a3ebd4f621cea9d0b976ed3054d0a15cae91131186f22e38826abc4",
+      "archive": "native3_evidence.tar.gz",
+      "member": "native3/sample_11/target.pkl",
+      "step": null,
+      "full_original_viewport": true,
+      "pixel_exact_to_recorded_observation": true
+    }
+  },
+  "cases": [
+    {
+      "dataset": "Rope",
+      "backbone": "DINO-WM",
+      "target": 15,
+      "sample": 5,
+      "steps": [
+        0,
+        6,
+        12,
+        16,
+        20
+      ],
+      "rows": [
+        {
+          "arm": "native",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_native_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_native_006.png",
+              "step": 6
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_native_012.png",
+              "step": 12
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_native_016.png",
+              "step": 16
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_native_020.png",
+              "step": 20
+            }
+          ],
+          "final_cd": 1.7939197385826178,
+          "actual_pushes": 20,
+          "success": false,
+          "recorded_execution_sha256": "2cef0816384406f2e4735fbe300fa7230b6d3d64f404cd1eea2cb0a1f7364917"
+        },
+        {
+          "arm": "ours",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_006.png",
+              "step": 6
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_012.png",
+              "step": 12
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_016.png",
+              "step": 16
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t15_ours_020.png",
+              "step": 20
+            }
+          ],
+          "final_cd": 0.16810256511376237,
+          "actual_pushes": 20,
+          "success": true,
+          "recorded_execution_sha256": "d2922de3e660be746aeac4c23c60eb7ac11f9e0db3b98f9e444de9b584f9b6b2"
+        }
+      ],
+      "unit": "Push",
+      "hide_border": 0,
+      "first_S_application_push": 7,
+      "used_trigger_memories": 5,
+      "goal": "figures/recorded_rollouts/rope_seed101_fixed_t15_goal.png"
+    },
+    {
+      "dataset": "Rope",
+      "backbone": "DINO-WM",
+      "target": 21,
+      "sample": 11,
+      "steps": [
+        0,
+        6,
+        12,
+        16,
+        20
+      ],
+      "rows": [
+        {
+          "arm": "native",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_native_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_native_006.png",
+              "step": 6
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_native_012.png",
+              "step": 12
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_native_016.png",
+              "step": 16
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_native_020.png",
+              "step": 20
+            }
+          ],
+          "final_cd": 1.6748112409899267,
+          "actual_pushes": 20,
+          "success": false,
+          "recorded_execution_sha256": "228e1c474870eb0cece80afc79a7c408498961e21606551b9761bf582c70fb30"
+        },
+        {
+          "arm": "ours",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_006.png",
+              "step": 6
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_012.png",
+              "step": 12
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_016.png",
+              "step": 16
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_seed101_fixed_t21_ours_020.png",
+              "step": 20
+            }
+          ],
+          "final_cd": 0.34884200080440786,
+          "actual_pushes": 20,
+          "success": false,
+          "recorded_execution_sha256": "9ca67e842b3aa80d208b60e73fe75db01192052c4e09f416ed2b1d0f8df55926"
+        }
+      ],
+      "unit": "Push",
+      "hide_border": 0,
+      "first_S_application_push": 7,
+      "used_trigger_memories": 7,
+      "goal": "figures/recorded_rollouts/rope_seed101_fixed_t21_goal.png"
+    }
+  ]
+}

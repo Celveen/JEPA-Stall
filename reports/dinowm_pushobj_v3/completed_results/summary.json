@@ -1,0 +1,239 @@
+{
+  "status": "complete",
+  "training_epochs": 3,
+  "precision": "bf16",
+  "results": {
+    "ordinary_native": {
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 4,
+          "success_rate": 0.08
+        },
+        "L": {
+          "n": 50,
+          "successes": 21,
+          "success_rate": 0.42
+        },
+        "square": {
+          "n": 50,
+          "successes": 2,
+          "success_rate": 0.04
+        },
+        "Z": {
+          "n": 50,
+          "successes": 10,
+          "success_rate": 0.2
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 12,
+          "success_rate": 0.24
+        },
+        "plus": {
+          "n": 50,
+          "successes": 17,
+          "success_rate": 0.34
+        },
+        "T": {
+          "n": 50,
+          "successes": 20,
+          "success_rate": 0.4
+        }
+      },
+      "seen": {
+        "n": 200,
+        "successes": 68,
+        "success_rate": 0.34
+      },
+      "unseen": {
+        "n": 150,
+        "successes": 18,
+        "success_rate": 0.12
+      },
+      "all": {
+        "n": 350,
+        "successes": 86,
+        "success_rate": 0.24571428571428572
+      }
+    },
+    "ordinary_ecp": {
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 4,
+          "success_rate": 0.08
+        },
+        "L": {
+          "n": 50,
+          "successes": 21,
+          "success_rate": 0.42
+        },
+        "square": {
+          "n": 50,
+          "successes": 2,
+          "success_rate": 0.04
+        },
+        "Z": {
+          "n": 50,
+          "successes": 10,
+          "success_rate": 0.2
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 12,
+          "success_rate": 0.24
+        },
+        "plus": {
+          "n": 50,
+          "successes": 17,
+          "success_rate": 0.34
+        },
+        "T": {
+          "n": 50,
+          "successes": 20,
+          "success_rate": 0.4
+        }
+      },
+      "seen": {
+        "n": 200,
+        "successes": 68,
+        "success_rate": 0.34
+      },
+      "unseen": {
+        "n": 150,
+        "successes": 18,
+        "success_rate": 0.12
+      },
+      "all": {
+        "n": 350,
+        "successes": 86,
+        "success_rate": 0.24571428571428572
+      }
+    },
+    "augmented_native": {
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 8,
+          "success_rate": 0.16
+        },
+        "L": {
+          "n": 50,
+          "successes": 36,
+          "success_rate": 0.72
+        },
+        "square": {
+          "n": 50,
+          "successes": 7,
+          "success_rate": 0.14
+        },
+        "Z": {
+          "n": 50,
+          "successes": 23,
+          "success_rate": 0.46
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 28,
+          "success_rate": 0.56
+        },
+        "plus": {
+          "n": 50,
+          "successes": 33,
+          "success_rate": 0.66
+        },
+        "T": {
+          "n": 50,
+          "successes": 36,
+          "success_rate": 0.72
+        }
+      },
+      "seen": {
+        "n": 200,
+        "successes": 128,
+        "success_rate": 0.64
+      },
+      "unseen": {
+        "n": 150,
+        "successes": 43,
+        "success_rate": 0.2866666666666667
+      },
+      "all": {
+        "n": 350,
+        "successes": 171,
+        "success_rate": 0.48857142857142855
+      }
+    },
+    "augmented_ecp": {
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 8,
+          "success_rate": 0.16
+        },
+        "L": {
+          "n": 50,
+          "successes": 36,
+          "success_rate": 0.72
+        },
+        "square": {
+          "n": 50,
+          "successes": 7,
+          "success_rate": 0.14
+        },
+        "Z": {
+          "n": 50,
+          "successes": 23,
+          "success_rate": 0.46
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 28,
+          "success_rate": 0.56
+        },
+        "plus": {
+          "n": 50,
+          "successes": 33,
+          "success_rate": 0.66
+        },
+        "T": {
+          "n": 50,
+          "successes": 36,
+          "success_rate": 0.72
+        }
+      },
+      "seen": {
+        "n": 200,
+        "successes": 128,
+        "success_rate": 0.64
+      },
+      "unseen": {
+        "n": 150,
+        "successes": 43,
+        "success_rate": 0.2866666666666667
+      },
+      "all": {
+        "n": 350,
+        "successes": 171,
+        "success_rate": 0.48857142857142855
+      }
+    }
+  },
+  "paired": {
+    "ordinary": {
+      "rescues": [],
+      "regressions": [],
+      "pre_trigger_mismatches": [],
+      "targets_equal": true
+    },
+    "augmented": {
+      "rescues": [],
+      "regressions": [],
+      "pre_trigger_mismatches": [],
+      "targets_equal": true
+    }
+  },
+  "all_pre_trigger_pairs_identical": true,
+  "protocol": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/PROTOCOL.md"
+}

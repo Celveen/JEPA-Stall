@@ -1,0 +1,1579 @@
+{
+  "version": 8,
+  "evidence": "Native simulator images rendered previously at recorded states. Every trajectory point is copied from an existing MPC log; no new execution.",
+  "sampling": "One endpoint per MPC replan. Dashed lines and their arrows indicate sequence of sampled endpoints, not the substep physical path. No spline smoothing or invented wall avoidance.",
+  "sources": {
+    "paper/cvpr2027/provenance/source_manifest.json": "97a2c434f79f9331a7164352f4e1988eb14505e2fff646d976002d48bb4ce3a4",
+    "env/pusht/pusht_env.py": "e76a4cf6d1dd143156dcfa25076371c76a238f6d523415ae74a387b7b0919378",
+    "env/pointmaze/maze_model.py": "d1fa6a8e2b97b62b4af0748cbab6a638c5ed2af62b68da6cd07af83f3fdc8abf",
+    "env/pointmaze/point_maze_wrapper.py": "df699a05488792d8fc1e993564109c3a966a91f43c6b4e3379688cc5bec8e2ca",
+    "scripts/stag_base_run.py": "2e1bf4c1f20327c9f79e1a41287f7adb82897656d6c21a14497a036006609bf0",
+    "scripts/e3_run.py": "eeaed5af2cd83d1252fec5a5d1b73d21409ff243cf00699a7f6841b93deacbf0",
+    "eval_outputs/stag_frozen_bias16k_it40/ref/chunk_04_I/per_iter_logs.json": "44978dbf73acce4946ed7f49632073afa5f5353501c4917725bfcfb176408017",
+    "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_04_I/per_iter_logs.json": "ea670cc20f87736fbaaaf9821ebad0a68029ce0f1dd6d0bb2f3e6534fce1292a",
+    "eval_outputs/stag_maze100_ar4/medium/adajepa/ref/shard03/per_iter_logs.json": "1deb835533c0e67b3f77ddf002ed3a865c92ea0799b2f896b1f1f6bda34ed6ed",
+    "eval_outputs/e3/medium_s100/SZ-switch/shard04/per_iter_logs.json": "b922a519809c6431ccdfe508d94b3d986e3147cfec6fa837986d92074d80f16c",
+    "eval_outputs/stag_frozen_bias16k_it40/ref/chunk_04_I/final_eval_results.npz": "6b7918d0a624c4df986e8263d4edf7650c1d87185fa757c7b19eb0d7396d4bd8",
+    "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_04_I/final_eval_results.npz": "a4fa2c6640490b79ff712e6c155b28d32e34d5102d218b625aa84e8644f3aa63",
+    "eval_outputs/stag_maze100_ar4/medium/adajepa/ref/shard01/plan_targets.pkl": "238c2af78a8b14651412def0f6fb52ea25edb2964ac57afe8c4c6858873da73d",
+    "eval_outputs/e3/medium_s100/SZ-switch/shard04/plan_targets.pkl": "238c2af78a8b14651412def0f6fb52ea25edb2964ac57afe8c4c6858873da73d",
+    "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_04_I/stag_meta.json": "14ff47426ffe11ef2e0c6581a7ba0fd5573ad6b8895bb5430de055e9ad880035",
+    "eval_outputs/e3/medium_s100/SZ-switch/shard04/stag_meta.json": "1d99ddd09c2ad29993cdac10fbd92a987cf260d3d6dcda6a02ab4ca089ce6204",
+    "paper/cvpr2027/figures/frames/maze_start.png": "78611138206c876cf8c1c1a6b48b9ef8d857b2eee5d33bc433c7c69acc9d718b",
+    "paper/cvpr2027/figures/frames/maze_goal.png": "5592a6c8e9f574e762748672485641d943c4657b06eb544921501a378ee1edd9",
+    "eval_outputs/stag_frozen_bias16k_it40/ref/chunk_24_small_tee/final_eval_results.npz": "93980a96ab6222b54559920022d9387cd0bdc1539eec13e196cbd3301027f455",
+    "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_24_small_tee/final_eval_results.npz": "035cd84ebc4c31566bf0958a13a359a4faf60b81ebaab46da64dca6dc3aafb84",
+    "eval_outputs/stag_frozen_bias16k_it40/ref/chunk_24_small_tee/per_iter_logs.json": "370104a03f1b03d41b22dc15d5523861678c83e06131b27bfc250de6403ca106",
+    "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_24_small_tee/per_iter_logs.json": "0fa5616ba785586a73f2e2b0ec13d07ee02fec231d5e61b21157374bb080b103",
+    "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_24_small_tee/stag_meta.json": "09b5c874f3b4b496bc2426f35dd9b5831eff16151919d27ecb4b058737ebb34c"
+  },
+  "frame_sources": {
+    "figures/trajectory_frames/pushobj_base_final.png": "bfded051b51a491db5645a5b66655e0801cc3181e3982739260c15ec3284c6aa",
+    "figures/trajectory_frames/pushobj_ours_final.png": "e026508442dd7d4d1bce592fa772245acb477340eb259301e183ff04de7e16b7",
+    "figures/trajectory_frames/maze_base_final.png": "f6708071a1ddd6bf819ddc52248910d0ec2d51dad2039d8fd32f5c6cd3371e3d",
+    "figures/trajectory_frames/maze_ours_final.png": "4b32290fd0ddc90c937d7c731110a1e2126708ba48936611a946c0a90ca1d27d",
+    "figures/frames/push_start.png": "b98bae2461a974c3ceb03a1eb082a99b8a238b10035dd6dffbdb6b9ea85c04e6",
+    "figures/frames/push_before.png": "bfded051b51a491db5645a5b66655e0801cc3181e3982739260c15ec3284c6aa",
+    "figures/frames/push_baseline_end.png": "bfded051b51a491db5645a5b66655e0801cc3181e3982739260c15ec3284c6aa",
+    "figures/frames/push_corrected_end.png": "e026508442dd7d4d1bce592fa772245acb477340eb259301e183ff04de7e16b7",
+    "figures/trajectory_frames/pushobj_tee_base.png": "34eab8f42e0962774ffd9cf8132b3478442c24292ba531b9fec5ddfbb4750cbe",
+    "figures/trajectory_frames/pushobj_tee_ours.png": "3dfa7c6786ecd1c45a472cb7cd14b7eca7aab52a09c29a5c054e38988df66cf7",
+    "figures/trajectory_frames/pushobj_tee_start.png": "217e1bcbdf5083e1054ebd44e07dc8d294c853c32c0262f683894aa614c01b6f"
+  },
+  "cases": {
+    "pushobj": {
+      "sample_idx": 5,
+      "baseline_path": "eval_outputs/stag_frozen_bias16k_it40/ref/chunk_04_I",
+      "correction_path": "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_04_I",
+      "baseline_condition": "frozen MPC",
+      "correction": "S+P",
+      "matching_action_and_state_prefix_replans": 15,
+      "states": {
+        "base": [
+          [
+            210.6228485107422,
+            355.3989562988281,
+            149.70159912109375,
+            254.47622680664062,
+            5.717554569244385,
+            0.0,
+            0.0
+          ],
+          [
+            190.53,
+            321.712,
+            141.234,
+            240.97,
+            5.728,
+            -53.664,
+            -90.544
+          ],
+          [
+            146.532,
+            274.14,
+            109.087,
+            186.588,
+            5.805,
+            -97.399,
+            -84.072
+          ],
+          [
+            124.293,
+            237.646,
+            90.371,
+            147.938,
+            5.836,
+            -59.217,
+            45.211
+          ],
+          [
+            82.09,
+            307.121,
+            90.371,
+            147.938,
+            5.836,
+            -65.758,
+            35.155
+          ],
+          [
+            135.257,
+            208.996,
+            84.631,
+            128.546,
+            5.833,
+            243.109,
+            -209.625
+          ],
+          [
+            145.468,
+            201.419,
+            84.04,
+            127.327,
+            5.826,
+            -248.426,
+            45.091
+          ],
+          [
+            73.386,
+            215.874,
+            83.355,
+            126.394,
+            5.823,
+            -25.733,
+            -142.981
+          ],
+          [
+            84.326,
+            198.108,
+            84.564,
+            125.772,
+            5.784,
+            62.232,
+            -73.311
+          ],
+          [
+            90.17,
+            190.297,
+            91.686,
+            120.645,
+            5.514,
+            -9.132,
+            -61.601
+          ],
+          [
+            71.579,
+            184.702,
+            91.686,
+            120.645,
+            5.514,
+            -53.541,
+            -25.782
+          ],
+          [
+            59.836,
+            186.184,
+            91.686,
+            120.645,
+            5.514,
+            -41.304,
+            -31.619
+          ],
+          [
+            50.987,
+            184.193,
+            91.686,
+            120.645,
+            5.514,
+            -43.847,
+            -35.094
+          ],
+          [
+            49.89,
+            184.475,
+            91.686,
+            120.645,
+            5.514,
+            -40.724,
+            -34.941
+          ],
+          [
+            51.909,
+            185.993,
+            91.686,
+            120.645,
+            5.514,
+            -43.793,
+            -35.586
+          ],
+          [
+            49.886,
+            184.548,
+            91.686,
+            120.645,
+            5.514,
+            -39.883,
+            -35.201
+          ],
+          [
+            48.216,
+            183.686,
+            91.686,
+            120.645,
+            5.514,
+            -41.445,
+            -36.08
+          ],
+          [
+            50.521,
+            185.244,
+            91.686,
+            120.645,
+            5.514,
+            -37.244,
+            -34.112
+          ],
+          [
+            51.63,
+            185.816,
+            91.686,
+            120.645,
+            5.514,
+            -42.682,
+            -35.366
+          ],
+          [
+            50.384,
+            184.906,
+            91.686,
+            120.645,
+            5.514,
+            -38.53,
+            -35.153
+          ],
+          [
+            51.199,
+            185.474,
+            91.686,
+            120.645,
+            5.514,
+            -35.243,
+            -34.202
+          ],
+          [
+            52.097,
+            185.679,
+            91.686,
+            120.645,
+            5.514,
+            -37.152,
+            -34.651
+          ],
+          [
+            50.88,
+            184.114,
+            91.686,
+            120.645,
+            5.514,
+            -35.897,
+            -35.614
+          ],
+          [
+            49.866,
+            184.41,
+            91.686,
+            120.645,
+            5.514,
+            -34.779,
+            -34.119
+          ],
+          [
+            49.401,
+            184.867,
+            91.686,
+            120.645,
+            5.514,
+            -36.112,
+            -35.409
+          ],
+          [
+            50.043,
+            185.119,
+            91.686,
+            120.645,
+            5.514,
+            -38.643,
+            -35.625
+          ],
+          [
+            51.271,
+            185.421,
+            91.686,
+            120.645,
+            5.514,
+            -35.748,
+            -34.767
+          ],
+          [
+            51.272,
+            185.373,
+            91.686,
+            120.645,
+            5.514,
+            -39.015,
+            -35.073
+          ],
+          [
+            49.927,
+            184.579,
+            91.686,
+            120.645,
+            5.514,
+            -35.528,
+            -34.407
+          ],
+          [
+            49.197,
+            183.873,
+            91.686,
+            120.645,
+            5.514,
+            -35.489,
+            -35.265
+          ],
+          [
+            50.297,
+            184.89,
+            91.686,
+            120.645,
+            5.514,
+            -33.545,
+            -34.583
+          ]
+        ],
+        "ours": [
+          [
+            210.6228485107422,
+            355.3989562988281,
+            149.70159912109375,
+            254.47622680664062,
+            5.717554569244385,
+            0.0,
+            0.0
+          ],
+          [
+            190.53,
+            321.712,
+            141.234,
+            240.97,
+            5.728,
+            -53.664,
+            -90.544
+          ],
+          [
+            146.532,
+            274.14,
+            109.087,
+            186.588,
+            5.805,
+            -97.399,
+            -84.072
+          ],
+          [
+            124.293,
+            237.646,
+            90.371,
+            147.938,
+            5.836,
+            -59.217,
+            45.211
+          ],
+          [
+            82.09,
+            307.121,
+            90.371,
+            147.938,
+            5.836,
+            -65.758,
+            35.155
+          ],
+          [
+            135.257,
+            208.996,
+            84.631,
+            128.546,
+            5.833,
+            243.109,
+            -209.625
+          ],
+          [
+            145.468,
+            201.419,
+            84.04,
+            127.327,
+            5.826,
+            -248.426,
+            45.091
+          ],
+          [
+            73.386,
+            215.874,
+            83.355,
+            126.394,
+            5.823,
+            -25.733,
+            -142.981
+          ],
+          [
+            84.326,
+            198.108,
+            84.564,
+            125.772,
+            5.784,
+            62.232,
+            -73.311
+          ],
+          [
+            90.17,
+            190.297,
+            91.686,
+            120.645,
+            5.514,
+            -9.132,
+            -61.601
+          ],
+          [
+            71.579,
+            184.702,
+            91.686,
+            120.645,
+            5.514,
+            -53.541,
+            -25.782
+          ],
+          [
+            59.836,
+            186.184,
+            91.686,
+            120.645,
+            5.514,
+            -41.304,
+            -31.619
+          ],
+          [
+            50.987,
+            184.193,
+            91.686,
+            120.645,
+            5.514,
+            -43.847,
+            -35.094
+          ],
+          [
+            49.89,
+            184.475,
+            91.686,
+            120.645,
+            5.514,
+            -40.724,
+            -34.941
+          ],
+          [
+            51.909,
+            185.993,
+            91.686,
+            120.645,
+            5.514,
+            -43.793,
+            -35.586
+          ],
+          [
+            49.886,
+            184.548,
+            91.686,
+            120.645,
+            5.514,
+            -39.883,
+            -35.201
+          ],
+          [
+            58.617,
+            165.426,
+            91.686,
+            120.645,
+            5.514,
+            -31.154,
+            -66.243
+          ],
+          [
+            65.724,
+            152.112,
+            91.686,
+            120.645,
+            5.514,
+            -36.731,
+            -63.166
+          ]
+        ]
+      },
+      "late_window_statistics": {
+        "base": {
+          "first_replan": 15,
+          "last_replan": 30,
+          "endpoint_polyline_length": 19.13536154324922,
+          "net_displacement": 0.5346821485705172,
+          "x_span": 3.8810000000000002,
+          "y_span": 2.1299999999999955,
+          "diameter": 4.362821334870359,
+          "unit": "pixels"
+        },
+        "ours": {
+          "first_replan": 15,
+          "last_replan": 17,
+          "endpoint_polyline_length": 36.11309019078576,
+          "net_displacement": 36.09620949628923,
+          "x_span": 15.838000000000001,
+          "y_span": 32.43600000000001,
+          "diameter": 36.09620949628923,
+          "unit": "pixels"
+        }
+      },
+      "intervention_metadata": {
+        "space": "latent",
+        "kappa": 2.0,
+        "start": 10,
+        "window": 3,
+        "gamma_lo": 0.05,
+        "gamma_hi": 0.15,
+        "beta": 0.25,
+        "alpha": 1.0,
+        "base": 2.0,
+        "trigger": "movement",
+        "q": 0.2,
+        "theta": 0.0,
+        "prop_boost": 10.0,
+        "boost_replans": 2,
+        "only_samples": [
+          0,
+          4,
+          5,
+          6,
+          7,
+          9
+        ]
+      },
+      "original_target_array_pairing_verified": true,
+      "explicit_outcome_check": {
+        "baseline": false,
+        "ours": true
+      },
+      "display_labels": {
+        "baseline": "Frozen",
+        "ours": "Ours (frozen)"
+      }
+    },
+    "maze": {
+      "sample_idx": 75,
+      "baseline_path": "eval_outputs/stag_maze100_ar4/medium/adajepa/ref",
+      "correction_path": "eval_outputs/e3/medium_s100/SZ-switch",
+      "baseline_condition": "online-adapted MPC",
+      "correction": "gated S only",
+      "matching_action_and_state_prefix_replans": 6,
+      "states": {
+        "base": [
+          [
+            5.084784030914307,
+            1.968592882156372,
+            0.0,
+            0.0
+          ],
+          [
+            4.4018,
+            3.1983,
+            0.0,
+            -0.0
+          ],
+          [
+            4.8005,
+            2.7058,
+            3.771,
+            -4.657
+          ],
+          [
+            4.4015,
+            3.1985,
+            -0.0,
+            0.0
+          ],
+          [
+            4.6384,
+            1.1048,
+            2.2392,
+            -0.1101
+          ],
+          [
+            4.4011,
+            3.1985,
+            0.0184,
+            -0.0
+          ],
+          [
+            4.4015,
+            2.7909,
+            -0.0,
+            1.8056
+          ],
+          [
+            4.4015,
+            3.1985,
+            0.0,
+            0.0
+          ],
+          [
+            4.4016,
+            3.1981,
+            0.0,
+            -0.0001
+          ],
+          [
+            4.4195,
+            3.1982,
+            0.1671,
+            -0.0
+          ],
+          [
+            4.402,
+            2.6994,
+            0.0001,
+            6.1259
+          ],
+          [
+            4.4019,
+            3.1982,
+            0.0,
+            -0.0
+          ],
+          [
+            4.4015,
+            3.1983,
+            0.0,
+            -0.0
+          ],
+          [
+            4.4212,
+            2.5406,
+            0.1831,
+            5.5462
+          ],
+          [
+            4.4017,
+            3.1981,
+            0.0,
+            -0.0
+          ],
+          [
+            4.4015,
+            3.1982,
+            -0.0,
+            -0.0
+          ],
+          [
+            4.4018,
+            2.805,
+            0.0,
+            5.6516
+          ],
+          [
+            4.4015,
+            3.1982,
+            0.0,
+            -0.0001
+          ],
+          [
+            4.4015,
+            3.1981,
+            -0.0,
+            -0.0001
+          ],
+          [
+            4.4013,
+            1.5684,
+            0.0095,
+            5.6753
+          ],
+          [
+            4.4223,
+            3.1983,
+            0.1939,
+            -0.0
+          ],
+          [
+            4.4015,
+            3.1986,
+            0.0,
+            -0.0067
+          ],
+          [
+            4.4016,
+            1.0282,
+            0.0,
+            4.5255
+          ],
+          [
+            4.8942,
+            2.9089,
+            4.657,
+            -2.7372
+          ],
+          [
+            4.4015,
+            2.75,
+            0.0004,
+            5.969
+          ],
+          [
+            4.5415,
+            0.429,
+            1.3232,
+            -2.2398
+          ],
+          [
+            4.8871,
+            0.4015,
+            4.7258,
+            -0.0
+          ],
+          [
+            4.4015,
+            3.1984,
+            -0.0,
+            -0.0
+          ],
+          [
+            4.4028,
+            2.3541,
+            0.1273,
+            5.6394
+          ],
+          [
+            4.4015,
+            3.1983,
+            -0.0,
+            -0.0001
+          ],
+          [
+            4.4017,
+            3.1983,
+            0.0,
+            -0.0
+          ]
+        ],
+        "ours": [
+          [
+            5.084784030914307,
+            1.968592882156372,
+            0.0,
+            0.0
+          ],
+          [
+            4.4018,
+            3.1983,
+            0.0,
+            -0.0
+          ],
+          [
+            4.8005,
+            2.7058,
+            3.771,
+            -4.657
+          ],
+          [
+            4.4015,
+            3.1985,
+            -0.0,
+            0.0
+          ],
+          [
+            4.6384,
+            1.1048,
+            2.2392,
+            -0.1101
+          ],
+          [
+            4.4011,
+            3.1985,
+            0.0184,
+            -0.0
+          ],
+          [
+            4.4015,
+            2.7909,
+            -0.0,
+            1.8056
+          ],
+          [
+            4.4015,
+            3.1985,
+            0.0,
+            0.0
+          ],
+          [
+            4.4016,
+            3.1982,
+            0.0,
+            -0.0
+          ],
+          [
+            4.4449,
+            3.1981,
+            0.4098,
+            -0.0
+          ],
+          [
+            4.5254,
+            2.6992,
+            1.17,
+            6.1259
+          ],
+          [
+            5.7527,
+            3.3091,
+            -1.7136,
+            3.6978
+          ],
+          [
+            1.5094,
+            5.1409,
+            -6.0084,
+            -0.5437
+          ],
+          [
+            2.1983,
+            6.1982,
+            -0.0,
+            0.0
+          ],
+          [
+            0.7334,
+            5.1748,
+            3.4464,
+            -1.8963
+          ],
+          [
+            0.8478,
+            6.091,
+            0.5874,
+            -1.014
+          ],
+          [
+            0.5032,
+            6.0857,
+            0.1441,
+            -1.0655
+          ],
+          [
+            0.7654,
+            6.198,
+            3.0088,
+            -0.0001
+          ],
+          [
+            0.8726,
+            6.099,
+            0.4414,
+            -0.9305
+          ],
+          [
+            0.9345,
+            6.1212,
+            2.2088,
+            -0.7188
+          ],
+          [
+            0.5391,
+            6.1649,
+            1.2969,
+            -0.316
+          ],
+          [
+            0.5646,
+            6.1982,
+            1.5378,
+            -0.0
+          ],
+          [
+            0.5868,
+            6.1982,
+            0.6313,
+            0.0
+          ],
+          [
+            1.5326,
+            5.725,
+            2.4606,
+            -0.0668
+          ],
+          [
+            1.3569,
+            6.1982,
+            1.2097,
+            0.0017
+          ],
+          [
+            1.8243,
+            5.7886,
+            3.6052,
+            1.4893
+          ],
+          [
+            1.1879,
+            5.5821,
+            -0.3255,
+            1.3398
+          ],
+          [
+            2.4068,
+            4.878,
+            2.1695,
+            -0.773
+          ]
+        ]
+      },
+      "late_window_statistics": {
+        "base": {
+          "first_replan": 7,
+          "last_replan": 30,
+          "endpoint_polyline_length": 18.23126353791086,
+          "net_displacement": 0.0002828427124742738,
+          "x_span": 0.49289999999999967,
+          "y_span": 2.7971,
+          "diameter": 2.8389391980104115,
+          "unit": "simulator units"
+        },
+        "ours": {
+          "first_replan": 7,
+          "last_replan": 27,
+          "endpoint_polyline_length": 16.07752024640305,
+          "net_displacement": 2.6075943587912596,
+          "x_span": 5.2495,
+          "y_span": 3.499,
+          "diameter": 5.944511636795743,
+          "unit": "simulator units"
+        }
+      },
+      "intervention_metadata": {
+        "space": "latent",
+        "kappa": 2.0,
+        "start": 4,
+        "window": 3,
+        "gamma_lo": 0.05,
+        "gamma_hi": 0.15,
+        "beta": 0.25,
+        "alpha": 1.0,
+        "base": 2.0,
+        "trigger": "movement",
+        "q": 0.2,
+        "theta": 0.0,
+        "prop_boost": 1.0,
+        "boost_replans": 2,
+        "only_samples": [
+          69,
+          70,
+          74,
+          75,
+          80,
+          81,
+          84,
+          85,
+          86
+        ]
+      },
+      "original_target_array_pairing_verified": true,
+      "explicit_outcome_check": {
+        "baseline": false,
+        "ours": true
+      },
+      "display_labels": {
+        "baseline": "AdaJEPA",
+        "ours": "Ours (AdaJEPA)"
+      }
+    },
+    "pushobj_tee": {
+      "shape": "small_tee",
+      "sample_idx": 9,
+      "baseline_path": "eval_outputs/stag_frozen_bias16k_it40/ref/chunk_24_small_tee",
+      "correction_path": "eval_outputs/stag_frozen_bias16k_it40/T0SP/chunk_24_small_tee",
+      "goal": [
+        173.03005981445312,
+        170.3878936767578,
+        164.8072509765625,
+        196.2773895263672,
+        1.3093205690383911,
+        -151.94992065429688,
+        19.054502487182617
+      ],
+      "states": {
+        "base": [
+          [
+            294.5530700683594,
+            329.153076171875,
+            310.6855773925781,
+            239.8258056640625,
+            2.1240243911743164,
+            0.0,
+            0.0
+          ],
+          [
+            322.074,
+            273.927,
+            310.686,
+            239.826,
+            2.124,
+            34.056,
+            -101.684
+          ],
+          [
+            322.247,
+            219.744,
+            298.98,
+            230.862,
+            2.08,
+            -45.29,
+            -68.722
+          ],
+          [
+            264.108,
+            186.0,
+            245.589,
+            198.598,
+            1.833,
+            -178.83,
+            -24.767
+          ],
+          [
+            223.309,
+            176.746,
+            207.273,
+            185.49,
+            1.693,
+            -106.333,
+            62.281
+          ],
+          [
+            191.401,
+            159.238,
+            177.069,
+            178.412,
+            1.564,
+            -134.504,
+            88.611
+          ],
+          [
+            186.191,
+            153.626,
+            172.094,
+            177.686,
+            1.545,
+            -151.598,
+            64.535
+          ],
+          [
+            185.494,
+            150.794,
+            170.158,
+            177.417,
+            1.537,
+            -154.343,
+            79.935
+          ],
+          [
+            185.945,
+            157.404,
+            168.703,
+            177.21,
+            1.53,
+            -159.532,
+            103.207
+          ],
+          [
+            184.987,
+            157.045,
+            168.703,
+            177.21,
+            1.53,
+            -168.829,
+            99.373
+          ],
+          [
+            184.348,
+            159.884,
+            167.539,
+            177.103,
+            1.526,
+            -165.227,
+            105.22
+          ],
+          [
+            184.114,
+            157.689,
+            167.008,
+            177.067,
+            1.525,
+            -166.189,
+            102.116
+          ],
+          [
+            184.482,
+            155.457,
+            166.924,
+            177.06,
+            1.524,
+            -173.107,
+            102.876
+          ],
+          [
+            185.483,
+            152.942,
+            166.924,
+            177.06,
+            1.524,
+            -176.845,
+            102.479
+          ],
+          [
+            185.956,
+            151.104,
+            166.924,
+            177.06,
+            1.524,
+            -179.387,
+            103.816
+          ],
+          [
+            187.081,
+            146.825,
+            166.924,
+            177.06,
+            1.524,
+            -185.852,
+            101.052
+          ],
+          [
+            188.488,
+            143.12,
+            166.924,
+            177.06,
+            1.524,
+            -184.418,
+            96.116
+          ],
+          [
+            189.511,
+            140.365,
+            166.924,
+            177.06,
+            1.524,
+            -184.752,
+            96.512
+          ],
+          [
+            189.617,
+            136.926,
+            166.924,
+            177.06,
+            1.524,
+            -188.018,
+            92.714
+          ],
+          [
+            189.87,
+            134.454,
+            166.924,
+            177.06,
+            1.524,
+            -180.321,
+            87.075
+          ],
+          [
+            190.726,
+            133.398,
+            166.924,
+            177.06,
+            1.524,
+            -180.731,
+            86.124
+          ],
+          [
+            190.688,
+            131.581,
+            166.924,
+            177.06,
+            1.524,
+            -183.757,
+            89.003
+          ],
+          [
+            190.285,
+            127.987,
+            166.924,
+            177.06,
+            1.524,
+            -186.028,
+            88.462
+          ],
+          [
+            191.284,
+            125.628,
+            166.924,
+            177.06,
+            1.524,
+            -184.776,
+            87.927
+          ],
+          [
+            191.149,
+            123.962,
+            166.924,
+            177.06,
+            1.524,
+            -187.541,
+            90.341
+          ],
+          [
+            191.412,
+            123.787,
+            166.924,
+            177.06,
+            1.524,
+            -187.235,
+            89.533
+          ],
+          [
+            191.41,
+            124.513,
+            166.924,
+            177.06,
+            1.524,
+            -183.5,
+            89.955
+          ],
+          [
+            191.272,
+            125.282,
+            166.924,
+            177.06,
+            1.524,
+            -182.2,
+            89.201
+          ],
+          [
+            191.221,
+            125.998,
+            166.924,
+            177.06,
+            1.524,
+            -182.315,
+            89.087
+          ],
+          [
+            191.097,
+            124.939,
+            166.924,
+            177.06,
+            1.524,
+            -186.027,
+            90.528
+          ],
+          [
+            191.156,
+            124.853,
+            166.924,
+            177.06,
+            1.524,
+            -185.165,
+            88.803
+          ]
+        ],
+        "ours": [
+          [
+            294.5530700683594,
+            329.153076171875,
+            310.6855773925781,
+            239.8258056640625,
+            2.1240243911743164,
+            0.0,
+            0.0
+          ],
+          [
+            322.074,
+            273.927,
+            310.686,
+            239.826,
+            2.124,
+            34.056,
+            -101.684
+          ],
+          [
+            322.247,
+            219.744,
+            298.98,
+            230.862,
+            2.08,
+            -45.29,
+            -68.722
+          ],
+          [
+            264.108,
+            186.0,
+            245.589,
+            198.598,
+            1.833,
+            -178.83,
+            -24.767
+          ],
+          [
+            223.309,
+            176.746,
+            207.273,
+            185.49,
+            1.693,
+            -106.333,
+            62.281
+          ],
+          [
+            191.401,
+            159.238,
+            177.069,
+            178.412,
+            1.564,
+            -134.504,
+            88.611
+          ],
+          [
+            186.191,
+            153.626,
+            172.094,
+            177.686,
+            1.545,
+            -151.598,
+            64.535
+          ],
+          [
+            185.494,
+            150.794,
+            170.158,
+            177.417,
+            1.537,
+            -154.343,
+            79.935
+          ],
+          [
+            185.945,
+            157.404,
+            168.703,
+            177.21,
+            1.53,
+            -159.532,
+            103.207
+          ],
+          [
+            184.987,
+            157.045,
+            168.703,
+            177.21,
+            1.53,
+            -168.829,
+            99.373
+          ],
+          [
+            184.348,
+            159.884,
+            167.539,
+            177.103,
+            1.526,
+            -165.227,
+            105.22
+          ],
+          [
+            184.114,
+            157.689,
+            167.008,
+            177.067,
+            1.525,
+            -166.189,
+            102.116
+          ],
+          [
+            179.295,
+            165.751,
+            165.273,
+            177.0,
+            1.521,
+            -140.561,
+            24.044
+          ],
+          [
+            179.85,
+            163.784,
+            163.067,
+            176.946,
+            1.517,
+            -145.181,
+            19.327
+          ],
+          [
+            177.105,
+            167.927,
+            163.067,
+            176.946,
+            1.517,
+            -139.406,
+            28.616
+          ]
+        ]
+      },
+      "matching_action_and_state_prefix_replans": 11,
+      "baseline_condition": "frozen MPC",
+      "correction": "S+P",
+      "original_target_array_pairing_verified": true,
+      "explicit_outcome_check": {
+        "baseline": false,
+        "ours": true
+      },
+      "frames": {
+        "start": {
+          "path": "figures/trajectory_frames/pushobj_tee_start.png",
+          "sha256": "217e1bcbdf5083e1054ebd44e07dc8d294c853c32c0262f683894aa614c01b6f"
+        },
+        "before": {
+          "path": "figures/trajectory_frames/pushobj_tee_before.png",
+          "sha256": "1710cf4b9e87448ddadf99cdd0e9a0e95938506e9409abb3288ec748a113f3a1"
+        },
+        "base": {
+          "path": "figures/trajectory_frames/pushobj_tee_base.png",
+          "sha256": "34eab8f42e0962774ffd9cf8132b3478442c24292ba531b9fec5ddfbb4750cbe"
+        },
+        "ours": {
+          "path": "figures/trajectory_frames/pushobj_tee_ours.png",
+          "sha256": "3dfa7c6786ecd1c45a472cb7cd14b7eca7aab52a09c29a5c054e38988df66cf7"
+        }
+      },
+      "display_labels": {
+        "baseline": "Frozen",
+        "ours": "Ours (frozen)"
+      }
+    }
+  },
+  "coordinate_transforms": {
+    "pushobj": {
+      "formula": "image_x=x, image_y=y (Pygame native 512x512 coordinates)",
+      "crop_xyxy": [
+        10,
+        20,
+        300,
+        390
+      ],
+      "equal_axis_scale": true
+    },
+    "maze": {
+      "formula": "pixel_xy=256 + s*(qpos_xy + body_offset_xy - camera_xy). Native MuJoCo array is bottom-up; displayed without flip, preserving original observations.",
+      "camera_lookat": [
+        5.0,
+        4.0,
+        0.0
+      ],
+      "camera_position": [
+        5.0,
+        4.0,
+        12.734847068786621
+      ],
+      "azimuth": 90.0,
+      "elevation": -90.0,
+      "fovy": 45.0,
+      "scale_pixels_per_world_unit": 48.53129913306436,
+      "body_offset_xy": [
+        1.1999999999999997,
+        1.2000000000000002
+      ],
+      "crop_xyxy": [
+        16,
+        64,
+        450,
+        494
+      ],
+      "equal_axis_scale": true,
+      "registration_checks": [
+        {
+          "frame": "maze_start",
+          "observed_green_pixel_centroid": [
+            317.8854166666667,
+            215.04861111111111
+          ],
+          "projected_center": [
+            318.35223812568637,
+            215.65073246257202
+          ],
+          "error_pixels": 0.7618873909485427
+        },
+        {
+          "frame": "maze_goal",
+          "observed_green_pixel_centroid": [
+            168.7438596491228,
+            365.9017543859649
+          ],
+          "projected_center": [
+            169.19757714507173,
+            366.3166855607029
+          ],
+          "error_pixels": 0.6148393659319625
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "figures/fig1_trajectory_cases.pdf": {
+      "sha256": "0d61366640e7d8bc6d0217f6856ce5e8f0992ec538c846ee08212910b4bc1ca9",
+      "width_inches": 6.875,
+      "height_inches": 3.75,
+      "minimum_font_pt": 8
+    },
+    "figures/svg/fig1_trajectory_cases.svg": {
+      "sha256": "a7d8057ee702a20610d52e6a323178828b34da78be9b6a3affaadfc7fe6c345d",
+      "width_inches": 6.875,
+      "height_inches": 3.75,
+      "minimum_font_pt": 8
+    },
+    "figures/previews/fig1_trajectory_cases.png": {
+      "sha256": "f93c641e6faea9dc5536f6681f8cc22402ac8cd8fa45d3959e31e217bc1ddf87",
+      "width_inches": 6.875,
+      "height_inches": 3.75,
+      "minimum_font_pt": 8
+    },
+    "figures/figS_pushobj_timeline_v8.pdf": {
+      "sha256": "d258fdaa362c5436a1c5063f4c9653d5b4aea5ad90f943db20ea4e598075c96e",
+      "width_inches": 6.875,
+      "height_inches": 2.65,
+      "minimum_font_pt": 8
+    },
+    "figures/svg/figS_pushobj_timeline_v8.svg": {
+      "sha256": "c48750a05b23fa8ab33a540707d579660d180a1c58cafdb6bda6604e8722a08f",
+      "width_inches": 6.875,
+      "height_inches": 2.65,
+      "minimum_font_pt": 8
+    },
+    "figures/previews/figS_pushobj_timeline_v8.png": {
+      "sha256": "cc90505bf27d46b513475a2c273698c876787ecc435eaa3ed70c22d2b1df0592",
+      "width_inches": 6.875,
+      "height_inches": 2.65,
+      "minimum_font_pt": 8
+    },
+    "figures/fig5_execution_recovery.pdf": {
+      "sha256": "c29a711ddcfde7413beb3f4d79a6eaae6a0606660e7d919875502321ddbb8781",
+      "width_inches": 6.875,
+      "height_inches": 2.7,
+      "minimum_font_pt": 8
+    },
+    "figures/svg/fig5_execution_recovery.svg": {
+      "sha256": "49d467b7a2931f3c8d5824450d5815b34c9d55fd143e8ac69760f67680d6bae6",
+      "width_inches": 6.875,
+      "height_inches": 2.7,
+      "minimum_font_pt": 8
+    },
+    "figures/previews/fig5_execution_recovery.png": {
+      "sha256": "08a32f243e2f9aebb519cc4aa7e6c137741e3cae57e5b78a56088af7e0873aa7",
+      "width_inches": 6.875,
+      "height_inches": 2.7,
+      "minimum_font_pt": 8
+    }
+  },
+  "generator_sha256": "3f457032e7e5d07b8fa6e7c313189c5a4a1d8142d3df5142cf555cec4a3e2e75",
+  "additional_frozen_maze_search": {
+    "found": "stag_maze100/medium/frozen/{ref,T0SP}",
+    "rescued_sample_ids": [
+      64,
+      71,
+      95,
+      13
+    ],
+    "decision": "Not used: this earlier action-repeat condition differs from the corrected action-repeat-4 main results. The Maze figure accurately retains AdaJEPA / Ours (AdaJEPA) labels."
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "integration_passed": true,
+  "bf16_implementation_approved": true,
+  "cross_precision_actions_equivalent": false,
+  "closed_loop_accuracy_equivalence_established": false,
+  "scope": "Implementation validation: real I/T starts, two checkpoints, full 200x10 CEM, 4 replans; forced ECP activation. This does not establish full-task FP32/BF16 accuracy equivalence. BF16 full runs form a separate homogeneous protocol.",
+  "checks": [
+    {
+      "arm": "ordinary",
+      "precision": "fp32",
+      "paired_targets_equal": true,
+      "pretrigger_actions_identical": true,
+      "forced_trigger": 2,
+      "penalty_evaluated": true,
+      "proprio_boost_exercised": true,
+      "selected_plan_positive_penalty_records": 0,
+      "weights_unchanged": true,
+      "native_seconds": 174.05051306076348,
+      "ecp_seconds": 174.00273509137332
+    },
+    {
+      "arm": "ordinary",
+      "precision": "bf16",
+      "paired_targets_equal": true,
+      "pretrigger_actions_identical": true,
+      "forced_trigger": 2,
+      "penalty_evaluated": true,
+      "proprio_boost_exercised": true,
+      "selected_plan_positive_penalty_records": 0,
+      "weights_unchanged": true,
+      "native_seconds": 52.12489875219762,
+      "ecp_seconds": 52.54956741258502
+    },
+    {
+      "arm": "augmented",
+      "precision": "fp32",
+      "paired_targets_equal": true,
+      "pretrigger_actions_identical": true,
+      "forced_trigger": 2,
+      "penalty_evaluated": true,
+      "proprio_boost_exercised": true,
+      "selected_plan_positive_penalty_records": 1,
+      "weights_unchanged": true,
+      "native_seconds": 172.84029924310744,
+      "ecp_seconds": 174.03459534049034
+    },
+    {
+      "arm": "augmented",
+      "precision": "bf16",
+      "paired_targets_equal": true,
+      "pretrigger_actions_identical": true,
+      "forced_trigger": 2,
+      "penalty_evaluated": true,
+      "proprio_boost_exercised": true,
+      "selected_plan_positive_penalty_records": 1,
+      "weights_unchanged": true,
+      "native_seconds": 52.41923456825316,
+      "ecp_seconds": 52.729395028203726
+    }
+  ],
+  "cross_precision_short_rollouts": [
+    {
+      "arm": "ordinary",
+      "actions_identical": false,
+      "action_rms_difference": 0.6165549159049988,
+      "fp32_short_check_successes": [
+        false,
+        false
+      ],
+      "bf16_short_check_successes": [
+        false,
+        false
+      ],
+      "not_a_full_task_success_comparison": true
+    },
+    {
+      "arm": "augmented",
+      "actions_identical": false,
+      "action_rms_difference": 0.8724908828735352,
+      "fp32_short_check_successes": [
+        false,
+        false
+      ],
+      "bf16_short_check_successes": [
+        false,
+        false
+      ],
+      "not_a_full_task_success_comparison": true
+    }
+  ],
+  "full_cem_saved_state_checks": [
+    {
+      "arm": "ordinary",
+      "rows": [
+        {
+          "sample_idx": 0,
+          "seconds": {
+            "fp32": 21.352772580459714,
+            "bf16": 6.3516861367970705
+          },
+          "speedup": 3.3617486948476896,
+          "actions_finite": true,
+          "action_rms_difference": 0.2969678044319153,
+          "executed_action_rms_difference": 0.1736958920955658,
+          "max_action_difference": 1.0746605396270752,
+          "fp32_rescored_costs": {
+            "fp32": 0.7708053588867188,
+            "bf16": 0.7712887525558472
+          },
+          "relative_cost_increase": 0.0006271280597044471,
+          "actions_identical": false
+        },
+        {
+          "sample_idx": 5,
+          "seconds": {
+            "fp32": 21.42785539664328,
+            "bf16": 6.2619950994849205
+          },
+          "speedup": 3.421889518630544,
+          "actions_finite": true,
+          "action_rms_difference": 0.36223241686820984,
+          "executed_action_rms_difference": 0.3193282186985016,
+          "max_action_difference": 0.9004158973693848,
+          "fp32_rescored_costs": {
+            "fp32": 0.6578848958015442,
+            "bf16": 0.6615078449249268
+          },
+          "relative_cost_increase": 0.005506965042826363,
+          "actions_identical": false
+        }
+      ],
+      "frozen_weights_unchanged": true,
+      "interpretation": "Numerical diagnostic, not closed-loop success equivalence."
+    },
+    {
+      "arm": "augmented",
+      "rows": [
+        {
+          "sample_idx": 0,
+          "seconds": {
+            "fp32": 21.304367231205106,
+            "bf16": 6.289156835526228
+          },
+          "speedup": 3.3874759031068944,
+          "actions_finite": true,
+          "action_rms_difference": 0.28798988461494446,
+          "executed_action_rms_difference": 0.13154631853103638,
+          "max_action_difference": 1.1117243766784668,
+          "fp32_rescored_costs": {
+            "fp32": 0.6196625828742981,
+            "bf16": 0.6170508861541748
+          },
+          "relative_cost_increase": -0.004214707797926033,
+          "actions_identical": false
+        },
+        {
+          "sample_idx": 5,
+          "seconds": {
+            "fp32": 21.377580400556326,
+            "bf16": 6.273899804800749
+          },
+          "speedup": 3.4073831373906125,
+          "actions_finite": true,
+          "action_rms_difference": 0.3647693693637848,
+          "executed_action_rms_difference": 0.27112284302711487,
+          "max_action_difference": 0.970059871673584,
+          "fp32_rescored_costs": {
+            "fp32": 0.7043316960334778,
+            "bf16": 0.6848787665367126
+          },
+          "relative_cost_increase": -0.027618989186936314,
+          "actions_identical": false
+        }
+      ],
+      "frozen_weights_unchanged": true,
+      "interpretation": "Numerical diagnostic, not closed-loop success equivalence."
+    }
+  ],
+  "memory_and_penalty_validation": {
+    "passed": true,
+    "candidate_batch": 64,
+    "horizon_model_steps": 5,
+    "memory_entries": 20,
+    "reserved_model_allowance_gib": 1,
+    "memory_limit_gib": 8,
+    "peak_allocated_gib": 4.703157901763916,
+    "finite_penalty": true,
+    "stay_penalty": 0.3333333432674408,
+    "goal_penalty": 0.0
+  },
+  "updated_utc": "2026-11-10T02:23:47.270993+00:00",
+  "deployment_source_sha256": {
+    "evaluate.py": "3f221ee1374d6dce89e1515707d5e61c8e65a808e64e9ff10f0957ce6656b8d7",
+    "cem_memory.py": "3cb8e27dbd55a4c4ed94bfca1c68cae3149899f481f85a9db84f9bfe52ef3cc5"
+  },
+  "post_integration_change": "Memory allocator limit increased from 4 to 8 GiB; computation unchanged. Stress check passed at 4.703 GiB including 1 GiB model allowance."
+}

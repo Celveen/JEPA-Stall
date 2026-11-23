@@ -1,0 +1,53 @@
+{
+  "reference_mean_CD": 0.4909771237522363,
+  "chunks": [
+    {
+      "chunk": 0,
+      "reference_CD": 0.6530689802020788,
+      "targets_identical": true,
+      "first_plan_max_action_difference": 8.328939437866211
+    },
+    {
+      "chunk": 1,
+      "reference_CD": 0.5987962573766709,
+      "targets_identical": true,
+      "first_plan_max_action_difference": 4.948945999145508
+    },
+    {
+      "chunk": 2,
+      "reference_CD": 0.49655110836029054,
+      "targets_identical": true,
+      "first_plan_max_action_difference": 5.083873271942139
+    },
+    {
+      "chunk": 3,
+      "reference_CD": 0.460671229660511,
+      "targets_identical": true,
+      "first_plan_max_action_difference": 5.629842758178711
+    },
+    {
+      "chunk": 4,
+      "reference_CD": 0.24579804316163062,
+      "targets_identical": true,
+      "first_plan_max_action_difference": 3.937066078186035
+    }
+  ],
+  "status": "confirmed_loader_error",
+  "checkpoint_contains_encoder": false,
+  "checkpoint_keys": [
+    "epoch",
+    "predictor",
+    "predictor_optimizer",
+    "decoder",
+    "decoder_optimizer",
+    "action_encoder",
+    "proprio_encoder",
+    "action_encoder_optimizer"
+  ],
+  "official_encoder_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+  "old_pilot_mean_cd": 1.83849134,
+  "original_reference_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "cancelled_run": "eval_outputs/rope_feedback_cd03",
+  "valid_rerun": "eval_outputs/rope_feedback_pretrained_cd03",
+  "paper_policy": "Internal reproducibility audit only. Do not cite the unpublished SE-JEPA manuscript in the current paper."
+}

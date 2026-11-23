@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "timestamp": "2026-11-16T12:50:36.186514+08:00",
+  "source_and_input_hashes_verified": true,
+  "native_and_ecp_planners_importable": true,
+  "completed_epoch_3_checkpoint_loads_in_original_evaluation_code_on_cpu": true,
+  "model_parameters": 18034478,
+  "reference_physics_checks": [
+    {
+      "shape": "I",
+      "reference_episode_replay_matched": true,
+      "all_50_reference_pre_intervention_prefixes_match": true
+    },
+    {
+      "shape": "L",
+      "reference_episode_replay_matched": true,
+      "all_50_reference_pre_intervention_prefixes_match": true
+    },
+    {
+      "shape": "square",
+      "reference_episode_replay_matched": true,
+      "all_50_reference_pre_intervention_prefixes_match": true
+    },
+    {
+      "shape": "Z",
+      "reference_episode_replay_matched": true,
+      "all_50_reference_pre_intervention_prefixes_match": true
+    },
+    {
+      "shape": "small_tee",
+      "reference_episode_replay_matched": true,
+      "all_50_reference_pre_intervention_prefixes_match": true
+    },
+    {
+      "shape": "plus",
+      "reference_episode_replay_matched": true,
+      "all_50_reference_pre_intervention_prefixes_match": true
+    },
+    {
+      "shape": "T",
+      "reference_episode_replay_matched": true,
+      "all_50_reference_pre_intervention_prefixes_match": true
+    }
+  ],
+  "new_model_planning_evaluations_started": 0,
+  "final_epoch_10_required_by_queue": true
+}

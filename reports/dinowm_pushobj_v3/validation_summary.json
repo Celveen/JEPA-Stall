@@ -1,0 +1,164 @@
+{
+  "integration_passed": true,
+  "bf16_implementation_approved": true,
+  "cross_precision_actions_equivalent": false,
+  "closed_loop_accuracy_equivalence_established": false,
+  "scope": "New real-simulator cadence checks: I/T starts, both checkpoints, native/forced ECP, 200x10 CEM, up to 6 plans executing 25 controls each. Integration-only outcomes are excluded from benchmark totals. FP32 complete-task spot checks are separate.",
+  "history_sampling_test_passed": true,
+  "checks": [
+    {
+      "arm": "ordinary",
+      "precision": "bf16",
+      "paired_targets_equal": true,
+      "pretrigger_actions_identical": true,
+      "pretrigger_control_cap": 50,
+      "activated_episodes": 1,
+      "early_success_before_activation": 1,
+      "forced_trigger_replan_index": 2,
+      "penalty_evaluated": true,
+      "proprio_boost_exercised": true,
+      "detector_window_controls": 15,
+      "weights_unchanged": true,
+      "selected_plan_positive_penalty_records": 3,
+      "native_seconds": 49.58878896012902,
+      "ecp_seconds": 50.00434181652963
+    },
+    {
+      "arm": "augmented",
+      "precision": "bf16",
+      "paired_targets_equal": true,
+      "pretrigger_actions_identical": true,
+      "pretrigger_control_cap": 50,
+      "activated_episodes": 0,
+      "early_success_before_activation": 2,
+      "forced_trigger_replan_index": null,
+      "penalty_evaluated": false,
+      "proprio_boost_exercised": false,
+      "detector_window_controls": 15,
+      "weights_unchanged": true,
+      "selected_plan_positive_penalty_records": 0,
+      "native_seconds": 21.20238434895873,
+      "ecp_seconds": 21.29368181526661
+    }
+  ],
+  "reused_kernel_validation": [
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/validation/ordinary_precision.json",
+      "sha256": "4acb234b033ddea86efda45774a9bf26e43e501ae2f169054e9fc44c1d39a982",
+      "validation": {
+        "arm": "ordinary",
+        "rows": [
+          {
+            "sample_idx": 0,
+            "seconds": {
+              "fp32": 21.352772580459714,
+              "bf16": 6.3516861367970705
+            },
+            "speedup": 3.3617486948476896,
+            "actions_finite": true,
+            "action_rms_difference": 0.2969678044319153,
+            "executed_action_rms_difference": 0.1736958920955658,
+            "max_action_difference": 1.0746605396270752,
+            "fp32_rescored_costs": {
+              "fp32": 0.7708053588867188,
+              "bf16": 0.7712887525558472
+            },
+            "relative_cost_increase": 0.0006271280597044471,
+            "actions_identical": false
+          },
+          {
+            "sample_idx": 5,
+            "seconds": {
+              "fp32": 21.42785539664328,
+              "bf16": 6.2619950994849205
+            },
+            "speedup": 3.421889518630544,
+            "actions_finite": true,
+            "action_rms_difference": 0.36223241686820984,
+            "executed_action_rms_difference": 0.3193282186985016,
+            "max_action_difference": 0.9004158973693848,
+            "fp32_rescored_costs": {
+              "fp32": 0.6578848958015442,
+              "bf16": 0.6615078449249268
+            },
+            "relative_cost_increase": 0.005506965042826363,
+            "actions_identical": false
+          }
+        ],
+        "frozen_weights_unchanged": true,
+        "interpretation": "Numerical diagnostic, not closed-loop success equivalence."
+      }
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/validation/augmented_precision.json",
+      "sha256": "c9e918de3545ab33cae232cb14982467027b0f5819b9517910ef4df2406d48c0",
+      "validation": {
+        "arm": "augmented",
+        "rows": [
+          {
+            "sample_idx": 0,
+            "seconds": {
+              "fp32": 21.304367231205106,
+              "bf16": 6.289156835526228
+            },
+            "speedup": 3.3874759031068944,
+            "actions_finite": true,
+            "action_rms_difference": 0.28798988461494446,
+            "executed_action_rms_difference": 0.13154631853103638,
+            "max_action_difference": 1.1117243766784668,
+            "fp32_rescored_costs": {
+              "fp32": 0.6196625828742981,
+              "bf16": 0.6170508861541748
+            },
+            "relative_cost_increase": -0.004214707797926033,
+            "actions_identical": false
+          },
+          {
+            "sample_idx": 5,
+            "seconds": {
+              "fp32": 21.377580400556326,
+              "bf16": 6.273899804800749
+            },
+            "speedup": 3.4073831373906125,
+            "actions_finite": true,
+            "action_rms_difference": 0.3647693693637848,
+            "executed_action_rms_difference": 0.27112284302711487,
+            "max_action_difference": 0.970059871673584,
+            "fp32_rescored_costs": {
+              "fp32": 0.7043316960334778,
+              "bf16": 0.6848787665367126
+            },
+            "relative_cost_increase": -0.027618989186936314,
+            "actions_identical": false
+          }
+        ],
+        "frozen_weights_unchanged": true,
+        "interpretation": "Numerical diagnostic, not closed-loop success equivalence."
+      }
+    },
+    {
+      "path": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/memory_validation.json",
+      "sha256": "1ffa6ff96d70bbf99900cf3f2ec6ab2ce457be9211e6efc913f1510a3e6fe5f2",
+      "validation": {
+        "passed": true,
+        "candidate_batch": 64,
+        "horizon_model_steps": 5,
+        "memory_entries": 20,
+        "reserved_model_allowance_gib": 1,
+        "memory_limit_gib": 8,
+        "peak_allocated_gib": 4.703157901763916,
+        "finite_penalty": true,
+        "stay_penalty": 0.3333333432674408,
+        "goal_penalty": 0.0
+      }
+    }
+  ],
+  "reused_evidence_scope": "Unchanged candidate rollout, objective and penalty kernels; original precision/memory checks were not rerun. Execution cadence is validated by the new simulator checks above.",
+  "source_sha256": {
+    "evaluate.py": "cfc892501825f55cb54217b6a7bcfeaa0e3f93ace408a61380feb1bf4aa534cb",
+    "cem_memory.py": "3cb8e27dbd55a4c4ed94bfca1c68cae3149899f481f85a9db84f9bfe52ef3cc5",
+    "physical_stagnation.py": "919cdc9f67b9129097fc308c118773280035cc1f142e5fe2f051c0f2c786a63c"
+  },
+  "protocol_sha256": "054170296d39ff40e4a528cb39b3ea0cb3d2d86c34efdf934120e4fdceced7c4",
+  "updated_utc": "2026-11-10T02:50:11.307746+00:00"
+}

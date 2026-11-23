@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "only_protocol_change": "max_iter: 20 -> 15",
+  "same_targets_models_seeds_and_other_config": true,
+  "changed_source_files": [
+    "experiments/rope_chunk3/worker.py"
+  ],
+  "original_worker_snapshot": "reports/rope_chunk3_strength_20261116/source/worker.py.txt",
+  "new_root": "eval_outputs/rope_chunk3_cap15",
+  "worker_limit": 15
+}

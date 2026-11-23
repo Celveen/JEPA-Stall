@@ -1,0 +1,252 @@
+{
+  "status": "complete",
+  "total_tasks": 14,
+  "completed_tasks": 14,
+  "gpu": 4,
+  "tasks": [
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_00_I",
+      "source_sha256": "713e89ed146994300ef5951798e5ed147bf134aac9457032b9c919fda2268ed7",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_00_I",
+      "complete": true
+    },
+    {
+      "arm": "augmented",
+      "source_chunk": "chunk_00_I",
+      "source_sha256": "713e89ed146994300ef5951798e5ed147bf134aac9457032b9c919fda2268ed7",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_00_I",
+      "complete": true
+    },
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_05_L",
+      "source_sha256": "5be7a55169c0e21abcc09e7ffe3edc678c35529463d798eda42f7c418bd53d32",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_05_L",
+      "complete": true
+    },
+    {
+      "arm": "augmented",
+      "source_chunk": "chunk_05_L",
+      "source_sha256": "5be7a55169c0e21abcc09e7ffe3edc678c35529463d798eda42f7c418bd53d32",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_05_L",
+      "complete": true
+    },
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_10_square",
+      "source_sha256": "92acfbbe5b5dbd69dbaa1996412cfa1bb26e00ae01ed8288501e135cc7975456",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_10_square",
+      "complete": true
+    },
+    {
+      "arm": "augmented",
+      "source_chunk": "chunk_10_square",
+      "source_sha256": "92acfbbe5b5dbd69dbaa1996412cfa1bb26e00ae01ed8288501e135cc7975456",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_10_square",
+      "complete": true
+    },
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_15_Z",
+      "source_sha256": "aeb681a330ff6414cf172bc2013a23869d3cadc23d92053c1cf75bb579af16b4",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_15_Z",
+      "complete": true
+    },
+    {
+      "arm": "augmented",
+      "source_chunk": "chunk_15_Z",
+      "source_sha256": "aeb681a330ff6414cf172bc2013a23869d3cadc23d92053c1cf75bb579af16b4",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_15_Z",
+      "complete": true
+    },
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_20_small_tee",
+      "source_sha256": "ff78c36c1b4e51aa7518359322e90aba7e52c7b90088775a5262e022ae7c6c56",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_20_small_tee",
+      "complete": true
+    },
+    {
+      "arm": "augmented",
+      "source_chunk": "chunk_20_small_tee",
+      "source_sha256": "ff78c36c1b4e51aa7518359322e90aba7e52c7b90088775a5262e022ae7c6c56",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_20_small_tee",
+      "complete": true
+    },
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_25_plus",
+      "source_sha256": "addf3cc0f697e2ad69db07034e2f9b5ab8882fcff56d160317e900a32f96dc45",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_25_plus",
+      "complete": true
+    },
+    {
+      "arm": "augmented",
+      "source_chunk": "chunk_25_plus",
+      "source_sha256": "addf3cc0f697e2ad69db07034e2f9b5ab8882fcff56d160317e900a32f96dc45",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_25_plus",
+      "complete": true
+    },
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_30_T",
+      "source_sha256": "8dcc71f3b05e08f29d63997f0a2afe8e959f9857a1c7d292bd8c909739e28e95",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/ordinary/chunk_30_T",
+      "complete": true
+    },
+    {
+      "arm": "augmented",
+      "source_chunk": "chunk_30_T",
+      "source_sha256": "8dcc71f3b05e08f29d63997f0a2afe8e959f9857a1c7d292bd8c909739e28e95",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_30_T",
+      "complete": true
+    }
+  ],
+  "updated_utc": "2026-11-10T03:16:45.340367+00:00",
+  "current_job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/augmented/chunk_30_T",
+  "worker_pid": 187296,
+  "comparisons": [
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_00_I",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_00_I",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_05_L",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_05_L",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_10_square",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_10_square",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_15_Z",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_15_Z",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_20_small_tee",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_20_small_tee",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_25_plus",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_25_plus",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "ordinary",
+      "chunk": "chunk_30_T",
+      "sample_idx": 0,
+      "fp32_success": false,
+      "bf16_success": false,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    },
+    {
+      "arm": "augmented",
+      "chunk": "chunk_30_T",
+      "sample_idx": 0,
+      "fp32_success": true,
+      "bf16_success": true,
+      "bf16_rescue": false,
+      "bf16_regression": false
+    }
+  ],
+  "summary": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v3/precision_confirmation/summary.json"
+}

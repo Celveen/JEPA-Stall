@@ -1,0 +1,55 @@
+{
+  "figure": "PushObj staged improvements",
+  "protocol": {
+    "dataset": "PushObj",
+    "tasks": 350,
+    "max_mpc_replans": 30,
+    "reference": "Local matched reevaluation of the released checkpoint",
+    "final_planning_method": "ECP (S + P)",
+    "uncertainty": "Not plotted: each bar is an aggregate success rate on one shared task list, not a mean across independent training runs",
+    "data_augmentation_definition": "Interaction-biased collection using action bias, noise and the documented collection/filtering recipe; not image-only augmentation."
+  },
+  "source_evidence": [
+    "provenance/results_audit_v4.md",
+    "provenance/results_counts_v4.json",
+    "sections/experiments.tex"
+  ],
+  "series": [
+    {
+      "key": "released",
+      "label": "Released",
+      "color": "#A8B9C8"
+    },
+    {
+      "key": "our_data",
+      "label": "Data augmentation",
+      "color": "#477C82"
+    },
+    {
+      "key": "our_data_ecp",
+      "label": "Data augmentation + ECP",
+      "color": "#D99270"
+    }
+  ],
+  "groups": [
+    {
+      "label": "Frozen",
+      "denominator": 350,
+      "success_counts": [
+        153,
+        214,
+        253
+      ]
+    },
+    {
+      "label": "AdaJEPA",
+      "denominator": 350,
+      "success_counts": [
+        243,
+        262,
+        269
+      ]
+    }
+  ],
+  "interpretation": "Training-data and planning changes improve both frozen and adaptive control settings; these are not distinct model architectures or matched comparisons against other world-model families."
+}

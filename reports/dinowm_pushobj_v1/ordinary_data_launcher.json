@@ -1,0 +1,19 @@
+{
+  "pid": 3107218,
+  "command": [
+    "/home/appuser/anaconda3/envs/ts/bin/python",
+    "-u",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v1/generate_ordinary.py",
+    "--repo",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall",
+    "--augmented",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/pushobj_bias_16k",
+    "--output",
+    "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/dinowm_pushobj_ordinary_matched16k_v1",
+    "--workers",
+    "24"
+  ],
+  "started_utc": "2026-11-09T08:01:43.166690+00:00",
+  "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/data/dinowm_pushobj_ordinary_matched16k_v1",
+  "status": "running"
+}

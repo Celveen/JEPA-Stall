@@ -1,0 +1,36 @@
+{
+  "native_per_push": {
+    "total_pushes": 157,
+    "episode_evaluation_seconds_sum": 4871.042809664039,
+    "planning_seconds_sum": 1534.3211941699847,
+    "other_seconds_sum": 3336.7216154940543,
+    "mean_push_path_length": 7.386265675733044,
+    "max_push_path_length": 26.44213104248047,
+    "source": "eval_outputs/rope_feedback_pretrained_cd03/native/chunk_00"
+  },
+  "native3": {
+    "total_pushes": 110,
+    "episode_evaluation_seconds_sum": 1596.5558378921123,
+    "planning_seconds_sum": 254.99132619524607,
+    "other_seconds_sum": 1341.5645116968662,
+    "mean_push_path_length": 3.9833445917476307,
+    "max_push_path_length": 14.95387077331543,
+    "source": "eval_outputs/rope_chunk3_strength_v2/native3"
+  },
+  "native5": {
+    "total_pushes": 124,
+    "episode_evaluation_seconds_sum": 1520.2921532510081,
+    "planning_seconds_sum": 249.35206062695943,
+    "other_seconds_sum": 1270.9400926240487,
+    "mean_push_path_length": 3.2451593462497956,
+    "max_push_path_length": 10.757305145263672,
+    "source": "eval_outputs/rope_chunk3_strength_v2/native5"
+  },
+  "notes": [
+    "Elapsed sums exclude model/environment startup and queue waiting.",
+    "Non-planning time includes physics, observation, detector, and bookkeeping.",
+    "The per-push and chunk protocols also differ in episode isolation and random stream organization.",
+    "S timings are excluded: shared Native prefix trajectories make their runtime unsuitable as standalone deployment speed.",
+    "Simulator step count scales with movement length: robot_speed_inv=300, plus settling and reset steps."
+  ]
+}

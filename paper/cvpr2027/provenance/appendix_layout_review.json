@@ -1,0 +1,171 @@
+{
+  "combined_pages": 21,
+  "appendix_pages": 11,
+  "tables": 21,
+  "figures": 13,
+  "displayed_equations": 16,
+  "data_tables_unchanged": 16,
+  "submitted_main_pixel_identical": true,
+  "submitted_main_sha256": "d7940da15bfac296c7bacdb934f94a86af678f98e9d641f2daead3b915aa2d7a",
+  "all_fonts_embedded": true,
+  "float_or_box_overflow": false,
+  "bibliography_entries": 47,
+  "bibliography_citation_pages_preserved": true,
+  "all_pdf_links_verified": true,
+  "appendix_figure_widths": {
+    "figS_pushobj_distance.pdf": "\\columnwidth",
+    "figS_rope_success_budget.pdf": "\\columnwidth",
+    "figS_rope_rollouts.pdf": "\\textwidth",
+    "figS_diverse_execution_maze.pdf": "\\textwidth",
+    "figS_pusht_rollouts.pdf": "\\textwidth",
+    "figS_maze_detour_rollout.pdf": "\\textwidth"
+  },
+  "figure_11": {
+    "source_sha256": "af496abbd45380fd53a55a870208989eeff4024ea58b4f33989da66012a9431c",
+    "output_sha256": "b4855b78c2bc4ffb80df3568767e65f47689f5616184e72f4797f672d54376bb",
+    "retained_panels": "a-j",
+    "removed_panels": [
+      "k",
+      "l"
+    ],
+    "retained_region_pixel_identical_at_144dpi": true,
+    "size_points": [
+      495.0,
+      419.18402099609375
+    ],
+    "image_count": 40
+  },
+  "pdf_hyperlinks_verified": 354,
+  "main_pdf_sources_edited": false,
+  "pdf_named_destinations": 164,
+  "four_frame_sequences": {
+    "10": {
+      "execution_columns": 4,
+      "shared_references": "left column, start above goal",
+      "frame_side_inches": 1.1,
+      "recorded_scene_count": 20,
+      "source_pixel_checks_passed": true,
+      "sha256": "c76fa2d61c31c5930643e0d4582c4702e7b17b02fac1a2fc7191aa61780c0ab0",
+      "push_indices": [
+        6,
+        12,
+        16,
+        20
+      ],
+      "reference_separator": {
+        "color": "#D5DBDD",
+        "width_points": 0.8
+      }
+    },
+    "12": {
+      "execution_columns": 4,
+      "shared_references": "left column, start above goal",
+      "frame_side_inches": 1.1,
+      "recorded_scene_count": 20,
+      "source_pixel_checks_passed": true,
+      "sha256": "9d7ffacb433479342ae55f1f2fc5fc1759b91b7039b9d8f50409d6ae3ac6c572",
+      "controls": {
+        "red_agent": {
+          "native": [
+            50,
+            75,
+            100,
+            150
+          ],
+          "ours": [
+            50,
+            75,
+            100,
+            140
+          ]
+        },
+        "red_goal": {
+          "native": [
+            40,
+            60,
+            62,
+            150
+          ],
+          "ours": [
+            40,
+            60,
+            62,
+            65
+          ]
+        }
+      },
+      "reference_separator": {
+        "color": "#D5DBDD",
+        "width_points": 0.8
+      }
+    }
+  },
+  "column_bottom_alignment": {
+    "13": {
+      "before": {
+        "bottom_y_points": [
+          713.41,
+          711.8
+        ],
+        "column_end_difference_points": 1.61
+      },
+      "after": {
+        "bottom_y_points": [
+          713.41,
+          711.8
+        ],
+        "column_end_difference_points": 1.61
+      }
+    },
+    "16": {
+      "before": {
+        "bottom_y_points": [
+          706.3,
+          710.72
+        ],
+        "column_end_difference_points": 4.42
+      },
+      "after": {
+        "bottom_y_points": [
+          705.37,
+          707.73
+        ],
+        "column_end_difference_points": 2.36
+      }
+    },
+    "19": {
+      "before": {
+        "bottom_y_points": [
+          700.18,
+          708.64
+        ],
+        "column_end_difference_points": 8.46
+      },
+      "after": {
+        "bottom_y_points": [
+          702.24,
+          698.74
+        ],
+        "column_end_difference_points": 3.5
+      }
+    }
+  },
+  "page_21": {
+    "content": "Figure 13 and its caption only",
+    "interpretation_moved_to_page": 19,
+    "figure_size_inches": [
+      6.875,
+      8.0
+    ],
+    "scene_side_inches": 0.95,
+    "distance_plot_height_inches": 0.7
+  },
+  "paragraph_endings": {
+    "required_last_line_fraction": 0.4,
+    "paragraphs_checked": 90,
+    "prose_segments": 68,
+    "captions": 22,
+    "minimum_visible_last_line_fraction": 0.404112,
+    "all_pass": true
+  }
+}

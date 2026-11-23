@@ -1,0 +1,160 @@
+{
+  "checked_utc": "2026-11-10T08:35:22.932493+00:00",
+  "source_commit": "adbd03b40b8361b41ae64067c76ce88407d77d18",
+  "repo": "/data/zjc/adaJEPA/JEPA-Stall",
+  "new_training_or_evaluation_started": false,
+  "resources": [
+    {
+      "id": "ours_pushobj_bias16k_seed0_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/pushobj_bias_16k_e3_seed0/checkpoints/model_3.pth",
+      "exists": true,
+      "note": "historical primary checkpoint; verify identity against second-paper receipts",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/pushobj_bias_16k_e3_seed0/checkpoints/model_latest.pth",
+      "bytes": 418116481,
+      "sha256": "6ac64a6230d3e7918c4df3bdc5d71ecd36dc2537685dec111cfa937d9bde5947"
+    },
+    {
+      "id": "ours_pushobj_released",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/pushobj_shape_shift/checkpoints/model_latest.pth",
+      "exists": true,
+      "note": "released checkpoint",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/pushobj_shape_shift/checkpoints/model_latest.pth",
+      "bytes": 418103400,
+      "sha256": "6a0a75a94eefa4ca1e261cd1010c2c886e1465ce77035ec8a802eb75db3ead95"
+    },
+    {
+      "id": "ours_pusht_T16k_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/pushobj_T16k_bias_e3/checkpoints/model_3.pth",
+      "exists": true,
+      "note": "T-only visual checkpoint",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/pushobj_T16k_bias_e3/checkpoints/model_latest.pth",
+      "bytes": 290064732,
+      "sha256": "3559bbb259fad357d07db7b140ac7a695c9dc12b179cd2ec4da4bda251aea329"
+    },
+    {
+      "id": "dinowm_bias16k_reference_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3/checkpoints/model_3.pth",
+      "exists": true,
+      "note": "first-paper archived baseline; not the second-paper paired training",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e100/checkpoints/model_3.pth",
+      "bytes": 377933969,
+      "sha256": "91134c87e679936b369f3829d8752a62c4510853fee7ec710e25f449c679006f"
+    },
+    {
+      "id": "dinowm_pushobj_random16k_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_random16k_orig_e3_20261106/checkpoints/model_3.pth",
+      "exists": true,
+      "note": "I/square/Z/T random16k; full decoder model; not a substitute for second-paper matched ordinary/augmented weights",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_random16k_orig_e10_20261106/checkpoints/model_3.pth",
+      "bytes": 377933969,
+      "sha256": "4a7166bc75ff2924cb140845ea1ebc785f2f0def4a9c3e47b55fb9104c85b0c0"
+    },
+    {
+      "id": "dinowm_pusht_random16k_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e3_20261106/checkpoints/model_3.pth",
+      "exists": true,
+      "note": "T random16k; matches source family of completed visual baseline",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e10_20261106/checkpoints/model_3.pth",
+      "bytes": 377933969,
+      "sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4"
+    },
+    {
+      "id": "lewm_pushobj_bias16k_e10",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_bias16k/checkpoints/model_10.pth",
+      "exists": true,
+      "note": "T/L/Z/+ bias16k; exact hash match to second-paper archived manifest",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_bias16k/checkpoints/model_10.pth",
+      "bytes": 72267462,
+      "sha256": "077d55daa795c627a9eca3d7e3a86ba7b98a843f6043a7e61b67a17bba8805a6",
+      "second_paper_archived_hash_match": true
+    },
+    {
+      "id": "lewm_pushobj_random16k_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_random16k_e3_ddp8_20261109/checkpoints/model_3.pth",
+      "exists": true,
+      "note": "I/square/Z/T random16k; completed training only; weight publication remains paused",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_random16k_e3_ddp8_20261109/checkpoints/model_3.pth",
+      "bytes": 72251221,
+      "sha256": "a2f2351bd23ac704fc65567e8895dd333c12a25ad25b877e6fc03a99fd711c19"
+    },
+    {
+      "id": "lewm_pusht_T16k_e10",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_T16k/checkpoints/model_10.pth",
+      "exists": true,
+      "note": "T-only checkpoint; existing GD/CEM visual results",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_T16k/checkpoints/model_10.pth",
+      "bytes": 72267462,
+      "sha256": "58622a668c8c73395659a804bc96f162eeb821bcb95e906a6370518296b3bda6"
+    },
+    {
+      "id": "ddpwm_bias16k",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/ddpwm_bias16k/checkpoints/model_latest.pth",
+      "exists": true,
+      "note": "existing multishape baseline",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/ddpwm_bias16k/checkpoints/model_latest.pth",
+      "bytes": 104609806,
+      "sha256": "92e2cef97ca6281144bc36d5fc18c151964d7e83aba4b0e57ee746a3c62d7cdf"
+    },
+    {
+      "id": "ddpwm_pusht",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/ddpwm_pusht/checkpoints/model_latest.pth",
+      "exists": true,
+      "note": "existing visual baseline",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/ddpwm_pusht/checkpoints/model_latest.pth",
+      "bytes": 98707811,
+      "sha256": "7ebe5272f92c6ba597a322f45d511408fe564d7e39f1e47a51965f0a6c7329fb"
+    },
+    {
+      "id": "dreamerv3_T16k_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3/model_latest.pkl",
+      "exists": true,
+      "note": "existing offline model; training and evaluation adaptation must be disclosed",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3/model_latest.pkl",
+      "bytes": 540054600,
+      "sha256": "a247115fed112b44e9e2f798e9e1d7bd0e2aeb429b1bed7d7a86f7a93d229368"
+    },
+    {
+      "id": "iris_tokenizer_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3/tokenizer_model.pt",
+      "exists": true,
+      "note": "tokenizer stage, three epochs",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3/tokenizer_model.pt",
+      "bytes": 16238858,
+      "sha256": "0bb6df2196c87209a3d760d78d39575e52819094e3ea3062d99289a8bbd67526"
+    },
+    {
+      "id": "iris_world_model_e3",
+      "path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3/world_model.pt",
+      "exists": true,
+      "note": "world-model stage, three epochs",
+      "runtime_verified_in_jepa_stall": false,
+      "resolved_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3/world_model.pt",
+      "bytes": 38773816,
+      "sha256": "66fc0367dee584221ebba439b6a8564efe0b81219732181b6f7b9437bb70c36a"
+    }
+  ],
+  "dependency_gaps": {
+    "second_paper_dinowm_ordinary_checkpoint": true,
+    "second_paper_dinowm_augmented_checkpoint": true,
+    "maze_data_absent_in_checked_path": true,
+    "mujoco_py_in_cljepa": false
+  },
+  "gpu_observation": {
+    "gpu0": "idle at inspection",
+    "gpu1_to_7": "IRIS PushObj evaluation active at inspection",
+    "recheck_before_new_jobs": true
+  }
+}

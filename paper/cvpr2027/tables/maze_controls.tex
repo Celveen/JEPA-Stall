@@ -1,0 +1,23 @@
+\captionof{table}{\textbf{Maze correction and activation ablations.} Success (\%) on 100 tasks, 30 replans. $S/P$: memory/goal reweighting. Frozen fixes weights; AdaJEPA updates online. Freeze stops updates; fixed delay is ten replans.}
+\label{tab:maze-controls}
+\small
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{lllrr}
+\toprule
+Updates & Intervention & Activation & Succ. $\uparrow$ & Rescue / harm\\
+\midrule
+Frozen & None &---&48&---\\
+& $S$ &First stall&50&2 / 0\\
+& $S{+}P$ &First stall&54&9 / 3\\
+\midrule
+AdaJEPA & None &---&63&---\\
+& $S{+}P$ &First stall&66&7 / 4\\
+& $S{+}P$ &Fixed delay&61&2 / 4\\
+& $S{+}P$ &Loss gate&65&2 / 0\\
+& $S$ &Loss gate&66&3 / 0\\
+& $P$ &Loss gate&64&1 / 0\\
+\midrule
+AdaJEPA & Freeze, no $S/P$ &First stall&55&3 / 11\\
+& Freeze, no $S/P$ &Loss gate&63&2 / 2\\
+\bottomrule
+\end{tabular}

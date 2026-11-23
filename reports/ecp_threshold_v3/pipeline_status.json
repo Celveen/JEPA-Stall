@@ -1,0 +1,98 @@
+{
+  "status": "complete",
+  "resumed_utc": "2026-11-13T06:20:39.187949+00:00",
+  "completed_chunks": 70,
+  "total_chunks": 70,
+  "episodes_per_condition": 350,
+  "total_task_runs": 700,
+  "by_condition": {
+    "adajepa_aug_g060": {
+      "completed_chunks": 35,
+      "total_chunks": 35
+    },
+    "frozen_aug_g045": {
+      "completed_chunks": 35,
+      "total_chunks": 35
+    }
+  },
+  "preflight": {
+    "adajepa_aug_g060": "passed",
+    "frozen_aug_g045": "passed"
+  },
+  "workers": {
+    "0:0": {
+      "status": "between_jobs",
+      "gpu": 0,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_21_small_tee"
+    },
+    "0:1": {
+      "status": "between_jobs",
+      "gpu": 0,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_22_small_tee"
+    },
+    "1:0": {
+      "status": "between_jobs",
+      "gpu": 1,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_23_small_tee"
+    },
+    "1:1": {
+      "status": "between_jobs",
+      "gpu": 1,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_24_small_tee"
+    },
+    "4:1": {
+      "status": "between_jobs",
+      "gpu": 4,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_28_plus"
+    },
+    "6:0": {
+      "status": "between_jobs",
+      "gpu": 6,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_31_T"
+    },
+    "3:0": {
+      "status": "between_jobs",
+      "gpu": 3,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_25_plus"
+    },
+    "4:0": {
+      "status": "between_jobs",
+      "gpu": 4,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_27_plus"
+    },
+    "3:1": {
+      "status": "between_jobs",
+      "gpu": 3,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_26_plus"
+    },
+    "5:0": {
+      "status": "between_jobs",
+      "gpu": 5,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_29_plus"
+    },
+    "6:1": {
+      "status": "between_jobs",
+      "gpu": 6,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_32_T"
+    },
+    "5:1": {
+      "status": "between_jobs",
+      "gpu": 5,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_30_T"
+    },
+    "7:0": {
+      "status": "between_jobs",
+      "gpu": 7,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_33_T"
+    },
+    "7:1": {
+      "status": "between_jobs",
+      "gpu": 7,
+      "last_completed": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/frozen_aug_g045/chunk_34_T"
+    }
+  },
+  "failures": [],
+  "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3",
+  "updated_utc": "2026-11-13T06:33:11.701111+00:00",
+  "summary": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/eval_outputs/ecp_threshold_v3/summary.json"
+}

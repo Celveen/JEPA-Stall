@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering
+\caption{\textbf{World-model control on PushObj and PushT.} Success (\%) within 150 controls. Each shape/condition uses 50 tasks. Avg. covers seven shapes or six shifts, excluding Clean. Sq., sT, S\&P mean square, small-T, salt-and-pepper noise; Agent/Object/Goal recolor that component red. Frozen fixes a pretrained ResNet; AdaJEPA updates it online. Released uses published weights; Ours adds augmented training and ECP. PushObj task lists differ between DINO-WM/LeWM and ResNet controllers.}
+\label{tab:main}
+\small
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll*{16}{r}@{}}
+\toprule
+& &\multicolumn{8}{c}{PushObj}&\multicolumn{8}{c}{PushT}\\
+\cmidrule(lr){3-10}\cmidrule(lr){11-18}
+Method & Opt. & I & L & Sq. & Z & sT & $+$ & T & Avg. & Clean & Blur & S\&P & Dark & Agent & Object & Goal & Avg.\\
+\midrule
+DINO-WM~\cite{zhou2025dinowm} & GD & 18 & 72 & 30 & 46 & 60 & 56 & 62 & 49.1 & 50 & 44 & 8 & 50 & 44 & \textbf{36} & 46 & 38.0\\
+DINO-WM~\cite{zhou2025dinowm} & CEM & 32 & 82 & 34 & 62 & 72 & 78 & 74 & 62.0 & 48 & 40 & 2 & 44 & 40 & 24 & \textbf{48} & 33.0\\
+LeWM~\cite{maes2026lewm} & GD & 18 & 80 & 40 & 74 & 72 & 68 & 72 & 60.6 & 64 & 62 & 62 & 58 & 4 & 16 & 34 & 39.3\\
+LeWM~\cite{maes2026lewm} & CEM & 28 & 80 & 46 & 72 & \textbf{76} & 72 & 74 & 64.0 & 72 & 66 & 64 & 64 & 2 & 20 & 26 & 40.3\\
+Frozen (released) & GD & 24 & 56 & 28 & 40 & 48 & 54 & 56 & 43.7 & 60 & 50 & 60 & 52 & 56 & 10 & 36 & 44.0\\
+AdaJEPA (released) & GD & 40 & \textbf{92} & 40 & 78 & 70 & 84 & 82 & 69.4 & 82 & 76 & 76 & 76 & 60 & 10 & 40 & 56.3\\
+\midrule
+\textbf{Ours (frozen)} & GD & 46 & 84 & 46 & 92 & 62 & \textbf{88} & 88 & 72.3 & 82 & 72 & 70 & 78 & \textbf{68} & 12 & 34 & 55.7\\
+\textbf{Ours (AdaJEPA)} & GD & \textbf{54} & \textbf{92} & \textbf{50} & \textbf{98} & 72 & \textbf{88} & \textbf{90} & \textbf{77.7} & \textbf{86} & \textbf{86} & \textbf{80} & \textbf{88} & \textbf{68} & 18 & 42 & \textbf{63.7}\\
+\bottomrule
+\end{tabular*}
+\end{table*}

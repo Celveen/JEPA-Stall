@@ -1,0 +1,5 @@
+arm,old_seed,new_seed,old_cd,new_cd,cd_delta,old_successes,new_successes,old_S_trigger_events,new_S_trigger_events,old_applied_samples,new_applied_samples,old_changed_samples,old_changed_pushes,old_common_pushes,old_samples_with_difference_before_or_without_S,new_changed_samples,new_changed_pushes,new_common_pushes,new_samples_with_difference_before_or_without_S
+native3,99,100,0.7546801521887649,0.5759073814299485,-0.17877277075881648,10,13,0,0,0,0,0,0,0,0,0,0,0,0
+fixed3,99,100,0.6112380077540654,0.35421923369010627,-0.2570187740639592,13,16,59,39,9,7,16,170,237,15,15,126,204,13
+dynamic3,99,100,0.5151827050870776,0.5762783126441102,0.06109560755703258,12,12,50,51,9,8,16,168,244,14,15,140,215,12
+fixed3_nowarm,99,100,0.5833716809067212,0.3033245709204382,-0.280047109986283,13,16,67,51,10,8,17,203,267,14,15,139,214,12

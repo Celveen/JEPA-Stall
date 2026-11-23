@@ -1,0 +1,361 @@
+{
+  "source_kind": "Recorded simulator observations, not model predictions",
+  "framing": "Full original viewport; only PushT static gray perimeter is hidden",
+  "cases": [
+    {
+      "dataset": "PushT",
+      "backbone": "LeWM",
+      "condition": "red_agent",
+      "target": 8,
+      "unit": "Control",
+      "rows": [
+        {
+          "arm": "native",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_native_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_native_050.png",
+              "step": 50
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_native_075.png",
+              "step": 75
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_native_100.png",
+              "step": 100
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_native_150.png",
+              "step": 150
+            }
+          ],
+          "success": false
+        },
+        {
+          "arm": "ours",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_ours_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_ours_050.png",
+              "step": 50
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_ours_075.png",
+              "step": 75
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_ours_100.png",
+              "step": 100
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_agent_ours_140.png",
+              "step": 140
+            }
+          ],
+          "success": true
+        }
+      ],
+      "hide_border": 6,
+      "shared_start": true,
+      "goal": "figures/recorded_rollouts/pusht_red_agent_goal.png"
+    },
+    {
+      "dataset": "PushT",
+      "backbone": "LeWM",
+      "condition": "red_goal",
+      "target": 6,
+      "unit": "Control",
+      "rows": [
+        {
+          "arm": "native",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_native_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_native_040.png",
+              "step": 40
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_native_060.png",
+              "step": 60
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_native_062.png",
+              "step": 62
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_native_150.png",
+              "step": 150
+            }
+          ],
+          "success": false
+        },
+        {
+          "arm": "ours",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_ours_000.png",
+              "step": 0
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_ours_040.png",
+              "step": 40
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_ours_060.png",
+              "step": 60
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_ours_062.png",
+              "step": 62
+            },
+            {
+              "path": "figures/recorded_rollouts/pusht_red_goal_ours_065.png",
+              "step": 65
+            }
+          ],
+          "success": true
+        }
+      ],
+      "hide_border": 6,
+      "shared_start": true,
+      "goal": "figures/recorded_rollouts/pusht_red_goal_goal.png"
+    },
+    {
+      "dataset": "Rope",
+      "backbone": "DINO-WM",
+      "target": 15,
+      "unit": "Push",
+      "rows": [
+        {
+          "arm": "native",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_native5_00.png",
+              "step": 0,
+              "cd": 1.8230674619020233
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_native5_06.png",
+              "step": 6,
+              "cd": 1.8002296903515802
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_native5_12.png",
+              "step": 12,
+              "cd": 0.6934714028044815
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_native5_15.png",
+              "step": 15,
+              "cd": 0.23593259105409728
+            }
+          ],
+          "success": true
+        },
+        {
+          "arm": "ours",
+          "frames": [
+            {
+              "path": "figures/recorded_rollouts/rope_fixed3_00.png",
+              "step": 0,
+              "cd": 1.8230674619020233
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_fixed3_06.png",
+              "step": 6,
+              "cd": 1.878217488318858
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_fixed3_12.png",
+              "step": 12,
+              "cd": 1.8770500104016348
+            },
+            {
+              "path": "figures/recorded_rollouts/rope_fixed3_18.png",
+              "step": 18,
+              "cd": 0.1694544086103108
+            }
+          ],
+          "success": true
+        }
+      ],
+      "hide_border": 0,
+      "configuration": "Native five-push plans; fixed-strength ECP three-push plans, five warm-up pushes",
+      "excluded_from_aggregate": true,
+      "ecp_activations": 3,
+      "shared_start": false,
+      "goal": "figures/recorded_rollouts/rope_goal.png"
+    }
+  ],
+  "source_archives": {
+    "reports/lewm_shift_visuals_20261116/all_recorded_rollouts.tar.gz": "eb3c913c95ac20174f819650398613948fda8ad848ebb883278ad4bf0648fe2e",
+    "reports/rope_formal20/visuals_extra/evidence.tar.gz": "799325a1ad6c7734b1ebb6f3134dbb37d58586f42c58429774cebac4ca1aa1b3"
+  },
+  "files": {
+    "figures/recorded_rollouts/pusht_red_agent_native_000.png": {
+      "sha256": "029c9c613bdabe1e1babbfadb663d51c29667625912933681e83d230baf9c5a4",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/000.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_native_050.png": {
+      "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/050.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_native_075.png": {
+      "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/075.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_native_100.png": {
+      "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/100.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_native_150.png": {
+      "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/native_frames/150.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_goal.png": {
+      "sha256": "6cafaed819d2a0936d49e4e04d52861a3972d8a220c989f0de71c81db2191c2c",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/target.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_ours_000.png": {
+      "sha256": "029c9c613bdabe1e1babbfadb663d51c29667625912933681e83d230baf9c5a4",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/ours_frames/000.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_ours_050.png": {
+      "sha256": "740d04e79362622c0c586c6e9e59d29935e1d6c15051e10a5e11c314d0e3050b",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/ours_frames/050.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_ours_075.png": {
+      "sha256": "6a9bdb06b5432fd6fe1db346bc2bb37289f9e2be36c406c235e4e8f4fff2278a",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/ours_frames/075.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_ours_100.png": {
+      "sha256": "e0450b53689cc7f9ae7a19b583e5ef8af4af4c9ae45b9dd1e7036207f94aab70",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/ours_frames/100.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_agent_ours_140.png": {
+      "sha256": "f174db837baf647212eaf22d9c4b2a2525224347d378176317dfb41e1077262b",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_agent/ours_frames/140.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_native_000.png": {
+      "sha256": "ca4ad846c4e5846a0dee24e20a069ac7bee093d4fc64c4a29c0d02713bc01c57",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/000.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_native_040.png": {
+      "sha256": "ebfa3721912f50c9f3d8d542527c020a70d203d11ea9138eb6b4c8c2a60daff4",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/040.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_native_060.png": {
+      "sha256": "584978bf602745c05f38f40301f1a6677ddd77e1ad24071470227ebcc5765459",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/060.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_native_062.png": {
+      "sha256": "beddf40d38818409ecf1152bf97bf98b51b75dce3808c3a6aea5f90c358a292d",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/062.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_native_150.png": {
+      "sha256": "68cdacc46661ea0295b5c1bfa0f69b8092a7f604173a3dd39f5cb23bc23b30c2",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/native_frames/150.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_goal.png": {
+      "sha256": "76b802d722e295c98073e1d68a4bc5ea6d63e23798d9ad53ee52b46fe3806780",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/target.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_ours_000.png": {
+      "sha256": "ca4ad846c4e5846a0dee24e20a069ac7bee093d4fc64c4a29c0d02713bc01c57",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/ours_frames/000.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_ours_040.png": {
+      "sha256": "ebfa3721912f50c9f3d8d542527c020a70d203d11ea9138eb6b4c8c2a60daff4",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/ours_frames/040.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_ours_060.png": {
+      "sha256": "584978bf602745c05f38f40301f1a6677ddd77e1ad24071470227ebcc5765459",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/ours_frames/060.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_ours_062.png": {
+      "sha256": "012944ff09c47f72e1307e9b2ba0570f300aedc8e73abd2a70ad9b16104ffb86",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/ours_frames/062.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/pusht_red_goal_ours_065.png": {
+      "sha256": "2b4c003eb0ef205ac5278990112173ad74017fa8459e18d350aa2f99641acbf7",
+      "source": "reports/lewm_shift_visuals_20261116/figures/red_goal/ours_frames/065.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/rope_native5_00.png": {
+      "sha256": "c6156797b4f0c2ae73bca50a84b46a56557062d9369a446a12f3b76079f7e4c7",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/native5/push_00.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/rope_native5_06.png": {
+      "sha256": "fae946242c14c2e35a273a5fb34f439e2be15ad3944c6ad8f3c53cd8e4f82f02",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/native5/push_06.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/rope_native5_12.png": {
+      "sha256": "5070f48c99fc7a2f2e4058cf1b2b5772191622366a68b8cff05e56ad88e2583c",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/native5/push_12.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/rope_native5_15.png": {
+      "sha256": "3a67dcfa282ae902279dad6193791197ea0924bfbdbd7292e550dbb7f549361f",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/native5/push_15.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/rope_goal.png": {
+      "sha256": "d773202517ead8f92602df7beb4ae7926294c6bfed626753b34a22f2fdfaf2da",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/goal.png",
+      "verified_against_recorded_rgb": false
+    },
+    "figures/recorded_rollouts/rope_fixed3_00.png": {
+      "sha256": "c7d0a615c8d60498fa81d3c203dbbe0702b9448236d166b3ecabbfceaa00cda5",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/fixed3/push_00.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/rope_fixed3_06.png": {
+      "sha256": "c797c9e201ebfa6264ea81a97415f837635823f46ec3be9d341a1310ca0c3057",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/fixed3/push_06.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/rope_fixed3_12.png": {
+      "sha256": "b11c20b65c3e866d608daef7e7bc4f4c63871590ec05aaf1dfb52191f76685cd",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/fixed3/push_12.png",
+      "verified_against_recorded_rgb": true
+    },
+    "figures/recorded_rollouts/rope_fixed3_18.png": {
+      "sha256": "a7d5061fe68e6f623f9e7d390907f81ceb58c0ff56dbedf9fbfe46c6950c35f8",
+      "source": "reports/rope_formal20/visuals_extra/raw_frames/sample_05/fixed3/push_18.png",
+      "verified_against_recorded_rgb": true
+    }
+  }
+}

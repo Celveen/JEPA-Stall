@@ -1,0 +1,147 @@
+{
+  "archive_sha256": "b78193dd7c041d5e3a3c915d4eac8328a6cbf8a5397149601bfb4b555aa1c646",
+  "archive_bytes": 538836291,
+  "drive_file_id": "1VY__1KnP1Hbh1dWZws-ELxEHLyZ4In20",
+  "data_path": "/data/zjc/JEPA-Stall/data/pushobj_T16k_bias",
+  "splits": {
+    "train": {
+      "episodes": 16000,
+      "frames": 1937205,
+      "shapes": {
+        "T": 16000
+      },
+      "windows": 1633205,
+      "all_video_files_present": true,
+      "decoded_episode_indices": [
+        0,
+        516,
+        1032,
+        1548,
+        2064,
+        2580,
+        3096,
+        3612,
+        4128,
+        4644,
+        5160,
+        5677,
+        6193,
+        6709,
+        7225,
+        7741,
+        8257,
+        8773,
+        9289,
+        9805,
+        10321,
+        10838,
+        11354,
+        11870,
+        12386,
+        12902,
+        13418,
+        13934,
+        14450,
+        14966,
+        15482,
+        15999
+      ],
+      "tensors": {
+        "states.pth": {
+          "shape": [
+            16000,
+            246,
+            5
+          ],
+          "sha256": "31a294519f7fc26c6768d17551c0a32e7b1570d8cfaa3bf36b0dda60110d2c41"
+        },
+        "rel_actions.pth": {
+          "shape": [
+            16000,
+            246,
+            2
+          ],
+          "sha256": "73edc8661163cfe0bde70e89203b0472c4118298bec58b014726645683d2f7c3"
+        },
+        "velocities.pth": {
+          "shape": [
+            16000,
+            246,
+            2
+          ],
+          "sha256": "b374a0a753e4a047a648fcdcccdf147f88e5fcd830c82c83e090d793b1696bcc"
+        }
+      }
+    },
+    "val": {
+      "episodes": 1000,
+      "frames": 120784,
+      "shapes": {
+        "T": 1000
+      },
+      "windows": 101784,
+      "all_video_files_present": true,
+      "decoded_episode_indices": [
+        0,
+        32,
+        64,
+        96,
+        128,
+        161,
+        193,
+        225,
+        257,
+        290,
+        322,
+        354,
+        386,
+        418,
+        451,
+        483,
+        515,
+        547,
+        580,
+        612,
+        644,
+        676,
+        708,
+        741,
+        773,
+        805,
+        837,
+        870,
+        902,
+        934,
+        966,
+        999
+      ],
+      "tensors": {
+        "states.pth": {
+          "shape": [
+            1000,
+            229,
+            5
+          ],
+          "sha256": "01161b7f85288a5fccd5a35fdf99a295cad6ed747a9b700d50c4b660b6054046"
+        },
+        "rel_actions.pth": {
+          "shape": [
+            1000,
+            229,
+            2
+          ],
+          "sha256": "7c12dbe45efeece85ffa183bb431947e436ccdde62da9f945ced15a69c4d7886"
+        },
+        "velocities.pth": {
+          "shape": [
+            1000,
+            229,
+            2
+          ],
+          "sha256": "d09d47e1b0a450d289f61a06950974da35b75a9e45fb85b8f0d16f9bda49d25e"
+        }
+      }
+    }
+  },
+  "passed": true
+}

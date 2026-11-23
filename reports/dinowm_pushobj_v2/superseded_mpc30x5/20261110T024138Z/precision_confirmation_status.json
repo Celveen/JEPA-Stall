@@ -1,0 +1,36 @@
+{
+  "status": "running_fp32_checks",
+  "total_tasks": 14,
+  "completed_tasks": 2,
+  "gpu": 4,
+  "tasks": [
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_00_I",
+      "source_sha256": "713e89ed146994300ef5951798e5ed147bf134aac9457032b9c919fda2268ed7",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/precision_confirmation/ordinary/chunk_00_I",
+      "complete": true
+    },
+    {
+      "arm": "augmented",
+      "source_chunk": "chunk_00_I",
+      "source_sha256": "713e89ed146994300ef5951798e5ed147bf134aac9457032b9c919fda2268ed7",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/precision_confirmation/augmented/chunk_00_I",
+      "complete": true
+    },
+    {
+      "arm": "ordinary",
+      "source_chunk": "chunk_05_L",
+      "source_sha256": "5be7a55169c0e21abcc09e7ffe3edc678c35529463d798eda42f7c418bd53d32",
+      "sample_idx": 0,
+      "output": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/precision_confirmation/ordinary/chunk_05_L",
+      "complete": false
+    }
+  ],
+  "updated_utc": "2026-11-10T02:41:30.288615+00:00",
+  "current_job": "/home/appuser/workspace/project/multimodal-test/JEPA-Stall/reports/dinowm_pushobj_v2/precision_confirmation/ordinary/chunk_05_L",
+  "worker_pid": 138817,
+  "comparisons": []
+}

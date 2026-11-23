@@ -1,0 +1,9 @@
+{
+  "weight": 20.0,
+  "control_window": 5,
+  "target": "observed contact waypoint, inward push target, or final pusher goal",
+  "position_normalization": "dataset proprio position standard deviation",
+  "post_optimization_action_offset": false,
+  "legacy_bias_amplitude_limits_used": false,
+  "object_state_source": "observed simulator state and known shape geometry"
+}

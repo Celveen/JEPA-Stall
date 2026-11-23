@@ -1,0 +1,119 @@
+{
+  "series": [
+    {
+      "key": "released",
+      "label": "Base data",
+      "color": "#A8B9C8"
+    },
+    {
+      "key": "our_data",
+      "label": "Data augmentation",
+      "color": "#477C82"
+    },
+    {
+      "key": "our_data_ecp",
+      "label": "Data augmentation + ECP",
+      "color": "#D99270"
+    }
+  ],
+  "groups": [
+    {
+      "label": "Frozen",
+      "denominator": 350,
+      "success_counts": [
+        153,
+        214,
+        253
+      ],
+      "evidence": {
+        "task_seed": 100,
+        "successes_by_shape": {
+          "I": 23,
+          "L": 42,
+          "square": 23,
+          "Z": 46,
+          "small_tee": 31,
+          "plus": 44,
+          "T": 44
+        },
+        "native_successes": 214,
+        "rescues": 39,
+        "regressions": 0,
+        "source": "reports/ecp_threshold_v3/paired_tasks.csv",
+        "source_sha256": "2a787c4bd369cff89fa81d080d260c8802babc6ffeb9c52b321b0c6059319f98",
+        "trigger_interval": [
+          0.15,
+          0.45
+        ],
+        "contact_objective_weight": null
+      }
+    },
+    {
+      "label": "LeWM",
+      "denominator": 350,
+      "success_counts": [
+        166,
+        215,
+        231
+      ],
+      "evidence": {
+        "task_seed": 2000,
+        "successes_by_shape": {
+          "I": 10,
+          "L": 41,
+          "square": 21,
+          "Z": 38,
+          "small_tee": 42,
+          "plus": 37,
+          "T": 42
+        },
+        "native_successes": 215,
+        "rescues": 18,
+        "regressions": 2,
+        "source": "reports/lewm_contact_schedule_20261113/lewm_ecp_045_contact_objective/paired_tasks.csv",
+        "source_sha256": "c764c43c5cb02f8c75569dc36a47d3b5a5936607cfa2246d1bcda2b52461d07a",
+        "trigger_interval": [
+          0.15,
+          0.45
+        ],
+        "contact_objective_weight": 10,
+        "random_baseline_source": "provenance/lewm_matched_paired_tasks.csv",
+        "random_baseline_sha256": "17ed8487dafc14ab2d99fadc8e9562ee650d94076fb8828ab9cd670cdbc5ff2c",
+        "random_ecp_successes": 186
+      }
+    },
+    {
+      "label": "AdaJEPA",
+      "denominator": 350,
+      "success_counts": [
+        243,
+        262,
+        272
+      ],
+      "evidence": {
+        "task_seed": 100,
+        "successes_by_shape": {
+          "I": 27,
+          "L": 46,
+          "square": 25,
+          "Z": 49,
+          "small_tee": 36,
+          "plus": 44,
+          "T": 45
+        },
+        "native_successes": 262,
+        "rescues": 11,
+        "regressions": 1,
+        "source": "reports/ecp_threshold_v2/paired_tasks.csv",
+        "source_sha256": "71a6b8c163fc7fe3773d418424603ce99b18205cc4792873813bcc611c6932ef",
+        "trigger_interval": [
+          0.15,
+          0.45
+        ],
+        "contact_objective_weight": null
+      }
+    }
+  ],
+  "released_count_source": "Frozen/AdaJEPA: headline_data_v6.json; LeWM: lewm_matched_paired_tasks.csv",
+  "protocol": "PushObj at 150 controls and threshold 0.45 for augmented ECP. LeWM uses an epoch-10 frozen checkpoint and geometry-assisted contact objective, weight 10. AdaJEPA uses an epoch-3 checkpoint with online updates and S+P. Frozen and AdaJEPA use seed 100; LeWM uses seed 2000. LeWM base data is newly trained matched random/source-action replay (166/350), not a released checkpoint. Brackets compare base-data native planning with augmented ECP for every model. Settings were explored on these task lists."
+}
