@@ -144,6 +144,7 @@ PushT、Rope、Maze 原始 PNG 直接导出已保存的真实仿真 RGB，并逐
 
 展示参考 [DINO-WM 项目页](https://dino-wm.github.io/) 的并排方法与独立目标图布局。
 '''
+    readme = readme.replace("# 社区视频真实仿真逐帧素材\n", "# 社区视频真实仿真逐帧素材\n\n**Rope 连续推动视频已补充**：[原两组与新增一组的完整录像、每推 MP4 和连续 PNG 帧包](rope_motion/README.md)。\n", 1)
     (ROOT / 'README.md').write_text(readme)
     print(json.dumps(audit, indent=2))
 

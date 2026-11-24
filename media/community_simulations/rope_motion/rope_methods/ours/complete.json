@@ -1,0 +1,43 @@
+{
+  "source": "eval_outputs/rope_qualitative20/fixed3/sample_03",
+  "source_sha256": "24a37ec957ea21f9d79208801641eeeda51ef69087ad7e2a9b080fdbee5d7b97",
+  "capture": "Saved-action PyFleX replay, source positions restored at original chunk boundaries; direct pyflex.render adds no physics steps.",
+  "sample_interval_physics_steps": 4,
+  "playback_fps": 30,
+  "pushes": [
+    {
+      "push": 1,
+      "physics_steps": 1223,
+      "replay_cd": 0.8436568492578707,
+      "max_particle_coordinate_difference_from_source": 0.0,
+      "restored_chunk_start": true,
+      "frame_count": 307
+    },
+    {
+      "push": 2,
+      "physics_steps": 801,
+      "replay_cd": 0.8436568419703228,
+      "max_particle_coordinate_difference_from_source": 4.172325134277344e-07,
+      "restored_chunk_start": false,
+      "frame_count": 202
+    },
+    {
+      "push": 3,
+      "physics_steps": 2339,
+      "replay_cd": 0.6711565932198945,
+      "max_particle_coordinate_difference_from_source": 0.0006636977195739746,
+      "restored_chunk_start": false,
+      "frame_count": 586
+    },
+    {
+      "push": 4,
+      "physics_steps": 1771,
+      "replay_cd": 0.08328040651059859,
+      "max_particle_coordinate_difference_from_source": 0.0018097013235092163,
+      "restored_chunk_start": true,
+      "frame_count": 444
+    }
+  ],
+  "final_replay_cd": 0.08328040651059859,
+  "original_final_cd": 0.08355946106268575
+}

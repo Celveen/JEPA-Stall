@@ -1,0 +1,171 @@
+{
+  "source": "eval_outputs/rope_seed101_20/native3/sample_14",
+  "source_sha256": "2a416bd11fece28e766a65d405f7c9fdbf683e3c1aef3418e4065cccda06f5de",
+  "capture": "Saved-action PyFleX replay, source positions restored at original chunk boundaries; direct pyflex.render adds no physics steps.",
+  "sample_interval_physics_steps": 4,
+  "playback_fps": 30,
+  "pushes": [
+    {
+      "push": 1,
+      "physics_steps": 1250,
+      "replay_cd": 0.5526268798554906,
+      "max_particle_coordinate_difference_from_source": 0.0,
+      "restored_chunk_start": true,
+      "frame_count": 314
+    },
+    {
+      "push": 2,
+      "physics_steps": 1485,
+      "replay_cd": 0.5922472215947359,
+      "max_particle_coordinate_difference_from_source": 0.0,
+      "restored_chunk_start": false,
+      "frame_count": 373
+    },
+    {
+      "push": 3,
+      "physics_steps": 1666,
+      "replay_cd": 0.5921232913983494,
+      "max_particle_coordinate_difference_from_source": 0.0,
+      "restored_chunk_start": false,
+      "frame_count": 418
+    },
+    {
+      "push": 4,
+      "physics_steps": 803,
+      "replay_cd": 0.5921232926100983,
+      "max_particle_coordinate_difference_from_source": 0.0,
+      "restored_chunk_start": true,
+      "frame_count": 202
+    },
+    {
+      "push": 5,
+      "physics_steps": 1394,
+      "replay_cd": 0.5921232899247207,
+      "max_particle_coordinate_difference_from_source": 0.0,
+      "restored_chunk_start": false,
+      "frame_count": 350
+    },
+    {
+      "push": 6,
+      "physics_steps": 1134,
+      "replay_cd": 0.5921232954704028,
+      "max_particle_coordinate_difference_from_source": 2.384185791015625e-07,
+      "restored_chunk_start": false,
+      "frame_count": 285
+    },
+    {
+      "push": 7,
+      "physics_steps": 885,
+      "replay_cd": 0.5921232886077192,
+      "max_particle_coordinate_difference_from_source": 2.980232238769531e-07,
+      "restored_chunk_start": true,
+      "frame_count": 223
+    },
+    {
+      "push": 8,
+      "physics_steps": 1080,
+      "replay_cd": 0.5879415306886051,
+      "max_particle_coordinate_difference_from_source": 0.0004401206970214844,
+      "restored_chunk_start": false,
+      "frame_count": 271
+    },
+    {
+      "push": 9,
+      "physics_steps": 1593,
+      "replay_cd": 0.5879415232910548,
+      "max_particle_coordinate_difference_from_source": 0.0004401206970214844,
+      "restored_chunk_start": false,
+      "frame_count": 400
+    },
+    {
+      "push": 10,
+      "physics_steps": 888,
+      "replay_cd": 0.5821585575024282,
+      "max_particle_coordinate_difference_from_source": 0.00031822919845581055,
+      "restored_chunk_start": true,
+      "frame_count": 223
+    },
+    {
+      "push": 11,
+      "physics_steps": 1401,
+      "replay_cd": 0.5821585591658438,
+      "max_particle_coordinate_difference_from_source": 0.00031822919845581055,
+      "restored_chunk_start": false,
+      "frame_count": 352
+    },
+    {
+      "push": 12,
+      "physics_steps": 1028,
+      "replay_cd": 0.582158568723609,
+      "max_particle_coordinate_difference_from_source": 0.00031822919845581055,
+      "restored_chunk_start": false,
+      "frame_count": 258
+    },
+    {
+      "push": 13,
+      "physics_steps": 1604,
+      "replay_cd": 0.5821516517124403,
+      "max_particle_coordinate_difference_from_source": 0.0001729130744934082,
+      "restored_chunk_start": true,
+      "frame_count": 402
+    },
+    {
+      "push": 14,
+      "physics_steps": 651,
+      "replay_cd": 0.5821516477591867,
+      "max_particle_coordinate_difference_from_source": 0.0001729130744934082,
+      "restored_chunk_start": false,
+      "frame_count": 164
+    },
+    {
+      "push": 15,
+      "physics_steps": 1083,
+      "replay_cd": 0.4488806056584958,
+      "max_particle_coordinate_difference_from_source": 0.0005671977996826172,
+      "restored_chunk_start": false,
+      "frame_count": 272
+    },
+    {
+      "push": 16,
+      "physics_steps": 3227,
+      "replay_cd": 0.44874585653261334,
+      "max_particle_coordinate_difference_from_source": 0.0006729960441589355,
+      "restored_chunk_start": true,
+      "frame_count": 808
+    },
+    {
+      "push": 17,
+      "physics_steps": 1427,
+      "replay_cd": 0.49819744348744477,
+      "max_particle_coordinate_difference_from_source": 0.00042100250720977783,
+      "restored_chunk_start": false,
+      "frame_count": 358
+    },
+    {
+      "push": 18,
+      "physics_steps": 1322,
+      "replay_cd": 0.42364163741263644,
+      "max_particle_coordinate_difference_from_source": 0.0003913789987564087,
+      "restored_chunk_start": false,
+      "frame_count": 332
+    },
+    {
+      "push": 19,
+      "physics_steps": 1910,
+      "replay_cd": 0.42335327459966443,
+      "max_particle_coordinate_difference_from_source": 0.0005010366439819336,
+      "restored_chunk_start": true,
+      "frame_count": 479
+    },
+    {
+      "push": 20,
+      "physics_steps": 1414,
+      "replay_cd": 0.8578627985215257,
+      "max_particle_coordinate_difference_from_source": 0.0015068650245666504,
+      "restored_chunk_start": false,
+      "frame_count": 355
+    }
+  ],
+  "final_replay_cd": 0.8578627985215257,
+  "original_final_cd": 0.8582253654929277
+}

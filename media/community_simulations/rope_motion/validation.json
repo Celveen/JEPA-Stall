@@ -1,0 +1,40 @@
+{
+  "continuous_frames": 31688,
+  "cases": [
+    {
+      "case": "rope_ablation",
+      "baseline_pushes": 20,
+      "ours_pushes": 20,
+      "baseline_replay_cd": 1.7938581706234917,
+      "ours_replay_cd": 0.1677046842083802,
+      "cd_reduction_percent": 90.65117371290891,
+      "baseline_original_cd": 1.7939197385826178,
+      "ours_original_cd": 0.16810256511376237,
+      "maximum_particle_coordinate_difference": 0.0027827813755720854
+    },
+    {
+      "case": "rope_methods",
+      "baseline_pushes": 20,
+      "ours_pushes": 4,
+      "baseline_replay_cd": 0.7163102187609912,
+      "ours_replay_cd": 0.08328040651059859,
+      "cd_reduction_percent": 88.37369559593196,
+      "baseline_original_cd": 0.7160015128332525,
+      "ours_original_cd": 0.08355946106268575,
+      "maximum_particle_coordinate_difference": 0.002137809991836548
+    },
+    {
+      "case": "rope_additional",
+      "baseline_pushes": 20,
+      "ours_pushes": 13,
+      "baseline_replay_cd": 0.8578627985215257,
+      "ours_replay_cd": 0.14846345243653647,
+      "cd_reduction_percent": 82.6937999068844,
+      "baseline_original_cd": 0.8582253654929277,
+      "ours_original_cd": 0.14879298872033409,
+      "maximum_particle_coordinate_difference": 0.0015068650245666504
+    }
+  ],
+  "png_sha256_verified": true,
+  "all_pushes_captured_start_to_end": true
+}
