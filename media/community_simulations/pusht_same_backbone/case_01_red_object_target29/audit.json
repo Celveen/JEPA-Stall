@@ -1,0 +1,25 @@
+{
+  "condition": "red_object",
+  "target": 29,
+  "native_success": false,
+  "ours_success": true,
+  "native_controls": 150,
+  "ours_controls": 135,
+  "agent_edge_margin_px": 79.6185531616211,
+  "full_agent_visible": true,
+  "eligible": true,
+  "first_trigger_replan": 10,
+  "pretrigger_controls_verified": 50,
+  "native_joint_xy": 117.17951965332031,
+  "native_object_xy": 98.13091278076172,
+  "native_angle_deg": 23.261438652529026,
+  "ours_joint_xy": 15.587818145751953,
+  "ours_object_xy": 5.885136127471924,
+  "ours_angle_deg": 12.704752912870678,
+  "key": "case_01_red_object_target29",
+  "notes": "Same checkpoint and frozen model tensor hash, targets, seed, GD100 planning budget and color shift. Intervention includes latent memory and contact/proprio objectives using observed object geometry. Agent stays fully inside original viewport in both executions.",
+  "source_recording_sha256": {
+    "native": "66900bb9c650e8145caa044a28cc7b691ecf5685d0636bab5211e9556eb4d30b",
+    "ours": "8eca457116895ce396bb74a504224e2d2883ff04c694533fd2d6370adfb07fab"
+  }
+}

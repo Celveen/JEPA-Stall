@@ -81,7 +81,8 @@
           "capture": "original recorded simulator observations",
           "last_step": 65
         }
-      ]
+      ],
+      "presentation_status": "Superseded by same-backbone color pairs in pusht_same_backbone/README.md"
     },
     {
       "key": "pusht_methods",
@@ -108,7 +109,8 @@
           "capture": "original recorded simulator observations",
           "last_step": 65
         }
-      ]
+      ],
+      "presentation_status": "Superseded by same-backbone color pairs in pusht_same_backbone/README.md"
     },
     {
       "key": "rope_ablation",
@@ -274,8 +276,9 @@
     "eval_outputs/maze_medium20_s100_g045/adajepa_s/recorded_execution.npz": "d0286a8469898146e686232247df7d694ba39feee58b9c60b3958a50b9646055",
     "eval_outputs/maze_medium20_s100_g045/frozen/recorded_execution.npz": "1ceff1159ba19ac7a95734df62d4ce6a705d8a5b360d62d8be33f0f580568ed2",
     "media/community_simulations/export_frames.py": "5225620ed1383cffc569f713802b98a983b4de61282fc3962fd788d51ee66de6",
-    "media/community_simulations/verify_and_index.py": "7365f202ec80aacae3d9f4949f6cdc2dd13d2d1a54ad04fc690c6525e5205c0c"
+    "media/community_simulations/verify_and_index.py": "eec5f0badb941ae7d382146b67c4f09dcc0779f75cb12905007272e7b8eeaec8"
   },
   "selection": "Purposefully selected qualitative paired examples with visible outcome differences.",
-  "rope_continuous_motion": "rope_motion/README.md"
+  "rope_continuous_motion": "rope_motion/README.md",
+  "current_pusht_color_delivery": "pusht_same_backbone/README.md"
 }

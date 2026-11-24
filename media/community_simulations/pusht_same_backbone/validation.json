@@ -1,0 +1,94 @@
+{
+  "cases": [
+    {
+      "condition": "red_object",
+      "target": 29,
+      "native_success": false,
+      "ours_success": true,
+      "native_controls": 150,
+      "ours_controls": 135,
+      "agent_edge_margin_px": 79.6185531616211,
+      "full_agent_visible": true,
+      "eligible": true,
+      "first_trigger_replan": 10,
+      "pretrigger_controls_verified": 50,
+      "native_joint_xy": 117.17951965332031,
+      "native_object_xy": 98.13091278076172,
+      "native_angle_deg": 23.261438652529026,
+      "ours_joint_xy": 15.587818145751953,
+      "ours_object_xy": 5.885136127471924,
+      "ours_angle_deg": 12.704752912870678,
+      "key": "case_01_red_object_target29",
+      "notes": "Same checkpoint and frozen model tensor hash, targets, seed, GD100 planning budget and color shift. Intervention includes latent memory and contact/proprio objectives using observed object geometry. Agent stays fully inside original viewport in both executions.",
+      "source_recording_sha256": {
+        "native": "66900bb9c650e8145caa044a28cc7b691ecf5685d0636bab5211e9556eb4d30b",
+        "ours": "8eca457116895ce396bb74a504224e2d2883ff04c694533fd2d6370adfb07fab"
+      }
+    },
+    {
+      "condition": "red_goal",
+      "target": 17,
+      "native_success": false,
+      "ours_success": true,
+      "native_controls": 150,
+      "ours_controls": 110,
+      "agent_edge_margin_px": 25.024932861328125,
+      "full_agent_visible": true,
+      "eligible": true,
+      "first_trigger_replan": 10,
+      "pretrigger_controls_verified": 50,
+      "native_joint_xy": 54.95429611206055,
+      "native_object_xy": 33.68962478637695,
+      "native_angle_deg": 64.81413073254137,
+      "ours_joint_xy": 17.387617111206055,
+      "ours_object_xy": 17.37119483947754,
+      "ours_angle_deg": 3.5028898365977192,
+      "key": "case_02_red_goal_target17",
+      "notes": "Same checkpoint and frozen model tensor hash, targets, seed, GD100 planning budget and color shift. Intervention includes latent memory and contact/proprio objectives using observed object geometry. Agent stays fully inside original viewport in both executions.",
+      "source_recording_sha256": {
+        "native": "5dd29c11e2c360a7f7d35c13077cec75a75b434f35d65546bbde4adde30a0a3d",
+        "ours": "d99f4ccded0b212588a7c7d9d1504627c1cb76f3a197b81ab7c9327cd9316eb7"
+      }
+    }
+  ],
+  "same_frozen_model_verified": true,
+  "paired_initial_states_and_goals_verified": true,
+  "pretrigger_actions_verified": true,
+  "all_raw_png_pixels_verified": true,
+  "terminal_success_recomputed": true,
+  "agent_full_viewport_verified": true,
+  "physics_substeps_visibility_verified": [
+    {
+      "condition": "red_object",
+      "target": 29,
+      "arm": "native",
+      "physics_samples": 1501,
+      "minimum_agent_center_edge_margin_px": 78.38478233721256,
+      "maximum_replay_state_error": 0.0
+    },
+    {
+      "condition": "red_object",
+      "target": 29,
+      "arm": "ours",
+      "physics_samples": 1351,
+      "minimum_agent_center_edge_margin_px": 78.38478233721256,
+      "maximum_replay_state_error": 0.0
+    },
+    {
+      "condition": "red_goal",
+      "target": 17,
+      "arm": "native",
+      "physics_samples": 1501,
+      "minimum_agent_center_edge_margin_px": 23.85257785380105,
+      "maximum_replay_state_error": 0.0
+    },
+    {
+      "condition": "red_goal",
+      "target": 17,
+      "arm": "ours",
+      "physics_samples": 1101,
+      "minimum_agent_center_edge_margin_px": 64.05373122831202,
+      "maximum_replay_state_error": 0.0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "condition": "red_object",
+    "target": 29,
+    "arm": "native",
+    "physics_samples": 1501,
+    "minimum_agent_center_edge_margin_px": 78.38478233721256,
+    "maximum_replay_state_error": 0.0
+  },
+  {
+    "condition": "red_object",
+    "target": 29,
+    "arm": "ours",
+    "physics_samples": 1351,
+    "minimum_agent_center_edge_margin_px": 78.38478233721256,
+    "maximum_replay_state_error": 0.0
+  },
+  {
+    "condition": "red_goal",
+    "target": 17,
+    "arm": "native",
+    "physics_samples": 1501,
+    "minimum_agent_center_edge_margin_px": 23.85257785380105,
+    "maximum_replay_state_error": 0.0
+  },
+  {
+    "condition": "red_goal",
+    "target": 17,
+    "arm": "ours",
+    "physics_samples": 1101,
+    "minimum_agent_center_edge_margin_px": 64.05373122831202,
+    "maximum_replay_state_error": 0.0
+  }
+]
